@@ -1,0 +1,2066 @@
+{
+	"label": "Carreras",
+	"mapping": {
+	    "skills": "data.skills",
+	    "talents": "data.talents",
+	    "class": {
+		      "path": "data.class.value",
+		      "converter": "career_class"
+		    },
+	    "careergroup": {
+		      "path": "data.careergroup.value",
+		      "converter": "career_careergroup"
+		    },
+	    "trappings": "data.trappings"
+},
+	"entries": [
+		{
+			"id": "Abbess",
+			"name": "Abadesa",
+			"skills": ["Arte (Caligrafía)","Frialdad","Aguante","Animar (Relatar)","Cotilleo","Sanar","Sabiduría académica (Teología)","Rezar","Carisma","Cuerpo a cuerpo (Cualquiera)","Investigar","Oficio (Cervecera)","Oficio (Herbolario)","Oficio (Vinatera)","Mando","Sabiduría académica (Local)","Sabiduría académica (Política)","Percepción"],
+			"talents": ["Denodado","Resistencia (Cualquiera)","Robusto","Sabio (Teología)"],
+			"trappings" : ["Abadía","Biblioteca (Teología)"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.bE8g67fjVAE6R7Wx]{Monja}</p>"
+		},
+		{
+			"id": "Advisor",
+			"name": "Asesor",
+			"skills": ["Sobornar","Consumir Alcohol","Aguante","Cotilleo","Regatear","Hablar idioma (Viejomundano clásico)","Sabiduría académica (Política)","Percepción","Carisma","Frialdad","Tasar","Jugar","Intuición","Sabiduría académica (Local)","Animar (Relatar)","Mando","Hablar idioma (Cualquiera)","Sabiduría académica (Cualquiera)"],
+			"talents": ["Alentador","Delincuente","Intrigante","Parloteo"],
+			"trappings": ["Librea"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.J8ejrXE0zWMjNsZd]{Asesor}</p>"
+		},
+		{
+			"id": "Agent",
+			"name": "Agente",
+			"skills": ["Sobornar","Carisma","Frialdad","Jugar","Cotilleo","Regatear","Percepción","Movimiento silencioso (Cualquiera)","Escalar","Animar (Actuar)","Intuición","Cuerpo a cuerpo (Básica)","Lengua Secreta (Cualquiera)","Prestidigitación","Criar Animales","Adiestrar Animal (Paloma)","Hablar idioma (Cualquiera)","Mando"],
+			"talents": ["Atractivo","Disfraz","Imitador","Orador experto"],
+			"trappings": ["Cálamo y tinta","Círculo de espías e informadores","Libro (Criptografía)","Palomar"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.dWLxT0zRnDFbwTKZ]{Espía}</p>"
+		},
+		{
+			"id": "Agitator",
+			"name": "Alborotador",
+			"skills": ["Arte (Escritura)","Sobornar","Carisma","Consumir Alcohol","Cotilleo","Regatear","Sabiduría académica (Política)","Oficio (Imprenta)","Frialdad","Esquivar","Animar (Relatar)","Jugar","Intuición","Mando"],
+			"talents": ["Celo ferviente","Discutidor","Gato callejero","Orador"],
+			"trappings": ["Chaqueta de cuero"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.yDGBs92ko6rUyoTe]{Alborotador}</p>"
+		},
+		{
+			"id": "Aide",
+			"name": "Asistente",
+			"skills": ["Sobornar","Consumir Alcohol","Aguante","Cotilleo","Regatear","Hablar idioma (Viejomundano clásico)","Sabiduría académica (Política)","Percepción"],
+			"talents": ["Etiqueta (Cualquiera)","Gregario","Leer y escribir","Sin importancia"],
+			"trappings": ["Material de escritura"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.J8ejrXE0zWMjNsZd]{Asesor}</p>"
+		},
+		{
+			"id": "Ambassador",
+			"name": "Embajador",
+			"skills": ["Atletismo","Carisma","Conducir","Esquivar","Aguante","Intuición","Montar (Caballo)","Remar","Arte (Escritura)","Sobornar","Frialdad","Cotilleo","Regatear","Sabiduría académica (Política)","Intimidar","Hablar idioma (Cualquiera)","Mando","Orientación","Hablar idioma (Cualquiera)","Sabiduría académica (Cualquiera)"],
+			"talents": ["Espabilado","Presencia imponente","Sangre noble","Sobornador"],
+			"trappings": ["Ayudante","Ropas de la mejor calidad","Equipo de diplomáticos","Heraldo"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.B0zxjP3KbZag5Y79]{Emisario}</p>"
+		},
+		{
+			"id": "Apothecary",
+			"name": "Boticario",
+			"skills": ["Consumir Alcohol","Sanar","Hablar idioma (Viejomundano clásico)","Sabiduría académica (Química)","Sabiduría académica (Medicina)","Sabiduría académica (Plantas)","Oficio (Boticario)","Oficio (Envenenador)","Carisma","Regatear","Sabiduría académica (Ciencias)","Cotilleo","Hablar idioma (Gremial)","Percepción"],
+			"talents": ["Boticario","Delincuente","Etiqueta (Gremial)","Negociador"],
+			"trappings": ["Herramientas del oficio","Licencia del gremio"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.FW2VeYf0vUUFbVE6]{Boticario}</p>"
+		},
+		{
+			"id": "Apothecary's Apprentice",
+			"name": "Aprendiz de boticario",
+			"skills": ["Consumir Alcohol","Sanar","Hablar idioma (Viejomundano clásico)","Sabiduría académica (Química)","Sabiduría académica (Medicina)","Sabiduría académica (Plantas)","Oficio (Boticario)","Oficio (Envenenador)"],
+			"talents": ["Artesano (Boticario)","Elaborar","Etiqueta (Erudito)","Leer y escribir"],
+			"trappings": ["Jubón de cuero","Libro (En blanco)","Mortero y mano de mortero","Poción curativa"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.FW2VeYf0vUUFbVE6]{Boticario}</p>"
+		},
+		{
+			"id": "Apothecary-General",
+			"name": "Boticario general",
+			"skills": ["Consumir Alcohol","Sanar","Hablar idioma (Viejomundano clásico)","Sabiduría académica (Química)","Sabiduría académica (Medicina)","Sabiduría académica (Plantas)","Oficio (Boticario)","Oficio (Envenenador)","Carisma","Regatear","Sabiduría académica (Ciencias)","Cotilleo","Hablar idioma (Gremial)","Percepción","Intuición","Mando","Investigar","Lengua secreta (Gremio)","Intimidar","Montar (Caballo)"],
+			"talents": ["Artesano maestro (Envenenador)","Sabio (Boticario)","Sangre fría","Sentidos desarrollados (Gusto)"],
+			"trappings": ["Documentos del cargo","Taller grande"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.FW2VeYf0vUUFbVE6]{Boticario}</p>"
+		},
+		{
+			"id": "Apprentice Artisan",
+			"name": "Aprendiz de artesano",
+			"skills": ["Atletismo","Frialdad","Consumir Alcohol","Esquivar","Aguante","Tasar","Movimiento silencioso (Urbano)","Oficio (Cualquiera)"],
+			"talents": ["Artesano (Cualquiera)","Artista","Buenas espaldas","Muy fuerte"],
+			"trappings": ["Jubón de cuero","Tiza","1d10 trapos"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.AlriWm9KtKnDAMw1]{Artesano}</p>"
+		},
+		{
+			"id": "Apprentice Artist",
+			"name": "Aprendiz de artista",
+			"skills": ["Arte (Cualquiera)","Frialdad","Consumir Alcohol","Tasar","Aguante","Cotilleo","Percepción","Movimiento silencioso (Urbano)"],
+			"talents": ["Artista","Buenas espaldas","Tenaz","Vigilancia"],
+			"trappings": ["Cálamo o bien cincel o bien pincel"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.rjUjdQrWHWazjkRC]{Artista}</p>"
+		},
+		{
+			"id": "Artisan",
+			"name": "Artesano",
+			"skills": ["Atletismo","Frialdad","Consumir Alcohol","Esquivar","Aguante","Tasar","Movimiento silencioso (Urbano)","Oficio (Cualquiera)","Carisma","Regatear","Sabiduría académica (Local)","Cotilleo","Hablar idioma (Gremial)","Percepción"],
+			"talents": ["Dedos ágiles","Etiqueta (Gremio)","Fornido","Negociador"],
+			"trappings": ["Herramientas del oficio","Licencia del gremio"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.AlriWm9KtKnDAMw1]{Artesano}</p>"
+		},
+		{
+			"id": "Artist",
+			"name": "Artista",
+			"skills": ["Arte (Cualquiera)","Frialdad","Consumir Alcohol","Tasar","Aguante","Cotilleo","Percepción","Movimiento silencioso (Urbano)","Escalar","Jugar","Regatear","Intuición","Hablar idioma (Viejomundano clásico)","Oficio (Suministros de arte)"],
+			"talents": ["Dedos ágiles","Delincuente","Gregario","Juerguista"],
+			"trappings": ["Bandolera conteniendo las herramientas del oficio (Artista)"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.rjUjdQrWHWazjkRC]{Artista}</p>"
+		},
+		{
+			"id": "Assassin",
+			"name": "Asesino",
+			"skills": ["Atletismo","Esquivar","Aguante","Animar (Provocar)","Cotilleo","Regatear","Intimidar","Cuerpo a cuerpo (Cualquiera)","Sobornar","Carisma","Intuición","Cuerpo a cuerpo (Básica)","Percepción","Montar (Caballo)","Escalar","Frialdad","Orientación","A distancia (Arrojadiza)","Animar (Actuar)","A distancia (Ballesta)"],
+			"talents": ["Ambidiestro","Asalto furioso","Disparo infalible","Golpe letal"],
+			"trappings": ["Ballesta con 10 virotes","Material de disfraz"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.mlLVNBKIUnonqka2]{Protagonista}</p>"
+		},
+		{
+			"id": "Attendant",
+			"name": "Empleado",
+			"skills": ["Atletismo","Escalar","Conducir","Esquivar","Aguante","Intuición","Percepción","Movimiento silencioso (Cualquiera)","Criar Animales","Consumir Alcohol","Tasar","Jugar","Cotilleo","Regatear","Carisma","Frialdad","Intimidar","Sabiduría académica (Local)"],
+			"talents": ["Alentador","Cortés","Desfalcar","Resistencia (Veneno)"],
+			"trappings": ["Aceite para lámpara","Librea de calidad","Quinqué","Yesquero"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.g12yhcU74qsRKxXX]{Sirviente}</p>"
+		},
+		{
+			"id": "Bailiff",
+			"name": "Alguacil",
+			"skills": ["Frialdad","Esquivar","Aguante","Cotilleo","Regatear","Intimidar","Cuerpo a cuerpo (Básica)","Percepción","Sobornar","Carisma","Tasar","Intuición","Mando","Sabiduría académica (Local)"],
+			"talents": ["Allanamiento de morada","Delincuente","Golpe conmocionador","Orador"],
+			"trappings": ["Chaqueta de cuero","3 recaudadores de impuestos"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.WbjmnVlyJ9VP2nt4]{Alguacil}</p>"
+		},
+		{
+			"id": "Bandit King",
+			"name": "Rey de los bandidos",
+			"skills": ["Atletismo","Consumir Alcohol","Frialdad","Aguante","Jugar","Intimidar","Cuerpo a cuerpo (Básica)","Supervivencia","Esquivar","Sanar","Sabiduría académica (Local)","Percepción","A distancia (Arco)","Movimiento silencioso (Rural)","Cotilleo","Intuición","Mando","Montar (Caballo)","Carisma","Sabiduría académica (Imperio)"],
+			"talents": ["Disparo certero","Intrépido (Guardas de caminos)","Robusto","Voluntad de hierro"],
+			"trappings": ["‘Feudo’ de jefes de forajidos","Guarida"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.mOljt11dxZENtmoR]{Forajido}</p>"
+		},
+		{
+			"id": "Barge Master",
+			"name": "Capitán de barcaza",
+			"skills": ["Consumir Alcohol","Esquivar","Aguante","Cotilleo","Cuerpo a cuerpo (Pelea)","Remar","Navegar","Nadar","Atletismo","Animar (Relatar)","Regatear","Intuición","Sabiduría académica (Vías fluviales)","Percepción","Escalar","Animar (Cantar)","Sanar","Oficio (Constructor de botes)","Mando","Orientación"],
+			"talents": ["Amenazador","Orador","Orientarse","Piloto"],
+			"trappings": ["Barcaza con tripulación","Sombrero"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.14nKRAT6nMCMGSUf]{Barquero}</p>"
+		},
+		{
+			"id": "Bargeswain",
+			"name": "Contramaestre (Barquero)",
+			"skills": ["Consumir Alcohol","Esquivar","Aguante","Cotilleo","Cuerpo a cuerpo (Pelea)","Remar","Navegar","Nadar","Atletismo","Animar (Relatar)","Regatear","Intuición","Sabiduría académica (Vías fluviales)","Percepción","Escalar","Animar (Cantar)","Sanar","Oficio (Constructor de botes)"],
+			"talents": ["Desfalcar","Golpe poderoso","Negociador","Olfato para los problemas"],
+			"trappings": ["Herramientas del oficio (Carpintero)","Mochila"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.14nKRAT6nMCMGSUf]{Barquero}</p>"
+		},
+		{
+			"id": "Barrister",
+			"name": "Jurista",
+			"skills": ["Consumir Alcohol","Aguante","Regatear","Hablar idioma (Viejomundano clásico)","Sabiduría académica (Derecho)","Sabiduría académica (Teología)","Percepción","Investigar","Sobornar","Carisma","Cotilleo","Intuición","Hablar idioma (Gremial)","Lengua secreta (Gremio)","Arte (Escritura)","Animar (Discursos)","Intimidar","Sabiduría académica (Cualquiera)"],
+			"talents": ["Celo ferviente","Espabilado","Intelectual","Orador experto"],
+			"trappings": ["Ayudante (alumno o sirviente)","Oficina"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.GhqPa2iwEdc4Dokc]{Abogado}</p>"
+		},
+		{
+			"id": "Bawd",
+			"name": "Chalán",
+			"skills": ["Sobornar","Carisma","Consumir Alcohol","Animar (Cualquiera)","Jugar","Cotilleo","Regatear","Intimidar","Esquivar","Aguante","Intuición","Sabiduría académica (Local)","Cuerpo a cuerpo (Básica)","Percepción"],
+			"talents": ["Ambidiestro","Delincuente","Juerguista","Resistencia (Enfermedad)"],
+			"trappings": ["Dosis de raízextraña","Ropas de calidad"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.MY4aFbQL5T9znCUd]{Chalán}</p>"
+		},
+		{
+			"id": "Beggar",
+			"name": "Mendigo",
+			"skills": ["Atletismo","Carisma","Consumir Alcohol","Frialdad","Esquivar","Aguante","Intuición","Movimiento silencioso (Urbano)","Animar (Actuar)","Animar (Cualquiera)","Cotilleo","Regatear","Percepción","Prestidigitación"],
+			"talents": ["Delincuente","Etiqueta (Delincuentes)","Gato callejero","Sin importancia"],
+			"trappings": ["Cuenco","Muleta"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.djOQaw7iRfec9UEj]{Mendigo}</p>"
+		},
+		{
+			"id": "Beggar King",
+			"name": "Rey de los mendigos",
+			"skills": ["Atletismo","Carisma","Consumir Alcohol","Frialdad","Esquivar","Aguante","Intuición","Movimiento silencioso (Urbano)","Animar (Actuar)","Animar (Cualquiera)","Cotilleo","Regatear","Percepción","Prestidigitación","Carisma Animal","Mando","Sabiduría académica (Local)","Lengua Secreta (Vagabundo)","Sobornar","Intimidar"],
+			"talents": ["Cerebro","Cortés","Intrépido (Guardias)","Orador experto"],
+			"trappings": ["Grupo grande de seguidores mendigos","Guarida"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.djOQaw7iRfec9UEj]{Mendigo}</p>"
+		},
+		{
+			"id": "Black Marketeer",
+			"name": "Estraperlista",
+			"skills": ["Carisma","Consumir Alcohol","Esquivar","Tasar","Jugar","Cotilleo","Regatear","Cuerpo a cuerpo (Básica)","Frialdad","Intimidar","Intuición","Percepción","Lengua Secreta (Ladrón)","Oficio (Grabador)","Sobornar","Animar (Relatar)","Sabiduría académica (Arte)","Sabiduría académica (Local)","Sabiduría académica (Heráldica)","Investigar"],
+			"talents": ["Amenazador","Pelea callejera","Sobornador","Voluntad de hierro"],
+			"trappings": ["Almacén","Músculo a sueldo","Red de informantes"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.lbbddfm36XMb8SYg]{Perista}</p>"
+		},
+		{
+			"id": "Boat-hand",
+			"name": "Botero",
+			"skills": ["Consumir Alcohol","Esquivar","Aguante","Cotilleo","Cuerpo a cuerpo (Pelea)","Remar","Navegar","Nadar"],
+			"talents": ["Buen nadador","Buenas espaldas","Pelea callejera","Pescador"],
+			"trappings": ["Arma de mano (Bichero)","Chaqueta de cuero","Pértiga"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.14nKRAT6nMCMGSUf]{Barquero}</p>"
+		},
+		{
+			"id": "Boatman",
+			"name": "Barquero",
+			"skills": ["Consumir Alcohol","Esquivar","Aguante","Cotilleo","Cuerpo a cuerpo (Pelea)","Remar","Navegar","Nadar","Atletismo","Animar (Relatar)","Regatear","Intuición","Sabiduría académica (Vías fluviales)","Percepción"],
+			"talents": ["Barquero","Etiqueta (Gremio)","Muy fuerte","Viajero curtido"],
+			"trappings": ["Bote de remos","Soga"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.14nKRAT6nMCMGSUf]{Barquero}</p>"
+		},
+		{
+			"id": "Boatswain",
+			"name": "Contramaestre (Marino)",
+			"skills": ["Escalar","Consumir Alcohol","Jugar","Cotilleo","Remar","Cuerpo a cuerpo (Pelea)","Navegar","Nadar","Atletismo","Esquivar","Aguante","Animar (Cantar)","Hablar idioma (Cualquiera)","Cuerpo a cuerpo (Básica)","Frialdad","Mando","Percepción","Oficio (Carpintero)"],
+			"talents": ["Golpe poderoso","Lobo de mar","Muy fuerte","Tenaz"],
+			"trappings": ["Herramientas del oficio (Carpintero)"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.wu6aG1XPdzvpiLcR]{Marino}</p>"
+		},
+		{
+			"id": "Body Snatcher",
+			"name": "Ladrón de cuerpos",
+			"skills": ["Escalar","Frialdad","Esquivar","Aguante","Cotilleo","Intuición","Percepción","Movimiento silencioso (Cualquiera)"],
+			"talents": ["¡A correr!","Buenas espaldas","Delincuente","Gato callejero"],
+			"trappings": ["Capa con capucha","Carretilla","Lona","Palanqueta"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.W2Ovj3ec7eqZUuuv]{Ladrón de Tumbas}</p>"
+		},
+		{
+			"id": "Bounty Hunter",
+			"name": "Cazarrecompensas",
+			"skills": ["Sobornar","Carisma","Cotilleo","Regatear","Intuición","Cuerpo a cuerpo (Básica)","Supervivencia","Percepción","Atletismo","Aguante","Intimidar","A distancia (Ballesta)","A distancia (Enmarañante)","Rastrear","Criar Animales","Escalar","Montar (Caballo)","Nadar","Conducir","Sabiduría académica (Derecho)"],
+			"talents": ["Buenas espaldas","Incansable","Puntería","Viajero curtido"],
+			"trappings": ["Ballesta y 10 virotes","Casco de cuero","Grilletes","Órdenes de búsqueda y captura","Red"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.bsQN8B1mtZhl2WRu]{Cazarrecompensas}</p>"
+		},
+		{
+			"id": "Bounty Hunter General",
+			"name": "Cazarrecompensas general",
+			"skills": ["Sobornar","Carisma","Cotilleo","Regatear","Intuición","Cuerpo a cuerpo (Básica)","Supervivencia","Percepción","Atletismo","Aguante","Intimidar","A distancia (Ballesta)","A distancia (Enmarañante)","Rastrear","Criar Animales","Escalar","Montar (Caballo)","Nadar","Conducir","Sabiduría académica (Derecho)"],
+			"talents": ["Disparo certero","Disparo seguro","Intrépido (Recompensas)","Recio"],
+			"trappings": ["Caballo de tiro y carreta","Camisote de malla","4 pares de grilletes"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.bsQN8B1mtZhl2WRu]{Cazarrecompensas}</p>"
+		},
+		{
+			"id": "Braggart",
+			"name": "Fanfarrón",
+			"skills": ["Atletismo","Esquivar","Aguante","Animar (Provocar)","Cotilleo","Regatear","Intimidar","Cuerpo a cuerpo (Cualquiera)"],
+			"talents": ["Amenazador","Combate cercano","Guerrero nato","Pelea callejera"],
+			"trappings": ["Capucha o máscara","Chaqueta de cuero","Puño americano"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.mlLVNBKIUnonqka2]{Protagonista}</p>"
+		},
+		{
+			"id": "Brigand",
+			"name": "Bandolero",
+			"skills": ["Atletismo","Consumir Alcohol","Frialdad","Aguante","Jugar","Intimidar","Cuerpo a cuerpo (Básica)","Supervivencia"],
+			"talents": ["¡A correr!","Delincuente","Errante","Percepción de combate"],
+			"trappings": ["Arma de mano","Chaleco de cuero","Saco de dormir","Yesquero"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.mOljt11dxZENtmoR]{Forajido}</p>"
+		},
+		{
+			"id": "Broker",
+			"name": "Receptador",
+			"skills": ["Carisma","Consumir Alcohol","Esquivar","Tasar","Jugar","Cotilleo","Regatear","Cuerpo a cuerpo (Básica)"],
+			"talents": ["Fullero","Gato callejero","Gregario","Negociador"],
+			"trappings": ["Arma de mano","Objetos robados por valor de 3d10 chelines de plata"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.lbbddfm36XMb8SYg]{Perista}</p>"
+		},
+		{
+			"id": "Burgomeister",
+			"name": "Burgomaestre",
+			"skills": ["Carisma","Escalar","Consumir Alcohol","Conducir","Esquivar","Jugar","Cotilleo","Regatear","Sobornar","Tasar","Intuición","Sabiduría académica (Local)","Cuerpo a cuerpo (Pelea)","Tocar (Cualquiera)","Frialdad","Sabiduría académica (Derecho)","Percepción","Investigar","Sabiduría académica (Política)","Intimidar"],
+			"talents": ["Cortés","Intrigante","Orador maestro","Presencia imponente"],
+			"trappings": ["Carruaje y lacayo","Casa grande con jardines y sirvientes","Collar de librea","Ropa de calidad"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.uqdZBoLtuLv0bHVV]{Ciudadano}</p>"
+		},
+		{
+			"id": "Busker",
+			"name": "Músico callejero",
+			"skills": ["Atletismo","Carisma","Animar (Cualquiera)","Cotilleo","Regatear","Actuar (Cualquiera)","Tocar (Cualquiera)","Prestidigitación"],
+			"talents": ["Atractivo","Cortés","Imitador","Orador"],
+			"trappings": ["Bol","Instrumento"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.b96g5MZr3rk5zYAo]{Animador}</p>"
+		},
+		{
+			"id": "Cargo Scavenger",
+			"name": "Carroñero",
+			"skills": ["Escalar","Consumir Alcohol","Esquivar","Aguante","Remar","Cuerpo a cuerpo (Básica)","Supervivencia","Nadar"],
+			"talents": ["Allanamiento de morada","Buenas espaldas","Delincuente","Pescador"],
+			"trappings": ["Guantes de trabajo","Palanqueta","Saco de gran tamaño"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.AnW8kwDb9koFgMPx]{Raquero}</p>"
+		},
+		{
+			"id": "Cat Burglar",
+			"name": "Ratero",
+			"skills": ["Atletismo","Escalar","Frialdad","Esquivar","Aguante","Intuición","Percepción","Movimiento silencioso (Urbano)","Tasar","Cotilleo","Sabiduría académica (Local)","Forzar Cerraduras","Lengua Secreta (Ladrón)","Prestidigitación","Sobornar","Jugar","Intimidar","A distancia (Ballesta)","Carisma","Poner trampas"],
+			"talents": ["Caer como los gatos","Escalador","Piernas recias","Rico"],
+			"trappings": ["Garfio de escalada","Máscara o antifaces","Ropas oscuras"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.TgcyR0ZdG6bMOK9o]{Ladrón}</p>"
+		},
+		{
+			"id": "Cavalryman",
+			"name": "Reitre",
+			"skills": ["Criar Animales","Carisma Animal","Aguante","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Básica)","Supervivencia","Percepción","Montar (Caballo)","Carisma","Consumir Alcohol","Frialdad","Cotilleo","Cuerpo a cuerpo (De Caballería)","A distancia (De Pólvora Negra)"],
+			"talents": ["Equitación acrobática","Etiqueta (Soldados)","Pistolero experto","Viajero curtido"],
+			"trappings": ["Caballo de guerra ligero con silla y arreos","Coraza","Escudo","Pistola y munición para 10 disparos","Yelmo"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.h9LHCAdlP4o55QvD]{Reitre}</p>"
+		},
+		{
+			"id": "Chancellor",
+			"name": "Canciller",
+			"skills": ["Sobornar","Consumir Alcohol","Aguante","Cotilleo","Regatear","Hablar idioma (Viejomundano clásico)","Sabiduría académica (Política)","Percepción","Carisma","Frialdad","Tasar","Jugar","Intuición","Sabiduría académica (Local)","Animar (Relatar)","Mando","Hablar idioma (Cualquiera)","Sabiduría académica (Cualquiera)","Sabiduría académica (Heráldica)","Montar (Caballo)"],
+			"talents": ["Cerebro","Cortés","Desfalcar","Presencia imponente"],
+			"trappings": ["Caballo de monta con silla y arreos","Equipo de asesores y asistentes","Ropajes cortesanos de calidad"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.J8ejrXE0zWMjNsZd]{Asesor}</p>"
+		},
+		{
+			"id": "Charlatan",
+			"name": "Charlatán",
+			"skills": ["Sobornar","Consumir Alcohol","Carisma","Animar (Relatar)","Jugar","Cotilleo","Regatear","Prestidigitación","Frialdad","Esquivar","Animar (Actuar)","Tasar","Intuición","Percepción"],
+			"talents": ["Delincuente","Identidad secreta","Manos rápidas","Parloteo"],
+			"trappings": ["1 documento falsificado","2 mudas de ropa de calidad","Selección de baratijas y amuletos","Selección de polvillos de colores y agua"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.JTKAh4qCOCcPa2yN]{Charlatán}</p>"
+		},
+		{
+			"id": "Chartered Engineer",
+			"name": "Ingeniero Certificado",
+			"skills": ["Consumir Alcohol","Frialdad","Aguante","Hablar idioma (Viejomundano clásico)","Sabiduría académica (De Ingeniería)","Percepción","A distancia (De Pólvora Negra)","Oficio (De Ingeniería)","Conducir","Esquivar","Orientación","A distancia (De Ingeniería)","Investigar","Hablar idioma (Gremial)","Hablar idioma (Khazalid)","Mando","Montar (Caballo)","Lengua secreta (Gremio)","Hablar idioma (Cualquiera)","Sabiduría académica (Cualquiera)"],
+			"talents": ["Imperturbable","Obra maestra","Recarga rápida","Sabio (Ingeniería)"],
+			"trappings": ["Biblioteca (Ingeniería)","Herramientas del oficio de calidad (Ingeniero)","Licencia del gremio","Taller grande (Ingeniería)"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.c2n86bcUngGrHyO4]{Ingeniero}</p>"
+		},
+		{
+			"id": "Clerk",
+			"name": "Oficinista",
+			"skills": ["Carisma","Escalar","Consumir Alcohol","Conducir","Esquivar","Jugar","Cotilleo","Regatear"],
+			"talents": ["Etiqueta (Sirvientes)","Fornido","Gato callejero","Sin importancia"],
+			"trappings": ["Botas recias","Alojamiento"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.uqdZBoLtuLv0bHVV]{Ciudadano}</p>"
+		},
+		{
+			"id": "Coach Master",
+			"name": "Maestro de diligencias",
+			"skills": ["Criar Animales","Carisma Animal","Escalar","Conducir","Aguante","Percepción","A distancia (Enmarañante)","Montar (Caballo)","Consumir Alcohol","Cotilleo","Intuición","Sabiduría académica (Local)","Orientación","A distancia (De Pólvora Negra)","Adiestrar Animal (Caballo)","Intimidar","Hablar idioma (Cualquiera)","Sabiduría académica (Carreteras)"],
+			"talents": ["Disparo infalible","Intrépido (Forajidos)","Negociador","Olfato para los problemas"],
+			"trappings": ["Camisote de malla","Capa de calidad"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.BnA8KJuCw16zwOVC]{Cochero}</p>"
+		},
+		{
+			"id": "Coachman",
+			"name": "Cochero",
+			"skills": ["Criar Animales","Carisma Animal","Escalar","Conducir","Aguante","Percepción","A distancia (Enmarañante)","Montar (Caballo)","Consumir Alcohol","Cotilleo","Intuición","Sabiduría académica (Local)","Orientación","A distancia (De Pólvora Negra)"],
+			"talents": ["Decidido","Mano dura","Pistolero experto","Sangre fría"],
+			"trappings": ["Chaqueta de cuero","Cuerno de diligencia","Sombrero","Trabuco y munición para 10 disparos"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.BnA8KJuCw16zwOVC]{Cochero}</p>"
+		},
+		{
+			"id": "Con Artist",
+			"name": "Estafador",
+			"skills": ["Sobornar","Consumir Alcohol","Carisma","Animar (Relatar)","Jugar","Cotilleo","Regatear","Prestidigitación","Frialdad","Esquivar","Animar (Actuar)","Tasar","Intuición","Percepción","Hablar idioma (Ladrón)","Sabiduría académica (Heráldica)","Forzar Cerraduras","Lengua Secreta (Ladrón)"],
+			"talents": ["Atractivo","Leer y escribir","Negociador","Orador experto"],
+			"trappings": ["Ganzúas","Múltiples documentos falsificados","Material para disfrazarse"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.JTKAh4qCOCcPa2yN]{Charlatán}</p>"
+		},
+		{
+			"id": "Councilor",
+			"name": "Edil",
+			"skills": ["Criar Animales","Atletismo","Consumir Alcohol","Aguante","Cotilleo","Cuerpo a cuerpo (Pelea)","Sabiduría académica (Local)","Supervivencia","Conducir","Animar (Relatar)","Regatear","Cuerpo a cuerpo (Básica)","Oficio (Cualquiera)","Esquivar","Sobornar","Carisma","Intimidar","Mando"],
+			"talents": ["Artesano (Cualquiera)","Denodado","Muy resistente","Negociador"],
+			"trappings": ["Hogar y taller en la aldea","Mula y carreta"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.btrs5XFk2OQsCtqj]{Aldeano}</p>"
+		},
+		{
+			"id": "Counsellor",
+			"name": "Consejero",
+			"skills": ["Sobornar","Consumir Alcohol","Aguante","Cotilleo","Regatear","Hablar idioma (Viejomundano clásico)","Sabiduría académica (Política)","Percepción","Carisma","Frialdad","Tasar","Jugar","Intuición","Sabiduría académica (Local)","Animar (Relatar)","Mando","Hablar idioma (Cualquiera)","Sabiduría académica (Cualquiera)"],
+			"talents": ["Discutidor","Juerguista","Orador experto","Sobornador"],
+			"trappings": ["Ayuda de campo","Ropa de calidad"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.J8ejrXE0zWMjNsZd]{Asesor}</p>"
+		},
+		{
+			"id": "Courier",
+			"name": "Correo",
+			"skills": ["Atletismo","Escalar","Esquivar","Aguante","Cotilleo","Orientación","Percepción","Cuerpo a cuerpo (Pelea)","Criar Animales","Carisma","Frialdad","Sabiduría académica (Local)","Cuerpo a cuerpo (Básica)","Montar (Caballo)","Carisma Animal","Sobornar","Consumir Alcohol","Supervivencia"],
+			"talents": ["Equitación acrobática","Incansable","Olfato para los problemas","Tenaz"],
+			"trappings": ["Alforjas","Escudo","Mochila"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.8pk2uCvAMUAXWbcP]{Mensajero}</p>"
+		},
+		{
+			"id": "Courier-Captain",
+			"name": "Capitán de correos",
+			"skills": ["Atletismo","Escalar","Esquivar","Aguante","Cotilleo","Orientación","Percepción","Cuerpo a cuerpo (Pelea)","Criar Animales","Carisma","Frialdad","Sabiduría académica (Local)","Cuerpo a cuerpo (Básica)","Montar (Caballo)","Carisma Animal","Sobornar","Consumir Alcohol","Supervivencia","Intimidar","Mando"],
+			"talents": ["Cerebro","Muy resistente","Negociador","Odio visceral (Forajidos)"],
+			"trappings": ["Camisote de malla","Correos","Material de escritura"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.8pk2uCvAMUAXWbcP]{Mensajero}</p>"
+		},
+		{
+			"id": "Court Physician",
+			"name": "Físico de la corte",
+			"skills": ["Sobornar","Frialdad","Conducir","Aguante","Cotilleo","Sanar","Percepción","Prestidigitación","Carisma","Regatear","Hablar idioma (Gremial)","Sabiduría académica (Anatomía)","Sabiduría académica (Medicina)","Oficio (Barbero)","Consumir Alcohol","Intimidar","Mando","Investigar","Sabiduría académica (Noble)","Actuar (Bailar)"],
+			"talents": ["Decidido","Dedos ágiles","Etiqueta (Nobles)","Sabio (Medicina)"],
+			"trappings": ["Atuendo cortesano","Carta de nombramiento"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.Ora8bmvHERjYWEQn]{Físico}</p>"
+		},
+		{
+			"id": "Crime Lord",
+			"name": "Señor del crimen",
+			"skills": ["Consumir Alcohol","Frialdad","Esquivar","Aguante","Intimidar","Sabiduría académica (Local)","Cuerpo a cuerpo (Pelea)","Movimiento silencioso (Urbano)","Sobornar","Carisma","Tasar","Cotilleo","Hablar idioma (Estaliano o tileano)","Cuerpo a cuerpo (Básica)","Intuición","Mando","Percepción","A distancia (Ballesta)","Sabiduría académica (Derecho)","Sabiduría académica (Política)"],
+			"talents": ["Aterrador","Cerebro","Presencia imponente","Rico"],
+			"trappings": ["Jefes de banda subordinados","Red de informadores","Ropas y sombrero de calidad"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.yGZN7bMjbGH7kCMK]{Pandillero}</p>"
+		},
+		{
+			"id": "Custodian",
+			"name": "Custodio",
+			"skills": ["Atletismo","Carisma Animal","Consumir Alcohol","Frialdad","Aguante","Intuición","Sabiduría académica (Local)","Percepción"],
+			"talents": ["Amenazador","Golpe conmocionador","Vigilancia","Visión nocturna"],
+			"trappings": ["Aceite para lámpara","Librea","Linterna","Llaves"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.ZAItIWSNYQPb1pmi]{Guarda}</p>"
+		},
+		{
+			"id": "Daemon Slayer",
+			"name": "Matademonios",
+			"skills": ["Consumir Alcohol","Frialdad","Esquivar","Aguante","Jugar","Sanar","Sabiduría académica (Troles)","Cuerpo a cuerpo (Básica)","Tasar","Intimidar","Hablar idioma (Lengua de Batalla)","Sabiduría académica (Gigantes)","Cuerpo a cuerpo (A Dos Manos)","Supervivencia","Animar (Relatar)","Sabiduría académica (Dragones)","Percepción","A distancia (Arrojadiza)","Intuición","Sabiduría académica (Caos)"],
+			"talents": ["Aterrador","Golpe poderoso","Maestro del combate","Muy fuerte"],
+			"trappings": ["Cabeza de dragón"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.9p3DaFU5hMFP1C3v]{Matador}</p>"
+		},
+		{
+			"id": "Demagogue",
+			"name": "Demagogo",
+			"skills": ["Arte (Escritura)","Sobornar","Carisma","Consumir Alcohol","Cotilleo","Regatear","Sabiduría académica (Política)","Oficio (Imprenta)","Frialdad","Esquivar","Animar (Relatar)","Jugar","Intuición","Mando","Atletismo","Intimidar","Cuerpo a cuerpo (Pelea)","Percepción","Sabiduría académica (Heráldica)","Montar (Caballo)"],
+			"talents": ["Cortés","Etiqueta (Cualquiera)","Intrigante","Orador maestro"],
+			"trappings": ["Imprenta","Mecenas","3 panfleteros","Sombrero impresionante"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.yDGBs92ko6rUyoTe]{Alborotador}</p>"
+		},
+		{
+			"id": "Detective",
+			"name": "Detective",
+			"skills": ["Carisma","Escalar","Frialdad","Cotilleo","Intuición","Percepción","Movimiento silencioso (Urbano)","Rastrear","Consumir Alcohol","Esquivar","Sabiduría académica (Derecho)","Cuerpo a cuerpo (Pelea)","Forzar Cerraduras","Prestidigitación","Sobornar","Tasar","Mando","Sabiduría académica (Cualquiera)","Intimidar","Sabiduría académica (Cualquiera)"],
+			"talents": ["Lector rápido","Memoria visual","Sabio (Cualquiera)","Sentidos desarrollados (Cualquiera)"],
+			"trappings": ["Catalejo","Red de informadores"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.DAHJ4cu3WiGCdakE]{Investigador}</p>"
+		},
+		{
+			"id": "Diplomat",
+			"name": "Diplomático",
+			"skills": ["Atletismo","Carisma","Conducir","Esquivar","Aguante","Intuición","Montar (Caballo)","Remar","Arte (Escritura)","Sobornar","Frialdad","Cotilleo","Regatear","Sabiduría académica (Política)","Intimidar","Hablar idioma (Cualquiera)","Mando","Orientación"],
+			"talents": ["Gregario","Intrigante","Juerguista","Negociador"],
+			"trappings": ["Ayudante","Ropa de calidad","Mapa"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.B0zxjP3KbZag5Y79]{Emisario}</p>"
+		},
+		{
+			"id": "Dock Master",
+			"name": "Maestro de los muelles",
+			"skills": ["Atletismo","Escalar","Consumir Alcohol","Esquivar","Aguante","Cotilleo","Cuerpo a cuerpo (Básica)","Nadar","Sobornar","Animar (Relatar)","Jugar","Intimidar","Percepción","Movimiento silencioso (Urbano)","Frialdad","Tasar","Intuición","Mando","Carisma","Sabiduría académica (Impuestos)"],
+			"talents": ["Amenazador","Cerebro","Leer y escribir","Numismático"],
+			"trappings": ["Despacho y personal","Material de escritura"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.lDvbNLRfv9MsNyf6]{Estibador}</p>"
+		},
+		{
+			"id": "Dockhand",
+			"name": "Cargador",
+			"skills": ["Atletismo","Escalar","Consumir Alcohol","Esquivar","Aguante","Cotilleo","Cuerpo a cuerpo (Básica)","Nadar"],
+			"talents": ["Buenas espaldas","Fornido","Muy fuerte","Pelea callejera"],
+			"trappings": ["Arma de mano (Bichero)","Guantes de trabajo"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.lDvbNLRfv9MsNyf6]{Estibador}</p>"
+		},
+		{
+			"id": "Doktor",
+			"name": "Doktor",
+			"skills": ["Sobornar","Frialdad","Conducir","Aguante","Cotilleo","Sanar","Percepción","Prestidigitación","Carisma","Regatear","Hablar idioma (Gremial)","Sabiduría académica (Anatomía)","Sabiduría académica (Medicina)","Oficio (Barbero)","Consumir Alcohol","Intimidar","Mando","Investigar"],
+			"talents": ["Espabilado","Etiqueta (Eruditos)","Golpe letal","Resistencia (enfermedad)"],
+			"trappings": ["Aprendiz","Taller (Medicina)"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.Ora8bmvHERjYWEQn]{Físico}</p>"
+		},
+		{
+			"id": "Dragon Slayer",
+			"name": "Matadragones",
+			"skills": ["Consumir Alcohol","Frialdad","Esquivar","Aguante","Jugar","Sanar","Sabiduría académica (Troles)","Cuerpo a cuerpo (Básica)","Tasar","Intimidar","Hablar idioma (Lengua de Batalla)","Sabiduría académica (Gigantes)","Cuerpo a cuerpo (A Dos Manos)","Supervivencia","Animar (Relatar)","Sabiduría académica (Dragones)","Percepción","A distancia (Arrojadiza)"],
+			"talents": ["Ambidiestro","Asalto furioso","Implacable","Robusto"],
+			"trappings": ["Cabeza de gigante","Hachas arrojadizas"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.9p3DaFU5hMFP1C3v]{Matador}</p>"
+		},
+		{
+			"id": "Duellist",
+			"name": "Duelista",
+			"skills": ["Atletismo","Esquivar","Aguante","Sanar","Intuición","Hablar idioma (Viejomundano clásico)","Cuerpo a cuerpo (Cualquiera)","Percepción","Carisma","Frialdad","Jugar","Cuerpo a cuerpo (De Parada)","A distancia (De Pólvora Negra)","Oficio (Herrero)"],
+			"talents": ["Disparo rápido","Etiqueta (Cualquiera)","Giro","Reflejos de combate"],
+			"trappings": ["Daga de guardamano o rompeespadas","Pistola con pólvora y munición"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.RNcsFphKVYohTrS9]{Duelista}</p>"
+		},
+		{
+			"id": "Duelmaster",
+			"name": "Maestro duelista",
+			"skills": ["Atletismo","Esquivar","Aguante","Sanar","Intuición","Hablar idioma (Viejomundano clásico)","Cuerpo a cuerpo (Cualquiera)","Percepción","Carisma","Frialdad","Jugar","Cuerpo a cuerpo (De Parada)","A distancia (De Pólvora Negra)","Oficio (Herrero)","Intimidar","Mando","Cuerpo a cuerpo (Básica)","Actuar (Acrobacias)"],
+			"talents": ["Ambidiestro","Contraataque","Desarmar","Empuñar dos armas"],
+			"trappings": ["Espada ropera de calidad","Arma de mano","Padrino de confianza","2 espadas de entrenamiento de madera"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.RNcsFphKVYohTrS9]{Duelista}</p>"
+		},
+		{
+			"id": "Engineer",
+			"name": "Ingeniero",
+			"skills": ["Consumir Alcohol","Frialdad","Aguante","Hablar idioma (Viejomundano clásico)","Sabiduría académica (De Ingeniería)","Percepción","A distancia (De Pólvora Negra)","Oficio (De Ingeniería)","Conducir","Esquivar","Orientación","A distancia (De Ingeniería)","Investigar","Hablar idioma (Gremial)"],
+			"talents": ["Artesano (Ingeniero)","Etiqueta (Gremio)","Orientarse","Puntería"],
+			"trappings": ["Herramientas del oficio","Licencia del gremio"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.c2n86bcUngGrHyO4]{Ingeniero}</p>"
+		},
+		{
+			"id": "Entertainer",
+			"name": "Animador",
+			"skills": ["Atletismo","Carisma","Animar (Cualquiera)","Cotilleo","Regatear","Actuar (Cualquiera)","Tocar (Cualquiera)","Prestidigitación","Animar (Cualquiera)","Montar (Cualquiera)","Cuerpo a cuerpo (Básica)","Actuar (Cualquiera)","Tocar (Cualquiera)","A distancia (Arrojadiza)"],
+			"talents": ["Contorsionista","Equitación acrobática","Levantarse de un salto","Proyectil infalible"],
+			"trappings": ["Armas arrojadizas","Disfraz","Instrumento","Selección de libretos (que aún no puede leer)"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.b96g5MZr3rk5zYAo]{Animador}</p>"
+		},
+		{
+			"id": "Envoy",
+			"name": "Emisario",
+			"skills": ["Atletismo","Carisma","Conducir","Esquivar","Aguante","Intuición","Montar (Caballo)","Remar","Arte (Escritura)","Sobornar","Frialdad","Cotilleo","Regatear","Sabiduría académica (Política)"],
+			"talents": ["Atractivo","Etiqueta (Cualquiera)","Orador experto","Viajero curtido"],
+			"trappings": ["Cálamo y tinta","10 hojas de pergamino"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.B0zxjP3KbZag5Y79]{Emisario}</p>"
+		},
+		{
+			"id": "Explorer",
+			"name": "Expedicionario",
+			"skills": ["Carisma Animal","Escalar","Aguante","Cotilleo","Sabiduría académica (Local)","Cuerpo a cuerpo (Básica)","Supervivencia","Percepción","Atletismo","Orientación","A distancia (Arco)","Montar (Caballo)","Movimiento silencioso (Rural)","Rastrear","Criar Animales","Regatear","Lengua Secreta (Cazador)","Nadar","Hablar idioma (Cualquiera)","Oficio (Cartógrafo)"],
+			"talents": ["Lingüística","Recio","Sabio (Local)","Tenaz"],
+			"trappings": ["Herramientas del oficio (Cartógrafo)","Selección de mapas"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.Xl9yyv67BB8a8XFo]{Explorador}</p>"
+		},
+		{
+			"id": "Exterminator",
+			"name": "Exterminador",
+			"skills": ["Atletismo","Adiestrar Animal (Perro)","Carisma Animal","Consumir Alcohol","Aguante","Cuerpo a cuerpo (Básica)","A distancia (Honda)","Movimiento silencioso (Subterráneo o Urbano)","Criar Animales","Cotilleo","Regatear","Sabiduría académica (Veneno)","Percepción","Poner trampas","Escalar","Frialdad","Esquivar","A distancia (Pistola ballesta)","Mando","Rastrear"],
+			"talents": ["Amenazador","Decidido","Intrépido (Skaven)","Robusto"],
+			"trappings": ["Asistente","Perro grande y feroz","Saco con cebo envenenado (10 dosis de rompecorazones)"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.0DuRRCYdahOKxDPF]{Cazarratas}</p>"
+		},
+		{
+			"id": "Fellow",
+			"name": "Miembro",
+			"skills": ["Consumir Alcohol","Animar (Relatar)","Jugar","Cotilleo","Regatear","Hablar idioma (Viejomundano clásico)","Sabiduría académica (Cualquiera)","Investigar","Arte (Escritura)","Intuición","Hablar idioma (Cualquiera)","Sabiduría académica (Cualquiera)","Percepción","Oficio (Cualquiera)","Animar (Clase)","Intimidar","Hablar idioma (Cualquiera)","Sabiduría académica (Cualquiera)"],
+			"talents": ["Lingüística","Memoria visual","Orador","Sabio (Cualquiera)"],
+			"trappings": ["Birrete","Ropajes"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.cIBJfaY9DKJh5ZEM]{Erudito}</p>"
+		},
+		{
+			"id": "Fence",
+			"name": "Perista",
+			"skills": ["Carisma","Consumir Alcohol","Esquivar","Tasar","Jugar","Cotilleo","Regatear","Cuerpo a cuerpo (Básica)","Frialdad","Intimidar","Intuición","Percepción","Lengua Secreta (Ladrón)","Oficio (Grabador)"],
+			"talents": ["Delincuente","Espabilado","Etiqueta (Delincuentes)","Numismático"],
+			"trappings": ["Gafas","Herramientas del oficio (Grabador)","Material de escritura"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.lbbddfm36XMb8SYg]{Perista}</p>"
+		},
+		{
+			"id": "Fencer",
+			"name": "Esgrimista",
+			"skills": ["Atletismo","Esquivar","Aguante","Sanar","Intuición","Hablar idioma (Viejomundano clásico)","Cuerpo a cuerpo (Cualquiera)","Percepción"],
+			"talents": ["Distraer","Esquivador","Fintador","Golpear el filo"],
+			"trappings": ["Arma básica o espada ropera","Bandolera conteniendo ropa y 1d10 vendas"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.RNcsFphKVYohTrS9]{Duelista}</p>"
+		},
+		{
+			"id": "First Knight",
+			"name": "Primer caballero",
+			"skills": ["Atletismo","Criar Animales","Carisma Animal","Sanar","Sabiduría académica (Heráldica)","Cuerpo a cuerpo (De Caballería)","Montar (Caballo)","Oficio (Herrador)","Frialdad","Esquivar","Aguante","Intimidar","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Cualquiera)","Carisma","Consumir Alcohol","Mando","Sabiduría académica (Guerra)"],
+			"talents": ["Denodado","Imperturbable","Intrépido (Cualquiera)","Líder de guerra"],
+			"trappings": ["Bardas","Pequeña unidad de caballeros"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.n2VdkCPNNxdupjeQ]{Caballero}</p>"
+		},
+		{
+			"id": "Flagellant",
+			"name": "Flagelante",
+			"skills": ["Esquivar","Aguante","Sanar","Intimidar","Intuición","Sabiduría académica (Sigmar)","Cuerpo a cuerpo (Mayal)","Supervivencia","Arte (Iconos)","Atletismo","Frialdad","Hablar idioma (Viejomundano clásico)","Sabiduría académica (El Imperio)","A distancia (Honda)"],
+			"talents": ["Flagelante","Implacable","Odio visceral (Herejes)","Recio"],
+			"trappings": ["Honda","Pancarta","Símbolo religioso"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.Vtice54Y7PV95Dkp]{Flagelante}</p>"
+		},
+		{
+			"id": "Foreman",
+			"name": "Capataz",
+			"skills": ["Atletismo","Escalar","Consumir Alcohol","Esquivar","Aguante","Cotilleo","Cuerpo a cuerpo (Básica)","Nadar","Sobornar","Animar (Relatar)","Jugar","Intimidar","Percepción","Movimiento silencioso (Urbano)","Frialdad","Tasar","Intuición","Mando"],
+			"talents": ["Desfalcar","Etiqueta (Delincuentes)","Negociador","Orador"],
+			"trappings": ["Banda de estibadores","Silbato"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.lDvbNLRfv9MsNyf6]{Estibador}</p>"
+		},
+		{
+			"id": "Fortune Teller",
+			"name": "Pitoniso",
+			"skills": ["Carisma","Animar (Decir la buenaventura)","Esquivar","Cotilleo","Regatear","Intuición","Percepción","Prestidigitación"],
+			"talents": ["Atractivo","Clarividencia","Cortés","Suerte"],
+			"trappings": ["Baraja o juego de dados","Joyas baratas"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.M9NiEgE7qaCXmskM]{Místico}</p>"
+		},
+		{
+			"id": "Gang Boss",
+			"name": "Jefe de banda",
+			"skills": ["Consumir Alcohol","Frialdad","Esquivar","Aguante","Intimidar","Sabiduría académica (Local)","Cuerpo a cuerpo (Pelea)","Movimiento silencioso (Urbano)","Sobornar","Carisma","Tasar","Cotilleo","Hablar idioma (Estaliano o tileano)","Cuerpo a cuerpo (Básica)","Intuición","Mando","Percepción","A distancia (Ballesta)"],
+			"talents": ["Intrépido (Guardias)","Resistencia (Veneno)","Robusto","Voluntad de hierro"],
+			"trappings": ["Banda de matones y pandilleros","Guarida","Pistola-ballesta con 10 virotes"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.yGZN7bMjbGH7kCMK]{Pandillero}</p>"
+		},
+		{
+			"id": "Giant Slayer",
+			"name": "Matagigantes",
+			"skills": ["Consumir Alcohol","Frialdad","Esquivar","Aguante","Jugar","Sanar","Sabiduría académica (Troles)","Cuerpo a cuerpo (Básica)","Tasar","Intimidar","Hablar idioma (Lengua de Batalla)","Sabiduría académica (Gigantes)","Cuerpo a cuerpo (A Dos Manos)","Supervivencia"],
+			"talents": ["Amenazador","Giro","Implacable","Recio"],
+			"trappings": ["Cabeza de trol","Gran hacha","Joyas"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.9p3DaFU5hMFP1C3v]{Matador}</p>"
+		},
+		{
+			"id": "Governor",
+			"name": "Gobernador",
+			"skills": ["Atletismo","Carisma Animal","Consumir Alcohol","Frialdad","Aguante","Intuición","Sabiduría académica (Local)","Percepción","Criar Animales","Cuerpo a cuerpo (Básica)","Supervivencia","A distancia (Arco)","Montar (Caballo)","Nadar","Sobornar","Carisma","Cotilleo","Mando","Tasar","Hablar idioma (Cualquiera)"],
+			"talents": ["Cortés","Etiqueta (Cualquiera)","Presencia imponente","Sabio (Local)"],
+			"trappings": ["Asistente","Residencia de gobernador","Sirviente"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.ZAItIWSNYQPb1pmi]{Guarda}</p>"
+		},
+		{
+			"id": "Grave Robber",
+			"name": "Ladrón de tumbas",
+			"skills": ["Escalar","Frialdad","Esquivar","Aguante","Cotilleo","Intuición","Percepción","Movimiento silencioso (Cualquiera)","Sobornar","Conducir","Tasar","Regatear","Sabiduría académica (Medicina)","Cuerpo a cuerpo (Básica)"],
+			"talents": ["Allanamiento de morada","Muy fuerte","Resistencia (Enfermedad)","Visión nocturna"],
+			"trappings": ["Arma de mano","Mochila","Pala","Quinqué y aceite"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.W2Ovj3ec7eqZUuuv]{Ladrón de tumbas}</p>"
+		},
+		{
+			"id": "Greenfish",
+			"name": "Bacaladilla",
+			"skills": ["Atletismo","Consumir Alcohol","Esquivar","Aguante","Cotilleo","Supervivencia","Remar","Nadar"],
+			"talents": ["Buen nadador","Gregario","Pescador","Zancadas (Marismas)"],
+			"trappings": ["Caña de pescar y cebo","Cubo","Polainas de cuero"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.9D0o0fbqscpgk0RK]{Mujer de río}</p>"
+		},
+		{
+			"id": "Guard",
+			"name": "Guardia",
+			"skills": ["Consumir Alcohol","Aguante","Animar (Relatar)","Jugar","Cotilleo","Intuición","Cuerpo a cuerpo (Básica)","Percepción","Atletismo","Frialdad","Esquivar","Intimidar","Cuerpo a cuerpo (Arma de Asta)","A distancia (Arco)"],
+			"talents": ["Escudero","Golpe poderoso","Incansable","Giro"],
+			"trappings": ["Arco con 10 flechas","Camisote de malla con mangas","Escudo","Lanza corta"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.qaL8gLZdfOL5F5UV]{Guardia}</p>"
+		},
+		{
+			"id": "Guard Officer",
+			"name": "Oficial de la guardia",
+			"skills": ["Consumir Alcohol","Aguante","Animar (Relatar)","Jugar","Cotilleo","Intuición","Cuerpo a cuerpo (Básica)","Percepción","Atletismo","Frialdad","Esquivar","Intimidar","Cuerpo a cuerpo (Arma de Asta)","A distancia (Arco)","Sanar","Hablar idioma (Lengua de Batalla)","Sabiduría académica (Etiquetas)","Cuerpo a cuerpo (A Dos Manos)","Mando","Sabiduría académica (Guerra)"],
+			"talents": ["Asalto furioso","Maestro del combate","Robusto","Voluntad de hierro"],
+			"trappings": ["Coraza"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.qaL8gLZdfOL5F5UV]{Guardia}</p>"
+		},
+		{
+			"id": "Guide",
+			"name": "Guía",
+			"skills": ["Carisma Animal","Escalar","Aguante","Cotilleo","Sabiduría académica (Local)","Cuerpo a cuerpo (Básica)","Supervivencia","Percepción"],
+			"talents": ["Errante","Orientarse","Vigilancia","Zancadas (Cualquiera)"],
+			"trappings": ["Arma de mano","Botas recias y capa","Chaqueta de cuero","Soga"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.Xl9yyv67BB8a8XFo]{Explorador}</p>"
+		},
+		{
+			"id": "Guildmaster",
+			"name": "Maestro del gremio",
+			"skills": ["Atletismo","Frialdad","Consumir Alcohol","Esquivar","Aguante","Tasar","Movimiento silencioso (Urbano)","Oficio (Cualquiera)","Carisma","Regatear","Sabiduría académica (Local)","Cotilleo","Hablar idioma (Gremial)","Percepción","Intuición","Mando","Investigar","Lengua secreta (Gremio)","Sobornar","Intimidar"],
+			"talents": ["Intrigante","Obra maestra","Orador","Sobornador"],
+			"trappings": ["Gremio","Ropas de calidad"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.AlriWm9KtKnDAMw1]{Artesano}</p>"
+		},
+		{
+			"id": "Hedge Apprentice",
+			"name": "Aprendiz de adivino",
+			"skills": ["Canalización","Aguante","Intuición","Hablar idioma (Lengua de la magia)","Sabiduría académica (Folclore)","Sabiduría académica (Hierbas)","Supervivencia","Percepción"],
+			"talents": ["Errante","Magia menor","Manos rápidas","Zancadas (Bosques)"],
+			"trappings": ["1d10 amuletos de buena suerte","Bastón","Mochila"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.pxxGfn6ze45dwg4Y]{Adivino}</p>"
+		},
+		{
+			"id": "Hedge Master",
+			"name": "Maestro adivino",
+			"skills": ["Canalización","Aguante","Intuición","Hablar idioma (Lengua de la magia)","Sabiduría académica (Folclore)","Sabiduría académica (Hierbas)","Supervivencia","Percepción","Frialdad","Cotilleo","Sanar","Sabiduría académica (Local)","Oficio (Charms)","Oficio (Herbolario)","Regatear","Sabiduría académica (Genealogía)","Sabiduría académica (Magia)","Sabiduría académica (Spirits)"],
+			"talents": ["Alma pura","Artesano (Herbolario)","Resistencia (Enfermedad)","Sentir magia"],
+			"trappings": ["Aprendiz","Cabaña aislada"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.pxxGfn6ze45dwg4Y]{Adivino}</p>"
+		},
+		{
+			"id": "Hedge Witch",
+			"name": "Adivino",
+			"skills": ["Canalización","Aguante","Intuición","Hablar idioma (Lengua de la magia)","Sabiduría académica (Folclore)","Sabiduría académica (Hierbas)","Supervivencia","Percepción","Frialdad","Cotilleo","Sanar","Sabiduría académica (Local)","Oficio (Charms)","Oficio (Herbolario)"],
+			"talents": ["Afinidad animal","Afinidad con el Aethyr","Magia arcana (Adivinación)","Sexto sentido"],
+			"trappings": ["Contravenenos","Emplasto curativo","Herramientas del oficio (Herbolario)"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.pxxGfn6ze45dwg4Y]{Adivino}</p>"
+		},
+		{
+			"id": "Hedgewise",
+			"name": "Sabio adivino",
+			"skills": ["Canalización","Aguante","Intuición","Hablar idioma (Lengua de la magia)","Sabiduría académica (Folclore)","Sabiduría académica (Hierbas)","Supervivencia","Percepción","Frialdad","Cotilleo","Sanar","Sabiduría académica (Local)","Oficio (Charms)","Oficio (Herbolario)","Regatear","Sabiduría académica (Genealogía)","Sabiduría académica (Magia)","Sabiduría académica (Spirits)","Intimidar","Rezar"],
+			"talents": ["Artesano maestro (Herbolario)","Decidido","Sentidos desarrollados (Cualquiera)","Visión nocturna"],
+			"trappings": ["Capa y guirnalda ceremoniales","Surtido de calaveras de animales"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.pxxGfn6ze45dwg4Y]{Adivino}</p>"
+		},
+		{
+			"id": "Herald",
+			"name": "Heraldo",
+			"skills": ["Atletismo","Carisma","Conducir","Esquivar","Aguante","Intuición","Montar (Caballo)","Remar"],
+			"talents": ["Cortés","Etiqueta (Nobles)","Leer y escribir","Parloteo"],
+			"trappings": ["Chaqueta de cuero","Librea","Estuche para pergaminos"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.B0zxjP3KbZag5Y79]{Emisario}</p>"
+		},
+		{
+			"id": "Herb Gatherer",
+			"name": "Recolector de hierbas",
+			"skills": ["Carisma Animal","Escalar","Aguante","Sabiduría académica (Hierbas)","Supervivencia","Percepción","Nadar","Oficio (Herbolario)"],
+			"talents": ["Errante","Orientarse","Sentidos desarrollados (Gusto)","Zancadas (Cualquiera)"],
+			"trappings": ["Bandolera conteniendo un surtido de hierbas","Botas","Capa"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.MYzcmrUrSKLmshwu]{Herbolario}</p>"
+		},
+		{
+			"id": "Herb Master",
+			"name": "Maestro de las hierbas",
+			"skills": ["Carisma Animal","Escalar","Aguante","Sabiduría académica (Hierbas)","Supervivencia","Percepción","Nadar","Oficio (Herbolario)","Consumir Alcohol","Frialdad","Cotilleo","Regatear","Sanar","Sabiduría académica (Local)","Intuición","Mando","Sabiduría académica (Medicina)","Oficio (Venenos)"],
+			"talents": ["Artesano (Herbolario)","Espabilado","Primeros auxilios","Recio"],
+			"trappings": ["3 emplastos curativos","Poción curativa","Recolector de hierbas","Taller (Herbolario)"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.MYzcmrUrSKLmshwu]{Herbolario}</p>"
+		},
+		{
+			"id": "Herbalist",
+			"name": "Herbolario",
+			"skills": ["Carisma Animal","Escalar","Aguante","Sabiduría académica (Hierbas)","Supervivencia","Percepción","Nadar","Oficio (Herbolario)","Consumir Alcohol","Frialdad","Cotilleo","Regatear","Sanar","Sabiduría académica (Local)"],
+			"talents": ["Dedos ágiles","Fornido","Negociador","Vigilancia"],
+			"trappings": ["Arma de mano (Hoz)","Emplasto curativo","Herramientas del oficio (Herbolario)"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.MYzcmrUrSKLmshwu]{Herbolario}</p>"
+		},
+		{
+			"id": "Herbwise",
+			"name": "Sabio de las hierbas",
+			"skills": ["Carisma Animal","Escalar","Aguante","Sabiduría académica (Hierbas)","Supervivencia","Percepción","Nadar","Oficio (Herbolario)","Consumir Alcohol","Frialdad","Cotilleo","Regatear","Sanar","Sabiduría académica (Local)","Intuición","Mando","Sabiduría académica (Medicina)","Oficio (Venenos)","Conducir","Orientación"],
+			"talents": ["Artesano maestro (Herbolario)","Elaborar","Resistencia (Veneno)","Sabio (Hierbas)"],
+			"trappings": ["Poni y carreta"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.MYzcmrUrSKLmshwu]{Herbolario}</p>"
+		},
+		{
+			"id": "Hexer",
+			"name": "Maldecidor",
+			"skills": ["Canalización","Frialdad","Aguante","Cotilleo","Intimidar","Hablar idioma (Lengua de la magia)","Prestidigitación","Movimiento silencioso (Rural)"],
+			"talents": ["Amenazador","Delincuente","Dicción instintiva","Magia menor"],
+			"trappings": ["Agujas","Muñeca","Tiza","Velas"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.5ITpDJoRHlIgbE0g]{Brujo}</p>"
+		},
+		{
+			"id": "High Priest",
+			"name": "Sumo sacerdote",
+			"skills": ["Atletismo","Frialdad","Aguante","Intuición","Sabiduría académica (Teología)","Percepción","Rezar","Investigar","Carisma","Animar (Relatar)","Cotilleo","Sanar","Intimidar","Cuerpo a cuerpo (Básica)","Arte (Escritura)","Animar (Discursos)","Mando","Sabiduría académica (Heráldica)"],
+			"talents": ["Celo ferviente","Decidido","Odio visceral (Cualquiera)","Sentidos desarrollados (Cualquiera)"],
+			"trappings": ["Reliquia religiosa","Ropajes de calidad","Sacerdotes subordinados","Templo"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.GNwQFkVKUs0JM6U5]{Sacerdote}</p>"
+		},
+		{
+			"id": "Hitman",
+			"name": "Sicario",
+			"skills": ["Atletismo","Esquivar","Aguante","Animar (Provocar)","Cotilleo","Regatear","Intimidar","Cuerpo a cuerpo (Cualquiera)","Sobornar","Carisma","Intuición","Cuerpo a cuerpo (Básica)","Percepción","Montar (Caballo)","Escalar","Frialdad","Orientación","A distancia (Arrojadiza)"],
+			"talents": ["Desarmar","Golpe cuidadoso","Incansable","Puntería"],
+			"trappings":  ["Capa","Cuchillos arrojadizos","Garrote","Veneno"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.mlLVNBKIUnonqka2]{Protagonista}</p>"
+		},
+		{
+			"id": "Honor Guard",
+			"name": "Guardia de honor",
+			"skills": ["Consumir Alcohol","Aguante","Animar (Relatar)","Jugar","Cotilleo","Intuición","Cuerpo a cuerpo (Básica)","Percepción","Atletismo","Frialdad","Esquivar","Intimidar","Cuerpo a cuerpo (Arma de Asta)","A distancia (Arco)","Sanar","Hablar idioma (Lengua de Batalla)","Sabiduría académica (Etiquetas)","Cuerpo a cuerpo (A Dos Manos)"],
+			"talents": ["Denodado","Imperturbable","Intrépido (Intrusos)","Levantarse de un salto"],
+			"trappings": ["Arma de gran tamaño o alabarda","Uniforme","Yelmo"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.qaL8gLZdfOL5F5UV]{Guarda}</p>"
+		},
+		{
+			"id": "Horseman",
+			"name": "Jinete",
+			"skills": ["Criar Animales","Carisma Animal","Aguante","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Básica)","Supervivencia","Percepción","Montar (Caballo)"],
+			"talents": ["Jinete experto","Mano dura","Percepción de combate","Reflejos rápidos"],
+			"trappings": ["Caballo de monta con sillas y arreos","Chaqueta de cuero"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.h9LHCAdlP4o55QvD]{Reitre}</p>"
+		},
+		{
+			"id": "Huffer",
+			"name": "Práctico",
+			"skills": ["Consumir Alcohol","Cotilleo","Intuición","Sabiduría académica (Local)","Sabiduría académica (Vías fluviales)","Percepción","Remar","Nadar","Carisma","Frialdad","Animar (Relatar)","Hablar idioma (Cualquiera)","Cuerpo a cuerpo (Básica)","Orientación"],
+			"talents": ["Etiqueta (Gremio)","Guía fluvial","Negociador","Olfato para los problemas"],
+			"trappings": ["Bote de remos","Chaleco de cuero","Soga"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.LaTDWvLySPKGojiW]{Práctico}</p>"
+		},
+		{
+			"id": "Hunter",
+			"name": "Cazador",
+			"skills": ["Carisma Animal","Escalar","Aguante","Sabiduría académica (Bestias)","Supervivencia","Percepción","A distancia (Honda)","Poner trampas","Frialdad","Intuición","Cuerpo a cuerpo (Básica)","A distancia (Arco)","Lengua Secreta (Cazador)","Movimiento silencioso (Rural)"],
+			"talents": ["Disparo infalible","Disparo rápido","Puntería","Vista excelente"],
+			"trappings": ["Arco con 10 flechas"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.2RxWvPZCKW2ShY5a]{Cazador}</p>"
+		},
+		{
+			"id": "Huntsmaster",
+			"name": "Montero mayor",
+			"skills": ["Carisma Animal","Escalar","Aguante","Sabiduría académica (Bestias)","Supervivencia","Percepción","A distancia (Honda)","Poner trampas","Frialdad","Intuición","Cuerpo a cuerpo (Básica)","A distancia (Arco)","Lengua Secreta (Cazador)","Movimiento silencioso (Rural)","Orientación","Montar (Caballo)","Nadar","Rastrear","Criar Animales","Adiestrar Animal (Cualquiera)"],
+			"talents": ["Disparo seguro","Francotirador","Intrépido (Monstruos)","Robusto"],
+			"trappings": ["Caballo de monta con silla y arreos","Perrera con perros de caza"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.2RxWvPZCKW2ShY5a]{Cazador}</p>"
+		},
+		{
+			"id": "Hustler",
+			"name": "Embaucador",
+			"skills": ["Sobornar","Carisma","Consumir Alcohol","Animar (Cualquiera)","Jugar","Cotilleo","Regatear","Intimidar"],
+			"talents": ["Atractivo","Gato callejero","Gregario","Parloteo"],
+			"trappings": ["Petaca de licor"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.MY4aFbQL5T9znCUd]{Chalán}</p>"
+		},
+		{
+			"id": "Informer",
+			"name": "Informador",
+			"skills": ["Sobornar","Carisma","Frialdad","Jugar","Cotilleo","Regatear","Percepción","Movimiento silencioso (Cualquiera)"],
+			"talents": ["Gregario","Juerguista","Parloteo","Sombra"],
+			"trappings": ["Bandolera conteniendo 2 tipos diferentes de ropas y capa con capucha","Carboncillo"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.dWLxT0zRnDFbwTKZ]{Espía}</p>"
+		},
+		{
+			"id": "Initiate",
+			"name": "Iniciado",
+			"skills": ["Atletismo","Frialdad","Aguante","Intuición","Sabiduría académica (Teología)","Percepción","Rezar","Investigar"],
+			"talents": ["Bendición (Cualquiera)","Cortés","Leer y escribir","Visiones sagradas"],
+			"trappings": ["Ropajes","Símbolo religioso"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.GNwQFkVKUs0JM6U5]{Sacerdote}</p>"
+		},
+		{
+			"id": "Inquisitor",
+			"name": "Inquisidor",
+			"skills": ["Carisma","Consumir Alcohol","Sanar","Intimidar","Intuición","Sabiduría académica (Tortura)","Cuerpo a cuerpo (Pelea)","Percepción","Frialdad","Cuerpo a cuerpo (Básica)","Cotilleo","Sabiduría académica (Brujas)","A distancia (Cualquiera)","Montar (Caballo)","Aguante","Mando","Sabiduría académica (Derecho)","Sabiduría académica (Local)"],
+			"talents": ["Decidido","Incansable","Intrépido (Brujas)","Olfato para los problemas"],
+			"trappings": ["Interrogadores subordinados","Ropas de calidad"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.3A56eFnkIYFmbRL1]{Cazador de brujas}</p>"
+		},
+		{
+			"id": "Interrogator",
+			"name": "Interrogador",
+			"skills": ["Carisma","Consumir Alcohol","Sanar","Intimidar","Intuición","Sabiduría académica (Tortura)","Cuerpo a cuerpo (Pelea)","Percepción"],
+			"talents": ["Amenazador","Leer y escribir","Resuelto","Sangre fría"],
+			"trappings": ["Arma de mano","Instrumentos de tortura"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.3A56eFnkIYFmbRL1]{Cazador de brujas}</p>"
+		},
+		{
+			"id": "Investigator",
+			"name": "Investigador",
+			"skills": ["Carisma","Escalar","Frialdad","Cotilleo","Intuición","Percepción","Movimiento silencioso (Urbano)","Rastrear","Consumir Alcohol","Esquivar","Sabiduría académica (Derecho)","Cuerpo a cuerpo (Pelea)","Forzar Cerraduras","Prestidigitación"],
+			"talents": ["Espabilado","Etiqueta (Cualquiera)","Sombra","Tenaz"],
+			"trappings": ["Arma de mano","Chaqueta de cuero","Ganzúa","Lupa"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.DAHJ4cu3WiGCdakE]{Investigador}</p>"
+		},
+		{
+			"id": "Judge",
+			"name": "Juez",
+			"skills": ["Consumir Alcohol","Aguante","Regatear","Hablar idioma (Viejomundano clásico)","Sabiduría académica (Derecho)","Sabiduría académica (Teología)","Percepción","Investigar","Sobornar","Carisma","Cotilleo","Intuición","Hablar idioma (Gremial)","Lengua secreta (Gremio)","Arte (Escritura)","Animar (Discursos)","Intimidar","Sabiduría académica (Cualquiera)","Frialdad","Sabiduría académica (Cualquiera)"],
+			"talents": ["Cerebro","Presencia imponente","Rico","Sabio (Derecho)"],
+			"trappings": ["Martillo","Peluca ostentosa"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.GhqPa2iwEdc4Dokc]{Abogado}</p>"
+		},
+		{
+			"id": "Judicial Champion",
+			"name": "Campeón judicial",
+			"skills": ["Atletismo","Esquivar","Aguante","Sanar","Intuición","Hablar idioma (Viejomundano clásico)","Cuerpo a cuerpo (Cualquiera)","Percepción","Carisma","Frialdad","Jugar","Cuerpo a cuerpo (De Parada)","A distancia (De Pólvora Negra)","Oficio (Herrero)","Intimidar","Mando","Cuerpo a cuerpo (Básica)","Actuar (Acrobacias)","Sabiduría académica (Derecho)","Cuerpo a cuerpo (Cualquiera)"],
+			"talents": ["Amenazador","Golpe de reacción","Golpe letal","Maestro del combate"],
+			"trappings": ["2 armas de calidad"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.RNcsFphKVYohTrS9]{Duelista}</p>"
+		},
+		{
+			"id": "Knight",
+			"name": "Caballero",
+			"skills": ["Atletismo","Criar Animales","Carisma Animal","Sanar","Sabiduría académica (Heráldica)","Cuerpo a cuerpo (De Caballería)","Montar (Caballo)","Oficio (Herrador)","Frialdad","Esquivar","Aguante","Intimidar","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Cualquiera)"],
+			"talents": ["Amenazador","Escudero","Golpe poderoso","Viajero curtido"],
+			"trappings": ["Arma cuerpo a cuerpo (Cualquiera)","Armadura completa y yelmo","Destrero con silla y arreos","Lanza de caballería"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.n2VdkCPNNxdupjeQ]{Caballero}</p>"
+		},
+		{
+			"id": "Knight of the Inner Circle",
+			"name": "Caballero del Círculo Interior",
+			"skills": ["Atletismo","Criar Animales","Carisma Animal","Sanar","Sabiduría académica (Heráldica)","Cuerpo a cuerpo (De Caballería)","Montar (Caballo)","Oficio (Herrador)","Frialdad","Esquivar","Aguante","Intimidar","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Cualquiera)","Carisma","Consumir Alcohol","Mando","Sabiduría académica (Guerra)","Sabiduría académica (Cualquiera)","Lengua Secreta (Orden de caballería)"],
+			"talents": ["Desarmar","Golpe letal","Inspirador","Voluntad de hierro"],
+			"trappings": ["Escudero","Gran unidad de caballeros o diversas pequeñas unidades de caballeros","Gran yelmo con penacho"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.n2VdkCPNNxdupjeQ]{Caballero}</p>"
+		},
+		{
+			"id": "Landsman",
+			"name": "Marinero de tierra",
+			"skills": ["Escalar","Consumir Alcohol","Jugar","Cotilleo","Remar","Cuerpo a cuerpo (Pelea)","Navegar","Nadar"],
+			"talents": ["Buen nadador","Buenas espaldas","Pescador","Zancadas (Costero)"],
+			"trappings": ["Cepillo","Cubo","Fregona"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.wu6aG1XPdzvpiLcR]{Marino}</p>"
+		},
+		{
+			"id": "Lawyer",
+			"name": "Abogado",
+			"skills": ["Consumir Alcohol","Aguante","Regatear","Hablar idioma (Viejomundano clásico)","Sabiduría académica (Derecho)","Sabiduría académica (Teología)","Percepción","Investigar","Sobornar","Carisma","Cotilleo","Intuición","Hablar idioma (Gremial)","Lengua secreta (Gremio)"],
+			"talents": ["Cortés","Delincuente","Discutidor","Etiqueta (Gremio)"],
+			"trappings": ["Licencia del gremio","Material de escritura","Ropa de cortesano"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.GhqPa2iwEdc4Dokc]{Abogado}</p>"
+		},
+		{
+			"id": "Lector",
+			"name": "Lector",
+			"skills": ["Atletismo","Frialdad","Aguante","Intuición","Sabiduría académica (Teología)","Percepción","Rezar","Investigar","Carisma","Animar (Relatar)","Cotilleo","Sanar","Intimidar","Cuerpo a cuerpo (Básica)","Arte (Escritura)","Animar (Discursos)","Mando","Sabiduría académica (Heráldica)","Hablar idioma (Cualquiera)","Sabiduría académica (Política)"],
+			"talents": ["Alma pura","Orador maestro","Resistencia (Cualquiera)","Sabio (Teología)"],
+			"trappings": ["Biblioteca (Teología)","Sumos sacerdotes subordinados"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.GNwQFkVKUs0JM6U5]{Sacerdote}</p>"
+		},
+		{
+			"id": "Light Cavalry Officer",
+			"name": "Oficial de caballería",
+			"skills": ["Criar Animales","Carisma Animal","Aguante","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Básica)","Supervivencia","Percepción","Montar (Caballo)","Carisma","Consumir Alcohol","Frialdad","Cotilleo","Cuerpo a cuerpo (De Caballería)","A distancia (De Pólvora Negra)","Intimidar","Intuición","Mando","Sabiduría académica (Guerra)","Jugar","Sabiduría académica (Heráldica)"],
+			"talents": ["Disparo infalible","Golpe de reacción","Inspirador","Robusto"],
+			"trappings": ["Baraja","Ropa de calidad"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.h9LHCAdlP4o55QvD]{Reitre}</p>"
+		},
+		{
+			"id": "Light Cavalry Sergeant",
+			"name": "Sargento de caballería",
+			"skills": ["Criar Animales","Carisma Animal","Aguante","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Básica)","Supervivencia","Percepción","Montar (Caballo)","Carisma","Consumir Alcohol","Frialdad","Cotilleo","Cuerpo a cuerpo (De Caballería)","A distancia (De Pólvora Negra)","Intimidar","Intuición","Mando","Sabiduría académica (Guerra)"],
+			"talents": ["Disparo rápido","Líder de guerra","Odio visceral (Cualquiera)","Reflejos de combate"],
+			"trappings": ["Fajín"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.h9LHCAdlP4o55QvD]{Reitre}</p>"
+		},
+		{
+			"id": "Maestro",
+			"name": "Maestro",
+			"skills": ["Arte (Cualquiera)","Frialdad","Consumir Alcohol","Tasar","Aguante","Cotilleo","Percepción","Movimiento silencioso (Urbano)","Escalar","Jugar","Regatear","Intuición","Hablar idioma (Viejomundano clásico)","Oficio (Suministros de arte)","Carisma","Mando","Sabiduría académica (Arte)","Sabiduría académica (Heráldica)","Investigar","Montar (Caballo)"],
+			"talents": ["Ambidiestro","Cerebro","Leer y escribir","Obra maestra"],
+			"trappings": ["3 aprendices","Biblioteca (Arte)","Taller grande (Artista)"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.rjUjdQrWHWazjkRC]{Artista}</p>"
+		},
+		{
+			"id": "Magistrate",
+			"name": "Magistrado",
+			"skills": ["Frialdad","Esquivar","Aguante","Cotilleo","Regatear","Intimidar","Cuerpo a cuerpo (Básica)","Percepción","Sobornar","Carisma","Tasar","Intuición","Mando","Sabiduría académica (Local)","Criar Animales","Sabiduría académica (Heráldica)","Orientación","Montar (Caballo)","Hablar idioma (Viejomundano clásico)","Sabiduría académica (Derecho)"],
+			"talents": ["Espabilado","Intrigante","Presencia imponente","Voluntad de hierro"],
+			"trappings": ["Biblioteca (Derecho)","Ropa de calidad","Sello oficial"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.WbjmnVlyJ9VP2nt4]{Alguacil}</p>"
+		},
+		{
+			"id": "Magnate",
+			"name": "Magnate",
+			"skills": ["Sobornar","Consumir Alcohol","Jugar","Intimidar","Mando","Sabiduría académica (Heráldica)","Cuerpo a cuerpo (De Esgrima)","Tocar (Cualquiera)","Carisma","Cotilleo","Hablar idioma (Viejomundano clásico)","Sabiduría académica (Local)","Montar (Caballo)","Cuerpo a cuerpo (De Parada)","Hablar idioma (Cualquiera)","Intuición","Sabiduría académica (Política)","Percepción"],
+			"talents": ["Intrigante","Negociador","Orador","Sangre fría"],
+			"trappings": ["Anillo de sello","Feudo","Joyas por valor de 200 coronas de oro","2 juegos de ropa cortesana de calidad","200 coronas de oro"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.CMIowWLOafHKAhnB]{Noble}</p>"
+		},
+		{
+			"id": "Master Apothecary",
+			"name": "Boticario maestro",
+			"skills": ["Consumir Alcohol","Sanar","Hablar idioma (Viejomundano clásico)","Sabiduría académica (Química)","Sabiduría académica (Medicina)","Sabiduría académica (Plantas)","Oficio (Boticario)","Oficio (Envenenador)","Carisma","Regatear","Sabiduría académica (Ciencias)","Cotilleo","Hablar idioma (Gremial)","Percepción","Intuición","Mando","Investigar","Lengua secreta (Gremio)"],
+			"talents": ["Artesano maestro (Boticario)","Espabilado","Intelectual","Resistencia (Veneno)"],
+			"trappings": ["Aprendiz","Libro (Farmacia)","Taller"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.FW2VeYf0vUUFbVE6]{Boticario}</p>"
+		},
+		{
+			"id": "Master Artisan",
+			"name": "Maestro artesano",
+			"skills": ["Atletismo","Frialdad","Consumir Alcohol","Esquivar","Aguante","Tasar","Movimiento silencioso (Urbano)","Oficio (Cualquiera)","Carisma","Regatear","Sabiduría académica (Local)","Cotilleo","Hablar idioma (Gremial)","Percepción","Intuición","Mando","Investigar","Lengua secreta (Gremio)"],
+			"talents": ["Artesano maestro (Cualquiera)","Leer y escribir","Manitas","Sentidos desarrollados (Gusto o Tacto)"],
+			"trappings": ["Aprendiz","Taller"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.AlriWm9KtKnDAMw1]{Artesano}</p>"
+		},
+		{
+			"id": "Master Artist",
+			"name": "Artista magistral",
+			"skills": ["Arte (Cualquiera)","Frialdad","Consumir Alcohol","Tasar","Aguante","Cotilleo","Percepción","Movimiento silencioso (Urbano)","Escalar","Jugar","Regatear","Intuición","Hablar idioma (Viejomundano clásico)","Oficio (Suministros de arte)","Carisma","Mando","Sabiduría académica (Arte)","Sabiduría académica (Heráldica)"],
+			"talents": ["Etiqueta (Cualquiera)","Negociador","Olfato para los problemas","Sentidos desarrollados (Cualquiera)"],
+			"trappings": ["Aprendiz","Mecenas","Taller (Artista)"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.rjUjdQrWHWazjkRC]{Artista}</p>"
+		},
+		{
+			"id": "Master Beggar",
+			"name": "Maestro mendigo",
+			"skills": ["Atletismo","Carisma","Consumir Alcohol","Frialdad","Esquivar","Aguante","Intuición","Movimiento silencioso (Urbano)","Animar (Actuar)","Animar (Cualquiera)","Cotilleo","Regatear","Percepción","Prestidigitación","Carisma Animal","Mando","Sabiduría académica (Local)","Lengua Secreta (Vagabundo)"],
+			"talents": ["Esquivador","Parloteo","Pelea callejera","Recio"],
+			"trappings": ["Escondrijo","Material de disfraces","Seguidor pobre"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.djOQaw7iRfec9UEj]{Mendigo}</p>"
+		},
+		{
+			"id": "Master Bounty Hunter",
+			"name": "Cazarrecompensas maestro",
+			"skills": ["Sobornar","Carisma","Cotilleo","Regatear","Intuición","Cuerpo a cuerpo (Básica)","Supervivencia","Percepción","Atletismo","Aguante","Intimidar","A distancia (Ballesta)","A distancia (Enmarañante)","Rastrear","Criar Animales","Escalar","Montar (Caballo)","Nadar"],
+			"talents": ["Corredor","Disparo infalible","Empuñar dos armas","Golpe cuidadoso"],
+			"trappings": ["Caballo de monta y silla","Camisote de malla"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.bsQN8B1mtZhl2WRu]{Cazarrecompensas}</p>"
+		},
+		{
+			"id": "Master Engineer",
+			"name": "Maestro ingeniero",
+			"skills": ["Consumir Alcohol","Frialdad","Aguante","Hablar idioma (Viejomundano clásico)","Sabiduría académica (De Ingeniería)","Percepción","A distancia (De Pólvora Negra)","Oficio (De Ingeniería)","Conducir","Esquivar","Orientación","A distancia (De Ingeniería)","Investigar","Hablar idioma (Gremial)","Hablar idioma (Khazalid)","Mando","Montar (Caballo)","Lengua secreta (Gremio)"],
+			"talents": ["Artesano maestro (Ingeniería)","Etiqueta (Erudito)","Francotirador","Genio aritmético"],
+			"trappings": ["Taller"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.c2n86bcUngGrHyO4]{Ingeniero}</p>"
+		},
+		{
+			"id": "Master Fence",
+			"name": "Maestro perista",
+			"skills": ["Carisma","Consumir Alcohol","Esquivar","Tasar","Jugar","Cotilleo","Regatear","Cuerpo a cuerpo (Básica)","Frialdad","Intimidar","Intuición","Percepción","Lengua Secreta (Ladrón)","Oficio (Grabador)","Sobornar","Animar (Relatar)","Sabiduría académica (Arte)","Sabiduría académica (Local)"],
+			"talents": ["Cerebro","Cortés","Genio aritmético","Golpe conmocionador"],
+			"trappings": ["Casa de empeños"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.lbbddfm36XMb8SYg]{Perista}</p>"
+		},
+		{
+			"id": "Master Investigator",
+			"name": "Maestro investigador",
+			"skills": ["Carisma","Escalar","Frialdad","Cotilleo","Intuición","Percepción","Movimiento silencioso (Urbano)","Rastrear","Consumir Alcohol","Esquivar","Sabiduría académica (Derecho)","Cuerpo a cuerpo (Pelea)","Forzar Cerraduras","Prestidigitación","Sobornar","Tasar","Mando","Sabiduría académica (Cualquiera)"],
+			"talents": ["Allanamiento de morada","Cortés","Intelectual","Sexto sentido"],
+			"trappings": ["Ayudante","Despacho"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.DAHJ4cu3WiGCdakE]{Investigador}</p>"
+		},
+		{
+			"id": "Master Merchant",
+			"name": "Maestro mercader",
+			"skills": ["Criar Animales","Sobornar","Carisma","Consumir Alcohol","Conducir","Jugar","Cotilleo","Regatear","Tasar","Intuición","Hablar idioma (Cualquiera)","Hablar idioma (Gremial)","Sabiduría académica (Local)","Percepción"," Frialdad","Hablar idioma (Viejomundano clásico)","Orientación","Lengua secreta (Gremio)"],
+			"talents": ["Etiqueta (Cualquiera)","Numismático","Orador experto","Vigilancia"],
+			"trappings": ["Almacén","Casa en la ciudad con sirvientes","100 coronas de oro"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.FLqzxS5gxKflqDUk]{Mercader}</p>"
+		},
+		{
+			"id": "Master Miner",
+			"name": "Maestro minero",
+			"skills": ["Frialdad","Aguante","Intuición","Sabiduría académica (Local)","Cuerpo a cuerpo (A Dos Manos)","Supervivencia","Percepción","Nadar","Escalar","Consumir Alcohol","Tasar","Cuerpo a cuerpo (Básica)","Lengua Secreta (Minero)","Oficio (Explosivos)","Cotilleo","Sabiduría académica (Geología)","Movimiento silencioso (Subterráneo)","Oficio (De Ingeniería)"],
+			"talents": ["Artesano (Explosivos)","Golpe cuidadoso","Manitas","Rata de túnel"],
+			"trappings": ["Arma grande (Pico a dos manos)","Casco","Herramientas del oficio (Ingeniero)"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.lWT9EiFL6a09w0h9]{Minero}</p>"
+		},
+		{
+			"id": "Master Pedlar",
+			"name": "Maestro vendedor ambulante",
+			"skills": ["Carisma","Aguante","Animar (Relatar)","Cotilleo","Regatear","Intuición","Supervivencia","Movimiento silencioso (Rural o Urbano)","Criar Animales","Carisma Animal","Consumir Alcohol","Tasar","Montar (Caballo)","Oficio (Hojalatero)","Conducir","Intimidar","Hablar idioma (Cualquiera)","Percepción"],
+			"talents": ["Bien equipado","Fornido","Muy resistente","Numismático"],
+			"trappings": ["Carreta","Mercancía por valor de por lo menos 2d10 coronas de oro"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.jAqbxNrHW35xiuOn]{Vendedor ambulante}</p>"
+		},
+		{
+			"id": "Master Pilot",
+			"name": "Maestro piloto",
+			"skills": ["Consumir Alcohol","Cotilleo","Intuición","Sabiduría académica (Local)","Sabiduría académica (Vías fluviales)","Percepción","Remar","Nadar","Carisma","Frialdad","Animar (Relatar)","Hablar idioma (Cualquiera)","Cuerpo a cuerpo (Básica)","Orientación","Regatear","Intimidar","Sabiduría académica (Local)","Sabiduría académica (Naufragios)","Mando","Navegar"],
+			"talents": ["Buen nadador","Sexto sentido","Tenaz","Vigilancia"],
+			"trappings": ["Bote fluvial pequeño","Botero"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.LaTDWvLySPKGojiW]{Práctico}</p>"
+		},
+		{
+			"id": "Master Smuggler",
+			"name": "Maestro contrabandista",
+			"skills": ["Atletismo","Sobornar","Frialdad","Consumir Alcohol","Remar","Navegar","Movimiento silencioso (Rural o Urbano)","Nadar","Regatear","Cotilleo","Sabiduría académica (Local)","Cuerpo a cuerpo (Básica)","Percepción","Lengua Secreta (Contrabandista)","Tasar","Intimidar","Intuición","Sabiduría académica (Vías fluviales)"],
+			"talents": ["Buen nadador","Intrépido (Guardianes del río)","Piloto","Sobornador"],
+			"trappings": ["Barcaza rápida","Traficante"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.TaOvUqKMJoPeuynD]{Contrabandista}</p>"
+		},
+		{
+			"id": "Master Thief",
+			"name": "Maestro ladrón",
+			"skills": ["Atletismo","Escalar","Frialdad","Esquivar","Aguante","Intuición","Percepción","Movimiento silencioso (Urbano)","Tasar","Cotilleo","Sabiduría académica (Local)","Forzar Cerraduras","Lengua Secreta (Ladrón)","Prestidigitación","Sobornar","Jugar","Intimidar","A distancia (Ballesta)"],
+			"talents": ["Dedos ágiles","Esquivador","Experto en trampas","Visión nocturna"],
+			"trappings": ["Pistola-ballesta con 10 virotes"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.TgcyR0ZdG6bMOK9o]{Ladrón}</p>"
+		},
+		{
+			"id": "Master Wizard",
+			"name": "Maestro hechicero",
+			"skills": ["Canalización (Chamon)","Esquivar","Intuición","Hablar idioma (Lengua de la magia)","Sabiduría académica (Magia)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (Arma de Asta)","Percepción","Carisma","Frialdad","Cotilleo","Intimidar","Hablar idioma (Lengua de Batalla)","Hablar idioma (Cualquiera)","Criar Animales","Tasar","Sabiduría académica (Guerra)","Montar (Caballo)"],
+			"talents": ["Amenazador","Dicción instintiva","Empuñar dos armas","Sentir magia"],
+			"trappings": ["Aprendiz","Caballo de guerra ligero","Objeto mágico"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.m6WuSnrrW7QllX63]{Hechicero}</p>"
+		},
+		{
+			"id": "Menial",
+			"name": "Doméstico",
+			"skills": ["Atletismo","Escalar","Conducir","Esquivar","Aguante","Intuición","Percepción","Movimiento silencioso (Cualquiera)"],
+			"talents": ["Buenas espaldas","Decidido","Fornido","Sin importancia"],
+			"trappings": ["Escoba"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.g12yhcU74qsRKxXX]{Sirviente}</p>"
+		},
+		{
+			"id": "Merchant",
+			"name": "Mercader",
+			"skills": ["Criar Animales","Sobornar","Carisma","Consumir Alcohol","Conducir","Jugar","Cotilleo","Regatear","Tasar","Intuición","Hablar idioma (Cualquiera)","Hablar idioma (Gremial)","Sabiduría académica (Local)","Percepción"],
+			"talents": ["Desfalcar","Espabilado","Etiqueta (Gremio)","Sobornador"],
+			"trappings": ["Bote fluvial o 2 carromatos","Licencia del gremio","20 coronas de oro"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.FLqzxS5gxKflqDUk]{Mercader}</p>"
+		},
+		{
+			"id": "Merchant Prince",
+			"name": "Príncipe mercader",
+			"skills": ["Criar Animales","Sobornar","Carisma","Consumir Alcohol","Conducir","Jugar","Cotilleo","Regatear","Tasar","Intuición","Hablar idioma (Cualquiera)","Hablar idioma (Gremial)","Sabiduría académica (Local)","Percepción"," Frialdad","Hablar idioma (Viejomundano clásico)","Orientación","Lengua secreta (Gremio)","Sabiduría académica (Cualquiera)","Intimidar"],
+			"talents": ["Intrigante","Rico","Suerte","Voluntad de hierro"],
+			"trappings": ["2 barcos fluviales o bien 2 almacenes","4 carretas","Casa grande en la ciudad","1.000 coronas de oro","Ropas de calidad"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.FLqzxS5gxKflqDUk]{Mercader}</p>"
+		},
+		{
+			"id": "Messenger",
+			"name": "Mensajero",
+			"skills": ["Atletismo","Escalar","Esquivar","Aguante","Cotilleo","Orientación","Percepción","Cuerpo a cuerpo (Pelea)","Criar Animales","Carisma","Frialdad","Sabiduría académica (Local)","Cuerpo a cuerpo (Básica)","Montar (Caballo)"],
+			"talents": ["Delincuente","Mano dura","Orientarse","Viajero curtido"],
+			"trappings": ["Arma de mano","Caballo de monta con silla y arreos","Chaqueta de cuero"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.8pk2uCvAMUAXWbcP]{Mensajero}</p>"
+		},
+		{
+			"id": "Mine Foreman",
+			"name": "Capataz de mina",
+			"skills": ["Frialdad","Aguante","Intuición","Sabiduría académica (Local)","Cuerpo a cuerpo (A Dos Manos)","Supervivencia","Percepción","Nadar","Escalar","Consumir Alcohol","Tasar","Cuerpo a cuerpo (Básica)","Lengua Secreta (Minero)","Oficio (Explosivos)","Cotilleo","Sabiduría académica (Geología)","Movimiento silencioso (Subterráneo)","Oficio (De Ingeniería)","Carisma","Mando"],
+			"talents": ["Decidido","Desfalcar","Discutidor","Leer y escribir"],
+			"trappings": ["Grupo de mineros","Material de escritura"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.lWT9EiFL6a09w0h9]{Minero}</p>"
+		},
+		{
+			"id": "Miner",
+			"name": "Minero",
+			"skills": ["Frialdad","Aguante","Intuición","Sabiduría académica (Local)","Cuerpo a cuerpo (A Dos Manos)","Supervivencia","Percepción","Nadar","Escalar","Consumir Alcohol","Tasar","Cuerpo a cuerpo (Básica)","Lengua Secreta (Minero)","Oficio (Explosivos)"],
+			"talents": ["Buenas espaldas","Golpe poderoso","Muy fuerte","Visión nocturna"],
+			"trappings": ["Aceite para lámpara","Arma de mano (Pico)","Chaqueta de cuero","Lámpara de davrich"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.lWT9EiFL6a09w0h9]{Minero}</p>"
+		},
+		{
+			"id": "Mystic",
+			"name": "Místico",
+			"skills": ["Carisma","Animar (Decir la buenaventura)","Esquivar","Cotilleo","Regatear","Intuición","Percepción","Prestidigitación","Sobornar","Frialdad","Animar (Profecía)","Tasar","Intimidar","Sabiduría académica (Astrología)"],
+			"talents": ["Bien equipado","Detectar artefacto","Sexto sentido","Visiones sagradas"],
+			"trappings": ["Selección de amuletos"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.M9NiEgE7qaCXmskM]{Místico}</p>"
+		},
+		{
+			"id": "Noble",
+			"name": "Noble",
+			"skills": ["Sobornar","Consumir Alcohol","Jugar","Intimidar","Mando","Sabiduría académica (Heráldica)","Cuerpo a cuerpo (De Esgrima)","Tocar (Cualquiera)","Carisma","Cotilleo","Hablar idioma (Viejomundano clásico)","Sabiduría académica (Local)","Montar (Caballo)","Cuerpo a cuerpo (De Parada)"],
+			"talents": ["Atractivo","Cortés","Juerguista","Sobornador"],
+			"trappings": ["Caballo de monta con silla y arreos o bien carruaje","Daga de guardamano o capa de calidad","4 domésticos","Joyas por valor de 50 coronas de oro","Ropajes cortesanos","Ropajes cortesanos de calidad"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.CMIowWLOafHKAhnB]{Noble}</p>"
+		},
+		{
+			"id": "Noble Lord",
+			"name": "Señor noble",
+			"skills": ["Sobornar","Consumir Alcohol","Jugar","Intimidar","Mando","Sabiduría académica (Heráldica)","Cuerpo a cuerpo (De Esgrima)","Tocar (Cualquiera)","Carisma","Cotilleo","Hablar idioma (Viejomundano clásico)","Sabiduría académica (Local)","Montar (Caballo)","Cuerpo a cuerpo (De Parada)","Hablar idioma (Cualquiera)","Intuición","Sabiduría académica (Política)","Percepción","Sabiduría académica (Cualquiera)","Rastrear"],
+			"talents": ["Líder de guerra","Presencia imponente","Rico","Voluntad de hierro"],
+			"trappings": ["Florete o espejo de mano","Joyas por valor de 500 coronas de oro","4 juegos de ropa cortesana e la mejor calidad","500 coronas de oro","Provincia"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.CMIowWLOafHKAhnB]{Noble}</p>"
+		},
+		{
+			"id": "Novitiate (Nun)",
+			"name": "Novicia (Monja)",
+			"skills": ["Arte (Calígrafía)","Frialdad","Aguante","Animar (Relatar)","Cotilleo","Sanar","Sabiduría académica (Teología)","Rezar"],
+			"talents": ["Ayunador","Bendición (Cualquiera)","Leer y escribir","Pedigüeño"],
+			"trappings": ["Ropajes","Símbolo religioso"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.bE8g67fjVAE6R7Wx]{Monja}</p>"
+		},
+		{
+			"id": "Novitiate (Warrior Priest)",
+			"name": "Novicio (Sacerdote guerrero)",
+			"skills": ["Frialdad","Esquivar","Aguante","Sanar","Mando","Sabiduría académica (Teología)","Cuerpo a cuerpo (Cualquiera)","Rezar"],
+			"talents": ["Bendición (Cualquiera)","Decidido","Etiqueta (Culto)","Leer y escribir"],
+			"trappings": ["Arma (Cualquiera cuerpo a cuerpo)","Chaleco de cuero","Libro (Religión)","Ropajes","Símbolo religioso"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.KG5lVereynSwOkxa]{Sacerdote guerrero}</p>"
+		},
+		{
+			"id": "Nun",
+			"name": "Monja",
+			"skills": ["Arte (Calígrafía)","Frialdad","Aguante","Animar (Relatar)","Cotilleo","Sanar","Sabiduría académica (Teología)","Rezar","Carisma","Cuerpo a cuerpo (Cualquiera)","Investigar","Oficio (Cervecera)","Oficio (Herbolario)","Oficio (Vinatera)"],
+			"talents": ["Etiqueta (Culto)","Invocar (Cualquiera)","Primeros auxilios","Visiones sagradas"],
+			"trappings": ["Herramientas del oficio (Cualquiera)","Libro (Religión)","Reliquia religiosa"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.bE8g67fjVAE6R7Wx]{Monja}</p>"
+		},
+		{
+			"id": "Officer",
+			"name": "Oficial",
+			"skills": ["Atletismo","Escalar","Frialdad","Esquivar","Aguante","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Básica)","Tocar (Tambor o Pífano)","Consumir Alcohol","Jugar","Cotilleo","Cuerpo a cuerpo (Cualquiera)","A distancia (Cualquiera)","Supervivencia","Sanar","Intuición","Mando","Percepción","Sabiduría académica (Guerra)","Orientación"],
+			"talents": ["Denodado","Inspirador","Orador","Viajero curtido"],
+			"trappings": ["Caballo ligero con silla y arreos","Mapa","Nombramiento de oficial","Órdenes","Símbolo del rango","Unidad de soldados","Uniforme de calidad"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.kT0ZI0LoHmIvhjPk]{Soldado}</p>"
+		},
+		{
+			"id": "Outlaw",
+			"name": "Forajido",
+			"skills": ["Atletismo","Consumir Alcohol","Frialdad","Aguante","Jugar","Intimidar","Cuerpo a cuerpo (Básica)","Supervivencia","Esquivar","Sanar","Sabiduría académica (Local)","Percepción","A distancia (Arco)","Movimiento silencioso (Rural)"],
+			"talents": ["Experto en trampas","Golpe conmocionador","Pelea callejera","Puntería"],
+			"trappings": ["Arco con 10 flechas","Escudo","Tienda de campaña"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.mOljt11dxZENtmoR]{Forajido}</p>"
+		},
+		{
+			"id": "Outlaw Chief",
+			"name": "Jefe de forajidos",
+			"skills": ["Atletismo","Consumir Alcohol","Frialdad","Aguante","Jugar","Intimidar","Cuerpo a cuerpo (Básica)","Supervivencia","Esquivar","Sanar","Sabiduría académica (Local)","Percepción","A distancia (Arco)","Movimiento silencioso (Rural)","Cotilleo","Intuición","Mando","Montar (Caballo)"],
+			"talents": ["Amenazador","Jinete experto","Muy resistente","Recarga rápida"],
+			"trappings": ["Banda de forajidos","Caballo de monta con silla y arreos","Camisote de malla con mangas","Casco"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.mOljt11dxZENtmoR]{Forajido}</p>"
+		},
+		{
+			"id": "Pamphleteer",
+			"name": "Panfletero",
+			"skills": ["Arte (Escritura)","Sobornar","Carisma","Consumir Alcohol","Cotilleo","Regatear","Sabiduría académica (Política)","Oficio (Imprenta)"],
+			"talents": ["Gregario","Leer y escribir","Parloteo","Pedigüeño"],
+			"trappings": ["Fajo de octavillas","Martillo y clavos","Material de escritura"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.yDGBs92ko6rUyoTe]{Alborotador}</p>"
+		},
+		{
+			"id": "Pathfinder",
+			"name": "Batidor",
+			"skills": ["Carisma Animal","Escalar","Aguante","Cotilleo","Sabiduría académica (Local)","Cuerpo a cuerpo (Básica)","Supervivencia","Percepción","Atletismo","Orientación","A distancia (Arco)","Montar (Caballo)","Movimiento silencioso (Rural)","Rastrear","Criar Animales","Regatear","Lengua Secreta (Cazador)","Nadar"],
+			"talents": ["Muy resistente","Piernas recias","Sentidos desarrollados (Vista)","Sexto sentido"],
+			"trappings": ["Alforjas con raciones para dos semanas","Caballo de monta con silla y arreos","Mapa","Tienda de campaña"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.Xl9yyv67BB8a8XFo]{Explorador}</p>"
+		},
+		{
+			"id": "Pauper",
+			"name": "Pobre",
+			"skills": ["Atletismo","Carisma","Consumir Alcohol","Frialdad","Esquivar","Aguante","Intuición","Movimiento silencioso (Urbano)"],
+			"talents": ["Ayunador","Muy resistente","Pedigüeño","Resistencia (Enfermedad)"],
+			"trappings": ["Taza","Manta de mala calidad"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.djOQaw7iRfec9UEj]{Mendigo}</p>"
+		},
+		{
+			"id": "Peasant",
+			"name": "Lugareño",
+			"skills": ["Criar Animales","Atletismo","Consumir Alcohol","Aguante","Cotilleo","Cuerpo a cuerpo (Pelea)","Sabiduría académica (Local)","Supervivencia"],
+			"talents": ["Ayunador","Buenas espaldas","Decidido","Errante"],
+			"trappings": ["Ninguno"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.btrs5XFk2OQsCtqj]{Aldeano}</p>"
+		},
+		{
+			"id": "Pedlar",
+			"name": "Vendedor ambulante",
+			"skills": ["Carisma","Aguante","Animar (Relatar)","Cotilleo","Regatear","Intuición","Supervivencia","Movimiento silencioso (Rural o Urbano)","Criar Animales","Carisma Animal","Consumir Alcohol","Tasar","Montar (Caballo)","Oficio (Hojalatero)"],
+			"talents": ["Buenas espaldas","Negociador","Orientarse","Viajero curtido"],
+			"trappings": ["Herramientas del oficio (Manitas)","Mercancía por valor de 2d10 chelines de plata","Mula y alforjas","Selección de sartenes y perolas"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.jAqbxNrHW35xiuOn]{Vendedor ambulante}</p>"
+		},
+		{
+			"id": "Penitent",
+			"name": "Penitente",
+			"skills": ["Esquivar","Aguante","Sanar","Intimidar","Intuición","Sabiduría académica (Sigmar)","Cuerpo a cuerpo (Mayal)","Supervivencia","Arte (Iconos)","Atletismo","Frialdad","Hablar idioma (Viejomundano clásico)","Sabiduría académica (El Imperio)","A distancia (Honda)","Carisma","Hablar idioma (Cualquiera)","Sabiduría académica (Teología)","Percepción"],
+			"talents": ["Amenazador","Asalto furioso","Primeros auxilios","Viajero curtido"],
+			"trappings": ["Reliquia religiosa"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.Vtice54Y7PV95Dkp]{Flagelante}</p>"
+		},
+		{
+			"id": "Physician",
+			"name": "Físico",
+			"skills": ["Sobornar","Frialdad","Conducir","Aguante","Cotilleo","Sanar","Percepción","Prestidigitación","Carisma","Regatear","Hablar idioma (Gremial)","Sabiduría académica (Anatomía)","Sabiduría académica (Medicina)","Oficio (Barbero)"],
+			"talents": ["Cirugía","Delincuente","Etiqueta (Gremio)","Sangre fría"],
+			"trappings": ["Herramientas del oficio (Medicina)","Libro (Medicina)","Licencia del gremio"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.Ora8bmvHERjYWEQn]{Físico}</p>"
+		},
+		{
+			"id": "Physician's Apprentice",
+			"name": "Aprendiz de físico",
+			"skills": ["Sobornar","Frialdad","Conducir","Aguante","Cotilleo","Sanar","Percepción","Prestidigitación"],
+			"talents": ["Golpe conmocionador","Intelectual","Leer y escribir","Primeros auxilios"],
+			"trappings": ["Poción curativa","Vendas"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.Ora8bmvHERjYWEQn]{Físico}</p>"
+		},
+		{
+			"id": "Pilot",
+			"name": "Piloto",
+			"skills": ["Consumir Alcohol","Cotilleo","Intuición","Sabiduría académica (Local)","Sabiduría académica (Vías fluviales)","Percepción","Remar","Nadar","Carisma","Frialdad","Animar (Relatar)","Hablar idioma (Cualquiera)","Cuerpo a cuerpo (Básica)","Orientación","Regatear","Intimidar","Sabiduría académica (Local)","Sabiduría académica (Naufragios)"],
+			"talents": ["Equilibrio en cubierta","Muy fuerte","Piloto","Sentidos desarrollados (Vista)"],
+			"trappings": ["Pértiga","Quinqué y aceite"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.LaTDWvLySPKGojiW]{Práctico}</p>"
+		},
+		{
+			"id": "Pit Champion",
+			"name": "Campeón de foso",
+			"skills": ["Atletismo","Frialdad","Esquivar","Aguante","Jugar","Intimidar","Cuerpo a cuerpo (Cualquiera)","Cuerpo a cuerpo (Pelea)","Regatear","Intuición","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (Mayal o A Dos Manos)","Percepción","A distancia (Enmarañante)","Consumir Alcohol","Cotilleo","Sabiduría académica (Anatomía)","Actuar (Pelea)"],
+			"talents": ["Amenazador","Desarmar","Maestro del combate","Robusto"],
+			"trappings": ["Casco","Coraza"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.15N8GauWXWfbYbEQ]{Guerrero de foso}</p>"
+		},
+		{
+			"id": "Pit Fighter",
+			"name": "Guerrero de foso",
+			"skills": ["Atletismo","Frialdad","Esquivar","Aguante","Jugar","Intimidar","Cuerpo a cuerpo (Cualquiera)","Cuerpo a cuerpo (Pelea)","Regatear","Intuición","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (Mayal o A Dos Manos)","Percepción","A distancia (Enmarañante)"],
+			"talents": ["Ambidiestro","Empuñar dos armas","Escudero","Reflejos de combate"],
+			"trappings": ["Arma de mano","Escudo o rodela","Mangual o gran arma","Red o látigo"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.15N8GauWXWfbYbEQ]{Guerrero de foso}</p>"
+		},
+		{
+			"id": "Pit Legend",
+			"name": "Leyenda de los fosos",
+			"skills": ["Atletismo","Frialdad","Esquivar","Aguante","Jugar","Intimidar","Cuerpo a cuerpo (Cualquiera)","Cuerpo a cuerpo (Pelea)","Regatear","Intuición","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (Mayal o A Dos Manos)","Percepción","A distancia (Enmarañante)","Consumir Alcohol","Cotilleo","Sabiduría académica (Anatomía)","Actuar (Pelea)","Carisma","A distancia (Cualquiera)"],
+			"talents": ["Asalto furioso","Aterrador","Golpe de reacción","Implacable"],
+			"trappings": ["Casco de calidad"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.15N8GauWXWfbYbEQ]{Guerrero de foso}</p>"
+		},
+		{
+			"id": "Postilion",
+			"name": "Postillón",
+			"skills": ["Criar Animales","Carisma Animal","Escalar","Conducir","Aguante","Percepción","A distancia (Enmarañante)","Montar (Caballo)"],
+			"talents": ["Afinidad animal","Equitación acrobática","Tenaz","Viajero curtido"],
+			"trappings": ["Abrigo cálido y guantes","Látigo"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.BnA8KJuCw16zwOVC]{Cochero}</p>"
+		},
+		{
+			"id": "Priest",
+			"name": "Sacerdote",
+			"skills": ["Atletismo","Frialdad","Aguante","Intuición","Sabiduría académica (Teología)","Percepción","Rezar","Investigar","Carisma","Animar (Relatar)","Cotilleo","Sanar","Intimidar","Cuerpo a cuerpo (Básica)"],
+			"talents": ["Etiqueta (Culto)","Intelectual","Invocar (Cualquiera)","Parloteo"],
+			"trappings": ["Libro (Religión)","Ropajes ceremoniales"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.GNwQFkVKUs0JM6U5]{Sacerdote}</p>"
+		},
+		{
+			"id": "Priest Captain",
+			"name": "Sacerdote capitán",
+			"skills": ["Frialdad","Esquivar","Aguante","Sanar","Mando","Sabiduría académica (Teología)","Cuerpo a cuerpo (Cualquiera)","Rezar","Carisma","Animar (Discursos)","Intimidar","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Cualquiera)","A distancia (Cualquiera)","Criar Animales","Intuición","Percepción","Montar (Caballo)","Consumir Alcohol","Sabiduría académica (Guerra)"],
+			"talents": ["Asalto furioso","Intrépido (Cualquiera)","Líder de guerra","Odio sagrado"],
+			"trappings": ["Reliquia religiosa"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.KG5lVereynSwOkxa]{Sacerdote guerrero}</p>"
+		},
+		{
+			"id": "Priest Sergeant",
+			"name": "Sacerdote sargento",
+			"skills": ["Frialdad","Esquivar","Aguante","Sanar","Mando","Sabiduría académica (Teología)","Cuerpo a cuerpo (Cualquiera)","Rezar","Carisma","Animar (Discursos)","Intimidar","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Cualquiera)","A distancia (Cualquiera)","Criar Animales","Intuición","Percepción","Montar (Caballo)"],
+			"talents": ["Alma pura","Denodado","Percepción de combate","Visiones sagradas"],
+			"trappings": ["Caballo de guerra ligero con silla y arreos"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.KG5lVereynSwOkxa]{Sacerdote guerrero}</p>"
+		},
+		{
+			"id": "Prioress General",
+			"name": "Priora general",
+			"skills": ["Arte (Calígrafía)","Frialdad","Aguante","Animar (Relatar)","Cotilleo","Sanar","Sabiduría académica (Teología)","Rezar","Carisma","Cuerpo a cuerpo (Cualquiera)","Investigar","Oficio (Cervecera)","Oficio (Herbolario)","Oficio (Vinatera)","Mando","Sabiduría académica (Local)","Sabiduría académica (Política)","Percepción","Hablar idioma (Cualquiera)","Sabiduría académica (Cualquiera)"],
+			"talents": ["Alma pura","Denodado","Presencia imponente","Voluntad de hierro"],
+			"trappings": ["Orden religiosa"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.bE8g67fjVAE6R7Wx]{Monja}</p>"
+		},
+		{
+			"id": "Procurer",
+			"name": "Procurador",
+			"skills": ["Sobornar","Carisma","Consumir Alcohol","Animar (Cualquiera)","Jugar","Cotilleo","Regatear","Intimidar","Esquivar","Aguante","Intuición","Sabiduría académica (Local)","Cuerpo a cuerpo (Básica)","Percepción","Frialdad","Tasar","Hablar idioma (Cualquiera)","Sabiduría académica (Derecho)"],
+			"talents": ["Cortés","Desfalcar","Etiqueta (Cualquiera)","Negociador"],
+			"trappings": ["Círculo de embaucadores"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.MY4aFbQL5T9znCUd]{Chalán}</p>"
+		},
+		{
+			"id": "Professor",
+			"name": "Profesor",
+			"skills": ["Consumir Alcohol","Animar (Relatar)","Jugar","Cotilleo","Regatear","Hablar idioma (Viejomundano clásico)","Sabiduría académica (Cualquiera)","Investigar","Arte (Escritura)","Intuición","Hablar idioma (Cualquiera)","Sabiduría académica (Cualquiera)","Percepción","Oficio (Cualquiera)","Animar (Clase)","Intimidar","Hablar idioma (Cualquiera)","Sabiduría académica (Cualquiera)","Animar (Retórica)","Sabiduría académica (Cualquiera)"],
+			"talents": ["Obra maestra","Orador maestro","Sabio (Cualquiera)","Vigilancia"],
+			"trappings": ["Estudio"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.cIBJfaY9DKJh5ZEM]{Erudito}</p>"
+		},
+		{
+			"id": "Prophet of Doom",
+			"name": "Profeta de la perdición",
+			"skills": ["Esquivar","Aguante","Sanar","Intimidar","Intuición","Sabiduría académica (Sigmar)","Cuerpo a cuerpo (Mayal)","Supervivencia","Arte (Iconos)","Atletismo","Frialdad","Hablar idioma (Viejomundano clásico)","Sabiduría académica (El Imperio)","A distancia (Honda)","Carisma","Hablar idioma (Cualquiera)","Sabiduría académica (Teología)","Percepción","Animar (Soflamas)","Mando"],
+			"talents": ["Aterrador","Celo ferviente","Frenesí","Intrépido (Herejes)"],
+			"trappings": ["Libro (Religión)","Seguidores (Incluyendo penitentes, flagelantes y zelotes)"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.Vtice54Y7PV95Dkp]{Flagelante}</p>"
+		},
+		{
+			"id": "Prospector",
+			"name": "Prospector",
+			"skills": ["Frialdad","Aguante","Intuición","Sabiduría académica (Local)","Cuerpo a cuerpo (A Dos Manos)","Supervivencia","Percepción","Nadar"],
+			"talents": ["Errante","Fornido","Tenaz","Zancadas (Rocoso)"],
+			"trappings": ["Carboncillo","Cedazo","Mapa tosco","Pala"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.lWT9EiFL6a09w0h9]{Minero}</p>"
+		},
+		{
+			"id": "Protagonist",
+			"name": "Protagonista",
+			"skills": ["Atletismo","Esquivar","Aguante","Animar (Provocar)","Cotilleo","Regatear","Intimidar","Cuerpo a cuerpo (Cualquiera)","Sobornar","Carisma","Intuición","Cuerpo a cuerpo (Básica)","Percepción","Montar (Caballo)"],
+			"talents": ["Delincuente","Giro","Golpe conmocionador","Reflejos de combate"],
+			"trappings": ["Arma de mano","Caballo de monta con silla y arreos","Camisote de malla","Escudo"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.mlLVNBKIUnonqka2]{Protagonista}</p>"
+		},
+		{
+			"id": "Prowler",
+			"name": "Merodeador",
+			"skills": ["Atletismo","Escalar","Frialdad","Esquivar","Aguante","Intuición","Percepción","Movimiento silencioso (Urbano)"],
+			"talents": ["¡A correr!","Delincuente","Gato callejero","Golpe conmocionador"],
+			"trappings": ["Chaleco de cuero","Palanqueta","Saco"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.TgcyR0ZdG6bMOK9o]{Ladrón}</p>"
+		},
+		{
+			"id": "Pugilist",
+			"name": "Pugilista",
+			"skills": ["Atletismo","Frialdad","Esquivar","Aguante","Jugar","Intimidar","Cuerpo a cuerpo (Cualquiera)","Cuerpo a cuerpo (Pelea)"],
+			"talents": ["Combate cercano","Giro","Pelea callejera","Quijada de hierro"],
+			"trappings": ["Chaqueta de cuero","Puño americano","Vendajes"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.15N8GauWXWfbYbEQ]{Guerrero de foso}</p>"
+		},
+		{
+			"id": "Rabble Rouser",
+			"name": "Amotinador",
+			"skills": ["Arte (Escritura)","Sobornar","Carisma","Consumir Alcohol","Cotilleo","Regatear","Sabiduría académica (Política)","Oficio (Imprenta)","Frialdad","Esquivar","Animar (Relatar)","Jugar","Intuición","Mando","Atletismo","Intimidar","Cuerpo a cuerpo (Pelea)","Percepción"],
+			"talents": ["¡A correr!","Esquivador","Orador experto","Pelea callejera"],
+			"trappings": ["Arma de mano","Panfletero"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.yDGBs92ko6rUyoTe]{Alborotador}</p>"
+		},
+		{
+			"id": "Racketeer",
+			"name": "Pandillero",
+			"skills": ["Consumir Alcohol","Frialdad","Esquivar","Aguante","Intimidar","Sabiduría académica (Local)","Cuerpo a cuerpo (Pelea)","Movimiento silencioso (Urbano)","Sobornar","Carisma","Tasar","Cotilleo","Hablar idioma (Estaliano o tileano)","Cuerpo a cuerpo (Básica)"],
+			"talents": ["Desfalcar","Golpe conmocionador","Guerrero nato","Pelea callejera"],
+			"trappings": ["Arma de mano","Camisote de malla","Sombrero"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.yGZN7bMjbGH7kCMK]{Pandillero}</p>"
+		},
+		{
+			"id": "Rat Catcher",
+			"name": "Cazarratas",
+			"skills": ["Atletismo","Adiestrar Animal (Perro)","Carisma Animal","Consumir Alcohol","Aguante","Cuerpo a cuerpo (Básica)","A distancia (Honda)","Movimiento silencioso (Subterráneo o Urbano)","Criar Animales","Cotilleo","Regatear","Sabiduría académica (Veneno)","Percepción","Poner trampas"],
+			"talents": ["Combate cerrado","Etiqueta (Gremio)","Intrépido (Ratas)","Muy resistente"],
+			"trappings": ["Pértiga para ratas muertas","Trampas para animales"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.0DuRRCYdahOKxDPF]{Cazarratas}</p>"
+		},
+		{
+			"id": "Rat Hunter",
+			"name": "Atrapador de ratas",
+			"skills": ["Atletismo","Adiestrar Animal (Perro)","Carisma Animal","Consumir Alcohol","Aguante","Cuerpo a cuerpo (Básica)","A distancia (Honda)","Movimiento silencioso (Subterráneo o Urbano)"],
+			"talents": ["Golpe conmocionador","Golpe poderoso","Resistencia (Enfermedad)","Visión nocturna"],
+			"trappings": ["Honda con munición","Perro pequeño pero feroz","Saco"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.0DuRRCYdahOKxDPF]{Cazarratas}</p>"
+		},
+		{
+			"id": "Recruit",
+			"name": "Recluta",
+			"skills": ["Atletismo","Escalar","Frialdad","Esquivar","Aguante","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Básica)","Tocar (Tambor o Pífano)"],
+			"talents": ["Buenas espaldas","Experto en dados","Guerrero nato","Puntería"],
+			"trappings": ["Coraza de cuero","Daga","Uniforme"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.kT0ZI0LoHmIvhjPk]{Soldado}</p>"
+		},
+		{
+			"id": "Reeve",
+			"name": "Comisario",
+			"skills": ["Frialdad","Esquivar","Aguante","Cotilleo","Regatear","Intimidar","Cuerpo a cuerpo (Básica)","Percepción","Sobornar","Carisma","Tasar","Intuición","Mando","Sabiduría académica (Local)","Criar Animales","Sabiduría académica (Heráldica)","Orientación","Montar (Caballo)"],
+			"talents": ["Amenazador","Cerebro","Leer y escribir","Olfato para los problemas"],
+			"trappings": ["Alguacil","Caballo con silla y arreos","Coraza"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.WbjmnVlyJ9VP2nt4]{Alguacil}</p>"
+		},
+		{
+			"id": "Ringleader",
+			"name": "Cabecilla",
+			"skills": ["Sobornar","Carisma","Consumir Alcohol","Animar (Cualquiera)","Jugar","Cotilleo","Regatear","Intimidar","Esquivar","Aguante","Intuición","Sabiduría académica (Local)","Cuerpo a cuerpo (Básica)","Percepción","Frialdad","Tasar","Hablar idioma (Cualquiera)","Sabiduría académica (Derecho)","Mando","Sabiduría académica (Heráldica)"],
+			"talents": ["Cerebro","Espabilado","Numismático","Sobornador"],
+			"trappings": ["Casa en la población con una entrada trasera discreta","Círculo de chalanes"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.MY4aFbQL5T9znCUd]{Chalán}</p>"
+		},
+		{
+			"id": "River Elder",
+			"name": "Anciana del río",
+			"skills": ["Atletismo","Consumir Alcohol","Esquivar","Aguante","Cotilleo","Supervivencia","Remar","Nadar","Jugar","Sabiduría académica (Local)","Sabiduría académica (Vías fluviales)","A distancia (Enmarañante)","A distancia (Arrojadiza)","Poner trampas","Carisma","Intuición","Cuerpo a cuerpo (Arma de Asta)","Percepción","Animar (Relatar)","Sabiduría académica (Folclore)"],
+			"talents": ["Artesano maestro (Constructor de botes)","Decidido","Orador","Vigilancia"],
+			"trappings": ["Barcaza o cabaña"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.9D0o0fbqscpgk0RK]{Mujer de río}</p>"
+		},
+		{
+			"id": "River Pirate",
+			"name": "Pirata fluvial",
+			"skills": ["Escalar","Consumir Alcohol","Esquivar","Aguante","Remar","Cuerpo a cuerpo (Básica)","Supervivencia","Nadar","Sobornar","Frialdad","Intuición","Orientación","Percepción","Poner trampas","Cotilleo","Intimidar","A distancia (Ballesta)","Movimiento silencioso (Rural)"],
+			"talents": ["Amenazador","Barquero","Etiqueta (Delincuentes)","Pelea callejera"],
+			"trappings": ["Ballesta con 10 virotes","Garfio de abordaje y soga","Barcaza"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.AnW8kwDb9koFgMPx]{Raquero}</p>"
+		},
+		{
+			"id": "River Recruit",
+			"name": "Recluta fluvial",
+			"skills": ["Atletismo","Esquivar","Aguante","Cuerpo a cuerpo (Básica)","Percepción","Remar","Navegar","Nadar"],
+			"talents": ["Barquero","Buen nadador","Buenas espaldas","Muy fuerte"],
+			"trappings": ["Arma de mano (Espada)","Chaqueta de cuero","Uniforme"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.EBpCBitHuWElKf3D]{Guardián del río}</p>"
+		},
+		{
+			"id": "River Runner",
+			"name": "Traficante",
+			"skills": ["Atletismo","Sobornar","Frialdad","Consumir Alcohol","Remar","Navegar","Movimiento silencioso (Rural o Urbano)","Nadar"],
+			"talents": ["Buenas espaldas","Delincuente","Pescador","Zancadas (Marismas)"],
+			"trappings": ["Máscara o antifaces","Quinqué y aceite","Saco grande","Yesquero"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.TaOvUqKMJoPeuynD]{Contrabandista}</p>"
+		},
+		{
+			"id": "Riverguide",
+			"name": "Guía fluvial",
+			"skills": ["Consumir Alcohol","Cotilleo","Intuición","Sabiduría académica (Local)","Sabiduría académica (Vías fluviales)","Percepción","Remar","Nadar"],
+			"talents": ["Barquero","Orientarse","Pescador","Visión nocturna"],
+			"trappings": ["Arma de mano (Bichero)","Quinqué y aceite"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.LaTDWvLySPKGojiW]{Práctico}</p>"
+		},
+		{
+			"id": "Riverwarden",
+			"name": "Guardián del río",
+			"skills": ["Atletismo","Esquivar","Aguante","Cuerpo a cuerpo (Básica)","Percepción","Remar","Navegar","Nadar","Sobornar","Carisma","Intimidar","Cotilleo","Sabiduría académica (Vías fluviales)","A distancia (De Pólvora Negra)"],
+			"talents": ["Delincuente","Pescador","Pistolero experto","Viajero curtido"],
+			"trappings": ["Escudo","Linterna y aceite","Pistola y munición para 10 disparos"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.EBpCBitHuWElKf3D]{Guardián del río}</p>"
+		},
+		{
+			"id": "Riverwise",
+			"name": "Sabia del río",
+			"skills": ["Atletismo","Consumir Alcohol","Esquivar","Aguante","Cotilleo","Supervivencia","Remar","Nadar","Jugar","Sabiduría académica (Local)","Sabiduría académica (Vías fluviales)","A distancia (Enmarañante)","A distancia (Arrojadiza)","Poner trampas","Carisma","Intuición","Cuerpo a cuerpo (Arma de Asta)","Percepción"],
+			"talents": ["Denodado","Muy fuerte","Sabio (Vías fluviales)","Tenaz"],
+			"trappings": ["Bote de remos","Quinqué y aceite"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.9D0o0fbqscpgk0RK]{Mujer del río}</p>"
+		},
+		{
+			"id": "Riverwoman",
+			"name": "Mujer del río",
+			"skills": ["Atletismo","Consumir Alcohol","Esquivar","Aguante","Cotilleo","Supervivencia","Remar","Nadar","Jugar","Sabiduría académica (Local)","Sabiduría académica (Vías fluviales)","A distancia (Enmarañante)","A distancia (Arrojadiza)","Poner trampas"],
+			"talents": ["Artesano (Constructor de botes)","Barquero","Buenas espaldas","Errante"],
+			"trappings": ["Chaleco de cuero","Lanza corta","Red","Trampa para anguilas"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.9D0o0fbqscpgk0RK]{Mujer del río}</p>"
+		},
+		{
+			"id": "Road Captain",
+			"name": "Capitán de caminos",
+			"skills": ["Sobornar","Consumir Alcohol","Jugar","Cotilleo","Regatear","Cuerpo a cuerpo (Básica)","Percepción","A distancia (Ballesta)","Criar Animales","Aguante","Intimidar","Intuición","Supervivencia","Montar (Caballo)","Atletismo","Carisma","Mando","A distancia (De Pólvora Negra)","Sabiduría académica (Imperio)","Orientación"],
+			"talents": ["Cerebro","Orador","Percepción de combate","Presencia imponente"],
+			"trappings": ["Caballo de guerra ligero","Pistola y munición para 10 disparos","Sombrero y capa de calidad","Unidad de guardas de caminos"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.8zowZP5UEKTM9ehU]{Guarda de caminos}</p>"
+		},
+		{
+			"id": "Road Sergeant",
+			"name": "Sargento de caminos",
+			"skills": ["Sobornar","Consumir Alcohol","Jugar","Cotilleo","Regatear","Cuerpo a cuerpo (Básica)","Percepción","A distancia (Ballesta)","Criar Animales","Aguante","Intimidar","Intuición","Supervivencia","Montar (Caballo)","Atletismo","Carisma","Mando","A distancia (De Pólvora Negra)"],
+			"talents": ["Etiqueta (Soldados)","Intrépido (Forajidos)","Odio visceral (Cualquiera)","Olfato para los problemas"],
+			"trappings": ["Escuadra de guardas de caminos","Escudo","Pistola y munición para 10 disparos","Símbolo de su rango"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.8zowZP5UEKTM9ehU]{Guarda de caminos}</p>"
+		},
+		{
+			"id": "Road Warden",
+			"name": "Guarda de caminos",
+			"skills": ["Sobornar","Consumir Alcohol","Jugar","Cotilleo","Regatear","Cuerpo a cuerpo (Básica)","Percepción","A distancia (Ballesta)","Criar Animales","Aguante","Intimidar","Intuición","Supervivencia","Montar (Caballo)"],
+			"talents": ["Delincuente","Jinete experto","Mano dura","Viajero curtido"],
+			"trappings": ["Arma de mano","Caballo de monta con silla y arneses","Camisote de malla","Soga"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.8zowZP5UEKTM9ehU]{Guarda de caminos}</p>"
+		},
+		{
+			"id": "Route Master",
+			"name": "Maestro de la ruta",
+			"skills": ["Criar Animales","Carisma Animal","Escalar","Conducir","Aguante","Percepción","A distancia (Enmarañante)","Montar (Caballo)","Consumir Alcohol","Cotilleo","Intuición","Sabiduría académica (Local)","Orientación","A distancia (De Pólvora Negra)","Adiestrar Animal (Caballo)","Intimidar","Hablar idioma (Cualquiera)","Sabiduría académica (Carreteras)","Carisma","Mando"],
+			"talents": ["Intrépido (Hombres bestia)","Orientarse","Puntería","Recarga rápida"],
+			"trappings": ["Flota de diligencias y caballos","Mapas"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.BnA8KJuCw16zwOVC]{Cochero}</p>"
+		},
+		{
+			"id": "Runner",
+			"name": "Corredor",
+			"skills": ["Atletismo","Escalar","Esquivar","Aguante","Cotilleo","Orientación","Percepción","Cuerpo a cuerpo (Pelea)"],
+			"talents": ["¡A correr!","Corredor","Esquivador","Pies ligeros"],
+			"trappings": ["Estuche para pergaminos"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.8pk2uCvAMUAXWbcP]{Mensajero}</p>"
+		},
+		{
+			"id": "Sage",
+			"name": "Sabio",
+			"skills": ["Carisma","Animar (Decir la buenaventura)","Esquivar","Cotilleo","Regatear","Intuición","Percepción","Prestidigitación","Sobornar","Frialdad","Animar (Profecía)","Tasar","Intimidar","Sabiduría académica (Astrología)","Carisma Animal","Animar (Relatar)","Hablar idioma (Cualquiera)","Arte (Escritura)"],
+			"talents": ["¡Brujo!","Leer y escribir","Magia menor","Olfato para los problemas"],
+			"trappings": ["Herramientas del oficio (Escribir)"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.M9NiEgE7qaCXmskM]{Místico}</p>"
+		},
+		{
+			"id": "Scholar",
+			"name": "Erudito",
+			"skills": ["Consumir Alcohol","Animar (Relatar)","Jugar","Cotilleo","Regatear","Hablar idioma (Viejomundano clásico)","Sabiduría académica (Cualquiera)","Investigar","Arte (Escritura)","Intuición","Hablar idioma (Cualquiera)","Sabiduría académica (Cualquiera)","Percepción","Oficio (Cualquiera)"],
+			"talents": ["Cortés","Etiqueta (Erudito)","Intelectual","Lector rápido"],
+			"trappings": ["Acceso a una biblioteca","Grado académico"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.cIBJfaY9DKJh5ZEM]{Erudito}</p>"
+		},
+		{
+			"id": "Scion",
+			"name": "Vástago",
+			"skills": ["Sobornar","Consumir Alcohol","Jugar","Intimidar","Mando","Sabiduría académica (Heráldica)","Cuerpo a cuerpo (De Esgrima)","Tocar (Cualquiera)"],
+			"talents": ["Etiqueta (Nobles)","Leer y escribir","Sangre noble","Suerte"],
+			"trappings": ["Florete o espejo de mano","Joyas por valor de 3d10 coronas de oro","Ropa cortesana","Sirviente personal"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.CMIowWLOafHKAhnB]{Noble}</p>"
+		},
+		{
+			"id": "Scoundrel",
+			"name": "Canalla",
+			"skills": ["Sobornar","Consumir Alcohol","Carisma","Animar (Relatar)","Jugar","Cotilleo","Regatear","Prestidigitación","Frialdad","Esquivar","Animar (Actuar)","Tasar","Intuición","Percepción","Hablar idioma (Ladrón)","Sabiduría académica (Heráldica)","Forzar Cerraduras","Lengua Secreta (Ladrón)","Sabiduría académica (Genealogía)","Investigar"],
+			"talents": ["Cortés","Disfraz","Gregario","Olfato para los problemas"],
+			"trappings": ["Material de escritura","Sello falsificado"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.JTKAh4qCOCcPa2yN]{Charlatán}</p>"
+		},
+		{
+			"id": "Scout",
+			"name": "Explorador",
+			"skills": ["Carisma Animal","Escalar","Aguante","Cotilleo","Sabiduría académica (Local)","Cuerpo a cuerpo (Básica)","Supervivencia","Percepción","Atletismo","Orientación","A distancia (Arco)","Montar (Caballo)","Movimiento silencioso (Rural)","Rastrear"],
+			"talents": ["Olfato para los problemas","Percepción de combate","Viajero curtido","Visión nocturna"],
+			"trappings": ["Arco y 10 flechas","Camisote de malla"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.Xl9yyv67BB8a8XFo]{Explorador}</p>"
+		},
+		{
+			"id": "Seaman",
+			"name": "Marino",
+			"skills": ["Escalar","Consumir Alcohol","Jugar","Cotilleo","Remar","Cuerpo a cuerpo (Pelea)","Navegar","Nadar","Atletismo","Esquivar","Aguante","Animar (Cantar)","Hablar idioma (Cualquiera)","Cuerpo a cuerpo (Básica)"],
+			"talents": ["Caer como los gatos","Equilibrio en cubierta","Piernas recias","Viajero curtido"],
+			"trappings": ["Arma de mano (Bichero)","Chaleco de cuero"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.wu6aG1XPdzvpiLcR]{Marino}</p>"
+		},
+		{
+			"id": "Seer",
+			"name": "Vidente",
+			"skills": ["Carisma","Animar (Decir la buenaventura)","Esquivar","Cotilleo","Regatear","Intuición","Percepción","Prestidigitación","Sobornar","Frialdad","Animar (Profecía)","Tasar","Intimidar","Sabiduría académica (Astrología)","Carisma Animal","Animar (Relatar)","Hablar idioma (Cualquiera)","Arte (Escritura)","Sabiduría académica (Profecía)","Canalización (Azyr)"],
+			"talents": ["Amenazador","Decidido","Magia arcana (Celestial)","Sentir magia"],
+			"trappings": ["Herramientas del oficio (Astrología)"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.M9NiEgE7qaCXmskM]{Místico}</p>"
+		},
+		{
+			"id": "Seneschal",
+			"name": "Senescal",
+			"skills": ["Atletismo","Carisma Animal","Consumir Alcohol","Frialdad","Aguante","Intuición","Sabiduría académica (Local)","Percepción","Criar Animales","Cuerpo a cuerpo (Básica)","Supervivencia","A distancia (Arco)","Montar (Caballo)","Nadar","Sobornar","Carisma","Cotilleo","Mando"],
+			"talents": ["Alentador","Desfalcar","Leer y escribir","Numismático"],
+			"trappings": ["Coraza","Equipo de guardas y custodios","Vara de mando ceremonial"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.ZAItIWSNYQPb1pmi]{Guarda}</p>"
+		},
+		{
+			"id": "Sentry",
+			"name": "Centinela",
+			"skills": ["Consumir Alcohol","Aguante","Animar (Relatar)","Jugar","Cotilleo","Intuición","Cuerpo a cuerpo (Básica)","Percepción"],
+			"talents": ["Etiqueta (Sirvientes)","Experto en dados","Golpe conmocionador","Tenaz"],
+			"trappings": ["Chaleco de cuero","Quinqué y aceite","Rodela"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.qaL8gLZdfOL5F5UV]{Guardia}</p>"
+		},
+		{
+			"id": "Sergeant",
+			"name": "Sargento",
+			"skills": ["Atletismo","Escalar","Frialdad","Esquivar","Aguante","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Básica)","Tocar (Tambor o Pífano)","Consumir Alcohol","Jugar","Cotilleo","Cuerpo a cuerpo (Cualquiera)","A distancia (Cualquiera)","Supervivencia","Sanar","Intuición","Mando","Percepción"],
+			"talents": ["Combate cerrado","Imperturbable","Líder de guerra","Percepción de combate"],
+			"trappings": ["Símbolo del rango","Unidad de tropas"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.kT0ZI0LoHmIvhjPk]{Soldado}</p>"
+		},
+		{
+			"id": "Servant",
+			"name": "Sirviente",
+			"skills": ["Atletismo","Escalar","Conducir","Esquivar","Aguante","Intuición","Percepción","Movimiento silencioso (Cualquiera)","Criar Animales","Consumir Alcohol","Tasar","Jugar","Cotilleo","Regatear"],
+			"talents": ["Bien equipado","Etiqueta (Sirvientes)","Sombra","Tenaz"],
+			"trappings": ["Librea"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.g12yhcU74qsRKxXX]{Sirviente}</p>"
+		},
+		{
+			"id": "Sewer Jack",
+			"name": "Alcantarillero",
+			"skills": ["Atletismo","Adiestrar Animal (Perro)","Carisma Animal","Consumir Alcohol","Aguante","Cuerpo a cuerpo (Básica)","A distancia (Honda)","Movimiento silencioso (Subterráneo o Urbano)","Criar Animales","Cotilleo","Regatear","Sabiduría académica (Veneno)","Percepción","Poner trampas","Escalar","Frialdad","Esquivar","A distancia (Pistola ballesta)"],
+			"talents": ["Denodado","Piernas recias","Rata de túnel","Recio"],
+			"trappings": ["Arma de mano","Chaqueta de cuero","Lámpara de Davrich"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.0DuRRCYdahOKxDPF]{Cazarratas}</p>"
+		},
+		{
+			"id": "Ship's Master",
+			"name": "Capitán de navío",
+			"skills": ["Escalar","Consumir Alcohol","Jugar","Cotilleo","Remar","Cuerpo a cuerpo (Pelea)","Navegar","Nadar","Atletismo","Esquivar","Aguante","Animar (Cantar)","Hablar idioma (Cualquiera)","Cuerpo a cuerpo (Básica)","Frialdad","Mando","Percepción","Oficio (Carpintero)","Carisma","Orientación"],
+			"talents": ["Espabilado","Orador","Orientarse","Piloto"],
+			"trappings": ["Cartas de navegación","Catalejo","Sextante","Velero con su tripulación"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.wu6aG1XPdzvpiLcR]{Marino}</p>"
+		},
+		{
+			"id": "Shipsword",
+			"name": "Espada de a bordo",
+			"skills": ["Atletismo","Esquivar","Aguante","Cuerpo a cuerpo (Básica)","Percepción","Remar","Navegar","Nadar","Sobornar","Carisma","Intimidar","Cotilleo","Sabiduría académica (Vías fluviales)","A distancia (De Pólvora Negra)","Escalar","Frialdad","Intuición","Mando"],
+			"talents": ["Equilibrio en cubierta","Intrépido (Raqueros)","Odio visceral (Cualquiera)","Piloto"],
+			"trappings": ["Garfio de abordaje","Camisote de malla","Yelmo"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.EBpCBitHuWElKf3D]{Guardián del río}</p>"
+		},
+		{
+			"id": "Shipsword Master",
+			"name": "Maestro espada de a bordo",
+			"skills": ["Atletismo","Esquivar","Aguante","Cuerpo a cuerpo (Básica)","Percepción","Remar","Navegar","Nadar","Sobornar","Carisma","Intimidar","Cotilleo","Sabiduría académica (Vías fluviales)","A distancia (De Pólvora Negra)","Escalar","Frialdad","Intuición","Mando","Sabiduría académica (Derecho)","Orientación"],
+			"talents": ["Amenazador","Cerebro","Orientarse","Presencia imponente"],
+			"trappings": ["Botes de patrulla con tripulación","Símbolo de su rango"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.EBpCBitHuWElKf3D]{Guardián del río}</p>"
+		},
+		{
+			"id": "Sleuth",
+			"name": "Sabueso",
+			"skills": ["Carisma","Escalar","Frialdad","Cotilleo","Intuición","Percepción","Movimiento silencioso (Urbano)","Rastrear"],
+			"talents": ["Gato callejero","Leer y escribir","Sin importancia","Vigilancia"],
+			"trappings": ["Aceite de lámpara","Diario","Linterna","Pluma y tinta"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.DAHJ4cu3WiGCdakE]{Investigador}</p>"
+		},
+		{
+			"id": "Smuggler",
+			"name": "Contrabandista",
+			"skills": ["Atletismo","Sobornar","Frialdad","Consumir Alcohol","Remar","Navegar","Movimiento silencioso (Rural o Urbano)","Nadar","Regatear","Cotilleo","Sabiduría académica (Local)","Cuerpo a cuerpo (Básica)","Percepción","Lengua Secreta (Contrabandista)"],
+			"talents": ["Barquero","Etiqueta (Delincuentes)","Muy fuerte","Negociador"],
+			"trappings": ["Arma de mano","2 barriles","Bote de remos","Chaqueta de cuero"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.TaOvUqKMJoPeuynD]{Contrabandista}</p>"
+		},
+		{
+			"id": "Smuggler King",
+			"name": "Rey de los contrabandistas",
+			"skills": ["Atletismo","Sobornar","Frialdad","Consumir Alcohol","Remar","Navegar","Movimiento silencioso (Rural o Urbano)","Nadar","Regatear","Cotilleo","Sabiduría académica (Local)","Cuerpo a cuerpo (Básica)","Percepción","Lengua Secreta (Contrabandista)","Tasar","Intimidar","Intuición","Sabiduría académica (Vías fluviales)","Hablar idioma (Cualquiera)","Mando"],
+			"talents": ["Cerebro","Espabilado","Equilibrio en cubierta","Zancadas (Costa)"],
+			"trappings": ["Material para disfraces","Pequeña flota de barcazas fluviales"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.TaOvUqKMJoPeuynD]{Contrabandista}</p>"
+		},
+		{
+			"id": "Soldier",
+			"name": "Soldado",
+			"skills": ["Atletismo","Escalar","Frialdad","Esquivar","Aguante","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Básica)","Tocar (Tambor o Pífano)","Consumir Alcohol","Jugar","Cotilleo","Cuerpo a cuerpo (Cualquiera)","A distancia (Cualquiera)","Supervivencia"],
+			"talents": ["Entrenado","Escudero","Etiqueta (Soldados)","Recarga rápida"],
+			"trappings": ["Arma (Cualquiera)","Casco","Coraza"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.kT0ZI0LoHmIvhjPk]{Soldado}</p>"
+		},
+		{
+			"id": "Spy",
+			"name": "Espía",
+			"skills": ["Sobornar","Carisma","Frialdad","Jugar","Cotilleo","Regatear","Percepción","Movimiento silencioso (Cualquiera)","Escalar","Animar (Actuar)","Intuición","Cuerpo a cuerpo (Básica)","Lengua Secreta (Cualquiera)","Prestidigitación"],
+			"talents": ["Etiqueta (Cualquiera)","Identidad secreta","Leer labios","Leer y escribir"],
+			"trappings": ["Arma de mano","Círculo de informadores","Equipo para disfraces","Informador","Telescopio"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.dWLxT0zRnDFbwTKZ]{Espía}</p>"
+		},
+		{
+			"id": "Spymaster",
+			"name": "Maestro de espías",
+			"skills": ["Sobornar","Carisma","Frialdad","Jugar","Cotilleo","Regatear","Percepción","Movimiento silencioso (Cualquiera)","Escalar","Animar (Actuar)","Intuición","Cuerpo a cuerpo (Básica)","Lengua Secreta (Cualquiera)","Prestidigitación","Criar Animales","Adiestrar Animal (Paloma)","Hablar idioma (Cualquiera)","Mando","Sabiduría académica (Cualquiera)","Investigar"],
+			"talents": ["Cortés","Intrigante","Memoria visual","Sobornador"],
+			"trappings": ["Despacho y personal","Gran círculo de agentes","Espías e informadores"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.dWLxT0zRnDFbwTKZ]{Espía}</p>"
+		},
+		{
+			"id": "Squire",
+			"name": "Escudero",
+			"skills": ["Atletismo","Criar Animales","Carisma Animal","Sanar","Sabiduría académica (Heráldica)","Cuerpo a cuerpo (De Caballería)","Montar (Caballo)","Oficio (Herrador)"],
+			"talents": ["Etiqueta (Cualquiera)","Fornido","Guerrero nato","Jinete experto"],
+			"trappings": ["Caballo de monta con silla y arreos","Camisote de malla","Chaqueta de cuero","Escudo","Herramientas del oficio (Herrador)"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.n2VdkCPNNxdupjeQ]{Caballero}</p>"
+		},
+		{
+			"id": "Stevedore",
+			"name": "Estibador",
+			"skills": ["Atletismo","Escalar","Consumir Alcohol","Esquivar","Aguante","Cotilleo","Cuerpo a cuerpo (Básica)","Nadar","Sobornar","Animar (Relatar)","Jugar","Intimidar","Percepción","Movimiento silencioso (Urbano)"],
+			"talents": ["Delincuente","Etiqueta (Gremio)","Piernas recias","Tenaz"],
+			"trappings": ["Chaleco de cuero","Gorra de porteador","Licencia del gremio","Pipa y tabaco"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.lDvbNLRfv9MsNyf6]{Estibador}</p>"
+		},
+		{
+			"id": "Steward",
+			"name": "Mayordomo",
+			"skills": ["Atletismo","Escalar","Conducir","Esquivar","Aguante","Intuición","Percepción","Movimiento silencioso (Cualquiera)","Criar Animales","Consumir Alcohol","Tasar","Jugar","Cotilleo","Regatear","Carisma","Frialdad","Intimidar","Sabiduría académica (Local)","Mando","Cuerpo a cuerpo (Básica)"],
+			"talents": ["Espabilado","Etiqueta (Cualquiera)","Leer y escribir","Numismático"],
+			"trappings": ["Arma de mano","Ropas elegantes","Sirviente"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.g12yhcU74qsRKxXX]{Sirviente}</p>"
+		},
+		{
+			"id": "Student",
+			"name": "Alumno",
+			"skills": ["Consumir Alcohol","Animar (Relatar)","Jugar","Cotilleo","Regatear","Hablar idioma (Viejomundano clásico)","Sabiduría académica (Cualquiera)","Investigar"],
+			"talents": ["Espabilado","Genio aritmético","Juerguista","Leer y escribir"],
+			"trappings": ["Alcohol","Libro","Opiniones","Material de escritura"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.cIBJfaY9DKJh5ZEM]{Erudito}</p>"
+		},
+		{
+			"id": "Student Engineer",
+			"name": "Alumno de ingeniería",
+			"skills": ["Consumir Alcohol","Frialdad","Aguante","Hablar idioma (Viejomundano clásico)","Sabiduría académica (De Ingeniería)","Percepción","A distancia (De Pólvora Negra)","Oficio (De Ingeniería)"],
+			"talents": ["Artista","Leer y escribir","Manitas","Pistolero experto"],
+			"trappings": ["Libro (Ingeniería)","Martillo y clavos"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.c2n86bcUngGrHyO4]{Ingeniero}</p>"
+		},
+		{
+			"id": "Student Lawyer",
+			"name": "Alumno de abogacía",
+			"skills": ["Consumir Alcohol","Aguante","Regatear","Hablar idioma (Viejomundano clásico)","Sabiduría académica (Derecho)","Sabiduría académica (Teología)","Percepción","Investigar"],
+			"talents": ["Etiqueta (Erudito)","Lector rápido","Leer y escribir","Parloteo"],
+			"trappings": ["Libro (Derecho)","Lupa"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.GhqPa2iwEdc4Dokc]{Abogado}</p>"
+		},
+		{
+			"id": "Swindler",
+			"name": "Timador",
+			"skills": ["Sobornar","Consumir Alcohol","Carisma","Animar (Relatar)","Jugar","Cotilleo","Regatear","Prestidigitación"],
+			"talents": ["Etiqueta (Cualquiera)","Experto en dados","Fullero","Suerte"],
+			"trappings": ["Baraja","Dados","Mochila","2 mudas de ropa"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.JTKAh4qCOCcPa2yN]{Charlatán}</p>"
+		},
+		{
+			"id": "Tax Collector",
+			"name": "Recaudador de impuestos",
+			"skills": ["Frialdad","Esquivar","Aguante","Cotilleo","Regatear","Intimidar","Cuerpo a cuerpo (Básica)","Percepción"],
+			"talents": ["Buenas espaldas","Desfalcar","Numismático","Tenaz"],
+			"trappings": ["Arma de mano","Caja fuerte pequeña"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.WbjmnVlyJ9VP2nt4]{Alguacil}</p>"
+		},
+		{
+			"id": "Thief",
+			"name": "Ladrón",
+			"skills": ["Atletismo","Escalar","Frialdad","Esquivar","Aguante","Intuición","Percepción","Movimiento silencioso (Urbano)","Tasar","Cotilleo","Sabiduría académica (Local)","Forzar Cerraduras","Lengua Secreta (Ladrón)","Prestidigitación"],
+			"talents": ["Allanamiento de morada","Etiqueta (Delincuentes)","Manos rápidas","Sombra"],
+			"trappings": ["Herramientas del oficio (Ladrón)","Soga"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.TgcyR0ZdG6bMOK9o]{Ladrón}</p>"
+		},
+		{
+			"id": "Thief-taker",
+			"name": "Cazaladrones",
+			"skills": ["Sobornar","Carisma","Cotilleo","Regatear","Intuición","Cuerpo a cuerpo (Básica)","Supervivencia","Percepción"],
+			"talents": ["Allanamiento de morada","Cortés","Golpe conmocionador","Sombra"],
+			"trappings": ["Arma de mano","Chaleco de cuero","Soga"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.bsQN8B1mtZhl2WRu]{Cazarrecompensas}</p>"
+		},
+		{
+			"id": "Thug",
+			"name": "Matón",
+			"skills": ["Consumir Alcohol","Frialdad","Esquivar","Aguante","Intimidar","Sabiduría académica (Local)","Cuerpo a cuerpo (Pelea)","Movimiento silencioso (Urbano)"],
+			"talents": ["Amenazador","Delincuente","Etiqueta (Delincuentes)","Golpe poderoso"],
+			"trappings": ["Chaqueta de cuero","Puño americano"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.yGZN7bMjbGH7kCMK]{Pandillero}</p>"
+		},
+		{
+			"id": "Toll Keeper",
+			"name": "Peajero",
+			"skills": ["Sobornar","Consumir Alcohol","Jugar","Cotilleo","Regatear","Cuerpo a cuerpo (Básica)","Percepción","A distancia (Ballesta)"],
+			"talents": ["Desfalcar","Numismático","Puntería","Sangre fría"],
+			"trappings": ["Ballesta con 10 virotes","Chaqueta de cuero"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.8zowZP5UEKTM9ehU]{Guarda de caminos}</p>"
+		},
+		{
+			"id": "Tomb Robber",
+			"name": "Ladrón de sepulturas",
+			"skills": ["Escalar","Frialdad","Esquivar","Aguante","Cotilleo","Intuición","Percepción","Movimiento silencioso (Cualquiera)","Sobornar","Conducir","Tasar","Regatear","Sabiduría académica (Medicina)","Cuerpo a cuerpo (Básica)","Investigar","Sabiduría académica (Historia)","Forzar Cerraduras","Poner trampas"],
+			"talents": ["Golpe poderoso","Leer y escribir","Rata de túnel","Tenaz"],
+			"trappings": ["Arma de mano (Pico)","Caballo y carreta","Chaqueta de cuero","Herramientas del oficio (Ladrón)","Soga"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.W2Ovj3ec7eqZUuuv]{Ladrón de tumbas}</p>"
+		},
+		{
+			"id": "Town Councilor",
+			"name": "Concejal",
+			"skills": ["Carisma","Escalar","Consumir Alcohol","Conducir","Esquivar","Jugar","Cotilleo","Regatear","Sobornar","Tasar","Intuición","Sabiduría académica (Local)","Cuerpo a cuerpo (Pelea)","Tocar (Cualquiera)","Frialdad","Sabiduría académica (Derecho)","Percepción","Investigar"],
+			"talents": ["Alentador","Leer y escribir","Orador","Sobornador"],
+			"trappings": ["Carruaje y cochero","Casa"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.uqdZBoLtuLv0bHVV]{Ciudadano}</p>"
+		},
+		{
+			"id": "Townsman",
+			"name": "Ciudadano",
+			"skills": ["Carisma","Escalar","Consumir Alcohol","Conducir","Esquivar","Jugar","Cotilleo","Regatear","Sobornar","Tasar","Intuición","Sabiduría académica (Local)","Cuerpo a cuerpo (Pelea)","Tocar (Cualquiera)"],
+			"talents": ["Desfalcar","Etiqueta (Cualquiera)","Gregario","Negociador"],
+			"trappings": ["Cálamo y tinta","Casa modesta","Sirviente"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.uqdZBoLtuLv0bHVV]{Ciudadano}</p>"
+		},
+		{
+			"id": "mokSUD62vhpKue2Z",
+			"name": "Rastreador",
+			"skills": ["Carisma Animal","Escalar","Aguante","Sabiduría académica (Bestias)","Supervivencia","Percepción","A distancia (Honda)","Poner trampas","Frialdad","Intuición","Cuerpo a cuerpo (Básica)","A distancia (Arco)","Lengua Secreta (Cazador)","Movimiento silencioso (Rural)","Orientación","Montar (Caballo)","Nadar","Rastrear"],
+			"talents": ["Disparo certero","Intrépido (Animales)","Proyectil infalible","Sentidos desarrollados (Cualquiera)"],
+			"trappings": ["Mochila","Saco de dormir","Tienda de campaña"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.2RxWvPZCKW2ShY5a]{Cazador}</p>"
+		},
+		{
+			"id": "Trader",
+			"name": "Comerciante",
+			"skills": ["Criar Animales","Sobornar","Carisma","Consumir Alcohol","Conducir","Jugar","Cotilleo","Regatear"],
+			"talents": ["Cortés","Leer y escribir","Negociador","Parloteo"],
+			"trappings": ["Ábaco","3d10 chelines de plata","Lona de tela","Mula y carreta"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.FLqzxS5gxKflqDUk]{Mercader}</p>"
+		},
+		{
+			"id": "Trapper",
+			"name": "Trampero",
+			"skills": ["Carisma Animal","Escalar","Aguante","Sabiduría académica (Bestias)","Supervivencia","Percepción","A distancia (Honda)","Poner trampas"],
+			"talents": ["Errante","Experto en trampas","Recio","Zancadas (Cualquiera)"],
+			"trappings": ["Arma de mano","Botas recias y capa","Honda y 20 balas de piedra","Selección de trampas para animales"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.2RxWvPZCKW2ShY5a]{Cazador}</p>"
+		},
+		{
+			"id": "Treasure Hunter",
+			"name": "Buscador de tesoros",
+			"skills": ["Escalar","Frialdad","Esquivar","Aguante","Cotilleo","Intuición","Percepción","Movimiento silencioso (Cualquiera)","Sobornar","Conducir","Tasar","Regatear","Sabiduría académica (Medicina)","Cuerpo a cuerpo (Básica)","Investigar","Sabiduría académica (Historia)","Forzar Cerraduras","Poner trampas","Orientación","Oficio (De Ingeniería)"],
+			"talents": ["Decidido","Experto en trampas","Intrépido (Muertos vivientes)","Sexto sentido"],
+			"trappings": ["Herramientas del oficio (Ingeniero)","Mapas","Material de escritura","Saco de dormir","Tienda de campaña"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.W2Ovj3ec7eqZUuuv]{Ladrón de tumbas}</p>"
+		},
+		{
+			"id": "Troll Slayer",
+			"name": "Matatroles",
+			"skills": ["Consumir Alcohol","Frialdad","Esquivar","Aguante","Jugar","Sanar","Sabiduría académica (Troles)","Cuerpo a cuerpo (Básica)"],
+			"talents": ["Empuñar dos armas","Furia","Intrépido (Todo)","Matador"],
+			"trappings": ["Frasco de licor","Hacha","Tatuajes","Vergüenza"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.9p3DaFU5hMFP1C3v]{Matador}</p>"
+		},
+		{
+			"id": "Troubadour",
+			"name": "Trovador",
+			"skills": ["Atletismo","Carisma","Animar (Cualquiera)","Cotilleo","Regatear","Actuar (Cualquiera)","Tocar (Cualquiera)","Prestidigitación","Animar (Cualquiera)","Montar (Cualquiera)","Cuerpo a cuerpo (Básica)","Actuar (Cualquiera)","Tocar (Cualquiera)","A distancia (Arrojadiza)","Criar Animales","Adiestrar Animal (Cualquiera)","Arte (Escritura)","Hablar idioma (Cualquiera)"],
+			"talents": ["Disfraz","Leer y escribir","Parloteo","Tono perfecto"],
+			"trappings": ["Animal entrenado","Material de escritura"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.b96g5MZr3rk5zYAo]{Animador}</p>"
+		},
+		{
+			"id": "Troupe Leader",
+			"name": "Líder de troupe",
+			"skills": ["Atletismo","Carisma","Animar (Cualquiera)","Cotilleo","Regatear","Actuar (Cualquiera)","Tocar (Cualquiera)","Prestidigitación","Animar (Cualquiera)","Montar (Cualquiera)","Cuerpo a cuerpo (Básica)","Actuar (Cualquiera)","Tocar (Cualquiera)","A distancia (Arrojadiza)","Criar Animales","Adiestrar Animal (Cualquiera)","Arte (Escritura)","Hablar idioma (Cualquiera)","Conducir","Mando"],
+			"talents": ["Etiqueta (Cualquiera)","Negociador","Viajero curtido","Vigilancia"],
+			"trappings": ["Caballos de tiro y carromato (Escenario)","Guardarropa de disfraces y accesorios","Troupe de animadores"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.b96g5MZr3rk5zYAo]{Animador}</p>"
+		},
+		{
+			"id": "Vagabond",
+			"name": "Vagabundo",
+			"skills": ["Carisma","Aguante","Animar (Relatar)","Cotilleo","Regatear","Intuición","Supervivencia","Movimiento silencioso (Rural o Urbano)"],
+			"talents": ["¡A correr!","Errante","Manitas","Pescador"],
+			"trappings": ["Mochila","Mercancía por valor de 2d10 peniques de bronce","Saco de dormir","Tienda de campaña"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.jAqbxNrHW35xiuOn]{Vendedor ambulante}</p>"
+		},
+		{
+			"id": "Village Elder",
+			"name": "Anciano del poblado",
+			"skills": ["Criar Animales","Atletismo","Consumir Alcohol","Aguante","Cotilleo","Cuerpo a cuerpo (Pelea)","Sabiduría académica (Local)","Supervivencia","Conducir","Animar (Relatar)","Regatear","Cuerpo a cuerpo (Básica)","Oficio (Cualquiera)","Esquivar","Sobornar","Carisma","Intimidar","Mando","Intuición","Sabiduría académica (Historia)"],
+			"talents": ["Artesano maestro (Cualquiera)","Dedos ágiles","Orador","Sabio (Local)"],
+			"trappings": ["El respeto del poblado"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.btrs5XFk2OQsCtqj]{Aldeano}</p>"
+		},
+		{
+			"id": "Villager",
+			"name": "Aldeano",
+			"skills": ["Criar Animales","Atletismo","Consumir Alcohol","Aguante","Cotilleo","Cuerpo a cuerpo (Pelea)","Sabiduría académica (Local)","Supervivencia","Conducir","Animar (Relatar)","Regatear","Cuerpo a cuerpo (Básica)","Oficio (Cualquiera)","Esquivar"],
+			"talents": ["Afinidad animal","Muy fuerte","Recio","Tenaz"],
+			"trappings": ["Arma de mano (Hacha)","Chaleco de cuero","Herramientas del oficio (Según oficio)"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.btrs5XFk2OQsCtqj]{Aldeano}</p>"
+		},
+		{
+			"id": "Wandering Trader",
+			"name": "Mercader ambulante",
+			"skills": ["Carisma","Aguante","Animar (Relatar)","Cotilleo","Regatear","Intuición","Supervivencia","Movimiento silencioso (Rural o Urbano)","Criar Animales","Carisma Animal","Consumir Alcohol","Tasar","Montar (Caballo)","Oficio (Hojalatero)","Conducir","Intimidar","Hablar idioma (Cualquiera)","Percepción","Sabiduría académica (Local)","Sabiduría académica (Geografía)"],
+			"talents": ["Cortés","Decidido","Orador experto","Tenaz"],
+			"trappings": ["Caballo de tiro y carromato","50 chelines de plata en monedas","Mercancía por valor de por lo menos 5d10 coronas de oro"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.jAqbxNrHW35xiuOn]{Vendedor ambulante}</p>"
+		},
+		{
+			"id": "Warden",
+			"name": "Guarda",
+			"skills": ["Atletismo","Carisma Animal","Consumir Alcohol","Frialdad","Aguante","Intuición","Sabiduría académica (Local)","Percepción","Criar Animales","Cuerpo a cuerpo (Básica)","Supervivencia","A distancia (Arco)","Montar (Caballo)","Nadar"],
+			"talents": ["Afinidad animal","Errante","Etiqueta (Sirvientes)","Zancadas (Cualquiera)"],
+			"trappings": ["Arma de mano o arco con 10 flechas","Caballo de monta con silla y arreos","Chaqueta de cuero"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.ZAItIWSNYQPb1pmi]{Guarda}</p>"
+		},
+		{
+			"id": "Warlock",
+			"name": "Nigromante",
+			"skills": ["Canalización","Frialdad","Aguante","Cotilleo","Intimidar","Hablar idioma (Lengua de la magia)","Prestidigitación","Movimiento silencioso (Rural)","Carisma Animal","Esquivar","Intuición","Cuerpo a cuerpo (Arma de Asta)","Percepción","Oficio (Herbolario)","Sobornar","Carisma","Regatear","Sabiduría académica (Magia Oscura)","Sabiduría académica (Demonología)","Sabiduría académica (Magia)"],
+			"talents": ["Afinidad con el Aethyr","Decidido","Muy resistente","Suerte"],
+			"trappings": ["Calavera","Ropajes"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.5ITpDJoRHlIgbE0g]{Brujo}</p>"
+		},
+		{
+			"id": "Warrior Priest",
+			"name": "Sacerdote guerrero",
+			"skills": ["Frialdad","Esquivar","Aguante","Sanar","Mando","Sabiduría académica (Teología)","Cuerpo a cuerpo (Cualquiera)","Rezar","Carisma","Animar (Discursos)","Intimidar","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Cualquiera)","A distancia (Cualquiera)"],
+			"talents": ["Empuñar dos armas","Inspirador","Invocar (Cualquiera)","Viajero curtido"],
+			"trappings": ["Arma (Cualquiera)","Coraza"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.KG5lVereynSwOkxa]{Sacerdote guerrero}</p>"
+		},
+		{
+			"id": "Watch Captain",
+			"name": "Captitán de la guardia",
+			"skills": ["Atletismo","Escalar","Consumir Alcohol","Esquivar","Aguante","Jugar","Cuerpo a cuerpo (Cualquiera)","Percepción","Carisma","Frialdad","Cotilleo","Intimidar","Intuición","Sabiduría académica (Local)","Animar (Relatar)","Regatear","Mando","Sabiduría académica (Derecho)","Sabiduría académica (Política)","Montar (Caballo)"],
+			"talents": ["Cerebro","Intrigante","Orador","Robusto"],
+			"trappings": ["Arma de mano de calidad","Caballo de monta con silla de montar y arreos","Símbolo de su rango de calidad","Sombrero de calidad"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.Tt8DCpewqkmBq02v]{Vigilante}</p>"
+		},
+		{
+			"id": "Watch Recruit",
+			"name": "Recluta de la guardia",
+			"skills": ["Atletismo","Escalar","Consumir Alcohol","Esquivar","Aguante","Jugar","Cuerpo a cuerpo (Cualquiera)","Percepción"],
+			"talents": ["Entrenado","Golpe conmocionador","Recio","Tenaz"],
+			"trappings": ["Arma de mano","Chaqueta de cuero","Uniforme"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.Tt8DCpewqkmBq02v]{Vigilante}</p>"
+		},
+		{
+			"id": "Watch Sergeant",
+			"name": "Sargento de la guardia",
+			"skills": ["Atletismo","Escalar","Consumir Alcohol","Esquivar","Aguante","Jugar","Cuerpo a cuerpo (Cualquiera)","Percepción","Carisma","Frialdad","Cotilleo","Intimidar","Intuición","Sabiduría académica (Local)","Animar (Relatar)","Regatear","Mando","Sabiduría académica (Derecho)"],
+			"talents": ["Desarmar","Etiqueta (Soldados)","Intrépido (Delincuentes)","Olfato para los problemas"],
+			"trappings": ["Coraza","Símbolo de su rango","Yelmo"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.Tt8DCpewqkmBq02v]{Vigilante}</p>"
+		},
+		{
+			"id": "Watchman",
+			"name": "Vigilante",
+			"skills": ["Atletismo","Escalar","Consumir Alcohol","Esquivar","Aguante","Jugar","Cuerpo a cuerpo (Cualquiera)","Percepción","Carisma","Frialdad","Cotilleo","Intimidar","Intuición","Sabiduría académica (Local)"],
+			"talents": ["Allanamiento de morada","Corredor","Delincuente","Visión nocturna"],
+			"trappings": ["Aceite para lámpara","Insignia de cobre","Linterna y pértiga"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.Tt8DCpewqkmBq02v]{Vigilante}</p>"
+		},
+		{
+			"id": "Witch",
+			"name": "Brujo",
+			"skills": ["Canalización","Frialdad","Aguante","Cotilleo","Intimidar","Hablar idioma (Lengua de la magia)","Prestidigitación","Movimiento silencioso (Rural)","Carisma Animal","Esquivar","Intuición","Cuerpo a cuerpo (Arma de Asta)","Percepción","Oficio (Herbolario)"],
+			"talents": ["Atractivo","¡Brujo!","Clarividencia","Magia arcana (Brujería)"],
+			"trappings": ["Bastón","Herramientas del oficio (Herbolario)","Saco","Selección de hierbas"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.5ITpDJoRHlIgbE0g]{Brujo}</p>"
+		},
+		{
+			"id": "Witch Hunter",
+			"name": "Cazador de brujas",
+			"skills": ["Carisma","Consumir Alcohol","Sanar","Intimidar","Intuición","Sabiduría académica (Tortura)","Cuerpo a cuerpo (Pelea)","Percepción","Frialdad","Cuerpo a cuerpo (Básica)","Cotilleo","Sabiduría académica (Brujas)","A distancia (Cualquiera)","Montar (Caballo)"],
+			"talents": ["Empuñar dos armas","Puntería","Sombra","Viajero curtido"],
+			"trappings": ["Caballo de monta con montura y arreos","Chaqueta de cuero","Espada plateada","Pistola-ballesta o pistola","Soga","Sombrero (Hennin)"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.3A56eFnkIYFmbRL1]{Cazador de brujas}</p>"
+		},
+		{
+			"id": "Witchfinder General",
+			"name": "Cazador de brujas general",
+			"skills": ["Carisma","Consumir Alcohol","Sanar","Intimidar","Intuición","Sabiduría académica (Tortura)","Cuerpo a cuerpo (Pelea)","Percepción","Frialdad","Cuerpo a cuerpo (Básica)","Cotilleo","Sabiduría académica (Brujas)","A distancia (Cualquiera)","Montar (Caballo)","Aguante","Mando","Sabiduría académica (Derecho)","Sabiduría académica (Local)","Sabiduría académica (Caos)","Sabiduría académica (Política)"],
+			"talents": ["Alma pura","Aterrador","Sentir magia","Voluntad de hierro"],
+			"trappings": ["Cazadores de brujas subordinados","Ropa cortesana de la mejor calidad"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.3A56eFnkIYFmbRL1]{Cazador de brujas}</p>"
+		},
+		{
+			"id": "Wizard",
+			"name": "Hechicero",
+			"skills": ["Canalización (Cualquiera Color)","Esquivar","Intuición","Hablar idioma (Lengua de la magia)","Sabiduría académica (Magia)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (Arma de Asta)","Percepción","Carisma","Frialdad","Cotilleo","Intimidar","Hablar idioma (Lengua de Batalla)","Hablar idioma (Cualquiera)"],
+			"talents": ["Detectar artefacto","Magia arcana (Cualquier sabiduría académica arcana)","Manos rápidas","Sexto sentido"],
+			"trappings": ["Licencia mágica"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.m6WuSnrrW7QllX63]{Hechicero}</p>"
+		},
+		{
+			"id": "Wizard Lord",
+			"name": "Señor de los hechiceros",
+			"skills": ["Canalización (Cualquiera Color)","Esquivar","Intuición","Hablar idioma (Lengua de la magia)","Sabiduría académica (Magia)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (Arma de Asta)","Percepción","Carisma","Frialdad","Cotilleo","Intimidar","Hablar idioma (Lengua de Batalla)","Hablar idioma (Cualquiera)","Criar Animales","Tasar","Sabiduría académica (Guerra)","Montar (Caballo)","Hablar idioma (Cualquiera)","Sabiduría académica (Cualquiera)"],
+			"talents": ["Aterrador","Hechicero de guerra","Percepción de combate","Voluntad de hierro"],
+			"trappings": ["Aprendiz","Biblioteca (Magia)","Taller (Magia)"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.m6WuSnrrW7QllX63]{Hechicero}</p>"
+		},
+		{
+			"id": "Wizard's Apprentice",
+			"name": "Aprendiz de hechicero",
+			"skills": ["Canalización (Cualquiera Color)","Esquivar","Intuición","Hablar idioma (Lengua de la magia)","Sabiduría académica (Magia)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (Arma de Asta)","Percepción"],
+			"talents": ["Afinidad con el Aethyr","Clarividencia","Leer y escribir","Magia menor"],
+			"trappings": ["Bastón","Grimorio"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.m6WuSnrrW7QllX63]{Hechicero}</p>"
+		},
+		{
+			"id": "Wrecker",
+			"name": "Raquero",
+			"skills": ["Escalar","Consumir Alcohol","Esquivar","Aguante","Remar","Cuerpo a cuerpo (Básica)","Supervivencia","Nadar","Sobornar","Frialdad","Intuición","Orientación","Percepción","Poner trampas"],
+			"talents": ["¡A correr!","Buen nadador","Errante","Experto en trampas"],
+			"trappings": ["Arma de mano (Bichero)","Chaqueta de cuero","Quinqué y aceite"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.AnW8kwDb9koFgMPx]{Raquero}</p>"
+		},
+		{
+			"id": "Wrecker Captain",
+			"name": "Capitán de raqueros",
+			"skills": ["Escalar","Consumir Alcohol","Esquivar","Aguante","Remar","Cuerpo a cuerpo (Básica)","Supervivencia","Nadar","Sobornar","Frialdad","Intuición","Orientación","Percepción","Poner trampas","Cotilleo","Intimidar","A distancia (Ballesta)","Movimiento silencioso (Rural)","Mando","Sabiduría académica (Vías fluviales)"],
+			"talents": ["Asalto furioso","Combate cercano","Guerrero nato","Piloto"],
+			"trappings": ["Barril de cerveza","Flotilla de barcazas y tripulación de raqueros","Grilletes"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.AnW8kwDb9koFgMPx]{Raquero}</p>"
+		},
+		{
+			"id": "Wyrd",
+			"name": "Fatídico",
+			"skills": ["Canalización","Frialdad","Aguante","Cotilleo","Intimidar","Hablar idioma (Lengua de la magia)","Prestidigitación","Movimiento silencioso (Rural)","Carisma Animal","Esquivar","Intuición","Cuerpo a cuerpo (Arma de Asta)","Percepción","Oficio (Herbolario)","Sobornar","Carisma","Regatear","Sabiduría académica (Magia Oscura)"],
+			"talents": ["Afinidad animal","Aterrador","Manos rápidas","Sentir magia"],
+			"trappings": ["Amuleto de la suerte","Capa con varios bolsillos","Mochila"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.5ITpDJoRHlIgbE0g]{Brujo}</p>"
+		},
+		{
+			"id": "Zealot",
+			"name": "Zelote",
+			"skills": ["Esquivar","Aguante","Sanar","Intimidar","Intuición","Sabiduría académica (Sigmar)","Cuerpo a cuerpo (Mayal)","Supervivencia"],
+			"talents": ["Ayunador","Carga bersérker","Furia","Leer y escribir"],
+			"trappings": ["Mayal","Ropas andrajosas"],
+			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.Vtice54Y7PV95Dkp]{Flagelante}</p>"
+		}
+	]
+}

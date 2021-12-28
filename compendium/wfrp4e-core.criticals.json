@@ -1,0 +1,492 @@
+{
+	"label": "Cr\u00EDticos",
+	"mapping": {
+		"wounds": {
+			"path": "data.wounds.value",
+			"converter": "criticals_wounds"
+			},	
+		"location": {
+			"path": "data.location.value",
+			"converter": "criticals_location"
+			},
+		"effects": "effects"
+		},
+	"entries": [
+		{
+			"id": "Arterial Damage",
+			"name": "Da\u00F1o arterial",
+			"description": "<p>Sufres 4 Estados de @Condition[Sangrando]. Hasta que se te pueda practicar Cirug\u00EDa, cada vez que sufras Da\u00F1o a la Ubicaci\u00F3n de impacto Cuerpo, sufrir\u00E1s 2 Estados de @Condition[Sangrando] adicionales.</p>",
+			"effects": [{"_id":"7JMNhRyCgMlmfLLK","flags":{"wfrp4e":{"effectTrigger":"takeDamage","effectApplication":"actor","script":"if (args.opposedTest.result.hitloc.value == \"body\")\n    args.actor.addCondition(\"bleeding\", 2)"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornbody.png","label":"Da\u00F1o arterial","tint":null,"transfer":true},{"_id":"FAWaaXikvGuDffph","changes":[],"disabled":false,"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"flags":{"wfrp4e":{"trigger":"endRound","value":4},"core":{"statusId":"bleeding"}}}]
+		},
+		{
+			"id": "Bad Cut",
+			"name": "Tajo amplio",
+			"description": "<p>Sufres 2 Estados de @Condition[Sangrando] al abrirse en tu espinilla una herida profunda. Debes superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Aguante</strong> o pasas al Estado de @Condition[Tumbado].</p>",
+			"effects": [{"_id":"MeZJb40J14iJng8X","flags":{"wfrp4e":{"trigger":"endRound","value":2},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false},{"_id":"kub1YScTxM1VNLHK","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"if (args.actor.isOwner)\n   args.actor.setupSkill(\"Aguante\").then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"prone\")\n        })\n     })"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornleg.png","label":"Tajo amplio","tint":null,"transfer":true}]
+		},
+		{
+			"id": "Badly Cut Toe",
+			"name": "Fuerte corte en un dedo",
+			"description": "<p>Sufres 1 Estado de @Condition[Sangrando]. Después del encuentro, debes superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Aguante</strong>. Si fallas, pierdes 1 dedo del pie; @Compendium[wfrp4e-core.injuries.ZhMADOqoo0y8Q9bx]{Amputación (Intermedia)}.</p>",
+			"effects": [{"_id":"2NSVzeLs6V2jWa8K","flags":{"wfrp4e":{"trigger":"endRound","value":1},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false},{"_id":"nlxBZY9R2qxa7bkC","flags":{"wfrp4e":{"effectTrigger":"endCombat","effectApplication":"actor","script":"if (this.actor.isOwner)\n    this.actor.setupSkill(\"Aguante\").then(setupData => {\n      this.actor.basicTest(setupData).then(test => {\n        if (test.result.outcome == \"failure\") {\n          fromUuid(\"Compendium.wfrp4e-core.injuries.ZhMADOqoo0y8Q9bx\").then(injury => {\n            this.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n            this.actor.deleteEmbeddedEntity(\"ActiveEffect\", this.effect._id)\n          })\n        }\n      })\n    })","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornleg.png","label":"Fuerte corte en un dedo","tint":"","transfer":true}]
+		},
+		{
+			"id": "Badly Jarred Arm",
+			"name": "Brazo muy sacudido",
+			"description": "Tu brazo resulta muy sacudido por el ataque. Deja caer lo que tuvieras en esa mano, que queda inútil durante @Roll[1d10] - Bonificador por Resistencia Asaltos (mínimo 1). Durante dicho tiempo, trata la mano como si la hubieras perdido."
+		},
+		{
+			"id": "Badly Twisted Knee",
+			"name": "Rodilla gravemente dislocada",
+			"description": "<p>Doblas la rodilla en un ángulo muy poco natural mientras intentas evitar a tu oponente. Sufres 1 herida de @Compendium[wfrp4e-core.injuries.3S4OYOZLauXctmev]{Desgarro muscular (Grave)}.</p>",
+			"effects": [{"_id":"yJmV5ry9bcyqV5fL","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"fromUuid(\"Compendium.wfrp4e-core.injuries.3S4OYOZLauXctmev\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornleg.png","label":"Rodilla gravemente dislocada","tint":"","transfer":true}]
+		},
+		{
+			"id": "Black Eye",
+			"name": "Ojo morado",
+			"description": "<p>Un fuerte golpe te impacta en un ojo, dejando lágrimas y mucho dolor. Sufres 2 Estados de @Condition[Cegado].</p>",
+			"effects": [{"_id":"jIlysiOZ0LFz6cgj","flags":{"wfrp4e":{"trigger":"endRound","effectTrigger":"dialogChoice","effectData":{"description":"Chequeos relacionados con la vista","modifier":"-10 * this.flags.wfrp4e.value"},"value":2,"secondaryEffect":{"effectTrigger":"targetPrefillDialog","script":"if (args.item && args.item.attackType=='melee') args.prefillModifiers.modifier += 10 * this.effect.conditionValue"}},"core":{"statusId":"blinded"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/blinded.png","label":"Cegado","transfer":true,"disabled":false}]
+		},
+		{
+			"id": "Bleeding hand",
+			"name": "Mano sangrante",
+			"description": "<p>Tienes un buen corte en la mano, lo que hace que te cueste trabajo empuñar las cosas sin que te resbalen. Sufres 1 Estado de @Condition[Sangrando]. Mientras sufres de dicho Estado, haz un Chequeo <strong>Normal (+20)</strong> de <strong>Destreza</strong> antes de llevar a cabo acción alguna que requiera tener algo firmemente sujeto en dicha mano; si fallas, el objeto resbala.</p>",
+			"effects": [{"_id":"5EOJYNGGp4ZPXIGL","flags":{"wfrp4e":{"trigger":"endRound","value":1},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false}]
+		},
+		{
+			"id": "Broken Collar Bone",
+			"name": "Rotura de clavícula",
+			"description": "<p>Pasas al Estado @Condition[Inconsciente] hasta conseguir Atención médica y sufres 1 Herida de @Compendium[wfrp4e-core.injuries.EaqlLRQigwnsEAXX]{Hueso roto (Grave)}.</p>",
+			"effects": [{"_id":"yYBsiXJGftVmMEeQ","flags":{"wfrp4e":{"value":null},"core":{"statusId":"unconscious"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/unconscious.png","label":"Inconsciente","transfer":true,"disabled":false},{"_id":"QaSpvCS9KAifTCNw","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"fromUuid('Compendium.wfrp4e-core.injuries.EaqlLRQigwnsEAXX').then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornbody.png","label":"Rotura de clavícula","tint":"","transfer":true}]
+		},
+		{
+			"id": "Broken Jaw",
+			"name": "Rotura de mandíbula",
+			"description": "<p>El crujido es tremendo cuando el golpe impacta en tu barbilla, rompiéndote la quijada. Sufres 3 Estados de @Condition[Aturdido]. Haz un Chequeo <strong>Desafiante (+0)</strong> de <strong>Aguante</strong> so pena de pasar al Estado @Condition[Inconsciente]. Sufres una herida de @Compendium[wfrp4e-core.injuries.hCadFsTRvLN9faaY]{Hueso roto (Grave)}.</p>",
+			"effects": [{"_id":"wAq76bdunkcb9wTw","flags":{"wfrp4e":{"trigger":"endRound","effectTrigger":"prefillDialog","script":"args.prefillModifiers.modifier -= 10 * getProperty(this.effect, 'flags.wfrp4e.value')","value":3},"core":{"statusId":"stunned"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/stunned.png","label":"Aturdido","transfer":true,"disabled":false},{"_id":"WjHgjbRuh0M3H8g6","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"fromUuid(\"Compendium.wfrp4e-core.injuries.hCadFsTRvLN9faaY\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})\n\nif (args.actor.isOwner)\n   args.actor.setupSkill(\"Aguante\").then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"unconscious\")\n        })\n     })","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/head.png","label":"Rotura de mandíbula","tint":"","transfer":true}]
+		},
+		{
+			"id": "Broken Knee",
+			"name": "Rodilla rota",
+			"description": "<p>El golpe impacta contra tu rodilla, rompiéndola en varios trozos. Sufres 1 Estado de @Condition[Sangrando], pasas al de @Condition[Tumbado], y sufres 1 de @Condition[Aturdido], 1 Herida de @Compendium[wfrp4e-core.injuries.2iult41Jehz0F1O8]{Hueso roto (Grave)} mientras caes al suelo, agarrándote tu destrozada pierna.</p>",
+			"effects": [{"_id":"VeT5PVDzmP96JWCM","flags":{"wfrp4e":{"effectTrigger":"prefillDialog","script":"args.prefillModifiers.modifier -= 20","value":null,"secondaryEffect":{"effectTrigger":"targetPrefillDialog","script":"if (args.type == 'weapon' && args.item.attackType=='melee') args.prefillModifiers.modifier += 20"}},"core":{"statusId":"prone"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/prone.png","label":"Tumbado","transfer":true,"disabled":false},{"_id":"frTFfaHrrJxQMQvi","flags":{"wfrp4e":{"trigger":"endRound","effectTrigger":"prefillDialog","script":"args.prefillModifiers.modifier -= 10 * getProperty(this.effect, 'flags.wfrp4e.value')","value":1},"core":{"statusId":"stunned"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/stunned.png","label":"Aturdido","transfer":true,"disabled":false},{"_id":"0wiLtR9wzYfqn7kK","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"fromUuid(\"Compendium.wfrp4e-core.injuries.2iult41Jehz0F1O8\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornleg.png","label":"Rodilla rota","tint":"","transfer":true},{"_id":"zn1gNVJsB6wLvLmH","flags":{"wfrp4e":{"trigger":"endRound","value":1},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false}]
+		},
+		{
+			"id": "Broken Nose",
+			"name": "Nariz rota",
+			"description": "<p>Un fuerte golpe en el centro de la cara hace que te brote la sangre. Sufres 2 Estados de @Condition[Sangrando]. Haz un Chequeo <strong>Desafiante (+0)</strong> de <strong>Aguante</strong>, o además sufrirás 1 Estado de @Condition[Aturdido]. obtienes un +1/-1 NE a las tiradas sociales, dependiendo del contexto, a menos que recurras a la @JournalEntry[Healing]{Cirugía} para arreglarte la nariz.</p>",
+			"effects": [{"_id":"us244BgOUN1LRLnc","flags":{"wfrp4e":{"trigger":"endRound","value":2},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false},{"_id":"zYfCX8Eq2VkRFhNI","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"if (args.actor.isOwner)\n   args.actor.setupSkill(\"Aguante\").then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"stunned\")\n        })\n     })"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/head.png","label":"Nariz rota","tint":null,"transfer":true}]
+		},
+		{
+			"id": "Bruised Ribs",
+			"name": "Costillas magulladas",
+			"description": "Todos tus Chequeos basados en la Agilidad sufren un penalizador -10 durante @Roll[1d10] días.",
+			"effects": [{"_id":"vIjf5xtB3kGSjrwR","flags":{"wfrp4e":{"effectTrigger":"prefillDialog","effectApplication":"actor","script":"if (args.type == \"skill\" && args.item.characteristic.key == \"ag\")\n   args.prefillModifiers.modifier -= 10\n\nif (args.type == \"characteristic\" && args.item == \"ag\")\n   args.prefillModifiers.modifier -= 10"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornbody.png","label":"Costillas magulladas","tint":null,"transfer":true}]
+		},
+		{
+			"id": "Brutal Dismemberment",
+			"name": "Desmembramiento brutal",
+			"description": "<p>Te arrancan el brazo, que salpica sangre arterial a@Roll[1d10] pies de distancia en una dirección aleatoria (see @Table[scatter]{Dispersión}), antes de que el golpe continúe hasta tu pecho y a través de él.</p>",
+			"effects": [{"_id":"Te5ujLd9jiLGSVJr","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"this.actor.addCondition(\"dead\")"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornarm.png","label":"Desmembramiento brutal","tint":null,"transfer":true}]
+		},
+		{
+			"id": "Carved Shin",
+			"name": "Espinilla rota",
+			"description": "<p>El arma atraviesa limpiamente tu pierna por la rodilla, traspasando hueso y tendones. Sufres 1 Estado de @Condition[Aturdido] y pasas a @Condition[Tumbado]. Además, sufres 1 Herida de @Compendium[wfrp4e-core.injuries.3S4OYOZLauXctmev]{Desgarro muscular (Grave)} y otra de @Compendium[wfrp4e-core.injuries.7mCcI3q7hgWcmbBU]{Hueso roto (Leve)}.</p>",
+			"effects": [{"_id":"RW5eRZ7NxikYNagM","flags":{"wfrp4e":{"trigger":"endRound","effectTrigger":"prefillDialog","script":"args.prefillModifiers.modifier -= 10 * getProperty(this.effect, 'flags.wfrp4e.value')","value":1},"core":{"statusId":"stunned"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/stunned.png","label":"Aturdido","transfer":true,"disabled":false},{"_id":"YS3kViPKuIu9Aaif","flags":{"wfrp4e":{"effectTrigger":"prefillDialog","script":"args.prefillModifiers.modifier -= 20","value":null,"secondaryEffect":{"effectTrigger":"targetPrefillDialog","script":"if (args.type == 'weapon' && args.item.attackType=='melee') args.prefillModifiers.modifier += 20"}},"core":{"statusId":"prone"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/prone.png","label":"Tumbado","transfer":true,"disabled":false},{"_id":"lanapxEmE0mai3mV","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"fromUuid(\"Compendium.wfrp4e-core.injuries.3S4OYOZLauXctmev\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})\n\nfromUuid(\"Compendium.wfrp4e-core.injuries.7mCcI3q7hgWcmbBU\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornleg.png","label":"Espinilla rota","tint":"","transfer":true}]
+		},
+		{
+			"id": "Clean Break",
+			"name": "Rotura limpia",
+			"description": "<p>Un crujido audible resuena cuando el golpe alcanza tu brazo. Deja caer lo que tengas en la mano asociada, a la vez que te anotas una herida de @Compendium[wfrp4e-core.injuries.4lj1ik958mbgAlaF]{Hueso roto (Leve)}. Tienes que superar un Chequeo <strong>Complicado (-10)</strong> de <strong>Aguante</strong> sufrir 1 Estado de @Condition[Aturdido].</p>",
+			"effects": [{"_id":"sVTAurntsVHWamj6","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"if (args.actor.isOwner)\n{\n   args.actor.setupSkill(\"Aguante\", {absolute: {difficulty: \"difficult\"}}).then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"stunned\")\n        })\n     })\n\nfromUuid(\"Compendium.wfrp4e-core.injuries.4lj1ik958mbgAlaF\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})\n\n\n}","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornarm.png","label":"Rotura limpia","tint":"","transfer":true}]
+		},
+		{
+			"id": "Cleft Hand",
+			"name": "Mano partida",
+			"description": "<p>Tu mano se abre por la mitad debido al golpe. Pierdes 1 dedo; @Compendium[wfrp4e-core.injuries.SYjWiKDzMS6CtROJ]{Amputación (Difícil)}. Sufres 2 Estados de @Condition[Sangrando] y 1 de @Condition[Aturdido]. Por cada asalto sucesivo en el que no recibas Atención médica, perderás otro dedo al irse desgarrando la herida; si te quedas sin dedos, pierdes la mano; @Compendium[wfrp4e-core.injuries.SYjWiKDzMS6CtROJ]{Amputación (Difícil)}.</p>",
+			"effects": [{"_id":"lSn9Mr174doheAbo","flags":{"wfrp4e":{"trigger":"endRound","value":2},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false},{"_id":"3rDSK76g1cKpmn40","flags":{"wfrp4e":{"trigger":"endRound","effectTrigger":"prefillDialog","script":"args.prefillModifiers.modifier -= 10 * getProperty(this.effect, 'flags.wfrp4e.value')","value":1},"core":{"statusId":"stunned"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/stunned.png","label":"Aturdido","transfer":true,"disabled":false},{"_id":"6KtIpUxSWrqIewki","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"fromUuid(\"Compendium.wfrp4e-core.injuries.SYjWiKDzMS6CtROJ\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornarm.png","label":"Mano partida","tint":"","transfer":true}]
+		},
+		{
+			"id": "Concussive Blow",
+			"name": "Golpe conmocionante",
+			"description": "<p>Se te sacude el cerebro dentro del cráneo, y te brota sangre de la nariz y los oídos. Sufres 1 Estado de @Condition[Ensordecido], 2 de @Condition[Sangrando] , y @Roll[1d10] de @Condition[Aturdido]. Sufres 1 Estado de @Condition[Fatigado] que dura @Roll[1d10] días. Si sufres otra Herida crítica en la cabeza mientras sufres de este estado de Fatigado , haz un Chequeo <strong>Normal (+20)</strong> de <strong>Aguante</strong> o pasarás al Estado @Condition[Inconsciente].</p>",
+			"effects": [{"_id":"4o8C5gO5JrPMQy7V","flags":{"wfrp4e":{"trigger":"endRound","effectTrigger":"dialogChoice","effectData":{"description":"Chequeos relacionados con oir","modifier":"-10 * this.flags.wfrp4e.value"},"value":1},"core":{"statusId":"deafened"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/deafened.png","label":"Ensordecido","transfer":true,"disabled":false},{"_id":"F77tiXuPleKy6QKB","flags":{"wfrp4e":{"trigger":"endRound","value":2},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false},{"_id":"TYzxQVbjCM2iyLVl","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"args.actor.addCondition(\"stunned\", (await new Roll(\"1d10\").roll()).total)"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/head.png","label":"Golpe conmocionante","tint":null,"transfer":true},{"_id":"zirzZTdRx8xz8RI6","flags":{"wfrp4e":{"effectTrigger":"takeDamage","effectApplication":"actor","script":"if(args.opposedTest.result.hitloc.value == \"head\" && (args.opposedTest.attackerTest.result.critical || args.actor.status.wounds.value - args.totalWoundLoss < 0))\n{\n\n  if (args.actor.isOwner) {\n    args.actor.setupSkill(\"Aguante\", { absolute: { difficulty: \"average\" } }).then(setupData => {\n      args.actor.basicTest(setupData).then(test => {\n        if (test.result.outcome == \"failure\")\n          args.actor.addCondition(\"unconscious\")\n      })\n    })\n  }\n}"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/head.png","label":"Golpe conmocionante - Efecto de Fatigado","tint":null,"transfer":true},{"_id":"AyoqSH1wIlPXFrdJ","flags":{"wfrp4e":{"effectTrigger":"prefillDialog","script":"args.prefillModifiers.modifier -= 10 * getProperty(this.effect, 'flags.wfrp4e.value')","value":1},"core":{"statusId":"fatigued"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/fatigued.png","label":"Fatigado","transfer":true,"disabled":false}]
+		},
+		{
+			"id": "Cracked Ribs",
+			"name": "Costillas fisuradas",
+			"description": "<p>El impacto te causa fisuras en una o más costillas. Sufres 1 Estado de @Condition[Aturdido]. Sufres una herida de @Compendium[wfrp4e-core.injuries.QluSTTTq3viHJJUh]{Hueso roto (Leve)}.</p>",
+			"effects": [{"_id":"GHwgHe9nIfj3RsTG","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"fromUuid(\"Compendium.wfrp4e-core.injuries.QluSTTTq3viHJJUh\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornbody.png","label":"Costillas fisuradas","tint":"","transfer":true},{"_id":"vc2JuBUI00H1WZwf","flags":{"wfrp4e":{"trigger":"endRound","effectTrigger":"prefillDialog","script":"args.prefillModifiers.modifier -= 10 * getProperty(this.effect, 'flags.wfrp4e.value')","value":1},"core":{"statusId":"stunned"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/stunned.png","label":"Aturdido","transfer":true,"disabled":false}]
+		},
+		{
+			"id": "Crushed Elbow",
+			"name": "Rotura de codo",
+			"description": "<p>El golpe hace añicos tu codo, astillando hueso y cartílago. Dejas caer de inmediato lo que tuvieras en esa mano y sufres una herida de @Compendium[wfrp4e-core.injuries.rlDZZTj5PXjuRXa2]{Hueso roto (Grave)}.</p>",
+			"effects": [{"_id":"sw8YrBAP6gfhSTSH","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"fromUuid(\"Compendium.wfrp4e-core.injuries.rlDZZTj5PXjuRXa2\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})","hide":false,"preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornarm.png","label":"Rotura de codo","tint":"","transfer":true}]
+		},
+		{
+			"id": "Crushed Foot",
+			"name": "Pie aplastado",
+			"description": "<p>El golpe te aplasta el pie. Debes superar un Chequeo <strong>Normal (+20)</strong> de <strong>Aguante</strong>; si fallas, pasas al Estado @Condition[Tumbado] y pierdes 1 dedo, perdiendo 1 dedo adicional por cada NE por debajo de 0; @Compendium[wfrp4e-core.injuries.ZhMADOqoo0y8Q9bx]{Amputación (Intermedia)}. Sufres 2 Estados de @Condition[Sangrando]. Si no se te practica Cirugía en <strong>@Roll[1d10]</strong> días o menos, perderás el pie por completo.</p>",
+			"effects": [{"_id":"1nNGzJZNKnuXr9W7","flags":{"wfrp4e":{"trigger":"endRound","value":2},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false},{"_id":"nWRttvafUnh1XIZU","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"if(args.actor.isOwner) {\n    args.actor.setupSkill(\"Aguante\", { absolute: { difficulty: \"average\" } }).then(setupData => {\n      args.actor.basicTest(setupData).then(test => {\n        if (test.result.outcome == \"failure\") {\n          args.actor.addCondition(\"prone\")\n          fromUuid(\"Compendium.wfrp4e-core.injuries.ZhMADOqoo0y8Q9bx\").then(injury => {\n               injury = injury.toObject()\n               injury.data.location.value = `${Math.clamped(Math.abs(test.result.SL) + 1, 1, 5)} ${injury.data.location.value}`\n              args.actor.createEmbeddedDocuments(\"Item\", [injury])\n          })\n        }\n      })\n    })\n  }","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornleg.png","label":"Pie aplastado","tint":"","transfer":true}]
+		},
+		{
+			"id": "Cut Tendon",
+			"name": "Tendón seccionado",
+			"description": "<p>Un tendón principal de la cara posterior de tu pierna resulta seccionado, lo que te hace gritar de dolor a la vez que tu pierna te falla. Sufres 2 Estados de @Condition[Sangrando], 2 de @Condition[Aturdido], pasas a @Condition[Tumbado] y comprendes con horror que esa pierna nunca volverá a funcionar; @Compendium[wfrp4e-core.injuries.k00PimCWkff11IA0]{Amputación (Muy difícil)}.</p>",
+			"effects": [{"_id":"OV1vfh4PQRfDwofO","flags":{"wfrp4e":{"trigger":"endRound","value":2},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false},{"_id":"URt2bkWmWumsEP1k","flags":{"wfrp4e":{"trigger":"endRound","effectTrigger":"prefillDialog","script":"args.prefillModifiers.modifier -= 10 * getProperty(this.effect, 'flags.wfrp4e.value')","value":2},"core":{"statusId":"stunned"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/stunned.png","label":"Aturdido","transfer":true,"disabled":false},{"_id":"wVKOGkIJf8YblbFA","flags":{"wfrp4e":{"effectTrigger":"prefillDialog","script":"args.prefillModifiers.modifier -= 20","value":null,"secondaryEffect":{"effectTrigger":"targetPrefillDialog","script":"if (args.type == 'weapon' && args.item.attackType=='melee') args.prefillModifiers.modifier += 20"}},"core":{"statusId":"prone"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/prone.png","label":"Tumbado","transfer":true,"disabled":false},{"_id":"r5t7w5lcG1iddbUt","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"fromUuid(\"Compendium.wfrp4e-core.injuries.k00PimCWkff11IA0\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornleg.png","label":"Tendón seccionado","tint":"","transfer":true}]
+		},
+		{
+			"id": "Damaged Artery",
+			"name": "Arteria dañada",
+			"description": "<p>Sufres 4 Estados de @Condition[Sangrando]. hasta que tengas acceso a la Cirugía. Cada vez que sufras daños en la Ubicación de impacto de ese brazo sufrirás 2 Estados de @Condition[Sangrando].</p>\n<blockquote>\n<p><strong>Nota de Foundry:</strong> <em>El Efecto Activo necesita que introduzcas datos. Reemplaza </em><span style=\"font-style: normal;\">LOCALIZACIÓN_DE_BRAZO_AQUÍ con lArm or rArm</span></p>\n<p>N.delT. lArm = Brazo Izquierdo, rArm = Brazo Derecho.</p></blockquote>",
+			"effects": [{"_id":"R8yyVjVN2G9uGe1Z","flags":{"wfrp4e":{"trigger":"endRound","value":4},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false},{"_id":"UGeKGGNmXVJAieTa","flags":{"wfrp4e":{"effectTrigger":"takeDamage","effectApplication":"actor","script":"if (args.opposedTest.result.hitloc.value == \"LOCALIZACIÓN_DE_BRAZO_AQUÍ\") // lArm o rArm\n    args.actor.addCondition(\"bleeding\", 2)"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornarm.png","label":"Arteria dañada","tint":null,"transfer":true}]
+		},
+		{
+			"id": "Decapitated",
+			"name": "Decapitado",
+			"description": "<p>La cabeza se te desprende por completo del cuello y vuela por los aires, aterrizando a @Roll[1d10] pies de distancia en una dirección aleatoria (ver @Table[scatter]{Dispersión}). Tu cuerpo se desploma, muerto inmediatamente.</p>",
+			"effects": [{"_id":"v0B4racbne2RYIqD","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"this.actor.addCondition(\"dead\")\nChatMessage.create({content: game.wfrp4e.tables.formatChatRoll(\"scatter\")})"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/head.png","label":"Decapitado","tint":null,"transfer":true}]
+		},
+		{
+			"id": "Deep Cut",
+			"name": "Corte profundo",
+			"description": "<p>Sufres 2 Estados de 2 @Condition[Sangrando] puesto que tu brazo está machacado. Sufres 1 Estado de @Condition[Aturdido] y 1 Herida de @Compendium[wfrp4e-core.injuries.GlShFJF2TpsNh1FX]{Desgarro muscular (Leve)}. Lleva a cabo un Chequeo <strong>Difícil (-20)</strong> de <strong>Aguante</strong> so pena de pasar al Estado @Condition[Inconsciente].</p>",
+			"effects": [{"_id":"GlKd8FG7CTvU8JRC","flags":{"wfrp4e":{"trigger":"endRound","value":2},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false},{"_id":"AgeemYAqqhNVFHBz","flags":{"wfrp4e":{"trigger":"endRound","effectTrigger":"prefillDialog","script":"args.prefillModifiers.modifier -= 10 * getProperty(this.effect, 'flags.wfrp4e.value')","value":1},"core":{"statusId":"stunned"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/stunned.png","label":"Aturdido","transfer":true,"disabled":false},{"_id":"nOCDyzwdMDX9kunm","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"fromUuid(\"Compendium.wfrp4e-core.injuries.GlShFJF2TpsNh1FX\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})\n\nif (args.actor.isOwner)\n   args.actor.setupSkill(\"Aguante\", {absolute: {difficulty: \"hard\"}}).then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"unconscious\")\n        })\n     })","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornarm.png","label":"Corte profundo","tint":"","transfer":true}]
+		},
+		{
+			"id": "Devastated Eye",
+			"name": "Ojo destrozado",
+			"description": "<p>Un golpe en un ojo te hace estallar el globo ocular, causándote un dolor extraordinario. Sufres 3 Estados de @Condition[Cegado], 2 de @Condition[Sangrando], y 1 de @Condition[Aturdido]. Pierdes el ojo; @Compendium[wfrp4e-core.injuries.weczkAMPlTjX7lqU]{Amputación (Difícil)}.</p>",
+			"effects": [{"_id":"4G9KjSyQNM9UFOlS","flags":{"wfrp4e":{"trigger":"endRound","effectTrigger":"dialogChoice","effectData":{"description":"Chequeos relacionados con la vista","modifier":"-10 * this.flags.wfrp4e.value"},"value":3,"secondaryEffect":{"effectTrigger":"targetPrefillDialog","script":"if (args.type == 'weapon' && args.item.attackType=='melee') args.prefillModifiers.modifier += 10 * getProperty(this.effect, 'flags.wfrp4e.value')"}},"core":{"statusId":"blinded"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/blinded.png","label":"Cegado","transfer":true,"disabled":false},{"_id":"pSm6zIWXDFmFg3Zq","flags":{"wfrp4e":{"trigger":"endRound","value":2},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false},{"_id":"jatRx58WzHQUA31m","flags":{"wfrp4e":{"trigger":"endRound","effectTrigger":"prefillDialog","script":"args.prefillModifiers.modifier -= 10 * getProperty(this.effect, 'flags.wfrp4e.value')","value":1},"core":{"statusId":"stunned"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/stunned.png","label":"Aturdido","transfer":true,"disabled":false},{"_id":"SYIKc7QymcGfIwN9","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"fromUuid(\"Compendium.wfrp4e-core.injuries.weczkAMPlTjX7lqU\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/head.png","label":"Ojo destrozado","tint":"","transfer":true}]
+		},
+		{
+			"id": "Disfiguring Blow",
+			"name": "Golpe desfigurante",
+			"description": "<p>El golpe te destroza la cara por completo, destruyendo un ojo y la nariz en una nube de sangre. Sufres 3 Estados de @Condition[Sangrando], 3 de @Condition[Cegado] y 2 de @Condition[Aturdido]. Pierdes un @Compendium[wfrp4e-core.injuries.weczkAMPlTjX7lqU]{ojo} y la @Compendium[wfrp4e-core.injuries.SpPRZZRHxly7uo2G]{nariz}; <strong>Amputación (Difícil)</strong>.</p>",
+			"effects": [{"_id":"hawmXZ36uvoIAWpv","flags":{"wfrp4e":{"trigger":"endRound","value":3},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false},{"_id":"waGy0xtIvPj1cT0D","flags":{"wfrp4e":{"trigger":"endRound","effectTrigger":"dialogChoice","effectData":{"description":"Chequeos relacionados con la vista","modifier":"-10 * this.flags.wfrp4e.value"},"value":3,"secondaryEffect":{"effectTrigger":"targetPrefillDialog","script":"if (args.type == 'weapon' && args.item.attackType=='melee') args.prefillModifiers.modifier += 10 * getProperty(this.effect, 'flags.wfrp4e.value')"}},"core":{"statusId":"blinded"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/blinded.png","label":"Cegado","transfer":true,"disabled":false},{"_id":"348txVEUS8rth7YB","flags":{"wfrp4e":{"trigger":"endRound","effectTrigger":"prefillDialog","script":"args.prefillModifiers.modifier -= 10 * getProperty(this.effect, 'flags.wfrp4e.value')","value":2},"core":{"statusId":"stunned"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/stunned.png","label":"Aturdido","transfer":true,"disabled":false},{"_id":"7j3RINGp5K4ejLTp","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"fromUuid(\"Compendium.wfrp4e-core.injuries.weczkAMPlTjX7lqU\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})\n\nfromUuid(\"Compendium.wfrp4e-core.injuries.SpPRZZRHxly7uo2G\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/head.png","label":"Golpe desfigurante","tint":"","transfer":true}]
+		},
+		{
+			"id": "Dislocated Knee",
+			"name": "Rodilla dislocada",
+			"description": "<p>Tu rodilla se sale de su sitio. Sufres el Estado @Condition[Tumbado]. Debes superar un Chequeo <strong>Difícil (-20)</strong> de <strong>Aguante</strong>, o sufres 1 Estado de @Condition[Aturdido], que no se elimina hasta que recibes Atención médica. Después de recibirla, debes superar un Chequeo <strong>Prolongado Normal (+20)</strong> de <strong>Sanar</strong>, en el que necesitas 6 NE para recolocar la rodilla, en cuyo momento recuperas su uso. Tu Movimiento se reduce a la mitad y todos los Chequeos hechos con esta pierna sufren un penalizador -10 durante [[/r d10]] días.</p>",
+			"effects": [{"_id":"wVKOGkIJf8YblbFA","flags":{"wfrp4e":{"effectTrigger":"prefillDialog","script":"args.prefillModifiers.modifier -= 20","value":null,"secondaryEffect":{"effectTrigger":"targetPrefillDialog","script":"if (args.type == 'weapon' && args.item.attackType=='melee') args.prefillModifiers.modifier += 20"}},"core":{"statusId":"prone"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/prone.png","label":"Tumbado","transfer":true,"disabled":false},{"_id":"vGXj3JcQSik2Fof6","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"if (args.actor.isOwner)\n    args.actor.setupSkill(\"Aguante\", {absolute: {difficulty: \"hard\"}}).then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"stunned\")\n        })\n     })"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornleg.png","label":"Rodilla dislocada","tint":null,"transfer":true}]
+		},
+		{
+			"id": "Dislocated Shoulder",
+			"name": "Hombro dislocado",
+			"description": "<p>Casi te arrancan el brazo. Debes superar un Chequeo <strong>Difícil (-20)</strong> de  <strong>Aguante</strong> para no sufrir los Estados @Condition[Aturdido] y @Condition[Tumbado]. Deja caer de inmediato lo que tuvieras en esa mano: el brazo queda inútil y cuenta como perdido (see @Compendium[wfrp4e-core.injuries.MnMZv7ZXoRqoH9dS]{Miembros amputadost}). Sufres 1 Estado de @Condition[Aturdido] hasta recibir Atención médica. Tras esta Atención médica inicial, se requiere un Chequeo Prolongado <strong>Normal (+20)</strong> de <strong>Sanar</strong> que precisa de 6 NE para volver a colocar el brazo en su sitio, en cuyo momento recuperas su uso. Los Chequeos llevados a cabo utilizando este brazo sufren un penalizador -10 durante <strong>@Roll[1d10]</strong> días.</p>",
+			"effects": [{"_id":"Ce9QAvROf94V16sJ","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"if (args.actor.isOwner)\n   args.actor.setupSkill(\"Aguante\").then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            {\n                 args.actor.addCondition(\"prone\")\n                 args.actor.addCondition(\"stunned\")\n            }\n          \n        })\n     })"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornarm.png","label":"Hombro dislocado","tint":null,"transfer":true},{"_id":"348txVEUS8rth7YB","flags":{"wfrp4e":{"trigger":"endRound","effectTrigger":"prefillDialog","script":"args.prefillModifiers.modifier -= 10 * getProperty(this.effect, 'flags.wfrp4e.value')","value":1},"core":{"statusId":"stunned"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/stunned.png","label":"Aturdido","transfer":true,"disabled":false}]
+		},
+		{
+			"id": "Dramatic Injury",
+			"name": "Herida dramática",
+			"description": "<p>Un buen tajo que te cruza la frente y una mejilla. Sufres 1 Estado de @Condition[Sangrando]. Una vez se cura la herida, la impresionante cicatriz que deja te proporciona un bonificador de +1 NE a los Chequeos sociales apropiados. Sólo puedes obtener este beneficio una vez.</p>",
+			"effects": [{"_id":"TPyAKE9d05Y7HuxL","flags":{"wfrp4e":{"trigger":"endRound","value":1},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false},{"_id":"pnqEtu6lQlejU6CV","flags":{"wfrp4e":{"effectTrigger":"dialogChoice","effectApplication":"actor","effectData":{"description":"Chequeos sociales apropiados por la cicatriz","modifier":null,"slBonus":1,"successBonus":null,"difficultyStep":null}}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/head.png","label":"Herida dramática","tint":null,"transfer":true}]
+		},
+		{
+			"id": "Ear Bash",
+			"name": "Golpe en el oído",
+			"description": "<p>Te llevas un tremendo golpe en un oído, que te deja oyendo zumbidos. Sufres 1 Estado de @Condition[Ensordecido].</p>",
+			"effects": [{"_id":"7a3L530CIhnX5cTl","flags":{"wfrp4e":{"trigger":"endRound","effectTrigger":"dialogChoice","effectData":{"description":"Chequeos relacionados con oir","modifier":"-10 * this.flags.wfrp4e.value"},"value":1},"core":{"statusId":"deafened"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/deafened.png","label":"Ensordecido","transfer":true,"disabled":false}]
+		},
+		{
+			"id": "Fractured Hip",
+			"name": "Fractura de cadera",
+			"description": "<p>Sufres 1 Estado de @Condition[Aturdido]. Haz un Chequeo <strong>Desafiante (+0)</strong> de <strong>Aguante</strong> o también pasarás al Estado @Condition[Tumbado]. Sufres una herida de @Compendium[wfrp4e-core.injuries.QluSTTTq3viHJJUh]{Hueso roto (Leve)}.</p>",
+			"effects": [{"_id":"EwflBBAdP3PfmQzC","flags":{"wfrp4e":{"trigger":"endRound","effectTrigger":"prefillDialog","script":"args.prefillModifiers.modifier -= 10 * getProperty(this.effect, 'flags.wfrp4e.value')","value":1},"core":{"statusId":"stunned"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/stunned.png","label":"Aturdido","transfer":true,"disabled":false},{"_id":"WHjhLJT1O6cxIv8u","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"fromUuid(\"Compendium.wfrp4e-core.injuries.QluSTTTq3viHJJUh\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})\n\n\nif (args.actor.isOwner)\n   args.actor.setupSkill(\"Aguante\").then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"prone\")\n        })\n     })","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornbody.png","label":"Fractura de cadera","tint":"","transfer":true}]
+		},
+		{
+			"id": "Fractured Jaw",
+			"name": "Fractura de mandíbula",
+			"description": "<p>Con un crujido estremecedor, el dolor inunda tu cara cuando el golpe te rompe la mandíbula. Sufres 2 Estados de @Condition[Aturdido]. Sufres una herida de @Compendium[wfrp4e-core.injuries.nbhn2wX35b7Jrcbg]{Hueso roto (Leve)}.</p>",
+			"effects": [{"_id":"g9ZNTiFKGxZBQkvT","flags":{"wfrp4e":{"trigger":"endRound","effectTrigger":"prefillDialog","script":"args.prefillModifiers.modifier -= 10 * getProperty(this.effect, 'flags.wfrp4e.value')","value":2},"core":{"statusId":"stunned"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/stunned.png","label":"Aturdido","transfer":true,"disabled":false},{"_id":"OipdUoeetMzgA4m9","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"fromUuid(\"Compendium.wfrp4e-core.injuries.nbhn2wX35b7Jrcbg\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/head.png","label":"Fractura de mandíbula","tint":"","transfer":true}]
+		},
+		{
+			"id": "Gaping Arm Wound",
+			"name": "Herida abierta en el brazo",
+			"description": "<p>El golpe te abre una herida profunda. Sufres 2 Estados de @Condition[Sangrando]. Hasta que tengas acceso a la @JournalEntry[Healing]{Cirugía} para suturar el corte, todo daño al brazo asociado que sufras infligirá también 1 Estado de @Condition[Sangrando] al reabrirse la herida.</p>\n<blockquote>\n<p><strong>Nota de Foundry:</strong> <em>El Efecto Activo necesita que introduzcas datos. Reemplaza </em><span style=\"font-style: normal;\">LOCALIZACIÓN_DE_BRAZO_AQUÍ con lArm or rArm</span></p>\n<p>N.delT. lArm = Brazo Izquierdo, rArm = Brazo Derecho.</p></blockquote>",
+			"effects": [{"_id":"7OVwCkJ6rgnfZn81","flags":{"wfrp4e":{"trigger":"endRound","value":2},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false},{"_id":"1sDNirNcv4XZnubO","flags":{"wfrp4e":{"effectTrigger":"takeDamage","effectApplication":"actor","script":"if (args.opposedTest.result.hitloc.value == \"LOCALIZACIÓN_DE_BRAZO_AQUÍ\") // lArm o rArm\n    args.actor.addCondition(\"bleeding\", 1)"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornarm.png","label":"Herida abierta en el brazo","tint":null,"transfer":true}]
+		},
+		{
+			"id": "Gaping Chest Wound",
+			"name": "Herida abierta en el pecho",
+			"description": "<p>Sufres 3 Estados de @Condition[Sangrando]. Hasta que te puedan practicar @JournalEntry[Healing]{Cirugía}, todas las heridas que sufras en la Ubicación de impacto Cuerpo infligirán 1 Estado de Sangrando adicional al reabrirse el corte.</p>",
+			"effects": [{"_id":"fcr0kAJMhiUc1n7k","flags":{"wfrp4e":{"trigger":"endRound","value":3},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false},{"_id":"rKSl42ZfhRErzUTS","flags":{"wfrp4e":{"effectTrigger":"takeDamage","effectApplication":"actor","script":"if (args.opposedTest.result.hitloc.value == \"body\") \n    args.actor.addCondition(\"bleeding\", 1)"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornbody.png","label":"Herida abierta en el pecho","tint":null,"transfer":true}]
+		},
+		{
+			"id": "Gut Blow",
+			"name": "Golpe en las tripas",
+			"description": "<p>Sufres 1 estado de @Condition[Aturdido]. Debes superar un Chequeo <strong>Fácil (+40)</strong> de <strong>Aguante</strong>, o vomitar, pasando al Estado @Condition[Tumbado].</p>",
+			"effects": [{"_id":"cTrI8BgwwT6KbOcx","flags":{"wfrp4e":{"trigger":"endRound","effectTrigger":"prefillDialog","script":"args.prefillModifiers.modifier -= 10 * getProperty(this.effect, 'flags.wfrp4e.value')","value":1},"core":{"statusId":"stunned"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/stunned.png","label":"Aturdido","transfer":true,"disabled":false},{"_id":"3EKhg6lJsU12PXIN","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"if (args.actor.isOwner)\n   args.actor.setupSkill(\"Aguante\", {absolute: {difficulty: \"easy\"}}).then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"prone\")\n        })\n     })"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornbody.png","label":"Golpe en las tripas","tint":null,"transfer":true}]
+		},
+		{
+			"id": "Gut Wound",
+			"name": "Herida en las tripas",
+			"description": "<p>Contraes una @Compendium[wfrp4e-core.diseases.kKccDTGzWzSXCBOb]{Herida supurante} y sufres 2 Estados de @Condition[Sangrando].</p>",
+			"effects": [{"_id":"KSraZUHBV7dm7jom","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"fromUuid(\"Compendium.wfrp4e-core.diseases.kKccDTGzWzSXCBOb\").then(disease=> {\n args.actor.createEmbeddedDocuments(\"Item\", [disease.toObject()])\n})","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornbody.png","label":"Herida en las tripas","tint":"","transfer":true},{"_id":"4eZoTEFC5ZbQifn7","flags":{"wfrp4e":{"trigger":"endRound","value":2},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false}]
+		},
+		{
+			"id": "Hacked Leg",
+			"name": "Corte profundo en una pierna",
+			"description": "<p>Te llevas un tajo de grandes dimensiones en la cadera. Pasas al Estado @Condition[Tumbado] y sufres 2 de @Condition[Sangrando], además de una herida de @Compendium[wfrp4e-core.injuries.7mCcI3q7hgWcmbBU]{Hueso roto (Leve)}. Además, debes superar un Chequeo <strong>Difícil (-20)</strong> de <strong>Aguante</strong> o sufrir además 1 Estado de @Condition[Aturdido] debido al dolor.</p>",
+			"effects": [{"_id":"m5CJfHO2ZfBORtkr","flags":{"wfrp4e":{"effectTrigger":"prefillDialog","script":"args.prefillModifiers.modifier -= 20","value":null,"secondaryEffect":{"effectTrigger":"targetPrefillDialog","script":"if (args.type == 'weapon' && args.item.attackType=='melee') args.prefillModifiers.modifier += 20"}},"core":{"statusId":"prone"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/prone.png","label":"Tumbado","transfer":true,"disabled":false},{"_id":"SlYdtHgMRI6vCztC","flags":{"wfrp4e":{"trigger":"endRound","value":2},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false},{"_id":"xN966TmmV1zEtGy9","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"fromUuid(\"Compendium.wfrp4e-core.injuries.7mCcI3q7hgWcmbBU\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})\n\n\nif (args.actor.isOwner)\n    args.actor.setupSkill(\"Aguante\", {absolute: {difficulty: \"hard\"}}).then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"stunned\")\n        })\n     })","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornleg.png","label":"Corte profundo en una pierna","tint":"","transfer":true}]
+		},
+		{
+			"id": "Internal Bleeding",
+			"name": "Hemorragia interna",
+			"description": "<p>Sufres 1 Estado de @Condition[Sangrando] que sólo se puede eliminar mediante la @JournalEntry[Healing]{Cirugía}. Contraes @Compendium[wfrp4e-core.diseases.M8XyRs9DN12XsFTQ]{Podredumbre sanguínea}.</p>",
+			"effects": [{"_id":"1WF2x6qda0OfmM8Y","flags":{"wfrp4e":{"trigger":"endRound","value":1},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false},{"_id":"bvNWTQ0W26esdMso","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"fromUuid(\"Compendium.wfrp4e-core.diseases.M8XyRs9DN12XsFTQ\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})","hide":false,"preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornbody.png","label":"Hemorragia interna","tint":"","transfer":true}]
+		},
+		{
+			"id": "Jarred Arm",
+			"name": "Brazo sacudido",
+			"description": "<p>Tu brazo queda temblando a consecuencia del ataque. Deja caer cualquier cosa que tuvieras en esa mano.</p>"
+		},
+		{
+			"id": "Lost Footing",
+			"name": "Pierdes pie",
+			"description": "<p>Resbalas en medio de la refriega. Debes superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Aguante</strong> o pasar al Estado @Condition[Tumbado].</p>",
+			"effects": [{"_id":"UEnlvAwvGq0076To","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"if (args.actor.isOwner)\n   args.actor.setupSkill(\"Aguante\").then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"prone\")\n        })\n     })"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornleg.png","label":"Pierdes pie","tint":null,"transfer":true}]
+		},
+		{
+			"id": "Low Blow!",
+			"name": "¡Golpe bajo!",
+			"description": "<p>Haz un Chequeo <strong>Difícil (-20)</strong> de <strong>Aguante</strong> para no sufrir 3 Estados de @Condition[Aturdido].</p>",
+			"effects": [{"_id":"3hbs7SBwqUyfpvFs","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"if (args.actor.isOwner)\n   args.actor.setupSkill(\"Aguante\", {absolute: {difficulty: \"hard\"}}).then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"stunned\", 3)\n        })\n     })"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornbody.png","label":"¡Golpe bajo!","tint":null,"transfer":true}]
+		},
+		{
+			"id": "Major Chest Wound",
+			"name": "Herida grave en el pecho",
+			"description": "<p>Sufres una herida significativa en el pecho, que desuella la piel del músculo y el tendón. Sufres 4 Estados de @Condition[Sangrando]. Hasta que te practiquen @JournalEntry[Healing]{Cirugía}, para suturar la herida, toda Herida que sufras en la Ubicación de impacto Cuerpo infligirá también 2 Estados de @Condition[Sangrando] adicionales al reabrirse la herida anterior.</p>",
+			"effects": [{"_id":"T2qqXZGkwHjeIG23","flags":{"wfrp4e":{"trigger":"endRound","value":4},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false},{"_id":"pZD9xrlAHiaRru0d","flags":{"wfrp4e":{"effectTrigger":"takeDamage","effectApplication":"actor","script":"if (args.opposedTest.result.hitloc.value == \"body\") \n    args.actor.addCondition(\"bleeding\", 2)"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornbody.png","label":"Herida grave en el pecho","tint":null,"transfer":true}]
+		},
+		{
+			"id": "Major Ear Wound",
+			"name": "Herida grave en el oído",
+			"description": "<p>El golpe te daña un oído, dejándote en él una pérdida auditiva permanente. Sufres un penalizador de -20 a todos los Chequeos relativos al oído. Si sufres este resultado de nuevo, pierdes la audición de forma permanente al fallarte el segundo oído. Esto sólo puede curarlo la magia.</p>",
+			"effects": [{"_id":"bpo2NXwpg23AKY9y","flags":{"wfrp4e":{"effectTrigger":"dialogChoice","effectApplication":"actor","effectData":{"description":"Chequeos relacionados con oir","modifier":-20,"slBonus":null,"successBonus":null,"difficultyStep":null}}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/head.png","label":"Herida grave en el oído","tint":null,"transfer":true}]
+		},
+		{
+			"id": "Major Eye Wound",
+			"name": "Herida grave en un ojo",
+			"description": "<p>La flecha te traviesa la cuenca ocular. Sufres 1 Estado de @Condition[Sangrando]. Sufres además 1 Estado de @Condition[Cegado], que no se puede eliminar hasta recibir Atención médica.</p>",
+			"effects": [{"_id":"dJsRgSNjJtohBYPc","flags":{"wfrp4e":{"trigger":"endRound","value":1},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false},{"_id":"749ILWkBSZeetB7y","flags":{"wfrp4e":{"trigger":"endRound","effectTrigger":"dialogChoice","effectData":{"description":"Tests related to sight","modifier":"-10 * this.flags.wfrp4e.value"},"value":1,"secondaryEffect":{"effectTrigger":"targetPrefillDialog","script":"if (args.type == 'weapon' && args.item.attackType=='melee') args.prefillModifiers.modifier += 10 * getProperty(this.effect, 'flags.wfrp4e.value')"}},"core":{"statusId":"blinded"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/blinded.png","label":"Cegado","transfer":true,"disabled":false}]
+		},
+		{
+			"id": "Mangled Ear",
+			"name": "Oreja mutilada",
+			"description": "<p>Poco queda de tu oreja, porque el golpe prácticamente te la arranca. Sufres 3 Estados de @Condition[Ensordecido] y 2 de @Condition[Sangrando]. Pierdes la oreja; @Compendium[wfrp4e-core.injuries.8piWcBKFlQ2J1E3A]{Amputación (Normal)}.</p>",
+			"effects": [{"_id":"FZuPzqtWTtFMIciJ","flags":{"wfrp4e":{"trigger":"endRound","effectTrigger":"dialogChoice","effectData":{"description":"Chequeos relacionados con oir","modifier":"-10 * this.flags.wfrp4e.value"},"value":3},"core":{"statusId":"deafened"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/deafened.png","label":"Ensordecido","transfer":true,"disabled":false},{"_id":"lDs43plzT9i4Jxzb","flags":{"wfrp4e":{"trigger":"endRound","value":2},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false},{"_id":"kaAFU5cxgv0idSQZ","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"fromUuid(\"Compendium.wfrp4e-core.injuries.8piWcBKFlQ2J1E3A\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/head.png","label":"Oreja mutilada","tint":"","transfer":true}]
+		},
+		{
+			"id": "Mangled Hand",
+			"name": "Mano mutilada",
+			"description": "<p>Tu mano se ha convertido en un desastre mutilado y sangrante. Pierdes la mano; @Compendium[wfrp4e-core.injuries.zyocWSzEZEC826NS]{{Amputación (Difícil)}. Sufres 2 Estados de @Condition[Sangrando]. Haz un Chequeo <strong>Hard (-20)</strong> de <strong>Aguante</strong> o sufrirás los Estados @Condition[Aturdido] y @Condition[Tumbado].</p>",
+			"effects": [{"_id":"lDs43plzT9i4Jxzb","flags":{"wfrp4e":{"trigger":"endRound","value":2},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false},{"_id":"tyXuApNnqAV4JcJ5","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"fromUuid(\"Compendium.wfrp4e-core.injuries.zyocWSzEZEC826NS\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})\n\n\nif (args.actor.isOwner)\n args.actor.setupSkill(\"Aguante\", {absolute: {difficulty: \"hard\"}}).then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            { \n                   args.actor.addCondition(\"prone\")\n                  args.actor.addCondition(\"stunned\")\n             }\n        })\n     })","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornarm.png","label":"Mano mutilada","tint":"","transfer":true}]
+		},
+		{
+			"id": "Mangled Jaw",
+			"name": "Mandíbula aplastada",
+			"description": "<p>El golpe casi hace saltar por los aires tu mandíbula inferior, a la vez que destruye por completo tu lengua, enviando dientes a volar en medio de una lluvia de sangre. Sufres 4 Estados de @Condition[Sangrando] y 3 de @Condition[Aturdido]. Haz un Chequeo <strong>Muy difícil (-30)</strong> de <strong>Aguante</strong> so pena de pasar al Estado @Condition[Inconsciente]. Sufres una herida de @Compendium[wfrp4e-core.injuries.hCadFsTRvLN9faaY]{Hueso roto (Grave)} la vez que pierdes la @Compendium[wfrp4e-core.injuries.rkJA1DlK51QuRlJy]{lengua} y <strong>@Roll[1d10]</strong> @Compendium[wfrp4e-core.injuries.fBcZhOBn8IpoVqQ1]{dientes}; <strong>Amputación (Difícil).</strong></p>",
+			"effects": [{"_id":"jXnxVAZFV82gebaR","flags":{"wfrp4e":{"trigger":"endRound","value":4},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false},{"_id":"6FBVi7EOhHnDesA0","flags":{"wfrp4e":{"trigger":"endRound","effectTrigger":"prefillDialog","script":"args.prefillModifiers.modifier -= 10 * getProperty(this.effect, 'flags.wfrp4e.value')","value":3},"core":{"statusId":"stunned"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/stunned.png","label":"Aturdido","transfer":true,"disabled":false},{"_id":"Ru3d8ZlbJSm8NlaU","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"fromUuid(\"Compendium.wfrp4e-core.injuries.fBcZhOBn8IpoVqQ1\").then(injury => {\ninjury = injury.toObject()\n let teeth = (await new Roll(\"1d10\").roll()).total\n ChatMessage.create({content : `<b>${this.actor.data.token.name}</b> pierde ${teeth} dientes`, speaker : {alias: this.effect.label}})\ninjury.data.location.value = `${teeth} ${injury.data.location.value}`\n args.actor.createEmbeddedDocuments(\"Item\", [injury])\n})\n\nfromUuid(\"Compendium.wfrp4e-core.injuries.rkJA1DlK51QuRlJy\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})\n\nfromUuid(\"Compendium.wfrp4e-core.injuries.hCadFsTRvLN9faaY\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})\n\n\nif (args.actor.isOwner)\n   args.actor.setupSkill(\"Aguante\").then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"unconscious\")\n        })\n     })","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/head.png","label":"Mandíbula aplastada","tint":"","transfer":true}]
+		},
+		{
+			"id": "Mauled Bicep",
+			"name": "Bíceps destrozado",
+			"description": "<p>El golpe casi consigue separar el bíceps y sus tendones del hueso, dejando una fea herida que chorrea sangre por encima de ti y de tu oponente. Dejas caer automáticamente cualquier cosa que sostuvieras en la mano asociada y sufres una herida de @Compendium[wfrp4e-core.injuries.qn4ZpvTQIX4rcJDl]{Desgarro muscular (Grave)}, 2 Estados de @Condition[Sangrando] y 1 de @Condition[Aturdido].</p>",
+			"effects": [{"_id":"DRpsrtMYsEn6RXb4","flags":{"wfrp4e":{"trigger":"endRound","value":2},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false},{"_id":"1hf8KQbl7iZKhhzD","flags":{"wfrp4e":{"trigger":"endRound","effectTrigger":"prefillDialog","script":"args.prefillModifiers.modifier -= 10 * getProperty(this.effect, 'flags.wfrp4e.value')","value":1},"core":{"statusId":"stunned"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/stunned.png","label":"Aturdido","transfer":true,"disabled":false},{"_id":"zyFwXMjRg8797kTY","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"fromUuid(\"Compendium.wfrp4e-core.injuries.qn4ZpvTQIX4rcJDl\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornarm.png","label":"Bíceps destrozado","tint":"","transfer":true}]
+		},
+		{
+			"id": "Minor Arm Cut",
+			"name": "Corte menor en el brazo",
+			"description": "<p>Sufres un estado de @Condition[Sangrando] al llevarte un buen corte en el brazo.</p>",
+			"effects": [{"_id":"d2Gh2PYEwe7NdMWQ","flags":{"wfrp4e":{"trigger":"endRound","value":1},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false}]
+		},
+		{
+			"id": "Minor Head Cut",
+			"name": "Corte leve en la cabeza",
+			"description": "<p>El golpe te abre una brecha en la mejilla y la sangre vuela por todas partes. Sufres 1 Estado de @Condition[Sangrando].</p>",
+			"effects": [{"_id":"d2Gh2PYEwe7NdMWQ","flags":{"wfrp4e":{"trigger":"endRound","value":1},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false}]
+		},
+		{
+			"id": "Minor Leg Cut",
+			"name": "Corte leve en la pierna",
+			"description": "<p>Sufres 1 Estado de @Condition[Sangrando].</p>",
+			"effects": [{"_id":"d2Gh2PYEwe7NdMWQ","flags":{"wfrp4e":{"trigger":"endRound","value":1},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false}]
+		},
+		{
+			"id": "Painful Cut",
+			"name": "Corte doloroso",
+			"description": "<p>Sufres 2 Estados de @Condition[Sangrando] y 1 de @Condition[Aturdido]. Haz un Chequeo <strong>Hard (-20)</strong> de <strong>Aguante</strong> so pena de pasar al Estado @Condition[Inconsciente] al desvanecerte debido al dolor. A menos que consigas 4 NE o más, también se te escapará un grito de dolor.</p>",
+			"effects": [{"_id":"MeryWEfxh1qfb4qD","flags":{"wfrp4e":{"trigger":"endRound","value":2},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false},{"_id":"k8a0UhmO2dc0eg89","flags":{"wfrp4e":{"trigger":"endRound","effectTrigger":"prefillDialog","script":"args.prefillModifiers.modifier -= 10 * getProperty(this.effect, 'flags.wfrp4e.value')","value":1},"core":{"statusId":"stunned"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/stunned.png","label":"Aturdido","transfer":true,"disabled":false},{"_id":"oScP7BQrypeVVVbf","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"if (args.actor.isOwner)\n args.actor.setupSkill(\"Aguante\", {absolute: {difficulty: \"hard\"}}).then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"unconscious\")\n\n            if(test.result.SL < 4)\n            ChatMessage.create({content : `<b>${this.actor.data.token.name}</b> deja escapar un grito de dolor`})\n        })\n     })"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornbody.png","label":"Corte doloroso","tint":null,"transfer":true}]
+		},
+		{
+			"id": "Poked Eye",
+			"name": "Golpe en el ojo",
+			"description": "<p>El golpe te roza la cuenca ocular. Sufres 1 Estado de @Condition[Cegado].</p>",
+			"effects": [{"_id":"megBKxKy2Xu8LoXg","flags":{"wfrp4e":{"trigger":"endRound","effectTrigger":"dialogChoice","effectData":{"description":"Chequeos relacionados con la vista","modifier":"-10 * this.flags.wfrp4e.value"},"value":1,"secondaryEffect":{"effectTrigger":"targetPrefillDialog","script":"if (args.type == 'weapon' && args.item.attackType=='melee') args.prefillModifiers.modifier += 10 * getProperty(this.effect, 'flags.wfrp4e.value')"}},"core":{"statusId":"blinded"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/blinded.png","label":"Cegado","transfer":true,"disabled":false}]
+		},
+		{
+			"id": "Pulled Back",
+			"name": "Contractura en la espalda",
+			"description": "<p>Tu espalda estalla en dolor al desgarrarse un músculo. Sufres una herida de @Compendium[wfrp4e-core.injuries.eWPN3CV2Eddwz8aM]{Desgarro muscular (Grave)}.</p>",
+			"effects": [{"_id":"AiDPNet52D6Mwycb","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"fromUuid(\"Compendium.wfrp4e-core.injuries.eWPN3CV2Eddwz8aM\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornbody.png","label":"Contractura en la espalda","tint":"","transfer":true}]
+		},
+		{
+			"id": "Ragged Wound",
+			"name": "Herida irregular",
+			"description": "<p>Sufres 2 Estados de @Condition[Sangrando].</p>",
+			"effects": [{"_id":"hWDMK94Lo7Vlo7qF","flags":{"wfrp4e":{"trigger":"endRound","value":2},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false}]
+		},
+		{
+			"id": "Rattling Blow",
+			"name": "Golpe extremo",
+			"description": "<p>El golpe inunda tu visión de manchas y de luces intermitentes. Sufres 1 Estado de @Condition[Aturdido].</p>",
+			"effects": [{"_id":"VJ0bwQJne0HNmtph","flags":{"wfrp4e":{"trigger":"endRound","effectTrigger":"prefillDialog","script":"args.prefillModifiers.modifier -= 10 * getProperty(this.effect, 'flags.wfrp4e.value')","value":1},"core":{"statusId":"stunned"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/stunned.png","label":"Aturdido","transfer":true,"disabled":false}]
+		},
+		{
+			"id": "Ruptered Ligament",
+			"name": "Rotura de ligamento",
+			"description": "<p>Deja caer de inmediato lo que tuvieras en esa mano. Sufres una herida de @Compendium[wfrp4e-core.injuries.qn4ZpvTQIX4rcJDl]{Desgarro muscular (Grave)}.</p>",
+			"effects": [{"_id":"MgpYZu22zgrLdxmf","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"fromUuid(\"Compendium.wfrp4e-core.injuries.qn4ZpvTQIX4rcJDl\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornarm.png","label":"Rotura de ligamento","tint":"","transfer":true}]
+		},
+		{
+			"id": "Ruptured Tendon",
+			"name": "Tendón desgarrado",
+			"description": "<p>Pasas al Estado @Condition[Tumbado] y sufres 1 de @Condition[Aturdido] cuando uno de tus tendones se desgarra. Has de superar un <strong>Hard (-20)</strong> de <strong>Aguante</strong> o pasar al Estado @Condition[Inconsciente]. La pierna te queda inútil. Sufres una herida de @Compendium[wfrp4e-core.injuries.3S4OYOZLauXctmev]{Desgarro muscular (Grave)}.</p>",
+			"effects": [{"_id":"ixCa0FfjTQFA9Th6","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"fromUuid(\"Compendium.wfrp4e-core.injuries.3S4OYOZLauXctmev\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})\n\n\nif (args.actor.isOwner)\n   args.actor.setupSkill(\"Aguante\", {absolute: {difficulty: \"hard\"}}).then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"unconscious\")\n        })\n     })","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornleg.png","label":"Tendón desgarrado","tint":"","transfer":true}]
+		},
+		{
+			"id": "Severed Finger",
+			"name": "Dedo seccionado",
+			"description": "<p>Ves con horror que uno de tus dedos sale volando; @Compendium[wfrp4e-core.injuries.SYjWiKDzMS6CtROJ]{Amputación (Normal)}. Sufres 1 estado de @Condition[Sangrando].</p>",
+			"effects": [{"_id":"HkPD4WDbEYIz83dy","flags":{"wfrp4e":{"trigger":"endRound","value":1},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false},{"_id":"rG3wXUaHLNu7IcYO","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"fromUuid(\"Compendium.wfrp4e-core.injuries.SYjWiKDzMS6CtROJ\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornarm.png","label":"Dedo seccionado","tint":"","transfer":true}]
+		},
+		{
+			"id": "Severed Foot",
+			"name": "Pie seccionado",
+			"description": "<p>Tu pie resulta seccionado a nivel del tobillo y aterriza a <strong>@Roll[1d10]</strong> pies de distancia en una dirección aleatoria; @Compendium[wfrp4e-core.injuries.gz2xy41OSVZ8YBgI]{Amputación (Grave)}. Sufres 3 Estados de @Condition[Sangrando], 2 de @Condition[Aturdido] y pasas a @Condition[Tumbado].</p>",
+			"effects": [{"_id":"n4NWJIGZiDU9aWt4","flags":{"wfrp4e":{"trigger":"endRound","value":3},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false},{"_id":"rIF8c6C0BNeSjDv2","flags":{"wfrp4e":{"trigger":"endRound","effectTrigger":"prefillDialog","script":"args.prefillModifiers.modifier -= 10 * getProperty(this.effect, 'flags.wfrp4e.value')","value":2},"core":{"statusId":"stunned"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/stunned.png","label":"Aturdido","transfer":true,"disabled":false},{"_id":"2ngJlZ488J7L1sD7","flags":{"wfrp4e":{"effectTrigger":"prefillDialog","script":"args.prefillModifiers.modifier -= 20","value":null,"secondaryEffect":{"effectTrigger":"targetPrefillDialog","script":"if (args.type == 'weapon' && args.item.attackType=='melee') args.prefillModifiers.modifier += 20"}},"core":{"statusId":"prone"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/prone.png","label":"Tumbado","transfer":true,"disabled":false},{"_id":"yZAbuVNb4ExBntt9","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"fromUuid(\"Compendium.wfrp4e-core.injuries.gz2xy41OSVZ8YBgI\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornleg.png","label":"Pie seccionado","tint":"","transfer":true}]
+		},
+		{
+			"id": "Shattered Pelvis",
+			"name": "Pelvis destrozada",
+			"description": "<p>El golpe te rompe la pelvis, seccionándote una pierna y atravesando después la otra. Mueres al instante debido al choque traumático.</p>",
+			"effects": [{"_id":"JyeUMIMAfyK0ZjUn","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"this.actor.addCondition(\"dead\")"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornleg.png","label":"Pelvis destrozada","tint":null,"transfer":true}]
+		},
+		{
+			"id": "Sliced Ear",
+			"name": "Tajo en una oreja",
+			"description": "<p>Uno de los lados de tu cabeza se lleva un fuerte golpe, con un corte profundo en la oreja. Sufres 2 Estados de @Condition[Ensordecido] y 1 de @Condition[Sangrando].</p>",
+			"effects": [{"_id":"SbOvAmqaK31JREjI","flags":{"wfrp4e":{"trigger":"endRound","effectTrigger":"dialogChoice","effectData":{"description":"Tests related to hearing","modifier":"-10 * this.flags.wfrp4e.value"},"value":2},"core":{"statusId":"deafened"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/deafened.png","label":"Ensordecido","transfer":true,"disabled":false},{"_id":"CwBoFiJqX5bc27F2","flags":{"wfrp4e":{"trigger":"endRound","value":1},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false}]
+		},
+		{
+			"id": "Sliced Tendons",
+			"name": "Tendones seccionados",
+			"description": "<p>Tus tendones resultan segados por el golpe, dejando tu brazo colgando inútil; @Compendium[wfrp4e-core.injuries.MnMZv7ZXoRqoH9dS]{Amputación (Muy difícil)}. Sufres 3 Estados de @Condition[Sangrando], 1 de @Condition[Tumbado], y 1 de @Condition[Aturdido]. Has de superar un Chequeo <strong>Difícil (-20)</strong> de <strong>Aguante</strong> o pasar al Estado @Condition[Inconsciente].</p>",
+			"effects": [{"_id":"9FdeaoISEUYHNkxv","flags":{"wfrp4e":{"trigger":"endRound","value":3},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false},{"_id":"3WIVf1QT93cut5OA","flags":{"wfrp4e":{"effectTrigger":"prefillDialog","script":"args.prefillModifiers.modifier -= 20","value":null,"secondaryEffect":{"effectTrigger":"targetPrefillDialog","script":"if (args.type == 'weapon' && args.item.attackType=='melee') args.prefillModifiers.modifier += 20"}},"core":{"statusId":"prone"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/prone.png","label":"Tumbado","transfer":true,"disabled":false},{"_id":"9qQs2OvZgvHzRHix","flags":{"wfrp4e":{"trigger":"endRound","effectTrigger":"prefillDialog","script":"args.prefillModifiers.modifier -= 10 * getProperty(this.effect, 'flags.wfrp4e.value')","value":1},"core":{"statusId":"stunned"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/stunned.png","label":"Aturdido","transfer":true,"disabled":false},{"_id":"0aCPrsOCLEVcZGxF","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"fromUuid(\"Compendium.wfrp4e-core.injuries.MnMZv7ZXoRqoH9dS\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})\n\n\nif (args.actor.isOwner)\n    args.actor.setupSkill(\"Aguante\", {absolute: {difficulty: \"hard\"}}).then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"unconscious\")\n        })\n     })","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornarm.png","label":"Tendones seccionados","tint":"","transfer":true}]
+		},
+		{
+			"id": "Smashed Mouth",
+			"name": "Boca machacada",
+			"description": "<p>Con un chasquido repugnante, tu boca se llena de repente de dientes rotos y de sangre. Sufres 2 Estados de @Condition[Sangrando]. Pierdes <strong>@Roll[1d10]</strong> dientes; @Compendium[wfrp4e-core.injuries.fBcZhOBn8IpoVqQ1]{Amputación (Fácil)}.</p>",
+			"effects": [{"_id":"9qPw0U171RIZCiO4","flags":{"wfrp4e":{"trigger":"endRound","value":2},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false},{"_id":"N5WsBzINexkLMQVY","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"fromUuid(\"Compendium.wfrp4e-core.injuries.fBcZhOBn8IpoVqQ1\").then(injury => {\ninjury = injury.toObject()\n let teeth = (await new Roll(\"1d10\").roll()).total\n ChatMessage.create({content : `<b>${this.actor.data.token.name}</b> pierde ${teeth} dientes`, speaker : {alias: this.effect.label}})\ninjury.data.location.value = `${teeth} ${injury.data.location.value}`\n args.actor.createEmbeddedDocuments(\"Item\", [injury])\n})","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/head.png","label":"Boca machacada","tint":"","transfer":true}]
+		},
+		{
+			"id": "Smashed Rib Cage",
+			"name": "Aplastamiento torácico",
+			"description": "<p>Sufres 1 Estado de @Condition[Aturdido] que sólo se puede eliminar mediante Atención médica, y además una herida de @Compendium[wfrp4e-core.injuries.EaqlLRQigwnsEAXX]{Hueso roto (Grave)}.</p>",
+			"effects": [{"_id":"XWadxhMkEKpv03Mk","flags":{"wfrp4e":{"trigger":"endRound","effectTrigger":"prefillDialog","script":"args.prefillModifiers.modifier -= 10 * getProperty(this.effect, 'flags.wfrp4e.value')","value":1},"core":{"statusId":"stunned"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/stunned.png","label":"Aturdido","transfer":true,"disabled":false},{"_id":"zdZncZOvjLblz909","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"fromUuid(\"Compendium.wfrp4e-core.injuries.EaqlLRQigwnsEAXX\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornbody.png","label":"Aplastamiento torácico","tint":"","transfer":true}]
+		},
+		{
+			"id": "Sprain",
+			"name": "Esguince",
+			"description": "<p>Te doblas el brazo, sufriendo una herida de @Compendium[wfrp4e-core.injuries.GlShFJF2TpsNh1FX]{Desgarro muscular (Leve)}.</p>",
+			"effects": [{"_id":"Xk9jhNPT42L2nloL","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"fromUuid(\"Compendium.wfrp4e-core.injuries.GlShFJF2TpsNh1FX\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornarm.png","label":"Esguince","tint":"","transfer":true}]
+		},
+		{
+			"id": "Sprained Ankle",
+			"name": "Desgarro muscular en el tobillo",
+			"description": "<p>Te tuerces fuertemente el tobillo, lo que te lleva a una herida de @Compendium[wfrp4e-core.injuries.nF5z1OEhpi4t6a6S]{Desgarro muscular (Leve)}.</p>",
+			"effects": [{"_id":"rtWfTN6wJ4BbJslf","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"fromUuid(\"Compendium.wfrp4e-core.injuries.nF5z1OEhpi4t6a6S\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornleg.png","label":"Desgarro muscular en el tobillo","tint":"","transfer":true}]
+		},
+		{
+			"id": "Struck Forehead",
+			"name": "Golpe en la frente",
+			"description": "<p>Un fuerte golpe te acierta en plena frente. Sufres 2 Estados de @Condition[Sangrando] y uno de @Condition[Cegado] que no se puede eliminar hasta después de que se eliminen todos los Estados de Sangrando.</p>",
+			"effects": [{"_id":"DhFtbgaZVeqb8kaH","flags":{"wfrp4e":{"trigger":"endRound","value":2},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false},{"_id":"sTAtmClXjBUnD5VO","flags":{"wfrp4e":{"trigger":"endRound","effectTrigger":"dialogChoice","effectData":{"description":"Chequeos relacionados con la vista","modifier":"-10 * this.flags.wfrp4e.value"},"value":1,"secondaryEffect":{"effectTrigger":"targetPrefillDialog","script":"if (args.type == 'weapon' && args.item.attackType=='melee') args.prefillModifiers.modifier += 10 * getProperty(this.effect, 'flags.wfrp4e.value')"}},"core":{"statusId":"blinded"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/blinded.png","label":"Cegado","transfer":true,"disabled":false}]
+		},
+		{
+			"id": "Stubbed Toe",
+			"name": "Golpe en un dedo",
+			"description": "<p>En la pelea, recibes un fuerte golpe en un dedo. Debes superar un Chequeo <strong>Normal (+20)</strong> de <strong>Aguante</strong> so pena de sufrir un -10 a los Chequeos de Agilidad hasta el final del siguiente turno.</p>",
+			"effects": [{"_id":"Uxp4sb58T0fiOXEB","flags":{"wfrp4e":{"effectTrigger":"prefillDialog","effectApplication":"actor","script":"if (args.type == \"skill\" && args.item.characteristic.key == \"ag\")\n   args.prefillModifiers.modifier -= 10\n\nif (args.type == \"characteristic\" && args.item == \"ag\")\n   args.prefillModifiers.modifier -= 10"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornleg.png","label":"Golpe en un dedo","tint":null,"transfer":true}]
+		},
+		{
+			"id": "Thigh Strike",
+			"name": "Golpe en el muslo",
+			"description": "<p>Un potente golpe te impacta en la parte superior del muslo. Sufres 1 estado de @Condition[Sangrando] y debes llevar a cabo un Chequeo <strong>Normal (+20)</strong> de <strong>Aguante</strong> o tropezar, pasando al Estado @Condition[Tumbado].</p>",
+			"effects": [{"_id":"LkPmb8RmlhPowqfB","flags":{"wfrp4e":{"trigger":"endRound","value":1},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false},{"_id":"HgsptGxBG4CYhlk2","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"if (args.actor.isOwner)\n    args.actor.setupSkill(\"Aguante\", {absolute: {difficulty: \"average\"}}).then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"prone\")\n        })\n     })"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornleg.png","label":"Golpe en el muslo","tint":null,"transfer":true}]
+		},
+		{
+			"id": "Tis But A Scratch!",
+			"name": "'¡No es más que un rasguño!'",
+			"description": "<p>Sufres 1 Estado de @Condition[Sangrando].</p>",
+			"effects": [{"_id":"zZmnf7k6JvRb7ULV","flags":{"wfrp4e":{"trigger":"endRound","value":1},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false}]
+		},
+		{
+			"id": "Torn Apart",
+			"name": "Desmembrado",
+			"description": "<p>Te parten en dos. La parte superior aterriza en una dirección aleatoria y todos los personajes que están a 2 yardas de distancia o menos quedan cubiertos de sangre.</p>",
+			"effects": [{"_id":"Du7cZodgpEKD8eK8","flags":{"wfrp4e":{"effectApplication":"actor","effectTrigger":"oneTime","script":"this.actor.addCondition(\"dead\")"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornbody.png","label":"Desmembrado","tint":null,"transfer":true}]
+		},
+		{
+			"id": "Torn Muscles",
+			"name": "Músculos desgarrados",
+			"description": "<p>El golpe te impacta en el antebrazo. Sufres 1 estado de @Condition[Sangrando] y una herida de @Compendium[wfrp4e-core.injuries.GlShFJF2TpsNh1FX]{Desgarro muscular (Leve)}.</p>",
+			"effects": [{"_id":"kYbKdoUQIYq3zSTN","flags":{"wfrp4e":{"trigger":"endRound","value":1},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false},{"_id":"AdMOpRguQRPZCjVm","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"fromUuid(\"Compendium.wfrp4e-core.injuries.GlShFJF2TpsNh1FX\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornarm.png","label":"Músculos desgarrados","tint":"","transfer":true}]
+		},
+		{
+			"id": "Torn Thigh",
+			"name": "Muslo desgarrado",
+			"description": "<p>Sufres 3 Estados de @Condition[Sangrando] al abrirte el arma una brecha en la parte superior del muslo. Debes superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Aguante</strong> o pasar al Estado de @Condition[Tumbado]. Hasta que tengas acceso a @JournalEntry[Healing]{Cirugía} para suturar la herida, cada vez que sufras daño en esta pierna sufrirás además 1 Estado de @Condition[Sangrando].</p>\n<blockquote>\n<p><strong>Nota de Foundry</strong><em>: El Efecto Activo necesita que introduzcas datos. Reemplaza </em><span style=\"font-style: normal;\">LOCALIZACIÓN_DE_PIERNA_AQUÍ con lLeg or rLeg</span></p>\n<p>N.delT. lLeg = Pierna Izquierda, rLeg = Pierna Derecha.</p></blockquote>",
+			"effects": [{"_id":"RorPd1gHCj5K5e5E","flags":{"wfrp4e":{"trigger":"endRound","value":3},"core":{"statusId":"bleeding"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/bleeding.png","label":"Sangrando","transfer":true,"disabled":false},{"_id":"jYEOUXmmtfU0bnjS","flags":{"wfrp4e":{"effectTrigger":"takeDamage","effectApplication":"actor","script":"if (args.opposedTest.result.hitloc.value == \"LOCALIZACIÓN_DE_PIERNA_AQUÍ\") // rLeg o lLeg\n    args.actor.addCondition(\"bleeding\", 1)"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornleg.png","label":"Muslo desgarrado","tint":null,"transfer":true},{"_id":"53D0C2BXQCCAMXSu","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"if (args.actor.isOwner)\n   args.actor.setupSkill(\"Aguante\").then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"prone\")\n        })\n     })"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornleg.png","label":"Muslo desgarrado","tint":null,"transfer":true}]
+		},
+		{
+			"id": "Twisted Ankle",
+			"name": "Esguince de tobillo",
+			"description": "<p>Te tuerces fuertemente el tobillo, que se te hincha rápidamente. Tus Chequeos de Agilidad sufren un penalizador -10 durante @Roll[1d10] asaltos.</p>",
+			"effects": [{"_id":"9dEo6xx3LZwu32td","flags":{"wfrp4e":{"effectTrigger":"prefillDialog","effectApplication":"actor","script":"if (args.type == \"skill\" && args.item.characteristic.key == \"ag\")\n   args.prefillModifiers.modifier -= 10\n\nif (args.type == \"characteristic\" && args.item == \"ag\")\n   args.prefillModifiers.modifier -= 10"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornleg.png","label":"Esguince de tobillo","tint":null,"transfer":true}]
+		},
+		{
+			"id": "Twisted Back",
+			"name": "Torsión de espalda",
+			"description": "<p>Sufres una herida de @Compendium[wfrp4e-core.injuries.7rBhIRo96Mydo0Cv]{Desgarro muscular (Leve)}.</p>",
+			"effects": [{"_id":"qfUJIoRqhr1u8ODw","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"fromUuid(\"Compendium.wfrp4e-core.injuries.7rBhIRo96Mydo0Cv\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornbody.png","label":"Torsión de espalda","tint":"","transfer":true}]
+		},
+		{
+			"id": "Twisted Knee",
+			"name": "Rodilla dislocada",
+			"description": "<p>Tu rodilla se dobla más allá de lo posible. Tus Chequeos de Agilidad sufren un penalizador -20 durante @Roll[1d10] asaltos.</p>",
+			"effects": [{"_id":"BjIyeZdTw8TPV9qC","flags":{"wfrp4e":{"effectTrigger":"prefillDialog","effectApplication":"actor","script":"if (args.type == \"skill\" && args.item.characteristic.key == \"ag\")\n   args.prefillModifiers.modifier -= 20\n\nif (args.type == \"characteristic\" && args.item == \"ag\")\n   args.prefillModifiers.modifier -= 20"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornleg.png","label":"Rodilla dislocada","tint":null,"transfer":true}]
+		},
+		{
+			"id": "Winded",
+			"name": "Sin aliento",
+			"description": "<p>Sufres 1 Estado de @Condition[Aturdido]. Haz un Chequeo <strong>Normal (+20)</strong> de <strong>Aguante</strong>, o pasarás al Estado @Condition[Tumbado]. Tu Movimiento se reduce a la mitad durante @Roll[1d10] asaltos, mientras recuperas el aliento.</p>",
+			"effects": [{"_id":"NrZ8LRI1dsP46RmJ","flags":{"wfrp4e":{"trigger":"endRound","effectTrigger":"prefillDialog","script":"args.prefillModifiers.modifier -= 10 * getProperty(this.effect, 'flags.wfrp4e.value')","value":1},"core":{"statusId":"stunned"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/stunned.png","label":"Aturdido","transfer":true,"disabled":false},{"_id":"uaaFc96JlTCALmeJ","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"if (args.actor.isOwner)\n   args.actor.setupSkill(\"Aguante\", {absolute: {difficulty: \"average\"}}).then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"prone\")\n        })\n     })"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornbody.png","label":"Sin aliento","tint":null,"transfer":true},{"_id":"5A8VfGUQYx8Q0M0G","flags":{"wfrp4e":{"effectTrigger":"prePrepareData","effectApplication":"actor","script":"args.actor.details.move.value /= 2"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/injuries/tornbody.png","label":"Mitad de Movimiento","tint":null,"transfer":true}]
+		},
+		{
+			"id": "Wrenched Arm",
+			"name": "Brazo distendido",
+			"description": "<p>Casi te arrancan el brazo. Deja caer cualquier cosa que tengas en la mano asociada; el brazo queda inútil durante @Roll[1d10] asaltos.</p>"
+		},
+		{
+			"id": "Wrenched Collar Bone",
+			"name": "Clavícula dislocada",
+			"description": "<p>Selecciona un brazo al azar. Deja caer todo lo que lleves en esa mano; el brazo queda inútil durante @Roll[1d10] asaltos.</p>"
+		}
+	]
+}
