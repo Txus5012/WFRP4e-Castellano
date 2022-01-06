@@ -1070,14 +1070,7 @@
 		},
 		{
 			"id": "The Swirling Winds",
-			"name": "Los Vientos Revueltos",
-			"results": {
-				"1-1": "-30",
-				"2-3": "-10",
-				"4-7": "-",
-				"8-9": "+10",
-				"10-10": "+30"
-				}
+			"name": "Los Vientos Revueltos"
 		},
 		{
 			"id": "Travel Table",

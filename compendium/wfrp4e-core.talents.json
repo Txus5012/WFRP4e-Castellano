@@ -822,7 +822,7 @@
 			"name": "Francotirador",
 			"description": "<p>La distancia no importa para tu puntería, y puedes acertar tanto a objetivos lejanos como a cercanos. No sufres penalizador alguno por disparar a alcance Largo, y sólo la mitad de los penalizadores por alcance Extremo.</p>",
 			"tests": "A distancia (distancia larga o extrema)",
-			"effects": [{"_id":"AVhPxHHlKUolT589","flags":{"wfrp4e":{"effectTrigger":"prepareItem","effectApplication":"actor","script":"if (args.item.range && args.item.range.bands)\n{\nargs.item.range.bands[`\"${game.i18n.localize(\"Long Range\")}\"`].modifier = 0\nargs.item.range.bands[`\"${game.i18n.localize(\"Extreme\")}\"`].modifier /= 2\n}","hide":false,"preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/talents/sniper.png","label":"Francotirador","tint":"","transfer":true}]
+			"effects": [{"_id":"AVhPxHHlKUolT589","flags":{"wfrp4e":{"effectTrigger":"prepareItem","effectApplication":"actor","script":"if (args.item.range && args.item.range.bands)\n{\nargs.item.range.bands[game.i18n.localize(\"Long Range\")].modifier = 0\nargs.item.range.bands[game.i18n.localize(\"Extreme\")].modifier /= 2\n}","hide":false,"preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/talents/sniper.png","label":"Francotirador","tint":"","transfer":true}]
 		},
 		{
 			"id": "Speedreader",
