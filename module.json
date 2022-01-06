@@ -3,7 +3,7 @@
   "title": "WFRP4e - Español",
   "description": "Traducción española de WFRP4e basado en la traducción oficial de Devir.",  
   "version": "1.0.0",
-  "minimumCoreVersion" : "9",
+  "minimumCoreVersion": "9",
   "compatibleCoreVersion": "9",
   "author": "Txus",
   "system": ["wfrp4e"],
