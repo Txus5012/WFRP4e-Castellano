@@ -964,7 +964,7 @@
     "TIER.Silver" : "Plata",
     "TIER.Brass" : "Bronce",
 
-    "TABLE.ConvertTable" : "Convert to WFRP4e Table",
+    "TABLE.ConvertTable" : "Convertir a tabla de WFRP4e",
     "TABLE.Lookup" : "Búsqueda: ",
     "TABLE.Cancel" : "Tirada: {result} - cancelada",
     "TABLE.Key" : "Clave de Tabla",

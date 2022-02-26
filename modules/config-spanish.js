@@ -258,7 +258,7 @@ game.wfrp4e.config.systemEffects = {
         }
     },
     "cold1" : {
-        label: "Exposición al Frío",
+        label: "Exposición al Frío 1",
         icon: "",
         changes : [
             {key : "data.characteristics.bs.modifier", mode: 2, value: -10},
@@ -274,7 +274,7 @@ game.wfrp4e.config.systemEffects = {
         }
     },
     "cold2" : {
-        label: "Exposición al Frío",
+        label: "Exposición al Frío 2",
         icon: "",
         changes : [
             {key : "data.characteristics.bs.modifier", mode: 2, value: -10},
@@ -840,7 +840,7 @@ game.wfrp4e.config.symptomEffects = {
                     "script": `
                         if (this.actor.isOwner)
                         {
-                            args.actor.setupSkill("Endurance", {absolute: {difficulty : "average"}}).then(setupData => {
+                            args.actor.setupSkill("Aguante", {absolute: {difficulty : "average"}}).then(setupData => {
                                 args.actor.basicTest(setupData).then(test => 
                                     {
                                         if (test.result.outcome == "failure")
