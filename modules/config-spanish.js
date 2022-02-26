@@ -308,7 +308,7 @@ game.wfrp4e.config.systemEffects = {
                 "effectApplication": "actor",
                 "script": `
                     let tb = this.actor.characteristics.t.bonus
-                    let damage = new Roll("1d10").roll().total
+                    let damage = (await new Roll("1d10").roll()).total
                     damage -= tb
                     if (damage <= 0) damage = 1
                     if (this.actor.status.wounds.value <= damage)
@@ -372,7 +372,7 @@ game.wfrp4e.config.systemEffects = {
                 "effectApplication": "actor",
                 "script": `
                     let tb = this.actor.characteristics.t.bonus
-                    let damage = new Roll("1d10").roll().total
+                    let damage = (await new Roll("1d10").roll()).total
                     damage -= tb
                     if (damage <= 0) damage = 1
                     this.actor.modifyWounds(-damage)
@@ -422,7 +422,7 @@ game.wfrp4e.config.systemEffects = {
                 "effectApplication": "actor",
                 "script": `
                 let tb = this.actor.characteristics.t.bonus
-                let damage = new Roll("1d10").roll().total
+                let damage = (await new Roll("1d10").roll()).total
                 damage -= tb
                 if (damage <= 0) damage = 1
                 this.actor.modifyWounds(-damage)
@@ -472,7 +472,7 @@ game.wfrp4e.config.systemEffects = {
                 "effectApplication": "actor",
                 "script": `
                 let tb = this.actor.characteristics.t.bonus
-                let damage = new Roll("1d10").roll().total
+                let damage = (await new Roll("1d10").roll()).total
                 damage -= tb
                 if (damage <= 0) damage = 1
                 this.actor.modifyWounds(-damage)
@@ -489,23 +489,28 @@ game.wfrp4e.config.systemEffects = {
                 "effectTrigger": "prePrepareItem",
                 "effectApplication": "actor",
                 "script": `
-                        if (args.item.type == "weapon" && args.item.isEquipped)
+                    if (args.item.type == "weapon" && args.item.isEquipped)
+                    {
+                        let weaponLength = args.item.reachNum
+                        if (weaponLength > 3)
                         {
-                            let weaponLength = args.item.reachNum
-                            if (weaponLength > 3)
-                            {
-                                let improv = duplicate(game.wfrp4e.config.systemItems.improv)
-                                improv.data.twohanded.value = args.item.twohanded.value
-                                improv.data.offhand.value = args.item.offhand.value
-                                args.item.data.update({"data" : improv.data, name : args.item.name + " (Infighting")})
-                            }
+                            let improv = duplicate(game.wfrp4e.config.systemItems.improv)
+                            improv.data.twohanded.value = args.item.twohanded.value
+                            improv.data.offhand.value = args.item.offhand.value
+                            improv.name = args.item.name + " (Infighting)"
+                            mergeObject(args.item.data.data, improv.data, {overwrite : true})
+                            args.item.data.data.qualities = improv.data.qualities
+                            args.item.data.data.flaws = improv.data.flaws
+                            args.item.data.name = improv.name
+                            args.item.data.infighting = true;
                         }
+                    }
                 `
             }
         }
     },
     "defensive": {
-        label: "A la Defensiva [Nombre de la Habilidad]",
+        label: "A la Defensiva [Nombre de Habilidad]",
         icon: "",
         flags: {
             wfrp4e: {
@@ -604,7 +609,7 @@ game.wfrp4e.config.symptomEffects = {
                         else
                             difficulty = "veasy"
     
-                        if (args.actor.owner)
+                        if (this.actor.isOwner)
                         {
                             args.actor.setupSkill("Aguante", {absolute: {difficulty}}).then(setupData => {
                                 args.actor.basicTest(setupData).then(test => 
@@ -833,14 +838,14 @@ game.wfrp4e.config.symptomEffects = {
                     "effectTrigger": "invoke",
                     "symptom": true,
                     "script": `
-                        if (args.actor.owner)
+                        if (this.actor.isOwner)
                         {
                             args.actor.setupSkill("Aguante", {absolute: {difficulty : "average"}}).then(setupData => {
                                 args.actor.basicTest(setupData).then(test => 
                                     {
                                         if (test.result.outcome == "failure")
                                             fromUuid("Compendium.wfrp4e-core.diseases.kKccDTGzWzSXCBOb").then(disease => {
-                                                args.actor.createEmbeddedDocuments("Item", [disease.toObject])
+                                                args.actor.createEmbeddedDocuments("Item", [disease.toObject()])
                                             })
                                     })
                                 })
@@ -1213,7 +1218,7 @@ game.wfrp4e.config.effectPlaceholder = {
     totalWoundLoss : Heridas perdidas tras mitigaciones
     AP : datos sobre los PA usados
     updateMsg : secuencia inicial para el mensaje de actualización de daño
-    messageElements : despliegue de secuanecias usadas para mostrar cómo se calculó la mitigación de daño
+    messageElements : despliegue de secuencias usadas para mostrar cómo se calculó la mitigación de daño
     `,
 
     "preTakeDamage" : 
@@ -1239,7 +1244,7 @@ game.wfrp4e.config.effectPlaceholder = {
     totalWoundLoss : Heridas perdidas tras mitigaciones
     AP : datos sobre los PA usados
     updateMsg : secuencia inicial para el mensaje de actualización de daño
-    messageElements : despliegue de secuanecias usadas para mostrar cómo se calculó la mitigación de daño
+    messageElements : despliegue de secuencias usadas para mostrar cómo se calculó la mitigación de daño
     `,
 
     "preApplyCondition" :  
@@ -1752,7 +1757,7 @@ game.wfrp4e.config.loreEffects = {
                     "effectTrigger": "oneTime",
                     "lore": true,
                     "script": `
-                    if (args.actor.owner)
+                    if (this.actor.isOwner)
                     {
                         args.actor.addCondition("fatigued")
                     }`
@@ -1769,7 +1774,7 @@ game.wfrp4e.config.loreEffects = {
                     "effectTrigger": "oneTime",
                     "lore": true,
                     "script": `
-                    if (args.actor.owner)
+                    if (this.actor.isOwner)
                     {
                         args.actor.addCondition("ablaze")
                     }`
@@ -1938,7 +1943,7 @@ game.wfrp4e.config.loreEffects = {
                     "effectTrigger": "oneTime",
                     "lore": true,
                     "script": `
-                    if (args.actor.owner)
+                    if (this.actor.isOwner)
                     {
                         args.actor.addCondition("bleeding")
                     }`
