@@ -345,7 +345,7 @@
 				"77-79": "<b>Saqueado</b>: Antes de que puedas llevar a cabo una Empresa de Actividades bancarias , tu escondrijo es v\u00EDctima de una incursi\u00F3n y todo tu dinero desaparece. Si tu dinero en total sumaba menos de 1 co, los ladrones tambi\u00E9n se llevan tu posesi\u00F3n m\u00E1s preciada.",
 				"80-82": "<b>Disturbios</b>: \u00A1La gente com\u00FAn est\u00E1 furiosa contra los petulantes! Los personajes de la clase Cortesano no pueden emprender la Empresa Salario puesto que, no importa la cantidad de guardaespaldas que contraten, no es ni remotamente seguro salir a la calle. Adem\u00E1s, cualquier dep\u00F3sito en bancos reputados (ver @JournalEntry[Actividades Bancarias]) deber\u00E1 ser comprobado para ver si la violencia y los destrozos han hecho que ese banco cese sus actividades. Sin embargo, los jugadores que intenten una Empresa de Fomentar la discordia obtendr\u00E1n un bonificador +10 a todos los chequeos relacionados con ella.",
 				"83-85": "<b>Dedos pegajosos</b>: \u00A1Alguien te ha metido la mano en la bolsa! Pierdes la mitad del dinero con el que acabaste la \u00FAltima aventura.",
-				"86-88": "<b>Sospecha de herej\u00EDa</b>: Tienes problemas con un cazador de brujas, que sospecha que te has juntado con mutantes, sectarios o cosas a\u00FAn peores en lo que t\u00FA llamas ‘aventuras’. Se requiere un Chequeo Muy dif\u00EDcil (-30) de Carisma para convencer al cazador de que eres inocente. Fallar al hacerlo significa que te has ganado una n\u00E9mesis implacable que ciertamente te causar\u00E1 problemas en el futuro...",
+				"86-88": "<b>Sospecha de herej\u00EDa</b>: Tienes problemas con un cazador de brujas, que sospecha que te has juntado con mutantes, sectarios o cosas a\u00FAn peores en lo que t\u00FA llamas \u2018aventuras\u2019. Se requiere un Chequeo Muy dif\u00EDcil (-30) de Carisma para convencer al cazador de que eres inocente. Fallar al hacerlo significa que te has ganado una n\u00E9mesis implacable que ciertamente te causar\u00E1 problemas en el futuro...",
 				"89-91": "<b>Bajo sospecha</b>: Los irregulares movimientos y la repentina riqueza del grupo han atra\u00EDdo sospechas. Todos los personajes deben invertir una empresa pasando inadvertidos o demostrando su inocencia. Los personajes de la clase P\u00EDcaro no pueden utilizar la Empresa Salario hasta despu\u00E9s de su siguiente aventura.",
 				"92-94": "<b>Sin novedad</b>: Ocurren pocas cosas de inter\u00E9s, lo que quiz\u00E1s te deja con un apetito por correr riesgos inspirado por el aburrimiento.",
 				"95-97": "<b>Estima inesperada</b>: Alguien a quien ayudaste en el pasado tiene la oportunidad de recompensar tus esfuerzos. La naturaleza precisa de la recompensa deber\u00EDa ser apropiada a tus actos pasados, y a los PNJs a los que has ayudado durante el juego o en tu trasfondo. Las muestras de gratitud pueden ir desde un solo objeto de gran calidad a una bolsa de plata (que estar\u00E1 disponible al inicio de la siguiente aventura). Por supuesto, no es oro todo lo que reluce y no todos los regalos son lo que parece\u2026",
@@ -717,7 +717,7 @@
 			"id": "I Need A Job! - Who",
 			"name": "\u00A1Necesito Trabajo! - Qui\u00E9n",
 			"results": {
-				"1-1": "‘El que se escap\u00F3'...",
+				"1-1": "\u2018El que se escap\u00F3'...",
 				"2-2": "Un vividor lascivo con un falso acento bret\u00F3n\u2026",
 				"3-3": "Un atribulado alguacil que luce los colores de un bar\u00F3n local\u2026",
 				"4-4": "Un shallyano benevolente\u2026",
@@ -1054,6 +1054,18 @@
 				}
 		},
 		{
+			"id": "Stinking Drunk",
+			"name": "Borracho como una Cuba",
+			"description": "Si fallas un chequeo de @Compendium[wfrp4e-core.skills.R2ytluHiEFF2KQ5e]{Consumir Alcohol} un n\u00FAmero de veces igual a tu Bono por Resistencia, est\u00E1s Borracho como una Cuba. Tira en la siguiente tabla para ver lo que sucede:",
+			"results": {
+				"1-2": "<b>\u2018\u00A1El valor de Marienburgo!\u2019</b>: obtienes un bonificador +20 a tu habilidad Frialdad",
+				"3-4": "<b>\u2018\u00A1Eresh mi mejjor amigo!\u2019</b>: ignora todos los Prejuicios y Animosidades existentes",
+				"5-6": "<b>\u2018\u00BFPor qu\u00E9 se mueve todo?\u2019</b>: en tu turno puedes, o bien Mover, o bien llevar a cabo una Acci\u00F3n, pero no ambas cosas.",
+				"7-8": "<b>\u2018\u00A1Puedo con todos vosotros!\u2019</b>: obtienes Animosidad (\u00A1todo el mundo!).",
+				"9-10": "<b>\u2018\u00BFC\u00F3mo he llegado hasta aqu\u00E9?\u2019</b>: despiertas al d\u00E9a siguiente con una resaca enorme y pocos recuerdos de lo sucedido. El DJ y otros personajes ser\u00E1n capaces de informarte de lo que sucedi\u00F3 durante los embarazosos huecos de tu memoria, si investigas. Consigue un Chequeo de Consumir alcohol o tambi\u00E9n sufrir\u00E1s 1 Estado de @Condition[Envenenado]."
+				}
+		},
+		{
 			"id": "Species",
 			"name": "Especies",
 			"results": {
@@ -1082,8 +1094,8 @@
 				"4-4": "<b>\u00A1Un viaje cansado!</b>: la carretera est\u00E1 cortada. Se puede haber derrumbado un puente, desbordado un r\u00EDo o inundado una carretera, o haber alg\u00FAn otro obst\u00E1culo infranqueable. Un Personaje hace un Chequeo <b>Normal (+20)</b> de <b>Supervivencia</b> para buscar una buena ruta alternativa, o de lo contrario todos llegan un d\u00EDa m\u00E1s tardes, con 1 Estado de @Condition[Fatigado].",
 				"5-5": "<b>\u00A1Perseguidos!</b>: un enemigo sigue el rastro de los Personajes y hay que ocuparse de \u00E9l o enmascarar el rastro antes de llegar a destino. Si a\u00FAn no tienen ning\u00FAn enemigo obvio, busca en el trasfondo de los Personajes, seguro que all\u00ED encuentras algo. La confrontaci\u00F3n podr\u00EDa resultar violenta a menos que se pudieran salir de la misma hablando, y hacer que el enemigo pierda el rastro puede a\u00F1adir d\u00EDas al viaje.",
 				"6-6": "<b>\u00A1Ladrones!</b>: de alguna forma, a los personajes les roban. Quiz\u00E1 fuera alguien que viajaba con ellos, que comparti\u00F3 su fogata durante la noche o tan solo una breve conversaci\u00F3n por el camino. \u00BFSe detienen a seguir el rastro de sus pertenencias o las dan por perdidas como un riesgo de la vida aventurera?",
-				"7-7": "<b>\u00A1Ellos otra vez!</b>: un rival u otra fuente de irritaci\u00F3n incomoda a los Personajes durante su viaje. Interpr\u00E9talo de forma humor\u00EDstica, pero haz que sea un aut\u00E9ntico incordio y un azote recurrente menor en las vidas de los Personajes. Nunca lo suficiente como para animar a la violencia, pero casi. Podr\u00EDa tratarse de un miembro de un gremio rival obsesionado con ‘hacerlo mejor’ que un miembro del grupo, o un pasajero de una diligencia con un comportamiento especialmente irritante.",
-				"8-8": "<b>\u00A1Mala influencia!</b>: los Personajes se encuentran con alguien que parece ayudarles pero que tiene intenciones siniestras. Aquel individuo maloliente que conoce un atajo que atraviesa el Jard\u00EDn de Morr pero que insiste en que vosotros vay\u00E1is delante. El encantador anciano arist\u00F3crata que os invita a quedaros a cenar en su hogar ancestral. La mujer desali\u00F1ada que sabe d\u00F3nde buscar los ’mejores’ hongos. \u00A1P\u00E1satelo bien!",
+				"7-7": "<b>\u00A1Ellos otra vez!</b>: un rival u otra fuente de irritaci\u00F3n incomoda a los Personajes durante su viaje. Interpr\u00E9talo de forma humor\u00EDstica, pero haz que sea un aut\u00E9ntico incordio y un azote recurrente menor en las vidas de los Personajes. Nunca lo suficiente como para animar a la violencia, pero casi. Podr\u00EDa tratarse de un miembro de un gremio rival obsesionado con \u2018hacerlo mejor\u2019 que un miembro del grupo, o un pasajero de una diligencia con un comportamiento especialmente irritante.",
+				"8-8": "<b>\u00A1Mala influencia!</b>: los Personajes se encuentran con alguien que parece ayudarles pero que tiene intenciones siniestras. Aquel individuo maloliente que conoce un atajo que atraviesa el Jard\u00EDn de Morr pero que insiste en que vosotros vay\u00E1is delante. El encantador anciano arist\u00F3crata que os invita a quedaros a cenar en su hogar ancestral. La mujer desali\u00F1ada que sabe d\u00F3nde buscar los \u2019mejores\u2019 hongos. \u00A1P\u00E1satelo bien!",
 				"9-9": "<b>\u00A1Hasta la Naturaleza os odia!</b>: los Personajes se encuentran en peligro debido a la Naturaleza. Animales letales, tormentas el\u00E9ctricas, enfermedades, insectos, lo que sea. Esto puede acabar en violencia, en que acaben sufriendo 1 Estado o en un encuentro peque\u00F1o pero cruel por elegir como cobijo la caba\u00F1a de pastor equivocada.",
 				"10-10": "<b>\u00A1Atacados!</b>: los personajes son atacados durante su viaje. Podr\u00EDa tratarse de un encuentro desafortunado, relevante para la zona por la que viajan (hombres bestia en las profundidades del bosque, por ejemplo) o algo planificado por sus oponentes (matones contratados para evitar que los Personajes lleguen a su destino). Si fallan un Chequeo <b>Normal (+20)</b> de <b>Percepci\u00F3n</b>, \u00A1incluso podr\u00EDan ser v\u00EDctimas de una emboscada!"
 				}

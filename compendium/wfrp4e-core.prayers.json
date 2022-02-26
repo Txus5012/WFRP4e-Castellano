@@ -204,7 +204,7 @@
 			"id": "Destroy Undead",
 			"name": "Destruir muertos vivientes",
 			"description": "<p>Llamas al poder de Morr para que castigue a todos los muertos vivientes. Un fuego negro oscila a partir de tu cuerpo en un círculo perfecto con un radio en yardas igual a tu Bonificador por Empatía. Todos los objetivos potenciales con el Rasgo Muerto viviente pierden 1d10 Heridas, ignorando Bonificadores por resistencia y puntos de Armadura. Ningún muerto viviente destruido por este Milagro puede volver a ser alzado mediante la Nigromancia en condiciones normales. Por cada +2 NE, puedes incrementar el Área de efecto en tantas yardas como tu Bonificador por Empatía.</p>",
-			"effects": [{"_id":"HqH1WB4M1YCR0kRg","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"apply","script":"if (args.actor.has(\"Undead\"))\n{\n    let damage = (await new Roll(\"1d10\").roll()).total\n    args.actor.applyBasicDamage(damage, {damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL})\n}","hide":false,"preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/miracles.png","label":"Destruir muertos vivientes","tint":"","transfer":false}]
+			"effects": [{"_id":"HqH1WB4M1YCR0kRg","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"apply","script":"if (args.actor.has(\"Muerto viviente\"))\n{\n    let damage = (await new Roll(\"1d10\").roll()).total\n    args.actor.applyBasicDamage(damage, {damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL})\n}","hide":false,"preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/miracles.png","label":"Destruir muertos vivientes","tint":"","transfer":false}]
 		},
 		{
 			"id": "Dooming",
@@ -447,7 +447,7 @@
 		{
 			"id": "Winter's Bite",
 			"name": "Mordisco del invierno",
-			"description": "<p>Ruges plegarias concernientes a Blitzbeil , el hacha siempre sedienta de Ulric. Si empuñas un hacha, cuenta como mágica, causa tanto Daño adicional como + NE y todo objetivo vivo al que impacta debe superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Aguante</strong> o sufrir 1 Estado de @Condition[Aturdido]. Además, los objetivos a los que acierta pierden cualquier Estado de @Condition[Sangrando] activo puesto que la sangre se les hiela; similarmente, los ataques de tu hacha no pueden causar ningún Estado de @Condition[Sangrando].</p>"
+			"description": "<p>Ruges plegarias concernientes a Blitzbeil, el hacha siempre sedienta de Ulric. Si empuñas un hacha, cuenta como mágica, causa tanto Daño adicional como + NE y todo objetivo vivo al que impacta debe superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Aguante</strong> o sufrir 1 Estado de @Condition[Aturdido]. Además, los objetivos a los que acierta pierden cualquier Estado de @Condition[Sangrando] activo puesto que la sangre se les hiela; similarmente, los ataques de tu hacha no pueden causar ningún Estado de @Condition[Sangrando].</p>"
 		},
 		{
 			"id": "Wisdom of the Owl",
