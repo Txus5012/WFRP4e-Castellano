@@ -456,7 +456,8 @@
 			"id": "In-fighter",
 			"name": "Combate cercano",
 			"description": "<p>Eres hábil en acercarte mucho a un oponente. No sufres penalizador alguno por luchar contra un oponente que tiene un arma de mayor alcance que la tuya. Además, si utilizas las reglas opcionales del combate cercano, obtienes un bonificador +10 al impacto contra tu oponente.</p>",
-			"tests": "Cuerpo a cuerpo cuando luchas en combate cercano o entras en el mismo"
+			"tests": "Cuerpo a cuerpo cuando luchas en combate cercano o entras en el mismo",
+			"effects":[{"_id":"Eu8Ajiixpb7rdqVW","changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/talents/in-fighter.png","label":"Combate cercano","transfer":true,"flags":{"wfrp4e":{"effectTrigger":"prefillDialog","effectApplication":"actor","hide":false,"preventDuplicateEffects":false,"script":"if (args.type == \"weapon\" && this.actor.hasSystemEffect(\"infighting\"))\n{\n     args.prefillModifiers.modifier += 10\n}"}},"tint":null}]
 		},
 		{
 			"id": "Inspiring",
