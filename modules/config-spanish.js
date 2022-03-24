@@ -497,7 +497,7 @@ game.wfrp4e.config.systemEffects = {
                             let improv = duplicate(game.wfrp4e.config.systemItems.improv)
                             improv.data.twohanded.value = args.item.twohanded.value
                             improv.data.offhand.value = args.item.offhand.value
-                            improv.name = args.item.name + " (Infighting)"
+                            improv.name = args.item.name + " (Combate cercano)"
                             mergeObject(args.item.data.data, improv.data, {overwrite : true})
                             args.item.data.data.qualities = improv.data.qualities
                             args.item.data.data.flaws = improv.data.flaws
