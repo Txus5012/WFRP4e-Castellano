@@ -1262,6 +1262,9 @@
     "Minor": "Menor",
     "Moderate": "Moderado",
     "Major": "Mayor",
+    "minor": "Menor",
+    "moderate": "Moderado",
+    "major": "Mayor",
     "Quantity": "Cantidad",
     "Infinite": "Infinito",
 
