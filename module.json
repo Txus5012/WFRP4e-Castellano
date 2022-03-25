@@ -2,7 +2,7 @@
   "name": "wfrp4e-castellano",
   "title": "WFRP4e - Español",
   "description": "Traducción española de WFRP4e basado en la traducción oficial de Devir.",  
-  "version": "1.2.0",
+  "version": "1.2.1",
   "minimumCoreVersion": "9",
   "compatibleCoreVersion": "9",
   "author": "Txus",
@@ -31,6 +31,6 @@
   }],
   "url": [ "https://github.com/Txus5012/WFRP4e-Castellano" ],
   "manifest": "https://github.com/Txus5012/WFRP4e-Castellano/releases/latest/download/module.json",
-  "download": "https://github.com/Txus5012/WFRP4e-Castellano/releases/download/v1.2.0/wfrp4e-castellano.zip",
-  "readme": "https://github.com/Txus5012/WFRP4e-Castellano/tree/v1.2.0#readme"
+  "download": "https://github.com/Txus5012/WFRP4e-Castellano/releases/download/v1.2.1/wfrp4e-castellano.zip",
+  "readme": "https://github.com/Txus5012/WFRP4e-Castellano/tree/v1.2.1#readme"
 }
