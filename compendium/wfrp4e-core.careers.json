@@ -1073,7 +1073,7 @@
 		{
 			"id": "Master Wizard",
 			"name": "Maestro hechicero",
-			"skills": ["Canalización (Chamon)","Esquivar","Intuición","Hablar idioma (Lengua de la magia)","Sabiduría académica (Magia)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (Arma de Asta)","Percepción","Carisma","Frialdad","Cotilleo","Intimidar","Hablar idioma (Lengua de Batalla)","Hablar idioma (Cualquiera)","Criar Animales","Tasar","Sabiduría académica (Guerra)","Montar (Caballo)"],
+			"skills": ["Canalización (Cualquier Color)","Esquivar","Intuición","Hablar idioma (Lengua de la magia)","Sabiduría académica (Magia)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (Arma de Asta)","Percepción","Carisma","Frialdad","Cotilleo","Intimidar","Hablar idioma (Lengua de Batalla)","Hablar idioma (Cualquiera)","Criar Animales","Tasar","Sabiduría académica (Guerra)","Montar (Caballo)"],
 			"talents": ["Amenazador","Dicción instintiva","Empuñar dos armas","Sentir magia"],
 			"trappings": ["Aprendiz","Caballo de guerra ligero","Objeto mágico"],
 			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.m6WuSnrrW7QllX63]{Hechicero}</p>"
@@ -2009,7 +2009,7 @@
 		{
 			"id": "Wizard",
 			"name": "Hechicero",
-			"skills": ["Canalización (Cualquiera Color)","Esquivar","Intuición","Hablar idioma (Lengua de la magia)","Sabiduría académica (Magia)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (Arma de Asta)","Percepción","Carisma","Frialdad","Cotilleo","Intimidar","Hablar idioma (Lengua de Batalla)","Hablar idioma (Cualquiera)"],
+			"skills": ["Canalización (Cualquier Color)","Esquivar","Intuición","Hablar idioma (Lengua de la magia)","Sabiduría académica (Magia)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (Arma de Asta)","Percepción","Carisma","Frialdad","Cotilleo","Intimidar","Hablar idioma (Lengua de Batalla)","Hablar idioma (Cualquiera)"],
 			"talents": ["Detectar artefacto","Magia arcana (Cualquier sabiduría académica arcana)","Manos rápidas","Sexto sentido"],
 			"trappings": ["Licencia mágica"],
 			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.m6WuSnrrW7QllX63]{Hechicero}</p>"
@@ -2017,7 +2017,7 @@
 		{
 			"id": "Wizard Lord",
 			"name": "Señor de los hechiceros",
-			"skills": ["Canalización (Cualquiera Color)","Esquivar","Intuición","Hablar idioma (Lengua de la magia)","Sabiduría académica (Magia)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (Arma de Asta)","Percepción","Carisma","Frialdad","Cotilleo","Intimidar","Hablar idioma (Lengua de Batalla)","Hablar idioma (Cualquiera)","Criar Animales","Tasar","Sabiduría académica (Guerra)","Montar (Caballo)","Hablar idioma (Cualquiera)","Sabiduría académica (Cualquiera)"],
+			"skills": ["Canalización (Cualquier Color)","Esquivar","Intuición","Hablar idioma (Lengua de la magia)","Sabiduría académica (Magia)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (Arma de Asta)","Percepción","Carisma","Frialdad","Cotilleo","Intimidar","Hablar idioma (Lengua de Batalla)","Hablar idioma (Cualquiera)","Criar Animales","Tasar","Sabiduría académica (Guerra)","Montar (Caballo)","Hablar idioma (Cualquiera)","Sabiduría académica (Cualquiera)"],
 			"talents": ["Aterrador","Hechicero de guerra","Percepción de combate","Voluntad de hierro"],
 			"trappings": ["Aprendiz","Biblioteca (Magia)","Taller (Magia)"],
 			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.m6WuSnrrW7QllX63]{Hechicero}</p>"
@@ -2025,7 +2025,7 @@
 		{
 			"id": "Wizard's Apprentice",
 			"name": "Aprendiz de hechicero",
-			"skills": ["Canalización (Cualquiera Color)","Esquivar","Intuición","Hablar idioma (Lengua de la magia)","Sabiduría académica (Magia)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (Arma de Asta)","Percepción"],
+			"skills": ["Canalización (Cualquier Color)","Esquivar","Intuición","Hablar idioma (Lengua de la magia)","Sabiduría académica (Magia)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (Arma de Asta)","Percepción"],
 			"talents": ["Afinidad con el Aethyr","Clarividencia","Leer y escribir","Magia menor"],
 			"trappings": ["Bastón","Grimorio"],
 			"description": "<p>@Compendium[wfrp4e-core.career-descriptions.m6WuSnrrW7QllX63]{Hechicero}</p>"
