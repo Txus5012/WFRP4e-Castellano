@@ -792,7 +792,8 @@
 		{
 			"id": "Sharpshooter",
 			"name": "Proyectil infalible",
-			"description": "<p>Puedes llevar a cabo disparos apuntados de una precisión excepcional. Ignoras cualquier modificador negativo por Dificultad a los Chequeos de A distancia debidos al tamaño del objetivo.</p>"
+			"description": "<p>Puedes llevar a cabo disparos apuntados de una precisión excepcional. Ignoras cualquier modificador negativo por Dificultad a los Chequeos de A distancia debidos al tamaño del objetivo.</p>",
+			"effects": [{"_id":"AdXR6L7rmxEgkVlB","changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/talents/sharpshooter.png","label":"Proyectil infalible","transfer":true,"flags":{"wfrp4e":{"effectTrigger":"prefillDialog","effectApplication":"actor","hide":false,"preventDuplicateEffects":true,"script":"if (args.options.sizeModifier < 0)\n   args.prefillModifiers.modifier -= args.options.sizeModifier"}},"tint":null}]
 		},
 		{
 			"id": "Shieldsman",
@@ -933,7 +934,8 @@
 		{
 			"id": "Sure Shot",
 			"name": "Disparo seguro",
-			"description": "<p>Sabes cómo encontrar los puntos débiles en la armadura de un objetivo. Cuando aciertas a un objetivo con un arma A distancia, puedes ignorar tantos puntos de Armadura como tu nivel de Disparo seguro .</p>"
+			"description": "<p>Sabes cómo encontrar los puntos débiles en la armadura de un objetivo. Cuando aciertas a un objetivo con un arma A distancia, puedes ignorar tantos puntos de Armadura como tu nivel de Disparo seguro .</p>",
+			"effects": [{"_id":"FT9ngGg2C68sBxzc","changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/talents/sure-shot.png","label":"Disparo seguro","transfer":true,"flags":{"wfrp4e":{"effectTrigger":"applyDamage","effectApplication":"actor","hide":false,"preventDuplicateEffects":true,"script":"if(args.opposedTest.attackerTest.weapon.attackType == \"ranged\")\n{\n    let applyAP = (args.damageType == game.wfrp4e.config.DAMAGE_TYPE.IGNORE_TB || args.damageType == game.wfrp4e.config.DAMAGE_TYPE.NORMAL)\n\n\n    let AP = args.AP\n\n    if (applyAP) {\n        newUsed = Math.max(AP.used - this.item.Advances, 0)\n        args.totalWoundLoss += (AP.used - newUsed)\n\n    let apIndex = args.messageElements.findIndex(i => i.includes(game.i18n.localize(\"AP\")))\n    args.messageElements[apIndex] = newUsed + \"/\" + AP.value + \" \" + game.i18n.localize(\"AP\")\n    }\n}"}},"tint":""}]
 		},
 		{
 			"id": "Surgery",

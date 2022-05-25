@@ -36,7 +36,7 @@
 		{
 			"id": "Animal Trap",
 			"name": "Trampa para animales",
-			"description": "<p>Se usa para cazar (Ver @Compendium[wfrp4e-core.skills.os4NKy5Oy6sRt1eh]{Supervivencia})</p>"
+			"description": "<p>Se usa para cazar (Ver @Compendium[wfrp4e-core.skills.os4NKy5Oy6sRt1eh]{Buscar comida y hierbas}).</p>"
 		},
 		{
 			"id": "Antitoxin Kit",
@@ -433,7 +433,7 @@
 		{
 			"id": "Fish Hooks",
 			"name": "Anzuelos",
-			"description": "<p>Se pueden utilizar para pescar (ver Buscar comida y hierbas).</p>"
+			"description": "<p>Se pueden utilizar para pescar (ver @Compendium[wfrp4e-core.skills.os4NKy5Oy6sRt1eh]{Buscar comida y hierbas}).</p>"
 		},
 		{
 			"id": "Flail",
@@ -973,7 +973,7 @@
 		{
 			"id": "Reading Lens",
 			"name": "Lente de aumento",
-			"description": "<p>las lentes de vidrio provistas de un mango proporcionan un bonificador +20 a los Chequeos de Leer y escribir llevados a cabo para descifrar escritura minúscula o ininteligible. Los Chequeos de Percepción para buscar pequeños detalles como puertas o compartimentos secretos también obtienen un bonificador +20.</p>"
+			"description": "<p>Las lentes de vidrio provistas de un mango proporcionan un bonificador +20 a los Chequeos de <em>Leer y escribir</em> llevados a cabo para descifrar escritura minúscula o ininteligible. Los Chequeos de Percepción para buscar pequeños detalles como puertas o compartimentos secretos también obtienen un bonificador +20.</p>"
 		},
 		{
 			"id": "Religious Symbol",
@@ -1302,7 +1302,7 @@
 		{
 			"id": "Writing Kit",
 			"name": "Material de escritura",
-			"description": ""
+			"description": "<p>Contiene un cálamo, un tintero y un secante.</p>"
 		},
 		{
 			"id": "Zweihander",
