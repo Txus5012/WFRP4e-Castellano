@@ -9,14 +9,14 @@ Hooks.on('init', () => {
 
 Babele.get().registerConverters({
 
-       "spells_duration_range_target_damage": (value) => {  // Hechizos y Plegarias
+       "spells_duration_range_target": (value) => {  // Hechizos y Plegarias
         if ( value == "" ) return "";
         if ( value == "Touch" ) return "Toque";
         if ( value == "You" ) return "Tú";
         if ( value == "Instant" ) return "Instantáneo";
         if ( value == "Line of Sight" ) return "Línea de Visión";
         if ( value == "Special" ) return "Especial";
-	if (value == "a single location" ) return "Un solo lugar";
+	if ( value == "a single location" ) return "Un solo lugar";
 	if ( value == "see description" ) return "Ver descripción";
 	if ( value == "Until sunrise" ) return "Hasta el amanecer";
 	if ( value == "Until the next sunrise" ) return "Hasta el siguiente amanecer";
@@ -59,16 +59,16 @@ Babele.get().registerConverters({
         if ( charac == "Willpower") charac = "Voluntad";
         if ( charac == "Fellowship") charac = "Empatía";
 
-        if ( characbonus == "Weapon Skill") charac = "Habilidad de Armas Bonus";
-        if ( characbonus == "Ballistic Skill") charac = "Habilidad de Proyectiles Bonus";
-        if ( characbonus == "Strenght") charac = "Fuerza Bonus";
-        if ( characbonus == "Toughness") charac = "Resistencia Bonus";
-        if ( characbonus == "Initiative") charac = "Iniciativa Bonus";
-        if ( characbonus == "Agility") charac = "Agilidad Bonus";
-        if ( characbonus == "Dexterity") charac = "Destreza Bonus";
-        if ( characbonus == "Intelligence") charac = "Inteligencia Bonus";
-        if ( characbonus == "Willpower") charac = "Voluntad Bonus";
-        if ( characbonus == "Fellowship") charac = "Empatía Bonus";
+        if ( characbonus == "Weapon Skill") charac = "Bonificador por Habilidad de Armas";
+        if ( characbonus == "Ballistic Skill") charac = "Bonificador por Habilidad de Proyectiles";
+        if ( characbonus == "Strenght") charac = "Bonificador por Fuerza";
+        if ( characbonus == "Toughness") charac = "Bonificador por Resistencia";
+        if ( characbonus == "Initiative") charac = "Bonificador por Iniciativa";
+        if ( characbonus == "Agility") charac = "Bonificador por Agilidad";
+        if ( characbonus == "Dexterity") charac = "Bonificador por Destreza";
+        if ( characbonus == "Intelligence") charac = "Bonificador por Inteligencia";
+        if ( characbonus == "Willpower") charac = "Bonificador por Voluntad";
+        if ( characbonus == "Fellowship") charac = "Bonificador por Empatía";
 
         if ( unit == "Round") unit = "Asalto";
         if ( unit == "Rounds") unit = "Asaltos";
@@ -100,6 +100,19 @@ Babele.get().registerConverters({
         return translw; 
 	},
 
+       "spells_damage": (value) => {  // Daño de Hechizos y Plegarias
+        if ( value == "Weapon Skill Bonus") return "Bonificador por Habilidad de Armas";
+        if ( value == "Ballistic Skill Bonus") return "Bonificador por Habilidad de Proyectiles";
+        if ( value == "Strenght Bonus") return "Bonificador por Fuerza";
+        if ( value == "Toughness Bonus") return "Bonificador por Resistencia";
+        if ( value == "Initiative Bonus") return "Bonificador por Iniciativa";
+        if ( value == "Agility Bonus") return "Bonificador por Agilidad";
+        if ( value == "Dexterity Bonus") return "Bonificador por Destreza";
+        if ( value == "Intelligence Bonus") return "Bonificador por Inteligencia";
+        if ( value == "Willpower Bonus") return "Bonificador por Voluntad";
+        if ( value == "Fellowship Bonus") return "Bonificador por Empatía";
+	},
+	
       "career_class": (value) => { // Clases
         if ( value == "Academics" ) return "Académicos";
         if ( value == "Academic" ) return "Académico";
@@ -285,7 +298,7 @@ Babele.get().registerConverters({
 	     if ( value == "Thin People" ) return "Gente delgada";
 	},
 
-	"criticals_wounds": (value) => {  // Localización de críticos
+	"criticals_wounds": (value) => {  // Daño extra de críticos
              if ( value == "Death" ) return "Muerte";
 	},
 

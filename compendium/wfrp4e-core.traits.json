@@ -509,7 +509,8 @@
 		{
 			"id": "Venom",
 			"name": "Veneno",
-			"description": "<p>Los ataques de la criatura están envenenados. Cuando causan Heridas, el oponente sufre 1 Estado de @Condition[Envenenado]. Si no se indica Dificultad alguna para resistir el Veneno, se supone que es Desafiante.</p>"
+			"description": "<p>Los ataques de la criatura están envenenados. Cuando causan Heridas, el oponente sufre 1 Estado de @Condition[Envenenado]. Si no se indica Dificultad alguna para resistir el Veneno, se supone que es Desafiante.</p>",
+			"effects": [{"_id":"cwsT8KWhr0OgtWc1","flags":{"wfrp4e":{"effectTrigger":"applyDamage","effectApplication":"actor","script":"if (args.totalWoundLoss > 0)\n    args.actor.addCondition(\"poisoned\")","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/traits/trait.png","label":"Veneno","tint":"","transfer":true}]
 		},
 		{
 			"id": "Vomit",

@@ -1,5 +1,4 @@
 Hooks.on("setup", () => {
-    // Register Advantage cap
     game.settings.register("wfrp4e-core", "initialized", {
         name: "Initialization",
         scope: "world",
