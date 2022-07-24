@@ -3,19 +3,19 @@
 "mapping": {
     "duration": {
       "path": "data.duration.value",
-      "converter": "spells_duration_range_target_damage"
+      "converter": "spells_duration_range_target"
     },
     "range": {
       "path": "data.range.value",
-      "converter": "spells_duration_range_target_damage"
+      "converter": "spells_duration_range_target"
     },
     "target": {
       "path": "data.target.value",
-      "converter": "spells_duration_range_target_damage"
+      "converter": "spells_duration_range_target"
     },    
     "damage": {
       "path": "data.damage.value",
-      "converter": "spells_duration_range_target_damage"
+      "converter": "spells_damage"
     },
     "overcast": "data.overcast.label",
     "effects": "effects"
@@ -214,7 +214,7 @@
 		{
 			"id": "Drowned Man's Face",
 			"name": "Rostro del ahogado",
-			"description": "<p>Imploras a Manann que ahogue a tus enemigos. Los pulmones de tu objetivo se llenan continuamente de agua salada mientras el Milagro permanece activo, y su cabello flota alrededor de su cabeza como si estuviera sumergido. Tus objetivos sufren 1 Estado de @Condition[Fatigado] y quedan sujetos a las reglas de @JournalEntry[Other Damage]{Ahogamiento y Asfixia} mientras el Milagro permanece activo. Cuando el Milagro acaba, tu objetivo debe superar un Chequeo <strong>Desafiante (-20)</strong> de <strong>Aguante</strong>. Si falla, además pasa al Estado @Condition[Tumbado]{Tumbado}.</p>"
+			"description": "<p>Imploras a Manann que ahogue a tus enemigos. Los pulmones de tu objetivo se llenan continuamente de agua salada mientras el Milagro permanece activo, y su cabello flota alrededor de su cabeza como si estuviera sumergido. Tus objetivos sufren 1 Estado de @Condition[Fatigado] y quedan sujetos a las reglas de @JournalEntry[Otros Daños]{Ahogamiento y Asfixia} mientras el Milagro permanece activo. Cuando el Milagro acaba, tu objetivo debe superar un Chequeo <strong>Desafiante (-20)</strong> de <strong>Aguante</strong>. Si falla, además pasa al Estado @Condition[Tumbado]{Tumbado}.</p>"
 		},
 		{
 			"id": "Eagle's Eye",

@@ -3,19 +3,19 @@
 "mapping": {
     "duration": {
       "path": "data.duration.value",
-      "converter": "spells_duration_range_target_damage"
+      "converter": "spells_duration_range_target"
     },
     "range": {
       "path": "data.range.value",
-      "converter": "spells_duration_range_target_damage"
+      "converter": "spells_duration_range_target"
     },
     "target": {
       "path": "data.target.value",
-      "converter": "spells_duration_range_target_damage"
+      "converter": "spells_duration_range_target"
     },    
     "damage": {
       "path": "data.damage.value",
-      "converter": "spells_duration_range_target_damage"
+      "converter": "spells_damage"
     },
     "overcast": "data.overcast.label",
     "overcastvalue": "data.overcast.valuePerOvercast.type",
@@ -2182,7 +2182,8 @@
 		{
 			"id": "Stream of Corruption",
 			"name": "Torrente de corrupción",
-			"description": "<p>Tu mandíbula se distiende horriblemente para que vomites una asquerosa corriente de suciedad enfermiza y de horror. Inmediatamente puedes llevar a cabo un ataque de Aliento como si hubieras gastado 2 Ventajas en activar el Rasgo de criatura @Compendium[wfrp4e-core.traits.uqGxFOEqeurwkAO3]{Aliento}. Cuenta como un proyectil mágico con un Daño igual a tu Bonificador por Resistencia e ignora los puntos de Armadura. El ataque también tiene los rasgos <em>Corrosivo</em> y <em>Veneno</em> indicados en el Rasgo de criatura Aliento . Además, si un objetivo sufre más Heridas que su Bonificador por Resistencia, debe superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Aguante</strong> o contraer @Compendium[wfrp4e-core.diseases.M8XyRs9DN12XsFTQ]{podredumbre sanguínea}. Por cada +2 NE conseguidos, también puedes incrementar el Daño en +2.</p>"
+			"description": "<p>Tu mandíbula se distiende horriblemente para que vomites una asquerosa corriente de suciedad enfermiza y de horror. Inmediatamente puedes llevar a cabo un ataque de Aliento como si hubieras gastado 2 Ventajas en activar el Rasgo de criatura @Compendium[wfrp4e-core.traits.uqGxFOEqeurwkAO3]{Aliento}. Cuenta como un proyectil mágico con un Daño igual a tu Bonificador por Resistencia e ignora los puntos de Armadura. El ataque también tiene los rasgos <em>Corrosivo</em> y <em>Veneno</em> indicados en el Rasgo de criatura Aliento . Además, si un objetivo sufre más Heridas que su Bonificador por Resistencia, debe superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Aguante</strong> o contraer @Compendium[wfrp4e-core.diseases.M8XyRs9DN12XsFTQ]{podredumbre sanguínea}. Por cada +2 NE conseguidos, también puedes incrementar el Daño en +2.</p>",
+			"effects":[{"_id":"KAXAHr5NdusLTz6k","changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/spells/nurgle.png","label":"Torrente de corrupción","transfer":false,"flags":{"wfrp4e":{"effectTrigger":"applyDamage","effectApplication":"damage","hide":false,"preventDuplicateEffects":false,"script":"if (args.totalWoundLoss > args.actor.characteristics.t.bonus)\n{\n  args.actor.setupSkill(\"Aguante\").then(async test => {\n    await test.roll()\n    if (test.result.outcome == \"failure\") {\n      let disease = await fromUuid(\"Compendium.wfrp4e-core.diseases.M8XyRs9DN12XsFTQ\")\n      disease = disease.toObject()\n      disease.data.duration.active = true\n      args.actor.createEmbeddedDocuments(\"Item\", [disease])\n    }\n  })\n}"}},"tint":null}]
 		},
 		{
 			"id": "Swift Passing",

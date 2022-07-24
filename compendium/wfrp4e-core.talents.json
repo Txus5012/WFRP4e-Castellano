@@ -568,7 +568,7 @@
 			"name": "Amenazador",
 			"description": "<p>Tienes una presencia imponente. Cuando utilizas la Habilidad Intimidar, obtienes un bonificador al NE igual a tus niveles de Amenazador.</p>",
 			"tests": "Intimidar",
-			"effects": [{"_id":"IRRiQjVGZiHjLnxt","flags":{"wfrp4e":{"effectApplication":"actor","preventDuplicateEffects":false,"effectTrigger":"dialogChoice","effectData":{"description":"Intimidar","modifier":null,"slBonus":1,"successBonus":null,"difficultyStep":null}}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/talents/menacing.png","label":"Amenazador","tint":null,"transfer":true}]
+			"effects": [{"_id":"IRRiQjVGZiHjLnxt","flags":{"wfrp4e":{"effectApplication":"actor","preventDuplicateEffects":false,"effectTrigger":"prefillDialog","effectData":{"description":"Intimidate","modifier":null,"slBonus":1,"successBonus":null,"difficultyStep":null},"hide":false,"script":"if (args.type == \"skill\" && args.item.name == game.i18n.localize(\"NAME.Intimidate\"))\n{\n    args.prefillModifiers.slBonus += 1\n}"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/talents/menacing.png","label":"Amenazador","tint":null,"transfer":true}]
 		},
 		{
 			"id": "Mimic",
@@ -715,7 +715,7 @@
 			"id": "Robust",
 			"name": "Robusto",
 			"description": "<p>Eres tan coriáceo como unas botas viejas, y absorbes el daño como si nada. Reduces todo el Daño que sufres en un +1 adicional por cada vez que has adquirido el Talento Robusto, pero aun así sufres un mínimo de 1 Herida de cualquier fuente de Daño.</p>",
-			"effects": [{"_id":"yTGSEMqLFPOts08w","flags":{"wfrp4e":{"effectTrigger":"takeDamage","effectApplication":"actor","script":"args.totalWoundLoss -= 1\nargs.messageElements.push(\"1 Robusto\")\n\nif (args.totalWoundLoss <= 0)\n{\nlet weapon = args.opposedTest.attackerTest.item\nif \n(weapon && weapon.properties.flaws.undamaging)\n   args.totalWoundLoss = 0\nelse\n  args.totalWoundLoss = 1\n}","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/talents/robust.png","label":"Robusto","tint":null,"transfer":true}]
+			"effects": [{"_id":"yTGSEMqLFPOts08w","flags":{"wfrp4e":{"effectTrigger":"takeDamage","effectApplication":"actor","script":"args.totalWoundLoss -= 1\nargs.messageElements.push(\"1 Robusto\")\n\nif (args.totalWoundLoss <= 0)\n{\nlet weapon = args.opposedTest.attackerTest.weapon\nif \n(weapon && weapon.properties.flaws.undamaging)\n   args.totalWoundLoss = 0\nelse\n  args.totalWoundLoss = 1\n}","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/talents/robust.png","label":"Robusto","tint":null,"transfer":true}]
 		},
 		{
 			"id": "Roughrider",
