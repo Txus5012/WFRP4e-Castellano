@@ -6,7 +6,7 @@ Han sido traducidas fichas, tarjetas de chat, menús, notificaciones, etc.
 
 La traducción incluye el sistema y el módulo básico. Ningún otro módulo está incluido.
 
-Traduce también el módulo [GM Toolkit (WFRP 4e)](https://github.com/Jagusti/fvtt-wfrp4e-gmtoolkit). ACTUALIZACIÓN: Leer [esto](https://github.com/Txus5012/WFRP4e-Castellano/wiki/Incompatibilidad-con-GM-Toolkit).
+Traduce también el módulo [GM Toolkit (WFRP 4e)](https://github.com/Jagusti/fvtt-wfrp4e-gmtoolkit).
 
 ## Inicialización
 
