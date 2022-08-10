@@ -1,6 +1,6 @@
 # WFRP4e - Español
 
-Traducción al castellano del sistema [Warhammer Fantasy Roleplay 4th Edition](https://foundryvtt.com/packages/wfrp4e) para Foundrt VTT basada en la traducción del libro básico por Devir.
+Traducción al castellano del sistema [Warhammer Fantasy Roleplay 4th Edition](https://foundryvtt.com/packages/wfrp4e) para Foundry VTT basada en la traducción del libro básico por Devir.
 
 Han sido traducidas fichas, tarjetas de chat, menús, notificaciones, etc.
 
