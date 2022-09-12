@@ -1,17 +1,17 @@
 {
 	"label": "Carreras",
 	"mapping": {
-	    "skills": "data.skills",
-	    "talents": "data.talents",
+	    "skills": "system.skills",
+	    "talents": "system.talents",
 	    "class": {
-		      "path": "data.class.value",
+		      "path": "system.class.value",
 		      "converter": "career_class"
 		    },
 	    "careergroup": {
-		      "path": "data.careergroup.value",
+		      "path": "system.careergroup.value",
 		      "converter": "career_careergroup"
 		    },
-	    "trappings": "data.trappings"
+	    "trappings": "system.trappings"
 },
 	"entries": [
 		{

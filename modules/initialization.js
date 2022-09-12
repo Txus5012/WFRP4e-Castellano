@@ -62,7 +62,7 @@ class WFRP4eContentInitialization extends Dialog {
                     label: "Inicializar",
                     callback: async () => {
                         game.settings.set("wfrp4e-core", "initialized", true)
-                        await new WFRP4eContentInitialization().initialize()
+                        await this.initialize()
                         ui.notifications.notify("Inicialización Completada")
                     }
                 },
@@ -104,7 +104,7 @@ class WFRP4eContentInitialization extends Dialog {
             fetch(`modules/wfrp4e-castellano/modules/initialization.json`).then(async r => r.json()).then(async json => {
                 let createdFolders = await Folder.create(json)
                 for (let folder of createdFolders)
-                    this.folders[folder.data.type][folder.data.name] = folder;
+                    this.folders[folder.type][folder.name] = folder;
 
                 for (let folderType in this.folders) {
                     for (let folder in this.folders[folderType]) {
@@ -126,10 +126,10 @@ class WFRP4eContentInitialization extends Dialog {
 
     async initializeEntities() {
 
-        let packList = this.data.module.data.flags.initializationPacks
+        let packList = this.data.module.flags.initializationPacks
 
         for (let pack of packList) {
-                        if (game.packs.get(pack).metadata.entity == "Scene")
+                        if (game.packs.get(pack).metadata.type == "Scene")
             {
                 this.scenePacks.push(pack)
                 continue
@@ -138,18 +138,18 @@ class WFRP4eContentInitialization extends Dialog {
             for (let document of documents) {
                 let folder = document.getFlag(this.moduleKey, "initialization-folder")
                 if (folder)
-                    document.data.update({ "folder": this.folders[document.documentName][folder].id })
-                if (document.data.flags[this.moduleKey].sort)
-                    document.data.update({ "sort": document.data.flags[this.moduleKey].sort })
+                    document.updateSource({ "folder": this.folders[document.documentName][folder].id })
+                if (document.getFlag(this.moduleKey, "sort"))
+                    document.updateSource({ "sort": document.flags[this.moduleKey].sort })
             }
             switch (documents[0].documentName) {
                 case "Actor":
-                    ui.notifications.notify(this.data.module.data.title + ": Inicializando Actores")
+                    ui.notifications.notify(this.data.module.title + ": Inicializando Actores")
                     let existingDocuments = documents.filter(i => game.actors.has(i.id))
                     let newDocuments = documents.filter(i => !game.actors.has(i.id))
-                    let createdActors = await Actor.create(newDocuments.map(c => c.data))
+                    let createdActors = await Actor.create(newDocuments)
                     for (let actor of createdActors)
-                        this.actors[actor.data.name] = actor
+                        this.actors[actor.name] = actor
                     for (let doc of existingDocuments)
                     {
                         let existing = game.actors.get(doc.id)
@@ -158,25 +158,25 @@ class WFRP4eContentInitialization extends Dialog {
                     }
                     break;
                 case "Item":
-                    ui.notifications.notify(this.data.module.data.title + ": Inicializando Objetos")
-                    await Item.create(documents.map(c => c.data))
+                    ui.notifications.notify(this.data.module.title + ": Inicializando Objetos")
+                    await Item.create(documents)
                     break;
                 case "JournalEntry":
-                    ui.notifications.notify(this.data.module.data.title + ": Inicializando Diarios")
-                    let createdEntries = await JournalEntry.create(documents.map(c => c.data))
+                    ui.notifications.notify(this.data.module.title + ": Inicializando Diarios")
+                    let createdEntries = await JournalEntry.create(documents)
                     for (let entry of createdEntries)
-                        this.journals[entry.data.name] = entry
+                        this.journals[entry.name] = entry
                     break;
 		case "RollTable":
-                    ui.notifications.notify(this.data.module.data.title + ": Inicializando Tablas")
-                    await RollTable.create(documents.map(c => c.data))
+                    ui.notifications.notify(this.data.module.title + ": Inicializando Tablas")
+                    await RollTable.create(documents)
                     break;
+                }
             }
         }
-    }
 
     async initializeScenes() {
-        ui.notifications.notify(this.data.module.data.title + ": Inicializando Escenas")
+        ui.notifications.notify(this.data.module.title + ": Inicializando Escenas")
         for (let pack of this.scenePacks)
         {
             let m = game.packs.get(pack)
@@ -184,9 +184,9 @@ class WFRP4eContentInitialization extends Dialog {
             for (let map of maps) {
                 let folder = map.getFlag(this.moduleKey, "initialization-folder")
                 if (folder)
-                    map.data.update({ "folder": this.folders["Scene"][folder].id })
+                    map.updateSource({ "folder": this.folders["Scene"][folder].id })
             }
-            await Scene.create(maps.map(m => m.data)).then(sceneArray => {
+            await Scene.create(maps).then(sceneArray => {
                 sceneArray.forEach(async s => {
                     let thumb = await s.createThumbnail();
                     s.update({ "thumb": thumb.thumb })

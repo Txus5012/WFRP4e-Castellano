@@ -760,18 +760,18 @@ game.wfrp4e.config.effectPlaceholder = {
 
 game.wfrp4e.config.speciesSkills = {
         "human": [
-                    "Criar Animales",
-                    "Carisma",
-                    "Frialdad",
-                    "Tasar",
-                    "Cotilleo",
-                    "Regatear",
-                    "Hablar idioma (Bretoniano)",
-                    "Hablar idioma (Tierras Desoladas)",
-                    "Mando",
-                    "Sabiduría académica (Reikland)",
-                    "Cuerpo a cuerpo (Básica)",
-                    "A distancia (Arco)"
+            "Criar Animales",
+            "Carisma",
+            "Frialdad",
+            "Tasar",
+            "Cotilleo",
+            "Regatear",
+            "Hablar idioma (Bretoniano)",
+            "Hablar idioma (Tierras Desoladas)",
+            "Mando",
+            "Sabiduría académica (Reikland)",
+            "Cuerpo a cuerpo (Básica)",
+            "A distancia (Arco)"
         ],
         "dwarf": [
             "Consumir Alcohol",

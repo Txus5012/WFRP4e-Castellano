@@ -2,11 +2,11 @@
 	"label": "Cr\u00EDticos",
 	"mapping": {
 		"wounds": {
-			"path": "data.wounds.value",
+			"path": "system.wounds.value",
 			"converter": "criticals_wounds"
 			},	
 		"location": {
-			"path": "data.location.value",
+			"path": "system.location.value",
 			"converter": "criticals_location"
 			},
 		"effects": "effects"

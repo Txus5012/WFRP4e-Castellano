@@ -2,14 +2,14 @@
 	"label": "Talentos",
 	"mapping": {
 		"specification_label": {
-			"path": "data.specification.label",
+			"path": "system.specification.label",
 			"converter": "talents_specification_label"
 			},
 		"specification": {
-			"path": "data.specification.value",
+			"path": "system.specification.value",
 			"converter": "talents_specification"
 			},
-		"tests": "data.tests.value",
+		"tests": "system.tests.value",
 		"effects": "effects"
 		 },
 	"entries": [

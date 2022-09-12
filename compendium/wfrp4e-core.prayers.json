@@ -2,22 +2,22 @@
 "label": "Plegarias",
 "mapping": {
     "duration": {
-      "path": "data.duration.value",
+      "path": "system.duration.value",
       "converter": "spells_duration_range_target"
     },
     "range": {
-      "path": "data.range.value",
+      "path": "system.range.value",
       "converter": "spells_duration_range_target"
     },
     "target": {
-      "path": "data.target.value",
+      "path": "system.target.value",
       "converter": "spells_duration_range_target"
     },    
     "damage": {
-      "path": "data.damage.value",
+      "path": "system.damage.value",
       "converter": "spells_damage"
     },
-    "overcast": "data.overcast.label",
+    "overcast": "system.overcast.label",
     "effects": "effects"
    },
 "entries": [

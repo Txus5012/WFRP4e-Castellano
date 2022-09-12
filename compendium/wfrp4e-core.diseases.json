@@ -1,19 +1,19 @@
 {
 	"label": "Enfermedades",
 	"mapping": {
-		"duration": "data.duration.value",
-		"contraction": "data.contraction.value",
-		"incubation": "data.incubation.value",
+		"duration": "system.duration.value",
+		"contraction": "system.contraction.value",
+		"incubation": "system.incubation.value",
 		"incubation_duration": {
-			"path": "data.incubation.unit",
+			"path": "system.incubation.unit",
 			"converter": "disease_units"
 			},
 		"duration": {
-			"path": "data.duration.unit",
+			"path": "system.duration.unit",
 			"converter": "disease_units"
 			},
-		"symptoms": "data.symptoms.value",
-		"permanent": "data.permanent.value",
+		"symptoms": "system.symptoms.value",
+		"permanent": "system.permanent.value",
 		"effects": "effects"
 		},
 	"entries": [

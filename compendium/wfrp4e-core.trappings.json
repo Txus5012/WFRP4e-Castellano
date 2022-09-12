@@ -2,14 +2,14 @@
 	"label": "Accesorios",
 	"mapping": { 
 		"penalties": {
-			"path": "data.penalty.value",
+			"path": "system.penalty.value",
 			"converter": "trappings_penalty"
 			},
 		"range": {
-			"path": "data.range.value",
+			"path": "system.range.value",
 			"converter": "trappings_range"
 			},
-		"special": "data.special.value",
+		"special": "system.special.value",
 		"effects": "effects"
 		},
 	"entries": [

@@ -179,6 +179,9 @@
     "SHEET.CareerSkillPrompt" : "Estás cambiado la especialización de una habilidad de tu carrera actual. ¿Quieres aplicar este cambio a la carrera también?",
     "SHEET.CareerSkillNotif" : "Cambiando {oldname} a {newname} en {career}",
     "SHEET.SortItems" : "Ordenar Objetos",
+    "SHEET.ArmourDamaged" : "Armadura Dañada en 1",
+    "SHEET.ArmourRepaired" : "Armadura Reparada en 1",
+    "SHEET.ThrowingAmmoError" : "El Grupo de Munición Arrojadiza está pensada para que otras armas usen armas Arrojadizas como munición. Las propias Armas Arrojadizas generalmente usan la categoría Ninguna.",
 
     "LOG.MemorizedSpell" : "Memorizado {name}",
     "LOG.GainPrayer" : "Obtenido {name}",
@@ -589,6 +592,8 @@
     "Post": "Enviar",
     "DIALOG.MemorizeSpell" : "Memorizar Hechizo",
     "DIALOG.MemorizeSpellContent" : "Memorizar este hechizo costará {xp} PX.",
+    "DIALOG.Advancement" : "Coste de Avances",
+    "DIALOG.AdvancementContent" : "Confirma o edita el coste de este avance.",
     "DIALOG.GainPrayer" : "Obtener Milagro",
     "DIALOG.GainPrayerContent" : "Obtener este milagro costará {xp} PX.",
     "LOG.CareerChange": "Cambio de carrera: {career}",
@@ -903,6 +908,8 @@
     "WFRP4E.Locations.lArm": "Brazo Izquierdo",
     "WFRP4E.Locations.rLeg": "Pierna Derecha",
     "WFRP4E.Locations.lLeg": "Pierna Izquierda",
+    "WFRP4E.Locations.arm": "Brazo",
+    "WFRP4E.Locations.leg": "Pierna",
     
     "WFRP4E.ScatterTable": "Desvío",
     "WFRP4E.Scatter.TopLeft": "Arriba Izquierda",
@@ -1067,6 +1074,8 @@
     "TIER.Gold" : "Oro",
     "TIER.Silver" : "Plata",
     "TIER.Brass" : "Bronce",
+    "g": "o",
+    "s": "p",
 
     "TABLE.ConvertTable" : "Convertir a tabla de WFRP4e",
     "TABLE.Lookup" : "Búsqueda: ",
@@ -1738,6 +1747,9 @@
   
     "GMTOOLKIT.Dialog.Apply": "Aplicar Cambios",    
     "GMTOOLKIT.Dialog.Cancel" : "Cancelar",
+    "GMTOOLKIT.Dialog.None" : "Ninguno",
+    "GMTOOLKIT.Dialog.NotAssigned" : "No Asignado",
+    "GMTOOLKIT.Dialog.ChooseTargets" : "Escoge Objetivos",
 
     "GMTOOLKIT.Token.Select": "Por favor haz objetivo primero a uno o más iconos.",
     "GMTOOLKIT.Token.SingleSelect": "Por favor haz objetivo primero a un icono.",
@@ -1853,6 +1865,8 @@
     "GMTOOLKIT.Settings.SessionTurnover.SessionID.hint" : "Reemplaza la variable %session% a la razón por defecto de la macro Add XP. Los números enteros se incrementan automáticamente al ejecutar la rutina Session Turnover. Alternativamente, establecer manualmente una frase más descriptiva (eg, \"Episodio 2.3\", \"Climax del Ritual\", etc).",
     "GMTOOLKIT.Settings.SessionTurnover.HoldingScene.name" : "Escena de Espera",
     "GMTOOLKIT.Settings.SessionTurnover.HoldingScene.hint" : "Nombre de la escena a la que hacer transición automáticamente entre sesiones. Activado mediante la rutina Session Turnover. Dejar en blanco para no cambiar la escena. Puede usarse para páginas de inicio y centros de campaña.",
+    "GMTOOLKIT.Settings.SessionTurnover.DefaultParty.name" : "Selección de Grupo Predeterminada",
+    "GMTOOLKIT.Settings.SessionTurnover.DefaultParty.hint" : "Escoge 'grupo' (por defecto) para incluir personajes asignados a jugadores, o 'compañía' para incluir también personajes propiedad de jugadores (como empleados, secuaces y familiares).",
  
     "GMTOOLKIT.Dialog.SessionTurnover.UpdateSessionID.Title" : "Actualizar ID de Sesión",
     "GMTOOLKIT.Dialog.SessionTurnover.UpdateSessionID.CurrentSession" : "La ID de sesión actual es {thisSession}.",
@@ -1878,7 +1892,6 @@
     "GMTOOLKIT.Dialog.MakeSecretGroupTest.SpecifySkillPlaceholder" : "Habilidad (Especialización)",
     "GMTOOLKIT.Dialog.MakeSecretGroupTest.SetSpecialisation" : "... y establecer Especialización",
     "GMTOOLKIT.Dialog.MakeSecretGroupTest.SetSpecialisationPlaceholder" : "Especialización",
-    "GMTOOLKIT.Dialog.MakeSecretGroupTest.ChooseTargets" : "Escoge Objetivos",
     "GMTOOLKIT.Dialog.MakeSecretGroupTest.SetTestParameters" : "Establecer Parámetros del Chequeo",
     "GMTOOLKIT.Dialog.MakeSecretGroupTest.RollTitle" : "Chequeo de {skill} ({actor})",
     "GMTOOLKIT.Dialog.MakeSecretGroupTest.RollTitleFallback" : "Chequeo de {characteristic} en lugar de {skill} ({actor})",
@@ -1903,7 +1916,7 @@
     "GMTOOLKIT.Settings.GroupTest.defaultTestModifier.name" : "Modificador de Chequeo Predeterminado",
     "GMTOOLKIT.Settings.GroupTest.defaultTestModifier.hint" : "Establece un modificador para los chequeos predeterminado. Ignorado al usar el diálogo de chequeo.",
     "GMTOOLKIT.Settings.GroupTest.defaultParty.name" : "Selección de Grupo Predeterminado",
-    "GMTOOLKIT.Settings.GroupTest.defaultParty.hint" : "Escoge 'grupo' (predeteminado) para incluir sólo personajes asignados a jugadores, o 'compañía' para incluir personajes no jugadores y criaturas propiedad de los jugadores (como empleados y secuaces). Pesonajes individuales pueden ser deseleccionados en el diálogo de Chequeo Grupal.",
+    "GMTOOLKIT.Settings.GroupTest.defaultParty.hint" : "Escoge 'grupo' (por defecto) para incluir sólo personajes asignados a jugadores, o 'compañía' para incluir personajes no jugadores y criaturas propiedad de los jugadores (como empleados y secuaces). Pesonajes individuales pueden ser deseleccionados en el diálogo de Chequeo Grupal.",
     "GMTOOLKIT.Settings.GroupTest.SummariseResultsThresholdGroupTest.name" : "Umbral de Resumen de los Resultados de Chequeo Grupal",
     "GMTOOLKIT.Settings.GroupTest.SummariseResultsThresholdGroupTest.hint" : "Combina los resultados de chequeos en un sólo mensaje de chat. Establece el número mínimo de chequeos que combinar. Establece 1 para mostrar siempre el resumen, o 0 para no mostrar nunca un mensaje de resumen.",
 
@@ -1940,6 +1953,8 @@
     "GMTOOLKIT.Settings.DarkWhispers.message.hint" : "Escoge el tono del Susurro Oscuro que más se ajuste a tu partida.", 
     "GMTOOLKIT.Settings.DarkWhispers.message.taunt" : "<p><strong>Los Dioses Oscuross pueden ver que estás en problemas.</strong></p><p><em>Por un discreto favor pueden aliviarte de 1 de Corrupción.</em></p><blockquote>{message}</blockquote><p>¿Qué daño puede hacer? Acepta la oferta y aléjate del umbral del Chaos.</p>",
     "GMTOOLKIT.Settings.DarkWhispers.message.threat" : "<p><strong>Los Susurros Oscuros Persisten En Tus Oídos... </strong></p><p><em>De ningún modo reveles que has recibido este mensaje.</em></p><blockquote>{message}</blockquote><p>Si haces lo que se te indica, tu total de Corrupción se reducirá en 1.</p>", 
+    "GMTOOLKIT.Settings.DarkWhispers.DefaultGroup.name" : "Selección de Grupo Predeterminado",
+    "GMTOOLKIT.Settings.DarkWhispers.DefaultGroup.hint" : "Escoge 'grupo' (por defecto) para incluir personajes asignados a jugadores, o 'compañía' para incluir también personajes propiedad de jugadores (como empleados, secuaces y familiares). Pesonajes individuales pueden ser deseleccionados en el diálogo de Chequeo Grupal.", 
     "GMTOOLKIT.Notification.NoActor" : "Ningún Personaje está seleccionado o asociado con {currentuser}.",
     "GMTOOLKIT.Notification.UserMustBePlayer" : "Sólo los personajes jugadores pueden {action}.", 
 
@@ -1959,6 +1974,7 @@
     "GMTOOLKIT.Macro.GMToolbox": "GM Toolbox",
     "GMTOOLKIT.Macro.ToggleCompendiumPackVisibility": "Cambiar Visibilidad de Pack de Compendios",
     "GMTOOLKIT.Macro.CheckConditions": "Comprobar Estados",
+    "GMTOOLKIT.Macro.LaunchDamageConsole": "Iniciar Consola de Daño",    
     
     "GMTOOLKIT.Table.DarkWhispers": "Susurros Oscuros",
 
@@ -1972,6 +1988,26 @@
     "GMTOOLKIT.Settings.Maintenance.menu.name" : "Mantenimiento del Modulo",
     "GMTOOLKIT.Settings.Maintenance.menu.hint" : "Reemplaza macros y/o tablas de GM Toolkit importadas con las últimas versiones de compendio.", 
     "GMTOOLKIT.Settings.Maintenance.menu.label" : "Actualizar Contenido de GM Toolkit",
+
+    "GMTOOLKIT.Damage.Dialog.Title" : "Consola de Daño",
+    "GMTOOLKIT.Damage.Message.Abort" : "Consola de Daño cerrada. No se ha infligido daño.",
+    "GMTOOLKIT.Damage.Message.CannotApplyDamage" : "No se puede aplicar daño a ${character}.",
+    "GMTOOLKIT.Damage.Message.At0Wounds" : "Con 0 Heridas",
+    "GMTOOLKIT.Damage.Dialog.SetDamageCriteria" : "Establecer Criterio de Daño",
+    "GMTOOLKIT.Damage.Dialog.DamageFormula.Label" : "Daño",
+    "GMTOOLKIT.Damage.Dialog.DamageFormula.Hint" : "A número entero o fórmula de tirada para la cantidad de daño a aplicar",
+    "GMTOOLKIT.Damage.Dialog.RandomiseDamage.Label" : "Tira daño para cada objetivo",
+    "GMTOOLKIT.Damage.Dialog.RandomiseDamage.Hint" : "Aleatorizar daño para cada objetivo si se provee una fórmula de daño válida",
+    "GMTOOLKIT.Damage.Dialog.HitLocation.Label" : "Ubicación de Impacto",
+    "GMTOOLKIT.Damage.Dialog.HitLocation.Hint" : "Escoge 'Tirada' para aleatoricar la ubicación de impacto o para criaturas no-humanoides",
+    "GMTOOLKIT.Damage.Dialog.RandomiseHitLocation.Label" : "Tirar ubicación de impacto para cada objetivo",
+    "GMTOOLKIT.Damage.Dialog.RandomiseHitLocation.Hint" : "Aleatorizar la ubicación de impacto para cada objetivo si 'Tirada' está seleccionada",
+    "GMTOOLKIT.Damage.Dialog.IgnoreTB.Label" : "Ignorar BR",
+    "GMTOOLKIT.Damage.Dialog.IgnoreTB.Hint" : "Ignora el Bonificador por Resistencia",
+    "GMTOOLKIT.Damage.Dialog.IgnoreAP.Label" : "Ignorar PA",
+    "GMTOOLKIT.Damage.Dialog.IgnoreAP.Hint" : "Ignorar los Puntos de Armadura",
+    "GMTOOLKIT.Damage.Dialog.MinimumOne.Label" : "Mínimo 1 de Daño",
+    "GMTOOLKIT.Damage.Dialog.MinimumOne.Hint" : "Aplica al menos 1 punto de daño tras las reducciones por Bonificador por Resistencia y armadura",
 
     "ROLL.AstoundingSuccess" : "Éxito asombroso. '¡Sí, perfectamente!'",
     "ROLL.ImpressiveSuccess" : "Éxito impresionante. 'Sí, y además...'",

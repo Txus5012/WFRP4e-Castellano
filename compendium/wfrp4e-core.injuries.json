@@ -2,12 +2,12 @@
 	"label": "Heridas",
 	"mapping": {
 		"location": {
-			"path": "data.location.value",
+			"path": "system.location.value",
 			"converter": "injuries_location"
 			},
-		"penalty": "data.penalty.value",
+		"penalty": "system.penalty.value",
 		"duration": {
-			"path": "data.duration.value",
+			"path": "system.duration.value",
 			"converter": "injuries_duration"
 			},
 		"effects": "effects"

@@ -1,13 +1,13 @@
 {
 	"label": "Rasgos",
 	"mapping": {
-		"roll": "data.rollable.skill",
+		"roll": "system.rollable.skill",
 		"specification_label": {
-			"path": "data.specification.label",
+			"path": "system.specification.label",
 			"converter": "traits_specification_label"
 			},
 		"specification": {
-			"path": "data.specification.value",
+			"path": "system.specification.value",
 			"converter": "traits_specification"
 			},
 		"effects": "effects"
