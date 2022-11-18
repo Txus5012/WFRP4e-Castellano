@@ -6,7 +6,7 @@ Han sido traducidas fichas, tarjetas de chat, menús, notificaciones, etc.
 
 La traducción incluye el sistema y el módulo básico. Ningún otro módulo está incluido.
 
-Traduce también el módulo [GM Toolkit (WFRP 4e)](https://github.com/Jagusti/fvtt-wfrp4e-gmtoolkit).
+Traduce también los módulos [GM Toolkit (WFRP 4e)](https://github.com/Jagusti/fvtt-wfrp4e-gmtoolkit) y [[WFRP4] NPC generator](https://gitlab.com/greenskin-foundryvtt/wfrp4e-npc-generator).
 
 ## Inicialización
 
