@@ -119,7 +119,7 @@ game.wfrp4e.config.symptomEffects = {
                         args.prefillModifiers.modifier -= 10
                     else if (args.type == "characteristic")
                     {
-                        if (applicableCharacteristics.includes(args.item.key))
+                        if (applicableCharacteristics.includes(args.item))
                             args.prefillModifiers.modifier -= 10
                     }
                     else if (args.type == "skill")
@@ -241,7 +241,7 @@ game.wfrp4e.config.symptomEffects = {
                             if (args.item.characteristic.key == "fel")
                                 args.prefillModifiers.modifier -= 10
                         }
-                    }`
+                    `
                 }
             }
         },
@@ -376,6 +376,7 @@ game.wfrp4e.config.effectTriggers = {
     "targetPrefillDialog" : "Prellenar Diálogo del Objetivo",
     "getInitiativeFormula" : "Conseguir Iniciativa",
     "endTurn" : "Fin del Turno",
+    "startTurn" : "Comienzo del Turno",
     "endRound" : "Fin del Asalto",
     "endCombat" : "Fin del Combate"
 }
@@ -402,7 +403,7 @@ game.wfrp4e.config.effectPlaceholder = {
     item: el objeto del tipo mencionado usado
     options: otros detalles sobre el chequeo (options.rest u options.mutate por ejemplo)
     
-    Example: 
+    Ejemplo: 
     if (args.type == "skill" && args.item.name == "Atletismo") args.prefillModifiers.modifier += 10`,
 
     "prePrepareData" : 
@@ -430,16 +431,16 @@ game.wfrp4e.config.effectPlaceholder = {
     `Este efecto se aplica justo antes del cálculo de heridas, ideal para cambiar atributos o añadir multiplicadores
 
     actor : actor propietario del efecto
-    sb : Bono por Fuerza
-    tb : Bono por Resistencia
-    wpb : Bono por Voluntad
+    sb : Bonificador por Fuerza
+    tb : Bonificador por Resistencia
+    wpb : Bonificador por Voluntad
     multiplier : {
         sb : Multiplicador de BF
         tb : Multiplicador de BR
-        wpb : Modificador de BVol
+        wpb : Multiplicador de BVol
     }
 
-    e.g. para Hardy: "args.multiplier.tb += 1"
+    p.ej. para Recio: "args.multiplier.tb += 1"
     `,
 
     "woundCalc" : 
@@ -450,7 +451,14 @@ game.wfrp4e.config.effectPlaceholder = {
     actor : actor propietario del efecto
     wounds : heridas calculadas
 
-    e.g. for Swarm: "wounds *= 5"
+    p.ej. para Plaga: "wounds *= 5"
+    `,
+
+    "calculateSize" : 
+    `Este efecto se aplica tras el cálculo de tamaño, que puede ser invalidado.
+    args:
+    size : Valor del tamaño
+    p.ej. para Pequeño: "args.size = 'sml'"
     `,
 
     "preApplyDamage" : 
@@ -460,7 +468,12 @@ game.wfrp4e.config.effectPlaceholder = {
     actor : actor que recibe daño
     attacker : actor atacante
     opposedTest : objeto que contiene los datos del chequeo enfrentado
-    damageType : tipo de daño seleccionado (ignora TB, AP, etc.)
+    damageType : tipo de daño seleccionado (ignora BR, PA, etc.)
+    weaponProperties : objeto de cualidades/defectos del arma atacante
+    applyAP : si los PA reducen el daño
+    applyTB : si la BR reduce el daño
+    totalWoundLoss : Total de Heridas Perdidas ANTES DE LAS REDUCCIONES
+    AP : Objeto de la PA del defensor
     `,
     "applyDamage" : 
     `Este efecto ocurre después calcular el daño en un chequeo enfrentado, pero antes de actualizar los datos del actor.
@@ -470,7 +483,7 @@ game.wfrp4e.config.effectPlaceholder = {
     actor : actor que recibe daño
     attacker : actor atacante
     opposedTest : objeto que contiene los datos del chequeo enfrentado
-    damageType : tipo de daño seleccionado (ignora TB, AP, etc.)
+    damageType : tipo de daño seleccionado (ignora BR, PA, etc.)
     totalWoundLoss : Heridas perdidas tras mitigaciones
     AP : datos sobre los PA usados
     updateMsg : secuencia inicial para el mensaje de actualización de daño
@@ -485,7 +498,7 @@ game.wfrp4e.config.effectPlaceholder = {
     actor : actor que recibe daño
     attacker : actor atacante
     opposedTest : objeto que contiene los datos del chequeo enfrentado
-    damageType : tipo de daño seleccionado (ignora TB, AP, etc.)
+    damageType : tipo de daño seleccionado (ignora BR, PA, etc.)
     `,
     
     "takeDamage" : 
@@ -496,7 +509,7 @@ game.wfrp4e.config.effectPlaceholder = {
     actor : actor que recibe daño
     attacker : actor atacante
     opposedTest : objeto que contiene los datos del chequeo enfrentado
-    damageType : tipo de daño seleccionado (ignora TB, AP, etc.)
+    damageType : tipo de daño seleccionado (ignora BR, PA, etc.)
     totalWoundLoss : Heridas perdidas tras mitigaciones
     AP : datos sobre los PA usados
     updateMsg : secuencia inicial para el mensaje de actualización de daño
@@ -702,7 +715,9 @@ game.wfrp4e.config.effectPlaceholder = {
     damage : daño inicial antes de multiplicadores
     damageMultiplier : multiplicadores calculado en base a la diferencia de tamaño
     sizeDiff : diferencia numérica de tamaño, que será usada para añadir dañina/impactante
-    opposedTest : opposedTest object
+    opposedTest : objeto del chequeo enfrentado,
+    addDamaging : si añadir la cualidad Dañina 
+    addImpact : si añadir la cualidad Impactante
     `,
 
     "getInitiativeFormula" : 
@@ -715,6 +730,7 @@ game.wfrp4e.config.effectPlaceholder = {
 
     "targetPrefillDialog" : 
     `Este efecto se aplica a otro actor cuando hacen objetivo a este actor, y debería cambiar los valores prellenados en la sección de bonos
+    
     args:
 
     prefillModifiers : {modifier, difficulty, slBonus, successBonus}
@@ -722,7 +738,7 @@ game.wfrp4e.config.effectPlaceholder = {
     item: el objeto del tipo mencionado usado
     options: otros detalles sobre el chequeo (options.rest u options.mutate por ejemplo)
     
-    Example: 
+    Ejemplo: 
     if (args.type == "skill" && args.item.name == "Athletics") args.prefillModifiers.modifier += 10`,
 
     "endTurn" : 
@@ -733,6 +749,14 @@ game.wfrp4e.config.effectPlaceholder = {
     combat: combate actual
     `,
 
+    "startTurn" : 
+    `Este efecto se ejecuta al comienzo del turno del actor
+    
+    args:
+    
+    combat: combate actual
+    `,
+
     "endRound" :  
     `Este efecto se ejecuta al final del asalto
 
@@ -740,6 +764,7 @@ game.wfrp4e.config.effectPlaceholder = {
 
     combat: combate actual
     `,
+    
     "endCombat" :  
     `Este efecto se ejecuta al terminar el combate
 
@@ -754,13 +779,14 @@ game.wfrp4e.config.effectPlaceholder = {
     Todos los efectos tienen acceso a: 
         this.actor : actor ejecutando el efecto
         this.effect : efecto ejecutado
-        this.item : objeto que posee el efecto, si el efecto proviene de un objeto`
+        this.item : objeto que posee el efecto, si el efecto proviene de un objeto
+    `
 
 }
 
 game.wfrp4e.config.speciesSkills = {
         "human": [
-            "Criar Animales",
+            "Criar animales",
             "Carisma",
             "Frialdad",
             "Tasar",
@@ -774,7 +800,7 @@ game.wfrp4e.config.speciesSkills = {
             "A distancia (Arco)"
         ],
         "dwarf": [
-            "Consumir Alcohol",
+            "Consumir alcohol",
             "Frialdad",
             "Aguante",
             "Animar (Relatar)",
@@ -789,7 +815,7 @@ game.wfrp4e.config.speciesSkills = {
         ],
         "halfling": [
             "Carisma",
-            "Consumir Alcohol",
+            "Consumir alcohol",
             "Esquivar",
             "Juego",
             "Regatear",
@@ -875,7 +901,7 @@ game.wfrp4e.config.subspecies = {
             reiklander: {
                 name: "Reiklandés",
                 skills: [
-                    "Criar Animales",
+                    "Criar animales",
                     "Carisma",
                     "Frialdad",
                     "Tasar",
@@ -897,6 +923,25 @@ game.wfrp4e.config.subspecies = {
         }
     }
 
+game.wfrp4e.config.classTrappings = {
+        "Académicos": "Bandolera que contiene Material de escritura y 1d10 hojas de pergamino, Daga, Ropas, Bolsa",
+        "Académico": "Bandolera que contiene Material de escritura y 1d10 hojas de pergamino, Daga, Ropas, Bolsa",
+        "Burgueses": "Bandolera que contiene el almuerzo, Capa, Daga, Ropas, Bolsa, Sombrero",
+        "Burgués": "Bandolera que contiene el almuerzo, Capa, Daga, Ropas, Bolsa, Sombrero",
+        "Cortesanos": "Daga, Ropas de calidad, Bolsa conteniendo unas Pinzas, Limpiaorejas, Peine",
+        "Cortesano": "Daga, Ropas de calidad, Bolsa conteniendo unas Pinzas, Limpiaorejas, Peine",
+        "Campesinos": "Bandolera que contiene Raciones (1 día), Capa, Daga, Ropas, Bolsa",
+        "Campesino": "Bandolera que contiene Raciones (1 día), Capa, Daga, Ropas, Bolsa",
+        "Rurales": "Capa, Daga, Mochila que contiene un Yesquero, Ropas, Bolsa, Manta, Raciones (1 día)",
+        "Rural": "Capa, Daga, Mochila que contiene un Yesquero, Ropas, Bolsa, Manta, Raciones (1 día)",
+        "Ribereños": "Bandolera que contiene un Frasco de alcohol, Capa, Daga, Ropas, Bolsa",
+	"Ribereño": "Bandolera que contiene un Frasco de alcohol, Capa, Daga, Ropas, Bolsa",
+        "Pícaros": "Bandolera que contiene 2 Velas, 1d10 Cerillas, Capucha o Máscara, Daga, Ropas, Bolsa",
+        "Pícaro": "Bandolera que contiene 2 Velas, 1d10 Cerillas, Capucha o Máscara, Daga, Ropas, Bolsa",
+        "Guerreros": "Daga, Ropas, Bolsa, Un arma cuerpo a cuerpo",
+        "Guerrero": "Daga, Ropas, Bolsa, Un arma cuerpo a cuerpo",
+    }
+
 game.wfrp4e.config.loreEffects = {
         "beasts": {
             label: "Saber de las Bestias",
@@ -909,7 +954,7 @@ game.wfrp4e.config.loreEffects = {
                     "lore": true,
                     "script": `
                     let value = 1
-                    let name = this.actor.data.token.name
+                    let name = this.actor.token.name
                     
                     if (game.user.isGM) {
                         game.user.targets.forEach(t => {
@@ -1048,7 +1093,7 @@ game.wfrp4e.config.loreEffects = {
                                 if (fatigued) this.actor.removeCondition("fatigued", fatigued.flags.wfrp4e.value)
                             }
                             else if (this.actor.has(game.i18n.localize("NAME.Undead")))
-                                this.actor.applyBasicDamage(caster.data.data.characteristics.wp.bonus, {damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL});
+                                this.actor.applyBasicDamage(caster.system.characteristics.wp.bonus, {damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL});
                         }
                     })`
                 }
@@ -1069,7 +1114,7 @@ game.wfrp4e.config.loreEffects = {
                     {
                         let bleeding = this.actor.addCondition("blinded")
                         if (this.actor.has(game.i18n.localize("NAME.Undead")) || this.actor.has(game.i18n.localize("NAME.Daemonic")))
-                            this.actor.applyBasicDamage(caster.data.data.characteristics.int.bonus, {damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL});
+                            this.actor.applyBasicDamage(caster.system.characteristics.int.bonus, {damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL});
                     }
                 })`
                 }

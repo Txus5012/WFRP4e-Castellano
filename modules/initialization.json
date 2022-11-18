@@ -1,9 +1,202 @@
 [
     {
-        "_id": "s1OKLt8NaSnDVP4D",
+        "name": "Tablas de Carrera",
+        "type": "RollTable",
+        "sorting": "a",
+        "sort": 0,
+        "color": null,
+        "flags": {
+            "wfrp4e-core": {
+                "initialization-parent": "Libro B\u00E1sico"
+            }
+        },
+        "folder": "q1AenxsJIhvixsjL",
+        "description": "",
+        "_stats": {
+            "systemId": "wfrp4e",
+            "systemVersion": "6.1.2",
+            "coreVersion": "10.285",
+            "createdTime": null,
+            "modifiedTime": 1663710536682,
+            "lastModifiedBy": "FIIsUxJ6xGvEDRPV"
+        },
+        "_id": "vcD5l8Ww9gJTzBPI"
+    },
+    {
+        "name": "Creaci\u00F3n de Personaje",
+        "type": "RollTable",
+        "sorting": "a",
+        "sort": 0,
+        "color": null,
+        "flags": {
+            "wfrp4e-core": {
+                "initialization-parent": "Libro B\u00E1sico"
+            }
+        },
+        "folder": "q1AenxsJIhvixsjL",
+        "description": "",
+        "_stats": {
+            "systemId": "wfrp4e",
+            "systemVersion": "6.1.2",
+            "coreVersion": "10.285",
+            "createdTime": null,
+            "modifiedTime": 1663710536683,
+            "lastModifiedBy": "FIIsUxJ6xGvEDRPV"
+        },
+        "_id": "WZc6Typd7rDDY51M"
+    },
+    {
+        "name": "Libro B\u00E1sico",
+        "sorting": "a",
+        "folder": null,
+        "type": "Scene",
+        "description": "",
+        "sort": 100000,
+        "color": "#465967",
+        "flags": {},
+        "_stats": {
+            "systemId": "wfrp4e",
+            "systemVersion": "6.1.2",
+            "coreVersion": "10.285",
+            "createdTime": null,
+            "modifiedTime": 1663710298081,
+            "lastModifiedBy": "FIIsUxJ6xGvEDRPV"
+        },
+        "_id": "0vhqcALLQQv8B5Sp"
+    },
+    {
+        "name": "Libro B\u00E1sico",
+        "sorting": "m",
+        "folder": null,
+        "type": "JournalEntry",
+        "description": "",
+        "sort": 100000,
+        "color": "#465967",
+        "flags": {},
+        "_stats": {
+            "systemId": "wfrp4e",
+            "systemVersion": "6.1.2",
+            "coreVersion": "10.285",
+            "createdTime": null,
+            "modifiedTime": 1663565823896,
+            "lastModifiedBy": "FIIsUxJ6xGvEDRPV"
+        },
+        "_id": "HYzAOEJnEEdE4b96"
+    },
+    {
+        "name": "Libro B\u00E1sico",
+        "type": "RollTable",
+        "sorting": "a",
+        "sort": 100000,
+        "color": "#465967",
+        "flags": {},
+        "folder": null,
+        "description": "",
+        "_stats": {
+            "systemId": "wfrp4e",
+            "systemVersion": "6.1.2",
+            "coreVersion": "10.285",
+            "createdTime": null,
+            "modifiedTime": 1663565696574,
+            "lastModifiedBy": "FIIsUxJ6xGvEDRPV"
+        },
+        "_id": "q1AenxsJIhvixsjL"
+    },
+    {
+        "name": "Tablas de Corrupci\u00F3n y Mutaci\u00F3n",
+        "type": "RollTable",
+        "sorting": "a",
+        "sort": 0,
+        "color": null,
+        "flags": {
+            "wfrp4e-core": {
+                "initialization-parent": "Libro B\u00E1sico"
+            }
+        },
+        "folder": "q1AenxsJIhvixsjL",
+        "description": "",
+        "_stats": {
+            "systemId": "wfrp4e",
+            "systemVersion": "6.1.2",
+            "coreVersion": "10.285",
+            "createdTime": null,
+            "modifiedTime": 1663710536684,
+            "lastModifiedBy": "FIIsUxJ6xGvEDRPV"
+        },
+        "_id": "A4cOzevSXv4qgo5T"
+    },
+    {
+        "name": "Tablas de Impactos Cr\u00EDticos",
+        "type": "RollTable",
+        "sorting": "a",
+        "sort": 0,
+        "color": null,
+        "flags": {
+            "wfrp4e-core": {
+                "initialization-parent": "Libro B\u00E1sico"
+            }
+        },
+        "folder": "q1AenxsJIhvixsjL",
+        "description": "",
+        "_stats": {
+            "systemId": "wfrp4e",
+            "systemVersion": "6.1.2",
+            "coreVersion": "10.285",
+            "createdTime": null,
+            "modifiedTime": 1663710536685,
+            "lastModifiedBy": "FIIsUxJ6xGvEDRPV"
+        },
+        "_id": "8weGmitrDTLOOfUO"
+    },
+    {
+        "name": "Libreta de DJ",
+        "type": "RollTable",
+        "sorting": "a",
+        "sort": 0,
+        "color": null,
+        "flags": {
+            "wfrp4e-core": {
+                "initialization-parent": "Libro B\u00E1sico"
+            }
+        },
+        "folder": "q1AenxsJIhvixsjL",
+        "description": "",
+        "_stats": {
+            "systemId": "wfrp4e",
+            "systemVersion": "6.1.2",
+            "coreVersion": "10.285",
+            "createdTime": null,
+            "modifiedTime": 1663710536685,
+            "lastModifiedBy": "FIIsUxJ6xGvEDRPV"
+        },
+        "_id": "F25MxXYFzfwINMte"
+    },
+    {
+        "name": "Ubicaci\u00F3n de Impacto",
+        "type": "RollTable",
+        "sorting": "a",
+        "sort": 0,
+        "color": null,
+        "flags": {
+            "wfrp4e-core": {
+                "initialization-parent": "Libro B\u00E1sico"
+            }
+        },
+        "folder": "q1AenxsJIhvixsjL",
+        "description": "",
+        "_stats": {
+            "systemId": "wfrp4e",
+            "systemVersion": "6.1.2",
+            "coreVersion": "10.285",
+            "createdTime": null,
+            "modifiedTime": 1663710536686,
+            "lastModifiedBy": "FIIsUxJ6xGvEDRPV"
+        },
+        "_id": "sZWF0nhzpyWwDHIh"
+    },
+    {
         "name": "Reglas Caseras de Moo",
         "type": "RollTable",
-        "parent": "IOi5NXhlmBA1Dsdj",
         "sorting": "a",
         "sort": 100000,
         "color": null,
@@ -12,444 +205,19 @@
                 "sourceId": "Folder.s1OKLt8NaSnDVP4D"
             },
             "wfrp4e-core": {
-                "initialization-parent": "B\u00E1sico"
-            }
-        }
-    },
-    {
-        "name": "Bestiario",
-        "type": "JournalEntry",
-        "sort": 600000,
-        "flags": {},
-        "parent": null,
-        "sorting": "m",
-        "color": "#3c284d",
-        "_id": "UQFDMkdBcfIo5dsW"
-    },
-    {
-        "name": "Entre Aventuras",
-        "type": "JournalEntry",
-        "sort": 300000,
-        "flags": {},
-        "parent": null,
-        "sorting": "m",
-        "color": "#442747",
-        "_id": "tSDVDL203n1CuHrx"
-    },
-    {
-        "_id": "cqEvw1RQ13nRhW9U",
-        "name": "Tablas de Carrera",
-        "type": "RollTable",
-        "parent": "IOi5NXhlmBA1Dsdj",
-        "sorting": "a",
-        "sort": 0,
-        "color": null,
-        "flags": {
-            "wfrp4e-core": {
-                "initialization-parent": "B\u00E1sico"
-            }
-        }
-    },
-    {
-        "name": "Personaje",
-        "type": "JournalEntry",
-        "sort": 2200000,
-        "flags": {
-            "wfrp4e": {
-                "initialization-parent": "Reglas"
-            },
-            "wfrp4e-core": {
-                "initialization-parent": "Reglas"
+                "initialization-parent": "Libro B\u00E1sico"
             }
         },
-        "parent": "IRYcgcaFaECyX1Zl",
-        "sorting": "m",
-        "color": "",
-        "_id": "RoZNad8gIntnckpH"
-    },
-    {
-        "_id": "roxBZKpboomqALA6",
-        "name": "Creaci\u00F3n de Personaje",
-        "type": "RollTable",
-        "parent": "IOi5NXhlmBA1Dsdj",
-        "sorting": "a",
-        "sort": 0,
-        "color": null,
-        "flags": {
-            "wfrp4e-core": {
-                "initialization-parent": "B\u00E1sico"
-            }
-        }
-    },
-    {
-        "name": "Empresas de Clase",
-        "type": "JournalEntry",
-        "sort": 2600000,
-        "flags": {
-            "wfrp4e": {
-                "initialization-parent": "Empresas"
-            },
-            "wfrp4e-core": {
-                "initialization-parent": "Empresas"
-            }
+        "folder": "q1AenxsJIhvixsjL",
+        "description": "",
+        "_stats": {
+            "systemId": "wfrp4e",
+            "systemVersion": "6.1.2",
+            "coreVersion": "10.285",
+            "createdTime": null,
+            "modifiedTime": 1663710536687,
+            "lastModifiedBy": "FIIsUxJ6xGvEDRPV"
         },
-        "parent": "1I1wYpOqZEJ0884c",
-        "sorting": "m",
-        "color": "",
-        "_id": "sfFei0QOoIkDMthL"
-    },
-    {
-        "name": "Combate",
-        "type": "JournalEntry",
-        "sort": 2300000,
-        "flags": {
-            "wfrp4e": {
-                "initialization-parent": "Reglas"
-            },
-            "wfrp4e-core": {
-                "initialization-parent": "Reglas"
-            }
-        },
-        "parent": "IRYcgcaFaECyX1Zl",
-        "sorting": "m",
-        "color": "",
-        "_id": "PY5EE25TjCM3CWxf"
-    },
-    {
-        "_id": "IOi5NXhlmBA1Dsdj",
-        "name": "B\u00E1sico",
-        "type": "RollTable",
-        "parent": null,
-        "sorting": "a",
-        "sort": 0,
-        "color": null,
-        "flags": {}
-    },
-    {
-        "_id": "zJOG90LgQOqGoTHU",
-        "name": "Tablas de Corrupci\u00F3n y Mutaci\u00F3n",
-        "type": "RollTable",
-        "parent": "IOi5NXhlmBA1Dsdj",
-        "sorting": "a",
-        "sort": 0,
-        "color": null,
-        "flags": {
-            "wfrp4e-core": {
-                "initialization-parent": "B\u00E1sico"
-            }
-        }
-    },
-    {
-        "_id": "Sx2Ll81ooGBdzZVR",
-        "name": "Tablas de Impactos Cr\u00EDticos",
-        "type": "RollTable",
-        "parent": "IOi5NXhlmBA1Dsdj",
-        "sorting": "a",
-        "sort": 0,
-        "color": null,
-        "flags": {
-            "wfrp4e-core": {
-                "initialization-parent": "B\u00E1sico"
-            }
-        }
-    },
-    {
-        "name": "Empresas",
-        "type": "JournalEntry",
-        "sort": 100000,
-        "flags": {
-            "wfrp4e": {
-                "initialization-parent": "Entre Aventuras"
-            },
-            "wfrp4e-core": {
-                "initialization-parent": "Entre Aventuras"
-            }
-        },
-        "parent": "tSDVDL203n1CuHrx",
-        "sorting": "m",
-        "color": "",
-        "_id": "1I1wYpOqZEJ0884c"
-    },
-    {
-        "name": "Empresas Generales",
-        "type": "JournalEntry",
-        "sort": 2500000,
-        "flags": {
-            "wfrp4e": {
-                "initialization-parent": "Empresas"
-            },
-            "wfrp4e-core": {
-                "initialization-parent": "Empresas"
-            }
-        },
-        "parent": "1I1wYpOqZEJ0884c",
-        "sorting": "m",
-        "color": "",
-        "_id": "XCBfDO1rPnLSeKop"
-    },
-    {
-        "_id": "TkFGqnexnGTXOcxn",
-        "name": "Libreta de DJ",
-        "type": "RollTable",
-        "parent": "IOi5NXhlmBA1Dsdj",
-        "sorting": "a",
-        "sort": 0,
-        "color": null,
-        "flags": {
-            "wfrp4e-core": {
-                "initialization-parent": "B\u00E1sico"
-            }
-        }
-    },
-    {
-        "name": "Gu\u00EDa del DJ",
-        "type": "JournalEntry",
-        "sort": 550000,
-        "flags": {},
-        "parent": null,
-        "sorting": "m",
-        "color": "#7b1717",
-        "_id": "UeqRQLtfnOR3miYd"
-    },
-    {
-        "_id": "3PxykgIU3sc9vLkF",
-        "name": "Ubicaci\u00F3n de Impacto",
-        "type": "RollTable",
-        "parent": "IOi5NXhlmBA1Dsdj",
-        "sorting": "a",
-        "sort": 0,
-        "color": null,
-        "flags": {
-            "wfrp4e-core": {
-                "initialization-parent": "B\u00E1sico"
-            }
-        }
-    },
-    {
-        "name": "Magia",
-        "type": "JournalEntry",
-        "sort": 500000,
-        "flags": {},
-        "parent": null,
-        "sorting": "m",
-        "color": "#6c6217",
-        "_id": "GofHd2OC7ZxP1IDb"
-    },
-    {
-        "name": "Monta\u00F1as, Colinas y Vorbergland",
-        "type": "JournalEntry",
-        "sort": 100000,
-        "flags": {
-            "wfrp4e": {
-                "initialization-parent": "Reikland"
-            },
-            "wfrp4e-core": {
-                "initialization-parent": "Reikland"
-            }
-        },
-        "parent": "Cdh9UvSEATC30mCb",
-        "sorting": "m",
-        "color": "#454547",
-        "_id": "yKYgy9O51CS8e9Hg"
-    },
-    {
-        "name": "Movimiento",
-        "type": "JournalEntry",
-        "sort": 2400000,
-        "flags": {
-            "wfrp4e": {
-                "initialization-parent": "Reglas"
-            },
-            "wfrp4e-core": {
-                "initialization-parent": "Reglas"
-            }
-        },
-        "parent": "IRYcgcaFaECyX1Zl",
-        "sorting": "m",
-        "color": "",
-        "_id": "uzl4zHdCaGnMWXtk"
-    },
-    {
-        "name": "Pol\u00EDtica",
-        "type": "JournalEntry",
-        "sort": 2800000,
-        "flags": {
-            "wfrp4e": {
-                "initialization-parent": "Reikland"
-            },
-            "wfrp4e-core": {
-                "initialization-parent": "Reikland"
-            }
-        },
-        "parent": "Cdh9UvSEATC30mCb",
-        "sorting": "m",
-        "color": "#55385f",
-        "_id": "NGHXw1rHk8SbsKAj"
-    },
-    {
-        "name": "Reikland",
-        "type": "JournalEntry",
-        "sort": 100000,
-        "flags": {},
-        "parent": null,
-        "sorting": "m",
-        "color": "#5c1807",
-        "_id": "Cdh9UvSEATC30mCb"
-    },
-    {
-        "name": "Religi\u00F3n y Creencias",
-        "type": "JournalEntry",
-        "sort": 400000,
-        "flags": {},
-        "parent": null,
-        "sorting": "m",
-        "color": "#835a05",
-        "_id": "bK2eIyxrofXjg00b"
-    },
-    {
-        "name": "R\u00EDos, Canales y Lagos",
-        "type": "JournalEntry",
-        "sort": 400000,
-        "flags": {
-            "wfrp4e": {
-                "initialization-parent": "Reikland"
-            },
-            "wfrp4e-core": {
-                "initialization-parent": "Reikland"
-            }
-        },
-        "parent": "Cdh9UvSEATC30mCb",
-        "sorting": "m",
-        "color": "#1c3164",
-        "_id": "8jHwmGu6kPEWTJqp"
-    },
-    {
-        "name": "Reglas",
-        "type": "JournalEntry",
-        "sort": 200000,
-        "flags": {},
-        "parent": null,
-        "sorting": "m",
-        "color": "#264a28",
-        "_id": "IRYcgcaFaECyX1Zl"
-    },
-    {
-        "name": "Asentamientos",
-        "type": "JournalEntry",
-        "sort": 500000,
-        "flags": {
-            "wfrp4e": {
-                "initialization-parent": "Reikland"
-            },
-            "wfrp4e-core": {
-                "initialization-parent": "Reikland"
-            }
-        },
-        "parent": "Cdh9UvSEATC30mCb",
-        "sorting": "m",
-        "color": "#534f1e",
-        "_id": "7NWSyuqdErdKoYho"
-    },
-    {
-        "name": "Especies",
-        "type": "JournalEntry",
-        "sort": 3100000,
-        "flags": {
-            "wfrp4e": {
-                "initialization-parent": "Personaje"
-            },
-            "wfrp4e-core": {
-                "initialization-parent": "Personaje"
-            }
-        },
-        "parent": "RoZNad8gIntnckpH",
-        "sorting": "m",
-        "color": "",
-        "_id": "A4wl41c2o2B0yOS3"
-    },
-    {
-        "name": "La Gu\u00EDa del Consumidor",
-        "type": "JournalEntry",
-        "sort": 2900000,
-        "flags": {
-            "wfrp4e": {
-                "initialization-parent": "Reglas"
-            },
-            "wfrp4e-core": {
-                "initialization-parent": "Reglas"
-            }
-        },
-        "parent": "IRYcgcaFaECyX1Zl",
-        "sorting": "m",
-        "color": "",
-        "_id": "oS6anqRkw9A1B7X5"
-    },
-    {
-        "name": "Las Malditas y F\u00E9tidas Marismas",
-        "type": "JournalEntry",
-        "sort": 300000,
-        "flags": {
-            "wfrp4e": {
-                "initialization-parent": "Reikland"
-            },
-            "wfrp4e-core": {
-                "initialization-parent": "Reikland"
-            }
-        },
-        "parent": "Cdh9UvSEATC30mCb",
-        "sorting": "m",
-        "color": "#434730",
-        "_id": "LlyUrNlYvg976rlG"
-    },
-    {
-        "name": "Los Ocho Saberes",
-        "type": "JournalEntry",
-        "sort": 2700000,
-        "flags": {
-            "wfrp4e": {
-                "initialization-parent": "Magia"
-            },
-            "wfrp4e-core": {
-                "initialization-parent": "Magia"
-            }
-        },
-        "parent": "GofHd2OC7ZxP1IDb",
-        "sorting": "m",
-        "color": "",
-        "_id": "3seuJGqgWKfkEe3c"
-    },
-    {
-        "name": "Los Bosques Oscuros y L\u00FAgubres",
-        "type": "JournalEntry",
-        "sort": 200000,
-        "flags": {
-            "wfrp4e": {
-                "initialization-parent": "Reikland"
-            },
-            "wfrp4e-core": {
-                "initialization-parent": "Reikland"
-            }
-        },
-        "parent": "Cdh9UvSEATC30mCb",
-        "sorting": "m",
-        "color": "#385029",
-        "_id": "hdy66q2fdVO9hOQe"
-    },
-    {
-        "name": "Listas de Accesorios",
-        "type": "JournalEntry",
-        "sort": 100000,
-        "flags": {
-            "wfrp4e": {
-                "initialization-parent": "La Gu\u00EDa del Consumidor"
-            },
-            "wfrp4e-core": {
-                "initialization-parent": "La Gu\u00EDa del Consumidor"
-            }
-        },
-        "parent": "oS6anqRkw9A1B7X5",
-        "sorting": "m",
-        "color": "",
-        "_id": "NwyHWem7k72I1ggz"
+        "_id": "re9KehOLoiuA8fNs"
     }
 ]

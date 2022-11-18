@@ -208,7 +208,7 @@ Babele.get().registerConverters({
         if ( value == "Racketeer" ) return "Pandillero";
         if ( value == "Thief" ) return "Ladrón";
         if ( value == "Engineer" ) return "Ingeniero";
-        if ( value == "Witch" ) return "Bruja";
+        if ( value == "Witch" ) return "Brujo";
         if ( value == "Cavalryman" ) return "Reitre";
         if ( value == "Engineer" ) return "Ingeniero";
         if ( value == "Guard" ) return "Guardia";
@@ -337,64 +337,6 @@ Babele.get().registerConverters({
 	     if ( value == "Quarter weapon" ) return "Cuarto del arma";
 	     if ( value == "Twice weapon" ) return "Doble del arma";
 	},
-
-	"bestiary_ws": (value) => {  // Bestiario, HA
-             if ( value == "Weapon Skill" ) return "Habilidad de Armas";
-	},
-	"bestiary_wsabrev": (value) => {  // Bestiario, HA abreviatura
-             if ( value == "WS" ) return "HA";
-	},
-	"bestiary_bs": (value) => {  // Bestiario, HP
-	     if ( value == "Ballistic Skill" ) return "Habilidad de Proyectiles";
-	},
-	"bestiary_bsabrev": (value) => {  // Bestiario, HP abreviatura
-	     if ( value == "BS" ) return "HP";
-	},
-	"bestiary_s": (value) => {  // Bestiario, F
-             if ( value == "Strength" ) return "Fuerza";
-	},
-	"bestiary_sabrev": (value) => {  // Bestiario, F abreviatura
-             if ( value == "S" ) return "F";
-	},
-	"bestiary_t": (value) => {  // Bestiario, R
-	     if ( value == "Toughness" ) return "Resistencia";
-	},
-	"bestiary_tabrev": (value) => {  // Bestiario, R abreviatura
-	     if ( value == "T" ) return "R";
-	},
-	"bestiary_i": (value) => {  // Bestiario, Ini
-             if ( value == "Initiative" ) return "Iniciativa";
-	},
-	"bestiary_iabrev": (value) => {  // Bestiario, Ini abreviatura
-             if ( value == "I" ) return "Ini";
-	},
-	"bestiary_ag": (value) => {  // Bestiario, Ag
-	     if ( value == "Agility" ) return "Agilidad";
-	},
-	"bestiary_dex": (value) => {  // Bestiario, Des
-             if ( value == "Dexterity" ) return "Destreza";
-	},
-	"bestiary_dexabrev": (value) => {  // Bestiario, Des abreviatura
-             if ( value == "Dex" ) return "Des";
-	},
-	"bestiary_int": (value) => {  // Bestiario, I
-	     if ( value == "Intellegence" ) return "Inteligencia";
-	},
-	"bestiary_intabrev": (value) => {  // Bestiario, I abreviatura
-	     if ( value == "Int" ) return "I";
-	},
-	"bestiary_wp": (value) => {  // Bestiario, Vol
-             if ( value == "Willpower" ) return "Voluntad";
-	},
-	"bestiary_wpabrev": (value) => {  // Bestiario, Vol abreviatura
-             if ( value == "WP" ) return "V";
-	},
-	"bestiary_fel": (value) => {  // Bestiario, Emp
-	     if ( value == "Fellowship" ) return "Empatía";
-	},
-	"bestiary_felabrev": (value) => {  // Bestiario, Emp abreviatura
-	     if ( value == "Fel" ) return "Em";
-	},
 	
 	"injuries_location": (value) => {  // Heridas, Localización
 	     if ( value == "Head" ) return "Cabeza";
@@ -423,36 +365,14 @@ Babele.get().registerConverters({
 	},
 	
 	"diaries_folder": (value) => {  // Diarios y Tablas, Carpetas
-	     if ( value == "Bestiary" ) return "Bestiario";
-	     if ( value == "Between Adventures" ) return "Entre Aventuras";
-	     if ( value == "Character" ) return "Personaje";
-	     if ( value == "Rules" ) return "Reglas";
-	     if ( value == "Class Endeavours" ) return "Empresas de Clase";
-	     if ( value == "General Endeavours" ) return "Empresas Generales";
-	     if ( value == "Endeavours" ) return "Empresas";
-	     if ( value == "Combat" ) return "Combate";
-	     if ( value == "GM's Guide" ) return "Guía del DJ";
-	     if ( value == "Magic" ) return "Magia";
-	     if ( value == "Mountains, Foothills, and Vorbergland" ) return "Montañas, Colinas y Vorbergland";
-	     if ( value == "Moving" ) return "Movimiento";
-	     if ( value == "Politics" ) return "Política";
-	     if ( value == "Religion and Belief" ) return "Religión y Creencias";
-	     if ( value == "Rivers, Canals, and Lakes" ) return "Ríos, Canales y Lagos";
-	     if ( value == "Settlements" ) return "Asentamientos";
-	     if ( value == "Species" ) return "Especies";
-	     if ( value == "The Consumers' Guide" ) return "La Guía del Consumidor";
-	     if ( value == "The Cursed and Fetid Marshlands" ) return "Las Malditas y Fétidas Marismas";
-	     if ( value == "The Eight Lores" ) return "Los Ocho Saberes";
-	     if ( value == "The Grim, Dark Forests" ) return "Los Bosques Oscuros y Lúgubres";
-	     if ( value == "Trapping Lists" ) return "Listas de Accesorios";
-	     if ( value == "Core" ) return "Básico";
-	     if ( value == "Moo's Homebrew" ) return "Reglas Caseras de Moo";
+	     if ( value == "Core Rulebook" ) return "Libro Básico";
 	     if ( value == "Career Tables" ) return "Tablas de Carrera";
 	     if ( value == "Character Creation" ) return "Creación de Personaje";
 	     if ( value == "Corruption & Mutation Tables" ) return "Tablas de Corrupción y Mutación";
 	     if ( value == "Critical Hit Tables" ) return "Tablas de Impactos Críticos";
 	     if ( value == "GM Booklet" ) return "Libreta de DJ";
 	     if ( value == "Hit Location" ) return "Ubicación de Impacto";
+	     if ( value == "Moo's Homebrew" ) return "Reglas Caseras de Moo";
 	}
 
 	});

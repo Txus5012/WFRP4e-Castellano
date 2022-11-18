@@ -141,7 +141,7 @@
 			"id": "Blessing of Protection",
 			"name": "Bendición de la Protección",
 			"description": "<p>Los enemigos deben superar un Chequeo <strong>Normal (+20)</strong> de <strong>Voluntad</strong> para atacar a tu objetivo, al sumirse en la vergüenza por atreverse a considerar el uso de la violencia. Si fallan deben elegir un objetivo diferente, o una Acción diferente.</p>",
-			"effects": [{"_id":"qMveUjAJldH1xhlZ","flags":{"wfrp4e":{"effectTrigger":"targetPrefillDialog","effectApplication":"apply","script":"ChatMessage.create({content : `¡<b>${this.actor.data.token.name}</b> debe pasar un Chequeo <b>Normal (+20)</b> de <b>Voluntad</b> para atacar a este objetivo!`, speaker : {alias : this.effect.label}})\n\nui.notifications.notify(`¡<b>${this.actor.data.token.name}</b> debe pasar un Chequeo <b>Normal (+20)</b> de <b>Voluntad</b> para atacar a este objetivo!`)","hide":false,"preventDuplicateEffects":true}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/blessings.png","label":"Bendición de la Protección","tint":null,"transfer":false}]
+			"effects": [{"_id":"qMveUjAJldH1xhlZ","flags":{"wfrp4e":{"effectTrigger":"targetPrefillDialog","effectApplication":"apply","script":"ChatMessage.create({content : `¡<b>${this.actor.prototypeToken.name}</b> debe pasar un Chequeo <b>Normal (+20)</b> de <b>Voluntad</b> para atacar a este objetivo!`, speaker : {alias : this.effect.label}})\n\nui.notifications.notify(`¡<b>${this.actor.prototypeToken.name}</b> debe pasar un Chequeo <b>Normal (+20)</b> de <b>Voluntad</b> para atacar a este objetivo!`)","hide":false,"preventDuplicateEffects":true}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/blessings.png","label":"Bendición de la Protección","tint":null,"transfer":false}]
 		},
 		{
 			"id": "Blessing of Recuperation",
@@ -214,7 +214,7 @@
 		{
 			"id": "Drowned Man's Face",
 			"name": "Rostro del ahogado",
-			"description": "<p>Imploras a Manann que ahogue a tus enemigos. Los pulmones de tu objetivo se llenan continuamente de agua salada mientras el Milagro permanece activo, y su cabello flota alrededor de su cabeza como si estuviera sumergido. Tus objetivos sufren 1 Estado de @Condition[Fatigado] y quedan sujetos a las reglas de @JournalEntry[Otros Daños]{Ahogamiento y Asfixia} mientras el Milagro permanece activo. Cuando el Milagro acaba, tu objetivo debe superar un Chequeo <strong>Desafiante (-20)</strong> de <strong>Aguante</strong>. Si falla, además pasa al Estado @Condition[Tumbado]{Tumbado}.</p>"
+			"description": "<p>Imploras a Manann que ahogue a tus enemigos. Los pulmones de tu objetivo se llenan continuamente de agua salada mientras el Milagro permanece activo, y su cabello flota alrededor de su cabeza como si estuviera sumergido. Tus objetivos sufren 1 Estado de @Condition[Fatigado] y quedan sujetos a las reglas de @UUID[JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#drowning-and-suffocation]{Ahogamiento y Asfixia} mientras el Milagro permanece activo. Cuando el Milagro acaba, tu objetivo debe superar un Chequeo <strong>Desafiante (-20)</strong> de <strong>Aguante</strong>. Si falla, además pasa al Estado @Condition[Tumbado]{Tumbado}.</p>"
 		},
 		{
 			"id": "Eagle's Eye",
@@ -410,7 +410,7 @@
 			"id": "Tooth and Claw",
 			"name": "Colmillo y garra",
 			"description": "<p>Pides a Taal que te conceda el feroz poder de su reino. Obtienes los Rasgos de criatura @Compendium[wfrp4e-core.traits.pLW9SVX0TVTYPiPv]{Mordisco} (Bonificador por Fuerza +3) y @Compendium[wfrp4e-core.traits.AtpAudHA4ybXVlWM]{Arma} (Bonificador por Fuerza +4). Estos ataques son Mágicos.</p>",
-			"effects": [{"_id":"1TWDvZQnuHAsfxxd","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"apply","script":"await fromUuid(\"Compendium.wfrp4e-core.traits.pLW9SVX0TVTYPiPv\").then(item => {\n   item = item.toObject()\n   item.data.specification.value = 3\n   this.actor.createEmbeddedDocuments(\"Item\", [item])\n})\n\nfromUuid(\"Compendium.wfrp4e-core.traits.AtpAudHA4ybXVlWM\").then(item => {\n   item = item.toObject()\n    item.data.specification.value = 4\n   this.actor.createEmbeddedDocuments(\"Item\", [item])\n})","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/miracles.png","label":"Colmillo y garra","tint":"","transfer":false}]
+			"effects": [{"_id":"1TWDvZQnuHAsfxxd","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"apply","script":"await fromUuid(\"Compendium.wfrp4e-core.traits.pLW9SVX0TVTYPiPv\").then(item => {\n   item = item.toObject()\n   item.system.specification.value = 3\n   this.actor.createEmbeddedDocuments(\"Item\", [item])\n})\n\nfromUuid(\"Compendium.wfrp4e-core.traits.AtpAudHA4ybXVlWM\").then(item => {\n   item = item.toObject()\n    item.system.specification.value = 4\n   this.actor.createEmbeddedDocuments(\"Item\", [item])\n})","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null,"seconds":null,"combat":null,"rounds":null,"turns":null,"startRound":null,"startTurn":null},"icon":"modules/wfrp4e-core/icons/prayers/miracles.png","label":"Colmillo y garra","tint":null,"transfer":false,"origin":null}]
 		},
 		{
 			"id": "Truth Will Out",

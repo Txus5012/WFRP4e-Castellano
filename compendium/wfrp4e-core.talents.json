@@ -17,7 +17,7 @@
 			"id": "Accurate Shot",
 			"name": "Disparo infalible",
 			"description": "<p>Eres un tirador excepcional y sabes dónde disparar a un enemigo para causar el máximo de daño. Infliges tu nivel de Disparo infalible en Daño adicional con todas las armas a distancia.</p>",
-			"effects": [{"_id":"ors3yseo6f4uQCgq","flags":{"wfrp4e":{"effectTrigger":"prePrepareItems","effectApplication":"actor","script":"args.actor.data.flags.rangedDamageIncrease += 1"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/talents/accurate-shot.png","label":"Disparo infalible","tint":null,"transfer":true}]
+			"effects": [{"_id":"ors3yseo6f4uQCgq","flags":{"wfrp4e":{"effectTrigger":"prePrepareItems","effectApplication":"actor","script":"args.actor.flags.rangedDamageIncrease += 1"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/talents/accurate-shot.png","label":"Disparo infalible","tint":null,"transfer":true}]
 		},
 		{
 			"id": "Acute Sense",
@@ -67,7 +67,7 @@
 			"id": "Ambidextrous",
 			"name": "Ambidiestro",
 			"description": "<p>Puedes utilizar tu mano torpe mucho mejor que la mayoría de personas, o bien por entrenamiento o por talento innato. Sólo sufres un penalizador -10 a los Chequeos que se basan tan solo en tu mano secundaria, no -20. Si adquieres este Talento dos veces, no sufres penalizador alguno.</p>",
-			"effects": [{"_id":"jc0qgnuBJlMsA5Yn","flags":{"wfrp4e":{"effectApplication":"actor","effectTrigger":"prepareData","script":"args.actor.data.flags.ambi+= 1"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/talents/ambidextrous.png","label":"Ambidiestro","tint":null,"transfer":true}]
+			"effects": [{"_id":"jc0qgnuBJlMsA5Yn","flags":{"wfrp4e":{"effectApplication":"actor","effectTrigger":"prepareData","script":"args.actor.flags.ambi+= 1"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/talents/ambidextrous.png","label":"Ambidiestro","tint":null,"transfer":true}]
 		},
 		{
 			"id": "Animal Affinity",
@@ -262,7 +262,7 @@
 			"tests": "Regatear"
 		},
 		{
-			"id": "Detect Artifact",
+			"id": "Detect Artefact",
 			"name": "Detectar artefacto",
 			"description": "<p>Eres capaz de notar cuándo hay magia en un artefacto. Puedes intentar un Chequeo de Intuición por cada artefacto mágico tocado. Si tienes éxito, notas que el objeto es mágico; además, cada NE proporciona también una regla especial específica de las que utiliza el objeto, si las hay. Normalmente, sólo puedes intentar este Chequeo una vez por artefacto tocado.</p>",
 			"tests": "Chequeos de Intuición para detectar artefactos mágicos"
@@ -419,7 +419,7 @@
 		{
 			"id": "Hatred",
 			"name": "Odio visceral",
-			"description": "<p>You are consumed with hatred for something in the Old World, as described inTe consume el odio contra algo del Viejo Mundo, tal y como se describe en @JournalEntry[Psicología]. Cada vez que adquieres este Talento desarrollas un nuevo odio hacia un nuevo grupo. Ejemplos de lo que podrías elegir incluyen: hombres bestia, pieles verdes, monstruos, forajidos, sigmaritas, muertos vivientes o brujos.</p>",
+			"description": "<p>You are consumed with hatred for something in the Old World, as described inTe consume el odio contra algo del Viejo Mundo, tal y como se describe en @UUID[JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.5w5YLPNd6AaU4f85]{Psicología}. Cada vez que adquieres este Talento desarrollas un nuevo odio hacia un nuevo grupo. Ejemplos de lo que podrías elegir incluyen: hombres bestia, pieles verdes, monstruos, forajidos, sigmaritas, muertos vivientes o brujos.</p>",
 			"tests": "Voluntad (resistir grupo)",
 			"effects": [{"_id":"3vgrN50Ul3S5T2j6","changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/talents/hatred.png","label":"Odio visceral","transfer":true,"flags":{"wfrp4e":{"effectTrigger":"dialogChoice","effectApplication":"actor","effectData":{"description":"Chequeos de Combate contra el Grupo Odiado","modifier":null,"slBonus":1,"successBonus":null,"difficultyStep":null},"hide":false,"preventDuplicateEffects":false}},"tint":null}]
 		},
@@ -768,7 +768,7 @@
 		{
 			"id": "Second Sight",
 			"name": "Clarividencia",
-			"description": "<p>Puedes percibir los cambiantes Vientos de la Magia que surgen de las Puertas del Caos que están en los polos del mundo. Ahora dispones de la Videncia.</p>",
+			"description": "<p>Puedes percibir los cambiantes Vientos de la Magia que surgen de las Puertas del Caos que están en los polos del mundo. Ahora dispones de @UUID[JournalEntry.YBVrpUHEjohB1H4f.JournalEntryPage.BU7yhLmMdEyvbfkR#second-sight]{la Videncia}.</p>",
 			"tests": "Cualquier Chequeo para detectar los Vientos de la Magia"
 		},
 		{
@@ -867,7 +867,7 @@
 			"id": "Strike Mighty Blow",
 			"name": "Golpe poderoso",
 			"description": "<p>¡Sabes cómo pegar duro! Aplicas tu nivel de Golpe poderoso en forma de Daño adicional con las armas cuerpo a cuerpo.</p>",
-			"effects": [{"_id":"1FkIE179oDa65hOI","flags":{"wfrp4e":{"effectTrigger":"prePrepareItems","effectApplication":"actor","script":"args.actor.data.flags.meleeDamageIncrease += 1","preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/talents/strike-mighty-blow.png","label":"Golpe poderoso","tint":null,"transfer":true}]
+			"effects": [{"_id":"1FkIE179oDa65hOI","flags":{"wfrp4e":{"effectTrigger":"prePrepareItems","effectApplication":"actor","script":"args.actor.flags.meleeDamageIncrease += 1","preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/talents/strike-mighty-blow.png","label":"Golpe poderoso","tint":null,"transfer":true}]
 		},
 		{
 			"id": "Strike to Injure",
@@ -884,7 +884,7 @@
 		{
 			"id": "Strong Back",
 			"name": "Buenas espaldas",
-			"description": "<p>Tienes la espalda fuerte, y estás acostumbrado a trabajar duro. Puedes sumar tus niveles en Buenas espaldas a tu NE en cualquier Chequeo Enfrentado de Fuerza y puedes llevar tantos puntos de (see @JournalEntry[Impedimenta]) adicionales en forma de accesorios como tu nivel de Buenas espaldas.</p>",
+			"description": "<p>Tienes la espalda fuerte, y estás acostumbrado a trabajar duro. Puedes sumar tus niveles en Buenas espaldas a tu NE en cualquier Chequeo Enfrentado de Fuerza y puedes llevar tantos puntos de Impedimenta adicionales en forma de accesorios (ver @UUID[JournalEntry.sLomXnc8R8518cWN.JournalEntryPage.oAPLajkv4l9IlRzO]{Impedimenta}) como tu nivel de Buenas espaldas.</p>",
 			"tests": "Remar y Nadar",
 			"effects": [{"_id":"V6DfeSCAubOnx2rs","flags":{"wfrp4e":{"effectTrigger":"dialogChoice","effectApplication":"actor","effectData":{"description":"Chequeos enfrentados de fuerza","modifier":null,"slBonus":1,"successBonus":null,"difficultyStep":null},"preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/talents/strong-back.png","label":"Bono Enfrentado","tint":null,"transfer":true},{"_id":"J5IUFXDMXgCJSPXW","flags":{"wfrp4e":{"effectTrigger":"prePrepareItems","effectApplication":"actor","script":"args.actor.status.encumbrance.max += 1","preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/talents/strong-back.png","label":"Buenas espaldas","tint":null,"transfer":true}]
 		},

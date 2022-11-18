@@ -197,7 +197,7 @@
 		{
 			"id": "Bugman’s XXXXXX Ale, pint",
 			"name": "Cerveza Bugman XXXXXX, pinta",
-			"description": "<p>Los mercaderes atraviesan el Viejo Mundo para comprar esta potente cerveza enana de la famosa cervecería fundada por Josef Bugman. La cerveza Bugman se distribuye en la mayoría de grandes ciudades. Una jarra de Bugman cuenta como 4 de cerveza normal a efectos de emborracharse (ver Consumir Alcohol), y concede inmunidad a los Chequeos de Miedo durante 1d10 horas.</p>"
+			"description": "<p>Los mercaderes atraviesan el Viejo Mundo para comprar esta potente cerveza enana de la famosa cervecería fundada por Josef Bugman. La cerveza Bugman se distribuye en la mayoría de grandes ciudades. Una jarra de Bugman cuenta como 4 de cerveza normal a efectos de emborracharse (ver @UUID[JournalEntry.6zOdTLv3YeYeJ4hR.JournalEntryPage.38Ux3mEWYuQ4heIT]{Consumir Alcohol}), y concede inmunidad a los Chequeos de Miedo durante 1d10 horas.</p>"
 		},
 		{
 			"id": "Bullet and Powder",
@@ -427,8 +427,7 @@
 		{
 			"id": "Faxtoryll",
 			"name": "Faxtoryll",
-			"description": "<p>Cuando se extienden sobre una herida, los emplastos de este coagulante herbáceo eliminan todos los Estados de Sangrando sin necesidad de un Chequeo de Sanar.<strong>Dosis</strong>: 1 por Herida crítica.</p>",
-			"effects": [{"_id":"rzyXt1SCCnDq5tnt","flags":{"wfrp4e":{"effectApplication":"actor","preventDuplicateEffects":false,"effectTrigger":"invoke","script":"let item = duplicate(this.item)\nitem.quantity.value--\nif (item.quantity.value < 0)\n   return ui.notifications.error(\"No queda más\")\n\nthis.actor.updateEmbeddedEntity(\"OwnedItem\", item)\n\nlet bleeding = this.actor.hasCondition(\"bleeding\")\nif (bleeding)\n{\n   ui.notifications.notify(`Eliminados ${bleeding.flags.wfrp4e.value} Estados de Sangrando`)\n   this.actor.removeCondition(\"bleeding\", bleeding.flags.wfrp4e.value)\n}"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/equipment/herbs_and_draughts/faxtoryll.png","label":"Faxtoryll","tint":null,"transfer":true}]
+			"description": "<p>Cuando se extienden sobre una herida, los emplastos de este coagulante herbáceo eliminan todos los Estados de Sangrando sin necesidad de un Chequeo de Sanar.<strong>Dosis</strong>: 1 por Herida crítica.</p>"
 		},
 		{
 			"id": "Fish Hooks",
@@ -624,7 +623,7 @@
 			"description": ""
 		},
 		{
-			"id": "Jewellry",
+			"id": "Jewellery",
 			"name": "Joyas",
 			"description": "<p>Los precios varían según la calidad de la artesanía, el tipo de metal y el valor de las gemas. Por regla general, los anillos comunes sin piedras preciosas cuestas 10 monedas de su tipo de metal (o sea, oro, plata o cobre) mientras que los collares cuestan 20 monedas del mismo tipo de metal.</p>"
 		},
@@ -1054,7 +1053,7 @@
 			"id": "Salwort",
 			"name": "Salicornia",
 			"description": "<p>Cuando se sostiene bajo la nariz de alguien, el aroma de un ramito aplastado de esta hierba elimina 1 Estado de Aturdido. <strong>Dosis</strong>: 1 por encuentro.</p>",
-			"effects": [{"_id":"JGCSlLxbbXCPlkIY","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"apply","script":"let item = duplicate(this.item)\nitem.quantity.value--\nif (item.quantity.value < 0)\n   return ui.notifications.error(\"No quedan más\")\n\nthis.actor.updateEmbeddedEntity(\"OwnedItem\", item)\n\nlet stunned= this.actor.hasCondition(\"stunned\")\nif (stunned)\n{\n   ui.notifications.notify(`Eliminado 1 Estado de Aturdido`)\n   this.actor.removeCondition(\"stunned\", 1)\n}","preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/equipment/herbs_and_draughts/salwort.png","label":"Salicornia","tint":null,"transfer":true}]
+			"effects": [{"_id":"JGCSlLxbbXCPlkIY","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"apply","script":"let stunned= this.actor.hasCondition(\"stunned\")\nif (stunned)\n{\n   ui.notifications.notify(`Eliminado 1 Estado de Aturdido`)\n   this.actor.removeCondition(\"stunned\", 1)\n}","preventDuplicateEffects":false,"reduceQuantity":true,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null,"seconds":null,"combat":null,"rounds":null,"turns":null,"startRound":null,"startTurn":null},"icon":"modules/wfrp4e-core/icons/equipment/herbs_and_draughts/salwort.png","label":"Salicornia","tint":null,"transfer":true,"origin":null}]
 		},
 		{
 			"id": "Saw",
@@ -1240,7 +1239,7 @@
 			"id": "Vitality Draught",
 			"name": "Poción de vitalidad",
 			"description": "<p>Beber esta poción elimina instantáneamente todos los Estados de @Condition[Fatigado].</p>",
-			"effects": [{"_id":"9ArLjt6oQqMDFsDu","flags":{"wfrp4e":{"effectTrigger":"invoke","effectApplication":"actor","script":"let item = this.item.toObject()\nitem.data.quantity.value--\nif (item.data.quantity.value < 0)\n   return ui.notifications.error(\"No quedan más\")\n\nthis.actor.updateEmbeddedDocument(\"Item\", item)\n\nlet fatigued= this.actor.hasCondition(\"fatigued\")\nif (fatigued)\n{\n   ui.notifications.notify(`Eliminados ${fatigued.conditionValue} Estados de Fatigado`)\n   this.actor.removeCondition(\"fatigued\", fatigued.conditionValue)\n}","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/equipment/herbs_and_draughts/vitality-draught.png","label":"Poción de vitalidad","tint":"","transfer":true}]
+			"effects": [{"_id":"9ArLjt6oQqMDFsDu","flags":{"wfrp4e":{"effectTrigger":"invoke","effectApplication":"actor","script":"let fatigued= this.actor.hasCondition(\"fatigued\")\nif (fatigued)\n{\n   ui.notifications.notify(`Eliminados ${fatigued.conditionValue} Estados de Fatiga`)\n   this.actor.removeCondition(\"fatigued\", fatigued.conditionValue)\n}","preventDuplicateEffects":false,"hide":false,"reduceQuantity":true}},"changes":[],"disabled":false,"duration":{"startTime":null,"seconds":null,"combat":null,"rounds":null,"turns":null,"startRound":null,"startTurn":null},"icon":"modules/wfrp4e-core/icons/equipment/herbs_and_draughts/vitality-draught.png","label":"Poción de vitalidad","tint":null,"transfer":true,"origin":null}]
 		},
 		{
 			"id": "Wagon",
@@ -1266,7 +1265,7 @@
 			"id": "Weirdroot",
 			"name": "Raíz extraña",
 			"description": "<p>Una de las drogas callejeras más comunes del Imperio, la raíz extraña se mastica, aportando una sensación de euforia y alucinaciones placenteras, que algunos sugieren podrían estar conectadas con los Vientos de la Magia. La droga concede un bonificador +10 a los Chequeos de Resistencia y de Voluntad, y a la vez un penalizador -10 a los Chequeos de Agilidad, Iniciativa e Inteligencia. <strong>Duración</strong>: activa mientras se mastica y otros [[/r 1d10 * 10]] minutos adicionales.</p>",
-			"effects": [{"_id":"Sq1UQ9Xo4cuwWy2K","flags":{"wfrp4e":{"effectTrigger":"prefillDialog","effectApplication":"apply","script":"if (args.type == \"characteristic\") {\n  if (args.item == \"wp\" || args.item == \"t\")\n    args.prefillModifiers.modifier += 10\n  else if (args.item == \"ag\" || args.item == \"i\" || args.item == \"int\")\n    args.prefillModifiers.modifier -= 10\n}\nelse if (args.type == \"skill\") {\n  if (args.item.characteristic.key == \"wp\" || args.item.characteristic.key == \"t\")\n  args.prefillModifiers.modifier += 10\n  else if (args.item.characteristic.key == \"ag\" || args.item.characteristic.key == \"i\" || args.item.characteristic.key == \"int\")\n    args.prefillModifiers.modifier -= 10\n}\nelse if (args.type == \"cast\") {\n  args.prefillModifiers.modifier -= 10\n}\nelse if (args.type == \"channelling\") {\n  args.prefillModifiers.modifier += 10\n}","preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/equipment/drugs_and_poisons/weirdroot.png","label":"Raíz extraña","tint":null,"transfer":true}]
+			"effects": [{"_id":"Sq1UQ9Xo4cuwWy2K","flags":{"wfrp4e":{"effectTrigger":"prefillDialog","effectApplication":"apply","script":"if (args.type == \"characteristic\") {\n  if (args.item == \"wp\" || args.item == \"t\")\n    args.prefillModifiers.modifier += 10\n  else if (args.item == \"ag\" || args.item == \"i\" || args.item == \"int\")\n    args.prefillModifiers.modifier -= 10\n}\nelse if (args.type == \"skill\") {\n  if (args.item.characteristic.key == \"wp\" || args.item.characteristic.key == \"t\")\n  args.prefillModifiers.modifier += 10\n  else if (args.item.characteristic.key == \"ag\" || args.item.characteristic.key == \"i\" || args.item.characteristic.key == \"int\")\n    args.prefillModifiers.modifier -= 10\n}\nelse if (args.type == \"cast\") {\n  args.prefillModifiers.modifier -= 10\n}\nelse if (args.type == \"channelling\") {\n  args.prefillModifiers.modifier += 10\n}","preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null,"seconds":null,"combat":null,"rounds":null,"turns":null,"startRound":null,"startTurn":null},"icon":"modules/wfrp4e-core/icons/equipment/drugs_and_poisons/weirdroot.png","label":"Raíz extraña","tint":null,"transfer":true,"origin":null}]
 		},
 		{
 			"id": "Whip",

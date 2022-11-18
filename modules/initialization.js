@@ -63,7 +63,7 @@ class WFRP4eContentInitialization extends Dialog {
                     callback: async () => {
                         game.settings.set("wfrp4e-core", "initialized", true)
                         await this.initialize()
-                        ui.notifications.notify("Inicialización Completada")
+                        ui.notifications.notify(this.data.module.title + ": Inicialización Completada")
                     }
                 },
                 update: {
@@ -117,14 +117,14 @@ class WFRP4eContentInitialization extends Dialog {
                     }
                 }
 
-                await this.initializeEntities()
+                await this.initializeDocuments()
                 await this.initializeScenes()
                 resolve()
             })
         })
     }
 
-    async initializeEntities() {
+    async initializeDocuments() {
 
         let packList = this.data.module.flags.initializationPacks
 
@@ -145,36 +145,37 @@ class WFRP4eContentInitialization extends Dialog {
             switch (documents[0].documentName) {
                 case "Actor":
                     ui.notifications.notify(this.data.module.title + ": Inicializando Actores")
-                    let existingDocuments = documents.filter(i => game.actors.has(i.id))
-                    let newDocuments = documents.filter(i => !game.actors.has(i.id))
-                    let createdActors = await Actor.create(newDocuments)
-                    for (let actor of createdActors)
-                        this.actors[actor.name] = actor
-                    for (let doc of existingDocuments)
-                    {
-                        let existing = game.actors.get(doc.id)
-                        await existing.update(doc.toObject())
-                        ui.notifications.notify(`Actualizado documento existente ${doc.name}`)
-                    }
+                    await this.createOrUpdateDocuments(documents, game.actors)
                     break;
                 case "Item":
                     ui.notifications.notify(this.data.module.title + ": Inicializando Objetos")
-                    await Item.create(documents)
+                    await this.createOrUpdateDocuments(documents, game.items)
                     break;
                 case "JournalEntry":
                     ui.notifications.notify(this.data.module.title + ": Inicializando Diarios")
-                    let createdEntries = await JournalEntry.create(documents)
-                    for (let entry of createdEntries)
-                        this.journals[entry.name] = entry
+                    this.createOrUpdateDocuments(documents, game.journal)
                     break;
 		case "RollTable":
                     ui.notifications.notify(this.data.module.title + ": Inicializando Tablas")
-                    await RollTable.create(documents)
+                    await this.createOrUpdateDocuments(documents, game.tables)
                     break;
                 }
             }
         }
 
+    async createOrUpdateDocuments(documents, collection, )
+    {
+        let existingDocuments = documents.filter(i => collection.has(i.id))
+        let newDocuments = documents.filter(i => !collection.has(i.id))
+        await collection.documentClass.create(newDocuments)
+        for (let doc of existingDocuments)
+        {
+            let existing = collection.get(doc.id)
+            await existing.update(doc.toObject())
+            ui.notifications.notify(`Actualizado documento existente ${doc.name}`)
+        }
+    }
+	
     async initializeScenes() {
         ui.notifications.notify(this.data.module.title + ": Inicializando Escenas")
         for (let pack of this.scenePacks)
