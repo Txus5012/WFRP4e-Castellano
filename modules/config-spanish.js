@@ -93,11 +93,13 @@ game.wfrp4e.config.symptomEffects = {
     
                         if (this.actor.isOwner)
                         {
-                            args.actor.setupSkill("Aguante", {absolute: {difficulty}}).then(setupData => {
+                            args.actor.setupSkill("Aguante", {absolute: {difficulty}, appendTitle : " - Decaimiento"}).then(setupData => {
                                 args.actor.basicTest(setupData).then(test => 
                                     {
-                                        if (test.result.outcome == "failure")
-                                            args.actor.addCondition("dead")
+                                        if (test.result.outcome == "failure") {
+					   args.actor.addCondition("dead")
+					   ChatMessage.create({content : "<b>" +args.actor.name + "</b> muere por el Decaimiento"})
+					   }
                                     })
                                 })
                         }`

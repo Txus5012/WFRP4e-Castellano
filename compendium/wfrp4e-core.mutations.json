@@ -2,7 +2,10 @@
 	"label": "Mutaciones",
 	"mapping": {
 		"modifier": "system.modifier.value",
-		"effects": "effects"
+		"effects": {
+			"path": "effects",
+			"converter": "effects"
+			}
 		},
 	"entries": [
 		{
@@ -10,77 +13,121 @@
 			"name": "Patas de animal",
 			"description": "",
 			"modifier": "+1 al Movimiento",
-			"effects": [{"_id":"1WuNk8jD1SyJIdHE","flags":{"wfrp4e":{"effectApplication":"actor"}},"changes":[{"key":"data.details.move.value","value":"1","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/mutations/mutation.png","label":"Bonificador al Movimiento","tint":null,"transfer":true}]
+			"effects": {
+				"Movement Bonus": {
+					"label":"Bonificador al Movimiento"
+					}
+				}
 		},
 		{
 			"id": "Awful Cravings",
 			"name": "Ansias horribles",
 			"description": "",
 			"modifier": "-5 a la Empat\u00EDa, -5 a la Voluntad",
-			"effects": [{"_id":"uMETdH7d0Hlt1yRa","flags":{"wfrp4e":{"effectApplication":"actor"}},"changes":[{"key":"data.characteristics.fel.modifier","value":"-5","mode":2},{"key":"data.characteristics.wp.modifier","value":"-5","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/mutations/mutation.png","label":"Ansias horribles","tint":null,"transfer":true}]
+			"effects": {
+				"Awful Cravings": {
+					"label":"Ansias horribles"
+					}
+				}
 		},
 		{
 			"id": "Beast Within",
 			"name": "La Bestia interior",
 			"description": "",
 			"modifier": "+10 a la Voluntad, -5 a la Empat\u00EDa, -5 a la Inteligencia",
-			"effects": [{"_id":"KRT5ky5npGHcoSzv","flags":{"wfrp4e":{"effectApplication":"actor"}},"changes":[{"key":"data.characteristics.wp.modifier","value":"10","mode":2},{"key":"data.characteristics.fel.modifier","value":"-5","mode":2},{"key":"data.characteristics.int.modifier","value":"-5","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/mutations/mutation.png","label":"La Bestia interior","tint":null,"transfer":true}]
+			"effects": {
+				"Beast Within": {
+					"label":"La Bestia interior"
+					}
+				}
 		},
 		{
 			"id": "Chaotic Dreams",
 			"name": "Sue\u00F1os ca\u00F3ticos",
 			"description": "<p>Sufres el Estado Fatigado durante las primeras dos horas de cada d\u00EDa.</p>",
-			"effects": [{"_id":"XRfGwpANht6wpmpR","flags":{"wfrp4e":{"effectTrigger":"prefillDialog","script":"args.prefillModifiers.modifier -= 10 * getProperty(this.effect, 'flags.wfrp4e.value')","value":1},"core":{"statusId":"fatigued"}},"changes":[],"duration":{"startTime":null},"icon":"systems/wfrp4e/icons/conditions/fatigued.png","label":"Fatigado","transfer":true,"disabled":false}]
-			
+			"effects": {
+				"Fatigued": {
+					"label":"Fatigado"
+					}
+				}			
 		},
 		{
 			"id": "Corpulent",
 			"name": "Corpulento",
 			"description": "",
 			"modifier": "-1 al Movimiento, +5 a la Fuerza, +5 a la Resistencia",
-			"effects": [{"_id":"A3qEjzJ8tFTTWDPl","flags":{"wfrp4e":{"effectApplication":"actor"}},"changes":[{"key":"data.characteristics.s.modifier","value":"5","mode":2},{"key":"data.characteristics.t.modifier","value":"5","mode":2},{"key":"data.details.move.value","value":"-1","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/mutations/mutation.png","label":"Corpulento","tint":null,"transfer":true}]
+			"effects": {
+				"Corpulent": {
+					"label":"Corpulento"
+					}
+				}
 		},
 		{
 			"id": "Crawling Skin",
 			"name": "Piel reptante",
 			"description": "",
 			"modifier": "-5 a la Iniciativa, -5 a la Destreza",
-			"effects": [{"_id":"FsfgCNLgJOUHSGMo","flags":{"wfrp4e":{"effectApplication":"actor"}},"changes":[{"key":"data.characteristics.i.modifier","value":"-5","mode":2},{"key":"data.characteristics.dex.modifier","value":"-5","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/mutations/mutation.png","label":"Piel reptante","tint":null,"transfer":true}]
+			"effects": {
+				"Crawling Skin": {
+					"label":"Piel reptante"
+					}
+				}
 		},
 		{
 			"id": "Distended Digits",
 			"name": "Dedos distendidos",
 			"description": "",
 			"modifier": "+10 a la Destreza",
-			"effects": [{"_id":"9tlBnF93gLOLbCs2","flags":{"wfrp4e":{"effectApplication":"actor"}},"changes":[{"key":"data.characteristics.dex.modifier","value":"10","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/mutations/mutation.png","label":"Dedos distendidos","tint":null,"transfer":true}]
+			"effects": {
+				"Distended Digits": {
+					"label":"Dedos distendidos"
+					}
+				}
 		},
 		{
 			"id": "Emaciated",
 			"name": "Demacrado",
 			"description": "",
 			"modifier": "-10 a la Fuerza, +5 a la Agilidad",
-			"effects": [{"_id":"Hkhq8FTiyNEsfHUF","flags":{"wfrp4e":{"effectApplication":"actor"}},"changes":[{"key":"data.characteristics.s.modifier","value":"-10","mode":2},{"key":"data.characteristics.ag.modifier","value":"5","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/mutations/mutation.png","label":"Demacrado","tint":null,"transfer":true}]
+			"effects": {
+				"Emaciated": {
+					"label":"Demacrado"
+					}
+				}
 		},
 		{
 			"id": "Enormous Eye",
 			"name": "Ojo enorme",
 			"description": "",
 			"modifier": "+10 a los Chequeos de Percepci\u00F3n que implican la vista",
-			"effects": [{"_id":"iZgljsMJIgKH6L0P","flags":{"wfrp4e":{"effectTrigger":"dialogChoice","effectApplication":"actor","effectData":{"description":"Chequeos de Percepci\u00F3n que implican la vista","modifier":10,"slBonus":null,"successBonus":null,"difficultyStep":null}}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/mutations/mutation.png","label":"Ojo enorme","tint":null,"transfer":true}]
+			"effects": {
+				"Enormous Eye": {
+					"flags.wfrp4e.effectData.description":"Chequeos de Percepci\u00F3n que implican la vista",
+					"label":"Ojo enorme"
+					}
+				}
 		},
 		{
 			"id": "Erratic Fantasist",
 			"name": "Fantasista err\u00E1tico",
 			"description": "",
 			"modifier": "-5 a la Iniciativa, -5 a la Voluntad",
-			"effects": [{"_id":"4rt99MvDqb1zR2MG","flags":{"wfrp4e":{"effectApplication":"actor"}},"changes":[{"key":"data.characteristics.i.modifier","value":"-5","mode":2},{"key":"data.characteristics.wp.modifier","value":"-5","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/mutations/mutation.png","label":"Fantasista err\u00E1tico","tint":null,"transfer":true}]
+			"effects": {
+				"Erratic Fantasist": {
+					"label":"Fantasista err\u00E1tico"
+					}
+				}
 		},
 		{
 			"id": "Extra Leg Joints",
 			"name": "Articulaciones adicionales en las piernas",
 			"description": "",
 			"modifier": "+5 a la Agilidad",
-			"effects": [{"_id":"Jv17LNhTsc3DqbRJ","flags":{"wfrp4e":{"effectApplication":"actor"}},"changes":[{"key":"data.characteristics.ag.modifier","value":"5","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/mutations/mutation.png","label":"Articulaciones adicionales en las piernas","tint":null,"transfer":true}]
+			"effects": {
+				"Extra Leg Joints": {
+					"label":"Articulaciones adicionales en las piernas"
+					}
+				}
 		},
 		{
 			"id": "Extra Mouth",
@@ -92,13 +139,21 @@
 			"name": "Preocupaci\u00F3n temerosa",
 			"description": "",
 			"modifier": "-10 a la Voluntad",
-			"effects": [{"_id":"Hp214Mf1VQEpwpN5","flags":{"wfrp4e":{"effectApplication":"actor"}},"changes":[{"key":"data.characteristics.wp.modifier","value":"-10","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/mutations/mutation.png","label":"Preocupaci\u00F3n temerosa","tint":null,"transfer":true}]
+			"effects": {
+				"Fearful Concern": {
+					"label":"Preocupaci\u00F3n temerosa"
+					}
+				}
 		},
 		{
 			"id": "Fleshy Tentacle",
 			"name": "Tent\u00E1culo carnoso",
 			"description": "<p>Sufres el Rasgo de criatura @Compendium[wfrp4e-core.traits.4xF7M6ylIiGntekh]{Tent\u00E1culos}.</p>",
-			"effects": [{"_id":"FeJR7iTtlWYjOwo9","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"fromUuid(\"Compendium.wfrp4e-core.traits.4xF7M6ylIiGntekh\").then(item => {\n    item = item.toObject()\n    args.actor.createEmbeddedDocuments(\"Item\", [item])\n})","hide":false,"preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/mutations/mutation.png","label":"Tent\u00E1culo carnoso","tint":"","transfer":true}]
+			"effects": {
+				"Fleshy Tentacle": {
+					"label":"Tent\u00E1culo carnoso"
+					}
+				}
 		},
 		{
 			"id": "Glowing Skin",
@@ -109,63 +164,102 @@
 			"id": "Hateful Impulses",
 			"name": "Impulsos odiosos",
 			"description": "<p>Sujeto a Animosidad a todos los que no son de tu especie.</p>",
-			"effects": [{"_id":"hUqEsvcMfTbiNWHj","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"fromUuid(\"Compendium.wfrp4e-core.psychologies.Q2MCUrG2HppMcvN0\").then(item => {\n   item = item.toObject()\n    let species = args.actor.details.species.value || \"Humano\"\n    item.name = `Animosidad (todos los no ${species})`\n    args.actor.createEmbeddedDocuments(\"Item\", [item])\n})","hide":false,"preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/mutations/mutation.png","label":"Impulsos odiosos","tint":null,"transfer":true}]
+			"effects": {
+				"Hateful Impulses": {
+					"flags.wfrp4e.script":"fromUuid(\"Compendium.wfrp4e-core.psychologies.Q2MCUrG2HppMcvN0\").then(item => {\n   item = item.toObject()\n    let species = args.actor.details.species.value || \"Humanos\"\n    item.name = `Animosidad (todos los no ${species})`\n    args.actor.createEmbeddedDocuments(\"Item\", [item])\n})",
+					"label":"Impulsos odiosos"
+					}
+				}
 		},
 		{
 			"id": "Hollow Heart",
 			"name": "Coraz\u00F3n hueco",
 			"description": "",
 			"modifier": "+10 a la Voluntad, -10 a la Empat\u00EDa",
-			"effects": [{"_id":"C3nRwWnS8XEQfRQi","flags":{"wfrp4e":{"effectApplication":"actor"}},"changes":[{"key":"data.characteristics.wp.modifier","value":"10","mode":2},{"key":"data.characteristics.fel.modifier","value":"-10","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/mutations/mutation.png","label":"Coraz\u00F3n hueco","tint":null,"transfer":true}]
+			"effects": {
+				"Hollow Heart": {
+					"label":"Coraz\u00F3n hueco"
+					}
+				}
 		},
 		{
 			"id": "Inhuman Beauty",
 			"name": "Belleza inhumana",
 			"description": "",
 			"modifier": "+10 a la Empat\u00EDa; nunca te quedan cicatrices",
-			"effects": [{"_id":"73ZIsujmxVg9kAlF","flags":{"wfrp4e":{"effectApplication":"actor"}},"changes":[{"key":"data.characteristics.fel.modifier","value":"10","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/mutations/mutation.png","label":"Belleza inhumana","tint":null,"transfer":true}]
+			"effects": {
+				"Inhuman Beauty": {
+					"label":"Belleza inhumana"
+					}
+				}
 		},
 		{
 			"id": "Inverted Face",
 			"name": "Rostro invertido",
 			"description": "",
 			"modifier": "-20 a todos los Chequeos de Empat\u00EDa",
-			"effects": [{"_id":"W6GtdIEcYRTTdUbk","flags":{"wfrp4e":{"effectTrigger":"prefillDialog","effectApplication":"actor","script":"if (args.type == \"characteristic\" && args.item == \"fel\")\n      args.prefillModifiers.modifier -= 20\n\n    else if (args.type == \"skill\") {\n      if (args.item.characteristic.key == \"fel\")\n        args.prefillModifiers.modifier -= 20\n    }"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/mutations/mutation.png","label":"Rostro invertido","tint":null,"transfer":true}]
+			"effects": {
+				"Inverted Face": {
+					"label":"Rostro invertido"
+					}
+				}
 		},
 		{
 			"id": "Iron Skin",
 			"name": "Piel de hierro",
 			"description": "",
 			"modifier": "+2 puntos de Armadura en todas las ubicaciones, -10 a la Agilidad",
-			"effects": [{"_id":"GIKMXwsPucxzpD3K","flags":{"wfrp4e":{"effectApplication":"actor","effectTrigger":"prepareData","script":"let AP = args.actor.status.armour\n\nAP[\"head\"].value += 2\nAP[\"rArm\"].value += 2\nAP[\"lArm\"].value += 2\nAP[\"body\"].value += 2\nAP[\"lLeg\"].value += 2\nAP[\"rLeg\"].value += 2","hide":false,"preventDuplicateEffects":false}},"changes":[{"key":"data.characteristics.ag.modifier","mode":2,"value":"-10"}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/mutations/mutation.png","label":"Piel de hierro","tint":"","transfer":true}]
+			"effects": {
+				"Iron Skin": {
+					"label":"Piel de hierro"
+					}
+				}
 		},
 		{
 			"id": "Jealous Thoughts",
 			"name": "Pensamientos celosos",
 			"description": "",
 			"modifier": "-10 a la Empat\u00EDa",
-			"effects": [{"_id":"rAvBBRHH27iSpP87","flags":{"wfrp4e":{"effectApplication":"actor"}},"changes":[{"key":"data.characteristics.fel.modifier","value":"-10","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/mutations/mutation.png","label":"Pensamientos celosos","tint":null,"transfer":true}]
+			"effects": {
+				"Jealous Thoughts": {
+					"label":"Pensamientos celosos"
+					}
+				}
 		},
 		{
 			"id": "Lolling Tongue",
 			"name": "Lengua protuberante",
 			"description": "",
 			"modifier": "-10 a todos los Chequeos de Hablar idioma cuando hablas",
-			"effects": [{"_id":"UuWZEOCSqCXzdXO8","flags":{"wfrp4e":{"effectTrigger":"dialogChoice","effectApplication":"actor","effectData":{"description":"Chequeos de Hablar idioma cuando hablas","modifier":-10,"slBonus":null,"successBonus":null,"difficultyStep":null}}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/mutations/mutation.png","label":"Lengua protuberante","tint":null,"transfer":true}]
+			"effects": {
+				"Lolling Tongue": {
+					"flags.wfrp4e.effectData.description":"Chequeos de Hablar idioma cuando hablas",
+					"label":"Lengua protuberante"
+					}
+				}
 		},
 		{
 			"id": "Lonely Spirit",
 			"name": "Esp\u00EDritu solitario",
 			"description": "",
 			"modifier": "-10 a cualquier Chequeo estando solo",
-			"effects": [{"_id":"egLqzQE6VJ1xG91R","flags":{"wfrp4e":{"effectTrigger":"dialogChoice","effectApplication":"actor","effectData":{"description":"Chequeo estando solo","modifier":-10,"slBonus":null,"successBonus":null,"difficultyStep":null}}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/mutations/mutation.png","label":"Esp\u00EDritu solitario","tint":null,"transfer":true}]
+			"effects": {
+				"Lonely Spirit": {
+					"flags.wfrp4e.effectData.description":"Chequeo estando solo",
+					"label":"Esp\u00EDritu solitario"
+					}
+				}
 		},
 		{
 			"id": "Mental Blocks",
 			"name": "Bloqueos mentales",
 			"description": "",
 			"modifier": "-10 a la Inteligencia",
-			"effects": [{"_id":"sQs8JwxXFQcfvDLD","flags":{"wfrp4e":{"effectApplication":"actor"}},"changes":[{"key":"data.characteristics.int.modifier","value":"-10","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/mutations/mutation.png","label":"Bloqueos mentales","tint":null,"transfer":true}]
+			"effects": {
+				"Mental Blocks": {
+					"label":"Bloqueos mentales"
+					}
+				}
 		},
 		{
 			"id": "Patchy Feathers",
@@ -177,77 +271,127 @@
 			"name": "Urgencia profana",
 			"description": "",
 			"modifier": "-10 a la Voluntad, +10 a la Agilidad",
-			"effects": [{"_id":"WRlYLsW6TkKNs7lX","changes":[{"key":"data.characteristics.wp.modifier","mode":2,"value":"-10"},{"key":"data.characteristics.ag.modifier","mode":2,"value":"10"}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/mutations/mutation.png","label":"Urgencia profana","transfer":true,"flags":{"wfrp4e":{"effectApplication":"actor","hide":false,"preventDuplicateEffects":false}},"tint":null}]
+			"effects": {
+				"Profane Urgency": {
+					"label":"Urgencia profana"
+					}
+				}
 		},
 		{
 			"id": "Shaky Morale",
 			"name": "Moral fr\u00E1gil",
 			"description": "",
 			"modifier": "Sufres 1 Estado de Quebrantado si fallas un Chequeo derivado de la Voluntad",
-			"effects": [{"_id":"RpoMdbEmjj9FhPvU","flags":{"wfrp4e":{"effectTrigger":"rollTest","effectApplication":"actor","script":"if (args.test.result.outcome != \"failure\")\n    return\n\nif (args.test.characteristicKey == \"wp\")\n     this.actor.addCondition(\"broken\")","hide":false,"preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/mutations/mutation.png","label":"Moral fr\u00E1gil","tint":"","transfer":true}]
+			"effects": {
+				"Shaky Morale": {
+					"label":"Moral fr\u00E1gil"
+					}
+				}
 		},
 		{
 			"id": "Short Legs",
 			"name": "Piernas cortas",
 			"description": "",
 			"modifier": "-1 al Movimiento",
-			"effects": [{"_id":"Go6qdctMDg9FSLwm","flags":{"wfrp4e":{"effectApplication":"actor"}},"changes":[{"key":"data.details.move.value","value":"-1","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/mutations/mutation.png","label":"Piernas cortas","tint":null,"transfer":true}]
+			"effects": {
+				"Short Legs": {
+					"label":"Piernas cortas"
+					}
+				}
 		},
 		{
 			"id": "Suspicious Mind",
 			"name": "Mente suspicaz",
 			"description": "",
 			"modifier": "-5 a la Iniciativa, -5 a la Inteligencia",
-			"effects": [{"_id":"mfFTDXJ0SygBMRmF","flags":{"wfrp4e":{"effectApplication":"actor"}},"changes":[{"key":"data.characteristics.i.modifier","value":"-5","mode":2},{"key":"data.characteristics.int.modifier","value":"-5","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/mutations/mutation.png","label":"Mente suspicaz","tint":null,"transfer":true}]
+			"effects": {
+				"Suspicious Mind": {
+					"label":"Mente suspicaz"
+					}
+				}
 		},
 		{
 			"id": "Thorny Scales",
 			"name": "Escamas puntiagudas",
 			"description": "",
 			"modifier": "+1 punto de Armadura en todas las ubicaciones",
-			"effects": [{"_id":"mbj1Q28xiYuHC3z2","flags":{"wfrp4e":{"effectTrigger":"prepareData","effectApplication":"actor","script":"let AP = args.actor.status.armour\n\nAP[\"head\"].value += 1\nAP[\"rArm\"].value += 1\nAP[\"lArm\"].value += 1\nAP[\"body\"].value += 1\nAP[\"lLeg\"].value += 1\nAP[\"rLeg\"].value += 1"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/mutations/mutation.png","label":"Escamas puntiagudas","tint":null,"transfer":true}]
+			"effects": {
+				"Thorny Scales": {
+					"label":"Escamas puntiagudas"
+					}
+				}
 		},
 		{
 			"id": "Thrill Hunter",
 			"name": "Buscador de emociones",
 			"description": "",
 			"modifier": "+10 a la Voluntad, -10 a la Iniciativa",
-			"effects": [{"_id":"39WPkucQosauvNSW","flags":{"wfrp4e":{"effectApplication":"actor"}},"changes":[{"key":"data.characteristics.wp.modifier","value":"10","mode":2},{"key":"data.characteristics.i.modifier","value":"-10","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/mutations/mutation.png","label":"Buscador de emociones","tint":null,"transfer":true}]
+			"effects": {
+				"Thrill Hunter": {
+					"label":"Buscador de emociones"
+					}
+				}
 		},
 		{
 			"id": "Tortured Visions",
 			"name": "Visiones torturadas",
 			"description": "",
 			"modifier": "-10 a la Iniciativa",
-			"effects": [{"_id":"FckYHxsq1fxb9QNo","flags":{"wfrp4e":{"effectApplication":"actor"}},"changes":[{"key":"data.characteristics.i.modifier","value":"-10","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/mutations/mutation.png","label":"Visiones torturadas","tint":null,"transfer":true}]
+			"effects": {
+				"Tortured Visions": {
+					"label":"Visiones torturadas"
+					}
+				}
 		},
 		{
 			"id": "Totally Unhinged",
 			"name": "Totalmente desequilibrado",
 			"description": "",
 			"modifier": "-20 a la Empat\u00EDa, +10 a la Voluntad",
-			"effects": [{"_id":"JTKbY08Ya8XiV33s","flags":{"wfrp4e":{"effectApplication":"actor"}},"changes":[{"key":"data.characteristics.fel.modifier","value":"-20","mode":2},{"key":"data.characteristics.wp.modifier","value":"10","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/mutations/mutation.png","label":"Totalmente desequilibrado","tint":null,"transfer":true}]
+			"effects": {
+				"Totally Unhinged": {
+					"label":"Totalmente desequilibrado"
+					}
+				}
 		},
 		{
 			"id": "Unending Malice",
 			"name": "Malicia inacabable",
 			"description": "",
 			"modifier": "-10 a cualquier Chequeo para no hacer da\u00F1o a otro; +10 a los Chequeos para hacer da\u00F1o",
-			"effects": [{"_id":"zE2zFBWnHMLkNdqR","flags":{"wfrp4e":{"effectTrigger":"prefillDialog","effectApplication":"actor","script":"if (args.type == \"weapon\" || args.type == \"cast\")\n   args.prefillModifiers.modifier += 10\nelse\n   args.prefillModifiers.modifier -= 10"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/mutations/mutation.png","label":"Malicia inacabable","tint":null,"transfer":true}]
+			"effects": {
+				"Unending Malice": {
+					"label":"Malicia inacabable"
+					}
+				}
 		},
 		{
 			"id": "Uneven Horns",
 			"name": "Cuernos desiguales",
 			"description": "<p>+1 punto de Armadura en la cabeza; cuenta como un Arma de criatura con un Da\u00F1o igual a tu BF.</p>",
 			"modifier": "+1 punto de Armadura en la cabeza",
-			"effects": [{"_id":"n4ttJEJZfsfISN5O","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"fromUuid(\"Compendium.wfrp4e-core.traits.BqPZn6q3VHn9HUrW\").then(item => {\nitem = item.toObject()\nitem.name = this.effect.label\nitem.system.specification.value = this.actor.characteristics.s.bonus\nitem.system.description.value = \"\"\nthis.actor.createEmbeddedDocuments(\"Item\", [item])\n})","hide":false,"preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null,"seconds":null,"combat":null,"rounds":null,"turns":null,"startRound":null,"startTurn":null},"icon":"modules/wfrp4e-core/icons/mutations/mutation.png","label":"Cuernos desiguales","tint":null,"transfer":true,"origin":null},{"_id":"2o80BN5wj3QZxpYJ","changes":[],"disabled":false,"duration":{"startTime":null,"seconds":null,"combat":null,"rounds":null,"turns":null,"startRound":null,"startTurn":null},"icon":"modules/wfrp4e-core/icons/mutations/mutation.png","label":"Cuernos desiguales PA","transfer":true,"flags":{"wfrp4e":{"effectTrigger":"prepareData","effectApplication":"actor","hide":false,"preventDuplicateEffects":false,"script":"args.actor.status.armour[\"head\"].value += 1"}},"tint":null,"origin":null}]
+			"effects": {
+				"Uneven Horns": {
+					"label":"Cuernos desiguales"
+					},
+				"Uneven Horns AP": {
+					"label":"PA de Cuernos desiguales"
+					}
+				}
 		},
 		{
 			"id": "Unholy Rage",
 			"name": "Furia imp\u00EDa",
 			"description": "",
 			"modifier": "Sujeto a Frenes\u00ED, +10 a la Habilidad de armas",
-			"effects": [{"_id":"3ekXP5mRTRdaJptm","flags":{"wfrp4e":{"effectApplication":"actor","effectTrigger":"invoke","script":"fromUuid(\"Compendium.wfrp4e-core.psychologies.DrNUTPeodEgpWTnT\").then(item => {\nitem = item.toObject()\nthis.actor.createEmbeddedDocuments(\"Item\", [item])\n})","hide":false,"preventDuplicateEffects":false}},"changes":[{"key":"data.characteristics.ws.modifier","mode":2,"value":"10"}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/mutations/mutation.png","label":"Furia imp\u00EDa","tint":"","transfer":true},{"_id":"2Ohs6a56Gxu8VLHF","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"actor","script":"fromUuid(\"Compendium.wfrp4e-core.psychologies.DrNUTPeodEgpWTnT\").then(item => {\nitem = item.toObject()\nthis.actor.createEmbeddedDocuments(\"Item\", [item])\n})","hide":false,"preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/mutations/mutation.png","label":"Frenes\u00ED","tint":null,"transfer":true}]
+			"effects": {
+				"Unholy Rage": {
+					"label":"Furia imp\u00EDa"
+					},
+				"Frenzy": {
+					"label":"Frenes\u00ED"
+					}
+				}
 		},
 		{
 			"id": "Weeping Pus",
@@ -259,14 +403,23 @@
 			"name": "Hocico bigotudo",
 			"description": "",
 			"modifier": "+10 a Rastrear",
-			"effects": [{"_id":"EfojtYV7NuxfAUrK","flags":{"wfrp4e":{"effectTrigger":"prefillDialog","effectApplication":"actor","script":"if (args.type == \"skill\" && args.item.name == \"Seguir rastros\")\n   args.prefillModifiers.modifier += 10"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/mutations/mutation.png","label":"Hocico bigotudo","tint":null,"transfer":true}]
+			"effects": {
+				"Whiskered Snout": {
+					"flags.wfrp4e.script":"if (args.type == \"skill\" && args.item.name == \"Seguir rastros\")\n   args.prefillModifiers.modifier += 10",
+					"label":"Hocico bigotudo"
+					}
+				}
 		},
 		{
 			"id": "Worried Jitters",
 			"name": "Temblequeos de preocupaci\u00F3n",
 			"description": "",
 			"modifier": "+5 a la Agilidad, -5 a la Empat\u00EDa",
-			"effects": [{"_id":"sijTILz9kZO5oASo","flags":{"wfrp4e":{"effectApplication":"actor"}},"changes":[{"key":"data.characteristics.ag.modifier","value":"5","mode":2},{"key":"data.characteristics.fel.modifier","value":"-5","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/mutations/mutation.png","label":"Temblequeos de preocupaci\u00F3n","tint":null,"transfer":true}]
+			"effects": {
+				"Worried Jitters": {
+					"label":"Temblequeos de preocupaci\u00F3n"
+					}
+				}
 		}
 	]
 }

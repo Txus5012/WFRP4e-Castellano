@@ -1301,7 +1301,7 @@
     "SHEET.TemporaryEffects" : "Efectos Temporales",
     "SHEET.PassiveEffects" : "Efectos Pasivos",
     "SHEET.DisabledEffects" : "Efectos Desactivados",
-    "SHEET.AppliedEffects" : "Efectos Aplicados",
+    "SHEET.AppliedEffects" : "Efectos para Aplicar",
     "SHEET.Source" : "Fuente",
     "SHEET.AdvanceDiseases" : "Avance de Enfermedades",
     "SHEET.ApplyToTarget" : "Aplicar a Objetivo",
@@ -1500,6 +1500,7 @@
     "CONFIGURE.CalcCorruption" : "Auto-calcular Corrupción",
     "CONFIGURE.CalcMaxEnc" : "Auto-calcular Impedimenta Máxima",
     "CONFIGURE.EquipPoints" : "Puntos de Equipo - Limita las armas equipadas",
+    "Hit Location Table" : "Ubicación de Impactos",
     "CONFIGURE.AddActorEncumbrance" : "Añadir Impedimenta para Actores",
 
     "BUTTON.PostBug" : "Enviar un Agravio",

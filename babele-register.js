@@ -114,7 +114,6 @@ Babele.get().registerConverters({
 	},
 
        "lore": (value) => {  // Saberes
-	     if ( value == "petty" ) return "Menor";
 	     if ( value == "beasts" ) return "Bestias";
 	     if ( value == "death" ) return "Muerte";
 	     if ( value == "fire" ) return "Fuego";
@@ -373,8 +372,44 @@ Babele.get().registerConverters({
 	     if ( value == "GM Booklet" ) return "Libreta de DJ";
 	     if ( value == "Hit Location" ) return "Ubicación de Impacto";
 	     if ( value == "Moo's Homebrew" ) return "Reglas Caseras de Moo";
-	}
+	},
+	
+	"effects": (effects, translations) => { // Efectos
+		return effects.map(data => {
+			let translation = translations[data.label] || translations[data._id] ;
+			if(translations && translation) {
+				return mergeObject(
+					data, 
+					mergeObject(translation, { translated: true })
+				);
+			}
 
-	});
-    }
+		return data;
+		});
+	},
+	
+	"bestiary_gender": (value) => {  // Bestiario, género
+	     if ( value == "Male" ) return "Varón";
+	     if ( value == "Female" ) return "Mujer";
+	     if ( value == "???" ) return "¿¿??";
+	     if ( value == "Varies" ) return "Varía";
+	},
+
+	"notes": (notes, translations) => { // Notas en mapas
+		return notes.map(data => {
+			let translation = translations[data._id] ;
+			if(translations && translation) {
+				return mergeObject(
+					data, 
+					mergeObject(translation, { translated: true })
+				);
+			}
+
+		return data;
+		});
+	}
+	
+  });
+ }
+    
 });

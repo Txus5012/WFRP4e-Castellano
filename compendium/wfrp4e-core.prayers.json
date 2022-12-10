@@ -18,7 +18,10 @@
       "converter": "spells_damage"
     },
     "overcast": "system.overcast.label",
-    "effects": "effects"
+    "effects": {
+	"path": "effects",
+	"converter": "effects"
+	}
    },
 "entries": [
 		{
@@ -31,7 +34,11 @@
 			"id": "Anchorite's Endurance",
 			"name": "Aguante del anacoreta",
 			"description": "<p>Tus sinceras plegarias consiguen que Shallya conceda al objetivo la fuerza necesaria para aguantar. El objetivo no siente dolor ni sufre penalizador alguno causado por ningún Estado.</p>",
-			"effects": [{"_id":"aaiZynMi60jGc0Jn","flags":{"wfrp4e":{"effectTrigger":"prepareData","effectApplication":"apply","script":"let stunned = args.actor.hasCondition(\"stunned\")\nif (stunned)\n   setProperty(stunned.data, \"flags.wfrp4e.script\", \"\")\n\nlet poisoned= args.actor.hasCondition(\"poisoned\")\nif (poisoned)\n   setProperty(poisoned.data, \"flags.wfrp4e.script\", \"\")\n\nlet deafened = args.actor.hasCondition(\"deafened\")\nif (deafened)\n   setProperty(deafened.data, \"flags.wfrp4e.effectTrigger\", \"\")\n\nlet entangled = args.actor.hasCondition(\"entangled\")\nif (entangled)\n   setProperty(entangled.data, \"flags.wfrp4e.effectTrigger\", \"\")\n\nlet fatigued = args.actor.hasCondition(\"fatigued\")\nif (fatigued)\n   setProperty(fatigued.data, \"flags.wfrp4e.script\", \"\")\n\nlet blinded = args.actor.hasCondition(\"blinded\")\nif (blinded)\n   setProperty(blinded.data, \"flags.wfrp4e.effectTrigger\", \"\")\n\nlet broken = args.actor.hasCondition(\"broken\")\nif (broken)\n   setProperty(broken.data, \"flags.wfrp4e.effectTrigger\", \"\")\n\nlet prone= args.actor.hasCondition(\"prone\")\nif (prone)\n   setProperty(prone.data, \"flags.wfrp4e.effectTrigger\", \"\")","hide":false,"preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/miracles.png","label":"Aguante del anacoreta","tint":"","transfer":false}]
+			"effects": {
+				"Anchorite's Endurance": {
+					"label":"Aguante del anacoreta"
+					}
+				}
 		},
 		{
 			"id": "Animal Instincts",
@@ -52,7 +59,11 @@
 			"id": "Beacon of Righteous Virtue",
 			"name": "Faro de Virtud Recta",
 			"description": "<p>Mientras vociferas plegarias en nombre de Sigmar, te infundes del fuego sagrado de la rectitud. Todos tus aliados con Línea visual hasta ti eliminan de inmediato todos los Estados de Quebrantado y obtienen el Talento @Compendium[wfrp4e-core.talents.8pVzgPkgWpTJvfhG]{Intrépido} mientras el Milagro está activo y permanecen en tu Línea visual. Todos los pieles verdes con Línea visual hasta ti se ven sujetos a @Compendium[wfrp4e-core.traits.pTorrE0l3VybAbtn]{Miedo 1}.</p>",
-			"effects": [{"_id":"FaH4jPWjtPWfjjv2","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"apply","script":"let broken = args.actor.hasCondition(\"broken\")\nif (broken)\n    args.actor.removeCondition(\"broken\", broken.flags.wfrp4e.value)"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/miracles.png","label":"Faro de Virtud Recta","tint":null,"transfer":false}]
+			"effects": {
+				"Beacon of Righteous Virtue": {
+					"label":"Faro de Virtud Recta"
+					}
+				}
 		},
 		{
 			"id": "Becalm",
@@ -70,13 +81,21 @@
 			"name": "Sol llameante",
 			"description": "<p>Llamas a Myrmidia para que limpie el campo de batalla de enemigos deshonrosos y te responde con un fogonazo cegador de luz dorada. Todos los no myrmidianos que miren en tu dirección sufrirán 1 Estado de @Condition[Cegado] por cada +2 NE, sufrirán +1 Estado de @Condition[Cegado] adicional.</p>",
 			"overcast": "Cegado",
-			"effects": [{"_id":"JlsdDkPK9j9Y65sB","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"apply","script":"if (\"{{outcome}}\" == \"success\")\n{\n    let blinded = 1 + {{overcast.usage.other.count}}\n    args.actor.addCondition(\"blinded\", blinded)\n}","hide":false,"preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/miracles.png","label":"Sol llameante","tint":"","transfer":false}]
+			"effects": {
+				"Blazing Sun": {
+					"label":"Sol llameante"
+					}
+				}
 		},
 		{
 			"id": "Blessing of Battle",
 			"name": "Bendición de la Batalla",
 			"description": "<p>Tu objetivo obtiene un +10 a su Habilidad de armas.</p>",
-			"effects": [{"_id":"5kCCldIgCQLXAiqq","flags":{"wfrp4e":{"effectApplication":"apply"}},"changes":[{"key":"data.characteristics.ws.modifier","value":"10","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/blessings.png","label":"Bendición de la Batalla","tint":null,"transfer":false}]
+			"effects": {
+				"Blessing of Battle": {
+					"label":"Bendición de la Batalla"
+					}
+				}
 		},
 		{
 			"id": "Blessing of Breath",
@@ -87,7 +106,11 @@
 			"id": "Blessing of Charisma",
 			"name": "Bendición del Carisma",
 			"description": "<p>Tu objetivo obtiene +10 a la Empatía.</p>",
-			"effects": [{"_id":"NO3FdQ5qx6B5PjPm","flags":{"wfrp4e":{"effectApplication":"apply","hide":false,"preventDuplicateEffects":false}},"changes":[{"key":"data.characteristics.fel.modifier","mode":2,"value":"10"}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/blessings.png","label":"Bendición del Carisma","tint":"","transfer":false}]
+			"effects": {
+				"Blessing of Charisma": {
+					"label":"Bendición del Carisma"
+					}
+				}
 		},
 		{
 			"id": "Blessing of Conscience",
@@ -98,69 +121,114 @@
 			"id": "Blessing of Courage",
 			"name": "Bendición del Valor",
 			"description": "<p>Tu objetivo obtiene un +10 a la Voluntad.</p>",
-			"effects": [{"_id":"xfFaPn5kqQz7CRBJ","flags":{"wfrp4e":{"effectApplication":"apply","preventDuplicateEffects":false}},"changes":[{"key":"data.characteristics.wp.modifier","value":"10","mode":2},{"key":"data.characteristics.wp.calculationBonusModifier","value":"-1","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/blessings.png","label":"Bendición del Valor","tint":null,"transfer":false}]
+			"effects": {
+				"Blessing of Courage": {
+					"label":"Bendición del Valor"
+					}
+				}
 		},
 		{
 			"id": "Blessing of Finesse",
 			"name": "Bendición de la Delicadeza",
 			"description": "<p>Tu objetivo obtiene un +10 a la Destreza.</p>",
-			"effects": [{"_id":"HZaxjSj49yUXZYCn","flags":{"wfrp4e":{"effectApplication":"apply","hide":false,"preventDuplicateEffects":false}},"changes":[{"key":"data.characteristics.dex.modifier","mode":2,"value":"10"}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/blessings.png","label":"Bendición de la Delicadeza","tint":"","transfer":false}]
+			"effects": {
+				"Blessing of Finesse": {
+					"label":"Bendición de la Delicadeza"
+					}
+				}
 		},
 		{
 			"id": "Blessing of Fortune",
 			"name": "Bendición de la Fortuna",
 			"description": "<p>El próximo Chequeo fallido de tu objetivo se puede repetir. La tirada repetida es la que vale.</p>",
-			"effects": [{"_id":"FDxjikn1S8EqbYZU","flags":{},"changes":[],"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/blessings.png","label":"Bendición de la Fortuna","transfer":false,"disabled":false}]
+			"effects": {
+				"Blessing of Fortune": {
+					"label":"Bendición de la Fortuna"
+				}
+			}
 		},
 		{
 			"id": "Blessing of Grace",
 			"name": "Bendición de la Gracia",
 			"description": "<p>Tu objetivo obtiene +10 a la Agilidad.</p>",
-			"effects": [{"_id":"GjyHbaIqJLZYxLq4","flags":{"wfrp4e":{"effectApplication":"apply"}},"changes":[{"key":"data.characteristics.ag.modifier","value":"10","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/blessings.png","label":"Bendición de la Gracia","tint":null,"transfer":false}]
+			"effects": {
+				"Blessing of Grace": {
+					"label":"Bendición de la Gracia"
+					}
+				}
 		},
 		{
 			"id": "Blessing of Hardiness",
 			"name": "Bendición de la Robustez",
 			"description": "<p>Tu objetivo obtiene un +10 a la Resistencia.</p>",
-			"effects": [{"_id":"TZyqbCq1ywZ6LtTv","flags":{"wfrp4e":{"effectApplication":"apply","preventDuplicateEffects":false}},"changes":[{"key":"data.characteristics.t.modifier","value":"10","mode":2},{"key":"data.characteristics.t.calculationBonusModifier","value":"-1","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/blessings.png","label":"Bendición de la Robustez","tint":null,"transfer":false}]
+			"effects": {
+				"Blessing of Hardiness": {
+					"label":"Bendición de la Robustez"
+					}
+				}
 		},
 		{
 			"id": "Blessing of Healing",
 			"name": "Bendición de la Curación",
 			"description": "<p>Tu objetivo se cura 1 Herida.</p>",
 			"overcast": "Rango (yds.)",
-			"effects": [{"_id":"xBeaS7jKIhHvsBaC","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"apply","script":"let wounds = args.actor.status.wounds\n\nif (wounds.value < wounds.max)\n   args.actor.update({\"data.status.wounds.value\" : wounds.value + 1})"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/blessings.png","label":"Bendición de la Curación","tint":null,"transfer":false}]
+			"effects": {
+				"Blessing of Healing": {
+					"label":"Bendición de la Curación"
+					}
+				}
 		},
 		{
 			"id": "Blessing of Might",
 			"name": "Bendición del Poder",
 			"description": "<p>Tu objetivo obtiene +10 a la Fuerza.</p>",
-			"effects": [{"_id":"Gas9DsCrikTUmUtu","flags":{"wfrp4e":{"effectApplication":"apply","preventDuplicateEffects":false}},"changes":[{"key":"data.characteristics.s.modifier","value":"10","mode":2},{"key":"data.characteristics.s.calculationBonusModifier","value":"-1","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/blessings.png","label":"Bendición del Poder","tint":null,"transfer":false}]
+			"effects": {
+				"Blessing of Might": {
+					"label":"Bendición del Poder"
+					}
+				}
 		},
 		{
 			"id": "Blessing of Protection",
 			"name": "Bendición de la Protección",
 			"description": "<p>Los enemigos deben superar un Chequeo <strong>Normal (+20)</strong> de <strong>Voluntad</strong> para atacar a tu objetivo, al sumirse en la vergüenza por atreverse a considerar el uso de la violencia. Si fallan deben elegir un objetivo diferente, o una Acción diferente.</p>",
-			"effects": [{"_id":"qMveUjAJldH1xhlZ","flags":{"wfrp4e":{"effectTrigger":"targetPrefillDialog","effectApplication":"apply","script":"ChatMessage.create({content : `¡<b>${this.actor.prototypeToken.name}</b> debe pasar un Chequeo <b>Normal (+20)</b> de <b>Voluntad</b> para atacar a este objetivo!`, speaker : {alias : this.effect.label}})\n\nui.notifications.notify(`¡<b>${this.actor.prototypeToken.name}</b> debe pasar un Chequeo <b>Normal (+20)</b> de <b>Voluntad</b> para atacar a este objetivo!`)","hide":false,"preventDuplicateEffects":true}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/blessings.png","label":"Bendición de la Protección","tint":null,"transfer":false}]
+			"effects": {
+				"Blessing of Protection": {
+					"flags.wfrp4e.script":"ChatMessage.create({content : `¡<b>${this.actor.prototypeToken.name}</b> debe pasar un Chequeo <b>Normal (+20)</b> de <b>Voluntad</b> para atacar a este objetivo!`, speaker : {alias : this.effect.label}})\n\nui.notifications.notify(`¡<b>${this.actor.prototypeToken.name}</b> debe pasar un Chequeo <b>Normal (+20)</b> de <b>Voluntad</b> para atacar a este objetivo!`)",
+					"label":"Bendición de la Protección"
+					}
+				}
 		},
 		{
 			"id": "Blessing of Recuperation",
 			"name": "Bendición de la Recuperación",
 			"description": "<p>Tu objetivo puede reducir en 1 día la duración de 1 enfermedad que le aflige. Esta plegaria sólo se puede intentar una vez por cada caso de enfermedad y por persona.</p>",
 			"overcast": "Rango (yds.)",
-			"effects": [{"_id":"0MpJUKwHZIc5wMWy","flags":{},"changes":[],"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/blessings.png","label":"Bendición de la Recuperación","transfer":false,"disabled":false}]
+			"effects": {
+				"Blessing of Recuperation": {
+					"label":"Bendición de la Recuperación"
+					}
+				}
 		},
 		{
 			"id": "Blessing of Righteousness",
 			"name": "Bendición de la Rectitud",
 			"description": "<p>El arma de tu objetivo cuenta como Mágica.</p>",
-			"effects": [{"_id":"lfR1p5Ph2BQCPl3G","flags":{},"changes":[],"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/blessings.png","label":"Bendición de la Rectitud","transfer":false,"disabled":false}]
+			"effects": {
+				"Blessing of Righteousness": {
+					"label":"Bendición de la Rectitud"
+					}
+				}
 		},
 		{
 			"id": "Blessing of Savagery",
 			"name": "Bendición del Salvajismo",
 			"description": "<p>La siguiente vez que tu objetivo inflige una Herida crítica, tira dos veces y elige el mejor resultado.</p>",
-			"effects": [{"_id":"LGXFRw2UC3M1ZCRf","flags":{},"changes":[],"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/blessings.png","label":"Bendición del Salvajismo","transfer":false,"disabled":false}]
+			"effects": {
+				"Blessing of Savagery": {
+					"label":"Bendición del Salvajismo"
+				}
+			}
 		},
 		{
 			"id": "Blessing of Tenacity",
@@ -171,19 +239,31 @@
 			"id": "Blessing of The Hunt",
 			"name": "Bendición de la Cacería",
 			"description": "<p>Tu objetivo obtiene +10 a su Habilidad de proyectiles.</p>",
-			"effects": [{"_id":"tVy8wXAtGTHx0qsV","flags":{"wfrp4e":{"effectApplication":"apply"}},"changes":[{"key":"data.characteristics.bs.modifier","value":"10","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/blessings.png","label":"Bendición de la Cacería","tint":null,"transfer":false}]
+			"effects": {
+				"Blessing of The Hunt": {
+					"label":"Bendición de la Cacería"
+					}
+				}
 		},
 		{
 			"id": "Blessing of Wisdom",
 			"name": "Bendición de la Sabiduría",
 			"description": "<p>Tu objetivo obtiene +10 a la Inteligencia.</p>",
-			"effects": [{"_id":"zcary1qugwge597m","flags":{"wfrp4e":{"effectApplication":"apply"}},"changes":[{"key":"data.characteristics.int.modifier","value":"10","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/blessings.png","label":"Bendición de la Sabiduría","tint":null,"transfer":false}]
+			"effects": {
+				"Blessing of Wisdom": {
+					"label":"Bendición de la Sabiduría"
+					}
+				}
 		},
 		{
 			"id": "Blessing of Wit",
 			"name": "Bendición de la Astucia",
 			"description": "<p>Tu objetivo obtiene +10 a la Iniciativa.</p>",
-			"effects": [{"_id":"HzWovpDiGQ129yZu","flags":{"wfrp4e":{"effectApplication":"apply"}},"changes":[{"key":"data.characteristics.i.modifier","value":"10","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/blessings.png","label":"Bendición de la Astucia","tint":null,"transfer":false}]
+			"effects": {
+				"Blessing of Wit": {
+					"label":"Bendición de la Astucia"
+					}
+				}
 		},
 		{
 			"id": "Blind Justice",
@@ -204,7 +284,12 @@
 			"id": "Destroy Undead",
 			"name": "Destruir muertos vivientes",
 			"description": "<p>Llamas al poder de Morr para que castigue a todos los muertos vivientes. Un fuego negro oscila a partir de tu cuerpo en un círculo perfecto con un radio en yardas igual a tu Bonificador por Empatía. Todos los objetivos potenciales con el Rasgo Muerto viviente pierden 1d10 Heridas, ignorando Bonificadores por resistencia y puntos de Armadura. Ningún muerto viviente destruido por este Milagro puede volver a ser alzado mediante la Nigromancia en condiciones normales. Por cada +2 NE, puedes incrementar el Área de efecto en tantas yardas como tu Bonificador por Empatía.</p>",
-			"effects": [{"_id":"HqH1WB4M1YCR0kRg","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"apply","script":"if (args.actor.has(\"Muerto viviente\"))\n{\n    let damage = (await new Roll(\"1d10\").roll()).total\n    args.actor.applyBasicDamage(damage, {damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL})\n}","hide":false,"preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/miracles.png","label":"Destruir muertos vivientes","tint":"","transfer":false}]
+			"effects": {
+				"Destroy Undead": {
+					"flags.wfrp4e.script":"if (args.actor.has(\"Muerto viviente\"))\n{\n    let damage = (await new Roll(\"1d10\").roll()).total\n    args.actor.applyBasicDamage(damage, {damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL})\n}",
+					"label":"Destruir muertos vivientes"
+					}
+				}
 		},
 		{
 			"id": "Dooming",
@@ -230,7 +315,11 @@
 			"id": "Fury's Call",
 			"name": "Llamada de la furia",
 			"description": "<p>Tus apasionadas plegarias instilan en tus aliados un feroz desdén por sus enemigos. Todos los aliados afectados obtienen la Psicología @Compendium[wfrp4e-core.psychologies.5hH73j2NgPdsLCZN]{Odio} hacia cualquiera contra el que se enfrentan en combate.</p>",
-			"effects": [{"_id":"Bt7ExFoPhWP05nr8","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"apply","script":"fromUuid(\"Compendium.wfrp4e-core.psychologies.5hH73j2NgPdsLCZN\").then(item => {\n    args.actor.createEmbeddedDocuments(\"Item\", [item.toObject()])\n})","hide":false,"preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/miracles.png","label":"Llamada de la furia","tint":"","transfer":false}]
+			"effects": {
+				"Fury's Call": {
+					"label":"Llamada de la furia"
+					}
+				}
 		},
 		{
 			"id": "Heed Not the Witch",
@@ -251,7 +340,11 @@
 			"id": "Inspiring",
 			"name": "Inspirador",
 			"description": "<p>Tus conmovedoras palabras inspiran disciplina y coordinación entre tus filas. Los objetivos afectados obtienen el Talento @Compendium[wfrp4e-core.talents.J9MK0AIaTbvd5oF6]{Entrenado} +1.</p>",
-			"effects": [{"_id":"PG0aFGzMCDuLR7fK","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"apply","script":"fromUuid(\"Compendium.wfrp4e-core.talents.J9MK0AIaTbvd5oF6\").then(item => {\n    args.actor.createEmbeddedDocuments(\"Item\", [item.toObject()])\n})","hide":false,"preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/miracles.png","label":"Inspirador","tint":"","transfer":false}]
+			"effects": {
+				"Inspiring": {
+					"label":"Inspirador"
+					}
+				}
 		},
 		{
 			"id": "King of the Wild",
@@ -262,13 +355,25 @@
 			"id": "Last Rites",
 			"name": "Ritos finales",
 			"description": "<p>Cantas un solemne réquiem sobre un cadáver. Este Milagro asegura que el alma del fallecido se envía a través del Portal hasta el reino de Morr, y garantiza que el cadáver no puede ser objeto de ningún hechizo nigromántico. Si el milagro tiene como objetivo un enemigo con los Rasgos de criatura <em>Muerto viviente</em> y <em>Constructo</em>, queda destruido.</p>",
-			"effects": [{"_id":"gvhH2LxUqQQxN6R8","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"apply","script":"if (args.actor.has(\"Muerto viviente\") && args.actor.has(\"Constructo\"))\n   args.actor.addCondition(\"dead\")","hide":false,"preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/miracles.png","label":"Ritos finales","tint":"","transfer":false}]
+			"effects": {
+				"Last Rites": {
+					"flags.wfrp4e.script":"if (args.actor.has(\"Muerto viviente\") && args.actor.has(\"Constructo\"))\n   args.actor.addCondition(\"dead\")",
+					"label":"Ritos finales"
+					}
+				}
 		},
 		{
 			"id": "Leaping Stag",
 			"name": "Salto del ciervo",
 			"description": "<p>Cantas al Padre Taal y él te concede su favor, imbuyéndote con fuerza y agilidad. Obtienes un +1 al Movimiento y un Talento @Compendium[wfrp4e-core.talents.CV9btQn09S9Fn8Jk]{Piernas recias} +1. Además, superas automáticamente todos los Chequeos de <strong>Atletismo</strong> para saltar con por lo menos +0 NE; si tu puntuación es más baja, aumenta el NE a 0.</p>",
-			"effects": [{"_id":"DIcpr650MAJVHQ5u","flags":{"wfrp4e":{"effectApplication":"apply"}},"changes":[{"key":"data.details.move.value","value":"1","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/miracles.png","label":"Aumento de Movimiento","tint":null,"transfer":false},{"_id":"q7pJlPm8uR0UxxN1","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"apply","script":"fromUuid(\"Compendium.wfrp4e-core.talents.CV9btQn09S9Fn8Jk\").then(item => {\n    args.actor.createEmbeddedDocuments(\"Item\", [item.toObject()])\n})","hide":false,"preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/miracles.png","label":"Salto del ciervo","tint":"","transfer":false}]
+			"effects": {
+				"Movement Increase": {
+					"label":"Aumento de Movimiento"
+					},
+				"Leaping Stag": {
+					"label":"Salto del ciervo"
+					}
+				}
 		},
 		{
 			"id": "Lord of the Hunt",
@@ -299,7 +404,15 @@
 			"id": "Ranald's Grace",
 			"name": "Gracia de Ranald",
 			"description": "<p>Llamas a Ranald para que tu objetivo pueda lidiar con los acertijos de la realidad. Tu objetivo obtiene +10 a la Agilidad, +10 al Movimiento silencioso y +1 al Talento @Compendium[wfrp4e-core.talents.g4Q6AtzZuo5iIvD4]{Caer como los gatos} todo el tiempo que dura el Milagro.</p>",
-			"effects": [{"_id":"yAJjiwiK0OSoIrkf","flags":{"wfrp4e":{"effectApplication":"apply","effectTrigger":"prefillDialog","script":"if (args.type == \"skill\" && args.item.name.includes(\"Movimiento silencioso\"))\n    args.prefillModifiers.modifier += 10"}},"changes":[{"key":"data.characteristics.ag.modifier","value":"10","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/miracles.png","label":"Gracia de Ranald","tint":null,"transfer":false},{"_id":"y7N8PrEOVgsRaJGR","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"apply","script":"fromUuid(\"Compendium.wfrp4e-core.talents.g4Q6AtzZuo5iIvD4\").then(item => {\n    args.actor.createEmbeddedDocuments(\"Item\", [item.toObject()])\n})","hide":false,"preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/miracles.png","label":"Caer como los gatos","tint":"","transfer":false}]
+			"effects": {
+				"Ranald's Grace": {
+					"flags.wfrp4e.script":"if (args.type == \"skill\" && args.item.name.includes(\"Movimiento silencioso\"))\n    args.prefillModifiers.modifier += 10",
+					"label":"Gracia de Ranald"
+					},
+				"Catfall": {
+					"label":"Caer como los gatos"
+					}
+				}
 		},
 		{
 			"id": "Rhya's Children",
@@ -342,7 +455,11 @@
 			"id": "Sea Legs",
 			"name": "Equilibrio en cubierta",
 			"description": "<p>Tu objetivo queda inmediatamente cubierto de agua de mar, y se tambalea como si estuviera en la inestable cubierta de un navío azotado por una tormenta. Agitan su cabello vientos espectrales y un torrente de espuma azota su piel. Sufre 1 Estado de @Condition[Cegado], @Condition[Ensordecido] y @Condition[Fatigado], y además deberá tener éxito en un Chequeo <strong>Normal (+20)</strong> de <strong>Agilidad</strong> para poder utilizar su Movimiento. Si falla, pasa además al Estado @Condition[Tumbado].</p>",
-			"effects": [{"_id":"s0zdvcCpdHza4MZf","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"apply","script":"args.actor.addCondition(\"blinded\")\nargs.actor.addCondition(\"deafened\")\nargs.actor.addCondition(\"fatigued\")"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/miracles.png","label":"Equilibrio en cubierta","tint":null,"transfer":false}]
+			"effects": {
+				"Sea Legs": {
+					"label":"Equilibrio en cubierta"
+					}
+				}
 		},
 		{
 			"id": "Shackles of Truth",
@@ -359,7 +476,11 @@
 			"id": "Shield of Myrmidia",
 			"name": "Escudo de Myrmidia",
 			"description": "<p>Tus recias plegarias incitan a Myrmidia a escudar a tus aliados con hebras brillantes y vaporosas de luz, que les protegen de los golpes enemigos. Todos los afectados obtienen +1 punto de Armadura en todas las Ubicaciones de impacto.</p>",
-			"effects": [{"_id":"4hBoeFxZYT68Npxr","flags":{"wfrp4e":{"effectTrigger":"prepareData","effectApplication":"apply","script":"let AP = args.actor.status.armour\n\nAP[\"head\"].value += 1\nAP[\"rArm\"].value += 1\nAP[\"lArm\"].value += 1\nAP[\"body\"].value += 1\nAP[\"lLeg\"].value += 1\nAP[\"rLeg\"].value += 1"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/miracles.png","label":"Escudo de Myrmidia","tint":null,"transfer":false}]
+			"effects": {
+				"Shield of Myrmidia": {
+					"label":"Escudo de Myrmidia"
+					}
+				}
 		},
 		{
 			"id": "Sigmar's Fiery Hammer",
@@ -369,9 +490,14 @@
 		{
 			"id": "Soulfire",
 			"name": "Fuego del alma",
-			"description": "<p>Llamas al poder de Sigmar para castigar a los enemigos del Imperio. Un fuego sagrado explota de tu cuerpo surgiendo del mismo tantas yardas como tu Bonificador por Empatía. Todos los objetivos dentro del alcance sufren 1d10 Heridas, que ignoran el Bonificador por Resistencia y los puntos de Armadura. Los objetivos con los Rasgos de criatura <em>Muerto viviente</em> y <em>Demonio</em> también sufren 1 Estado de <em>Ardiendo</em>. Por cada +2 NE, puedes incrementar el Área de efecto en tantas yardas como tu Bonificador por Empatía, o causar otros +2 Daños a cualesquiera pieles verdes, muertos vivientes o servidores de los Poderes Ruinosos afectados.</p>",
+			"description": "<p>Llamas al poder de Sigmar para castigar a los enemigos del Imperio. Un fuego sagrado explota de tu cuerpo surgiendo del mismo tantas yardas como tu Bonificador por Empatía. Todos los objetivos dentro del alcance sufren 1d10 Heridas, que ignoran el Bonificador por Resistencia y los puntos de Armadura. Los objetivos con los Rasgos de criatura <em>Muerto viviente</em> y <em>Demonio</em> también sufren 1 Estado de @Condition[Ardiendo]. Por cada +2 NE, puedes incrementar el Área de efecto en tantas yardas como tu Bonificador por Empatía, o causar otros +2 Daños a cualesquiera pieles verdes, muertos vivientes o servidores de los Poderes Ruinosos afectados.</p>",
 			"overcast": "Daño Extra",
-			"effects": [{"_id":"qpp49hHsrz2VmP1E","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"apply","script":"let damage = (await new Roll(\"1d10\").roll()).total\n    args.actor.applyBasicDamage(damage, {damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL})\n\nif (args.actor.has(\"Muerto viviente\") || args.actor.has(\"Demoníaco\"))\n{\n  args.actor.addCondition(\"ablaze\")\n}","hide":false,"preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/miracles.png","label":"Fuego del alma","tint":"","transfer":false}]
+			"effects": {
+				"Soulfire": {
+					"flags.wfrp4e.script":"let damage = (await new Roll(\"1d10\").roll()).total\n    args.actor.applyBasicDamage(damage, {damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL})\n\nif (args.actor.has(\"Muerto viviente\") || args.actor.has(\"Demoníaco\"))\n{\n  args.actor.addCondition(\"ablaze\")\n}",
+					"label":"Fuego del alma"
+					}
+				}
 		},
 		{
 			"id": "Spear of Myrmidia",
@@ -399,7 +525,11 @@
 			"name": "Enmarañar",
 			"description": "<p>Rezas a Taal, cantando plegarias para que proteja sus lugares sagrados. Raíces, enredaderas y plantas trepadoras se enroscan alrededor de tus enemigos. Todos los objetivos en un radio de tantas yardas como tu Bonificador por Empatía del punto objetivo sufren 1 Estado de @Condition[Enmarañado]. Por cada +2 NE, puedes incrementar el Área de efecto en tantas yardas como tu Bonificador por Empatía, o infligir un Estado adicional de @Condition[Enmarañado]. Dicho estado tiene una Fuerza igual a tu Voluntad, a efectos de liberarse de tus ligaduras.</p>",
 			"overcast": "Enmarañado",
-			"effects": [{"_id":"FbFPvypAtB428U0r","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"apply","script":"let num = 1 + {{overcast.usage.other.count}}\nif (!num || num <= 0)\n   num = 1\n\nargs.actor.addCondition(\"entangled\", num)","hide":false,"preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/miracles.png","label":"Enmarañar","tint":null,"transfer":false}]
+			"effects": {
+				"Tanglefoot": {
+					"label":"Enmarañar"
+					}
+				}
 		},
 		{
 			"id": "The Snow King's Judgement",
@@ -410,7 +540,11 @@
 			"id": "Tooth and Claw",
 			"name": "Colmillo y garra",
 			"description": "<p>Pides a Taal que te conceda el feroz poder de su reino. Obtienes los Rasgos de criatura @Compendium[wfrp4e-core.traits.pLW9SVX0TVTYPiPv]{Mordisco} (Bonificador por Fuerza +3) y @Compendium[wfrp4e-core.traits.AtpAudHA4ybXVlWM]{Arma} (Bonificador por Fuerza +4). Estos ataques son Mágicos.</p>",
-			"effects": [{"_id":"1TWDvZQnuHAsfxxd","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"apply","script":"await fromUuid(\"Compendium.wfrp4e-core.traits.pLW9SVX0TVTYPiPv\").then(item => {\n   item = item.toObject()\n   item.system.specification.value = 3\n   this.actor.createEmbeddedDocuments(\"Item\", [item])\n})\n\nfromUuid(\"Compendium.wfrp4e-core.traits.AtpAudHA4ybXVlWM\").then(item => {\n   item = item.toObject()\n    item.system.specification.value = 4\n   this.actor.createEmbeddedDocuments(\"Item\", [item])\n})","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null,"seconds":null,"combat":null,"rounds":null,"turns":null,"startRound":null,"startTurn":null},"icon":"modules/wfrp4e-core/icons/prayers/miracles.png","label":"Colmillo y garra","tint":null,"transfer":false,"origin":null}]
+			"effects": {
+				"Tooth and Claw": {
+					"label":"Colmillo y garra"
+					}
+				}
 		},
 		{
 			"id": "Truth Will Out",
@@ -421,7 +555,11 @@
 			"id": "Twin-tailed Comet",
 			"name": "Cometa de colas gemelas",
 			"description": "<p>Invocas letanías a Sigmar, llamándole para que castigue a sus enemigos. Un cometa de colas gemelas, que deja en el cielo un rastro de fuego a su paso, se desploma desde lo alto para impactar en un punto que está tanto dentro del alcance como en Línea visual. Todo lo que está en un radio de tantas yardas como tu Bonificador por Empatía del punto de impacto sufre 1d10 + NE Daño, ignorando Bonificador por Resistencia y puntos de Armadura, y además sufre 1 Estado de @Condition[Ardiendo]. La ubicación del objetivo debe ser en exteriores, y tan solo puede tomar como blanco a aquellos a los que Sigmar consideraría enemigos.</p>",
-			"effects": [{"_id":"dx14txcPj5zl0vjZ","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"apply","script":"args.actor.addCondition(\"ablaze\")","preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/miracles.png","label":"Cometa de colas gemelas","tint":null,"transfer":false}]
+			"effects": {
+				"Twin-tailed Comet": {
+					"label":"Cometa de colas gemelas"
+					}
+				}
 		},
 		{
 			"id": "Ulric's Fury",
@@ -453,7 +591,11 @@
 			"id": "Wisdom of the Owl",
 			"name": "Sabiduría de la lechuza",
 			"description": "<p>Pides a Verena que te imbuya de su sabiduría y su conocimiento. Obtienes un bonificador +20 a todos los Chequeos de Inteligencia mientras dura este Milagro. Además, tus pupilas se dilatan mucho y tu mirada se convierte en lacerante e inquietante: obtienes @Compendium[wfrp4e-core.talents.0hn6UaKq8CoZP2zD]{Amenazador} +1 y el Talento @Compendium[wfrp4e-core.talents.9h82z72XGo9tfgQS]{Sentidos desarrollados (vista)}.</p>",
-			"effects": [{"_id":"2lds6IDIyorYrvY4","flags":{"wfrp4e":{"effectTrigger":"prefillDialog","effectApplication":"apply","script":"if (args.type == \"characteristic\" && args.item == \"int\")\n                    {\n                            args.prefillModifiers.modifier += 20\n                    }\n                    else if (args.type == \"skill\")\n                    {\n                        if (args.item.characteristic.key == \"int\")\n                            args.prefillModifiers.modifier += 20\n                    }"}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/prayers/miracles.png","label":"Sabiduría de la lechuza","tint":null,"transfer":false}]
+			"effects": {
+				"Wisdom of the Owl": {
+					"label":"Sabiduría de la lechuza"
+					}
+				}
 		},
 		{
 			"id": "You Ain’t Seen Me, Right?",

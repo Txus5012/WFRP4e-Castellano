@@ -10,7 +10,10 @@
 			"converter": "trappings_range"
 			},
 		"special": "system.special.value",
-		"effects": "effects"
+		"effects": {
+			"path": "effects",
+			"converter": "effects"
+			}
 		},
 	"entries": [
 		{
@@ -427,7 +430,12 @@
 		{
 			"id": "Faxtoryll",
 			"name": "Faxtoryll",
-			"description": "<p>Cuando se extienden sobre una herida, los emplastos de este coagulante herbáceo eliminan todos los Estados de Sangrando sin necesidad de un Chequeo de Sanar.<strong>Dosis</strong>: 1 por Herida crítica.</p>"
+			"description": "<p>Cuando se extienden sobre una herida, los emplastos de este coagulante herbáceo eliminan todos los Estados de Sangrando sin necesidad de un Chequeo de Sanar.<strong>Dosis</strong>: 1 por Herida crítica.</p>",
+			"effects": {
+				"Faxtoryll": {
+					"flags.wfrp4e.script":"let bleeding = this.actor.hasCondition(\"bleeding\")\nif (bleeding)\n{\n   ui.notifications.notify(`Eliminados ${bleeding.flags.wfrp4e.value} Estados de Sangrando`)\n   this.actor.removeCondition(\"bleeding\", bleeding.flags.wfrp4e.value)\n}"
+					}
+				}
 		},
 		{
 			"id": "Fish Hooks",
@@ -548,7 +556,12 @@
 			"id": "Healing Draught",
 			"name": "Poción curativa",
 			"description": "<p>Si tienes más de 0 Heridas, recuperas de inmediato tantas Heridas como tu Bonificador por Resistencia. <strong>Dosis</strong>: 1 por encuentro.</p>",
-			"effects": [{"_id":"K7C1LFtqdLQ5bhFS","flags":{"wfrp4e":{"effectTrigger":"invoke","effectApplication":"actor","script":"let quantity = this.item.quantity.value - 1\nif (quantity < 0)\n   return ui.notifications.error(\"No quedan más pociones\")\n\n\nlet wounds = this.actor.status.wounds\nif (wounds.value == 0)\n  return ui.notifications.error(\"Sin efecto con 0 Heridas\")\n\nui.notifications.notify(`Curadas ${this.actor.characteristics.t.bonus} Heridas`)\n\nawait this.item.update({\"data.quantity.value\" : quantity})\nthis.actor.modifyWounds(this.actor.characteristics.t.bonus)","preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/equipment/herbs_and_draughts/healing-draught.png","label":"Poción curativa","tint":null,"transfer":true}]
+			"effects": {
+				"Healing Draught": {
+					"flags.wfrp4e.script":"let wounds = this.actor.status.wounds\nif (wounds.value == 0)\n  return ui.notifications.error(\"Sin efecto con 0 Heridas\")\n\nui.notifications.notify(`Curadas ${this.actor.characteristics.t.bonus} Heridas`)\nthis.actor.modifyWounds(this.actor.characteristics.t.bonus)",
+					"label":"Poción curativa"
+					}
+				}
 		},
 		{
 			"id": "Healing Poultice",
@@ -610,7 +623,11 @@
 			"name": "Incendiaria",
 			"description": "",
 			"special": "Un arma Incendiaria impone a cada objetivo impactado 1 + NE Estados de Ardiendo.",
-			"effects": [{"_id":"BRhiXQ6Pig4FoZlF","flags":{"wfrp4e":{"effectApplication":"apply","effectTrigger":"oneTime","script":"let ablaze = {{SL}} + 1\nargs.actor.addCondition(\"ablaze\", ablaze)","preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/equipment/weapons/incendiary.png","label":"Incendiaria","tint":null,"transfer":true}]
+			"effects": {
+				"Incendiary": {
+					"label":"Incendiaria"
+					}
+				}
 		},
 		{
 			"id": "Instrument",
@@ -743,7 +760,12 @@
 			"id": "Mail Coif",
 			"name": "Cofia de malla",
 			"description": "",
-			"effects": [{"_id":"6pQrluba3OWBJgYI","flags":{"wfrp4e":{"effectTrigger":"prefillDialog","effectApplication":"equipped","script":"if (args.type == \"skill\" && args.item.name == \"Percepción\")\n   args.prefillModifiers.modifier -= 10","preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/equipment/armour/mail-coif.png","label":"Cofia de malla","tint":null,"transfer":true}]
+			"effects": {
+				"Mail Coif": {
+					"flags.wfrp4e.script":"if (args.type == \"skill\" && args.item.name == \"Percepción\")\n   args.prefillModifiers.modifier -= 10",
+					"label":"Cofia de malla"
+					}
+				}
 		},
 		{
 			"id": "Mail Shirt",
@@ -904,19 +926,34 @@
 			"id": "Plate Helm",
 			"name": "Yelmo de placas",
 			"description": "",
-			"effects": [{"_id":"6pQrluba3OWBJgYI","flags":{"wfrp4e":{"effectTrigger":"prefillDialog","effectApplication":"equipped","script":"if (args.type == \"skill\" && args.item.name == \"Percepción\")\n   args.prefillModifiers.modifier -= 20","preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/equipment/armour/mail-coif.png","label":"Yelmo de placas","tint":null,"transfer":true}]
+			"effects": {
+				"Plate Helm": {
+					"flags.wfrp4e.script":"if (args.type == \"skill\" && args.item.name == \"Percepción\")\n   args.prefillModifiers.modifier -= 20",
+					"label":"Yelmo de placas"
+					}
+				}
 		},
 		{
 			"id": "Plate Leggings",
 			"name": "Grebas de placas",
 			"description": "",
-			"effects": [{"_id":"u46Xpql4mjj6JOD0","flags":{"wfrp4e":{"effectTrigger":"prefillDialog","effectApplication":"equipped","script":"if (args.type == \"skill\" && args.item.name.includes(\"Movimiento silencioso\"))\n   args.prefillModifiers.modifier -= 10","preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/equipment/armour/plate-leggings.png","label":"Grebas de placas","tint":null,"transfer":true}]
+			"effects": {
+				"Plate Leggings": {
+					"flags.wfrp4e.script":"if (args.type == \"skill\" && args.item.name.includes(\"Movimiento silencioso\"))\n   args.prefillModifiers.modifier -= 10",
+					"label":"Grebas de placas"
+					}
+				}
 		},
 		{
 			"id": "Plate Open Helm",
 			"name": "Yelmo abierto de placas",
 			"description": "",
-			"effects": [{"_id":"6pQrluba3OWBJgYI","flags":{"wfrp4e":{"effectTrigger":"prefillDialog","effectApplication":"equipped","script":"if (args.type == \"skill\" && args.item.name == \"Percepción\")\n   args.prefillModifiers.modifier -= 10","preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/equipment/armour/mail-coif.png","label":"Yelmo abierto de placas","tint":null,"transfer":true}]
+			"effects": {
+				"Plate Open Helm": {
+					"flags.wfrp4e.script":"if (args.type == \"skill\" && args.item.name == \"Percepción\")\n   args.prefillModifiers.modifier -= 20",
+					"label":"Yelmo abierto de placas"
+					}
+				}
 		},
 		{
 			"id": "Pole (3 yards)",
@@ -957,7 +994,14 @@
 			"id": "Ranald's Delight",
 			"name": "Delicia de Ranald",
 			"description": "<p>Este estimulante altamente adictivo es un compuesto sintético hecho a base de azufre, mercurio y otros elementos. Inhalar el polvo proporciona un bonificador +1 al Movimiento, y un + 10 a Habilidad de armas, Fuerza, Resistencia y Agilidad. Esto dura 3 horas, después de las cuales el usuario sufre un penalizador de -2 al Movimiento y un -20 a Habilidad de armas, Fuerza, Resistencia y Agilidad. <strong>Duración</strong>: 1 día.</p>",
-			"effects":[{"_id":"TApb9RQHQJcksYYL","flags":{"wfrp4e":{"effectTrigger":"","effectApplication":"actor","hide":false,"preventDuplicateEffects":false}},"changes":[{"key":"data.details.move.value","mode":2,"value":"1"},{"key":"data.characteristics.ws.modifier","mode":2,"value":"10"},{"key":"data.characteristics.s.modifier","mode":2,"value":"10"},{"key":"data.characteristics.t.modifier","mode":2,"value":"10"},{"key":"data.characteristics.ag.modifier","mode":2,"value":"10"},{"key":"data.characteristics.s.calculationBonusModifier","mode":2,"value":"-1"},{"key":"data.characteristics.t.calculationBonusModifier","mode":2,"value":"-1"}],"duration":{"startTime":null,"seconds":10800},"icon":"modules/wfrp4e-core/icons/equipment/drugs_and_poisons/ranalds-delight.png","label":"Delicia de Ranald","transfer":true,"disabled":true,"tint":null},{"_id":"vLMdJ6dsFuAAIee5","changes":[{"key":"data.details.move.value","mode":2,"value":"-2"},{"key":"data.characteristics.ws.modifier","mode":2,"value":"-20"},{"key":"data.characteristics.s.modifier","mode":2,"value":"-20"},{"key":"data.characteristics.t.modifier","mode":2,"value":"-20"},{"key":"data.characteristics.ag.modifier","mode":2,"value":"-20"},{"key":"data.characteristics.s.calculationBonusModifier","mode":2,"value":"2"},{"key":"data.characteristics.t.calculationBonusModifier","mode":2,"value":"2"}],"disabled":true,"duration":{"startTime":null,"seconds":86400},"icon":"modules/wfrp4e-core/icons/equipment/drugs_and_poisons/ranalds-delight.png","label":"Efectos Secundarios de la Delicia de Ranald","transfer":true,"flags":{"wfrp4e":{"effectTrigger":"","effectApplication":"actor","hide":false,"preventDuplicateEffects":false}},"tint":null}]
+			"effects": {
+				"Ranald's Delight": {
+					"label":"Delicia de Ranald"
+					},
+				"Ranald's Delight After Effects": {	
+					"label":"Efectos Secundarios de la Delicia de Ranald"
+					}
+				}
 		},
 		{
 			"id": "Rapier",
@@ -1053,7 +1097,12 @@
 			"id": "Salwort",
 			"name": "Salicornia",
 			"description": "<p>Cuando se sostiene bajo la nariz de alguien, el aroma de un ramito aplastado de esta hierba elimina 1 Estado de Aturdido. <strong>Dosis</strong>: 1 por encuentro.</p>",
-			"effects": [{"_id":"JGCSlLxbbXCPlkIY","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"apply","script":"let stunned= this.actor.hasCondition(\"stunned\")\nif (stunned)\n{\n   ui.notifications.notify(`Eliminado 1 Estado de Aturdido`)\n   this.actor.removeCondition(\"stunned\", 1)\n}","preventDuplicateEffects":false,"reduceQuantity":true,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null,"seconds":null,"combat":null,"rounds":null,"turns":null,"startRound":null,"startTurn":null},"icon":"modules/wfrp4e-core/icons/equipment/herbs_and_draughts/salwort.png","label":"Salicornia","tint":null,"transfer":true,"origin":null}]
+			"effects": {
+				"Salwort": {
+					"flags.wfrp4e.script":"let stunned= this.actor.hasCondition(\"stunned\")\nif (stunned)\n{\n   ui.notifications.notify(`Eliminado 1 Estado de Aturdido`)\n   this.actor.removeCondition(\"stunned\", 1)\n}",
+					"label":"Salicornia"
+					}
+				}
 		},
 		{
 			"id": "Saw",
@@ -1239,7 +1288,12 @@
 			"id": "Vitality Draught",
 			"name": "Poción de vitalidad",
 			"description": "<p>Beber esta poción elimina instantáneamente todos los Estados de @Condition[Fatigado].</p>",
-			"effects": [{"_id":"9ArLjt6oQqMDFsDu","flags":{"wfrp4e":{"effectTrigger":"invoke","effectApplication":"actor","script":"let fatigued= this.actor.hasCondition(\"fatigued\")\nif (fatigued)\n{\n   ui.notifications.notify(`Eliminados ${fatigued.conditionValue} Estados de Fatiga`)\n   this.actor.removeCondition(\"fatigued\", fatigued.conditionValue)\n}","preventDuplicateEffects":false,"hide":false,"reduceQuantity":true}},"changes":[],"disabled":false,"duration":{"startTime":null,"seconds":null,"combat":null,"rounds":null,"turns":null,"startRound":null,"startTurn":null},"icon":"modules/wfrp4e-core/icons/equipment/herbs_and_draughts/vitality-draught.png","label":"Poción de vitalidad","tint":null,"transfer":true,"origin":null}]
+			"effects": {
+				"Vitality Draught": {
+					"flags.wfrp4e.script":"let fatigued= this.actor.hasCondition(\"fatigued\")\nif (fatigued)\n{\n   ui.notifications.notify(`Eliminados ${fatigued.conditionValue} Estados de Fatiga`)\n   this.actor.removeCondition(\"fatigued\", fatigued.conditionValue)\n}",
+					"label":"Poción de vitalidad"
+					}
+				}
 		},
 		{
 			"id": "Wagon",
@@ -1265,7 +1319,11 @@
 			"id": "Weirdroot",
 			"name": "Raíz extraña",
 			"description": "<p>Una de las drogas callejeras más comunes del Imperio, la raíz extraña se mastica, aportando una sensación de euforia y alucinaciones placenteras, que algunos sugieren podrían estar conectadas con los Vientos de la Magia. La droga concede un bonificador +10 a los Chequeos de Resistencia y de Voluntad, y a la vez un penalizador -10 a los Chequeos de Agilidad, Iniciativa e Inteligencia. <strong>Duración</strong>: activa mientras se mastica y otros [[/r 1d10 * 10]] minutos adicionales.</p>",
-			"effects": [{"_id":"Sq1UQ9Xo4cuwWy2K","flags":{"wfrp4e":{"effectTrigger":"prefillDialog","effectApplication":"apply","script":"if (args.type == \"characteristic\") {\n  if (args.item == \"wp\" || args.item == \"t\")\n    args.prefillModifiers.modifier += 10\n  else if (args.item == \"ag\" || args.item == \"i\" || args.item == \"int\")\n    args.prefillModifiers.modifier -= 10\n}\nelse if (args.type == \"skill\") {\n  if (args.item.characteristic.key == \"wp\" || args.item.characteristic.key == \"t\")\n  args.prefillModifiers.modifier += 10\n  else if (args.item.characteristic.key == \"ag\" || args.item.characteristic.key == \"i\" || args.item.characteristic.key == \"int\")\n    args.prefillModifiers.modifier -= 10\n}\nelse if (args.type == \"cast\") {\n  args.prefillModifiers.modifier -= 10\n}\nelse if (args.type == \"channelling\") {\n  args.prefillModifiers.modifier += 10\n}","preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null,"seconds":null,"combat":null,"rounds":null,"turns":null,"startRound":null,"startTurn":null},"icon":"modules/wfrp4e-core/icons/equipment/drugs_and_poisons/weirdroot.png","label":"Raíz extraña","tint":null,"transfer":true,"origin":null}]
+			"effects": {
+				"Weirdroot": {
+					"label":"Raíz extraña"
+					}
+				}
 		},
 		{
 			"id": "Whip",

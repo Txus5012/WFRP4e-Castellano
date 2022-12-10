@@ -10,7 +10,11 @@
 			"path": "system.specification.value",
 			"converter": "traits_specification"
 			},
-		"effects": "effects"
+		"effects": {
+			"path": "effects",
+			"converter": "effects"
+			},
+		"neweffect":"effects"
 		   },
 	"entries": [
 		{
@@ -37,7 +41,12 @@
 			"id": "Amphibious",
 			"name": "Anfibio",
 			"description": "<p>La criatura se encuentra como en casa en el agua. Puede sumar su Bonificador por agilidad a los NE de todos los Chequeos de Nadar, y moverse con su Movimiento completo por el agua. \r\r</p>",
-			"effects": [{"_id":"KZWyDUhYS7K60RF0","changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/traits/trait.png","label":"Anfibio","transfer":true,"flags":{"wfrp4e":{"effectTrigger":"prefillDialog","effectApplication":"actor","script":"if (args.type == \"skill\" && args.item.name == \"Nadar\")\n    args.prefillModifiers.slBonus += this.actor.characteristics.ag.bonus","hide":false,"preventDuplicateEffects":false}},"tint":null,"transfer":true}]
+			"effects": {
+				"Amphibious": {
+					"flags.wfrp4e.script":"if (args.type == \"skill\" && args.item.name == \"Nadar\")\n    args.prefillModifiers.slBonus += this.actor.characteristics.ag.bonus",
+					"label":"Anfibio"
+					}
+				}
 		},
 		{
 			"id": "Animosity",
@@ -48,13 +57,22 @@
 			"id": "Arboreal",
 			"name": "Arbóreo",
 			"description": "<p>La criatura se encuentra como en casa en los bosques. En los bosques, suma su Bonificador por Agilidad a los NE de todos los Chequeos de Escalar y de Movimiento silencioso. \r\r</p>",
-			"effects": [{"_id":"HipPSD61s7Vkcru0","flags":{"wfrp4e":{"effectTrigger":"prefillDialog","effectApplication":"actor","script":"if (args.type == \"skill\" && (args.item.name == \"Escalar\"  || args.item.name.includes(\"Movimiento silencioso\")))\n{\n   let sl = this.actor.characteristics.ag.bonus\n   args.prefillModifiers.slBonus += sl;\n}","preventDuplicateEffects":true}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/traits/trait.png","label":"Arbóreo","tint":null,"transfer":true}]
+			"effects": {
+				"Arboreal": {
+					"flags.wfrp4e.script":"if (args.type == \"skill\" && (args.item.name == \"Escalar\"  || args.item.name.includes(\"Movimiento silencioso\")))\n{\n   let sl = this.actor.characteristics.ag.bonus\n   args.prefillModifiers.slBonus += sl;\n}",
+					"label":"Arbóreo"
+				}
+			}
 		},
 		{
 			"id": "Armour",
 			"name": "Armadura",
 			"description": "<p>La criatura está protegida por armadura o por una piel gruesa. Dispone de tantos puntos de Armadura como la cifra entre paréntesis en todas las Ubicaciones de impacto.</p>",
-			"effects": [{"_id":"CAcGBn8sq62mVUxJ","flags":{"wfrp4e":{"effectTrigger":"prepareData","effectApplication":"actor","script":"let AP = args.actor.status.armour\nlet APdamage = this.item.getFlag('wfrp4e', 'APdamage') || {}\n\nlet value = parseInt(this.item.specification.value)\n\nif (Number.isNumeric(value))\n{\nAP[\"head\"].value += (value - (APdamage.head || 0))\nAP[\"rArm\"].value += (value - (APdamage.rArm|| 0))\nAP[\"lArm\"].value += (value - (APdamage.lArm || 0))\nAP[\"body\"].value += (value - (APdamage.body || 0))\nAP[\"lLeg\"].value += (value - (APdamage.lLeg || 0))\nAP[\"rLeg\"].value += (value - (APdamage.rLeg || 0))\n}","preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/traits/trait.png","label":"Armadura","tint":null,"transfer":true}]
+			"effects": {
+				"Armour": {
+					"label":"Armadura"
+					}
+				}
 		},
 		{
 			"id": "Belligerent",
@@ -70,7 +88,11 @@
 			"id": "Big",
 			"name": "Grande",
 			"description": "<p>La criatura es un ejemplo de gran tamaño de su especie. Obtiene +10 a la Fuerza y a la Resistencia y -5 a la Agilidad. \r\r</p>",
-			"effects": [{"_id":"t9ugR6DGlErazKL4","flags":{"wfrp4e":{"effectApplication":"actor","preventDuplicateEffects":false}},"changes":[{"key":"data.characteristics.s.initial","value":"10","mode":2},{"key":"data.characteristics.t.initial","value":"10","mode":2},{"key":"data.characteristics.ag.initial","value":"-5","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/traits/trait.png","label":"Grande","tint":null,"transfer":true}]
+			"effects": {
+				"Big": {
+					"label":"Grande"
+					}
+				}
 		},
 		{
 			"id": "Bite",
@@ -86,7 +108,11 @@
 			"id": "Bounce",
 			"name": "Rebotar",
 			"description": "<p>La criatura puede rebotar a gran altura, quizás con unas piernas poderosas, magia o unas alas cortas y regordetas. Cuando Carga o Corre, dobla su Atributo de Movimiento, y puede ignorar todo el terreno y los personajes que hay de por medio, saltando por encima. \r\r</p>",
-			"effects": [{"_id":"1XRT8BzRtNWArfau","flags":{"wfrp4e":{"effectTrigger":"prepareData","effectApplication":"actor","script":"this.actor.details.move.run *= 2","preventDuplicateEffects":true}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/traits/trait.png","label":"Rebotar","tint":null,"transfer":true}]
+			"effects": {
+				"Bounce": {
+					"label":"Rebotar"
+					}
+				}
 		},
 		{
 			"id": "Breath",
@@ -142,7 +168,11 @@
 			"id": "Brute",
 			"name": "Bruto",
 			"description": "<p>La criatura es pesada y brutal. Sufre -1 Movimiento, -10 Agilidad y obtiene +10 Fuerza y Resistencia. \r\r</p>",
-			"effects": [{"_id":"zMFAc8IX3JMZH9iL","flags":{"wfrp4e":{"effectApplication":"actor","preventDuplicateEffects":false}},"changes":[{"key":"data.details.move.value","value":"-1","mode":2},{"key":"data.characteristics.ag.initial","value":"-10","mode":2},{"key":"data.characteristics.s.initial","value":"10","mode":2},{"key":"data.characteristics.t.initial","value":"10","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/traits/trait.png","label":"Bruto","tint":null,"transfer":true}]
+			"effects": {
+				"Brute": {
+					"label":"Bruto"
+					}
+				}
 		},
 		{
 			"id": "Champion",
@@ -158,30 +188,50 @@
 			"id": "Clever",
 			"name": "Listo",
 			"description": "<p>La criatura tiene una mente particularmente aguda. Obtiene +20 a Inteligencia y +10 a Iniciativa. \r\r</p>",
-			"effects": [{"_id":"TsZOr4vxvvQ8UlCy","flags":{"wfrp4e":{"effectApplication":"actor","preventDuplicateEffects":false}},"changes":[{"key":"data.characteristics.int.initial","value":"20","mode":2},{"key":"data.characteristics.i.initial","value":"10","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/traits/trait.png","label":"Listo","tint":null,"transfer":true}]
+			"effects": {
+				"Clever": {
+					"label":"Listo"
+					}
+				}
 		},
 		{
 			"id": "Cold Blooded",
 			"name": "De sangre fría",
 			"description": "<p>La criatura tiene la sangre fría y es lenta en reaccionar. Puede invertir todos los Chequeos de Voluntad fallidos. \r\r</p>",
-			"effects": [{"_id":"cq8SZaHuRYPHsnQF","flags":{"wfrp4e":{"effectTrigger":"preRollTest","effectApplication":"actor","script":"if (args.test.characteristicKey == \"wp\")\n   args.test.preData.canReverse = true","preventDuplicateEffects":true}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/traits/trait.png","label":"De sangre fría","tint":null,"transfer":true}]
+			"effects": {
+				"Cold Blooded": {
+					"label":"De sangre fría"
+					}
+				}
 		},
 		{
 			"id": "Constrictor",
 			"name": "Constrictor",
-			"description": "<p>La criatura puede estrujar y aplastar a su presa. Toda tirada con éxito para impactar hace que el objetivo sufra 1 Estado de Enmarañado. A continuación, la criatura puede iniciar una Presa si lo desea.\r\r</p>"
+			"description": "<p>La criatura puede estrujar y aplastar a su presa. Toda tirada con éxito para impactar hace que el objetivo sufra 1 Estado de Enmarañado. A continuación, la criatura puede iniciar una Presa si lo desea.\r\r</p>",
+			"effects": {
+				"Constrictor": {}
+				}
 		},
 		{
 			"id": "Construct",
 			"name": "Constructo",
 			"description": "<div>\n<div>\n<div>\n<p>La criatura es una construcción mágica, descerebrada, unida con tendones mágicos. Carece de los Atributos Inteligencia, Voluntad o Empatía, y no necesita nunca Chequearlos. Si no hay ningún hechicero controlándola, o no tiene el Rasgo Territorial, vagabundea descuidadamente, siguiendo los flujos de la magia ambiental. A efectos de calcular sus Heridas, utiliza su Bonificador por Fuerza siempre que se requiere el Bonificador por Voluntad. Todos sus ataques son Mágicos.</p>\n</div>\n</div>\n</div></p>",
-			"effects": [{"_id":"mkDK0Yqvb4JqL1zq","flags":{"wfrp4e":{"effectTrigger":"preWoundCalc","effectApplication":"actor","script":"args.wpb = args.sb","preventDuplicateEffects":true}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/traits/trait.png","label":"Constructo","tint":null,"transfer":true}]
+			"effects": {
+				"Construct": {
+					"label":"Constructo"
+					}
+				}
 		},
 		{
 			"id": "Corrosive Blood",
 			"name": "Sangre corrosiva",
 			"description": "<p>La sangre de la criatura es corrosiva. Cada vez que resulta Herida, la sangre salpica y todos los objetivos Trabados con ella sufren 1d10 Heridas modificadas por su Bonificador por Resistencia, y no por Armadura.</p>",
-			"effects": [{"_id":"mzNcVAruDOTiCGhS","flags":{"wfrp4e":{"effectTrigger":"takeDamage","effectApplication":"actor","script":"let content = `<b>${this.effect.label}</b>: Todos los objetivos trabados con <b>${this.actor.data.token.name}</b> reciben [[/r 1d10]] de Daño, modificados po BR y PA.`\n\nChatMessage.create({content, speaker : {alias : this.actor.data.token.name}})","preventDuplicateEffects":true}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/traits/trait.png","label":"Sangre corrosiva","tint":null,"transfer":true}]
+			"effects": {
+				"Corrosive Blood": {
+					"flags.wfrp4e.script":"let content = `<b>${this.effect.label}</b>: Todos los objetivos trabados con <b>${this.actor.data.token.name}</b> reciben [[/r 1d10]] de Daño, modificados po BR y PA.`\n\nChatMessage.create({content, speaker : {alias : this.actor.data.token.name}})",
+					"label":"Sangre corrosiva"
+					}
+				}
 		},
 		{
 			"id": "Corruption",
@@ -192,7 +242,11 @@
 			"id": "Cunning",
 			"name": "Astuto",
 			"description": "<p>La criatura es excepcionalmente astuta. Obtiene +10 a Empatía, Inteligencia e Iniciativa. \r\r</p>",
-			"effects": [{"_id":"psBMxER5fywmsI6p","flags":{"wfrp4e":{"effectApplication":"actor","preventDuplicateEffects":false}},"changes":[{"key":"data.characteristics.fel.initial","value":"10","mode":2},{"key":"data.characteristics.int.initial","value":"10","mode":2},{"key":"data.characteristics.i.initial","value":"10","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/traits/trait.png","label":"Astuto","tint":null,"transfer":true}]
+			"effects": {
+				"Cunning": {
+					"label":"Astuto"
+					}
+				}
 		},
 		{
 			"id": "Daemonic",
@@ -218,13 +272,21 @@
 			"id": "Distracting",
 			"name": "Molesto",
 			"description": "<p>La criatura distrae o confunde a los enemigos, posiblemente exudando un almizcle soporífero o un hedor nauseabundo, o quizá su apariencia es extrañamente horrible. Todos los objetivos vivos a una distancia en yardas igual o menor que su Bonificador por Resistencia sufren un penalizador -20 a todos los Chequeos. Un objetivo tan sólo puede sufrir una vez este penalizador, no importa cuántos enemigos molestos hay. \r\r</p>",
-			"effects": [{"_id":"et9TgrjWHZYQI7OJ","flags":{"wfrp4e":{"effectApplication":"apply","effectTrigger":"prefillDialog","script":"args.prefillModifiers.modifier -= 20","preventDuplicateEffects":true}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/traits/trait.png","label":"Molesto","tint":null,"transfer":true}]
+			"effects": {
+				"Distracting": {
+					"label":"Molesto"
+					}
+				}
 		},
 		{
 			"id": "Elite",
 			"name": "Élite",
 			"description": "<p>La criatura es un veterano curtido. Obtiene un +20 a la Habilidad de armas, a la Habilidad de proyectiles y a la Voluntad. \r\r</p>",
-			"effects": [{"_id":"ZoDIzpVDZ0uTDCqD","flags":{"wfrp4e":{"effectApplication":"actor","preventDuplicateEffects":false}},"changes":[{"key":"data.characteristics.ws.initial","value":"20","mode":2},{"key":"data.characteristics.bs.initial","value":"20","mode":2},{"key":"data.characteristics.wp.initial","value":"20","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/traits/trait.png","label":"Élite","tint":null,"transfer":true}]
+			"effects": {
+				"Elite": {
+					"label":"Élite"
+					}
+				}
 		},
 		{
 			"id": "Ethereal",
@@ -235,13 +297,21 @@
 			"id": "Fast",
 			"name": "Rápido",
 			"description": "<p>La criatura se mueve de forma inesperadamente rápida. Obtiene +1 al Movimiento y +10 a la Agilidad. \r\r</p>",
-			"effects": [{"_id":"MNEkuGwCbsQ6vdRr","flags":{"wfrp4e":{"effectApplication":"actor","preventDuplicateEffects":false}},"changes":[{"key":"data.details.move.value","value":"1","mode":2},{"key":"data.characteristics.ag.initial","value":"10","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/traits/trait.png","label":"Rápido","tint":null,"transfer":true}]
+			"effects": {
+				"Fast": {
+					"label":"Rápido"
+					}
+				}
 		},
 		{
 			"id": "Fear",
 			"name": "Miedo",
 			"description": "<p>La criatura causa un Miedo sobrenatural en otras criaturas, de una potencia igual a su Valor.</p>\n<p>El rasgo Miedo representa una aversión extrema hacia algo. Las criaturas que causan Miedo tienen un Nivel de Miedo; este valor refleja el NE que debes obtener en un Chequeo prolongado de Frialdad para vencer tu Miedo. Puedes continuar haciendo Chequeos al final de cada Asalto hasta que tu NE iguala o supera el Nivel de Miedo de la criatura. Hasta que lo consigues, estás sujeto al Miedo.</p>\n<p>Cuando te ves sujeto al Miedo , sufres &ndash;1 NE todos los Chequeos para afectar a la fuente del mismo. No te puedes acercar a lo que te provoca el Miedo sin superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Frialdad.</strong>. Si se acerca más a ti, deberás superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Frialdad.</strong>, o sufrir 1 Estado de @Condition[Quebrantado].</p>",
-			"effects": [{"_id":"ODxbsuuS0splmVEN","flags":{"wfrp4e":{"effectTrigger":"invoke","effectApplication":"actor","script":"let value = parseInt(this.item.specification.value)\nlet name = this.actor.data.token.name\n\nif (game.user.isGM && game.user.targets.size)\n{\n  game.user.targets.forEach(t => {\n    t.actor.applyFear(value, name)\n  })\n  game.user.updateTokenTargets([]);\n}\nelse \n{\n  game.wfrp4e.utility.postFear(value, name)\n}","preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/traits/trait.png","label":"Miedo","tint":null,"transfer":true}]
+			"effects": {
+				"Fear": {
+					"label":"Miedo"
+					}
+				}
 		},
 		{
 			"id": "Flight",
@@ -251,8 +321,12 @@
 		{
 			"id": "Frenzy",
 			"name": "Furia",
-			"description": "<p>Mediante un Chequeo de Voluntad, puedes inducirte a ti mismo un estado alterado, sugestionándote, aullando, mordiendo tu escudo o algo similar. Si lo consigues, te ves sujeto a la Furia.</p>\n<p>Mientras estás sujeto a la Furia , eres inmune a todas las demás Psicologías y no huyes ni te retiras por razón alguna; por el contrario, debes moverte con toda celeridad hacia el enemigo más próximo al que puedes ver, para atacarle. Por lo general, la única Acción que puedes llevar a cabo es un Chequeo de Habilidad de armas o un Chequeo de Atletismo para llegar más rápidamente hasta un enemigo. Además, puedes llevar a cabo un Chequeo de Cuerpo a cuerpo como Acción libre cada Asalto porque estás poniendo en tus ataques todo lo que tienes. Por último, obtienes un +1 a tu Bonificador por Fuerza, tal es tu ferocidad. Permaneces en Furia hasta que todos los enemigos en tu línea visual han sido pacificados, o sufres 1 Estado de <em>@Condition[Aturdido]</em> o quedas <em>@Condition[Inconsciente]</em>. Una vez se acaba tu Furia , sufres de inmediato 1 Estado de <em>@Condition[Fatigado]</em>.</p>\n<em><strong>Nota de Foundry</strong>: El efecto está desactivado por defecto, activarlo en el apartado 'efectos' al entrar en Furia.</p>",
-			"effects": [{"_id":"jTfCjCCrfFHKqXhz","flags":{"wfrp4e":{"effectTrigger":"prePrepareItems","effectApplication":"actor","script":"args.actor.characteristics.s.bonus += 1\nargs.actor.characteristics.s.calculationBonusModifier -= 1","preventDuplicateEffects":true}},"changes":[],"disabled":true,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/traits/trait.png","label":"Furia","tint":null,"transfer":true}]
+			"description": "<p>Mediante un Chequeo de Voluntad, puedes inducirte a ti mismo un estado alterado, sugestionándote, aullando, mordiendo tu escudo o algo similar. Si lo consigues, te ves sujeto a la Furia.</p>\n<p>Mientras estás sujeto a la Furia , eres inmune a todas las demás Psicologías y no huyes ni te retiras por razón alguna; por el contrario, debes moverte con toda celeridad hacia el enemigo más próximo al que puedes ver, para atacarle. Por lo general, la única Acción que puedes llevar a cabo es un Chequeo de Habilidad de armas o un Chequeo de Atletismo para llegar más rápidamente hasta un enemigo. Además, puedes llevar a cabo un Chequeo de Cuerpo a cuerpo como Acción libre cada Asalto porque estás poniendo en tus ataques todo lo que tienes. Por último, obtienes un +1 a tu Bonificador por Fuerza, tal es tu ferocidad. Permaneces en Furia hasta que todos los enemigos en tu línea visual han sido pacificados, o sufres 1 Estado de @Condition[Aturdido] o quedas @Condition[Inconsciente]. Una vez se acaba tu Furia , sufres de inmediato 1 Estado de @Condition[Fatigado].</p><blockquote class=\"foundry-note\"><p><span style=\"font-style: normal;\">El efecto está desactivado por defecto, activarlo en el apartado 'efectos' al entrar en Furia.</p></blockquote>",
+			"effects": {
+				"Frenzy": {
+					"label":"Furia"
+					}
+				}
 		},
 		{
 			"id": "Fury",
@@ -263,19 +337,28 @@
 			"id": "Ghostly Howl",
 			"name": "Aullido fantasmal",
 			"description": "<p>La criatura puede emitir un aullido espeluznante, capaz de matar a quienes lo oyen. En su Turno, la criatura puede gastar toda su Ventaja (mínimo 2) para desatar un horrendo aullido como Ataque gratuito. Todos los objetivos vivos que estén a tantas yardas o menos como la Iniciativa de la criatura sufrirán de inmediato 3 estados de Ensordecido y además 1d10 Heridas ignorando Bonificadores por Resistencia y puntos de Armadura. Los afectados deben también superar un Chequeo <strong>Normal (+20)</strong> de <strong>Aguante</strong>, o sufrir 1 Estado de @Condition[Quebrantado]. \r\r</p>",
-			"effects": [{"_id":"MNo99hhKFuloCyy8","flags":{"wfrp4e":{"effectTrigger":"oneTime","effectApplication":"apply","script":"let damage = (await new Roll(\"1d10\").roll()).total\n    args.actor.applyBasicDamage(damage, {damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL})\n\nargs.actor.addCondition(\"deafened\", 3)\n\nargs.actor.setupSkill(\"Aguante\", {absolute : {difficulty: \"average\" }, context : {failure: \"Gana un Estado de Quebrantado\", success : \"Evitado el Estado de Quebrantado\"}}).then(setupData => {\n   args.actor.basicTest(setupData).then(test => {\n      if (test.result.outcome == \"failure\")\n         args.actor.addCondition(\"broken\")\n   })\n})","preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/traits/trait.png","label":"Aullido fantasmal","tint":null,"transfer":true}]
+			"effects": {
+				"Ghostly Howl": {
+					"flags.wfrp4e.script":"let damage = (await new Roll(\"1d10\").roll()).total\n    args.actor.applyBasicDamage(damage, {damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL})\n\nargs.actor.addCondition(\"deafened\", 3)\n\nargs.actor.setupSkill(\"Aguante\", {absolute : {difficulty: \"average\" }, context : {failure: \"Gana un Estado de Quebrantado\", success : \"Evitado el Estado de Quebrantado\"}}).then(setupData => {\n   args.actor.basicTest(setupData).then(test => {\n      if (test.result.outcome == \"failure\")\n         args.actor.addCondition(\"broken\")\n   })\n})",
+					"label":"Aullido fantasmal"
+					}
+				}
 		},
 		{
 			"id": "Hardy",
 			"name": "Resistente",
 			"description": "<p>La criatura puede aguantar más Daño que la mayoría. Aumenta sus Heridas en un número igual a su Bonificador por Resistencia (aplicado antes de cualquier modificador por Tamaño). \r\r</p>",
-			"effects": [{"_id":"yrUvulIfrQfAJmkB","flags":{"wfrp4e":{"effectTrigger":"preWoundCalc","effectApplication":"actor","script":"args.multiplier.tb += 1","preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/traits/trait.png","label":"Resistente","tint":null,"transfer":true}]
+			"effects": {
+				"Hardy": {
+					"label":"Resistente"
+					}
+				}
 		},
 		{
 			"id": "Hatred",
 			"name": "Odio",
 			"description": "<p>Te ves consumido por el Odio hacia el Objetivo, que normalmente suele ser un grupo de personas o de criaturas, como por ejemplo, ‘hochlandeses’, ‘pulpos de las ciénagas’ o ‘esclavistas’. Jamás interaccionarás socialmente con algo o alguien a quien odies de esta forma. Al encontrarte con el objeto de tu Odio, deberás intentar un Chequeo de Psicología. Si fallas, te ves sujeto al Odio.</p>\n<p>Al final de cada asalto subsiguiente, puedes intentar un nuevo Chequeo de Psicología para acabar con el Odio. Si no lo consigues, los efectos del Odio acaban por sí solos de forma natural cuando todos los miembros del grupo especificado han muerto o se han ido, o pasas al Estado @Condition[Inconsciente].</p>\n<p>Mientras te ves sujeto al Odio, debes intentar destruir de inmediato al grupo odiado por el método más rápido y letal posible. Obtienes un bonificador de +1 NE a todos los Chequeos de combate contra el grupo especificado, y eres inmune al Miedo y al Intimidar (pero no al Terror) causados por tu odiado enemigo.</p>",
-			"effects": [{"_id":"6QhtnGcV5T0JXQZN","changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/psychologies/psychology.png","label":"Odio","transfer":true,"flags":{"wfrp4e":{"effectTrigger":"dialogChoice","effectApplication":"actor","effectData":{"description":"Chequeos de combate contra el grupo especificado","modifier":null,"slBonus":1,"successBonus":null,"difficultyStep":null},"hide":false,"preventDuplicateEffects":false}},"tint":null}]
+			"neweffect": [{"_id":"6QhtnGcV5T0JXQZN","changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/psychologies/psychology.png","label":"Odio","transfer":true,"flags":{"wfrp4e":{"effectTrigger":"dialogChoice","effectApplication":"actor","effectData":{"description":"Chequeos de combate contra el grupo especificado","modifier":null,"slBonus":1,"successBonus":null,"difficultyStep":null},"hide":false,"preventDuplicateEffects":false}},"tint":null}]
 		},
 		{
 			"id": "Horns (Feature)",
@@ -310,26 +393,43 @@
 		{
 			"id": "Infected",
 			"name": "Infectado",
-			"description": "<p>La criatura, o su arma, es portadora de una infección grave. Si hace que un oponente vivo pierda Heridas, éste deberá superar un Chequeo <strong>Fácil (+40)</strong> de <strong>Aguante</strong> o contraer una @Compendium[wfrp4e-core.diseases.kKccDTGzWzSXCBOb]{Herida supurante}</p>",
-			"effects": [{"_id":"6rMAx2bGefOkubv8","flags":{"wfrp4e":{"effectTrigger":"applyDamage","effectApplication":"actor","script":"if (args.totalWoundLoss > 0)\n     ChatMessage.create({ content: `<b>Infectado: ${args.actor.name}</b> debe superar un Chequeo <b>Fácil (+40)</b> de <b>Aguante</b> o contraer una @Compendium[wfrp4e-core.diseases.kKccDTGzWzSXCBOb]{Herida supurante}.`, whisper: ChatMessage.getWhisperRecipients(\"GM\") })","preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/traits/trait.png","label":"Infectado","tint":null,"transfer":true}]
+			"description": "<p>La criatura, o su arma, es portadora de una infección grave. Si hace que un oponente vivo pierda Heridas, éste deberá superar un Chequeo <strong>Fácil (+40)</strong> de <strong>Aguante</strong> o contraer una @UUID[Compendium.wfrp4e-core.diseases.kKccDTGzWzSXCBOb]{Herida supurante}</p>",
+			"effects": {
+				"Infected": {
+					"flags.wfrp4e.script":"if (args.totalWoundLoss > 0)\n     ChatMessage.create({ content: `<b>Infectado: ${args.actor.name}</b> debe superar un Chequeo <b>Fácil (+40)</b> de <b>Aguante</b> o contraer una @UUID[Compendium.wfrp4e-core.diseases.kKccDTGzWzSXCBOb]{Herida supurante}.`, whisper: ChatMessage.getWhisperRecipients(\"GM\") })",
+					"label":"Infectado"
+					}
+				}
 		},
 		{
 			"id": "Infestation",
 			"name": "Infestado",
 			"description": "<p>La piel de la criatura está infestada de pulgas o parásitos similares. Todos los oponentes sufren un penalizador -10 al impacto en combate cuerpo a cuerpo puesto que los parásitos les distraen y les agobian. \r\r</p>",
-			"effects": [{"_id":"gjbJu5OWDKFJvvyY","flags":{"wfrp4e":{"effectTrigger":"targetPrefillDialog","effectApplication":"actor","script":"if (args.type == \"weapon\" && args.item.attackType == \"melee\")\n   args.prefillModifiers.modifier -= 10","preventDuplicateEffects":true}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/traits/trait.png","label":"Infestado","tint":null,"transfer":true}]
+			"effects": {
+				"Infestation": {
+					"label":"Infestado"
+					}
+				}
 		},
 		{
 			"id": "Leader",
 			"name": "Líder",
 			"description": "<p>La criatura es un líder experimentado. Obtiene un Bonificador +10 a la Empatía y a la Voluntad. Nota: este Rasgo no lo pueden adoptar criaturas con el Rasgo Bestial. \r\r</p>",
-			"effects": [{"_id":"qjz6qX4wkAN2Eldl","flags":{"wfrp4e":{"effectApplication":"actor","preventDuplicateEffects":false}},"changes":[{"key":"data.characteristics.fel.initial","value":"10","mode":2},{"key":"data.characteristics.wp.initial","value":"10","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/traits/trait.png","label":"Líder","tint":null,"transfer":true}]
+			"effects": {
+				"Leader": {
+					"label":"Líder"
+					}
+				}
 		},
 		{
 			"id": "Magic Resistance",
 			"name": "Resistencia a la magia",
 			"description": "<p>La Magia tiene un efecto reducido sobre la criatura. Los NE de cualquier hechizo que la afecta se reducen en la cifra entre paréntesis. Así pues, Resistencia a la magia 2 reduciría en 2 los NE. \r\r</p>",
-			"effects": [{"_id":"PWNOSwxsePCN7sKH","flags":{"wfrp4e":{"effectTrigger":"targetPrefillDialog","effectApplication":"actor","script":"if (args.type == \"cast\")\n       args.prefillModifiers.slBonus -= 2","preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/traits/trait.png","label":"Resistencia a la magia","tint":null,"transfer":true}]
+			"effects": {
+				"Magic Resistance": {
+					"label":"Resistencia a la magia"
+					}
+				}
 		},
 		{
 			"id": "Magical",
@@ -401,7 +501,12 @@
 			"id": "Regenerate",
 			"name": "Regenerar",
 			"description": "<p>La criatura es capaz de curarse a un ritmo extraordinario, incluso haciendo crecer de nuevo partes cercenadas. Al inicio de cada asalto, si tiene más de 0 Heridas, regenera automáticamente 1d10 Heridas. Si le quedan 0 Heridas, regenera 1 sola Herida si consigue sacar 8 o más en 1d10. Si saca un 10 para regenerar, regenera también por completo una Herida crítica, perdiendo todos los penalizadores y Estados asociados a la misma. Ninguna Herida crítica o Herida causada por el fuego se puede regenerar y debería anotarse aparte. \r\r</p>",
-			"effects": [{"_id":"0CEu4kmUhYSxWGJZ","flags":{"wfrp4e":{"effectTrigger":"endRound","effectApplication":"actor","script":"let chatData = {content: \"\", whisper: ChatMessage.getWhisperRecipients(\"GM\")}\n\nlet wounds = duplicate(this.actor.status.wounds)\nlet regen = (await new Roll(\"1d10\").roll()).total\n\nif (wounds.value >= wounds.max)\n   return\n\nif (wounds.value > 0)\n{\n   wounds.value += regen\n   if (wounds.value > wounds.max) \n        wounds.value = wounds.max\n   chatData.content += `<b>${this.actor.name}</b> recupera ${regen} Heridas.`\n   \n    if (regen == 10)\n       chatData.content += `<br>Adicionalmente, regenera una Herida Crítica.`\n}\nelse if (regen >= 8)\n{\n    chatData.content += `<b>${this.actor.name}</b> sacó un ${regen} y recupera 1 Herida.`\n    wounds.value += 1\n    if (regen == 10)\n       chatData.content += `<br>Adicionalmente, regenera una Herida Crítica.`\n}\nelse\n{\n    chatData.content += `<b>${this.actor.name}</b> Tirada de Regenerar de ${regen} - Sin efecto.`\n}\n\nthis.actor.update({\"data.status.wounds\" : wounds})\nChatMessage.create(chatData)","preventDuplicateEffects":true}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/traits/trait.png","label":"Regenerar","tint":null,"transfer":true}]
+			"effects": {
+				"Regenerate": {
+					"flags.wfrp4e.script":"let chatData = {content: \"\", whisper: ChatMessage.getWhisperRecipients(\"GM\")}\n\nlet wounds = duplicate(this.actor.status.wounds)\nlet regen = (await new Roll(\"1d10\").roll()).total\n\nif (wounds.value >= wounds.max)\n   return\n\nif (wounds.value > 0)\n{\n   wounds.value += regen\n   if (wounds.value > wounds.max) \n        wounds.value = wounds.max\n   chatData.content += `<b>${this.actor.name}</b> recupera ${regen} Heridas.`\n   \n    if (regen == 10)\n       chatData.content += `<br>Adicionalmente, regenera una Herida Crítica.`\n}\nelse if (regen >= 8)\n{\n    chatData.content += `<b>${this.actor.name}</b> sacó un ${regen} y recupera 1 Herida.`\n    wounds.value += 1\n    if (regen == 10)\n       chatData.content += `<br>Adicionalmente, regenera una Herida Crítica.`\n}\nelse\n{\n    chatData.content += `<b>${this.actor.name}</b> Tirada de Regenerar de ${regen} - Sin efecto.`\n}\n\nthis.actor.update({\"data.status.wounds\" : wounds})\nChatMessage.create(chatData)",
+					"label":"Regenerar"
+					}
+				}
 		},
 		{
 			"id": "Size",
@@ -422,13 +527,22 @@
 			"id": "Stealthy",
 			"name": "Sigiloso",
 			"description": "<p>La criatura es especialmente sigilosa. Suma una cifra igual a su Bonificador por Agilidad a los NE de todos los Chequeos de Movimiento silencioso.</p>",
-			"effects": [{"_id":"0AgiLabg8eB4LItu","flags":{"wfrp4e":{"effectTrigger":"prefillDialog","effectApplication":"actor","script":"if (args.type == \"skill\" &&  args.item.name.includes(\"Movimiento silencioso\"))\n{\n   let sl = this.actor.characteristics.ag.bonus\n   args.prefillModifiers.slBonus += sl;\n}","preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/traits/trait.png","label":"Sigiloso","tint":null,"transfer":true}]
+			"effects": {
+				"Stealthy": {
+					"flags.wfrp4e.script":"if (args.type == \"skill\" &&  args.item.name.includes(\"Movimiento silencioso\"))\n{\n   let sl = this.actor.characteristics.ag.bonus\n   args.prefillModifiers.slBonus += sl;\n}",
+					"label":"Sigiloso"
+					}
+				}
 		},
 		{
 			"id": "Stride",
 			"name": "Zancada",
 			"description": "<p>La criatura tiene una zancada larga, quizá debido a ser un cuadrúpedo o a tener patas especialmente largas. Multiplica por 1,5 el Movimiento de Carrera.</p>",
-			"effects": [{"_id":"bSNlAHOT09D6Bx16","flags":{"wfrp4e":{"effectTrigger":"prepareData","effectApplication":"actor","script":"args.actor.details.move.run *= 1.5","preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/traits/trait.png","label":"Zancada","tint":null,"transfer":true}]
+			"effects": {
+				"Stride": {
+					"label":"Zancada"
+					}
+				}
 		},
 		{
 			"id": "Stupid",
@@ -444,13 +558,25 @@
 			"id": "Swarm",
 			"name": "Plaga",
 			"description": "<p>Las plagas son grandes números de la misma criatura actuando como una sola. Las Plagas ignoran todas las reglas relativas al Rasgo de criatura Tamaño . Una plaga cuenta como una sola Criatura, que ignora las reglas de Psicología y puede ignorar las reglas de Trabado cuando utiliza su Movimiento. Si la Plaga acierta a un oponente, activa la regla de Golpe mortal (incluso si no ha matado a dicho oponente). Todos los oponentes Trabados con una Plaga pierden automáticamente 1 Herida al final de cada Asalto puesto que la Plaga abruma a cualquier cosa cercana. La Plaga tiene cinco veces las Heridas de un ejemplar normal de la criatura y obtiene un +10 a su Habilidad de armas. Todo intento de acertar a la Plaga con un disparo tiene un bonificador +40 al impacto.</p>",
-			"effects": [{"_id":"FLoUbmMqNQMuJfZx","flags":{"wfrp4e":{"effectTrigger":"woundCalc","effectApplication":"actor","script":"args.wounds *= 5","preventDuplicateEffects":true}},"changes":[{"key":"data.characteristics.ws.initial","value":"10","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/traits/trait.png","label":"Bonificadores por Plaga","tint":null,"transfer":true},{"_id":"tEaxMHcTWod19AVP","flags":{"wfrp4e":{"effectTrigger":"targetPrefillDialog","effectApplication":"actor","script":"if (args.type == \"weapon\" && args.item.attackType == \"ranged\")\n   args.prefillModifiers.modifier += 40","preventDuplicateEffects":true}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/traits/trait.png","label":"Plaga","tint":null,"transfer":true}]
+			"effects": {
+				"Swarm Bonus": {
+					"label":"Bonificadores por Plaga"
+					},
+				"Swarm": {
+					"label":"Plaga"
+					}
+				}
 		},
 		{
 			"id": "Tail Attack",
 			"name": "Coletazo",
 			"description": "<p>La cola de la criatura es capaz de derribar de un golpe a sus enemigos.\nEn su turno, puede llevar a cabo un Ataque gratuito gastando 1 Ventaja. El Coletazo hace el daño indicado entre paréntesis, que ya incluye su Bonificador por Fuerza . Los oponentes de menor Tamaño que la criatura y que sufren cualquier Herida a causa del ataque también pasan al Estado @Condition[Tumbado].</p>",
-			"effects": [{"_id":"3KXZhIkHukLOpg2l","flags":{"wfrp4e":{"effectApplication":"damage","effectTrigger":"applyDamage","script":"let actorSize = game.wfrp4e.config.actorSizeNums[args.actor.details.size.value]\nlet attackerSize = game.wfrp4e.config.actorSizeNums[args.attacker.details.size.value]\n\nif (attackerSize > actorSize)\n{\n   args.actor.addCondition(\"prone\")\n   ChatMessage.create({content: `<b>Coletazo</b>: ${args.actor.data.token.name} está ahora @Condition[Tumbado]`, speaker : {alias: args.attacker.data.token.name}})\n}","preventDuplicateEffects":true}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/traits/trait.png","label":"Coletazo","tint":null,"transfer":true}]
+			"effects": {
+				"Tail Attack": {
+					"flags.wfrp4e.script":"let actorSize = game.wfrp4e.config.actorSizeNums[args.actor.details.size.value]\nlet attackerSize = game.wfrp4e.config.actorSizeNums[args.attacker.details.size.value]\n\nif (attackerSize > actorSize)\n{\n   args.actor.addCondition(\"prone\")\n   ChatMessage.create({content: `<b>Coletazo</b>: ${args.actor.data.token.name} está ahora @Condition[Tumbado]`, speaker : {alias: args.attacker.data.token.name}})\n}",
+					"label":"Coletazo"
+					}
+				}
 		},
 		{
 			"id": "Territorial",
@@ -460,31 +586,53 @@
 		{
 			"id": "Terror",
 			"name": "Terror",
-			"description": "<p>Algunas criaturas son tan profundamente inquietantes que provocan una sensación aciaga y que hiela los huesos en sus enemigos. Cuando te encuentres por vez primera con una criatura que causa Terror, deberás llevar acabo un Chequeo de Frialdad. Si lo consigues, no sufres efecto alguno debido al Terror ; si fallas, sufres tantos Estados de @Condition[Quebrantado] como el Nivel de Terror de la criatura, más el número de NE por debajo de 0.</p>\n<p>Tras resolver el Chequeo de Psicología, la criatura causa @Compendium[wfrp4e-core.traits.pTorrE0l3VybAbtn]{Miedo}, con un Nivel de Miedo igual a su Nivel de Terror.</p>"
+			"description": "<p>Algunas criaturas son tan profundamente inquietantes que provocan una sensación aciaga y que hiela los huesos en sus enemigos. Cuando te encuentres por vez primera con una criatura que causa Terror, deberás llevar acabo un Chequeo de Frialdad. Si lo consigues, no sufres efecto alguno debido al Terror ; si fallas, sufres tantos Estados de @Condition[Quebrantado] como el Nivel de Terror de la criatura, más el número de NE por debajo de 0.</p>\n<p>Tras resolver el Chequeo de Psicología, la criatura causa @Compendium[wfrp4e-core.traits.pTorrE0l3VybAbtn]{Miedo}, con un Nivel de Miedo igual a su Nivel de Terror.</p>",
+			"effects": {
+				"Terror": {}
+				}
 		},
 		{
 			"id": "Tongue Attack (Range)",
 			"name": "Ataque de lengua (Rango)",
 			"description": "<p>La lengua prensil de la criatura se puede enroscar alrededor de su presa, arrastrándola a un macabro final. En su turno, puede llevar a cabo un Ataque gratuito gastando 1 Ventaja. Se trata de un ataque A distancia que hace tanto Daño como la fuerza indicada (el rango es la cifra entre paréntesis). Si el ataque impacta, el objetivo sufre 1 Estado de @Condition[Enmarañado] y, si es de un Tamaño menor, se ve arrastrado hacia la criatura y queda Trabado en combate cuerpo a cuerpo. Entonces, la criatura puede elegir entre liberar al objetivo, llevar acabo un Ataque gratuito utilizando su Rasgo Arma, o mantener el objetivo envuelto en su lengua, iniciando una Presa.</p>",
-			"effects": [{"_id":"kPgI28vmSamM3u1s","flags":{"wfrp4e":{"effectApplication":"damage","effectTrigger":"applyDamage","script":"let actorSize = game.wfrp4e.config.actorSizeNums[args.actor.details.size.value]\nlet attackerSize = game.wfrp4e.config.actorSizeNums[args.attacker.details.size.value]\n\nif (attackerSize > actorSize)\n{\n   args.actor.addCondition(\"entangled\")\n   ChatMessage.create({content: `<b>Ataque de lengua</b>: ${args.actor.data.token.name} está ahora @Condition[Enmarañado]`, speaker : {alias: args.attacker.data.token.name}})\n}","preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/traits/trait.png","label":"Ataque de lengua (Rango)","tint":null,"transfer":true}]
+			"effects": {
+				"Tongue Attack (Range)": {
+					"flags.wfrp4e.script":"let actorSize = game.wfrp4e.config.actorSizeNums[args.actor.details.size.value]\nlet attackerSize = game.wfrp4e.config.actorSizeNums[args.attacker.details.size.value]\n\nif (attackerSize > actorSize)\n{\n   args.actor.addCondition(\"entangled\")\n   ChatMessage.create({content: `<b>Ataque de lengua</b>: ${args.actor.data.token.name} está ahora @Condition[Enmarañado]`, speaker : {alias: args.attacker.data.token.name}})\n}",
+					"label":"Ataque de lengua (Rango)"
+					}
+				}
 		},
 		{
 			"id": "Tongue Attack (12)",
 			"name": "Ataque de lengua (12)",
 			"description": "<p>La lengua prensil de la criatura se puede enroscar alrededor de su presa, arrastrándola a un macabro final. En su turno, puede llevar a cabo un Ataque gratuito gastando 1 Ventaja. Se trata de un ataque A distancia que hace tanto Daño como la fuerza indicada (el rango es la cifra entre paréntesis). Si el ataque impacta, el objetivo sufre 1 Estado de @Condition[Enmarañado] y, si es de un Tamaño menor, se ve arrastrado hacia la criatura y queda Trabado en combate cuerpo a cuerpo. Entonces, la criatura puede elegir entre liberar al objetivo, llevar acabo un Ataque gratuito utilizando su Rasgo Arma, o mantener el objetivo envuelto en su lengua, iniciando una Presa.</p>",
-			"effects": [{"_id":"kPgI28vmSamM3u1s","flags":{"wfrp4e":{"effectApplication":"damage","effectTrigger":"applyDamage","script":"let actorSize = game.wfrp4e.config.actorSizeNums[args.actor.details.size.value]\nlet attackerSize = game.wfrp4e.config.actorSizeNums[args.attacker.details.size.value]\n\nif (attackerSize > actorSize)\n{\n   args.actor.addCondition(\"entangled\")\n   ChatMessage.create({content: `<b>Ataque de lengua</b>: ${args.actor.data.token.name} está ahora @Condition[Enmarañado]`, speaker : {alias: args.attacker.data.token.name}})\n}","preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/traits/trait.png","label":"Ataque de lengua (Rango)","tint":null,"transfer":true}]
+			"effects": {
+				"Tongue Attack (12)": {
+					"flags.wfrp4e.script":"let actorSize = game.wfrp4e.config.actorSizeNums[args.actor.details.size.value]\nlet attackerSize = game.wfrp4e.config.actorSizeNums[args.attacker.details.size.value]\n\nif (attackerSize > actorSize)\n{\n   args.actor.addCondition(\"entangled\")\n   ChatMessage.create({content: `<b>Ataque de lengua</b>: ${args.actor.data.token.name} está ahora @Condition[Enmarañado]`, speaker : {alias: args.attacker.data.token.name}})\n}",
+					"label":"Ataque de lengua (12)"
+					}
+				}
 		},
 		{
 			"id": "Tough",
 			"name": "Recio",
 			"description": "<p>La criatura resiste mucho más daño de lo normal y es poco probable que se eche para atrás. Obtiene un +10 a la Resistencia y a la Voluntad. \r\r</p>",
-			"effects": [{"_id":"X8KrugiMugs70khd","flags":{"wfrp4e":{"effectApplication":"actor","preventDuplicateEffects":false}},"changes":[{"key":"data.characteristics.t.initial","value":"10","mode":2},{"key":"data.characteristics.wp.initial","value":"10","mode":2}],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/traits/trait.png","label":"Recio","tint":null,"transfer":true}]
+			"effects": {
+				"Tough": {
+					"label":"Recio"
+					}
+				}
 		},
 		{
 			"id": "Tracker",
 			"name": "Rastreador ",
 			"description": "<p>Los rastreadores son hábiles en seguir a su presa, por lo general mediante el olfato o el oído. Suman tantos NE como su Bonificador por Iniciativa a todos los Chequeos de Rastrear.</p>",
-			"effects": [{"_id":"ftGagmf8rj6rq3ir","flags":{"wfrp4e":{"effectTrigger":"prefillDialog","effectApplication":"actor","script":"if (args.type == \"skill\" &&  args.item.name.includes(\"Seguir rastros\"))\n{\n   let sl = this.actor.characteristics.i.bonus\n   args.prefillModifiers.slBonus += sl;\n}","preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/traits/trait.png","label":"Rastreador","tint":null,"transfer":true}]
+			"effects": {
+				"Tracker": {
+					"flags.wfrp4e.script":"if (args.type == \"skill\" &&  args.item.name.includes(\"Seguir rastros\"))\n{\n   let sl = this.actor.characteristics.i.bonus\n   args.prefillModifiers.slBonus += sl;\n}",
+					"label":"Rastreador"
+					}
+				}
 		},
 		{
 			"id": "Trained",
@@ -510,13 +658,21 @@
 			"id": "Venom",
 			"name": "Veneno",
 			"description": "<p>Los ataques de la criatura están envenenados. Cuando causan Heridas, el oponente sufre 1 Estado de @Condition[Envenenado]. Si no se indica Dificultad alguna para resistir el Veneno, se supone que es Desafiante.</p>",
-			"effects": [{"_id":"cwsT8KWhr0OgtWc1","flags":{"wfrp4e":{"effectTrigger":"applyDamage","effectApplication":"actor","script":"if (args.totalWoundLoss > 0)\n    args.actor.addCondition(\"poisoned\")","preventDuplicateEffects":false,"hide":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/traits/trait.png","label":"Veneno","tint":"","transfer":true}]
+			"effects": {
+				"Venom": {
+					"label":"Veneno"
+					}
+				}
 		},
 		{
 			"id": "Vomit",
 			"name": "Vómito",
 			"description": "<p>La criatura puede vomitar un chorro de corrupción corrosiva, recubriendo a su oponente de porquería espesa y a medio digerir. En su turno, gastando 3 Ventajas, la criatura puede activar su Vómito como un Ataque gratuito. La criatura elige 1 objetivo al que puede ver, a una distancia en yardas igual o menor que su Bonificador por Resistencia y lo suelta; todos los objetivos a dos yardas o menos de éste también resultan afectados.</li>\n<li>La criatura lleva a cabo un Chequeo <strong>Enfrentado</strong> de <strong>Habilidad de proyectiles/Esquivar</strong> contra todos los objetivos afectados (una sola tirada del atacante enfrentada individualmente por cada objetivo). El Chequeo es típicamente <strong>Fácil (+40)</strong> para la criatura que vomita, debido a la distancia corta y <strong>Desafiante (+0)</strong> para sus oponentes. Todos los objetivos que pierden sufren un impacto con un Daño por Arma igual al Bonificador por Resistencia +4 de la criatura y sufren 1 Estado de @Condition[Aturdido].</li>\n<li>Todas las armas y armaduras de los objetivos afectados sufren 1 Daño puesto que el vómito ácido las corroe.</li>\n</ul></p>",
-			"effects": [{"_id":"4KinCaegUvscrFU9","flags":{"wfrp4e":{"effectApplication":"damage","effectTrigger":"applyDamage","script":"args.actor.addCondition(\"stunned\")","preventDuplicateEffects":false}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/traits/trait.png","label":"Vómito","tint":null,"transfer":true}]
+			"effects": {
+				"Vomit": {
+					"label":"Vómito"
+					}
+				}
 		},
 		{
 			"id": "Wallcrawler",
@@ -537,7 +693,11 @@
 			"id": "Web",
 			"name": "Telaraña",
 			"description": "<p>La criatura puede crear telarañas para atrapar a enemigos incautos. Siempre que acierta, sus oponentes sufren 1 Estado de @Condition[Enmarañado], con una Fuerza igual a la cifra entre paréntesis.</p>",
-			"effects": [{"_id":"pV0NvELZXtpJJTfi","flags":{"wfrp4e":{"effectTrigger":"applyDamage","effectApplication":"actor","script":"args.actor.addCondition(\"entangled\")","preventDuplicateEffects":true}},"changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/traits/trait.png","label":"Telaraña","tint":null,"transfer":true}]
+			"effects": {
+				"Web": {
+					"label":"Telaraña"
+					}
+				}
 		}
 	]
 }

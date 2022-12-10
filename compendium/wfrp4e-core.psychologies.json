@@ -1,7 +1,10 @@
 {
 	"label": "Psicologías",
 	"mapping": {
-		"effects":"effects"
+		"effects": {
+			"path": "effects",
+			"converter": "effects"
+			}
 		},
 	"entries": [
 		{
@@ -22,20 +25,34 @@
 		{
 			"id": "Frenzy",
 			"name": "Furia",
-			"description": "<p>Mediante un Chequeo de Voluntad, puedes inducirte a ti mismo un estado alterado, sugestionándote, aullando, mordiendo tu escudo o algo similar. Si lo consigues, te ves sujeto a la Furia .</p>\n<p>Mientras estás sujeto a la Furia , eres inmune a todas las demás Psicologías y no huyes ni te retiras por razón alguna; por el contrario, debes moverte con toda celeridad hacia el enemigo más próximo al que puedes ver, para atacarle. Por lo general, la única Acción que puedes llevar a cabo es un Chequeo de Habilidad de armas o un Chequeo de Atletismo para llegar más rápidamente hasta un enemigo. Además, puedes llevar a cabo un Chequeo de Cuerpo a cuerpo como Acción libre cada Asalto porque estás poniendo en tus ataques todo lo que tienes. Por último, obtienes un +1 a tu Bonificador por Fuerza, tal es tu ferocidad. Permaneces en Furia hasta que todos los enemigos en tu línea visual han sido pacificados, o sufres 1 Estado de <em>@Condition[Aturdido]</em> o quedas <em>@Condition[Inconsciente]</em>. Una vez se acaba tu Furia , sufres de inmediato 1 Estado de <em>@Condition[Fatigado]</em>.</p>",
-			"effects": [{"_id":"fChUE7dauqBKrKWx","flags":{"wfrp4e":{"effectApplication":"actor","effectTrigger":"prePrepareItems","script":"args.actor.characteristics.s.bonus += 1\nargs.actor.characteristics.s.calculationBonusModifier -= 1","preventDuplicateEffects":false}},"changes":[],"disabled":true,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/psychologies/psychology.png","label":"Furia","tint":null,"transfer":true}]
+			"description": "<p>Mediante un Chequeo de Voluntad, puedes inducirte a ti mismo un estado alterado, sugestionándote, aullando, mordiendo tu escudo o algo similar. Si lo consigues, te ves sujeto a la Furia .</p>\n<p>Mientras estás sujeto a la Furia , eres inmune a todas las demás Psicologías y no huyes ni te retiras por razón alguna; por el contrario, debes moverte con toda celeridad hacia el enemigo más próximo al que puedes ver, para atacarle. Por lo general, la única Acción que puedes llevar a cabo es un Chequeo de Habilidad de armas o un Chequeo de Atletismo para llegar más rápidamente hasta un enemigo. Además, puedes llevar a cabo un Chequeo de Cuerpo a cuerpo como Acción libre cada Asalto porque estás poniendo en tus ataques todo lo que tienes. Por último, obtienes un +1 a tu Bonificador por Fuerza, tal es tu ferocidad. Permaneces en Furia hasta que todos los enemigos en tu línea visual han sido pacificados, o sufres 1 Estado de @Condition[Aturdido] o quedas @Condition[Inconsciente]. Una vez se acaba tu Furia , sufres de inmediato 1 Estado de @Condition[Fatigado].</p><blockquote class=\"foundry-note\"><p><span style=\"font-style: normal;\">El efecto está desactivado por defecto, activarlo en el apartado 'efectos' al entrar en Furia.</p></blockquote>",
+			"effects": {
+				"Frenzy": {
+					"label":"Furia"
+					}
+				}
 		},
 		{
 			"id": "Hatred (Target)",
 			"name": "Odio (Objetivo)",
-			"description": "<p>Te ves consumido por el Odio hacia el Objetivo , que normalmente suele ser un grupo de personas o de criaturas, como por ejemplo, ‘hochlandeses’, ‘pulpos de las ciénagas’ o ‘esclavistas’. Jamás interaccionarás socialmente con algo o alguien a quien odies de esta forma. Al encontrarte con el objeto de tu Odio , deberás intentar un Chequeo de Psicología. Si fallas, te ves sujeto al Odio .</p><p>Al final de cada asalto subsiguiente, puedes intentar un nuevo Chequeo de Psicología para acabar con el Odio . Si no lo consigues, los efectos del Odio acaban por sí solos de forma natural cuando todos los miembros del grupo especificado han muerto o se han ido, o pasas al Estado <em>@Condition[Inconsciente]</em>.</p>\n<p>Mientras te ves sujeto al Odio , debes intentar destruir de inmediato al grupo odiado por el método más rápido y letal posible. Obtienes un bonificador de +1 NE a todos los Chequeos de combate contra el grupo especificado, y eres inmune al @Compendium[wfrp4e-core.psychologies.Ib2YQYChktDFN93y]{Miedo} y al @Compendium[wfrp4e-core.skills.I0yPc4PH5erWJLmu]{Intimidar} (pero no al @Compendium[wfrp4e-core.psychologies.meMkLEwdJIDLxM0B]{Terror}) causados por tu odiado enemigo.</p>",
-			"effects":[{"_id":"6QhtnGcV5T0JXQZN","changes":[],"disabled":false,"duration":{"startTime":null},"icon":"modules/wfrp4e-core/icons/psychologies/psychology.png","label":"Odio","transfer":true,"flags":{"wfrp4e":{"effectTrigger":"dialogChoice","effectApplication":"actor","effectData":{"description":"Chequeos de Combate contra el Grupo Odiado","modifier":null,"slBonus":1,"successBonus":null,"difficultyStep":null},"hide":false,"preventDuplicateEffects":false}},"tint":null}]
+			"description": "<p>Te ves consumido por el Odio hacia el Objetivo , que normalmente suele ser un grupo de personas o de criaturas, como por ejemplo, ‘hochlandeses’, ‘pulpos de las ciénagas’ o ‘esclavistas’. Jamás interaccionarás socialmente con algo o alguien a quien odies de esta forma. Al encontrarte con el objeto de tu Odio , deberás intentar un Chequeo de Psicología. Si fallas, te ves sujeto al Odio .</p><p>Al final de cada asalto subsiguiente, puedes intentar un nuevo Chequeo de Psicología para acabar con el Odio . Si no lo consigues, los efectos del Odio acaban por sí solos de forma natural cuando todos los miembros del grupo especificado han muerto o se han ido, o pasas al Estado @Condition[Inconsciente].</p>\n<p>Mientras te ves sujeto al Odio , debes intentar destruir de inmediato al grupo odiado por el método más rápido y letal posible. Obtienes un bonificador de +1 NE a todos los Chequeos de combate contra el grupo especificado, y eres inmune al @Compendium[wfrp4e-core.psychologies.Ib2YQYChktDFN93y]{Miedo} y al @Compendium[wfrp4e-core.skills.I0yPc4PH5erWJLmu]{Intimidar} (pero no al @Compendium[wfrp4e-core.psychologies.meMkLEwdJIDLxM0B]{Terror}) causados por tu odiado enemigo.</p>",
+			"effects": {
+				"Hatred": {
+					"flags.wfrp4e.effectData.description":"Chequeos de Combate contra el Grupo Odiado",
+					"label":"Odio"
+					}
+				}
 		},
 		{
 			"id": "Love",
 			"name": "Amor",
 			"description": "<p>Los poetas escriben sin cesar acerca del amor, y todos y cada uno de los juglares del Imperio conocen docenas de canciones que ensalzan el poder el amor. Si tu personaje tiene el rasgo Amor hacia uno o más individuos, esto refleja una conexión emocional profunda y duradera. Se puede tratar del inmenso amor romántico hacia una esposa, marido o amante, un intenso amor familiar hacia un hermano, padre o hijo, o una amistad especialmente fuerte.</p>\n<p>Debes ir en ayuda de aquél a quien amas si se ve amenazado física o socialmente. Eres inmune al Miedo y a la Intimidación mientras defiendes a tus seres queridos, y obtienes un bonificador de +1 NE a todos los Chequeos relacionados con ello.</p>\n<p><strong>Ejemplo:</strong> <em>Rilla es una mujer del río que viaja por el Reik con su estrechamente unida familia. Tiene Amor (hijo), Amor (hermano) y Amor (padres). ¡Si te metes con la familia de Rilla, te metes también con Rilla!</em></p>",
-			"effects": [{"_id": "R2HbCmmf2tsHfeM2","changes": [],"disabled": false,"duration":{"startTime": null},"icon": "modules/wfrp4e-core/icons/psychologies/psychology.png","label": "Amor","tint": null,"transfer": true,	"flags":{"wfrp4e": {"effectTrigger": "dialogChoice","effectApplication": "actor","effectData":{"description": "Chequeos relacionados con defender a tus seres queridos","modifier": null,"slBonus": 1,"successBonus": null,"difficultyStep": null},"hide": false,"preventDuplicateEffects": false}}}]
+			"effects": {
+				"Love": {
+					"flags.wfrp4e.effectData.description":"Chequeos relacionados con defender a tus seres queridos",
+					"label": "Amor"
+					}
+				}
 		},		
 		{
 			"id": "Phobia (Target)",
