@@ -819,7 +819,7 @@ game.wfrp4e.config.speciesSkills = {
             "Carisma",
             "Consumir alcohol",
             "Esquivar",
-            "Juego",
+            "Jugar",
             "Regatear",
             "Intuición",
             "Hablar idioma (Asambleario)",

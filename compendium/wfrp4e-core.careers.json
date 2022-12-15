@@ -219,7 +219,7 @@
 			"name": "Barquero",
 			"skills": ["Consumir alcohol","Esquivar","Aguante","Cotilleo","Cuerpo a cuerpo (Pelea)","Remar","Navegar","Nadar","Atletismo","Animar (Relatar)","Regatear","Intuición","Sabiduría académica (Vías fluviales)","Percepción"],
 			"talents": ["Barquero","Etiqueta (Gremio)","Muy fuerte","Viajero curtido"],
-			"trappings": ["Bote de remos","Soga"],
+			"trappings": ["Bote de remos","Soga, 10 yardas"],
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journal-entries.wczCPcuHT4VQDLpL.JournalEntryPage.Rk1V9EvtZ0p5Qhwr]{Barquero}</p>"
 		},
 		{
@@ -667,7 +667,7 @@
 			"name": "Guía",
 			"skills": ["Carisma animal","Escalar","Aguante","Cotilleo","Sabiduría académica (Local)","Cuerpo a cuerpo (Básica)","Supervivencia","Percepción"],
 			"talents": ["Errante","Orientarse","Vigilancia","Zancadas (Cualquiera)"],
-			"trappings": ["Arma de mano","Botas recias","Capa","Chaqueta de cuero","Soga"],
+			"trappings": ["Arma de mano","Botas recias","Capa","Chaqueta de cuero","Soga, 10 yardas"],
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journal-entries.wczCPcuHT4VQDLpL.JournalEntryPage.HSoeyY2cbQAndBFk]{Explorador}</p>"
 		},
 		{
@@ -795,7 +795,7 @@
 			"name": "Práctico",
 			"skills": ["Consumir alcohol","Cotilleo","Intuición","Sabiduría académica (Local)","Sabiduría académica (Vías fluviales)","Percepción","Remar","Nadar","Carisma","Frialdad","Animar (Relatar)","Hablar idioma (Cualquiera)","Cuerpo a cuerpo (Básica)","Orientación"],
 			"talents": ["Etiqueta (Gremio)","Guía fluvial","Negociador","Olfato para los problemas"],
-			"trappings": ["Bote de remos","Chaleco de cuero","Soga"],
+			"trappings": ["Bote de remos","Chaleco de cuero","Soga, 10 yardas"],
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journal-entries.wczCPcuHT4VQDLpL.JournalEntryPage.TkF2ld3b72RlH2AR]{Práctico}</p>"
 		},
 		{
@@ -1531,7 +1531,7 @@
 			"name": "Guarda de caminos",
 			"skills": ["Sobornar","Consumir alcohol","Jugar","Cotilleo","Regatear","Cuerpo a cuerpo (Básica)","Percepción","A distancia (Ballesta)","Criar animales","Aguante","Intimidar","Intuición","Supervivencia","Montar (Caballo)"],
 			"talents": ["Delincuente","Jinete experto","Mano dura","Viajero curtido"],
-			"trappings": ["Arma de mano","Caballo de monta","Silla de montar y arneses","Camisote de malla","Soga"],
+			"trappings": ["Arma de mano","Caballo de monta","Silla de montar y arneses","Camisote de malla","Soga, 10 yardas"],
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journal-entries.wczCPcuHT4VQDLpL.JournalEntryPage.dN2K3ZBMu4rvGGpW]{Guarda de caminos}</p>"
 		},
 		{
@@ -1787,7 +1787,7 @@
 			"name": "Ladrón",
 			"skills": ["Atletismo","Escalar","Frialdad","Esquivar","Aguante","Intuición","Percepción","Movimiento silencioso (Urbano)","Tasar","Cotilleo","Sabiduría académica (Local)","Forzar Cerraduras","Lengua secreta (Ladrón)","Prestidigitación"],
 			"talents": ["Allanamiento de morada","Etiqueta (Delincuentes)","Manos rápidas","Sombra"],
-			"trappings": ["Herramientas de un Oficio (Ladrón)","Soga"],
+			"trappings": ["Herramientas de un Oficio (Ladrón)","Soga, 10 yardas"],
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journal-entries.wczCPcuHT4VQDLpL.JournalEntryPage.mBtIPoWNpXwAS5Yl]{Ladrón}</p>"
 		},
 		{
@@ -1795,7 +1795,7 @@
 			"name": "Cazaladrones",
 			"skills": ["Sobornar","Carisma","Cotilleo","Regatear","Intuición","Cuerpo a cuerpo (Básica)","Supervivencia","Percepción"],
 			"talents": ["Allanamiento de morada","Cortés","Golpe conmocionador","Sombra"],
-			"trappings": ["Arma de mano","Chaleco de cuero","Soga"],
+			"trappings": ["Arma de mano","Chaleco de cuero","Soga, 10 yardas"],
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journal-entries.wczCPcuHT4VQDLpL.JournalEntryPage.orZTfdJCm6OnUktl]{Cazarrecompensas}</p>"
 		},
 		{
@@ -1819,7 +1819,7 @@
 			"name": "Ladrón de sepulturas",
 			"skills": ["Escalar","Frialdad","Esquivar","Aguante","Cotilleo","Intuición","Percepción","Movimiento silencioso (Cualquiera)","Sobornar","Conducir","Tasar","Regatear","Sabiduría académica (Medicina)","Cuerpo a cuerpo (Básica)","Investigar","Sabiduría académica (Historia)","Forzar Cerraduras","Poner trampas"],
 			"talents": ["Golpe poderoso","Leer y escribir","Rata de túnel","Tenaz"],
-			"trappings": ["Arma de mano (Pico)","Caballo","Carreta","Chaqueta de cuero","Herramientas de un Oficio (Ladrón)","Soga"],
+			"trappings": ["Arma de mano (Pico)","Caballo","Carreta","Chaqueta de cuero","Herramientas de un Oficio (Ladrón)","Soga, 10 yardas"],
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journal-entries.wczCPcuHT4VQDLpL.JournalEntryPage.bDoNOzzUiMdKqpps]{Ladrón de tumbas}</p>"
 		},
 		{
@@ -1995,7 +1995,7 @@
 			"name": "Cazador de brujas",
 			"skills": ["Carisma","Consumir alcohol","Sanar","Intimidar","Intuición","Sabiduría académica (Tortura)","Cuerpo a cuerpo (Pelea)","Percepción","Frialdad","Cuerpo a cuerpo (Básica)","Cotilleo","Sabiduría académica (Brujas)","A distancia (Cualquiera)","Montar (Caballo)"],
 			"talents": ["Empuñar dos armas","Puntería","Sombra","Viajero curtido"],
-			"trappings": ["Caballo de monta","Silla de montar y arreos","Chaqueta de cuero","Espada plateada","Pistola ballesta o pistola","Soga","Sombrero (Hennin)"],
+			"trappings": ["Caballo de monta","Silla de montar y arreos","Chaqueta de cuero","Espada plateada","Pistola ballesta o pistola","Soga, 10 yardas","Sombrero (Hennin)"],
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journal-entries.wczCPcuHT4VQDLpL.JournalEntryPage.ADYQOtpsk5n1EHen]{Cazador de brujas}</p>"
 		},
 		{
