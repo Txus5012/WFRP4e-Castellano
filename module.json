@@ -9,8 +9,8 @@
     }
   ],
   "url": "https://github.com/Txus5012/WFRP4e-Castellano",
-  "readme": "https://github.com/Txus5012/WFRP4e-Castellano/tree/v1.6.3#readme",
-  "version": "1.6.3",
+  "readme": "https://github.com/Txus5012/WFRP4e-Castellano/tree/v1.7.0#readme",
+  "version": "1.7.0",
   "scripts": [
     "modules/initialization.js"
   ],
