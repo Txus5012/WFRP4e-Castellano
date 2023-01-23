@@ -376,7 +376,7 @@ game.wfrp4e.config.effectTriggers = {
     "opposedDefender" : "Enfrentado Defensor",
     "calculateOpposedDamage" : "Calcular Daño Enfrentado",
     "targetPrefillDialog" : "Prellenar Diálogo del Objetivo",
-    "getInitiativeFormula" : "Conseguir Iniciativa",
+    "getInitiativeFormula" : "Calcular Iniciativa",
     "endTurn" : "Fin del Turno",
     "startTurn" : "Comienzo del Turno",
     "endRound" : "Fin del Asalto",

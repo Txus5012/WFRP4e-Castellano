@@ -114,6 +114,7 @@ Babele.get().registerConverters({
 	},
 
        "lore": (value) => {  // Saberes
+	     if ( value == "petty" ) return "Menor";
 	     if ( value == "beasts" ) return "Bestias";
 	     if ( value == "death" ) return "Muerte";
 	     if ( value == "fire" ) return "Fuego";
@@ -269,6 +270,7 @@ Babele.get().registerConverters({
 	     if ( value == "Hard" ) return "Difícil";
 	     if ( value == "Very Hard" ) return "Muy Difícil";
              if ( value == "Lore" ) return "Saber";
+	     if ( value == "Petty" ) return "Menor";
 	     if ( value == "Beasts" ) return "Bestias";
 	     if ( value == "Death" ) return "Muerte";
 	     if ( value == "Fire" ) return "Fuego";

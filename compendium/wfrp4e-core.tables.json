@@ -156,8 +156,8 @@
 				}
 		},
 		{
-			"id": "Career - Human (Reiklander)",
-			"name": "Carrera - Humano (Reikland\u00E9s)",
+			"id": "Career - Human",
+			"name": "Carrera - Humano",
 			"results": {
 				"1-1": "@UUID[Compendium.wfrp4e-core.journal-entries.wczCPcuHT4VQDLpL.JournalEntryPage.86gkaanqt19xYCRa]{Boticario}",
 				"2-2": "@UUID[Compendium.wfrp4e-core.journal-entries.wczCPcuHT4VQDLpL.JournalEntryPage.hVKMI3xwuUpO3P6c]{Ingeniero}",
