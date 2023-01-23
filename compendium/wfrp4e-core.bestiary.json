@@ -31,7 +31,7 @@
 					"label":"Zancada"
 					},
 				"Tail Attack": {
-					"flags.wfrp4e.script":"let actorSize = game.wfrp4e.config.actorSizeNums[args.actor.details.size.value]\nlet attackerSize = game.wfrp4e.config.actorSizeNums[args.attacker.details.size.value]\n\nif (attackerSize > actorSize)\n{\n   args.actor.addCondition(\"prone\")\n   ChatMessage.create({content: `<b>Coletazo</b>: ${args.actor.prototypeToken.name} está ahora @Condition[Tumbado]`, speaker : {alias: args.attacker.token.name}})\n}",
+					"flags.wfrp4e.script":"let actorSize = game.wfrp4e.config.actorSizeNums[args.actor.details.size.value]\nlet attackerSize = game.wfrp4e.config.actorSizeNums[args.attacker.details.size.value]\n\nif (attackerSize > actorSize)\n{\n   args.actor.addCondition(\"prone\")\n   ChatMessage.create({content: `<b>Coletazo</b>: ${args.actor.prototypeToken.name} está ahora @Condition[Tumbado]`, speaker : {alias: args.attacker.prototypeToken.name}})\n}",
 					"label":"Coletazo"
 					},
 				"Venom": {
@@ -350,7 +350,7 @@
 					"label":"Armadura"
 					},
 				"Tail Attack": {
-					"flags.wfrp4e.script":"let actorSize = game.wfrp4e.config.actorSizeNums[args.actor.details.size.value]\nlet attackerSize = game.wfrp4e.config.actorSizeNums[args.attacker.details.size.value]\n\nif (attackerSize > actorSize)\n{\n   args.actor.addCondition(\"prone\")\n   ChatMessage.create({content: `<b>Coletazo</b>: ${args.actor.prototypeToken.name} está ahora @Condition[Tumbado]`, speaker : {alias: args.attacker.token.name}})\n}",
+					"flags.wfrp4e.script":"let actorSize = game.wfrp4e.config.actorSizeNums[args.actor.details.size.value]\nlet attackerSize = game.wfrp4e.config.actorSizeNums[args.attacker.details.size.value]\n\nif (attackerSize > actorSize)\n{\n   args.actor.addCondition(\"prone\")\n   ChatMessage.create({content: `<b>Coletazo</b>: ${args.actor.prototypeToken.name} está ahora @Condition[Tumbado]`, speaker : {alias: args.attacker.prototypeToken.name}})\n}",
 					"label":"Coletazo"
 					},
 				"Arboreal": {
@@ -410,7 +410,7 @@
 					"label":"Armadura"
 					},
 				"Tail Attack": {
-					"flags.wfrp4e.script":"let actorSize = game.wfrp4e.config.actorSizeNums[args.actor.details.size.value]\nlet attackerSize = game.wfrp4e.config.actorSizeNums[args.attacker.details.size.value]\n\nif (attackerSize > actorSize)\n{\n   args.actor.addCondition(\"prone\")\n   ChatMessage.create({content: `<b>Coletazo</b>: ${args.actor.prototypeToken.name} está ahora @Condition[Tumbado]`, speaker : {alias: args.attacker.token.name}})\n}",
+					"flags.wfrp4e.script":"let actorSize = game.wfrp4e.config.actorSizeNums[args.actor.details.size.value]\nlet attackerSize = game.wfrp4e.config.actorSizeNums[args.attacker.details.size.value]\n\nif (attackerSize > actorSize)\n{\n   args.actor.addCondition(\"prone\")\n   ChatMessage.create({content: `<b>Coletazo</b>: ${args.actor.prototypeToken.name} está ahora @Condition[Tumbado]`, speaker : {alias: args.attacker.prototypeToken.name}})\n}",
 					"label":"Coletazo"
 					}
 				},
@@ -701,7 +701,7 @@
 					"label":"Infectado"
 					},
 				"Tail Attack": {
-					"flags.wfrp4e.script":"let actorSize = game.wfrp4e.config.actorSizeNums[args.actor.details.size.value]\nlet attackerSize = game.wfrp4e.config.actorSizeNums[args.attacker.details.size.value]\n\nif (attackerSize > actorSize)\n{\n   args.actor.addCondition(\"prone\")\n   ChatMessage.create({content: `<b>Coletazo</b>: ${args.actor.prototypeToken.name} está ahora @Condition[Tumbado]`, speaker : {alias: args.attacker.token.name}})\n}",
+					"flags.wfrp4e.script":"let actorSize = game.wfrp4e.config.actorSizeNums[args.actor.details.size.value]\nlet attackerSize = game.wfrp4e.config.actorSizeNums[args.attacker.details.size.value]\n\nif (attackerSize > actorSize)\n{\n   args.actor.addCondition(\"prone\")\n   ChatMessage.create({content: `<b>Coletazo</b>: ${args.actor.prototypeToken.name} está ahora @Condition[Tumbado]`, speaker : {alias: args.attacker.prototypeToken.name}})\n}",
 					"label":"Coletazo"
 					},
 				"Venom": {
@@ -725,7 +725,7 @@
 					"label":"Armadura"
 					},
 				"Tail Attack": {
-					"flags.wfrp4e.script":"let actorSize = game.wfrp4e.config.actorSizeNums[args.actor.details.size.value]\nlet attackerSize = game.wfrp4e.config.actorSizeNums[args.attacker.details.size.value]\n\nif (attackerSize > actorSize)\n{\n   args.actor.addCondition(\"prone\")\n   ChatMessage.create({content: `<b>Coletazo</b>: ${args.actor.prototypeToken.name} está ahora @Condition[Tumbado]`, speaker : {alias: args.attacker.token.name}})\n}",
+					"flags.wfrp4e.script":"let actorSize = game.wfrp4e.config.actorSizeNums[args.actor.details.size.value]\nlet attackerSize = game.wfrp4e.config.actorSizeNums[args.attacker.details.size.value]\n\nif (attackerSize > actorSize)\n{\n   args.actor.addCondition(\"prone\")\n   ChatMessage.create({content: `<b>Coletazo</b>: ${args.actor.prototypeToken.name} está ahora @Condition[Tumbado]`, speaker : {alias: args.attacker.prototypeToken.name}})\n}",
 					"label":"Coletazo"
 					},
 				"Venom": {
@@ -841,7 +841,7 @@
 					"label":"Infestado"
 					},
 				"Tail Attack": {
-					"flags.wfrp4e.script":"let actorSize = game.wfrp4e.config.actorSizeNums[args.actor.details.size.value]\nlet attackerSize = game.wfrp4e.config.actorSizeNums[args.attacker.details.size.value]\n\nif (attackerSize > actorSize)\n{\n   args.actor.addCondition(\"prone\")\n   ChatMessage.create({content: `<b>Coletazo</b>: ${args.actor.prototypeToken.name} está ahora @Condition[Tumbado]`, speaker : {alias: args.attacker.token.name}})\n}",
+					"flags.wfrp4e.script":"let actorSize = game.wfrp4e.config.actorSizeNums[args.actor.details.size.value]\nlet attackerSize = game.wfrp4e.config.actorSizeNums[args.attacker.details.size.value]\n\nif (attackerSize > actorSize)\n{\n   args.actor.addCondition(\"prone\")\n   ChatMessage.create({content: `<b>Coletazo</b>: ${args.actor.prototypeToken.name} está ahora @Condition[Tumbado]`, speaker : {alias: args.attacker.prototypeToken.name}})\n}",
 					"label":"Coletazo"
 					},
 				"Tracker": {
@@ -1145,7 +1145,7 @@
 					"label":"Veneno"
 					},
 				"Tail Attack": {
-					"flags.wfrp4e.script":"let actorSize = game.wfrp4e.config.actorSizeNums[args.actor.details.size.value]\nlet attackerSize = game.wfrp4e.config.actorSizeNums[args.attacker.details.size.value]\n\nif (attackerSize > actorSize)\n{\n   args.actor.addCondition(\"prone\")\n   ChatMessage.create({content: `<b>Coletazo</b>: ${args.actor.prototypeToken.name} está ahora @Condition[Tumbado]`, speaker : {alias: args.attacker.token.name}})\n}",
+					"flags.wfrp4e.script":"let actorSize = game.wfrp4e.config.actorSizeNums[args.actor.details.size.value]\nlet attackerSize = game.wfrp4e.config.actorSizeNums[args.attacker.details.size.value]\n\nif (attackerSize > actorSize)\n{\n   args.actor.addCondition(\"prone\")\n   ChatMessage.create({content: `<b>Coletazo</b>: ${args.actor.prototypeToken.name} está ahora @Condition[Tumbado]`, speaker : {alias: args.attacker.prototypeToken.name}})\n}",
 					"label":"Coletazo"
 					}
 				},
