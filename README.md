@@ -8,6 +8,12 @@ La traducción incluye el sistema y el módulo básico. Ningún otro módulo est
 
 Traduce también los módulos [GM Toolkit (WFRP 4e)](https://github.com/Jagusti/fvtt-wfrp4e-gmtoolkit) y [[WFRP4] NPC generator](https://gitlab.com/greenskin-foundryvtt/wfrp4e-npc-generator).
 
+## Instalación
+Copia el siguiente enlace y pégalo en Add-On Modules => Install Module => Manifest URL
+
+https://github.com/Txus5012/WFRP4e-Castellano/releases/latest/download/module.json
+![Installation](https://user-images.githubusercontent.com/87753744/217327313-8a8f35db-e75c-4780-99dc-03b85a130f7d.jpg)
+
 ## Inicialización
 
 Requiere la instalación y activación del módulo [Babele](https://gitlab.com/riccisi/foundryvtt-babele).
