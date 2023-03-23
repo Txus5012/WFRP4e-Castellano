@@ -529,7 +529,7 @@
 			"description": "<p>La criatura es especialmente sigilosa. Suma una cifra igual a su Bonificador por Agilidad a los NE de todos los Chequeos de Movimiento silencioso.</p>",
 			"effects": {
 				"Stealthy": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" &&  args.item.name.includes(\"Movimiento silencioso\"))\n{\n   let sl = this.actor.characteristics.ag.bonus\n   args.prefillModifiers.slBonus += sl;\n}",
+					"flags.wfrp4e.script":"if (args.item?.id == this.item.id || (args.type == \"skill\" &&  args.item.name.includes(\"Movimiento silencioso\")))\n{\n   let sl = this.actor.characteristics.ag.bonus\n   args.prefillModifiers.slBonus += sl;\n}",
 					"label":"Sigiloso"
 					}
 				}

@@ -115,17 +115,6 @@ Babele.get().registerConverters({
 
        "lore": (value) => {  // Saberes
 	     if ( value == "petty" ) return "Menor";
-	     if ( value == "beasts" ) return "Bestias";
-	     if ( value == "death" ) return "Muerte";
-	     if ( value == "fire" ) return "Fuego";
-	     if ( value == "heavens" ) return "Cielos";
-	     if ( value == "life" ) return "Vida";
-	     if ( value == "light" ) return "Luz";
-	     if ( value == "shadow" ) return "Sombras";
-	     if ( value == "hedgecraft" ) return "Adivinación";
-	     if ( value == "witchcraft" ) return "Brujería";
-	     if ( value == "necromancy" ) return "Nigromancia";
-	     if ( value == "daemonology" ) return "Demonología";
 	},
 	
       "career_class": (value) => { // Clases

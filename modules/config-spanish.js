@@ -342,13 +342,18 @@ game.wfrp4e.config.symptomEffects = {
 game.wfrp4e.config.effectTriggers = {
     "invoke" : "Invocado Manualmente",
     "oneTime" : "Inmediato",
+    "addItems" : "Añadir Objetos",
     "dialogChoice" : "Elección de Diálogo",
     "prefillDialog" : "Prellenar Diálogo",
+    "update" : "Al Actualizar",
     "prePrepareData" : "Pre-Preparar Datos",
     "prePrepareItems" : "Pre-Preparar Objetos de Actor",
     "prepareData" : "Preparar Datos",
     "preWoundCalc" : "Pre-Cálculo de Heridas",
     "woundCalc" : "Cálculo de Heridas",
+    "calculateSize" : "Cálculo de Tamaño",
+    "preAPCalc" : "Pre-Cálculo de Armadura",
+    "APCalc" : "Cálculo de Armadura",
     "preApplyDamage" : "Pre-Aplicar Daño",
     "applyDamage" : "Aplicar Daño",
     "preTakeDamage" : "Pre-Recibir Daño",
@@ -396,8 +401,16 @@ game.wfrp4e.config.effectPlaceholder = {
 
     actor : actor propietario del efecto
     `,
+
+    "addItems" : 
+    `Como los efectos Inmediatos, ocurre una vez, pero el efecto permanece. También permite al efecto borrar los objetos añadidos cuando el efecto se elimina.
+    args:
+    
+    actor : actor propietario del efecto
+    `,
+
     "prefillDialog" : 
-    `Este efecto se aplica antes de reproducir el diálogo de tirada, y debería cambiar los valores prellenados en la sección de bonos
+    `Este efecto se aplica antes de reproducir el diálogo de tirada, y debería cambiar los valores prellenados en la sección de bonos.
     args:
 
     prefillModifiers : {modifier, difficulty, slBonus, successBonus}
@@ -408,6 +421,13 @@ game.wfrp4e.config.effectPlaceholder = {
     Ejemplo: 
     if (args.type == "skill" && args.item.name == "Atletismo") args.prefillModifiers.modifier += 10`,
 
+    "update" : 
+    `este efecto se ejecuta cuando un actor o documento embebido es cambiado.
+    args:
+    item: si un objeto es modificado, se provee como un argumento
+    effect: si un efecto es modificado, se provee como un argumento
+    `,
+
     "prePrepareData" : 
     `Este efecto se aplica antes de calcular cualquier dato del actor.
     args:
@@ -416,7 +436,7 @@ game.wfrp4e.config.effectPlaceholder = {
     `,
 
     "prePrepareItems" : 
-    `Este efecto se aplica antes de que los objetos se ordenen y calculen
+    `Este efecto se aplica antes de que los objetos se ordenen y calculen.
 
     actor : actor propietario del efecto
     `,
@@ -430,7 +450,7 @@ game.wfrp4e.config.effectPlaceholder = {
     `,
 
     "preWoundCalc" : 
-    `Este efecto se aplica justo antes del cálculo de heridas, ideal para cambiar atributos o añadir multiplicadores
+    `Este efecto se aplica justo antes del cálculo de heridas, ideal para cambiar atributos o añadir multiplicadores.
 
     actor : actor propietario del efecto
     sb : Bonificador por Fuerza
@@ -463,8 +483,19 @@ game.wfrp4e.config.effectPlaceholder = {
     p.ej. para Pequeño: "args.size = 'sml'"
     `,
 
+    "preAPCalc" : `Este efecto se aplica antes de calcular los PA.
+    args:
+    AP : Objeto de Armadura
+    e.g. args.AP.head.value += 1
+    `,
+    "APCalc" : `Este efecto se aplica tras calcular los PA.
+    args:
+    AP : Objeto de Armadura
+    e.g. args.AP.head.value += 1
+    `,
+
     "preApplyDamage" : 
-    `Este efecto ocurre antes de aplicar daño en un chequeo enfrentado
+    `Este efecto ocurre antes de aplicar daño en un chequeo enfrentado.
     args:
 
     actor : actor que recibe daño
@@ -477,6 +508,7 @@ game.wfrp4e.config.effectPlaceholder = {
     totalWoundLoss : Total de Heridas Perdidas ANTES DE LAS REDUCCIONES
     AP : Objeto de la PA del defensor
     `,
+    
     "applyDamage" : 
     `Este efecto ocurre después calcular el daño en un chequeo enfrentado, pero antes de actualizar los datos del actor.
 
@@ -490,10 +522,11 @@ game.wfrp4e.config.effectPlaceholder = {
     AP : datos sobre los PA usados
     updateMsg : secuencia inicial para el mensaje de actualización de daño
     messageElements : despliegue de secuencias usadas para mostrar cómo se calculó la mitigación de daño
+    extraMessages : texto aplicado al final de updateMsg
     `,
 
     "preTakeDamage" : 
-    `Este efecto ocurre antes de recibir daño en un chequeo enfrentado
+    `Este efecto ocurre antes de recibir daño en un chequeo enfrentado.
 
     args:
 
@@ -501,6 +534,11 @@ game.wfrp4e.config.effectPlaceholder = {
     attacker : actor atacante
     opposedTest : objeto que contiene los datos del chequeo enfrentado
     damageType : tipo de daño seleccionado (ignora BR, PA, etc.)
+    weaponProperties : objeto de cualidades/defectos del arma atacante
+    applyAP : si PA está reduciendo el daño
+    applyTB : si BR está reduciendo el daño
+    totalWoundLoss : Pérdida Total de Heridas ANTES DE REDUCCIONES
+    AP : objeto de los PA del defensor
     `,
     
     "takeDamage" : 
@@ -516,6 +554,7 @@ game.wfrp4e.config.effectPlaceholder = {
     AP : datos sobre los PA usados
     updateMsg : secuencia inicial para el mensaje de actualización de daño
     messageElements : despliegue de secuencias usadas para mostrar cómo se calculó la mitigación de daño
+    extraMessages : texto aplicado al final de updateMsg
     `,
 
     "preApplyCondition" :  
@@ -548,13 +587,15 @@ game.wfrp4e.config.effectPlaceholder = {
 
     item : objeto a procesar
     `,
+
     "prepareItem" : 
-`Este efecto se aplica tras procesar un objeto con datos del actor.
+    `Este efecto se aplica tras procesar un objeto con datos del actor.
 
     args:
 
     item : objeto procesado
     `,
+
     "preRollTest": 
     `Este efecto se aplica antes de calcular un chequeo.
 
@@ -563,6 +604,7 @@ game.wfrp4e.config.effectPlaceholder = {
     testData: Todos los datos necesarios para evaluar los resultados del chequeo
     cardOptions: Datos para la vista, título, plantilla, etc. de la tarjeta
     `,
+
     "preRollWeaponTest" :  
     `Este efecto se aplica antes de calcular un chequeo de arma.
 
@@ -616,6 +658,7 @@ game.wfrp4e.config.effectPlaceholder = {
     test: objeto que contiene información del chequeo y resultado
     cardOptions: Datos para la vista, título, plantilla, etc. de la tarjeta
     `,
+
     "rollIncomeTest" : 
     `Este efecto se aplica tras calcular un chequeo de salario.
 
@@ -679,6 +722,7 @@ game.wfrp4e.config.effectPlaceholder = {
     defenderTest: objeto de chequeo del defensor
     opposedTest: objeto del chequeo enfrentado, antes del cálculo
     `,
+
     "preOpposedDefender" : 
     `Este efecto se aplica antes de comenzar el cálculo del resultado de un chequeo enfrentado, como defensor.
 
