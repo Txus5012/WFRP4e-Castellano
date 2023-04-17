@@ -38,6 +38,10 @@
 			"name": "Arte ( )"
 		},
 		{
+			"id": "Art (Cartogrpahy)",
+			"name": "Arte (Cartografía)"
+		},
+		{
 			"id": "Art (Cartography)",
 			"name": "Arte (Cartografía)"
 		},
@@ -71,7 +75,7 @@
 		},
 		{
 			"id": "Brass Penny",
-			"name": "Penique de Bronce",
+			"name": "Penique de Bronce"
 		},
 		{
 			"id": "Bribery",
@@ -412,9 +416,11 @@
 		{
 			"id": "Play (Bagpipe)",
 			"name": "Tocar (Gaita)"
+		},
 		{
 			"id": "Play (Harpsichord)",
 			"name": "Tocar (Clavicémbalo)"
+		},
 		{
 			"id": "Play (Horn)",
 			"name": "Tocar (Cuerno)"
@@ -426,6 +432,7 @@
 		{
 			"id": "Play (Violin)",
 			"name": "Tocar (Violín)"
+		},
 		{
 			"id": "Pray",
 			"name": "Rezar"
