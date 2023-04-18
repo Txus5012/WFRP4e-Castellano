@@ -9,8 +9,8 @@
     }
   ],
   "url": "https://github.com/Txus5012/WFRP4e-Castellano",
-  "readme": "https://github.com/Txus5012/WFRP4e-Castellano/tree/v1.8.1#readme",
-  "version": "1.8.1",
+  "readme": "https://github.com/Txus5012/WFRP4e-Castellano/tree/v1.8.2#readme",
+  "version": "1.8.2",
   "scripts": [
     "modules/initialization.js"
   ],
@@ -30,7 +30,7 @@
     }
   ],
   "manifest": "https://github.com/Txus5012/WFRP4e-Castellano/releases/latest/download/module.json",
-  "download": "https://github.com/Txus5012/WFRP4e-Castellano/releases/download/v1.8.1/wfrp4e-castellano.zip",
+  "download": "https://github.com/Txus5012/WFRP4e-Castellano/releases/download/v1.8.2/wfrp4e-castellano.zip",
   "id": "wfrp4e-castellano",
   "relationships": {
     "requires": [

@@ -992,7 +992,7 @@ game.wfrp4e.config.loreEffects = {
         "beasts": {
             label: "Saber de las Bestias",
             icon: "modules/wfrp4e-core/icons/spells/beasts.png",
-            transfer: true,
+            transfer: false,
             flags: {
                 wfrp4e: {
                     "effectApplication": "actor",
@@ -1000,7 +1000,7 @@ game.wfrp4e.config.loreEffects = {
                     "lore": true,
                     "script": `
                     let value = 1
-                    let name = this.actor.token.name
+                    let name = this.actor.prototypeToken.name
                     
                     if (game.user.isGM) {
                         game.user.targets.forEach(t => {
@@ -1018,7 +1018,7 @@ game.wfrp4e.config.loreEffects = {
         "death": {
             label: "Saber de la Muerte",
             icon: "modules/wfrp4e-core/icons/spells/death.png",
-            transfer: true,
+            transfer: false,
             flags: {
                 wfrp4e: {
                     "effectApplication": "apply",
@@ -1035,7 +1035,7 @@ game.wfrp4e.config.loreEffects = {
         "fire": {
             label: "Saber del Fuego",
             icon: "modules/wfrp4e-core/icons/spells/fire.png",
-            transfer: true,
+            transfer: false,
             flags: {
                 wfrp4e: {
                     "effectApplication": "apply",
@@ -1052,7 +1052,7 @@ game.wfrp4e.config.loreEffects = {
         "heavens": {
             label: "Saber de los Cielos",
             icon: "modules/wfrp4e-core/icons/spells/heavens.png",
-            transfer: true,
+            transfer: false,
             flags: {
                 wfrp4e: {
                     "effectApplication": "damage",
@@ -1084,7 +1084,7 @@ game.wfrp4e.config.loreEffects = {
         "metal": {
             label: "Saber del Metal",
             icon: "modules/wfrp4e-core/icons/spells/metal.png",
-            transfer: true,
+            transfer: false,
             flags: {
                 wfrp4e: {
                     "effectApplication": "damage",
@@ -1103,7 +1103,7 @@ game.wfrp4e.config.loreEffects = {
                 
                 
                 if (metalValue)
-                    args.messageElements.push("-" + metalValue + " Armadura Metálica")
+                    args.messageElements.push(\`-\${metalValue} Armadura Metálica\`)
                 args.totalWoundLoss += metalValue
                 
                 if (applyAP) {
@@ -1121,7 +1121,7 @@ game.wfrp4e.config.loreEffects = {
         "life": {
             label: "Saber de la Vida",
             icon: "modules/wfrp4e-core/icons/spells/life.png",
-            transfer: true,
+            transfer: false,
             flags: {
                 wfrp4e: {
                     "effectApplication": "apply",
@@ -1129,7 +1129,7 @@ game.wfrp4e.config.loreEffects = {
                     "lore": true,
                     "script": `
                     fromUuid(this.effect.origin).then(caster => {
-                        if (this.actor.owner)
+                        if (this.actor.isOwner)
                         {
                             if (!this.actor.has(game.i18n.localize("NAME.Daemonic")) && !this.actor.has(game.i18n.localize("NAME.Undead")))
                             {
@@ -1148,7 +1148,7 @@ game.wfrp4e.config.loreEffects = {
         "light": {
             label: "Saber de la Luz",
             icon: "modules/wfrp4e-core/icons/spells/light.png",
-            transfer: true,
+            transfer: false,
             flags: {
                 wfrp4e: {
                     "effectApplication": "apply",
@@ -1156,7 +1156,7 @@ game.wfrp4e.config.loreEffects = {
                     "lore": true,
                     "script": `
                 fromUuid(this.effect.origin).then(caster => {
-                    if (this.actor.owner)
+                    if (this.actor.isOwner)
                     {
                         let bleeding = this.actor.addCondition("blinded")
                         if (this.actor.has(game.i18n.localize("NAME.Undead")) || this.actor.has(game.i18n.localize("NAME.Daemonic")))
@@ -1169,7 +1169,7 @@ game.wfrp4e.config.loreEffects = {
         "shadow": {
             label: "Saber de las Sombras",
             icon: "modules/wfrp4e-core/icons/spells/shadow.png",
-            transfer: true,
+            transfer: false,
             flags: {
                 wfrp4e: {
                     "effectApplication": "damage",
@@ -1191,7 +1191,7 @@ game.wfrp4e.config.loreEffects = {
         "hedgecraft": {
             label: "Saber de la Adivinación",
             icon: "modules/wfrp4e-core/icons/spells/hedgecraft.png",
-            transfer: true,
+            transfer: false,
             flags: {
                 wfrp4e: {
                     "effectApplication": "actor",
@@ -1204,7 +1204,7 @@ game.wfrp4e.config.loreEffects = {
         "witchcraft": {
             label: "Saber de la Brujería",
             icon: "modules/wfrp4e-core/icons/spells/witchcraft.png",
-            transfer: true,
+            transfer: false,
             flags: {
                 wfrp4e: {
                     "effectApplication": "apply",

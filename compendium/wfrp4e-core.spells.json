@@ -240,7 +240,13 @@
 		{
 			"id": "Amber Talons",
 			"name": "Garras de ámbar",
-			"description": "<p>Tus uñas crecen hasta convertirse en garras tremendamente afiladas de cristal color ámbar. Tus ataques sin armas hechos utilizando Cuerpo a cuerpo (pelea) cuentan como mágicos, tienen un Daño igual a tu Bonificador por Voluntad e infligen +1 Estado de @Condition[Sangrando] cada vez que causan una pérdida de Heridas.</p><p>\n\n <b>Saber:</b> Siempre que lanzas con éxito un hechizo del Saber de las Bestias, también puedes obtener el Rasgo de criatura @Compendium[wfrp4e-core.traits.pTorrE0l3VybAbtn]{Miedo (1)} durante los siguientes [[/r 1d10]] Asaltos.</p>"
+			"description": "<p>Tus uñas crecen hasta convertirse en garras tremendamente afiladas de cristal color ámbar. Tus ataques sin armas hechos utilizando Cuerpo a cuerpo (pelea) cuentan como mágicos, tienen un Daño igual a tu Bonificador por Voluntad e infligen +1 Estado de @Condition[Sangrando] cada vez que causan una pérdida de Heridas.</p><p>\n\n <b>Saber:</b> Siempre que lanzas con éxito un hechizo del Saber de las Bestias, también puedes obtener el Rasgo de criatura @Compendium[wfrp4e-core.traits.pTorrE0l3VybAbtn]{Miedo (1)} durante los siguientes [[/r 1d10]] Asaltos.</p>",
+			"effects": {
+				"Amber Talons": {
+					"flags.wfrp4e.script":"    let amberTalons = foundry.utils.deepClone(game.wfrp4e.config.systemItems.unarmed);\n    amberTalons.name = \"Garras de ámbar\";\n    amberTalons.system.damage.value = \"SB + WPB\"\n    amberTalons.system.equipped = true;\n    amberTalons.effects.push({\n        label : \"Garras de ámbar\",\n        transfer: false,\n        icon : \"modules/wfrp4e-core/icons/spells/amber-talons.png\" ,\n        flags : {\n          wfrp4e : {\n            effectApplication: \"damage\",\n            effectTrigger : \"applyDamage\",\n            hide : false,\n            preventDuplicateEffects: false,\n            script : \"if (args.totalWoundLoss >= 1)\\n{ \\n    args.actor.addCondition(\\\"bleeding\\\")\\n}\"\n          }\n        }\n      })\n    this.actor.createEmbeddedDocuments(\"Item\", [amberTalons])",
+					"label":"Garras de ámbar"
+					}
+				}
 		},
 		{
 			"id": "Animal Friend",
@@ -320,12 +326,23 @@
 		{
 			"id": "Banishment",
 			"name": "Destierro",
-			"description": "<p>Envías un halo limpiador de <em>Hysh</em> que sale de tus manos, y que afecta a todas las criaturas del Área de efecto cuya Resistencia es menor que tu Voluntad. Los objetivos con los Rasgos de criatura <em>Muerto viviente</em> o <em>Demoníaco</em> obtienen el Rasgo de criatura <em>Inestable</em>. Si ya tienen dicho rasgo, quedan reducidos a 0 Heridas.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz) . Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.traits.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.traits.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>"
+			"description": "<p>Envías un halo limpiador de <em>Hysh</em> que sale de tus manos, y que afecta a todas las criaturas del Área de efecto cuya Resistencia es menor que tu Voluntad. Los objetivos con los Rasgos de criatura <em>Muerto viviente</em> o <em>Demoníaco</em> obtienen el Rasgo de criatura <em>Inestable</em>. Si ya tienen dicho rasgo, quedan reducidos a 0 Heridas.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz) . Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.traits.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.traits.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
+			"effects": {
+				"Banishment": {
+					"flags.wfrp4e.script":"fromUuid(this.effect.origin).then(caster=> {\n    if (caster&& (args.actor.has(game.i18n.localize(\"NAME.Undead\")) || args.actor.has(game.i18n.localize(\"NAME.Daemonic\"))))\n    {\n         let wp = caster.characteristics.wp.value\n         if (wp > args.actor.characteristics.t.value)\n         {\n             if (args.actor.has(game.i18n.localize(\"NAME.Unstable\")))\n             {\n                args.actor.update({\"system.status.wounds.value\" : 0})\n                args.actor.addCondition(\"dead\")\n             }\n             else\n             {\n                fromUuid(\"Compendium.wfrp4e-core.traits.D0ImWEIMSDgElsnl\").then(item => {\n                    args.actor.createEmbeddedDocuments(\"Item\", [item.toObject()])\n                    ChatMessage.create({content : `Añadido Inestable a ${args.actor.prototypeToken.name}`, speaker : {alias: caster.name}})\n                })\n             }\n         }\n    }\n })",
+					"label":"Destierro"
+					}
+				}
 		},
 		{
 			"id": "Barkskin",
 			"name": "Piel de corteza",
-			"description": "<p>Haces que la piel del objetivo se vuelva recia y rugosa como la corteza de un árbol. Mientras permanece afectado por el hechizo, suma +2 al Bonificador por Resistencia del objetivo, a la vez que éste sufre un penalizador -10 a su Agilidad y a su Destreza.</p><p>\n\n <b>Saber:</b> Cuando te encuentres en un entorno rural o en las tierras salvajes obtendrás un bonificador +10 a las tiradas de Lanzamiento y Canalización. Las criaturas vivas, es decir las que carecen de los Rasgos de criatura @Compendium[wfrp4e-core.traits.v3uzEthcq0JRar0J]{Demoníaco} o @Compendium[wfrp4e-core.traits.PFTD9gDvRWW9uh5g]{Muerto viviente} que sean objeto de hechizos arcanos del saber de la vida, verán todos sus estados de @Condition[Fatigado] y de @Condition[Sangrando] eliminados después de haber aplicado cualquier otro efecto, conforme la magia de la vida fluya a través de ellos. Las criaturas con el Rasgo de criatura @Compendium[wfrp4e-core.traits.PFTD9gDvRWW9uh5g]{Muerto viviente}, por otra parte, sufren tanto Daño adicional como tu Bonificador por Voluntad, ignorando el Bonificador por Resistencia y los puntos de Armadura, si se ven afectados por cualquier hechizo lanzado con el Saber de la Vida.</p>"
+			"description": "<p>Haces que la piel del objetivo se vuelva recia y rugosa como la corteza de un árbol. Mientras permanece afectado por el hechizo, suma +2 al Bonificador por Resistencia del objetivo, a la vez que éste sufre un penalizador -10 a su Agilidad y a su Destreza.</p><p>\n\n <b>Saber:</b> Cuando te encuentres en un entorno rural o en las tierras salvajes obtendrás un bonificador +10 a las tiradas de Lanzamiento y Canalización. Las criaturas vivas, es decir las que carecen de los Rasgos de criatura @Compendium[wfrp4e-core.traits.v3uzEthcq0JRar0J]{Demoníaco} o @Compendium[wfrp4e-core.traits.PFTD9gDvRWW9uh5g]{Muerto viviente} que sean objeto de hechizos arcanos del saber de la vida, verán todos sus estados de @Condition[Fatigado] y de @Condition[Sangrando] eliminados después de haber aplicado cualquier otro efecto, conforme la magia de la vida fluya a través de ellos. Las criaturas con el Rasgo de criatura @Compendium[wfrp4e-core.traits.PFTD9gDvRWW9uh5g]{Muerto viviente}, por otra parte, sufren tanto Daño adicional como tu Bonificador por Voluntad, ignorando el Bonificador por Resistencia y los puntos de Armadura, si se ven afectados por cualquier hechizo lanzado con el Saber de la Vida.</p>",
+			"effects": {
+				"Barkskin": {
+					"label":"Piel de corteza"
+					}
+				}
 		},
 		{
 			"id": "Bearing",
@@ -1868,7 +1885,12 @@
 		{
 			"id": "Forest of Thorns",
 			"name": "Bosque de espinas",
-			"description": "<p>Este hechizo puede tan solo tener como objetivo un parche de tierra (que puede ser muy pequeño). Haces que un denso nudo de zarzas con espinas muy afiladas y matorrales enmarañados surja del suelo, cubriendo el Área de efecto. Mientras el hechizo permanece activo, todo el que intenta atravesar el área a pie sin el Talento <em>Magia arcana (vida)</em> debe llevar a cabo un Chequeo <strong>Difícil (-20)</strong> de <strong>Agilidad</strong>. Un fallo significa que sufre 1 Estado de @Condition[Sangrando], y 1 Estado de @Condition[Enmarañado], cuya Fuerza es idéntica a tu Voluntad. Una vez concluye el hechizo, el brote persiste, pero pierde sus propiedades preternaturales.</p><p>\n\n <b>Saber:</b> Cuando te encuentres en un entorno rural o en las tierras salvajes obtendrás un bonificador +10 a las tiradas de Lanzamiento y Canalización. Las criaturas vivas, es decir las que carecen de los Rasgos de criatura @Compendium[wfrp4e-core.traits.v3uzEthcq0JRar0J]{Demoníaco} o @Compendium[wfrp4e-core.traits.PFTD9gDvRWW9uh5g]{Muerto viviente} que sean objeto de hechizos arcanos del saber de la vida, verán todos sus estados de @Condition[Fatigado] y de @Condition[Sangrando] eliminados después de haber aplicado cualquier otro efecto, conforme la magia de la vida fluya a través de ellos. Las criaturas con el Rasgo de criatura @Compendium[wfrp4e-core.traits.PFTD9gDvRWW9uh5g]{Muerto viviente}, por otra parte, sufren tanto Daño adicional como tu Bonificador por Voluntad, ignorando el Bonificador por Resistencia y los puntos de Armadura, si se ven afectados por cualquier hechizo lanzado con el Saber de la Vida.</p>"
+			"description": "<p>Este hechizo puede tan solo tener como objetivo un parche de tierra (que puede ser muy pequeño). Haces que un denso nudo de zarzas con espinas muy afiladas y matorrales enmarañados surja del suelo, cubriendo el Área de efecto. Mientras el hechizo permanece activo, todo el que intenta atravesar el área a pie sin el Talento <em>Magia arcana (vida)</em> debe llevar a cabo un Chequeo <strong>Difícil (-20)</strong> de <strong>Agilidad</strong>. Un fallo significa que sufre 1 Estado de @Condition[Sangrando], y 1 Estado de @Condition[Enmarañado], cuya Fuerza es idéntica a tu Voluntad. Una vez concluye el hechizo, el brote persiste, pero pierde sus propiedades preternaturales.</p><p>\n\n <b>Saber:</b> Cuando te encuentres en un entorno rural o en las tierras salvajes obtendrás un bonificador +10 a las tiradas de Lanzamiento y Canalización. Las criaturas vivas, es decir las que carecen de los Rasgos de criatura @Compendium[wfrp4e-core.traits.v3uzEthcq0JRar0J]{Demoníaco} o @Compendium[wfrp4e-core.traits.PFTD9gDvRWW9uh5g]{Muerto viviente} que sean objeto de hechizos arcanos del saber de la vida, verán todos sus estados de @Condition[Fatigado] y de @Condition[Sangrando] eliminados después de haber aplicado cualquier otro efecto, conforme la magia de la vida fluya a través de ellos. Las criaturas con el Rasgo de criatura @Compendium[wfrp4e-core.traits.PFTD9gDvRWW9uh5g]{Muerto viviente}, por otra parte, sufren tanto Daño adicional como tu Bonificador por Voluntad, ignorando el Bonificador por Resistencia y los puntos de Armadura, si se ven afectados por cualquier hechizo lanzado con el Saber de la Vida.</p>",
+			"effects": {
+				"Forest of Thorns": {
+					"label":"Bosque de espinas"
+					}
+				}
 		},
 		{
 			"id": "Forge of Chamon",
@@ -2203,7 +2225,12 @@
 		{
 			"id": "Mystifying Miasma",
 			"name": "Miasma desorientador",
-			"description": "<p>Conjuras una masa giratoria de niebla, atravesada por sombras agitadas, que revolotea y confunde los sentidos. Quien se encuentre en el interior de la niebla y no disponga del Talento <em>Magia arcana (sombras)</em> se verá afectado por el Miasma , sufriendo +1 Estado de @Condition[Cegado,], @Condition[Ensordecido], y @Condition[Fatigado], hasta el final de la Duración del hechizo. Todo afectado que intente moverse deberá tener éxito en un Chequeo <strong>Desafiante (+0)</strong> de </strong>Percepción</strong>, o pasar al Estado @Condition[Tumbado]. i el hechizo es dispersado una vez está en juego, todo el que se ha visto afectado por el mismo deberá llevar a cabo un Chequeo <strong>Muy fácil (+40)</strong> de <strong>Iniciativa</strong> o sufrir 1 Estado de @Condition[Aturdido].</p><p>\n\n <b>Saber:</b> Todos los hechizos lanzados del Saber de las Sombras que infligen Daño ignoran todos los puntos de Armadura no mágicos.</p>"
+			"description": "<p>Conjuras una masa giratoria de niebla, atravesada por sombras agitadas, que revolotea y confunde los sentidos. Quien se encuentre en el interior de la niebla y no disponga del Talento <em>Magia arcana (sombras)</em> se verá afectado por el Miasma , sufriendo +1 Estado de @Condition[Cegado,], @Condition[Ensordecido], y @Condition[Fatigado], hasta el final de la Duración del hechizo. Todo afectado que intente moverse deberá tener éxito en un Chequeo <strong>Desafiante (+0)</strong> de </strong>Percepción</strong>, o pasar al Estado @Condition[Tumbado]. Si el hechizo es dispersado una vez está en juego, todo el que se ha visto afectado por el mismo deberá llevar a cabo un Chequeo <strong>Muy fácil (+40)</strong> de <strong>Iniciativa</strong> o sufrir 1 Estado de @Condition[Aturdido].</p><p>\n\n <b>Saber:</b> Todos los hechizos lanzados del Saber de las Sombras que infligen Daño ignoran todos los puntos de Armadura no mágicos.</p>",
+			"effects": {
+				"Mystifying Miasma": {
+					"label":"Miasma desorientador"
+					}
+				}
 		},
 		{
 			"id": "Nepenthe",
@@ -2438,7 +2465,12 @@
 		{
 			"id": "Scythe of Shyish",
 			"name": "Guadaña de Shyish",
-			"description": "<p>Conjuras una guadaña mágica, que se puede empuñar en combate utilizando la Habilidad Cuerpo a cuerpo (arma de asta). Funciona como una guadaña normal con un Daño igual a tu Bonificador por Voluntad +3. Ningún enemigo con el Rasgo de criatura @Compendium[wfrp4e-core.traits.PFTD9gDvRWW9uh5g]{Muerto viviente} obtiene Ventaja cuando está Trabado en combate contigo.</p><p>\n\n <b>Saber:</b> Los objetivos afligidos por los hechizos del Saber de la Muerte quedan drenados de vida, debilitados y apáticos. Puedes asignar +1 Estado de @Condition[Fatigado] a cualquier objetivo vivo afectado por un hechizo de este Saber. Un objetivo tan sólo puede tener 1 Estado de Fatigado de esta forma en un momento dado.</p>"
+			"description": "<p>Conjuras una guadaña mágica, que se puede empuñar en combate utilizando la Habilidad Cuerpo a cuerpo (arma de asta). Funciona como una guadaña normal con un Daño igual a tu Bonificador por Voluntad +3. Ningún enemigo con el Rasgo de criatura @Compendium[wfrp4e-core.traits.PFTD9gDvRWW9uh5g]{Muerto viviente} obtiene Ventaja cuando está Trabado en combate contigo.</p><p>\n\n <b>Saber:</b> Los objetivos afligidos por los hechizos del Saber de la Muerte quedan drenados de vida, debilitados y apáticos. Puedes asignar +1 Estado de @Condition[Fatigado] a cualquier objetivo vivo afectado por un hechizo de este Saber. Un objetivo tan sólo puede tener 1 Estado de Fatigado de esta forma en un momento dado.</p>",
+			"effects": {
+				"Scythe of Shyish": {
+					"label":"Guadaña de Shyish"
+					}
+				}
 		},
 		{
 			"id": "Shadowsteed",
@@ -2935,7 +2967,12 @@
 		{
 			"id": "Wyssan’s Wildform",
 			"name": "Forma salvaje de Wyssan",
-			"description": "<p>Llamas al poder salvaje del <em>Ghur</em> para que te infunda, rindiéndote a sus salvajes delicias. Obtienes los siguientes Rasgos de criatura: @Compendium[wfrp4e-core.traits.rOV2s6PQBBrhpMOv]{Arbórea}, @Compendium[wfrp4e-core.traits.AtpAudHA4ybXVlWM]{Arma (Bonificador por Fuerza + 2)}, @Compendium[wfrp4e-core.traits.VUJUZVN3VYhOaPjj]{Armadura (2)}, @Compendium[wfrp4e-core.traits.GbDyBCu8ZjDp6dkj]{Beligerante}, @Compendium[wfrp4e-core.traits.fjd1u9VAgiYzhBRp]{Furia}, @Compendium[wfrp4e-core.traits.a8MC97PLzl10WocT]{Grande}, @Compendium[wfrp4e-core.traits.mDgEMOoJpi8DkRYb]{Magia}, @Compendium[wfrp4e-core.traits.pTorrE0l3VybAbtn]{Miedo (1)} y @Compendium[wfrp4e-core.traits.pLW9SVX0TVTYPiPv]{Mordisco (Bonificador por Fuerza + 1)}. Mientras el hechizo está en funcionamiento, eres incapaz de utilizar ninguna Habilidad de Hablar idioma o de Sabiduría académica.</p><p>\n\n <b>Saber:</b> Siempre que lanzas con éxito un hechizo del Saber de las Bestias, también puedes obtener el Rasgo de criatura @Compendium[wfrp4e-core.traits.pTorrE0l3VybAbtn]{Miedo (1)} durante los siguientes [[/r 1d10]] Asaltos.</p>"
+			"description": "<p>Llamas al poder salvaje del <em>Ghur</em> para que te infunda, rindiéndote a sus salvajes delicias. Obtienes los siguientes Rasgos de criatura: @Compendium[wfrp4e-core.traits.rOV2s6PQBBrhpMOv]{Arbóreo}, @Compendium[wfrp4e-core.traits.AtpAudHA4ybXVlWM]{Arma (Bonificador por Fuerza + 2)}, @Compendium[wfrp4e-core.traits.VUJUZVN3VYhOaPjj]{Armadura (2)}, @Compendium[wfrp4e-core.traits.GbDyBCu8ZjDp6dkj]{Beligerante}, @Compendium[wfrp4e-core.traits.fjd1u9VAgiYzhBRp]{Frenesí}, @Compendium[wfrp4e-core.traits.a8MC97PLzl10WocT]{Grande}, @Compendium[wfrp4e-core.traits.mDgEMOoJpi8DkRYb]{Magia}, @Compendium[wfrp4e-core.traits.pTorrE0l3VybAbtn]{Miedo (1)} y @Compendium[wfrp4e-core.traits.pLW9SVX0TVTYPiPv]{Mordisco (Bonificador por Fuerza + 1)}. Mientras el hechizo está en funcionamiento, eres incapaz de utilizar ninguna Habilidad de Hablar idioma o de Sabiduría académica.</p><p>\n\n <b>Saber:</b> Siempre que lanzas con éxito un hechizo del Saber de las Bestias, también puedes obtener el Rasgo de criatura @Compendium[wfrp4e-core.traits.pTorrE0l3VybAbtn]{Miedo (1)} durante los siguientes [[/r 1d10]] Asaltos.</p>",
+			"effects": {
+				"Wyssan’s Wildform": {
+					"label":"Forma salvaje de Wyssan"
+					}
+				}
 		}
 	]
 }

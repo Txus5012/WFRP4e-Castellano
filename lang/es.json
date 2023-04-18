@@ -2165,6 +2165,11 @@
     "GMTOOLKIT.Message.Welcome.UpdateMacros" : "Actualizar Macros",
     "GMTOOLKIT.Message.Welcome.UpdateTables" : "Actualizar Tablas",
     
+    "GMTOOLKIT.Dialog.QuickSettings.Title" : "Ajustes de GM Toolkit",
+
+    "GMTOOLKIT.ChatFlavour.Title" : "Editar Mensaje Descriptivo",
+    "GMTOOLKIT.ChatFlavour.Placeholder" : "Describe brevemente el contexto del mensaje",
+    
   "WFRP4NPCGEN.actor.directory.button": "Generar PNJ",
   "WFRP4NPCGEN.compendium.load.title": "Cargando datos",
   "WFRP4NPCGEN.compendium.load.hint": "Por favor espera a la carga de datos de compendio",
