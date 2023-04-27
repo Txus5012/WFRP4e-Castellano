@@ -73,6 +73,12 @@ class WFRP4eContentInitialization extends Dialog {
                         updater.render(true)
                     }
                 },
+                delete : {
+                    label: "Borrar",
+                    callback: async () => {
+                        this.deleteModuleContent("wfrp4e-core");
+                    }
+                },
                 no: {
                     label: "No",
                     callback: () => {
@@ -96,7 +102,6 @@ class WFRP4eContentInitialization extends Dialog {
         this.scenes = {};
 	this.tables = {};
         this.moduleKey = "wfrp4e-core"
-	// this.scenePacks = []
     }
 
     async initialize() {
@@ -118,7 +123,6 @@ class WFRP4eContentInitialization extends Dialog {
                 }
 
                 await this.initializeDocuments()
-                // await this.initializeScenes()
                 resolve()
             })
         })
@@ -129,11 +133,6 @@ class WFRP4eContentInitialization extends Dialog {
         let packList = this.data.module.flags.initializationPacks
 
         for (let pack of packList) {
-            // if (game.packs.get(pack).metadata.type == "Scene")
-            // {
-            //  this.scenePacks.push(pack)
-            //  continue
-            // }
             let documents = await game.packs.get(pack).getDocuments();
             for (let document of documents) {
                 let folder = document.getFlag(this.moduleKey, "initialization-folder")
@@ -180,27 +179,54 @@ class WFRP4eContentInitialization extends Dialog {
         }
     }
 	
-    // async initializeScenes() {
-    //  ui.notifications.notify(this.data.module.title + ": Inicializando Escenas")
-    //  for (let pack of this.scenePacks)
-    //  {
-    //      let m = game.packs.get(pack)
-    //      let maps = await m.getDocuments()
-    //     for (let map of maps) {
-    //          let folder = map.getFlag(this.moduleKey, "initialization-folder")
-    //          if (folder)
-    //              map.updateSource({ "folder": this.folders["Scene"][folder].id })
-    //      }
-    //      await Scene.create(maps).then(sceneArray => {
-    //          sceneArray.forEach(async s => {
-    //              let thumb = await s.createThumbnail();
-    //              s.update({ "thumb": thumb.thumb })
-    //          })
-    //      })
-    //  }
-    // }
-}
 
+    async deleteModuleContent(id)
+    {
+        let proceed = await Dialog.confirm({
+            title : game.i18n.localize("UPDATER.DeleteModuleContent"),
+            content : game.i18n.format("UPDATER.DeleteModuleContentPrompt", {id}),
+            yes : () => {return true},
+            no : () => {return false},
+        })
+        if (proceed)
+        {
+            ui.notifications.notify(this.data.module.title + ": Borrando Escenas")
+            let moduleScenes = game.scenes.filter(doc => doc.flags[id]);
+            moduleScenes.forEach(doc => {
+                doc.folder?.folder?.delete();
+                doc.folder?.delete()})
+            Scene.deleteDocuments(moduleScenes.map(doc => doc.id));
+
+            ui.notifications.notify(this.data.module.title + ": Borrando Actores")
+            let moduleActors = game.actors.filter(doc => doc.flags[id] && !doc.hasPlayerOwner)
+            moduleActors.forEach(doc => {
+                doc.folder?.folder?.delete();
+                doc.folder?.delete()})
+            Actor.deleteDocuments(moduleActors.map(doc => doc.id));
+
+            ui.notifications.notify(this.data.module.title + ": Borrando Objetos")
+            let moduleItems = game.items.filter(doc => doc.flags[id])
+            moduleItems.forEach(doc => {
+                doc.folder?.folder?.delete();
+                doc.folder?.delete()})
+            Item.deleteDocuments(moduleItems.map(doc => doc.id));
+
+            ui.notifications.notify(this.data.module.title + ": Borrando Diarios")
+            let moduleJournals = game.journal.filter(doc => doc.flags[id])
+            moduleJournals.forEach(doc => {
+                doc.folder?.folder?.delete();
+                doc.folder?.delete()})
+            JournalEntry.deleteDocuments(moduleJournals.map(doc => doc.id));
+
+            ui.notifications.notify(this.data.module.title + ": Borrando Tablas")
+            let moduleTables = game.tables.filter(doc => doc.flags[id])
+            moduleTables.forEach(doc => {
+                doc.folder?.folder?.delete();
+                doc.folder?.delete()})
+            RollTable.deleteDocuments(moduleTables.map(doc => doc.id));
+        }
+    }
+}
 
 class WFRP4eContentInitializationSetup {
 

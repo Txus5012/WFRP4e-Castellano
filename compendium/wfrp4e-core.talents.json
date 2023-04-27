@@ -1115,7 +1115,7 @@
 		{
 			"id": "Strong Swimmer",
 			"name": "Buen nadador",
-			"description": "<p>Eres un nadador excepcionalmente bueno, y estás acostumbrado a contener el aliento un buen rato bajo el agua. Obtienes un bonificador igual a tu nivel en Buen nadador a tu Bonificador por Resistencia a efectos de contener el aliento.</p>",
+			"description": "<p>Eres un nadador excepcionalmente bueno, y estás acostumbrado a contener el aliento un buen rato bajo el agua. Obtienes un bonificador igual a tu nivel en Buen nadador a tu Bonificador por Resistencia a efectos de @UUID[JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#ahogamiento-y-asfixia]{contener el aliento}.</p>",
 			"tests": "Nadar"
 		},
 		{

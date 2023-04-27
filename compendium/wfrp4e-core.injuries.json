@@ -148,7 +148,7 @@
 		{
 			"id": "Broken Arm (Major)",
 			"name": "Brazo Roto (Grave)",
-			"description": "<p>Uno de tus huesos se ha roto de mala manera y, o bien ha quedado en mala posición, o se ha astillado en el punto de rotura. La Ubicación de impacto queda relativamente inutilizada hasta que se cura la fractura.</p>\n<p><span style=\"font-weight: bold;\">Brazo</span>: Te quedas sin poder usar el miembro afectado puesto que te duele demasiado, y puede requerir sujeción. Sufres un penalizador -20 a todos los Chequeos que se basan en el uso de las dos manos y no puedes empuñar armas a dos manos;Si la mano perdida es tu mano principal, sufres el penalizador habitual -20 a los Chequeos de Cuerpo a cuerpo hechos con armas empuñadas en la mano secundaria.</p>\n<p>&nbsp;</p>\n<h3>Curación:</h3>\n<p>Una fractura en un hueso tarda [[/r 40+1d10]] días en curar. Al final de este proceso, superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Aguante</strong> significa que el hueso ha soldado bien y no se sufren efectos negativos a largo plazo. Si fallas el Chequeo, sufres una pérdida permanente de -10 a todos los Chequeos de Agilidad que haces utilizando un Brazo dañado.</p>\n<p>Superar un Chequeo <strong>Normal (+20)</strong> de <strong>Sanar</strong> en el plazo de una semana de sufrir una fractura niega la necesidad del Chequeo de Aguante, pero el área afectada debe permanecer sujeta o vendada todo el tiempo que dure la curación. Si el vendaje se deshace, superar otro Chequeo <strong>Desafiante (+0)</strong> de <strong>Sanar</strong> hecho en el plazo de 1 día permite evitar el Chequeo de Aguante.</p>",
+			"description": "<p>@UUID[Compendium.wfrp4e-core.journal-entries.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#grave]{Huesos rotos}</p><p>Uno de tus huesos se ha roto de mala manera y, o bien ha quedado en mala posición, o se ha astillado en el punto de rotura. La Ubicación de impacto queda relativamente inutilizada hasta que se cura la fractura.</p>\n<p><span style=\"font-weight: bold;\">Brazo</span>: Te quedas sin poder usar el miembro afectado puesto que te duele demasiado, y puede requerir sujeción. Sufres un penalizador -20 a todos los Chequeos que se basan en el uso de las dos manos y no puedes empuñar armas a dos manos;Si la mano perdida es tu mano principal, sufres el penalizador habitual -20 a los Chequeos de Cuerpo a cuerpo hechos con armas empuñadas en la mano secundaria.</p>",
 			"penalty": "-20 si depende de dos manos",
 			"effects": {
 				"Broken Arm": {
@@ -161,7 +161,7 @@
 		{
 			"id": "Broken Arm (Minor)",
 			"name": "Brazo Roto (Leve)",
-			"description": "<p>Te has fracturado un hueso, pero sigue estando alineado por lo que puede curarse solo sin atención médica.</p>\n<p><span style=\"font-weight: bold;\">Brazo</span>: Te quedas sin poder usar el miembro afectado puesto que te duele demasiado, y puede requerir sujeción. Sufres un penalizador -20 a todos los Chequeos que se basan en el uso de las dos manos y no puedes empuñar armas a dos manos;Si la mano perdida es tu mano principal, sufres el penalizador habitual -20 a los Chequeos de Cuerpo a cuerpo hechos con armas empuñadas en la mano secundaria.</p>\n<p>&nbsp;</p>\n<h3>Curación:</h3>\n<p>Una fractura en un hueso tarda [[/r 30+1d10]] días en curar. Al final de este proceso, superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Aguante</strong> significa que el hueso ha soldado bien y no se sufren efectos negativos a largo plazo. Si fallas el Chequeo, sufres una pérdida permanente de -5 a todos los Chequeos de Agilidad que haces utilizando un Brazo dañado.</p>\n<p>Superar un Chequeo <strong>Normal (+20)</strong> de <strong>Sanar</strong> en el plazo de una semana de sufrir una fractura niega la necesidad del Chequeo de Aguante, pero el área afectada debe permanecer sujeta o vendada todo el tiempo que dure la curación. Si el vendaje se deshace, superar otro Chequeo <strong>Normal (+20)</strong> de <strong>Sanar</strong> hecho en el plazo de 1 día permite evitar el Chequeo de Aguante.</p>",
+			"description": "<p>@UUID[Compendium.wfrp4e-core.journal-entries.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#leve]{Huesos rotos}</p><p>Te has fracturado un hueso, pero sigue estando alineado por lo que puede curarse solo sin atención médica.</p>\n<p><span style=\"font-weight: bold;\">Brazo</span>: Te quedas sin poder usar el miembro afectado puesto que te duele demasiado, y puede requerir sujeción. Sufres un penalizador -20 a todos los Chequeos que se basan en el uso de las dos manos y no puedes empuñar armas a dos manos;Si la mano perdida es tu mano principal, sufres el penalizador habitual -20 a los Chequeos de Cuerpo a cuerpo hechos con armas empuñadas en la mano secundaria.</p>",
 			"penalty": "-20 si depende de dos manos",
 			"effects": {
 				"Broken Arm": {
@@ -173,7 +173,7 @@
 		{
 			"id": "Broken Body (Major)",
 			"name": "Cuerpo Roto (Grave)",
-			"description": "<p>Uno de tus huesos se ha roto de mala manera y, o bien ha quedado en mala posición, o se ha astillado en el punto de rotura. La Ubicación de impacto queda relativamente inutilizada hasta que se cura la fractura.</p>\n<p><span style=\"font-weight: bold;\">Cuerpo: </span>Tu fuerza y tu movilidad se verán fuertemente limitadas: tendrás un -30 a tus Características de Fuerza y de Agilidad, y la mitad de tu Movimiento habitual.</p>\n<h3>Curación:</h3>\n<p>Una fractura en un hueso tarda [[/r 40+1d10]] días en curar. Al final de este proceso, superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Aguante</strong> significa que el hueso ha soldado bien y no se sufren efectos negativos a largo plazo. Si fallas el Chequeo, sufres una pérdida permanente de -10 a tu Característica de Agilidad.</p>\n<p>Superar un Chequeo <strong>Normal (+20)</strong> de <strong>Sanar</strong> en el plazo de una semana de sufrir una fractura niega la necesidad del Chequeo de Aguante, pero el área afectada debe permanecer sujeta o vendada todo el tiempo que dure la curación. Si el vendaje se deshace, superar otro Chequeo <strong>Desafiante (+0)</strong> de <strong>Sanar</strong> hecho en el plazo de 1 día permite evitar el Chequeo de Aguante.</p>",
+			"description": "<p>@UUID[Compendium.wfrp4e-core.journal-entries.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#grave]{Huesos rotos}</p><p>Uno de tus huesos se ha roto de mala manera y, o bien ha quedado en mala posición, o se ha astillado en el punto de rotura. La Ubicación de impacto queda relativamente inutilizada hasta que se cura la fractura.</p>\n<p><span style=\"font-weight: bold;\">Cuerpo: </span>Tu fuerza y tu movilidad se verán fuertemente limitadas: tendrás un -30 a tus Características de Fuerza y de Agilidad, y la mitad de tu Movimiento habitual.</p>",
 			"penalty": "-30 a F y Ag, mitad de Movimiento.",
 			"effects": {
 				"Movement Halved": {
@@ -187,7 +187,7 @@
 		{
 			"id": "Broken Body (Minor)",
 			"name": "Cuerpo Roto (Leve)",
-			"description": "<p>Te has fracturado un hueso, pero sigue estando alineado por lo que puede curarse solo sin atención médica.</p>\n<p><span style=\"font-weight: bold;\">Cuerpo: </span>Tu fuerza y tu movilidad se verán fuertemente limitadas: tendrás un -30 a tus Características de Fuerza y de Agilidad, y la mitad de tu Movimiento habitual.</p>\n<h3>Curación:</h3>\n<p>Una fractura en un hueso tarda [[/r 30+1d10]] días en curar. Al final de este proceso, superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Aguante</strong> significa que el hueso ha soldado bien y no se sufren efectos negativos a largo plazo. Si fallas el Chequeo, sufres una pérdida permanente de -5 a tu Característica de Agilidad.</p>\n<p>Superar un Chequeo <strong>Normal (+20)</strong> de <strong>Sanar</strong> en el plazo de una semana de sufrir una fractura niega la necesidad del Chequeo de Aguante, pero el área afectada debe permanecer sujeta o vendada todo el tiempo que dure la curación. Si el vendaje se deshace, superar otro Chequeo <strong>Normal (+20)</strong> de <strong>Sanar</strong> hecho en el plazo de 1 día permite evitar el Chequeo de Aguante.</p>",
+			"description": "<p>@UUID[Compendium.wfrp4e-core.journal-entries.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#leve]{Huesos rotos}</p><p>Te has fracturado un hueso, pero sigue estando alineado por lo que puede curarse solo sin atención médica.</p>\n<p><span style=\"font-weight: bold;\">Cuerpo: </span>Tu fuerza y tu movilidad se verán fuertemente limitadas: tendrás un -30 a tus Características de Fuerza y de Agilidad, y la mitad de tu Movimiento habitual.</p>",
 			"penalty": "-30 a F y Ag, mitad de Movimiento.",
 			"effects": {
 				"Movement Halved": {
@@ -201,7 +201,7 @@
 		{
 			"id": "Broken Head (Major)",
 			"name": "Cabeza Rota (Grave)",
-			"description": "<p>Uno de tus huesos se ha roto de mala manera y, o bien ha quedado en mala posición, o se ha astillado en el punto de rotura. La Ubicación de impacto queda relativamente inutilizada hasta que se cura la fractura.</p>\n<p><span style=\"font-weight: bold;\">Cabeza:</span><span style=\"font-weight: bold;\">&nbsp;</span>Reducido a una dieta líquida y sufrirás un penalizador -30 a todos los Chequeos de Hablar idioma.</p>\n<h3>Curación:</h3>\n<p>Una fractura en un hueso tarda [[/r 40+1d10]] días en curar. Al final de este proceso, superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Aguante</strong> significa que el hueso ha soldado bien y no se sufren efectos negativos a largo plazo. Si fallas el Chequeo, sufres Penalty of -10 to spoken Language Tests.</p>\n<p>Superar un Chequeo <strong>Normal (+20)</strong> de <strong>Sanar</strong> en el plazo de una semana de sufrir una fractura niega la necesidad del Chequeo de Aguante, pero el área afectada debe permanecer sujeta o vendada todo el tiempo que dure la curación. Si el vendaje se deshace, superar otro Chequeo <strong>Desafiante (+0)</strong> de <strong>Sanar</strong> hecho en el plazo de 1 día permite evitar el Chequeo de Aguante.</p>",
+			"description": "<p>@UUID[Compendium.wfrp4e-core.journal-entries.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#grave]{Huesos rotos}</p><p>Uno de tus huesos se ha roto de mala manera y, o bien ha quedado en mala posición, o se ha astillado en el punto de rotura. La Ubicación de impacto queda relativamente inutilizada hasta que se cura la fractura.</p>\n<p><span style=\"font-weight: bold;\">Cabeza:</span><span style=\"font-weight: bold;\">&nbsp;</span>Reducido a una dieta líquida y sufrirás un penalizador -30 a todos los Chequeos de Hablar idioma.</p>",
 			"penalty": "-30 Hablar idioma",
 			"effects": {
 				"Broken Head": {
@@ -212,7 +212,7 @@
 		{
 			"id": "Broken Head (Minor)",
 			"name": "Cabeza Rota (Leve)",
-			"description": "<p>Te has fracturado un hueso, pero sigue estando alineado por lo que puede curarse solo sin atención médica.</p>\n<p><span style=\"font-weight: bold;\">Cabeza:</span><span style=\"font-weight: bold;\">&nbsp;</span>Reducido a una dieta líquida y sufrirás un penalizador -30 a todos los Chequeos de Hablar idioma.</p>\n<h3>Curación:</h3>\n<p>Una fractura en un hueso tarda [[/r 30+1d10]] días en curar. Al final de este proceso, superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Aguante</strong> significa que el hueso ha soldado bien y no se sufren efectos negativos a largo plazo. Si fallas el Chequeo, sufres Penalty of -5 to spoken Language Tests</p>\n<p>Superar un Chequeo <strong>Normal (+20)</strong> de <strong>Sanar</strong> en el plazo de una semana de sufrir una fractura niega la necesidad del Chequeo de Aguante, pero el área afectada debe permanecer sujeta o vendada todo el tiempo que dure la curación. Si el vendaje se deshace, superar otro Chequeo <strong>Normal (+20)</strong> de <strong>Sanar</strong> hecho en el plazo de 1 día permite evitar el Chequeo de Aguante.</p>",
+			"description": "<p>@UUID[Compendium.wfrp4e-core.journal-entries.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#leve]{Huesos rotos}</p><p>Te has fracturado un hueso, pero sigue estando alineado por lo que puede curarse solo sin atención médica.</p>\n<p><span style=\"font-weight: bold;\">Cabeza:</span><span style=\"font-weight: bold;\">&nbsp;</span>Reducido a una dieta líquida y sufrirás un penalizador -30 a todos los Chequeos de Hablar idioma.</p>",
 			"penalty": "-30 Hablar idioma",
 			"effects": {
 				"Broken Head": {
@@ -223,7 +223,7 @@
 		{
 			"id": "Broken Leg (Major)",
 			"name": "Pierna Rota (Grave)",
-			"description": "<p>Uno de tus huesos se ha roto de mala manera y, o bien ha quedado en mala posición, o se ha astillado en el punto de rotura. La Ubicación de impacto queda relativamente inutilizada hasta que se cura la fractura.</p>\n<p><span style=\"font-weight: bold;\">Pierna: </span>Reduce a la mitad de forma permanente tu Movimiento y sufres un penalizador -20 a todos los Chequeos que se basan en la movilidad, además no puedes Esquivar.</p>\n<h3>Curación:</h3>\n<p>Una fractura en un hueso tarda [[/r 40+1d10]] días en curar. Al final de este proceso, superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Aguante</strong> significa que el hueso ha soldado bien y no se sufren efectos negativos a largo plazo. Si fallas el Chequeo, sufres Permanent loss of -10 to Agility</p>\n<p>Superar un Chequeo <strong>Normal (+20)</strong> de <strong>Sanar</strong> en el plazo de una semana de sufrir una fractura niega la necesidad del Chequeo de Aguante, pero el área afectada debe permanecer sujeta o vendada todo el tiempo que dure la curación. Si el vendaje se deshace, superar otro Chequeo <strong>Desafiante (+0)</strong> de <strong>Sanar</strong> hecho en el plazo de 1 día permite evitar el Chequeo de Aguante.</p>",
+			"description": "<p>@UUID[Compendium.wfrp4e-core.journal-entries.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#grave]{Huesos rotos}</p><p>Uno de tus huesos se ha roto de mala manera y, o bien ha quedado en mala posición, o se ha astillado en el punto de rotura. La Ubicación de impacto queda relativamente inutilizada hasta que se cura la fractura.</p><p><span style=\"font-weight: bold;\">Pierna: </span>Reduce a la mitad de forma permanente tu Movimiento y sufres un penalizador -20 a todos los Chequeos que se basan en la movilidad, además no puedes Esquivar.</p>",
 			"penalty": "-20 a Chequeos de movilidad, no puedes usar Esquivar, mitad de Movimiento",
 			"effects": {
 				"Movement Penalty": {
@@ -238,7 +238,7 @@
 		{
 			"id": "Broken Leg (Minor)",
 			"name": "Pierna Rota (Leve)",
-			"description": "<p>Te has fracturado un hueso, pero sigue estando alineado por lo que puede curarse solo sin atención médica.</p>\n<p><span style=\"font-weight: bold;\">Pierna: </span>Reduce a la mitad de forma permanente tu Movimiento y sufres un penalizador -20 a todos los Chequeos que se basan en la movilidad, además no puedes Esquivar.</p>\n<h3>Curación:</h3>\n<p>Una fractura en un hueso tarda [[/r 30+1d10]] días en curar. Al final de este proceso, superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Aguante</strong> significa que el hueso ha soldado bien y no se sufren efectos negativos a largo plazo. Si fallas el Chequeo, sufres Permanent loss of -5 to Agility</p>\n<p>Superar un Chequeo <strong>Normal (+20)</strong> de <strong>Sanar</strong> en el plazo de una semana de sufrir una fractura niega la necesidad del Chequeo de Aguante, pero el área afectada debe permanecer sujeta o vendada todo el tiempo que dure la curación. Si el vendaje se deshace, superar otro Chequeo <strong>Normal (+20)</strong> de <strong>Sanar</strong> hecho en el plazo de 1 día permite evitar el Chequeo de Aguante.</p>",
+			"description": "<p>@UUID[Compendium.wfrp4e-core.journal-entries.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#leve]{Huesos rotos}</p><p>Te has fracturado un hueso, pero sigue estando alineado por lo que puede curarse solo sin atención médica.</p>\n<p><span style=\"font-weight: bold;\">Pierna: </span>Reduce a la mitad de forma permanente tu Movimiento y sufres un penalizador -20 a todos los Chequeos que se basan en la movilidad, además no puedes Esquivar.</p>",
 			"penalty": "-20 a Chequeos de movilidad, no puedes usar Esquivar, mitad de Movimiento",
 			"effects": {
 				"Movement Penalty": {
@@ -253,7 +253,7 @@
 		{
 			"id": "Torn Arm Muscle (Major)",
 			"name": "Desgarro Muscular en Brazo (Grave)",
-			"description": "<p>Uno de tus músculos está distendido o desgarrado, lo que resulta en que tus capacidades quedan disminuidas y sientes mucho dolor.</p>\n<p><strong>Brazo: </strong>Sufres un penalizador -20 a todos los Chequeos involucrando el brazo.</p>\n<p><span style=\"font-weight: bold;\">Curación:</span>El músculo se curará parcialmente en tantos días como 30 - tu Bonificador por Resistencia, tras lo cual el penalizador por utilizar el miembro se reducirá a -10 en todos los Chequeos relevantes. El músculo se curará por completo en otros 30 - Bonificador por Resistencia días. El uso de la Habilidad Sanar hace poco más que informarte de que no uses la Ubicación de impacto afectada.</p>",
+			"description": "<p>@UUID[Compendium.wfrp4e-core.journal-entries.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#grave$1]{Desgarros musculares}</p><p>Uno de tus músculos está distendido o desgarrado, lo que resulta en que tus capacidades quedan disminuidas y sientes mucho dolor.</p>\n<p><strong>Brazo: </strong>Sufres un penalizador -20 a todos los Chequeos involucrando el brazo.</p>\n<p><span style=\"font-weight: bold;\">Curación:</span>El músculo se curará parcialmente en tantos días como 30 - tu Bonificador por Resistencia, tras lo cual el penalizador por utilizar el miembro se reducirá a -10 en todos los Chequeos relevantes. El músculo se curará por completo en otros 30 - Bonificador por Resistencia días. El uso de la Habilidad Sanar hace poco más que informarte de que no uses la Ubicación de impacto afectada.</p>",
 			"penalty": "-20 a Chequeos involucrando el Brazo (especificar)",
 			"effects": {
 				"Torn Arm Muscle": {
@@ -265,7 +265,7 @@
 		{
 			"id": "Torn Arm Muscle (Minor)",
 			"name": "Desgarro Muscular en Brazo (Leve)",
-			"description": "<p>Uno de tus músculos está distendido o desgarrado, lo que resulta en que tus capacidades quedan disminuidas y sientes mucho dolor.</p>\n<p><strong>Brazo: </strong>Sufres un penalizador -10 a todos los Chequeos involucrando el brazo.</p>\n<p><span style=\"font-weight: bold;\">Curación:</span>El músculo se curará parcialmente en tantos días como 30 - tu Bonificador por Resistencia. El uso de la Habilidad Sanar reducirá en 1 día el tiempo de curación, más otro día por cada NE (puedes obtener este beneficio una vez).</p>",
+			"description": "<p>@UUID[Compendium.wfrp4e-core.journal-entries.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#leve$1]{Desgarros musculares}</p><p>Uno de tus músculos está distendido o desgarrado, lo que resulta en que tus capacidades quedan disminuidas y sientes mucho dolor.</p>\n<p><strong>Brazo: </strong>Sufres un penalizador -10 a todos los Chequeos involucrando el brazo.</p>",
 			"penalty": "-10 a Chequeos involucrando el Brazo (especificar)",
 			"effects": {
 				"Torn Arm Muscle": {
@@ -277,7 +277,7 @@
 		{
 			"id": "Torn Body Muscle (Major)",
 			"name": "Desgarro Muscular en Cuerpo (Grave)",
-			"description": "<p>Uno de tus músculos está distendido o desgarrado, lo que resulta en que tus capacidades quedan disminuidas y sientes mucho dolor.</p>\n<p><strong>Cuerpo:</strong> Sufres un penalizador -20 a todos los Chequeos involucrando el cuerpo.</p>\n<p><span style=\"font-weight: bold;\">Curación:</span>El músculo se curará parcialmente en tantos días como 30 - tu Bonificador por Resistencia, tras lo cual el penalizador por utilizar el miembro se reducirá a -10 en todos los Chequeos relevantes. El músculo se curará por completo en otros 30 - Bonificador por Resistencia días. El uso de la Habilidad Sanar hace poco más que informarte de que no uses la Ubicación de impacto afectada.</p>",
+			"description": "<p>@UUID[Compendium.wfrp4e-core.journal-entries.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#grave$1]{Desgarros musculares}</p><p>Uno de tus músculos está distendido o desgarrado, lo que resulta en que tus capacidades quedan disminuidas y sientes mucho dolor.</p>\n<p><strong>Cuerpo:</strong> Sufres un penalizador -20 a todos los Chequeos involucrando el cuerpo.</p>",
 			"penalty": "-20 a Chequeos involucrando el Cuerpo",
 			"effects": {
 				"Torn Body Muscle": {
@@ -289,7 +289,7 @@
 		{
 			"id": "Torn Body Muscle (Minor)",
 			"name": "Desgarro Muscular en Cuerpo (Leve)",
-			"description": "<p>Uno de tus músculos está distendido o desgarrado, lo que resulta en que tus capacidades quedan disminuidas y sientes mucho dolor.</p>\n<p><strong>Cuerpo:</strong> Sufres un penalizador -10 a todos los Chequeos involucrando el cuerpo.</p>\n<p><span style=\"font-weight: bold;\">Curación:</span>El músculo se curará parcialmente en tantos días como 30 - tu Bonificador por Resistencia. El uso de la Habilidad Sanar reducirá en 1 día el tiempo de curación, más otro día por cada NE (puedes obtener este beneficio una vez).</p>",
+			"description": "<p>@UUID[Compendium.wfrp4e-core.journal-entries.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#leve$1]{Desgarros musculares}</p><p>Uno de tus músculos está distendido o desgarrado, lo que resulta en que tus capacidades quedan disminuidas y sientes mucho dolor.</p>\n<p><strong>Cuerpo:</strong> Sufres un penalizador -10 a todos los Chequeos involucrando el cuerpo.</p>",
 			"penalty": "-10 a Chequeos involucrando el Cuerpo",
 			"effects": {
 				"Torn Body Muscle": {
@@ -301,7 +301,7 @@
 		{
 			"id": "Torn Head Muscle (Major)",
 			"name": "Desgarro Muscular en Cabeza (Grave)",
-			"description": "<p>Uno de tus músculos está distendido o desgarrado, lo que resulta en que tus capacidades quedan disminuidas y sientes mucho dolor.</p>\n<p><strong>Cabeza:</strong> Sufres un penalizador -20 a todos los Chequeos involucrando la cabeza.</p>\n<p><span style=\"font-weight: bold;\">Curación:</span>El músculo se curará parcialmente en tantos días como 30 - tu Bonificador por Resistencia, tras lo cual el penalizador por utilizar el miembro se reducirá a -10 en todos los Chequeos relevantes. El músculo se curará por completo en otros 30 - Bonificador por Resistencia días. El uso de la Habilidad Sanar hace poco más que informarte de que no uses la Ubicación de impacto afectada.</p>",
+			"description": "<p>@UUID[Compendium.wfrp4e-core.journal-entries.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#grave$1]{Desgarros musculares}</p><p>Uno de tus músculos está distendido o desgarrado, lo que resulta en que tus capacidades quedan disminuidas y sientes mucho dolor.</p>\n<p><strong>Cabeza:</strong> Sufres un penalizador -20 a todos los Chequeos involucrando la cabeza.</p>",
 			"penalty": "-20 a Chequeos involucrando la Cabeza",
 			"effects": {
 				"Torn Head Muscle": {
@@ -313,7 +313,7 @@
 		{
 			"id": "Torn Head Muscle (Minor)",
 			"name": "Desgarro Muscular en Cabeza (Leve)",
-			"description": "<p>Uno de tus músculos está distendido o desgarrado, lo que resulta en que tus capacidades quedan disminuidas y sientes mucho dolor.</p>\n    <p><strong>Cabeza:</strong> Sufres un penalizador -10 a todos los Chequeos involucrando la cabeza.</p>\n    <p><span style=\"font-weight: bold;\">Curación:</span>El músculo se curará parcialmente en tantos días como 30 - tu Bonificador por Resistencia. El uso de la Habilidad Sanar reducirá en 1 día el tiempo de curación, más otro día por cada NE (puedes obtener este beneficio una vez).</p>",
+			"description": "<p>@UUID[Compendium.wfrp4e-core.journal-entries.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#leve$1]{Desgarros musculares}</p><p>Uno de tus músculos está distendido o desgarrado, lo que resulta en que tus capacidades quedan disminuidas y sientes mucho dolor.</p>\n    <p><strong>Cabeza:</strong> Sufres un penalizador -10 a todos los Chequeos involucrando la cabeza.</p>",
 			"penalty": "-10 a Chequeos involucrando la Cabeza",
 			"effects": {
 				"Torn Head Muscle": {
@@ -325,7 +325,7 @@
 		{
 			"id": "Torn Leg Muscle (Major)",
 			"name": "Desgarro Muscular en Pierna (Grave)",
-			"description": "<p>Uno de tus músculos está distendido o desgarrado, lo que resulta en que tus capacidades quedan disminuidas y sientes mucho dolor.</p>\n<p><strong>Pierna:</strong> Mitad de movimento, sufres un penalizador -20 a todos los Chequeos involucrando la pierna.</p>\n<p><span style=\"font-weight: bold;\">Curación:</span>El músculo se curará parcialmente en tantos días como 30 - tu Bonificador por Resistencia, tras lo cual el penalizador por utilizar el miembro se reducirá a -10 en todos los Chequeos relevantes. El músculo se curará por completo en otros 30 - Bonificador por Resistencia días. El uso de la Habilidad Sanar hace poco más que informarte de que no uses la Ubicación de impacto afectada.</p>",
+			"description": "<p>@UUID[Compendium.wfrp4e-core.journal-entries.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#grave$1]{Desgarros musculares}</p><p>Uno de tus músculos está distendido o desgarrado, lo que resulta en que tus capacidades quedan disminuidas y sientes mucho dolor.</p>\n<p><strong>Pierna:</strong> Mitad de movimento, sufres un penalizador -20 a todos los Chequeos involucrando la pierna.</p>",
 			"penalty": "-20 a Chequeos involucrando la Pierna (especificar)",
 			"effects": {
 				"Torn Leg Muscle": {
@@ -340,7 +340,7 @@
 		{
 			"id": "Torn Leg Muscle (Minor)",
 			"name": "Desgarro Muscular en Pierna (Leve)",
-			"description": "<p>Uno de tus músculos está distendido o desgarrado, lo que resulta en que tus capacidades quedan disminuidas y sientes mucho dolor.</p>\n<p><strong>Pierna:</strong> Mitad de movimento, sufres un penalizador -10 a todos los Chequeos involucrando la pierna.</p>\n<p><span style=\"font-weight: bold;\">Curación:</span>El músculo se curará parcialmente en tantos días como 30 - tu Bonificador por Resistencia. El uso de la Habilidad Sanar reducirá en 1 día el tiempo de curación, más otro día por cada NE (puedes obtener este beneficio una vez).</p>",
+			"description": "<p>@UUID[Compendium.wfrp4e-core.journal-entries.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#leve$1]{Desgarros musculares}</p><p>Uno de tus músculos está distendido o desgarrado, lo que resulta en que tus capacidades quedan disminuidas y sientes mucho dolor.</p>\n<p><strong>Pierna:</strong> Mitad de movimento, sufres un penalizador -10 a todos los Chequeos involucrando la pierna.</p>",
 			"penalty": "-10 a Chequeos involucrando la Pierna (especificar)",
 			"effects": {
 				"Torn Leg Muscle": {

@@ -1740,7 +1740,12 @@
 		{
 			"id": "Flaming Sword of Rhuin",
 			"name": "Espada ígnea de Rhuin",
-			"description": "<p>Envuelves una espada en llamas mágicas. El arma tiene Daño +6 y la Cualidad <em>Impactante</em> y todo aquel a quien impacta sufre +1 Estado de @Condition[Ardiendo]. Si quien la empuña no tiene el Talento Magia arcana (fuego) y pifia un ataque con la Espada flamígera , sufre +1 Estado de @Condition[Ardiendo].</p><p>\n\n <b>Saber:</b> Puedes infligir +1 Estado de @Condition[Ardiendo] a cualquier objetivo de los hechizos del Saber del Fuego, a menos que éste también disponga del Talento Magia arcana (fuego). Cada Estado de Ardiendo a una distancia en yardas igual o menor que tu Bonificador por Voluntad suma +10 a los intentos de Canalizar o Lanzar con el Aqshy.</p>"
+			"description": "<p>Envuelves una espada en llamas mágicas. El arma tiene Daño +6 y la Cualidad <em>Impactante</em> y todo aquel a quien impacta sufre +1 Estado de @Condition[Ardiendo]. Si quien la empuña no tiene el Talento Magia arcana (fuego) y pifia un ataque con la Espada flamígera , sufre +1 Estado de @Condition[Ardiendo].</p><p>\n\n <b>Saber:</b> Puedes infligir +1 Estado de @Condition[Ardiendo] a cualquier objetivo de los hechizos del Saber del Fuego, a menos que éste también disponga del Talento Magia arcana (fuego). Cada Estado de Ardiendo a una distancia en yardas igual o menor que tu Bonificador por Voluntad suma +10 a los intentos de Canalizar o Lanzar con el Aqshy.</p>",
+			"effects": {
+				"Flaming Sword of Rhuin": {
+					"label":"Espada ígnea de Rhuin"
+					}
+				}
 		},
 		{
 			"id": "Flight",
@@ -2870,10 +2875,6 @@
 			"effects": {
 				"Treason of Tzeentch": {
 					"label":"Traición de Tzeentch"
-					},
-				"Lore of Tzeentch": {
-					"flags.wfrp4e.script":"\n                   if (this.actor.isOwner)\n                      args.actor.setupSkill(\"Aguante\", {context : {failure: \"1 Punto de Corrupción Ganado\", success : \"1 Punto de Fortuna Ganado\"}}).then(setupData => {\n                          args.actor.basicTest(setupData).then(test => \n                           {\n                               if (test.result.outcome == \"success\" && args.actor.type == \"character\")\n                               {\n                                   args.actor.update({\"system.status.fortune.value\" : args.actor.status.fortune.value + 1})\n                               }\n                               else if (test.result.outcome == \"failure\" && args.actor.type == \"character\")\n                               {\n                                args.actor.update({\"system.status.corruption.value\" : args.actor.status.corruption.value + 1})\n                               }\n                           })\n                        })",
-					"label":"Saber de Tzeentch"
 					}
 				}
 		},

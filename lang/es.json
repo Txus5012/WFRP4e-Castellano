@@ -171,7 +171,11 @@
     "SETTINGS.useWoMOvercastHint" : "Usar las mecánicas de prolongación provistas en el suplemento Winds of Magic, descritas en la página 23.",
     "SETTINGS.useWoMChannelling" : "Usar las Reglas de Canalización de Winds of Magic",
     "SETTINGS.useWoMChannellingHint" : "Usar las reglas de canalización provistas en el suplemento Winds of Magic, descritas en la página 22.",
-
+    "SETTINGS.useWoMInfluences" : "Usar las Influencias Malignas de Winds of Magic",
+    "SETTINGS.useWoMInfluencesHint" : "Usar las reglas de Influencias Malignas provistas en el suplemento Winds of Magic, descritas en la página 22.",
+    "SETTINGS.ChannellingIngredients" : "Ingredientes para Canalizar",
+    "SETTINGS.ChannellingIngredientsHint" : "Hacer que los Ingredientes apliquen sus beneficios a los Chequeos de Canalización además de a los Chequeos de Lanzamiento.",
+    
     "MOO.Prone": "<br><br><b>Regla de la Casa de Moo</b>: Se te considera una banda de alcance más lejano al determinar los ataques a distancia.",
     "MOO.Broken": "Estás aterrado, derrotado, en pánico, o de alguna forma convencido de que vas a morir. En tu turno, tu Movimiento y Acción debe usarse para huir lo más rápido posible hasta estar en un buen escondite más allá de la vista de cualquier enemigo; entonces puedes usar tu Acción en una Habilidad que te permita esconderte más eficientemente. También recibes un penalizador de –10 a todos los Chequeos que no involucren huir o esconderse.<br><br>No puedes hacer un Chequeo para recobrarte de estar Quebrantado si estás Trabado con un enemigo. Si no estás trabado, al final del cada Asalto, puedes intentar un Chequeo de Frialdad para eliminar un Estado de Quebrantado, con cada NE eliminado un Estado de Quebrantado extra, y la Dificultad está determinada por las circunstancias en las que te encuentras actualmente: es mucho más fácil recobrarse cuando te escondes detrás de un barril en un callejón lejos del peligro (Normal +20) que cuando estás a tres pasos de un Demonio esclavista clamando por tu sangre (Muy Difícil –30).<br><br>Si gastas un Asalto completo escondiéndote fuera de la línea de visión de cualquier enemigo, elimina 1 Estado de Quebrantado.<br><br><strike>Cuando todos los Estados de Quebrantado hayan sido eliminados, gana 1 Estado de Fatigado.</strike>",
     "MOO.Bleeding": "Sangras bastante. Pierdes 1 Herida al final de cada Asalto, ignorando todos los modificadores. Además, sufres un penalizador de –10 a todos los Chequeos para resistir Heridas Suputantes , Infecciones Menores, o Podredumbre Sanguínea. Si llegas a  0 Heridas, realiza inmediatamente un Chequeo de Aguante para permanecer en pie (con un penalizador de -10 por cada Estado de Sangrando), sino caes @Condition[Inconsciente], y debes repetir este chequeo cada vez que sufras daño de Sangrando. Si estás en 0 Heridas, sin importar si estás inconsciente o no, al final de cada Asalto, tienes un 10% de oportunidades de morir por cada Estado de Sangrando que tengas; así que, si tienes 3 Estados de Sangrando, morirías por pérdida de sangre en una tirada de 0–30. Si sacas un doble en esta tirada, tu herida coagula un poco: pierdes 1 de Sangrando. No puedes recuperar la consciencia hasta que todos los Estados de Sangrando hayan sido eliminados (ver Heridas)<br><br>Un Estado de Sangrando puede eliminarse con:  un Chequeo de Sanar exitoso, con cada NE eliminado un Estado de Sangrando extra; o  con un hechizo o plegaria que cure Heridas, con un Estado eliminado por cada Herida curada.<br><br>Cuando todos los Estados de Sangrando hayan sido eliminados, gana un Estado de @Condition[Fatigado].",
@@ -714,6 +718,7 @@
     "DIALOG.AdvancementContent" : "Confirma o edita el coste de este avance.",
     "DIALOG.GainPrayer" : "Obtener Milagro",
     "DIALOG.GainPrayerContent" : "Obtener este milagro costará {xp} PX.",
+    "DIALOG.ErrorMustSelectItem" : "Debes seleccionar al menos 1 Objeto",
     "LOG.CareerChange": "Cambio de carrera: {career}",
     "Item Dialog": "Diálogo de Objeto",
 
@@ -812,6 +817,7 @@
     "CHAT.TestModifiers.DefenderMountLarger" : "Penalización por atacar al jinete de una montura más grande.",
     "CHAT.TestModifiers.SlowDefend" : "Atacante tiene una Arma Lenta",
     "CHAT.TestModifiers.WrapDefend" : "Atacante tiene un Arma Envolvente",
+    "CHAT.TestModifiers.IgnoreDefenderMountLarger" : "Penalizador para atacar al jinete anulado gracias al alcance del arma (Up in Arms).",
     "CHAT.SpreadPointBlank" : "Bocajarro: Daño aumentado en {damage}",
     "CHAT.SpreadExtreme" : "Extremo: Daño reducido en {damage}",
     "CHAT.CommandLine.Help.Commands" : "Tables,Conditions,Properties,CharacterGeneration,NameGeneration,AvailabilityTest,Pay,Credit,Corruption,Travel,Exp",
@@ -1103,6 +1109,8 @@
 
     "WFRP4E.applyScope.actor" : "Actor",
     "WFRP4E.applyScope.item" : "Objeto",
+
+    "WFRP4E.TogglePassengers" : "Ver Pasajeros",
 
     "CONDITION.Apply" : "Aplicar {condition}",
     "CONDITION.ApplyError" : "No puedes aplicar efectos de estado a este actor",
@@ -1422,6 +1430,7 @@
     "PROPERTY.Unbalanced": "Desequilibrado",
     "PROPERTY.Custom": "A Medida",
     "PROPERTY.CustomHint": "FORMATO - Propiedad 1: Descripción de Propiedad 1 | Propiedad 2 (Valor) : Descripción de Propiedad 2 | etc.",
+    "PROPERTY.SlashAlert": "<b>Propiedad Tajo</b>: Causa @Condition[Sangrando] en Heridas Críticas, puedes gastar {value} Ventaja para causar otro.",
     "Simple": "Simple",
     "Momentum": "Inercia",
 
@@ -1429,6 +1438,8 @@
     "PROPERTY.Impenetrable" : "Impenetrable",
     "PROPERTY.Partial" : "Parcial",
     "PROPERTY.Weakpoints" : "Puntos Débiles",
+
+    "PROPERTIES.TraitWarning" : "Algunas Cualidades/Defectos no son aplicables a Rasgos, como Recarga, De Pólvora Negra, Repetidora, Escudo, Duradero, Bueno, Ligero, Engorroso",
 
     "WFRP4E.BPandEng" : "Pólvora Negra y Explosivos",
     "WFRP4E.Bow" : "Arcos",
@@ -1576,6 +1587,9 @@
     "EFFECT.Applying": "Aplicando {name}",
     "EFFECT.NotSelf" : "No aplicar a uno mismo",
     "EFFECT.DeletingItems" : "Borrando Objetos: {items}",
+    "EFFECT.PromptItem" : "Preguntar Objeto",
+    "EFFECT.ItemFilters" : "Filtros de Objetos",
+    "EFFECT.ItemChoice" : "Objeto Elegido",
     
     "WFRP4E.MountButtonNotify" : "El actor de la izquierda ({mounter}) ha montado al actor de la derecha ({mountee})",
     "MountError": "Sólo puedes montar criaturas de mayor o igual tamaño.",
@@ -1843,6 +1857,8 @@
     "UPDATER.ExcludeHint": "Chequear esto no actualizará documentos si sus nombres han sido cambiados",
     "UPDATER.Error": "Sólo puedes actualizar si has inicializado el módulo al menos una vez.",
     "UPDATER.Notification": "Creados {created} y actualizados {updated} documentos de {name} - {version}",
+    "UPDATER.DeleteModuleContent" : "Borrar Contenido del Módulo",
+    "UPDATER.DeleteModuleContentPrompt" : "<p><strong>AVISO</strong>: Esto borrará todo el contenido asociado con el módulo <strong>{id}</strong> que ha sido importado a este mundo.</p><p>¿Estás seguro de que quiere proceder?</p>",
 
     "WFRP4e Content Setup": "Ajustes del Contenido de WFRP4e",
     "Setup": "Ajustes",
