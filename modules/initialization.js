@@ -19,7 +19,6 @@ Hooks.on("setup", () => {
 Hooks.on("renderCompendiumDirectory", async () => {
     if (game.packs.get("wfrp4e-core.trappings")) {
         game.packs.delete("wfrp4e.basic")
-        await ui.sidebar.render(true)
         ui.sidebar.element.find("[data-pack='wfrp4e.basic']").remove()
     }
 })
