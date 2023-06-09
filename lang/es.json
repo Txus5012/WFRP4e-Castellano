@@ -550,6 +550,7 @@
     "BROWSER.ModifiesRange" : "Modifica Alcance",
     "BROWSER.ItemList" : "Lista de Objetos",
     "BROWSER.LoadingBrowser" : "Cargando Buscador...",
+    "BROWSER.Created" : "Creados {num} Objetos",
 
     "On Completion": "Al Completar",
     "ExtendedTest.None" : "Nada",
@@ -1191,6 +1192,7 @@
     "NAME.Infighter" : "Combate cercano",
     "NAME.DeadeyeShot" : "Disparo certero",
     "NAME.StrikeToStun" : "Golpe conmocionador",
+    "NAME.Arcane" : "Arcano",
     "SPEC.Tiny" : "Minúsculo",
     "SPEC.Little" : "Muy pequeño",
     "SPEC.Small" : "Pequeño",
