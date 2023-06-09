@@ -582,7 +582,7 @@
     "CHARGEN.Species.SelectSpecies" : "Selecciona una Especie",
     "CHARGEN.Species.SelectSubSpecies" : "Selecciona una subespecie",
     "CHARGEN.Species.NoSubspecies" : "No hay subespecies disponibles",
-    "CHARGEN.Species.ChooseSpecies" : "Alternativamente, escoge una especie sin bono de experiencia",
+    "CHARGEN.Species.ChooseSpecies" : "Alternativamente, escoge una especie (sin bono de experiencia).",
 
     "CHARGEN.Career.ChooseCareer" : "Escoge {name}",
     "CHARGEN.Career.ReplacementsAvailable" : "Reemplazos disponibles",

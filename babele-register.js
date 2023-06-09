@@ -113,10 +113,6 @@ Babele.get().registerConverters({
         if ( value == "Fellowship Bonus") return "Bonificador por Empatía";
 	},
 
-       "lore": (value) => {  // Saberes
-	     if ( value == "petty" ) return "Menor";
-	},
-	
       "career_class": (value) => { // Clases
         if ( value == "Academics" ) return "Académicos";
         if ( value == "Academic" ) return "Académico";
