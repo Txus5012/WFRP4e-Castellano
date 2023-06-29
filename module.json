@@ -10,7 +10,7 @@
   ],
   "url": "https://github.com/Txus5012/WFRP4e-Castellano",
   "readme": "https://github.com/Txus5012/WFRP4e-Castellano#readme",
-  "version": "1.9.3",
+  "version": "1.9.4",
   "scripts": [
     "modules/initialization.js"
   ],
@@ -38,7 +38,7 @@
     }
   ],
   "manifest": "https://github.com/Txus5012/WFRP4e-Castellano/releases/latest/download/module.json",
-  "download": "https://github.com/Txus5012/WFRP4e-Castellano/releases/download/v1.9.3/wfrp4e-castellano.zip",
+  "download": "https://github.com/Txus5012/WFRP4e-Castellano/releases/download/v1.9.4/wfrp4e-castellano.zip",
   "id": "wfrp4e-castellano",
   "relationships": {
     "requires": [
@@ -46,7 +46,9 @@
         "id": "babele",
         "type": "module",
         "compatibility": {}
-      },
+      }
+     ],
+    "system": [
       {
         "id": "wfrp4e",
         "type": "system",
