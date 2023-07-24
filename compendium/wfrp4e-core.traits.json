@@ -43,7 +43,6 @@
 			"description": "<p>La criatura se encuentra como en casa en el agua. Puede sumar su Bonificador por agilidad a los NE de todos los Chequeos de Nadar, y moverse con su Movimiento completo por el agua. \r\r</p>",
 			"effects": {
 				"Amphibious": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" && args.item.name == \"Nadar\")\n    args.prefillModifiers.slBonus += this.actor.characteristics.ag.bonus",
 					"label":"Anfibio"
 					}
 				}
@@ -59,7 +58,6 @@
 			"description": "<p>La criatura se encuentra como en casa en los bosques. En los bosques, suma su Bonificador por Agilidad a los NE de todos los Chequeos de Escalar y de Movimiento silencioso. \r\r</p>",
 			"effects": {
 				"Arboreal": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" && (args.item.name == \"Escalar\"  || args.item.name.includes(\"Movimiento silencioso\")))\n{\n   let sl = this.actor.characteristics.ag.bonus\n   args.prefillModifiers.slBonus += sl;\n}",
 					"label":"Arbóreo"
 				}
 			}
@@ -529,7 +527,6 @@
 			"description": "<p>La criatura es especialmente sigilosa. Suma una cifra igual a su Bonificador por Agilidad a los NE de todos los Chequeos de Movimiento silencioso.</p>",
 			"effects": {
 				"Stealthy": {
-					"flags.wfrp4e.script":"if (args.item?.id == this.item.id || (args.type == \"skill\" &&  args.item.name.includes(\"Movimiento silencioso\")))\n{\n   let sl = this.actor.characteristics.ag.bonus\n   args.prefillModifiers.slBonus += sl;\n}",
 					"label":"Sigiloso"
 					}
 				}
@@ -629,7 +626,6 @@
 			"description": "<p>Los rastreadores son hábiles en seguir a su presa, por lo general mediante el olfato o el oído. Suman tantos NE como su Bonificador por Iniciativa a todos los Chequeos de Rastrear.</p>",
 			"effects": {
 				"Tracker": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" &&  args.item.name.includes(\"Seguir rastros\"))\n{\n   let sl = this.actor.characteristics.i.bonus\n   args.prefillModifiers.slBonus += sl;\n}",
 					"label":"Rastreador"
 					}
 				}

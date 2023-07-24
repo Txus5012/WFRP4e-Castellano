@@ -37,7 +37,6 @@
 					"label":"Sangrando"
 					},
 				"Bad Cut": {
-					"flags.wfrp4e.script":"if (args.actor.isOwner)\n   args.actor.setupSkill(\"Aguante\").then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"prone\")\n        })\n     })",
 					"label":"Tajo amplio"
 					}
 				}
@@ -51,7 +50,6 @@
 					"label":"Sangrando"
 					},
 				"Badly Cut Toe": {
-					"flags.wfrp4e.script":"if (this.actor.isOwner)\n    this.actor.setupSkill(\"Aguante\").then(setupData => {\n      this.actor.basicTest(setupData).then(test => {\n        if (test.result.outcome == \"failure\") {\n          fromUuid(\"Compendium.wfrp4e-core.injuries.ZhMADOqoo0y8Q9bx\").then(injury => {\n            this.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n            this.actor.deleteEmbeddedEntity(\"ActiveEffect\", this.effect._id)\n          })\n        }\n      })\n    })",
 					"label":"Fuerte corte en un dedo"
 					}
 				}
@@ -114,7 +112,6 @@
 					"label":"Aturdido"
 					},
 				"Broken Jaw": {
-					"flags.wfrp4e.script":"fromUuid(\"Compendium.wfrp4e-core.injuries.hCadFsTRvLN9faaY\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})\n\nif (args.actor.isOwner)\n   args.actor.setupSkill(\"Aguante\").then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"unconscious\")\n        })\n     })",
 					"label":"Rotura de mandíbula"
 					}
 				}
@@ -147,7 +144,6 @@
 					"label":"Sangrando"
 					},
 				"Broken Nose": {
-					"flags.wfrp4e.script":"if (args.actor.isOwner)\n   args.actor.setupSkill(\"Aguante\").then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"stunned\")\n        })\n     })",
 					"label":"Nariz rota"
 					}
 				}
@@ -194,7 +190,6 @@
 			"description": "<p>Un crujido audible resuena cuando el golpe alcanza tu brazo. Deja caer lo que tengas en la mano asociada, a la vez que te anotas una herida de @Compendium[wfrp4e-core.injuries.4lj1ik958mbgAlaF]{Hueso roto (Leve)}. Tienes que superar un Chequeo <strong>Complicado (-10)</strong> de <strong>Aguante</strong> sufrir 1 Estado de @Condition[Aturdido].</p>",
 			"effects": {
 				"Clean Break": {
-					"flags.wfrp4e.script":"if (args.actor.isOwner)\n{\n   args.actor.setupSkill(\"Aguante\", {absolute: {difficulty: \"difficult\"}}).then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"stunned\")\n        })\n     })\n\nfromUuid(\"Compendium.wfrp4e-core.injuries.4lj1ik958mbgAlaF\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})\n\n\n}",
 					"label":"Rotura limpia"
 					}
 				}
@@ -231,7 +226,6 @@
 					"label":"Golpe conmocionante"
 					},
 				"Concussive Blow - Fatigued Effect": {
-					"flags.wfrp4e.script":"if(args.opposedTest.result.hitloc.value == \"head\" && (args.opposedTest.attackerTest.result.critical || args.actor.status.wounds.value - args.totalWoundLoss < 0))\n{\n\n  if (args.actor.isOwner) {\n    args.actor.setupSkill(\"Aguante\", { absolute: { difficulty: \"average\" } }).then(setupData => {\n      args.actor.basicTest(setupData).then(test => {\n        if (test.result.outcome == \"failure\")\n          args.actor.addCondition(\"unconscious\")\n      })\n    })\n  }\n}",
 					"label":"Golpe conmocionante - Efecto de Fatigado"
 					},
 				"Fatigued": {
@@ -271,7 +265,6 @@
 					"label":"Sangrando"
 					},
 				"Crushed Foot": {
-					"flags.wfrp4e.script":"if(args.actor.isOwner) {\n    args.actor.setupSkill(\"Aguante\", { absolute: { difficulty: \"average\" } }).then(setupData => {\n      args.actor.basicTest(setupData).then(test => {\n        if (test.result.outcome == \"failure\") {\n          args.actor.addCondition(\"prone\")\n          fromUuid(\"Compendium.wfrp4e-core.injuries.ZhMADOqoo0y8Q9bx\").then(injury => {\n               injury = injury.toObject()\n               injury.location.value = `${Math.clamped(Math.abs(test.result.SL) + 1, 1, 5)} ${injury.location.value}`\n              args.actor.createEmbeddedDocuments(\"Item\", [injury])\n          })\n        }\n      })\n    })\n  }",
 					"label":"Pie aplastado"
 					}
 				}
@@ -331,7 +324,6 @@
 					"label":"Aturdido"
 					},
 				"Deep Cut": {
-					"flags.wfrp4e.script":"fromUuid(\"Compendium.wfrp4e-core.injuries.GlShFJF2TpsNh1FX\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})\n\nif (args.actor.isOwner)\n   args.actor.setupSkill(\"Aguante\", {absolute: {difficulty: \"hard\"}}).then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"unconscious\")\n        })\n     })",
 					"label":"Corte profundo"
 					}
 				}
@@ -385,7 +377,6 @@
 					"label":"Tumbado"
 					},
 				"Dislocated Knee": {
-					"flags.wfrp4e.script":"if (args.actor.isOwner)\n    args.actor.setupSkill(\"Aguante\", {absolute: {difficulty: \"hard\"}}).then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"stunned\")\n        })\n     })",
 					"label":"Rodilla dislocada"
 					}
 				}
@@ -396,7 +387,6 @@
 			"description": "<p>Casi te arrancan el brazo. Debes superar un Chequeo <strong>Difícil (-20)</strong> de  <strong>Aguante</strong> para no sufrir los Estados @Condition[Aturdido] y @Condition[Tumbado]. Deja caer de inmediato lo que tuvieras en esa mano: el brazo queda inútil y cuenta como perdido (see @Compendium[wfrp4e-core.injuries.MnMZv7ZXoRqoH9dS]{Miembros amputadost}). Sufres 1 Estado de @Condition[Aturdido] hasta recibir Atención médica. Tras esta Atención médica inicial, se requiere un Chequeo Prolongado <strong>Normal (+20)</strong> de <strong>Sanar</strong> que precisa de 6 NE para volver a colocar el brazo en su sitio, en cuyo momento recuperas su uso. Los Chequeos llevados a cabo utilizando este brazo sufren un penalizador -10 durante <strong>[[/r 1d10]]</strong> días.</p>",
 			"effects": {
 				"Dislocated Shoulder": {
-					"flags.wfrp4e.script":"if (args.actor.isOwner)\n   args.actor.setupSkill(\"Aguante\").then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            {\n                 args.actor.addCondition(\"prone\")\n                 args.actor.addCondition(\"stunned\")\n            }\n          \n        })\n     })",
 					"label":"Hombro dislocado"
 					},
 				"Stunned": {
@@ -438,7 +428,6 @@
 					"label":"Aturdido"
 					},
 				"Fractured Hip": {
-					"flags.wfrp4e.script":"fromUuid(\"Compendium.wfrp4e-core.injuries.QluSTTTq3viHJJUh\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})\n\n\nif (args.actor.isOwner)\n   args.actor.setupSkill(\"Aguante\").then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"prone\")\n        })\n     })",
 					"label":"Fractura de cadera"
 					}
 				}
@@ -492,7 +481,6 @@
 					"label":"Aturdido"
 					},
 				"Gut Blow": {
-					"flags.wfrp4e.script":"if (args.actor.isOwner)\n   args.actor.setupSkill(\"Aguante\", {absolute: {difficulty: \"easy\"}}).then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"prone\")\n        })\n     })",
 					"label":"Golpe en las tripas"
 					}
 				}
@@ -522,7 +510,6 @@
 					"label":"Sangrando"
 					},
 				"Hacked Leg": {
-					"flags.wfrp4e.script":"fromUuid(\"Compendium.wfrp4e-core.injuries.7mCcI3q7hgWcmbBU\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})\n\n\nif (args.actor.isOwner)\n    args.actor.setupSkill(\"Aguante\", {absolute: {difficulty: \"hard\"}}).then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"stunned\")\n        })\n     })",
 					"label":"Corte profundo en una pierna"
 					}
 				}
@@ -551,7 +538,6 @@
 			"description": "<p>Resbalas en medio de la refriega. Debes superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Aguante</strong> o pasar al Estado @Condition[Tumbado].</p>",
 			"effects": {
 				"Lost Footing": {
-					"flags.wfrp4e.script":"if (args.actor.isOwner)\n   args.actor.setupSkill(\"Aguante\").then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"prone\")\n        })\n     })",
 					"label":"Pierdes pie"
 					}
 				}
@@ -562,7 +548,6 @@
 			"description": "<p>Haz un Chequeo <strong>Difícil (-20)</strong> de <strong>Aguante</strong> para no sufrir 3 Estados de @Condition[Aturdido].</p>",
 			"effects": {
 				"Low Blow!": {
-					"flags.wfrp4e.script":"if (args.actor.isOwner)\n   args.actor.setupSkill(\"Aguante\", {absolute: {difficulty: \"hard\"}}).then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"stunned\", 3)\n        })\n     })",
 					"label":"¡Golpe bajo!"
 					}
 				}
@@ -631,7 +616,6 @@
 					"label":"Sangrando"
 					},
 				"Mangled Hand": {
-					"flags.wfrp4e.script":"fromUuid(\"Compendium.wfrp4e-core.injuries.zyocWSzEZEC826NS\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})\n\n\nif (args.actor.isOwner)\n args.actor.setupSkill(\"Aguante\", {absolute: {difficulty: \"hard\"}}).then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            { \n                   args.actor.addCondition(\"prone\")\n                  args.actor.addCondition(\"stunned\")\n             }\n        })\n     })",
 					"label":"Mano mutilada"
 					}
 				}
@@ -648,7 +632,7 @@
 					"label":"Aturdido"
 					},
 				"Mangled Jaw": {
-					"flags.wfrp4e.script":"fromUuid(\"Compendium.wfrp4e-core.injuries.fBcZhOBn8IpoVqQ1\").then(async injury => {\ninjury = injury.toObject()\n let teeth = (await new Roll(\"1d10\").roll()).total\n ChatMessage.create({content : `<b>${this.actor.prototypeToken.name}</b> pierde ${teeth} dientes`, speaker : {alias: this.effect.label}})\ninjury.location.value = `${teeth} ${injury.location.value}`\n args.actor.createEmbeddedDocuments(\"Item\", [injury])\n})\n\nfromUuid(\"Compendium.wfrp4e-core.injuries.rkJA1DlK51QuRlJy\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})\n\nfromUuid(\"Compendium.wfrp4e-core.injuries.hCadFsTRvLN9faaY\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})\n\n\nif (args.actor.isOwner)\n   args.actor.setupSkill(\"Aguante\").then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"unconscious\")\n        })\n     })",
+					"flags.wfrp4e.script":"fromUuid(\"Compendium.wfrp4e-core.injuries.fBcZhOBn8IpoVqQ1\").then(async injury => {\ninjury = injury.toObject()\n let teeth = (await new Roll(\"1d10\").roll()).total\n ChatMessage.create({content : `<b>${this.actor.prototypeToken.name}</b> pierde ${teeth} dientes`, speaker : {alias: this.effect.label}})\ninjury.location.value = `${teeth} ${injury.location.value}`\n args.actor.createEmbeddedDocuments(\"Item\", [injury])\n})\n\nfromUuid(\"Compendium.wfrp4e-core.injuries.rkJA1DlK51QuRlJy\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})\n\nfromUuid(\"Compendium.wfrp4e-core.injuries.hCadFsTRvLN9faaY\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})\n\n\nif (args.actor.isOwner)\n   args.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\")).then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"unconscious\")\n        })\n     })",
 					"label":"Mandíbula aplastada"
 					}
 				}
@@ -711,7 +695,7 @@
 					"label":"Aturdido"
 					},
 				"Painful Cut": {
-					"flags.wfrp4e.script":"if (args.actor.isOwner)\n args.actor.setupSkill(\"Aguante\", {absolute: {difficulty: \"hard\"}}).then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"unconscious\")\n\n            if(test.result.SL < 4)\n            ChatMessage.create({content : `<b>${this.actor.prototypeToken.name}</b> deja escapar un grito de dolor.`})\n        })\n     })",
+					"flags.wfrp4e.script":"if (args.actor.isOwner)\n args.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {absolute: {difficulty: \"hard\"}}).then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"unconscious\")\n\n            if(test.result.SL < 4)\n            ChatMessage.create({content : `<b>${this.actor.prototypeToken.name}</b> deja escapar un grito de dolor.`})\n        })\n     })",
 					"label":"Corte doloroso"
 					}
 				}
@@ -773,7 +757,6 @@
 			"description": "<p>Pasas al Estado @Condition[Tumbado] y sufres 1 de @Condition[Aturdido] cuando uno de tus tendones se desgarra. Has de superar un <strong>Hard (-20)</strong> de <strong>Aguante</strong> o pasar al Estado @Condition[Inconsciente]. La pierna te queda inútil. Sufres una herida de @Compendium[wfrp4e-core.injuries.3S4OYOZLauXctmev]{Desgarro muscular (Grave)}.</p>",
 			"effects": {
 				"Ruptured Tendon": {
-					"flags.wfrp4e.script":"fromUuid(\"Compendium.wfrp4e-core.injuries.3S4OYOZLauXctmev\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})\n\n\nif (args.actor.isOwner)\n   args.actor.setupSkill(\"Aguante\", {absolute: {difficulty: \"hard\"}}).then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"unconscious\")\n        })\n     })",
 					"label":"Tendón desgarrado"
 					}
 				}
@@ -848,7 +831,6 @@
 					"label":"Aturdido"
 					},
 				"Sliced Tendons": {
-					"flags.wfrp4e.script":"fromUuid(\"Compendium.wfrp4e-core.injuries.MnMZv7ZXoRqoH9dS\").then(injury => {\n args.actor.createEmbeddedDocuments(\"Item\", [injury.toObject()])\n})\n\n\nif (args.actor.isOwner)\n    args.actor.setupSkill(\"Aguante\", {absolute: {difficulty: \"hard\"}}).then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"unconscious\")\n        })\n     })",
 					"label":"Tendones seccionados"
 					}
 				}
@@ -933,7 +915,6 @@
 					"label":"Sangrando"
 					},
 				"Thigh Strike": {
-					"flags.wfrp4e.script":"if (args.actor.isOwner)\n    args.actor.setupSkill(\"Aguante\", {absolute: {difficulty: \"average\"}}).then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"prone\")\n        })\n     })",
 					"label":"Golpe en el muslo"
 					}
 				}
@@ -984,7 +965,6 @@
 					"label":"Muslo desgarrado"
 					},
 				"53D0C2BXQCCAMXSu": {
-					"flags.wfrp4e.script":"if (args.actor.isOwner)\n   args.actor.setupSkill(\"Aguante\").then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"prone\")\n        })\n     })",
 					"label":"Muslo desgarrado"
 					}
 				}
@@ -1028,7 +1008,6 @@
 					"label":"Aturdido"
 					},
 				"Winded": {
-					"flags.wfrp4e.script":"if (args.actor.isOwner)\n   args.actor.setupSkill(\"Aguante\", {absolute: {difficulty: \"average\"}}).then(setupData => {\n       args.actor.basicTest(setupData).then(test => \n        {\n            if (test.result.outcome == \"failure\")\n            args.actor.addCondition(\"prone\")\n        })\n     })",
 					"label":"Sin aliento"
 					},
 				"Movement Halved": {

@@ -762,7 +762,6 @@
 			"description": "",
 			"effects": {
 				"Mail Coif": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" && args.item.name == \"Percepción\")\n   args.prefillModifiers.modifier -= 10",
 					"label":"Cofia de malla"
 					}
 				}
@@ -928,7 +927,6 @@
 			"description": "",
 			"effects": {
 				"Plate Helm": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" && args.item.name == \"Percepción\")\n   args.prefillModifiers.modifier -= 20",
 					"label":"Yelmo de placas"
 					}
 				}
@@ -939,7 +937,6 @@
 			"description": "",
 			"effects": {
 				"Plate Leggings": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" && args.item.name.includes(\"Movimiento silencioso\"))\n   args.prefillModifiers.modifier -= 10",
 					"label":"Grebas de placas"
 					}
 				}
@@ -950,7 +947,6 @@
 			"description": "",
 			"effects": {
 				"Plate Open Helm": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" && args.item.name == \"Percepción\")\n   args.prefillModifiers.modifier -= 20",
 					"label":"Yelmo abierto de placas"
 					}
 				}

@@ -170,6 +170,12 @@ class WFRP4eContentInitialization extends Dialog {
         let existingDocuments = documents.filter(i => collection.has(i.id))
         let newDocuments = documents.filter(i => !collection.has(i.id))
         await collection.documentClass.create(newDocuments)
+        if (existingDocuments.length)
+        {
+            game.wfrp4e.utility.log("Pre Existing Documents: ", null, {args : existingDocuments})
+            existingDocuments = await new Promise(resolve => new ModuleDocumentResolver(existingDocuments, {resolve}).render(true));
+            game.wfrp4e.utility.log("Post Existing Documents: ", null, {args : existingDocuments})
+        }
         for (let doc of existingDocuments)
         {
             let existing = collection.get(doc.id)

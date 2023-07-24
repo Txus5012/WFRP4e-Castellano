@@ -405,7 +405,6 @@
 			"modifier": "+10 a Rastrear",
 			"effects": {
 				"Whiskered Snout": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" && args.item.name == \"Seguir rastros\")\n   args.prefillModifiers.modifier += 10",
 					"label":"Hocico bigotudo"
 					}
 				}

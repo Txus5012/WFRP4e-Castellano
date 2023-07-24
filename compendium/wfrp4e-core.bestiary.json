@@ -70,7 +70,6 @@
 			"species": "Humana",
 			"effects": {
 				"Arboreal": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" && (args.item.name == \"Escalar\"  || args.item.name.includes(\"Movimiento silencioso\")))\n{\n   let sl = this.actor.characteristics.ag.bonus\n   args.prefillModifiers.slBonus += sl;\n}",
 					"label":"Arbóreo"
 					},
 				"Armour": {
@@ -148,7 +147,6 @@
 			"species": "Chamán del rebaño",
 			"effects": {
 				"Arboreal": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" && (args.item.name == \"Escalar\"  || args.item.name.includes(\"Movimiento silencioso\")))\n{\n   let sl = this.actor.characteristics.ag.bonus\n   args.prefillModifiers.slBonus += sl;\n}",
 					"label":"Arbóreo"
 					},
 				"Infected": {
@@ -216,11 +214,9 @@
 					"label":"Infectado"
 					},
 				"Stealthy": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" &&  args.item.name.includes(\"Movimiento silencioso\"))\n{\n   let sl = this.actor.characteristics.ag.bonus\n   args.prefillModifiers.slBonus += sl;\n}",
 					"label":"Sigiloso"
 					},
 				"Tracker": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" &&  args.item.name.includes(\"Seguir rastros\"))\n{\n   let sl = this.actor.characteristics.i.bonus\n   args.prefillModifiers.slBonus += sl;\n}",
 					"label":"Rastreador"
 					}
 				},
@@ -303,7 +299,6 @@
 					"label":"Zancada"
 					},
 				"Tracker": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" &&  args.item.name.includes(\"Seguir rastros\"))\n{\n   let sl = this.actor.characteristics.i.bonus\n   args.prefillModifiers.slBonus += sl;\n}",
 					"label":"Rastreador"
 					},
 				"Distracting": {
@@ -332,7 +327,6 @@
 					"label":"Infectado"
 					},
 				"Tracker": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" &&  args.item.name.includes(\"Seguir rastros\"))\n{\n   let sl = this.actor.characteristics.i.bonus\n   args.prefillModifiers.slBonus += sl;\n}",
 					"label":"Rastreador"
 					},
 				"Stride": {
@@ -354,7 +348,6 @@
 					"label":"Coletazo"
 					},
 				"Arboreal": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" && (args.item.name == \"Escalar\"  || args.item.name.includes(\"Movimiento silencioso\")))\n{\n   let sl = this.actor.characteristics.ag.bonus\n   args.prefillModifiers.slBonus += sl;\n}",
 					"label":"Arbóreo"
 					},
 				"Infestation": {
@@ -513,7 +506,6 @@
 					"label":"Telaraña"
 					},
 				"Arboreal": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" && (args.item.name == \"Escalar\"  || args.item.name.includes(\"Movimiento silencioso\")))\n{\n   let sl = this.actor.characteristics.ag.bonus\n   args.prefillModifiers.slBonus += sl;\n}",
 					"label":"Arbóreo"
 					},
 				"Venom": {
@@ -540,7 +532,6 @@
 					"label":"Infectado"
 					},
 				"Arboreal": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" && (args.item.name == \"Escalar\"  || args.item.name.includes(\"Movimiento silencioso\")))\n{\n   let sl = this.actor.characteristics.ag.bonus\n   args.prefillModifiers.slBonus += sl;\n}",
 					"label":"Arbóreo"
 					},
 				"Venom": {
@@ -554,7 +545,6 @@
 			"name": "Gor",
 			"effects": {
 				"Arboreal": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" && (args.item.name == \"Escalar\"  || args.item.name.includes(\"Movimiento silencioso\")))\n{\n   let sl = this.actor.characteristics.ag.bonus\n   args.prefillModifiers.slBonus += sl;\n}",
 					"label":"Arbóreo"
 					},
 				"Infected": {
@@ -601,18 +591,15 @@
 			"species": "Alto Elfo",
 			"effects": {
 				"Arboreal": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" && (args.item.name == \"Escalar\"  || args.item.name.includes(\"Movimiento silencioso\")))\n{\n   let sl = this.actor.characteristics.ag.bonus\n   args.prefillModifiers.slBonus += sl;\n}",
 					"label":"Arbóreo"
 					},
 				"Magic Resistance": {
 					"label":"Resistencia a la magia"
 					},
 				"Stealthy": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" &&  args.item.name.includes(\"Movimiento silencioso\"))\n{\n   let sl = this.actor.characteristics.ag.bonus\n   args.prefillModifiers.slBonus += sl;\n}",
 					"label":"Sigiloso"
 					},
 				"Tracker": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" &&  args.item.name.includes(\"Seguir rastros\"))\n{\n   let sl = this.actor.characteristics.i.bonus\n   args.prefillModifiers.slBonus += sl;\n}",
 					"label":"Rastreador"
 					}
 				},
@@ -666,14 +653,12 @@
 					"label":"Regenerar"
 					},
 				"Stealthy": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" &&  args.item.name.includes(\"Movimiento silencioso\"))\n{\n   let sl = this.actor.characteristics.ag.bonus\n   args.prefillModifiers.slBonus += sl;\n}",
 					"label":"Sigiloso"
 					},
 				"Stride": {
 					"label":"Zancada"
 					},
 				"Tracker": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" &&  args.item.name.includes(\"Seguir rastros\"))\n{\n   let sl = this.actor.characteristics.i.bonus\n   args.prefillModifiers.slBonus += sl;\n}",
 					"label":"Rastreador"
 					},
 				"Venom": {
@@ -740,7 +725,6 @@
 			"species": "Minotauro",
 			"effects": {
 				"Arboreal": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" && (args.item.name == \"Escalar\"  || args.item.name.includes(\"Movimiento silencioso\")))\n{\n   let sl = this.actor.characteristics.ag.bonus\n   args.prefillModifiers.slBonus += sl;\n}",
 					"label":"Arbóreo"
 					},
 				"Infected": {
@@ -771,7 +755,6 @@
 					"label":"Infectado"
 					},
 				"Tracker": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" &&  args.item.name.includes(\"Seguir rastros\"))\n{\n   let sl = this.actor.characteristics.i.bonus\n   args.prefillModifiers.slBonus += sl;\n}",
 					"label":"Rastreador"
 					}
 				},
@@ -845,7 +828,6 @@
 					"label":"Coletazo"
 					},
 				"Tracker": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" &&  args.item.name.includes(\"Seguir rastros\"))\n{\n   let sl = this.actor.characteristics.i.bonus\n   args.prefillModifiers.slBonus += sl;\n}",
 					"label":"Rastreador"
 					}
 				},
@@ -959,7 +941,6 @@
 					"label":"Infectado"
 					},
 				"Tracker": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" &&  args.item.name.includes(\"Seguir rastros\"))\n{\n   let sl = this.actor.characteristics.i.bonus\n   args.prefillModifiers.slBonus += sl;\n}",
 					"label":"Rastreador"
 					}
 				},
@@ -1000,14 +981,12 @@
 					"label":"Infestado"
 					},
 				"Stealthy": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" &&  args.item.name.includes(\"Movimiento silencioso\"))\n{\n   let sl = this.actor.characteristics.ag.bonus\n   args.prefillModifiers.slBonus += sl;\n}",
 					"label":"Sigiloso"
 					},
 				"Vomit": {
 					"label":"Vómito"
 					},
 				"Amphibious": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" && args.item.name == \"Nadar\")\n    args.prefillModifiers.slBonus += this.actor.characteristics.ag.bonus",
 					"label":"Anfibio"
 					}
 				},
@@ -1018,7 +997,6 @@
 			"name": "Ungor",
 			"effects": {
 				"Arboreal": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" && (args.item.name == \"Escalar\"  || args.item.name.includes(\"Movimiento silencioso\")))\n{\n   let sl = this.actor.characteristics.ag.bonus\n   args.prefillModifiers.slBonus += sl;\n}",
 					"label":"Arbóreo"
 					},
 				"Armour": {
@@ -1053,7 +1031,6 @@
 					"label":"Regenerar"
 					},
 				"Tracker": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" &&  args.item.name.includes(\"Seguir rastros\"))\n{\n   let sl = this.actor.characteristics.i.bonus\n   args.prefillModifiers.slBonus += sl;\n}",
 					"label":"Rastreador"
 					}
 				},
@@ -1079,7 +1056,6 @@
 					"label":"Furia"
 					},
 				"Tracker": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" &&  args.item.name.includes(\"Seguir rastros\"))\n{\n   let sl = this.actor.characteristics.i.bonus\n   args.prefillModifiers.slBonus += sl;\n}",
 					"label":"Rastreador"
 					}
 				},
@@ -1101,7 +1077,6 @@
 					"label":"Infectado"
 					},
 				"Tracker": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" &&  args.item.name.includes(\"Seguir rastros\"))\n{\n   let sl = this.actor.characteristics.i.bonus\n   args.prefillModifiers.slBonus += sl;\n}",
 					"label":"Rastreador"
 					},
 				"Stride": {
@@ -1116,18 +1091,15 @@
 			"species": "Elfo Silvano",
 			"effects": {
 				"Arboreal": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" && (args.item.name == \"Escalar\"  || args.item.name.includes(\"Movimiento silencioso\")))\n{\n   let sl = this.actor.characteristics.ag.bonus\n   args.prefillModifiers.slBonus += sl;\n}",
 					"label":"Arbóreo"
 					},
 				"Magic Resistance": {
 					"label":"Resistencia a la magia"
 					},
 				"Stealthy": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" &&  args.item.name.includes(\"Movimiento silencioso\"))\n{\n   let sl = this.actor.characteristics.ag.bonus\n   args.prefillModifiers.slBonus += sl;\n}",
 					"label":"Sigiloso"
 					},
 				"Tracker": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" &&  args.item.name.includes(\"Seguir rastros\"))\n{\n   let sl = this.actor.characteristics.i.bonus\n   args.prefillModifiers.slBonus += sl;\n}",
 					"label":"Rastreador"
 					}
 				},

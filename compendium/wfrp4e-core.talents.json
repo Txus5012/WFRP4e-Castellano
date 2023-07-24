@@ -108,7 +108,7 @@
 			"tests": "Chequeos de Carisma al debatir y discutir.",
 			"effects": {
 				"Argumentative": {
-					"flags.wfrp4e.script":"if (args.test.item && args.test.item.name == \"Carisma\" &&  (args.test.result.roll <= 5 || args.test.result.roll <= args.test.target))\n{\n\nlet SL = Math.floor(args.test.target / 10) - Math.floor(args.test.result.roll / 10)\nlet ones = Number(args.test.result.roll.toString().split(\"\").pop())\n\nif (ones > SL)\n   args.test.result.other.push(`<b>${this.effect.label}</b>: ${ones + args.test.successBonus + args.test.slBonus} NE si estás debatiendo.`)\n}",
+					"flags.wfrp4e.script":"if (args.test.item && args.test.item.name ==  game.i18n.localize(\"NAME.Charm\") &&  (args.test.result.roll <= 5 || args.test.result.roll <= args.test.target))\n{\n\nlet SL = Math.floor(args.test.target / 10) - Math.floor(args.test.result.roll / 10)\nlet ones = Number(args.test.result.roll.toString().split(\"\").pop())\n\nif (ones > SL)\n   args.test.result.other.push(`<b>${this.effect.label}</b>: ${ones + args.test.successBonus + args.test.slBonus} NE si estás debatiendo.`)\n}",
 					"label":"Discutidor"
 					}
 				}
@@ -126,7 +126,7 @@
 			"tests": "Chequeos de Carisma para influenciar a quienes atraes.",
 			"effects": {
 				"Attractive": {
-					"flags.wfrp4e.script":"if (args.test.item && args.test.item.name == \"Carisma\" &&  (args.test.result.roll <= 5 || args.test.result.roll <= args.test.target))\n{\n\nlet SL = Math.floor(args.test.target / 10) - Math.floor(args.test.result.roll / 10)\nlet ones = Number(args.test.result.roll.toString().split(\"\").pop())\n\nif (ones > SL)\n   args.test.result.other.push(`<b>${this.effect.label}</b>: ${ones + args.test.successBonus + args.test.slBonus} NE si el objetivo se ve atraído por ti.`)\n}",
+					"flags.wfrp4e.script":"if (args.test.item && args.test.item.name == game.i18n.localize(\"NAME.Charm\") &&  (args.test.result.roll <= 5 || args.test.result.roll <= args.test.target))\n{\n\nlet SL = Math.floor(args.test.target / 10) - Math.floor(args.test.result.roll / 10)\nlet ones = Number(args.test.result.roll.toString().split(\"\").pop())\n\nif (ones > SL)\n   args.test.result.other.push(`<b>${this.effect.label}</b>: ${ones + args.test.successBonus + args.test.slBonus} NE si el objetivo se ve atraído por ti.`)\n}",
 					"label":"Atractivo"
 					}
 				}
@@ -178,7 +178,6 @@
 			"tests": "Investigar",
 			"effects": {
 				"Bookish": {
-					"flags.wfrp4e.script":"if (args.test.item && args.test.item.name == \"Investigar\")\n    args.test.preData.canReverse = true",
 					"label":"Intelectual"
 					}
 				}
@@ -202,7 +201,7 @@
 			"tests": "Jugar y Prestidigitación al jugar a cartas",
 			"effects": {
 				"Cardsharp": {
-					"flags.wfrp4e.script":"if (args.test.item && (args.test.item.name == \"Jugar\" || args.test.item.name == \"Prestidigitación\") && args.test.succeeded)\n{\n\nlet SL = Math.floor(args.test.target / 10) - Math.floor(args.test.result.roll / 10)\nlet ones = Number(args.test.result.roll.toString().split(\"\").pop())\n\nif (ones > SL)\n   args.test.result.other.push(`<span class=\"hide-option\"><b>${this.effect.label}</b>: ${ones + args.test.successBonus + args.test.slBonus} NE si jugando a las cartas.</span>`)\n}",
+					"flags.wfrp4e.script":"if (args.test.item && (args.test.item.name == game.i18n.localize(\"NAME.Gamble\") || args.test.item.name == game.i18n.localize(\"NAME.SleightOfHand\")) && args.test.succeeded)\n{\n\nlet SL = Math.floor(args.test.target / 10) - Math.floor(args.test.result.roll / 10)\nlet ones = Number(args.test.result.roll.toString().split(\"\").pop())\n\nif (ones > SL)\n   args.test.result.other.push(`<span class=\"hide-option\"><b>${this.effect.label}</b>: ${ones + args.test.successBonus + args.test.slBonus} NE si jugando a las cartas.</span>`)\n}",
 					"label":"Fullero"
 					}
 				}
@@ -224,7 +223,6 @@
 			"tests": "Carisma en Fiestas, Cotilleo en Fiestas, Consumir alcohol",
 			"effects": {
 				"Carouser": {
-					"flags.wfrp4e.script":"if (args.test.item && args.test.item.name == \"Consumir alcohol\")\n    args.test.preData.canReverse = true",
 					"label":"Juerguista"
 					}
 				}
@@ -338,7 +336,13 @@
 			"id": "Diceman",
 			"name": "Experto en dados",
 			"description": "<p>Eres un maestro con los dados, y toda afirmación de que haces trampas está claramente equivocada. Cuando utilizas con éxito Jugar o Prestidigitación en una partida de dados, puedes elegir entre utilizar los NE obtenidos con la tirada de dado o el número que ha salido en el dado de las unidades. Así, una tirada con éxito de 06 se podría utilizar para +6 NE. Si utilizáis cualquier juego de dados de la vida real para representar los juegos de dados de la partida, tiras siempre tantos dados adicionales como tu nivel de Experto en dados y eliges los mejores resultados.</p>",
-			"tests": "Jugar o Prestidigitación cuando juegas a dados"
+			"tests": "Jugar o Prestidigitación cuando juegas a dados",
+			"effects": {
+				"Diceman": {
+					"flags.wfrp4e.script":"if (args.test.item && (args.test.item.name == game.i18n.localize(\"NAME.Gamble\") || args.test.item.name == game.i18n.localize(\"NAME.SleightOfHand\")) && args.test.succeeded)\n{\n\nlet SL = Math.floor(args.test.target / 10) - Math.floor(args.test.result.roll / 10)\nlet ones = Number(args.test.result.roll.toString().split(\"\").pop())\n\nif (ones > SL)\n   args.test.result.other.push(`<span class=\"hide-option\"><b>${this.effect.label}</b>: ${ones + args.test.successBonus + args.test.slBonus} NE si jugando a los dados.</span>`)\n}",
+					"label":"Experto en dados"
+					}
+				}
 		},
 		{
 			"id": "Dirty Fighting",
@@ -484,7 +488,6 @@
 			"tests": "Chequeos de Cotilleo con viajeros",
 			"effects": {
 				"Gregarious": {
-					"flags.wfrp4e.script":"if (args.test.item && args.test.item.name == \"Cotilleo\")\n    args.test.preData.canReverse = true","preventDuplicateEffects":true,
 					"label":"Gregario"
 					}
 				}

@@ -406,7 +406,6 @@
 			"description": "<p>Llamas a Ranald para que tu objetivo pueda lidiar con los acertijos de la realidad. Tu objetivo obtiene +10 a la Agilidad, +10 al Movimiento silencioso y +1 al Talento @Compendium[wfrp4e-core.talents.g4Q6AtzZuo5iIvD4]{Caer como los gatos} todo el tiempo que dura el Milagro.</p>",
 			"effects": {
 				"Ranald's Grace": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" && args.item.name.includes(\"Movimiento silencioso\"))\n    args.prefillModifiers.modifier += 10",
 					"label":"Gracia de Ranald"
 					},
 				"Catfall": {

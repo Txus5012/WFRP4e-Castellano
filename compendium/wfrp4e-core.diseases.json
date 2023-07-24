@@ -29,7 +29,7 @@
 			"symptoms": "Decaimiento, Fiebre (Fuerte), Malestar",
 			"effects": {
 				"Blight": {
-					"flags.wfrp4e.script":"\n                        let difficulty = \"\"\n                        if (this.effect.label.includes(\"Moderado\"))\n                            difficulty = \"easy\"\n                        else if (this.effect.label.includes(\"Severo\"))\n                            difficulty = \"average\"\n                        else\n                            difficulty = \"veasy\"\n    \n                        if (this.actor.isOwner)\n                        {\n                            args.actor.setupSkill(\"Aguante\", {absolute: {difficulty}, appendTitle : \" - Decaimiento\"}).then(setupData => {\n                                args.actor.basicTest(setupData).then(test => \n                                    {\n                                        if (test.result.outcome == \"failure\") {\n                                            args.actor.addCondition(\"dead\")\n                                            ChatMessage.create({content : \"<b>\" +args.actor.name + \"</b> muere por el Decaimiento\"})\n                                     }\n                                    })\n                                })\n                        }",
+					"flags.wfrp4e.script":"\n                        let difficulty = \"\"\n                        if (this.effect.label.includes(\"Moderado\"))\n                            difficulty = \"easy\"\n                        else if (this.effect.label.includes(\"Severo\"))\n                            difficulty = \"average\"\n                        else\n                            difficulty = \"veasy\"\n    \n                        if (this.actor.isOwner)\n                        {\n                            args.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {absolute: {difficulty}, appendTitle : \" - Decaimiento\"}).then(setupData => {\n                                args.actor.basicTest(setupData).then(test => \n                                    {\n                                        if (test.result.outcome == \"failure\") {\n                                            args.actor.addCondition(\"dead\")\n                                            ChatMessage.create({content : \"<b>\" +args.actor.name + \"</b> muere por el Decaimiento\"})\n                                     }\n                                    })\n                                })\n                        }",
 					"label":"Decaimiento"
 					},
 				"Fever (Severe)": {
@@ -60,7 +60,6 @@
 					"label":"Malestar"
 					},
 				"Wounded": {
-					"flags.wfrp4e.script":"\n                        if (this.actor.isOwner)\n                        {\n                            args.actor.setupSkill(\"Aguante\", {absolute: {difficulty : \"average\"}}).then(setupData => {\n                                args.actor.basicTest(setupData).then(test => \n                                    {\n                                        if (test.result.outcome == \"failure\")\n                                            fromUuid(\"Compendium.wfrp4e-core.diseases.kKccDTGzWzSXCBOb\").then(disease => {\n                                                args.actor.createEmbeddedDocuments(\"Item\", [disease.toObject()])\n                                            })\n                                    })\n                                })\n                        }",
 					"label":"Herido"
 					}
 				}
@@ -115,7 +114,6 @@
 					"label":"Malestar"
 					},
 				"Wounded": {
-					"flags.wfrp4e.script":"\n                        if (this.actor.isOwner)\n                        {\n                            args.actor.setupSkill(\"Aguante\", {absolute: {difficulty : \"average\"}}).then(setupData => {\n                                args.actor.basicTest(setupData).then(test => \n                                    {\n                                        if (test.result.outcome == \"failure\")\n                                            fromUuid(\"Compendium.wfrp4e-core.diseases.kKccDTGzWzSXCBOb\").then(disease => {\n                                                args.actor.createEmbeddedDocuments(\"Item\", [disease.toObject()])\n                                            })\n                                    })\n                                })\n                        }",
 					"label":"Herido"
 					}
 				}
@@ -160,7 +158,6 @@
 					"label":"Plaga"
 					},
 				"Wounded": {
-					"flags.wfrp4e.script":"\n                        if (this.actor.isOwner)\n                        {\n                            args.actor.setupSkill(\"Aguante\", {absolute: {difficulty : \"average\"}}).then(setupData => {\n                                args.actor.basicTest(setupData).then(test => \n                                    {\n                                        if (test.result.outcome == \"failure\")\n                                            fromUuid(\"Compendium.wfrp4e-core.diseases.kKccDTGzWzSXCBOb\").then(disease => {\n                                                args.actor.createEmbeddedDocuments(\"Item\", [disease.toObject()])\n                                            })\n                                    })\n                                })\n                        }",
 					"label":"Herido"
 					}
 				}
@@ -176,7 +173,7 @@
 					"label":"Bubas"
 					},
 				"Blight (Moderate)": {
-					"flags.wfrp4e.script":"\n                        let difficulty = \"\"\n                        if (this.effect.label.includes(\"Moderado\"))\n                            difficulty = \"easy\"\n                        else if (this.effect.label.includes(\"Severo\"))\n                            difficulty = \"average\"\n                        else\n                            difficulty = \"veasy\"\n    \n                        if (this.actor.isOwner)\n                        {\n                            args.actor.setupSkill(\"Aguante\", {absolute: {difficulty}, appendTitle : \" - Decaimiento\"}).then(setupData => {\n                                args.actor.basicTest(setupData).then(test => \n                                    {\n                                        if (test.result.outcome == \"failure\") {\n                                            args.actor.addCondition(\"dead\")\n                                            ChatMessage.create({content : \"<b>\" +args.actor.name + \"</b> muere por el Decaimiento\"})\n                                     }\n                                    })\n                                })\n                        }",
+					"flags.wfrp4e.script":"\n                        let difficulty = \"\"\n                        if (this.effect.label.includes(\"Moderado\"))\n                            difficulty = \"easy\"\n                        else if (this.effect.label.includes(\"Severo\"))\n                            difficulty = \"average\"\n                        else\n                            difficulty = \"veasy\"\n    \n                        if (this.actor.isOwner)\n                        {\n                            args.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {absolute: {difficulty}, appendTitle : \" - Decaimiento\"}).then(setupData => {\n                                args.actor.basicTest(setupData).then(test => \n                                    {\n                                        if (test.result.outcome == \"failure\") {\n                                            args.actor.addCondition(\"dead\")\n                                            ChatMessage.create({content : \"<b>\" +args.actor.name + \"</b> muere por el Decaimiento\"})\n                                     }\n                                    })\n                                })\n                        }",
 					"label":"Decaimiento (Moderado)"
 					},
 				"Fever": {
