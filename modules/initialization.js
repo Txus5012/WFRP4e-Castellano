@@ -17,7 +17,7 @@ Hooks.on("setup", () => {
 })
 
 Hooks.on("renderCompendiumDirectory", async () => {
-    if (game.packs.get("wfrp4e-core.trappings")) {
+    if (game.packs.get("wfrp4e-core.items")) {
         game.packs.delete("wfrp4e.basic")
         ui.sidebar.element.find("[data-pack='wfrp4e.basic']").remove()
     }
@@ -93,13 +93,13 @@ class WFRP4eContentInitialization extends Dialog {
             "Item": {},
             "Actor": {},
             "JournalEntry": {},
-	    "RollTable" : {}
+			"RollTable" : {}
         }
 
         this.journals = {};
         this.actors = {};
         this.scenes = {};
-	this.tables = {};
+		this.tables = {};
         this.moduleKey = "wfrp4e-core"
     }
 
@@ -153,7 +153,7 @@ class WFRP4eContentInitialization extends Dialog {
                     ui.notifications.notify(this.data.module.title + ": Inicializando Diarios")
                     this.createOrUpdateDocuments(documents, game.journal)
                     break;
-		case "RollTable":
+				case "RollTable":
                     ui.notifications.notify(this.data.module.title + ": Inicializando Tablas")
                     await this.createOrUpdateDocuments(documents, game.tables)
                     break;

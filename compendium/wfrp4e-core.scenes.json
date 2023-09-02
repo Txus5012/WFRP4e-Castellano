@@ -1,0 +1,50 @@
+{
+	"label": "Escenas (Básico)",
+	"mapping": {
+		"image": "background.src",
+		"notes": {
+			"path":"notes",
+			"converter":"notes"
+			},
+		"scenes_folders": {
+			"path": "flags.wfrp4e-core.initialization-folder",
+			"converter": "diaries_folder"
+			}
+	},
+	"entries": [
+		{
+			"id": "Barony of Böhrn",
+			"name": "Baronía de Böhrn",
+			"image": "modules/wfrp4e-castellano/Images/baronia.webp"
+		},
+		{
+			"id": "GM Screen",
+			"name": "Pantalla del DJ",
+			"image": "modules/wfrp4e-castellano/Images/pantalla.webp"
+		},
+		{
+			"id": "Reikland",
+			"image": "modules/wfrp4e-castellano/Images/Reikland.webp",
+			"notes": {
+				"37h4ydPseJ7rUegl": {
+					"text":"El Schïlder"
+					},
+				"Rxg2t9aXsly5CMyX": {
+					"text":"El Mos"
+					},
+				"Tvw7cdIr6Fy0kztI": {
+					"text":"El Tranig"
+					},
+				"UPy6zdOz8VHlfo8E": {
+					"text":"El Ober"
+					},
+				"9yvbmUihFDZsWDyT": {
+					"text":"El Tranig"
+					},
+				"OrDfoDYC2eRygg6R": {
+					"text":"El Ober"
+					}
+				}
+		}
+	]
+}

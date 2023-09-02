@@ -74,7 +74,7 @@ CONFIG.JournalEntry.noteIcons = {
 
 game.wfrp4e.config.symptomEffects = {
         "blight": {
-            label: "Decaimiento",
+            name: "WFRP4E.Symptom.Blight",
             icon: "modules/wfrp4e-core/icons/diseases/disease.png",
             transfer: true,
             flags: {
@@ -84,16 +84,16 @@ game.wfrp4e.config.symptomEffects = {
                     "symptom": true,
                     "script": `
                         let difficulty = ""
-                        if (this.effect.label.includes("Moderado"))
+                        if (this.effect.name.includes("Moderado"))
                             difficulty = "easy"
-                        else if (this.effect.label.includes("Severo"))
+                        else if (this.effect.name.includes("Severo"))
                             difficulty = "average"
                         else
                             difficulty = "veasy"
     
                         if (this.actor.isOwner)
                         {
-                            args.actor.setupSkill("Aguante", {absolute: {difficulty}, appendTitle : " - Decaimiento"}).then(setupData => {
+                            args.actor.setupSkill(game.i18n.localize("NAME.Endurance"), {absolute: {difficulty}, appendTitle : " - Decaimiento"}).then(setupData => {
                                 args.actor.basicTest(setupData).then(test => 
                                     {
                                         if (test.result.outcome == "failure") {
@@ -107,7 +107,7 @@ game.wfrp4e.config.symptomEffects = {
             }
         },
         "buboes": {
-            label: "Bubas",
+            name: "WFRP4E.Symptom.Buboes",
             icon: "modules/wfrp4e-core/icons/diseases/disease.png",
             transfer: true,
             flags: {
@@ -133,7 +133,7 @@ game.wfrp4e.config.symptomEffects = {
             }
         },
         "convulsions": {
-            label: "Convulsiones",
+            name: "WFRP4E.Symptom.Convulsions",
             icon: "modules/wfrp4e-core/icons/diseases/disease.png",
             transfer: true,
             flags: {
@@ -143,7 +143,7 @@ game.wfrp4e.config.symptomEffects = {
                     "symptom": true,
                     "script": `
                         let modifier = 0
-                        if (this.effect.label.includes("Moderado"))
+                        if (this.effect.name.includes("Moderado"))
                             modifier = -20
                         else
                             modifier = -10
@@ -164,8 +164,37 @@ game.wfrp4e.config.symptomEffects = {
                 }
             }
         },
+        "coughsandsneezes": {
+            name: "WFRP4E.Symptom.CoughsandSneezes",
+            icon: "modules/wfrp4e-core/icons/diseases/disease.png",
+            transfer: false,
+            flags: {
+                wfrp4e: {
+                    "effectApplication": "actor",
+                    "effectTrigger": "prefillDialog",
+                    "symptom": true,
+                    "script": `
+                       
+                    let applicableCharacteristics = ["ws", "bs", "s", "fel", "ag", "t", "dex"]
+    
+                    if (args.type == "weapon")
+                        args.prefillModifiers.modifier -= 10
+                    else if (args.type == "characteristic")
+                    {
+                        if (applicableCharacteristics.includes(args.item))
+                            args.prefillModifiers.modifier -= 10
+                    }
+                    else if (args.type == "skill")
+                    {
+                        if (applicableCharacteristics.includes(args.item.characteristic.key))
+                            args.prefillModifiers.modifier -= 10
+                    }`,
+                    "otherEffects": ["blight", "wounded"]
+                }
+            }
+        },
         "fever": {
-            label: "Fiebre",
+            name: "WFRP4E.Symptom.Fever",
             icon: "modules/wfrp4e-core/icons/diseases/disease.png",
             transfer: true,
             flags: {
@@ -194,7 +223,7 @@ game.wfrp4e.config.symptomEffects = {
             }
         },
         "flux": {
-            label: "Diarrea",
+            name: "WFRP4E.Symptom.Flux",
             icon: "modules/wfrp4e-core/icons/diseases/disease.png",
             transfer: true,
             flags: {
@@ -204,17 +233,7 @@ game.wfrp4e.config.symptomEffects = {
             }
         },
         "lingering": {
-            label: "Persistente",
-            icon: "modules/wfrp4e-core/icons/diseases/disease.png",
-            transfer: true,
-            flags: {
-                wfrp4e: {
-                    "symptom": true
-                }
-            }
-        },
-        "coughsAndSneezes": {
-            label: "Toses y estornudos",
+            name: "WFRP4E.Symptom.Lingering",
             icon: "modules/wfrp4e-core/icons/diseases/disease.png",
             transfer: true,
             flags: {
@@ -224,7 +243,7 @@ game.wfrp4e.config.symptomEffects = {
             }
         },
         "gangrene": {
-            label: "Gangrena",
+            name: "WFRP4E.Symptom.Gangrene",
             icon: "modules/wfrp4e-core/icons/diseases/disease.png",
             transfer: true,
             flags: {
@@ -248,7 +267,7 @@ game.wfrp4e.config.symptomEffects = {
             }
         },
         "malaise": {
-            label: "Malestar",
+            name: "WFRP4E.Symptom.Malaise",
             icon: "modules/wfrp4e-core/icons/diseases/disease.png",
             transfer: true,
             flags: {
@@ -271,7 +290,7 @@ game.wfrp4e.config.symptomEffects = {
             }
         },
         "nausea": {
-            label: "Náuseas",
+            name: "WFRP4E.Symptom.Nausea",
             icon: "modules/wfrp4e-core/icons/diseases/disease.png",
             transfer: true,
             flags: {
@@ -292,7 +311,7 @@ game.wfrp4e.config.symptomEffects = {
             }
         },
         "pox": {
-            label: "Plaga",
+            name: "WFRP4E.Symptom.Pox",
             icon: "modules/wfrp4e-core/icons/diseases/disease.png",
             transfer: true,
             flags: {
@@ -313,7 +332,7 @@ game.wfrp4e.config.symptomEffects = {
             }
         },
         "wounded": {
-            label: "Herido",
+            name: "WFRP4E.Symptom.Wounded",
             icon: "modules/wfrp4e-core/icons/diseases/disease.png",
             transfer: true,
             flags: {
@@ -324,11 +343,11 @@ game.wfrp4e.config.symptomEffects = {
                     "script": `
                         if (this.actor.isOwner)
                         {
-                            args.actor.setupSkill("Aguante", {absolute: {difficulty : "average"}}).then(setupData => {
+                            args.actor.setupSkill(game.i18n.localize("NAME.Endurance"), {absolute: {difficulty : "average"}}).then(setupData => {
                                 args.actor.basicTest(setupData).then(test => 
                                     {
                                         if (test.result.outcome == "failure")
-                                            fromUuid("Compendium.wfrp4e-core.diseases.kKccDTGzWzSXCBOb").then(disease => {
+                                            fromUuid("Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb").then(disease => {
                                                 args.actor.createEmbeddedDocuments("Item", [disease.toObject()])
                                             })
                                     })
@@ -391,26 +410,26 @@ game.wfrp4e.config.effectTriggers = {
 game.wfrp4e.config.effectPlaceholder = {
 
     "invoke" : 
-    `Este efecto sólo se aplica al pulsar el botón de Invocar.
+    `Este efecto sólo se aplica al pulsar el botón de Invocar. Puede ser asíncrono.
     args:
 
     ninguno`,
     "oneTime" : 
-    `Este efecto ocurre una vez, inmediatamente al aplicar.
+    `Este efecto ocurre una vez, inmediatamente al aplicar. Puede ser asíncrono.
     args:
 
     actor : actor propietario del efecto
     `,
 
     "addItems" : 
-    `Como los efectos Inmediatos, ocurre una vez, pero el efecto permanece. También permite al efecto borrar los objetos añadidos cuando el efecto se elimina.
+    `Como los efectos Inmediatos, ocurre una vez, pero el efecto permanece. También permite al efecto borrar los objetos añadidos cuando el efecto se elimina. Puede ser asíncrono.
     args:
     
     actor : actor propietario del efecto
     `,
 
     "prefillDialog" : 
-    `Este efecto se aplica antes de reproducir el diálogo de tirada, y debería cambiar los valores prellenados en la sección de bonos.
+    `Este efecto se aplica antes de reproducir el diálogo de tirada, y debería cambiar los valores prellenados en la sección de bonos. Puede ser asíncrono.
     args:
 
     prefillModifiers : {modifier, difficulty, slBonus, successBonus}
@@ -422,27 +441,27 @@ game.wfrp4e.config.effectPlaceholder = {
     if (args.type == "skill" && args.item.name == "Atletismo") args.prefillModifiers.modifier += 10`,
 
     "update" : 
-    `este efecto se ejecuta cuando un actor o documento embebido es cambiado.
+    `este efecto se ejecuta cuando un actor o documento embebido es cambiado. Puede ser asíncrono.
     args:
     item: si un objeto es modificado, se provee como un argumento
     effect: si un efecto es modificado, se provee como un argumento
     `,
 
     "prePrepareData" : 
-    `Este efecto se aplica antes de calcular cualquier dato del actor.
+    `Este efecto se aplica antes de calcular cualquier dato del actor. No puede ser asíncrono.
     args:
 
     actor : actor propietario del efecto
     `,
 
     "prePrepareItems" : 
-    `Este efecto se aplica antes de que los objetos se ordenen y calculen.
+    `Este efecto se aplica antes de que los objetos se ordenen y calculen. No puede ser asíncrono.
 
     actor : actor propietario del efecto
     `,
 
     "prepareData" : 
-    `Este efecto se aplica tras calcular y procesar los datos del actor.
+    `Este efecto se aplica tras calcular y procesar los datos del actor. No puede ser asíncrono.
 
     args:
 
@@ -450,7 +469,7 @@ game.wfrp4e.config.effectPlaceholder = {
     `,
 
     "preWoundCalc" : 
-    `Este efecto se aplica justo antes del cálculo de heridas, ideal para cambiar atributos o añadir multiplicadores.
+    `Este efecto se aplica justo antes del cálculo de heridas, ideal para cambiar atributos o añadir multiplicadores. No puede ser asíncrono.
 
     actor : actor propietario del efecto
     sb : Bonificador por Fuerza
@@ -466,7 +485,7 @@ game.wfrp4e.config.effectPlaceholder = {
     `,
 
     "woundCalc" : 
-    `Este efecto ocurre tras el cálculo de heridas, ideal para multiplicar el resultado.
+    `Este efecto ocurre tras el cálculo de heridas, ideal para multiplicar el resultado. No puede ser asíncrono.
 
     args:
 
@@ -477,25 +496,25 @@ game.wfrp4e.config.effectPlaceholder = {
     `,
 
     "calculateSize" : 
-    `Este efecto se aplica tras el cálculo de tamaño, que puede ser invalidado.
+    `Este efecto se aplica tras el cálculo de tamaño, que puede ser invalidado. No puede ser asíncrono.
     args:
     size : Valor del tamaño
     p.ej. para Pequeño: "args.size = 'sml'"
     `,
 
-    "preAPCalc" : `Este efecto se aplica antes de calcular los PA.
+    "preAPCalc" : `Este efecto se aplica antes de calcular los PA. No puede ser asíncrono.
     args:
     AP : Objeto de Armadura
     e.g. args.AP.head.value += 1
     `,
-    "APCalc" : `Este efecto se aplica tras calcular los PA.
+    "APCalc" : `Este efecto se aplica tras calcular los PA. No puede ser asíncrono.
     args:
     AP : Objeto de Armadura
     e.g. args.AP.head.value += 1
     `,
 
     "preApplyDamage" : 
-    `Este efecto ocurre antes de aplicar daño en un chequeo enfrentado.
+    `Este efecto ocurre antes de aplicar daño en un chequeo enfrentado. Puede ser asíncrono.
     args:
 
     actor : actor que recibe daño
@@ -510,7 +529,7 @@ game.wfrp4e.config.effectPlaceholder = {
     `,
     
     "applyDamage" : 
-    `Este efecto ocurre después calcular el daño en un chequeo enfrentado, pero antes de actualizar los datos del actor.
+    `Este efecto ocurre después calcular el daño en un chequeo enfrentado, pero antes de actualizar los datos del actor. Puede ser asíncrono.
 
     args:
 
@@ -526,7 +545,7 @@ game.wfrp4e.config.effectPlaceholder = {
     `,
 
     "preTakeDamage" : 
-    `Este efecto ocurre antes de recibir daño en un chequeo enfrentado.
+    `Este efecto ocurre antes de recibir daño en un chequeo enfrentado. Puede ser asíncrono.
 
     args:
 
@@ -542,7 +561,7 @@ game.wfrp4e.config.effectPlaceholder = {
     `,
     
     "takeDamage" : 
-    `Este efecto ocurre tras calcular el daño en un chequeo enfrentado, pero antes de actualizar los datos del actor.
+    `Este efecto ocurre tras calcular el daño en un chequeo enfrentado, pero antes de actualizar los datos del actor. Puede ser asíncrono.
 
     args:
 
@@ -558,7 +577,7 @@ game.wfrp4e.config.effectPlaceholder = {
     `,
 
     "preApplyCondition" :  
-    `Este efecto ocurre antes de aplicar los efectos de una condición.
+    `Este efecto ocurre antes de aplicar los efectos de una condición. Puede ser asíncrono.
 
     args:
 
@@ -570,7 +589,7 @@ game.wfrp4e.config.effectPlaceholder = {
     `,
 
     "applyCondition" :  
-    `Este efecto ocurre tras aplicar los efectos de una condición.
+    `Este efecto ocurre tras aplicar los efectos de una condición. Puede ser asíncrono.
 
     args:
 
@@ -581,7 +600,7 @@ game.wfrp4e.config.effectPlaceholder = {
     }
     `,
     "prePrepareItem" : 
-    `Este efecto se aplica antes de procesar un objeto con datos del actor.
+    `Este efecto se aplica antes de procesar un objeto con datos del actor. No puede ser asíncrono.
 
     args:
 
@@ -589,7 +608,7 @@ game.wfrp4e.config.effectPlaceholder = {
     `,
 
     "prepareItem" : 
-    `Este efecto se aplica tras procesar un objeto con datos del actor.
+    `Este efecto se aplica tras procesar un objeto con datos del actor. No puede ser asíncrono.
 
     args:
 
@@ -597,7 +616,7 @@ game.wfrp4e.config.effectPlaceholder = {
     `,
 
     "preRollTest": 
-    `Este efecto se aplica antes de calcular un chequeo.
+    `Este efecto se aplica antes de calcular un chequeo. Puede ser asíncrono.
 
     args:
 
@@ -606,7 +625,7 @@ game.wfrp4e.config.effectPlaceholder = {
     `,
 
     "preRollWeaponTest" :  
-    `Este efecto se aplica antes de calcular un chequeo de arma.
+    `Este efecto se aplica antes de calcular un chequeo de arma. Puede ser asíncrono.
 
     args:
 
@@ -615,7 +634,7 @@ game.wfrp4e.config.effectPlaceholder = {
     `,
 
     "preRollCastTest" :  
-    `Este efecto se aplica antes de calcular un chequeo de lanzamiento.
+    `Este efecto se aplica antes de calcular un chequeo de lanzamiento. Puede ser asíncrono.
 
     args:
 
@@ -624,7 +643,7 @@ game.wfrp4e.config.effectPlaceholder = {
     `,
 
     "preChannellingTest" :  
-    `Este efecto se aplica antes de calcular un chequeo de canalización.
+    `Este efecto se aplica antes de calcular un chequeo de canalización. Puede ser asíncrono.
 
     args:
 
@@ -633,7 +652,7 @@ game.wfrp4e.config.effectPlaceholder = {
     `,
 
     "preRollPrayerTest" :  
-    `Este efecto se aplica antes de calcular un chequeo de plegaria.
+    `Este efecto se aplica antes de calcular un chequeo de plegaria. Puede ser asíncrono.
 
     args:
 
@@ -642,7 +661,7 @@ game.wfrp4e.config.effectPlaceholder = {
     `,
 
     "preRollTraitTest" :  
-    `Este efecto se aplica antes de calcular un chequeo de rasgo.
+    `Este efecto se aplica antes de calcular un chequeo de rasgo. Puede ser asíncrono.
 
     args:
 
@@ -651,7 +670,7 @@ game.wfrp4e.config.effectPlaceholder = {
     `,
 
     "rollTest" : 
-    `Este efecto se aplica tras calcular un chequeo.
+    `Este efecto se aplica tras calcular un chequeo. Puede ser asíncrono.
 
     args:
 
@@ -660,7 +679,7 @@ game.wfrp4e.config.effectPlaceholder = {
     `,
 
     "rollIncomeTest" : 
-    `Este efecto se aplica tras calcular un chequeo de salario.
+    `Este efecto se aplica tras calcular un chequeo de salario. Puede ser asíncrono.
 
     args:
 
@@ -669,7 +688,7 @@ game.wfrp4e.config.effectPlaceholder = {
     `,
 
     "rollWeaponTest" : 
-    `Este efecto se aplica tras calcular un chequeo de arma.
+    `Este efecto se aplica tras calcular un chequeo de arma. Puede ser asíncrono.
 
     args:
 
@@ -678,7 +697,7 @@ game.wfrp4e.config.effectPlaceholder = {
     `,
 
     "rollCastTest" : 
-    `Este efecto se aplica tras calcular un chequeo de lanzamiento.
+    `Este efecto se aplica tras calcular un chequeo de lanzamiento. Puede ser asíncrono.
 
     args:
 
@@ -687,7 +706,7 @@ game.wfrp4e.config.effectPlaceholder = {
     `,
 
     "rollChannellingTest" : 
-    `Este efecto se aplica tras calcular un chequeo de canalización.
+    `Este efecto se aplica tras calcular un chequeo de canalización. Puede ser asíncrono.
 
     args:
 
@@ -696,7 +715,7 @@ game.wfrp4e.config.effectPlaceholder = {
     `,
 
     "rollPrayerTest" : 
-    `Este efecto se aplica tras calcular un chequeo de plegaria.
+    `Este efecto se aplica tras calcular un chequeo de plegaria. Puede ser asíncrono.
 
     args:
 
@@ -705,7 +724,7 @@ game.wfrp4e.config.effectPlaceholder = {
     `,
 
     "rollTraitTest" : 
-    `Este efecto se aplica tras calcular un chequeo de rasgo.
+    `Este efecto se aplica tras calcular un chequeo de rasgo. Puede ser asíncrono.
 
     args:
 
@@ -714,7 +733,7 @@ game.wfrp4e.config.effectPlaceholder = {
     `,
 
     "preOpposedAttacker" : 
-    `Este efecto se aplica antes de comenzar el cálculo del resultado de un chequeo enfrentado, como atacante.
+    `Este efecto se aplica antes de comenzar el cálculo del resultado de un chequeo enfrentado, como atacante. Puede ser asíncrono.
 
     args:
 
@@ -724,7 +743,7 @@ game.wfrp4e.config.effectPlaceholder = {
     `,
 
     "preOpposedDefender" : 
-    `Este efecto se aplica antes de comenzar el cálculo del resultado de un chequeo enfrentado, como defensor.
+    `Este efecto se aplica antes de comenzar el cálculo del resultado de un chequeo enfrentado, como defensor. Puede ser asíncrono.
 
     args:
 
@@ -734,7 +753,7 @@ game.wfrp4e.config.effectPlaceholder = {
     `,
 
     "opposedAttacker" : 
-    `Este efecto se aplica tras comenzar el cálculo del resultado de un chequeo enfrentado, como atacante.
+    `Este efecto se aplica tras comenzar el cálculo del resultado de un chequeo enfrentado, como atacante. Puede ser asíncrono.
 
     args:
 
@@ -744,7 +763,7 @@ game.wfrp4e.config.effectPlaceholder = {
     `,
 
     "opposedDefender" : 
-    `Este efecto se aplica tras comenzar el cálculo del resultado de un chequeo enfrentado, como defensor.
+    `Este efecto se aplica tras comenzar el cálculo del resultado de un chequeo enfrentado, como defensor. Puede ser asíncrono.
 
     args:
 
@@ -754,7 +773,7 @@ game.wfrp4e.config.effectPlaceholder = {
     `,
 
     "calculateOpposedDamage" : 
-    `Este efecto se aplica durante el cálculo del daño de un chequeo enfrentado. Este efecto se ejecuta en el actor atacante
+    `Este efecto se aplica durante el cálculo del daño de un chequeo enfrentado. Este efecto se ejecuta en el actor atacante. Puede ser asíncrono.
 
     args:
 
@@ -767,7 +786,7 @@ game.wfrp4e.config.effectPlaceholder = {
     `,
 
     "getInitiativeFormula" : 
-    `Este efecto se ejecuta al determinar la iniciativa del actor
+    `Este efecto se ejecuta al determinar la iniciativa del actor. No puede ser asíncrono.
 
     args:
 
@@ -775,7 +794,7 @@ game.wfrp4e.config.effectPlaceholder = {
     `,
 
     "targetPrefillDialog" : 
-    `Este efecto se aplica a otro actor cuando hacen objetivo a este actor, y debería cambiar los valores prellenados en la sección de bonos
+    `Este efecto se aplica a otro actor cuando hacen objetivo a este actor, y debería cambiar los valores prellenados en la sección de bonos. Puede ser asíncrono.
     
     args:
 
@@ -788,7 +807,7 @@ game.wfrp4e.config.effectPlaceholder = {
     if (args.type == "skill" && args.item.name == "Athletics") args.prefillModifiers.modifier += 10`,
 
     "endTurn" : 
-    `Este efecto se ejecuta al final del turno del actor
+    `Este efecto se ejecuta al final del turno del actor. Puede ser asíncrono.
 
     args:
 
@@ -796,7 +815,7 @@ game.wfrp4e.config.effectPlaceholder = {
     `,
 
     "startTurn" : 
-    `Este efecto se ejecuta al comienzo del turno del actor
+    `Este efecto se ejecuta al comienzo del turno del actor. Puede ser asíncrono.
     
     args:
     
@@ -804,7 +823,7 @@ game.wfrp4e.config.effectPlaceholder = {
     `,
 
     "endRound" :  
-    `Este efecto se ejecuta al final del asalto
+    `Este efecto se ejecuta al final del asalto. Puede ser asíncrono.
 
     args:
 
@@ -812,7 +831,7 @@ game.wfrp4e.config.effectPlaceholder = {
     `,
     
     "endCombat" :  
-    `Este efecto se ejecuta al terminar el combate
+    `Este efecto se ejecuta al terminar el combate. Puede ser asíncrono.
 
     args:
 
@@ -990,7 +1009,7 @@ game.wfrp4e.config.classTrappings = {
 
 game.wfrp4e.config.loreEffects = {
         "beasts": {
-            label: "Saber de las Bestias",
+            name: "Saber de las Bestias",
             icon: "modules/wfrp4e-core/icons/spells/beasts.png",
             transfer: false,
             flags: {
@@ -1016,7 +1035,7 @@ game.wfrp4e.config.loreEffects = {
             }
         },
         "death": {
-            label: "Saber de la Muerte",
+            name: "Saber de la Muerte",
             icon: "modules/wfrp4e-core/icons/spells/death.png",
             transfer: false,
             flags: {
@@ -1033,7 +1052,7 @@ game.wfrp4e.config.loreEffects = {
             }
         },
         "fire": {
-            label: "Saber del Fuego",
+            name: "Saber del Fuego",
             icon: "modules/wfrp4e-core/icons/spells/fire.png",
             transfer: false,
             flags: {
@@ -1050,7 +1069,7 @@ game.wfrp4e.config.loreEffects = {
             }
         },
         "heavens": {
-            label: "Saber de los Cielos",
+            name: "Saber de los Cielos",
             icon: "modules/wfrp4e-core/icons/spells/heavens.png",
             transfer: false,
             flags: {
@@ -1082,7 +1101,7 @@ game.wfrp4e.config.loreEffects = {
             }
         },
         "metal": {
-            label: "Saber del Metal",
+            name: "Saber del Metal",
             icon: "modules/wfrp4e-core/icons/spells/metal.png",
             transfer: false,
             flags: {
@@ -1119,7 +1138,7 @@ game.wfrp4e.config.loreEffects = {
             }
         },
         "life": {
-            label: "Saber de la Vida",
+            name: "Saber de la Vida",
             icon: "modules/wfrp4e-core/icons/spells/life.png",
             transfer: false,
             flags: {
@@ -1146,7 +1165,7 @@ game.wfrp4e.config.loreEffects = {
             }
         },
         "light": {
-            label: "Saber de la Luz",
+            name: "Saber de la Luz",
             icon: "modules/wfrp4e-core/icons/spells/light.png",
             transfer: false,
             flags: {
@@ -1167,7 +1186,7 @@ game.wfrp4e.config.loreEffects = {
             }
         },
         "shadow": {
-            label: "Saber de las Sombras",
+            name: "Saber de las Sombras",
             icon: "modules/wfrp4e-core/icons/spells/shadow.png",
             transfer: false,
             flags: {
@@ -1189,7 +1208,7 @@ game.wfrp4e.config.loreEffects = {
             }
         },
         "hedgecraft": {
-            label: "Saber de la Adivinación",
+            name: "Saber de la Adivinación",
             icon: "modules/wfrp4e-core/icons/spells/hedgecraft.png",
             transfer: false,
             flags: {
@@ -1202,7 +1221,7 @@ game.wfrp4e.config.loreEffects = {
             }
         },
         "witchcraft": {
-            label: "Saber de la Brujería",
+            name: "Saber de la Brujería",
             icon: "modules/wfrp4e-core/icons/spells/witchcraft.png",
             transfer: false,
             flags: {

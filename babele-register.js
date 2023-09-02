@@ -363,7 +363,7 @@ Babele.get().registerConverters({
 	
 	"effects": (effects, translations) => { // Efectos
 		return effects.map(data => {
-			let translation = translations[data.label] || translations[data._id] ;
+			let translation = translations[data.name] || translations[data._id] ;
 			if(translations && translation) {
 				return mergeObject(
 					data, 
