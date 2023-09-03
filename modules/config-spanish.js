@@ -93,13 +93,11 @@ game.wfrp4e.config.symptomEffects = {
     
                         if (this.actor.isOwner)
                         {
-                            args.actor.setupSkill(game.i18n.localize("NAME.Endurance"), {absolute: {difficulty}, appendTitle : " - Decaimiento"}).then(setupData => {
+                            args.actor.setupSkill(game.i18n.localize("NAME.Endurance"), {context : {failure : args.actor.name + " muere por el Decaimiento"}, absolute: {difficulty}, appendTitle : " - Decaimiento"}).then(setupData => {
                                 args.actor.basicTest(setupData).then(test => 
                                     {
-                                        if (test.result.outcome == "failure") {
-					   args.actor.addCondition("dead")
-					   ChatMessage.create({content : "<b>" +args.actor.name + "</b> muere por el Decaimiento"})
-					   }
+                                        if (test.result.outcome == "failure")
+                                            args.actor.addCondition("dead")
                                     })
                                 })
                         }`
@@ -170,26 +168,7 @@ game.wfrp4e.config.symptomEffects = {
             transfer: false,
             flags: {
                 wfrp4e: {
-                    "effectApplication": "actor",
-                    "effectTrigger": "prefillDialog",
-                    "symptom": true,
-                    "script": `
-                       
-                    let applicableCharacteristics = ["ws", "bs", "s", "fel", "ag", "t", "dex"]
-    
-                    if (args.type == "weapon")
-                        args.prefillModifiers.modifier -= 10
-                    else if (args.type == "characteristic")
-                    {
-                        if (applicableCharacteristics.includes(args.item))
-                            args.prefillModifiers.modifier -= 10
-                    }
-                    else if (args.type == "skill")
-                    {
-                        if (applicableCharacteristics.includes(args.item.characteristic.key))
-                            args.prefillModifiers.modifier -= 10
-                    }`,
-                    "otherEffects": ["blight", "wounded"]
+                    "symptom": true
                 }
             }
         },

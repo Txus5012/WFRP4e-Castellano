@@ -7231,7 +7231,7 @@
 				}
 		},
 		{
-			"id": "Flight",
+			"id": "9wmmln3DunIqGXM2",
 			"name": "Vuelo",
 			"description": "<p>Puedes volar, o bien haciéndote brotar alas, ascendiendo en un pilar de luz mágica o por algún otro medio. Obtienes el Rasgo de criatura @Compendium[wfrp4e-core.items.EO05HX7jql0g605A]{Vuelo (Agilidad)}.</p>",
 			"effects": {
@@ -11084,7 +11084,7 @@
 				}
 		},
 		{
-			"id": "Inspiring",
+			"id": "WCXnFSV4WOSmzzc4",
 			"name": "Inspirador",
 			"description": "<p>Tus palabras de aliento y tus súplicas pueden cambiar el curso de una batalla. Consulta la tabla siguiente para ver a cuánta gente puedes ahora influenciar con tu Habilidad de Mando en tiempo de guerra.</p>\n<p>&nbsp;</p>\n<div>\n<table title=\"\" border=\"1\" summary=\"\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td>\n<p>Talentos adquiridos</p>\n</td>\n<td>\n<p>Número de soldados influenciados</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>1</p>\n</td>\n<td>\n<p>Lo normal × 5</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>2</p>\n</td>\n<td>\n<p>Lo normal × 10</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>3</p>\n</td>\n<td>\n<p>&nbsp;Lo normal × 20</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>4</p>\n</td>\n<td>\n<p>&nbsp;Lo normal × 50</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>5</p>\n</td>\n<td>\n<p>&nbsp;Lo normal × 100</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>6</p>\n</td>\n<td>\n<p>&nbsp;Lo normal × 200</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>7</p>\n</td>\n<td>\n<p>&nbsp;Lo normal × 500</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>8</p>\n</td>\n<td>\n<p>&nbsp;Lo normal × 1000</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>9</p>\n</td>\n<td>\n<p>&nbsp;Todos los que puedan oír tu inspiradora voz</p>\n</td>\n</tr>\n</tbody>\n</table>\n</div>",
 			"tests": "Mando durante la guerra"
@@ -11434,7 +11434,7 @@
 			"tests": "Chequeos de Inteligencia relativos a este Talento"
 		},
 		{
-			"id": "Sea Legs",
+			"id": "Ij9N3G8jzxb4lrwy",
 			"name": "Equilibrio en cubierta",
 			"description": "<p>Estas acostumbrado al movimiento ondulante de los océanos, y es muy poco probable que te marees, incluso en las peores tormentas. En condiciones de mar normales, no necesitas hacer un Chequeo para ver si te mareas. En otras ocasiones (como por ejemplo una tormenta, o un ataque de mareo mágicamente inducido) puedes ignorar cualquier penalizador a los Chequeos para evitar el mareo.</p>",
 			"tests": "Todos los llevados a cabo para resistir el mareo"
