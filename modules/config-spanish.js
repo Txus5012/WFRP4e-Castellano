@@ -828,6 +828,14 @@ game.wfrp4e.config.effectPlaceholder = {
 
 }
 
+game.wfrp4e.config.species = {
+        "human": "Humano",
+        "dwarf": "Enano",
+        "halfling": "Halfling",
+        "helf": "Alto Elfo",
+        "welf": "Elfo Silvano",
+    };
+
 game.wfrp4e.config.speciesSkills = {
         "human": [
             "Criar animales",
@@ -960,7 +968,7 @@ game.wfrp4e.config.subspecies = {
                 ],
                 talents: [
                     "Condenado",
-		    "Espabilado, Cortés",
+					"Espabilado, Cortés",
                     3
                 ]
             }
@@ -979,7 +987,7 @@ game.wfrp4e.config.classTrappings = {
         "Rurales": "Capa, Daga, Mochila que contiene un Yesquero, Ropas, Bolsa, Manta, Raciones (1 día)",
         "Rural": "Capa, Daga, Mochila que contiene un Yesquero, Ropas, Bolsa, Manta, Raciones (1 día)",
         "Ribereños": "Bandolera que contiene un Frasco de alcohol, Capa, Daga, Ropas, Bolsa",
-	"Ribereño": "Bandolera que contiene un Frasco de alcohol, Capa, Daga, Ropas, Bolsa",
+		"Ribereño": "Bandolera que contiene un Frasco de alcohol, Capa, Daga, Ropas, Bolsa",
         "Pícaros": "Bandolera que contiene 2 Velas, 1d10 Cerillas, Capucha o Máscara, Daga, Ropas, Bolsa",
         "Pícaro": "Bandolera que contiene 2 Velas, 1d10 Cerillas, Capucha o Máscara, Daga, Ropas, Bolsa",
         "Guerreros": "Daga, Ropas, Bolsa, Un arma cuerpo a cuerpo",

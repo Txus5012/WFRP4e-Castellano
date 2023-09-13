@@ -41,8 +41,8 @@
 		"Weapons": "Armas"
     },
 	"mapping": {
-	    "skills": "system.items",
-	    "talents": "system.items",
+	    "skills": "system.skills",
+	    "talents": "system.talents",
 	    "class": {
 		      "path": "system.class.value",
 		      "converter": "career_class"
@@ -51,7 +51,7 @@
 		      "path": "system.careergroup.value",
 		      "converter": "career_careergroup"
 		    },
-	    "trappings": "system.items",
+	    "trappings": "system.trappings",
 		"penalties": {
 			"path": "system.penalty.value",
 			"converter": "trappings_penalty"
