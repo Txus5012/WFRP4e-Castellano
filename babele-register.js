@@ -382,20 +382,6 @@ Babele.get().registerConverters({
 	     if ( value == "Varies" ) return "Varía";
 	},
 
-	"notes": (notes, translations) => { // Notas en mapas
-		return notes.map(data => {
-			let translation = translations[data._id] ;
-			if(translations && translation) {
-				return mergeObject(
-					data, 
-					mergeObject(translation, { translated: true })
-				);
-			}
-
-		return data;
-		});
-	}
-	
   });
  }
     

@@ -76,7 +76,7 @@ game.wfrp4e.config.symptomEffects = {
         "blight": {
             name: "WFRP4E.Symptom.Blight",
             icon: "modules/wfrp4e-core/icons/diseases/disease.png",
-            transfer: true,
+            transfer: false,
             flags: {
                 wfrp4e: {
                     "effectApplication": "actor",
@@ -107,7 +107,7 @@ game.wfrp4e.config.symptomEffects = {
         "buboes": {
             name: "WFRP4E.Symptom.Buboes",
             icon: "modules/wfrp4e-core/icons/diseases/disease.png",
-            transfer: true,
+            transfer: false,
             flags: {
                 wfrp4e: {
                     "effectApplication": "actor",
@@ -133,7 +133,7 @@ game.wfrp4e.config.symptomEffects = {
         "convulsions": {
             name: "WFRP4E.Symptom.Convulsions",
             icon: "modules/wfrp4e-core/icons/diseases/disease.png",
-            transfer: true,
+            transfer: false,
             flags: {
                 wfrp4e: {
                     "effectApplication": "actor",
@@ -175,7 +175,7 @@ game.wfrp4e.config.symptomEffects = {
         "fever": {
             name: "WFRP4E.Symptom.Fever",
             icon: "modules/wfrp4e-core/icons/diseases/disease.png",
-            transfer: true,
+            transfer: false,
             flags: {
                 wfrp4e: {
                     "effectApplication": "actor",
@@ -197,24 +197,13 @@ game.wfrp4e.config.symptomEffects = {
                         if (applicableCharacteristics.includes(args.item.characteristic.key))
                             args.prefillModifiers.modifier -= 10
                     }`,
-                    "otherEffects": ["blight", "wounded"]
                 }
             }
         },
         "flux": {
             name: "WFRP4E.Symptom.Flux",
             icon: "modules/wfrp4e-core/icons/diseases/disease.png",
-            transfer: true,
-            flags: {
-                wfrp4e: {
-                    "symptom": true
-                }
-            }
-        },
-        "lingering": {
-            name: "WFRP4E.Symptom.Lingering",
-            icon: "modules/wfrp4e-core/icons/diseases/disease.png",
-            transfer: true,
+            transfer: false,
             flags: {
                 wfrp4e: {
                     "symptom": true
@@ -224,7 +213,7 @@ game.wfrp4e.config.symptomEffects = {
         "gangrene": {
             name: "WFRP4E.Symptom.Gangrene",
             icon: "modules/wfrp4e-core/icons/diseases/disease.png",
-            transfer: true,
+            transfer: false,
             flags: {
                 wfrp4e: {
                     "effectApplication": "actor",
@@ -240,15 +229,25 @@ game.wfrp4e.config.symptomEffects = {
                         {
                             if (args.item.characteristic.key == "fel")
                                 args.prefillModifiers.modifier -= 10
-                        }
-                    `
+                        }`,
+                    "otherEffects": ["blight", "wounded"]
+                }
+            }
+        },
+        "lingering": {
+            name: "WFRP4E.Symptom.Lingering",
+            icon: "modules/wfrp4e-core/icons/diseases/disease.png",
+            transfer: false,
+            flags: {
+                wfrp4e: {
+                    "symptom": true
                 }
             }
         },
         "malaise": {
             name: "WFRP4E.Symptom.Malaise",
             icon: "modules/wfrp4e-core/icons/diseases/disease.png",
-            transfer: true,
+            transfer: false,
             flags: {
                 wfrp4e: {
                     "effectApplication": "actor",
@@ -271,14 +270,14 @@ game.wfrp4e.config.symptomEffects = {
         "nausea": {
             name: "WFRP4E.Symptom.Nausea",
             icon: "modules/wfrp4e-core/icons/diseases/disease.png",
-            transfer: true,
+            transfer: false,
             flags: {
                 wfrp4e: {
                     "effectApplication": "actor",
                     "effectTrigger": "rollTest",
                     "symptom": true,
                     "script": `
-                    if (this.actor.owner && args.test.result.outcome == "failure")
+                    if (this.actor.isOwner && args.test.result.outcome == "failure")
                     {
                         let applicableCharacteristics = ["ws", "bs", "s", "fel", "ag", "t", "dex"]
                         if (applicableCharacteristics.includes(args.test.characteristicKey))
@@ -292,7 +291,7 @@ game.wfrp4e.config.symptomEffects = {
         "pox": {
             name: "WFRP4E.Symptom.Pox",
             icon: "modules/wfrp4e-core/icons/diseases/disease.png",
-            transfer: true,
+            transfer: false,
             flags: {
                 wfrp4e: {
                     "effectApplication": "actor",

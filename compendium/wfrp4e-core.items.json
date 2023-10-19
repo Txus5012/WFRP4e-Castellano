@@ -80,17 +80,17 @@
 			"path": "system.incubation.unit",
 			"converter": "disease_units"
 			},
-		"duration": {
+		"diseases_duration": {
 			"path": "system.duration.unit",
 			"converter": "disease_units"
 			},
 		"symptoms": "system.symptoms.value",
 		"permanent": "system.permanent.value",
-		"spellduration": {
+		"spell_duration": {
 			"path": "system.duration.value",
 			"converter": "spells_duration_range_target"
 		},
-		"spellrange": {
+		"spell_range": {
 			"path": "system.range.value",
 			"converter": "spells_duration_range_target"
 		},
@@ -111,12 +111,12 @@
 		"overcastinitial": "system.overcast.initial.type",
 		"overcastvaluevalue": "system.overcast.valuePerOvercast.additional",
 		"overcastinitialvalue": "system.overcast.initial.additional",
-		"injurylocation": {
+		"injury_location": {
 			"path": "system.location.value",
 			"converter": "injuries_location"
 			},
 		"penalty": "system.penalty.value",
-		"injuryduration": {
+		"injury_duration": {
 			"path": "system.duration.value",
 			"converter": "injuries_duration"
 			},
@@ -2985,7 +2985,7 @@
 		{
 			"id": "Moonflower",
 			"name": "Flor de luna",
-			"description": "<p>Este tranquilizante es un musgo seco que sólo crece en las hojas de los árboles del bosque de Laurelorn. Los elfos utilizan la flor de luna para tratar la peste negra, concediendo un bonificador +30 a todos los Chequeos asociados para resistir a la enfermedad, pero sólo a los elfos; por lo demás no tiene efecto alguno sobre su especie. Otros pueden inhalar los vapores de hervir el musgo y si no superan un Chequeo <strong>Muy difícil (–30)</strong> de <strong>Voluntad</strong>, pasan al Estado Inconsciente ; si lo superan, obtienen un bonificador +20 a los Chequeos de Frialdad y sufren 1 Estado de Fatigado . La flor de luna la utilizan los físicos más caros como anestésico. <strong>Duración</strong>: [[/r 1d10+5]] horas.</p>"
+			"description": "<p>Este tranquilizante es un musgo seco que sólo crece en las hojas de los árboles del bosque de Laurelorn. Los elfos utilizan la flor de luna para tratar la peste negra, concediendo un bonificador +30 a todos los Chequeos asociados para resistir a la enfermedad, pero sólo a los elfos; por lo demás no tiene efecto alguno sobre su especie. Otros pueden inhalar los vapores de hervir el musgo y si no superan un Chequeo <strong>Muy difícil (–30)</strong> de <strong>Voluntad</strong>, pasan al Estado Inconsciente ; si lo superan, obtienen un bonificador +20 a los Chequeos de Frialdad y sufren 1 Estado de @Condition[Fatigado]. La flor de luna la utilizan los físicos más caros como anestésico. <strong>Duración</strong>: [[/r 1d10+5]] horas.</p>"
 		},
 		{
 			"id": "Mop",
@@ -5609,7 +5609,7 @@
 		{
 			"id": "Aethyric Armour (Light)",
 			"name": "Armadura de Aethyr (Luz)",
-			"description": "<p>Obtienes +1 punto de Armadura a todas las Ubicaciones de impacto al envolverte en una venda protectora de magia.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz) . Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
+			"description": "<p>Obtienes +1 punto de Armadura a todas las Ubicaciones de impacto al envolverte en una venda protectora de magia.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz). Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
 			"effects": {
 				"Aethyric Armour (Light)": {
 					"name":"Armadura de Aethyr (Luz)"
@@ -5699,7 +5699,7 @@
 		{
 			"id": "Aethyric Arms (Light)",
 			"name": "Brazos del Aethyr (Luz)",
-			"description": "<p>Creas un arma de cuerpo a cuerpo con un Daño igual a tu Bonificador por Voluntad. Podrá adoptar cualquier forma, y por lo tanto utilizará cualquier Habilidad de Cuerpo a cuerpo que tengas. El arma cuenta como Mágica.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz) . Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>"
+			"description": "<p>Creas un arma de cuerpo a cuerpo con un Daño igual a tu Bonificador por Voluntad. Podrá adoptar cualquier forma, y por lo tanto utilizará cualquier Habilidad de Cuerpo a cuerpo que tengas. El arma cuenta como Mágica.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz). Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>"
 		},
 		{
 			"id": "Aethyric Arms (Metal)",
@@ -5735,7 +5735,7 @@
 		{
 			"id": "Animal Friend",
 			"name": "Amigo animal",
-			"description": "<p>Te haces amigo de una criatura más pequeña que tú, poseedora del Rasgo de criatura Bestial . El animal confía en ti por completo y te ve como un amigo.</p><p>\n\n <b>Saber:</b> Ninguno</p>"
+			"description": "<p>Te haces amigo de una criatura más pequeña que tú, poseedora del Rasgo de criatura Bestial. El animal confía en ti por completo y te ve como un amigo.</p><p>\n\n <b>Saber:</b> Ninguno</p>"
 		},
 		{
 			"id": "Aqshy’s Aegis",
@@ -5785,7 +5785,7 @@
 		{
 			"id": "Arrow Shield (Light)",
 			"name": "Escudo contra las flechas (Luz)",
-			"description": "<p>Todo proyectil que contenga materia orgánica, como por ejemplo las flechas con el astil de madera, quedará automáticamente destruido si atraviesa el Área de efecto, sin causar daño alguno a su objetivo. Los proyectiles que tan sólo contienen materia inorgánica, como por ejemplo los cuchillos arrojadizos o los disparos de pistola, no se ven afectados.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz) . Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.</p>"
+			"description": "<p>Todo proyectil que contenga materia orgánica, como por ejemplo las flechas con el astil de madera, quedará automáticamente destruido si atraviesa el Área de efecto, sin causar daño alguno a su objetivo. Los proyectiles que tan sólo contienen materia inorgánica, como por ejemplo los cuchillos arrojadizos o los disparos de pistola, no se ven afectados.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz). Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.</p>"
 		},
 		{
 			"id": "Arrow Shield (Metal)",
@@ -5810,7 +5810,7 @@
 		{
 			"id": "Banishment",
 			"name": "Destierro",
-			"description": "<p>Envías un halo limpiador de <em>Hysh</em> que sale de tus manos, y que afecta a todas las criaturas del Área de efecto cuya Resistencia es menor que tu Voluntad. Los objetivos con los Rasgos de criatura <em>Muerto viviente</em> o <em>Demoníaco</em> obtienen el Rasgo de criatura <em>Inestable</em>. Si ya tienen dicho rasgo, quedan reducidos a 0 Heridas.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz) . Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
+			"description": "<p>Envías un halo limpiador de <em>Hysh</em> que sale de tus manos, y que afecta a todas las criaturas del Área de efecto cuya Resistencia es menor que tu Voluntad. Los objetivos con los Rasgos de criatura <em>Muerto viviente</em> o <em>Demoníaco</em> obtienen el Rasgo de criatura <em>Inestable</em>. Si ya tienen dicho rasgo, quedan reducidos a 0 Heridas.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz). Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
 			"effects": {
 				"Banishment": {
 					"flags.wfrp4e.script":"fromUuid(this.effect.origin).then(caster=> {\n    if (caster&& (args.actor.has(game.i18n.localize(\"NAME.Undead\")) || args.actor.has(game.i18n.localize(\"NAME.Daemonic\"))))\n    {\n         let wp = caster.characteristics.wp.value\n         if (wp > args.actor.characteristics.t.value)\n         {\n             if (args.actor.has(game.i18n.localize(\"NAME.Unstable\")))\n             {\n                args.actor.update({\"system.status.wounds.value\" : 0})\n                args.actor.addCondition(\"dead\")\n             }\n             else\n             {\n                fromUuid(\"Compendium.wfrp4e-core.items.D0ImWEIMSDgElsnl\").then(item => {\n                    args.actor.createEmbeddedDocuments(\"Item\", [item.toObject()])\n                    ChatMessage.create({content : `Añadido Inestable a ${args.actor.prototypeToken.name}`, speaker : {alias: caster.name}})\n                })\n             }\n         }\n    }\n })",
@@ -5896,7 +5896,7 @@
 		{
 			"id": "Blast (Light)",
 			"name": "Explosión (Luz)",
-			"description": "<p>Canalizas magia en forma de detonación explosiva. Este es un proyectil mágico con Daño +3 que tiene como objetivo a todo el que se encuentra en su Área de efecto.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz) . Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>"
+			"description": "<p>Canalizas magia en forma de detonación explosiva. Este es un proyectil mágico con Daño +3 que tiene como objetivo a todo el que se encuentra en su Área de efecto.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz). Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>"
 		},
 		{
 			"id": "Blast (Metal)",
@@ -5926,7 +5926,7 @@
 		{
 			"id": "Blinding Light",
 			"name": "Luz cegadora",
-			"description": "<p>Emites un fogonazo brillante y cegador de luz desde tu mano o tu bastón. Todos los que te están mirando, si no tienen el Talento <em>Magia arcana (luz)</em>, sufren tantos Estados de @Condition[Cegado] como tus NE.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz) . Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
+			"description": "<p>Emites un fogonazo brillante y cegador de luz desde tu mano o tu bastón. Todos los que te están mirando, si no tienen el Talento <em>Magia arcana (luz)</em>, sufren tantos Estados de @Condition[Cegado] como tus NE.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz). Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
 			"effects": {
 				"Blinding Light": {
 					"name":"Luz cegadora"
@@ -5976,7 +5976,7 @@
 		{
 			"id": "Bolt (Light)",
 			"name": "Rayo (Luz)",
-			"description": "<p>Canalizas magia en forma de un rayo dañino. Rayo es un proyectil mágico con Daño +4.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz) . Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>"
+			"description": "<p>Canalizas magia en forma de un rayo dañino. Rayo es un proyectil mágico con Daño +4.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz). Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>"
 		},
 		{
 			"id": "Bolt (Metal)",
@@ -6041,7 +6041,7 @@
 		{
 			"id": "Breath (Light)",
 			"name": "Aliento (Luz)",
-			"description": "<p>Llevas a cabo de inmediato un ataque de Aliento, como si hubieras gastado 2 Ventajas en activar el Rasgo de criatura @Compendium[wfrp4e-core.items.uqGxFOEqeurwkAO3]{Aliento}. Aliento es un proyectil mágico con un Daño igual a tu Bonificador por Resistencia. El DJ decide qué tipo de ataque de Aliento encaja mejor con tu Talento Magia arcana.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz) . Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>"
+			"description": "<p>Llevas a cabo de inmediato un ataque de Aliento, como si hubieras gastado 2 Ventajas en activar el Rasgo de criatura @Compendium[wfrp4e-core.items.uqGxFOEqeurwkAO3]{Aliento}. Aliento es un proyectil mágico con un Daño igual a tu Bonificador por Resistencia. El DJ decide qué tipo de ataque de Aliento encaja mejor con tu Talento Magia arcana.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz). Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>"
 		},
 		{
 			"id": "Breath (Metal)",
@@ -6106,7 +6106,7 @@
 		{
 			"id": "Bridge (Light)",
 			"name": "Puente (Luz)",
-			"description": "<p>Creas un puente de energía mágica, con una longitud y anchura máxima iguales a tu Bonificador por Voluntad en yardas. Por cada +2 NE puedes aumentar la longitud o la anchura tantas yardas como tu Bonificador por Voluntad.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz) . Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>"
+			"description": "<p>Creas un puente de energía mágica, con una longitud y anchura máxima iguales a tu Bonificador por Voluntad en yardas. Por cada +2 NE puedes aumentar la longitud o la anchura tantas yardas como tu Bonificador por Voluntad.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz). Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>"
 		},
 		{
 			"id": "Bridge (Metal)",
@@ -6212,7 +6212,7 @@
 		{
 			"id": "Chain Attack (Light)",
 			"name": "Ataque en cadena (Luz)",
-			"description": "<p>Canalizas una espuela giratoria de magia desgarradora contra tu objetivo. Éste es un proyectil mágico con un Daño de +4. Si Ataque en cadena redujera a un objetivo a 0 Heridas, saltaría a otro que se encontrara dentro del rango inicial del hechizo y a una distancia en yardas del objetivo previo menor que tu Bonificador por Voluntad, infligiendo el mismo Daño de nuevo. Puede saltar tantas veces como tu Bonificador por Voluntad. Por cada +2 NE obtenidos, puede encadenarse a un objetivo adicional.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz) . Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>"
+			"description": "<p>Canalizas una espuela giratoria de magia desgarradora contra tu objetivo. Éste es un proyectil mágico con un Daño de +4. Si Ataque en cadena redujera a un objetivo a 0 Heridas, saltaría a otro que se encontrara dentro del rango inicial del hechizo y a una distancia en yardas del objetivo previo menor que tu Bonificador por Voluntad, infligiendo el mismo Daño de nuevo. Puede saltar tantas veces como tu Bonificador por Voluntad. Por cada +2 NE obtenidos, puede encadenarse a un objetivo adicional.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz). Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>"
 		},
 		{
 			"id": "Chain Attack (Metal)",
@@ -6247,7 +6247,7 @@
 		{
 			"id": "Clarity of Thought",
 			"name": "Claridad de pensamientos",
-			"description": "<p>Calmas la mente de tu objetivo, permitiéndole pensar con claridad. Todos los modificadores negativos a sus procesos mentales (debidos a Estados, Corrupciones mentales, Psicologías o cualquier otro origen) se ignoran mientras el hechizo está en funcionamiento.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz) . Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>"
+			"description": "<p>Calmas la mente de tu objetivo, permitiéndole pensar con claridad. Todos los modificadores negativos a sus procesos mentales (debidos a Estados, Corrupciones mentales, Psicologías o cualquier otro origen) se ignoran mientras el hechizo está en funcionamiento.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz). Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>"
 		},
 		{
 			"id": "Comet of Casandora",
@@ -6355,7 +6355,7 @@
 		{
 			"id": "Corrosive Blood (Light)",
 			"name": "Sangre corrosiva (Luz)",
-			"description": "<p>Te infundes a ti mismo de magia, confiriendo a tu sangre un tremendo poder. Obtienes el Rasgo de criatura @Compendium[wfrp4e-core.items.M5QSWOYt2Rbv2yxW]{Sangre corrosiva}.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz) . Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
+			"description": "<p>Te infundes a ti mismo de magia, confiriendo a tu sangre un tremendo poder. Obtienes el Rasgo de criatura @Compendium[wfrp4e-core.items.M5QSWOYt2Rbv2yxW]{Sangre corrosiva}.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz). Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
 			"effects": {
 				"Corrosive Blood (Light)": {
 					"flags.wfrp4e.script":"let content = `<b>${this.effect.name}</b>: Todos los objetivos trabados con <b>${this.actor.prototypeToken.name}</b> reciben [[/r 1d10]] de Daño, modificado por BR y PA.`\n\nChatMessage.create({content, speaker : {alias : this.actor.prototypeToken.name}})",
@@ -6410,7 +6410,7 @@
 		{
 			"id": "Creeping Menace",
 			"name": "Amenaza insidiosa",
-			"description": "<p>Convocas una plaga de criaturas trepadoras o reptantes para hostigar a tus enemigos. Cada objetivo afectado es atacado de inmediato por una plaga de ratas gigantes, arañas gigantes o serpientes. Utiliza los perfiles estándar para el tipo de criatura relevante, añadiendo el Rasgo de criatura Plaga . Utiliza los perfiles estándar para el tipo de criatura relevante, añadiendo el Rasgo Plaga . Por cada Acción puedes llevar a cabo un Chequeo <strong>Desafiante (+0)</strong> de </strong>Carisma Animal</strong> para obligar a 1 o más plagas a atacar a un objetivo diferente.</p>\n<p>Cuando el hechizo acaba, todas las plagas restantes desaparecen en las sombras.</p><p>\n\n <b>Saber:</b> Cada vez que los practicantes de la Brujería tiran en la Tabla de Disfunciones, se anotan además 1 punto de Corrupción. Además, podrás infligir 1 Estado de @Condition[Sangrando] a cualquiera que sea objetivo de los hechizos del Saber de la Brujería. Por último, canalizar o lanzar hechizos de este Saber requiere automáticamente una tirada en la @Table[minormis]{Tabla de Disfunciones menores} a menos que se haga con un ingrediente, pero el ingrediente no proporciona protección alguna si sacas una Disfunción. Afortunadamente, los ingredientes para el Saber de la Brujería son fácilmente conseguibles: partes corporales de animales pequeños en su mayoría. Los ingredientes cuestan el NL de un hechizo en peniques de bronce, en vez de chelines de plata, si se han de comprar. Alternativamente, se puede forrajear en busca de ingredientes, utilizando la Habilidad Supervivencia: una tirada con éxito de forrajeo permite reunir 1 + NE ingredientes, tal y como se describe en Buscar comida y hierbas.</p>"
+			"description": "<p>Convocas una plaga de criaturas trepadoras o reptantes para hostigar a tus enemigos. Cada objetivo afectado es atacado de inmediato por una plaga de ratas gigantes, arañas gigantes o serpientes. Utiliza los perfiles estándar para el tipo de criatura relevante, añadiendo el Rasgo de criatura Plaga. Utiliza los perfiles estándar para el tipo de criatura relevante, añadiendo el Rasgo Plaga. Por cada Acción puedes llevar a cabo un Chequeo <strong>Desafiante (+0)</strong> de </strong>Carisma Animal</strong> para obligar a 1 o más plagas a atacar a un objetivo diferente.</p>\n<p>Cuando el hechizo acaba, todas las plagas restantes desaparecen en las sombras.</p><p>\n\n <b>Saber:</b> Cada vez que los practicantes de la Brujería tiran en la Tabla de Disfunciones, se anotan además 1 punto de Corrupción. Además, podrás infligir 1 Estado de @Condition[Sangrando] a cualquiera que sea objetivo de los hechizos del Saber de la Brujería. Por último, canalizar o lanzar hechizos de este Saber requiere automáticamente una tirada en la @Table[minormis]{Tabla de Disfunciones menores} a menos que se haga con un ingrediente, pero el ingrediente no proporciona protección alguna si sacas una Disfunción. Afortunadamente, los ingredientes para el Saber de la Brujería son fácilmente conseguibles: partes corporales de animales pequeños en su mayoría. Los ingredientes cuestan el NL de un hechizo en peniques de bronce, en vez de chelines de plata, si se han de comprar. Alternativamente, se puede forrajear en busca de ingredientes, utilizando la Habilidad Supervivencia: una tirada con éxito de forrajeo permite reunir 1 + NE ingredientes, tal y como se describe en Buscar comida y hierbas.</p>"
 		},
 		{
 			"id": "Crown of Flame",
@@ -6448,7 +6448,7 @@
 		{
 			"id": "Daemonbane",
 			"name": "Maldición de los demonios",
-			"description": "<p>Convocas una explosión de <em>Hysh</em> Hysh que atraviesa la frontera entre el Reino del Caos y el mundo material. El Chequeo de Lanzamiento es Enfrentado contra el objetivo, que a su vez hace un Chequeo de Voluntad. Si ganas, borras del mapa a un objetivo con el Rasgo de criatura <em>Demoníaco</em> con una luz blanca y cegadora, enviándole de vuelta por donde vino. Si el hechizo destierra con éxito a un demonio, todos los que están mirando a tu objetivo, a menos que tengan el Talento <em>Magia arcana (luz)</em> sufren tantos Estados de @Condition[Cegado] como tus NE.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz) . Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>"
+			"description": "<p>Convocas una explosión de <em>Hysh</em> Hysh que atraviesa la frontera entre el Reino del Caos y el mundo material. El Chequeo de Lanzamiento es Enfrentado contra el objetivo, que a su vez hace un Chequeo de Voluntad. Si ganas, borras del mapa a un objetivo con el Rasgo de criatura <em>Demoníaco</em> con una luz blanca y cegadora, enviándole de vuelta por donde vino. Si el hechizo destierra con éxito a un demonio, todos los que están mirando a tu objetivo, a menos que tengan el Talento <em>Magia arcana (luz)</em> sufren tantos Estados de @Condition[Cegado] como tus NE.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz). Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>"
 		},
 		{
 			"id": "Dark Vision",
@@ -6493,7 +6493,7 @@
 		{
 			"id": "Dark Vision (Light)",
 			"name": "Visión en la oscuridad (Luz)",
-			"description": "<p>Potencias tu Clarividencia para que asista a tus sentidos mundanos. Mientras el hechizo permanece activo, obtienes el Rasgo de criatura @Compendium[wfrp4e-core.items.JQa5DLnTs2SEzRrc]{Visión en la oscuridad}.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz) . Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>"
+			"description": "<p>Potencias tu Clarividencia para que asista a tus sentidos mundanos. Mientras el hechizo permanece activo, obtienes el Rasgo de criatura @Compendium[wfrp4e-core.items.JQa5DLnTs2SEzRrc]{Visión en la oscuridad}.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz). Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>"
 		},
 		{
 			"id": "Dark Vision (Metal)",
@@ -6634,7 +6634,7 @@
 		{
 			"id": "Distracting (Light)",
 			"name": "Molesto (Luz)",
-			"description": "<p>Te rodeas a ti mismo de magia, que da vueltas a tu alrededor, distrayendo a tus enemigos. Mientras el hechizo permanece activo, obtienes el Rasgo de criatura @Compendium[wfrp4e-core.items.MVI0lXcg6vvtooAF]{Molesto}.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz) . Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
+			"description": "<p>Te rodeas a ti mismo de magia, que da vueltas a tu alrededor, distrayendo a tus enemigos. Mientras el hechizo permanece activo, obtienes el Rasgo de criatura @Compendium[wfrp4e-core.items.MVI0lXcg6vvtooAF]{Molesto}.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz). Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
 			"effects": {
 				"Distracting (Light)": {
 					"name":"Molesto (Luz)"
@@ -6724,7 +6724,7 @@
 		{
 			"id": "Dome (Light)",
 			"name": "Cúpula (Luz)",
-			"description": "<p>Creas una cúpula de energía mágica por encima de tu cabeza, que bloquea los ataques en tu contra. Todos los que están en el Área de efecto obtienen el Rasgo de criatura @Compendium[wfrp4e-core.items.Bvd2aZ0gQUXHfCTh]{Custodiado (6+)} contra los ataques mágicos o a distancia que se originan fuera de la cúpula. Los del interior pueden atacar de la forma habitual, y la cúpula no impide el movimiento.</p>\n<p>&nbsp;</p>\n<blockquote>\n<p>Quizá porque es mágica, porque lleva un talismán especial o simplemente porque tiene suerte, algunos golpes parecen fallarle a la criatura de forma inesperada. Tira [[/r 1d10]] después de que la criatura sufra un impacto; si sacas la cifra entre paréntesis o más, la criatura ignora el golpe, incluso si es un crítico.</p>\n</blockquote>\n<p>&nbsp;</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz) . Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>"
+			"description": "<p>Creas una cúpula de energía mágica por encima de tu cabeza, que bloquea los ataques en tu contra. Todos los que están en el Área de efecto obtienen el Rasgo de criatura @Compendium[wfrp4e-core.items.Bvd2aZ0gQUXHfCTh]{Custodiado (6+)} contra los ataques mágicos o a distancia que se originan fuera de la cúpula. Los del interior pueden atacar de la forma habitual, y la cúpula no impide el movimiento.</p>\n<p>&nbsp;</p>\n<blockquote>\n<p>Quizá porque es mágica, porque lleva un talismán especial o simplemente porque tiene suerte, algunos golpes parecen fallarle a la criatura de forma inesperada. Tira [[/r 1d10]] después de que la criatura sufra un impacto; si sacas la cifra entre paréntesis o más, la criatura ignora el golpe, incluso si es un crítico.</p>\n</blockquote>\n<p>&nbsp;</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz). Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>"
 		},
 		{
 			"id": "Dome (Metal)",
@@ -6813,7 +6813,7 @@
 		{
 			"id": "Drop (Light)",
 			"name": "Soltar (Luz)",
-			"description": "<p>Canalizas magia a un objeto empuñado por un oponente. Se puede tratar de un arma, de una cuerda o de la mano de alguien. A menos que se supere un Chequeo <strong>Desafiante (+0)</strong> de <strong>Destreza</strong> el oponente suelta el objeto. Por cada +2 NE puedes imponer un -10 adicional en el Chequeo de Destreza.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz) . Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
+			"description": "<p>Canalizas magia a un objeto empuñado por un oponente. Se puede tratar de un arma, de una cuerda o de la mano de alguien. A menos que se supere un Chequeo <strong>Desafiante (+0)</strong> de <strong>Destreza</strong> el oponente suelta el objeto. Por cada +2 NE puedes imponer un -10 adicional en el Chequeo de Destreza.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz). Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
 			"overcast": "Penalizador al Chequeo"
 		},
 		{
@@ -6976,7 +6976,7 @@
 		{
 			"id": "Entangle (Light)",
 			"name": "Enmarañar (Luz)",
-			"description": "<p>Utilizando la magia, inmovilizas a tu objetivo, envolviéndole en lo que mejor encaja con tu Saber: zarcillos, sombras, su propia ropa… Tu objetivo sufre 1 Estado de @Condition[Enmarañado] con una Fuerza igual a tu Inteligencia. Por cada +2 NE, puedes imponer al objetivo +1 Estado adicional de <em>Enmarañado</em>. El hechizo dura hasta que se eliminan todos los Estados de <em>Enmarañado</em>.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz) . Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
+			"description": "<p>Utilizando la magia, inmovilizas a tu objetivo, envolviéndole en lo que mejor encaja con tu Saber: zarcillos, sombras, su propia ropa… Tu objetivo sufre 1 Estado de @Condition[Enmarañado] con una Fuerza igual a tu Inteligencia. Por cada +2 NE, puedes imponer al objetivo +1 Estado adicional de <em>Enmarañado</em>. El hechizo dura hasta que se eliminan todos los Estados de <em>Enmarañado</em>.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz). Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
 			"overcast": "Enmarañado",
 			"overcastvalue": "value",
 			"overcastinitial": "value",
@@ -7139,7 +7139,7 @@
 		{
 			"id": "Fearsome (Light)",
 			"name": "Temible (Luz)",
-			"description": "<p>Envolviéndote en magia, te vuelves terrible e intimidante. Obtienes @Compendium[wfrp4e-core.items.pTorrE0l3VybAbtn]{Miedo 1}. Por cada +3 NE, puedes incrementar en 1 tu puntuación de Miedo.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz) . Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
+			"description": "<p>Envolviéndote en magia, te vuelves terrible e intimidante. Obtienes @Compendium[wfrp4e-core.items.pTorrE0l3VybAbtn]{Miedo 1}. Por cada +3 NE, puedes incrementar en 1 tu puntuación de Miedo.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz). Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
 			"effects": {
 				"Fearsome (Light)": {
 					"flags.wfrp4e.script":"let value = 1\nlet name = this.actor.prototypeToken.name\n\nif (game.user.isGM)\n{\nif (!game.user.targets.size)\n      return ui.notifications.warn(\"Selecciona un objetivo al que aplicar el efecto.\")\n  game.user.targets.forEach(t => {\n    t.actor.applyFear(value, name)\n  })\n  game.user.updateTokenTargets([]);\n}\nelse \n{\n  game.wfrp4e.utility.postFear(value, name)\n}",
@@ -7313,7 +7313,7 @@
 		{
 			"id": "Flight (Light)",
 			"name": "Vuelo (Luz)",
-			"description": "<p>Puedes volar, o bien haciéndote brotar alas, ascendiendo en un pilar de luz mágica o por algún otro medio. Obtienes el Rasgo de criatura @Compendium[wfrp4e-core.items.EO05HX7jql0g605A]{Vuelo (Agilidad)}.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz) . Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
+			"description": "<p>Puedes volar, o bien haciéndote brotar alas, ascendiendo en un pilar de luz mágica o por algún otro medio. Obtienes el Rasgo de criatura @Compendium[wfrp4e-core.items.EO05HX7jql0g605A]{Vuelo (Agilidad)}.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz). Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
 			"effects": {
 				"Flight (Light)": {
 					"name":"Vuelo (Luz)"
@@ -7424,7 +7424,7 @@
 		{
 			"id": "Healing Light",
 			"name": "Luz sanadora",
-			"description": "<p>Tu objetivo brilla con una luz brillante y limpiadora (equivalente a la de una fogata), curando tantas Heridas como tu Bonificador por Inteligencia más tu Bonificador por Voluntad. Si el objetivo tiene éxito en un Chequeo <strong>Muy difícil (–20)</strong> de <strong>Aguante</strong>, también pierde 1 punto de Corrupción ganado en la última hora.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz) . Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
+			"description": "<p>Tu objetivo brilla con una luz brillante y limpiadora (equivalente a la de una fogata), curando tantas Heridas como tu Bonificador por Inteligencia más tu Bonificador por Voluntad. Si el objetivo tiene éxito en un Chequeo <strong>Muy difícil (–20)</strong> de <strong>Aguante</strong>, también pierde 1 punto de Corrupción ganado en la última hora.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz). Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
 			"effects": {
 				"Healing Light": {
 					"flags.wfrp4e.script":"fromUuid(this.effect.origin).then(caster => {\n   if (caster)\n   {\n       let healed= caster.characteristics.wp.bonus + caster.characteristics.int.bonus\n       let wounds = duplicate(args.actor.status.wounds)\n       wounds.value+=healed\n       \n       if (wounds.value > wounds.max)\n          wounds.value = wounds.max\n       \n       args.actor.update({\"system.status.wounds\" : wounds})\n       ChatMessage.create({content: `${this.actor.prototypeToken.name} recupera ${healed} Heridas`, speaker : {alias : this.effect.name}})\n   }\n})\n\nthis.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {absolute : {difficulty : \"vhard\"}, context : {success : \"1 punto de Corrupción ganado en la última hora se elimina.\", failure: \"No pasa nada.\"}}).then(setupData => {\n   this.actor.basicTest(setupData)\n})",
@@ -7510,7 +7510,7 @@
 		{
 			"id": "Magic Shield (Light)",
 			"name": "Escudo mágico (Luz)",
-			"description": "<p>Te envuelves en bandas de magia protectora. Mientras el hechizo permanece activo, sumas tantos NE como tu Bonificador por Voluntad a cualquier intento de Dispersión que haces.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz) . Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>"
+			"description": "<p>Te envuelves en bandas de magia protectora. Mientras el hechizo permanece activo, sumas tantos NE como tu Bonificador por Voluntad a cualquier intento de Dispersión que haces.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz). Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>"
 		},
 		{
 			"id": "Magic Shield (Metal)",
@@ -7608,7 +7608,7 @@
 		{
 			"id": "Move Object (Light)",
 			"name": "Mover objeto (Luz)",
-			"description": "<p>Utilizando la magia, te haces con un objeto no inteligente y que no es más grande que tú, moviéndolo sólo mediante la mente, que se considera que tiene una Fuerza igual a tu Voluntad. Puedes intentar mover el objeto tantas yardas como tu Bonificador por Voluntad. Si alguien intenta impedir el movimiento del objeto, se requiere un Chequeo <strong>Enfrentado Voluntad/Fuerza</strong>. Por cada +2 NE, puedes incrementar la distancia a la que se mueve el objeto tantas yardas como tu Bonificador por Voluntad.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz) . Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
+			"description": "<p>Utilizando la magia, te haces con un objeto no inteligente y que no es más grande que tú, moviéndolo sólo mediante la mente, que se considera que tiene una Fuerza igual a tu Voluntad. Puedes intentar mover el objeto tantas yardas como tu Bonificador por Voluntad. Si alguien intenta impedir el movimiento del objeto, se requiere un Chequeo <strong>Enfrentado Voluntad/Fuerza</strong>. Por cada +2 NE, puedes incrementar la distancia a la que se mueve el objeto tantas yardas como tu Bonificador por Voluntad.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz). Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
 			"overcast": "Yardas movidas"
 		},
 		{
@@ -7678,7 +7678,7 @@
 		{
 			"id": "Mundane Aura (Light)",
 			"name": "Aura mundana (Luz)",
-			"description": "<p>Drenas todos los Vientos de la Magia del interior de tu cuerpo y de tus posesiones, eliminando toda aura mágica. Mientras dure el hechizo aparecerás como mundano ante el Talento Sentir magia y similares. En esos momentos no dispones de aptitud mágica y tu naturaleza mágica no puede ser detectada en modo alguno. Mientras este hechizo dura, no puedes lanzar ningún otro. Aura mundana se disipa de inmediato si llevas a cabo un Chequeo de Canalización.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz) . Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>"
+			"description": "<p>Drenas todos los Vientos de la Magia del interior de tu cuerpo y de tus posesiones, eliminando toda aura mágica. Mientras dure el hechizo aparecerás como mundano ante el Talento Sentir magia y similares. En esos momentos no dispones de aptitud mágica y tu naturaleza mágica no puede ser detectada en modo alguno. Mientras este hechizo dura, no puedes lanzar ningún otro. Aura mundana se disipa de inmediato si llevas a cabo un Chequeo de Canalización.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz). Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>"
 		},
 		{
 			"id": "Mundane Aura (Metal)",
@@ -7733,7 +7733,7 @@
 		{
 			"id": "Net of Amyntok",
 			"name": "Red de Amyntok",
-			"description": "<p>Lanzas una delicada red tejida con hebras de<em>Hysh</em> sobre tus objetivos, cuya mente se ve abrumada por acertijos y rompecabezas, que les dejan paralizados de indecisión. Los objetivos sufren +1 Estado de @Condition[Aturdido], del que no se pueden deshacer mientras el hechizo está en funcionamiento. Al recuperarse de dicho Estado, los objetivos Chequean su Inteligencia en lugar de la Habilidad Aguante. Los objetivos con el Rasgo de criatura <em>Bestial</em> son inmunes a este hechizo.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz) . Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
+			"description": "<p>Lanzas una delicada red tejida con hebras de<em>Hysh</em> sobre tus objetivos, cuya mente se ve abrumada por acertijos y rompecabezas, que les dejan paralizados de indecisión. Los objetivos sufren +1 Estado de @Condition[Aturdido], del que no se pueden deshacer mientras el hechizo está en funcionamiento. Al recuperarse de dicho Estado, los objetivos Chequean su Inteligencia en lugar de la Habilidad Aguante. Los objetivos con el Rasgo de criatura <em>Bestial</em> son inmunes a este hechizo.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz). Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
 			"effects": {
 				"Stunned": {
 					"name":"Aturdido"
@@ -7774,7 +7774,7 @@
 		{
 			"id": "Phâ’s Protection",
 			"name": "Protección de Phâ",
-			"description": "<p>Convocas un aura protectora de luz pura y sagrada. Las criaturas profanas (aquellas con los Rasgos de criatura @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente} o @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaca}, las que tienen mutaciones y las que tienen más Corrupción que la suma de sus Bonificadores por Voluntad y por Resistencia) no pueden entrar en el Área de efecto. Cualquiera que se encuentre dentro de dicha Área sufrirá 1 Estado de @Condition[Quebrantado] hasta que se marche. Las criaturas en el interior del Área no tiene que anotarse ningún punto de Corrupción mientras el hechizo permanece activo.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz) . Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>"
+			"description": "<p>Convocas un aura protectora de luz pura y sagrada. Las criaturas profanas (aquellas con los Rasgos de criatura @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente} o @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaca}, las que tienen mutaciones y las que tienen más Corrupción que la suma de sus Bonificadores por Voluntad y por Resistencia) no pueden entrar en el Área de efecto. Cualquiera que se encuentre dentro de dicha Área sufrirá 1 Estado de @Condition[Quebrantado] hasta que se marche. Las criaturas en el interior del Área no tiene que anotarse ningún punto de Corrupción mientras el hechizo permanece activo.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz). Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>"
 		},
 		{
 			"id": "Produce Small Animal",
@@ -7814,7 +7814,7 @@
 		{
 			"id": "Purple Pall of Shyish",
 			"name": "Palio púrpura de Shyish",
-			"description": "<p>Te envuelves en un palio hecho de finas hebras de magia púrpura. Obtienes tantos puntos de Armadura como tu Bonificador por Voluntad en todas las Ubicaciones y el Rasgo de criatura @Compendium[wfrp4e-core.items.pTorrE0l3VybAbtn]{Miedo (1)}. Por cada +2 NE, puedes incrementar en 1 tu puntuación de Miedo .</p><p>\n\n <b>Saber:</b> Los objetivos afligidos por los hechizos del Saber de la Muerte quedan drenados de vida, debilitados y apáticos. Puedes asignar +1 Estado de @Condition[Fatigado] a cualquier objetivo vivo afectado por un hechizo de este Saber. Un objetivo tan sólo puede tener 1 Estado de Fatigado de esta forma en un momento dado.</p>",
+			"description": "<p>Te envuelves en un palio hecho de finas hebras de magia púrpura. Obtienes tantos puntos de Armadura como tu Bonificador por Voluntad en todas las Ubicaciones y el Rasgo de criatura @Compendium[wfrp4e-core.items.pTorrE0l3VybAbtn]{Miedo (1)}. Por cada +2 NE, puedes incrementar en 1 tu puntuación de Miedo.</p><p>\n\n <b>Saber:</b> Los objetivos afligidos por los hechizos del Saber de la Muerte quedan drenados de vida, debilitados y apáticos. Puedes asignar +1 Estado de @Condition[Fatigado] a cualquier objetivo vivo afectado por un hechizo de este Saber. Un objetivo tan sólo puede tener 1 Estado de Fatigado de esta forma en un momento dado.</p>",
 			"overcast": "Miedo",
 			"effects": {
 				"Purple Pall of Shyish": {
@@ -7877,7 +7877,7 @@
 		{
 			"id": "Push (Light)",
 			"name": "Empujar (Luz)",
-			"description": "<p>Todas las criaturas vivas a una distancia en yardas o menos de tu Bonificador por Voluntad son empujadas hacia atrás tantas yardas como tu Bonificador por Voluntad y pasan al Estado @Condition[Tumbado]. Si eso les hace entrar en contacto con una pared u otro obstáculo grande, sufren tanto Daño como la distancia recorrida en yardas. Por cada +2 NE puedes empujar a las criaturas otras tantas yardas como tu Bonificador por Voluntad.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz) . Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
+			"description": "<p>Todas las criaturas vivas a una distancia en yardas o menos de tu Bonificador por Voluntad son empujadas hacia atrás tantas yardas como tu Bonificador por Voluntad y pasan al Estado @Condition[Tumbado]. Si eso les hace entrar en contacto con una pared u otro obstáculo grande, sufren tanto Daño como la distancia recorrida en yardas. Por cada +2 NE puedes empujar a las criaturas otras tantas yardas como tu Bonificador por Voluntad.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz). Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
 			"overcast": "Yardas Empujado"
 		},
 		{
@@ -7983,7 +7983,7 @@
 		{
 			"id": "Shroud of Invisibility",
 			"name": "Mortaja de invisibilidad",
-			"description": "<p>Envuelves al objetivo en una mortaja de <em>Ulgu</em>. Éste se vuelve invisible y no puede ser percibido por los sentidos mundanos. El hechizo engañará de forma automática a todo aquel que no disponga del Talento @Compendium[wfrp4e-core.items.OEjUvJKi0xmBwbS2]{Clarividencia}. Quienes dispongan del Talento deberán superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Percepción</strong> para darse cuenta de que hay alguien cerca, aunque no serán capaces de discernir la ubicación precisa. Para hacerlo, deberán dispersar la Mortaja de invisibilidad . Aún es perceptible para los demás sentidos, y el hechizo acabará si atraes la atención hacia ti mismo haciendo mucho ruido o atacando a alguien.</p><p>\n\n <b>Saber:</b> Todos los hechizos lanzados del Saber de las Sombras que infligen Daño ignoran todos los puntos de Armadura no mágicos.</p>"
+			"description": "<p>Envuelves al objetivo en una mortaja de <em>Ulgu</em>. Éste se vuelve invisible y no puede ser percibido por los sentidos mundanos. El hechizo engañará de forma automática a todo aquel que no disponga del Talento @Compendium[wfrp4e-core.items.OEjUvJKi0xmBwbS2]{Clarividencia}. Quienes dispongan del Talento deberán superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Percepción</strong> para darse cuenta de que hay alguien cerca, aunque no serán capaces de discernir la ubicación precisa. Para hacerlo, deberán dispersar la Mortaja de invisibilidad. Aún es perceptible para los demás sentidos, y el hechizo acabará si atraes la atención hacia ti mismo haciendo mucho ruido o atacando a alguien.</p><p>\n\n <b>Saber:</b> Todos los hechizos lanzados del Saber de las Sombras que infligen Daño ignoran todos los puntos de Armadura no mágicos.</p>"
 		},
 		{
 			"id": "Sleep",
@@ -8013,7 +8013,7 @@
 		{
 			"id": "Speed of Thought",
 			"name": "Velocidad del pensamiento",
-			"description": "<p>Una rejilla de <em>Hysh</em> recubre tu mente, permitiéndote pensar con rapidez. Obtienes un bonificador +20 a la Inteligencia y a la Iniciativa.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz) . Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
+			"description": "<p>Una rejilla de <em>Hysh</em> recubre tu mente, permitiéndote pensar con rapidez. Obtienes un bonificador +20 a la Inteligencia y a la Iniciativa.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz). Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
 			"effects": {
 				"Speed of Thought": {
 					"name":"Velocidad del pensamiento"
@@ -8044,7 +8044,7 @@
 		{
 			"id": "Stream of Corruption",
 			"name": "Torrente de corrupción",
-			"description": "<p>Tu mandíbula se distiende horriblemente para que vomites una asquerosa corriente de suciedad enfermiza y de horror. Inmediatamente puedes llevar a cabo un ataque de Aliento como si hubieras gastado 2 Ventajas en activar el Rasgo de criatura @Compendium[wfrp4e-core.items.uqGxFOEqeurwkAO3]{Aliento}. Cuenta como un proyectil mágico con un Daño igual a tu Bonificador por Resistencia e ignora los puntos de Armadura. El ataque también tiene los rasgos <em>Corrosivo</em> y <em>Veneno</em> indicados en el Rasgo de criatura Aliento . Además, si un objetivo sufre más Heridas que su Bonificador por Resistencia, debe superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Aguante</strong> o contraer @Compendium[wfrp4e-core.items.M8XyRs9DN12XsFTQ]{podredumbre sanguínea}. Por cada +2 NE conseguidos, también puedes incrementar el Daño en +2.</p>",
+			"description": "<p>Tu mandíbula se distiende horriblemente para que vomites una asquerosa corriente de suciedad enfermiza y de horror. Inmediatamente puedes llevar a cabo un ataque de Aliento como si hubieras gastado 2 Ventajas en activar el Rasgo de criatura @Compendium[wfrp4e-core.items.uqGxFOEqeurwkAO3]{Aliento}. Cuenta como un proyectil mágico con un Daño igual a tu Bonificador por Resistencia e ignora los puntos de Armadura. El ataque también tiene los rasgos <em>Corrosivo</em> y <em>Veneno</em> indicados en el Rasgo de criatura Aliento. Además, si un objetivo sufre más Heridas que su Bonificador por Resistencia, debe superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Aguante</strong> o contraer @Compendium[wfrp4e-core.items.M8XyRs9DN12XsFTQ]{podredumbre sanguínea}. Por cada +2 NE conseguidos, también puedes incrementar el Daño en +2.</p>",
 			"effects": {
 				"Stream of Corruption": {
 					"name":"Torrente de corrupción"
@@ -8117,7 +8117,7 @@
 		{
 			"id": "Teleport (Light)",
 			"name": "Teletransporte (Luz)",
-			"description": "<p>Utilizando tu magia, te puedes teletransportar tantas yardas como tu Bonificador por Voluntad. Este movimiento te permite atravesar grietas, evitar peligros y trampas e ignorar obstáculos. Por cada +2 NE puedes aumentar la distancia recorrida tantas yardas como tu Bonificador por Voluntad.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz) . Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
+			"description": "<p>Utilizando tu magia, te puedes teletransportar tantas yardas como tu Bonificador por Voluntad. Este movimiento te permite atravesar grietas, evitar peligros y trampas e ignorar obstáculos. Por cada +2 NE puedes aumentar la distancia recorrida tantas yardas como tu Bonificador por Voluntad.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz). Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
 			"overcast": "Yardas viajadas"
 		},
 		{
@@ -8235,7 +8235,7 @@
 		{
 			"id": "Terrifying (Light)",
 			"name": "Terrorífico (Luz)",
-			"description": "<p>Obtienes el Rasgo de criatura @Compendium[wfrp4e-core.items.kJNAY1YRaCy9IgmT]{Terror (1)}.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz) . Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
+			"description": "<p>Obtienes el Rasgo de criatura @Compendium[wfrp4e-core.items.kJNAY1YRaCy9IgmT]{Terror (1)}.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz). Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
 			"effects": {
 				"Terrifying (Light)": {
 					"flags.wfrp4e.script":"let value = 1\nlet name = this.actor.prototypeToken.name\n\nif (game.user.isGM)\n{\nif (!game.user.targets.size)\n      return ui.notifications.warn(\"Selecciona un objetivo al que aplicar el efecto.\")\n  game.user.targets.forEach(t => {\n    t.actor.applyTerror(value, name)\n  })\n  game.user.updateTokenTargets([]);\n}\nelse \n{\n  game.wfrp4e.utility.postTerror(value, name)\n}",
@@ -8420,7 +8420,7 @@
 		{
 			"id": "Ward (Light)",
 			"name": "Custodia (Luz)",
-			"description": "<p>Te envuelves en magia protectora, obteniendo el Rasgo de criatura @Compendium[wfrp4e-core.items.Bvd2aZ0gQUXHfCTh]{Custodiado (9+)}.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz) . Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>"
+			"description": "<p>Te envuelves en magia protectora, obteniendo el Rasgo de criatura @Compendium[wfrp4e-core.items.Bvd2aZ0gQUXHfCTh]{Custodiado (9+)}.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz). Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>"
 		},
 		{
 			"id": "Ward (Metal)",
@@ -8643,7 +8643,7 @@
 			"id": "Broken Head (Major)",
 			"name": "Cabeza Rota (Grave)",
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#grave]{Huesos rotos}</p><p>Uno de tus huesos se ha roto de mala manera y, o bien ha quedado en mala posición, o se ha astillado en el punto de rotura. La Ubicación de impacto queda relativamente inutilizada hasta que se cura la fractura.</p>\n<p><span style=\"font-weight: bold;\">Cabeza:</span><span style=\"font-weight: bold;\">&nbsp;</span>Reducido a una dieta líquida y sufrirás un penalizador -30 a todos los Chequeos de Hablar idioma.</p>",
-			"penalty": "-30 Hablar idioma",
+			"penalty": "-30 a Hablar idioma",
 			"effects": {
 				"Broken Head": {
 					"name":"Cabeza Rota"
@@ -8654,7 +8654,7 @@
 			"id": "Broken Head (Minor)",
 			"name": "Cabeza Rota (Leve)",
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#leve]{Huesos rotos}</p><p>Te has fracturado un hueso, pero sigue estando alineado por lo que puede curarse solo sin atención médica.</p>\n<p><span style=\"font-weight: bold;\">Cabeza:</span><span style=\"font-weight: bold;\">&nbsp;</span>Reducido a una dieta líquida y sufrirás un penalizador -30 a todos los Chequeos de Hablar idioma.</p>",
-			"penalty": "-30 Hablar idioma",
+			"penalty": "-30 a Hablar idioma",
 			"effects": {
 				"Broken Head": {
 					"name":"Cabeza Rota"
@@ -9454,7 +9454,7 @@
 		{
 			"id": "Cat's Eyes",
 			"name": "Ojos de gato",
-			"description": "<p>¿Existe algo que no puede ser visto? Formulas un acertijo a Ranald, quien te responde enviando a un Sirviente divino en forma de gato. El gato parece disponer de las capacidades de un gato normal, pero no puede ser dañado en absoluto. Mientras el Milagro está activo, percibes todo lo que el gato percibe (vista, oído, tacto) y controlas sus movimientos. Tus sentidos son tan aguzados como los de un gato, pero no tienes acceso a tus propios Talentos potenciadores de los sentidos, como la Visión nocturna . Mientras el Milagro está activo, no puedes percibir nada a través de tus propios sentidos, los que te hace vulnerable.</p>"
+			"description": "<p>¿Existe algo que no puede ser visto? Formulas un acertijo a Ranald, quien te responde enviando a un Sirviente divino en forma de gato. El gato parece disponer de las capacidades de un gato normal, pero no puede ser dañado en absoluto. Mientras el Milagro está activo, percibes todo lo que el gato percibe (vista, oído, tacto) y controlas sus movimientos. Tus sentidos son tan aguzados como los de un gato, pero no tienes acceso a tus propios Talentos potenciadores de los sentidos, como la Visión nocturna. Mientras el Milagro está activo, no puedes percibir nada a través de tus propios sentidos, los que te hace vulnerable.</p>"
 		},
 		{
 			"id": "Death Mask",
@@ -9485,7 +9485,7 @@
 		{
 			"id": "Eagle's Eye",
 			"name": "Ojo de águila",
-			"description": "<p>Llamas a Myrmidia para que envíe a un servidor divino que te proporcione sabiduría acerca de tus enemigos. Se manifiesta un águila espectral, flotando en el cielo por encima de ti. El águila tiene el mismo aspecto y capacidades de un águila normal, pero no puede afectar físicamente al mundo, o ser dañada en modo alguno. Mientras el Milagro surta efecto, podrás ver a través de los ojos del águila y controlar su vuelo, sobrevolando el campo de batalla y espiando a tus enemigos. Tu visión es aguda pero no tienes acceso a ninguno de tus propios Talentos potenciadores de los sentidos como Visión nocturna . Al mirar a través de los ojos del águila, no puedes ver a través de los tuyos propios, lo que te hace potencialmente vulnerable.</p>"
+			"description": "<p>Llamas a Myrmidia para que envíe a un servidor divino que te proporcione sabiduría acerca de tus enemigos. Se manifiesta un águila espectral, flotando en el cielo por encima de ti. El águila tiene el mismo aspecto y capacidades de un águila normal, pero no puede afectar físicamente al mundo, o ser dañada en modo alguno. Mientras el Milagro surta efecto, podrás ver a través de los ojos del águila y controlar su vuelo, sobrevolando el campo de batalla y espiando a tus enemigos. Tu visión es aguda pero no tienes acceso a ninguno de tus propios Talentos potenciadores de los sentidos como Visión nocturna. Al mirar a través de los ojos del águila, no puedes ver a través de los tuyos propios, lo que te hace potencialmente vulnerable.</p>"
 		},
 		{
 			"id": "Fair Winds",
@@ -9785,7 +9785,7 @@
 		{
 			"id": "Animosity (Target)",
 			"name": "Animosidad (Objetivo)",
-			"description": "<p>Albergas una enemistad hacia el Objetivo , que por lo general será un grupo de personas o de criaturas, como por ejemplo ‘norlandeses’, ‘hombres bestia’ o ‘nobles’. Debes intentar un Chequeo de Psicología siempre que te encuentras con alguien perteneciente a dicho grupo. Si lo consigues, puedes gruñir y escupir, pero tan solo sufres un penalizador -20 a todos los Chequeos de Empatía hacia dicho grupo. Si fallas, te ves sujeto a la Animosidad .</p>\n<p>Al final de cada Asalto subsiguiente, puedes intentar un nuevo Chequeo de Psicología para acabar con la Animosidad . Si no lo consigues, los efectos de la Animosidad acaban cuando todos los miembros del grupo especificado en tu línea visual están completamente apaciguados, se han ido, tú sufres 1 Estado de <em>@Condition[Aturdido]</em> o quedas <em>@Condition[Inconsciente]</em> o te ves sujeto a otra Psicología. Cuando te ves sujeto a la Animosidad , debes atacar de inmediato a las criaturas que te resultan desagradables, tanto de forma social (insultos, puyas y similares) o físicamente (lo más común es con los puños), de la forma más apropiada. También obtienes un bonificador de +1 NE a todo intento de atacar al grupo social o mentalmente. La Animosidad se ve superada por el @Compendium[wfrp4e-core.items.Ib2YQYChktDFN93y]{Miedo} y el @Compendium[wfrp4e-core.items.meMkLEwdJIDLxM0B]{Terror}.</p>"
+			"description": "<p>Albergas una enemistad hacia el Objetivo , que por lo general será un grupo de personas o de criaturas, como por ejemplo ‘norlandeses’, ‘hombres bestia’ o ‘nobles’. Debes intentar un Chequeo de Psicología siempre que te encuentras con alguien perteneciente a dicho grupo. Si lo consigues, puedes gruñir y escupir, pero tan solo sufres un penalizador -20 a todos los Chequeos de Empatía hacia dicho grupo. Si fallas, te ves sujeto a la Animosidad.</p>\n<p>Al final de cada Asalto subsiguiente, puedes intentar un nuevo Chequeo de Psicología para acabar con la Animosidad. Si no lo consigues, los efectos de la Animosidad acaban cuando todos los miembros del grupo especificado en tu línea visual están completamente apaciguados, se han ido, tú sufres 1 Estado de <em>@Condition[Aturdido]</em> o quedas <em>@Condition[Inconsciente]</em> o te ves sujeto a otra Psicología. Cuando te ves sujeto a la Animosidad , debes atacar de inmediato a las criaturas que te resultan desagradables, tanto de forma social (insultos, puyas y similares) o físicamente (lo más común es con los puños), de la forma más apropiada. También obtienes un bonificador de +1 NE a todo intento de atacar al grupo social o mentalmente. La Animosidad se ve superada por el @Compendium[wfrp4e-core.items.Ib2YQYChktDFN93y]{Miedo} y el @Compendium[wfrp4e-core.items.meMkLEwdJIDLxM0B]{Terror}.</p>"
 		},
 		{
 			"id": "Camaraderie (Group)",
@@ -9795,12 +9795,12 @@
 		{
 			"id": "Fear (Rating)",
 			"name": "Miedo (Nivel)",
-			"description": "<p>El rasgo Miedo representa una aversión extrema hacia algo. Las criaturas que causan <em>Miedo</em> tienen un Nivel de Miedo; este valor refleja el NE que debes obtener en un Chequeo prolongado de Frialdad para vencer tu Miedo . Puedes continuar haciendo Chequeos al final de cada Asalto hasta que tu NE iguala o supera el Nivel de Miedo de la criatura. Hasta que lo consigues, estás sujeto al Miedo.</p>\n<p>Cuando te ves sujeto al <em>Miedo</em>, sufres -1 NE a todos los Chequeos para afectar a la fuente del mismo. No te puedes acercar a lo que te provoca el Miedo sin superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Frialdad</strong>. Si se acerca más a ti, deberás superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Frialdad</strong> o sufrir 1 Estado de <em>@Condition[Quebrantado]</em>.</p>"
+			"description": "<p>El rasgo Miedo representa una aversión extrema hacia algo. Las criaturas que causan <em>Miedo</em> tienen un Nivel de Miedo; este valor refleja el NE que debes obtener en un Chequeo prolongado de Frialdad para vencer tu Miedo. Puedes continuar haciendo Chequeos al final de cada Asalto hasta que tu NE iguala o supera el Nivel de Miedo de la criatura. Hasta que lo consigues, estás sujeto al Miedo.</p>\n<p>Cuando te ves sujeto al <em>Miedo</em>, sufres -1 NE a todos los Chequeos para afectar a la fuente del mismo. No te puedes acercar a lo que te provoca el Miedo sin superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Frialdad</strong>. Si se acerca más a ti, deberás superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Frialdad</strong> o sufrir 1 Estado de <em>@Condition[Quebrantado]</em>.</p>"
 		},
 		{
 			"id": "Frenzy",
 			"name": "Furia",
-			"description": "<p>Mediante un Chequeo de Voluntad, puedes inducirte a ti mismo un estado alterado, sugestionándote, aullando, mordiendo tu escudo o algo similar. Si lo consigues, te ves sujeto a la Furia .</p>\n<p>Mientras estás sujeto a la Furia , eres inmune a todas las demás Psicologías y no huyes ni te retiras por razón alguna; por el contrario, debes moverte con toda celeridad hacia el enemigo más próximo al que puedes ver, para atacarle. Por lo general, la única Acción que puedes llevar a cabo es un Chequeo de Habilidad de armas o un Chequeo de Atletismo para llegar más rápidamente hasta un enemigo. Además, puedes llevar a cabo un Chequeo de Cuerpo a cuerpo como Acción libre cada Asalto porque estás poniendo en tus ataques todo lo que tienes. Por último, obtienes un +1 a tu Bonificador por Fuerza, tal es tu ferocidad. Permaneces en Furia hasta que todos los enemigos en tu línea visual han sido pacificados, o sufres 1 Estado de @Condition[Aturdido] o quedas @Condition[Inconsciente]. Una vez se acaba tu Furia , sufres de inmediato 1 Estado de @Condition[Fatigado].</p><blockquote class=\"foundry-note\"><p><span style=\"font-style: normal;\">El efecto está desactivado por defecto, activarlo en el apartado 'efectos' al entrar en Furia.</p></blockquote>",
+			"description": "<p>Mediante un Chequeo de Voluntad, puedes inducirte a ti mismo un estado alterado, sugestionándote, aullando, mordiendo tu escudo o algo similar. Si lo consigues, te ves sujeto a la Furia.</p>\n<p>Mientras estás sujeto a la Furia , eres inmune a todas las demás Psicologías y no huyes ni te retiras por razón alguna; por el contrario, debes moverte con toda celeridad hacia el enemigo más próximo al que puedes ver, para atacarle. Por lo general, la única Acción que puedes llevar a cabo es un Chequeo de Habilidad de armas o un Chequeo de Atletismo para llegar más rápidamente hasta un enemigo. Además, puedes llevar a cabo un Chequeo de Cuerpo a cuerpo como Acción libre cada Asalto porque estás poniendo en tus ataques todo lo que tienes. Por último, obtienes un +1 a tu Bonificador por Fuerza, tal es tu ferocidad. Permaneces en Furia hasta que todos los enemigos en tu línea visual han sido pacificados, o sufres 1 Estado de @Condition[Aturdido] o quedas @Condition[Inconsciente]. Una vez se acaba tu Furia , sufres de inmediato 1 Estado de @Condition[Fatigado].</p><blockquote class=\"foundry-note\"><p><span style=\"font-style: normal;\">El efecto está desactivado por defecto, activarlo en el apartado 'efectos' al entrar en Furia.</p></blockquote>",
 			"effects": {
 				"Frenzy": {
 					"name":"Furia"
@@ -9810,7 +9810,7 @@
 		{
 			"id": "Hatred (Target)",
 			"name": "Odio (Objetivo)",
-			"description": "<p>Te ves consumido por el Odio hacia el Objetivo , que normalmente suele ser un grupo de personas o de criaturas, como por ejemplo, ‘hochlandeses’, ‘pulpos de las ciénagas’ o ‘esclavistas’. Jamás interaccionarás socialmente con algo o alguien a quien odies de esta forma. Al encontrarte con el objeto de tu Odio , deberás intentar un Chequeo de Psicología. Si fallas, te ves sujeto al Odio .</p><p>Al final de cada asalto subsiguiente, puedes intentar un nuevo Chequeo de Psicología para acabar con el Odio . Si no lo consigues, los efectos del Odio acaban por sí solos de forma natural cuando todos los miembros del grupo especificado han muerto o se han ido, o pasas al Estado @Condition[Inconsciente].</p>\n<p>Mientras te ves sujeto al Odio , debes intentar destruir de inmediato al grupo odiado por el método más rápido y letal posible. Obtienes un bonificador de +1 NE a todos los Chequeos de combate contra el grupo especificado, y eres inmune al @Compendium[wfrp4e-core.items.Ib2YQYChktDFN93y]{Miedo} y al @Compendium[wfrp4e-core.items.I0yPc4PH5erWJLmu]{Intimidar} (pero no al @Compendium[wfrp4e-core.items.meMkLEwdJIDLxM0B]{Terror}) causados por tu odiado enemigo.</p>",
+			"description": "<p>Te ves consumido por el Odio hacia el Objetivo , que normalmente suele ser un grupo de personas o de criaturas, como por ejemplo, ‘hochlandeses’, ‘pulpos de las ciénagas’ o ‘esclavistas’. Jamás interaccionarás socialmente con algo o alguien a quien odies de esta forma. Al encontrarte con el objeto de tu Odio , deberás intentar un Chequeo de Psicología. Si fallas, te ves sujeto al Odio.</p><p>Al final de cada asalto subsiguiente, puedes intentar un nuevo Chequeo de Psicología para acabar con el Odio. Si no lo consigues, los efectos del Odio acaban por sí solos de forma natural cuando todos los miembros del grupo especificado han muerto o se han ido, o pasas al Estado @Condition[Inconsciente].</p>\n<p>Mientras te ves sujeto al Odio , debes intentar destruir de inmediato al grupo odiado por el método más rápido y letal posible. Obtienes un bonificador de +1 NE a todos los Chequeos de combate contra el grupo especificado, y eres inmune al @Compendium[wfrp4e-core.items.Ib2YQYChktDFN93y]{Miedo} y al @Compendium[wfrp4e-core.items.I0yPc4PH5erWJLmu]{Intimidar} (pero no al @Compendium[wfrp4e-core.items.meMkLEwdJIDLxM0B]{Terror}) causados por tu odiado enemigo.</p>",
 			"effects": {
 				"Hatred": {
 					"flags.wfrp4e.effectData.description":"Chequeos de Combate contra el Grupo Odiado",
@@ -9837,7 +9837,7 @@
 		{
 			"id": "Prejudice (Target)",
 			"name": "Prejuicios (Objetivo)",
-			"description": "<p>Te cae realmente mal el Objetivo , que por lo general es un grupo de personas o de criaturas, como por ejemplo ‘ostlandeses’, ‘elfos’ o ‘hechiceros’. Debes superar un Chequeo de Psicología cada vez que te encuentras con el grupo contra el que tienes esa actitud. Si lo superas, puedes ponerles mala cara, pero por lo general actúas normalmente salvo un penalizador -10 a todos los Chequeos de Empatía hacia dicho grupo. Si fallas, te ves sujeto a los Prejuicios .</p><p>Al final de cada asalto subsiguiente, puedes intentar un nuevo Chequeo de Psicología para acabar con ese Prejuicio . Si no es así, los efectos del Prejuicio acaban de forma natural cuando todos los miembros del grupo especificado en tu línea visual se han ido o tú sufres de 1 Estado de <em>@Condition[Aturdido]</em>, quedas <em>@Condition[Inconsciente]</em> o te ves sujeto a otra Psicología.</p>\n<p>Cuanto te ves sujeto a un Prejuicio debes insultar de inmediato al objetivo del mismo. En voz bien clarita.</p>"
+			"description": "<p>Te cae realmente mal el Objetivo , que por lo general es un grupo de personas o de criaturas, como por ejemplo ‘ostlandeses’, ‘elfos’ o ‘hechiceros’. Debes superar un Chequeo de Psicología cada vez que te encuentras con el grupo contra el que tienes esa actitud. Si lo superas, puedes ponerles mala cara, pero por lo general actúas normalmente salvo un penalizador -10 a todos los Chequeos de Empatía hacia dicho grupo. Si fallas, te ves sujeto a los Prejuicios.</p><p>Al final de cada asalto subsiguiente, puedes intentar un nuevo Chequeo de Psicología para acabar con ese Prejuicio. Si no es así, los efectos del Prejuicio acaban de forma natural cuando todos los miembros del grupo especificado en tu línea visual se han ido o tú sufres de 1 Estado de <em>@Condition[Aturdido]</em>, quedas <em>@Condition[Inconsciente]</em> o te ves sujeto a otra Psicología.</p>\n<p>Cuanto te ves sujeto a un Prejuicio debes insultar de inmediato al objetivo del mismo. En voz bien clarita.</p>"
 		},
 		{
 			"id": "Terror (Rating)",
@@ -9867,7 +9867,7 @@
 		{
 			"id": "Afraid",
 			"name": "Temor",
-			"description": "<p>La criatura sufre Miedo (0) hacia el objetivo.&nbsp;</p>\n<p>El rasgo Miedo representa una aversión extrema hacia algo. Las criaturas que causan Miedo tienen un Nivel de Miedo; este valor refleja el NE que debes obtener en un Chequeo prolongado de Frialdad para vencer tu Miedo . Puedes continuar haciendo Chequeos al final de cada Asalto hasta que tu NE iguala o supera el Nivel de Miedo de la criatura. Hasta que lo consigues, estás sujeto al Miedo.</p>\n<p>&nbsp;</p>\n<p>Cuando te ves sujeto al Miedo, sufres -1 NE a todos los Chequeos para afectar a la fuente del mismo. No te puedes acercar a lo que te provoca el Miedo sin superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Frialdad</strong>. Si se acerca más a ti, deberás superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Frialdad</strong>, o sufrir 1 Estado de @Condition[Quebrantado].</p>"
+			"description": "<p>La criatura sufre Miedo (0) hacia el objetivo.&nbsp;</p>\n<p>El rasgo Miedo representa una aversión extrema hacia algo. Las criaturas que causan Miedo tienen un Nivel de Miedo; este valor refleja el NE que debes obtener en un Chequeo prolongado de Frialdad para vencer tu Miedo. Puedes continuar haciendo Chequeos al final de cada Asalto hasta que tu NE iguala o supera el Nivel de Miedo de la criatura. Hasta que lo consigues, estás sujeto al Miedo.</p>\n<p>&nbsp;</p>\n<p>Cuando te ves sujeto al Miedo, sufres -1 NE a todos los Chequeos para afectar a la fuente del mismo. No te puedes acercar a lo que te provoca el Miedo sin superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Frialdad</strong>. Si se acerca más a ti, deberás superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Frialdad</strong>, o sufrir 1 Estado de @Condition[Quebrantado].</p>"
 		},
 		{
 			"id": "Amphibious",
@@ -9912,7 +9912,7 @@
 		{
 			"id": "Bestial",
 			"name": "Bestial",
-			"description": "<p>La criatura carece de pensamiento racional o de idioma. Evita el fuego y sufre 1 Estado de @Condition[Quebrantado] si la golpean con fuego. Para su defensa, sólo utiliza la Habilidad de Esquivar. Si pierde más de la mitad de sus Heridas, intenta Huir a menos que proteja a sus crías o este arrinconada, o a menos que tenga el Rasgo Territorial . Si lo tiene, entra en Furia. Las criaturas bestiales no tienen el atributo de Empatía.</p>"
+			"description": "<p>La criatura carece de pensamiento racional o de idioma. Evita el fuego y sufre 1 Estado de @Condition[Quebrantado] si la golpean con fuego. Para su defensa, sólo utiliza la Habilidad de Esquivar. Si pierde más de la mitad de sus Heridas, intenta Huir a menos que proteja a sus crías o este arrinconada, o a menos que tenga el Rasgo Territorial. Si lo tiene, entra en Furia. Las criaturas bestiales no tienen el atributo de Empatía.</p>"
 		},
 		{
 			"id": "Big",
@@ -10081,7 +10081,7 @@
 		{
 			"id": "Daemonic",
 			"name": "Demoníaco",
-			"description": "<p>La esencia de la criatura es magia pura y un icor impío recorre lo que se supone que son sus venas. Las criaturas demoníacas no requieren los prerrequisitos normales de la vida: comida, agua, aire…</p>\n<p>Todos sus ataques son Mágicos . Tira [[/r 1d10]] después de que sufra cualquier golpe, si la criatura obtiene el número objetivo o mayor ignora el impacto, aunque sea un crítico. Si la criatura queda reducida a 0 Heridas, su alma vuelve de inmediato a los Reinos del Caos, eliminándola del juego.</p>"
+			"description": "<p>La esencia de la criatura es magia pura y un icor impío recorre lo que se supone que son sus venas. Las criaturas demoníacas no requieren los prerrequisitos normales de la vida: comida, agua, aire…</p>\n<p>Todos sus ataques son Mágicos. Tira [[/r 1d10]] después de que sufra cualquier golpe, si la criatura obtiene el número objetivo o mayor ignora el impacto, aunque sea un crítico. Si la criatura queda reducida a 0 Heridas, su alma vuelve de inmediato a los Reinos del Caos, eliminándola del juego.</p>"
 		},
 		{
 			"id": "Dark Vision",
@@ -10282,7 +10282,7 @@
 			"description": "<p>La criatura ha sido ‘bendecida’ con una Mutación. Tira en la Tabla de Corrupción física</p>\n<p>@Table[mutatephys]</p>\n<p>@Table[expandedmutatephys] (si el módulo EiS está instalado)</p>"
 		},
 		{
-			"id": "Night Vision",
+			"id": "oSB55FkFpLO3ncZz",
 			"name": "Visión nocturna",
 			"description": "<p>Puedes ver muy bien en la oscuridad natural. Suponiendo que tengas por lo menos una fuente de luz débil (como por ejemplo la de las estrellas, la de la luna o la bioluminiscencia) puedes ver con claridad a 20 yardas por nivel de Visión nocturna. Además, puedes extender la distancia de iluminación efectiva de cualquier fuente de luz en 20 yardas por nivel de Visión nocturna.</p>"
 		},
@@ -10386,7 +10386,7 @@
 		{
 			"id": "Swarm",
 			"name": "Plaga",
-			"description": "<p>Las plagas son grandes números de la misma criatura actuando como una sola. Las Plagas ignoran todas las reglas relativas al Rasgo de criatura Tamaño . Una plaga cuenta como una sola Criatura, que ignora las reglas de Psicología y puede ignorar las reglas de Trabado cuando utiliza su Movimiento. Si la Plaga acierta a un oponente, activa la regla de Golpe mortal (incluso si no ha matado a dicho oponente). Todos los oponentes Trabados con una Plaga pierden automáticamente 1 Herida al final de cada Asalto puesto que la Plaga abruma a cualquier cosa cercana. La Plaga tiene cinco veces las Heridas de un ejemplar normal de la criatura y obtiene un +10 a su Habilidad de armas. Todo intento de acertar a la Plaga con un disparo tiene un bonificador +40 al impacto.</p>",
+			"description": "<p>Las plagas son grandes números de la misma criatura actuando como una sola. Las Plagas ignoran todas las reglas relativas al Rasgo de criatura Tamaño. Una plaga cuenta como una sola Criatura, que ignora las reglas de Psicología y puede ignorar las reglas de Trabado cuando utiliza su Movimiento. Si la Plaga acierta a un oponente, activa la regla de Golpe mortal (incluso si no ha matado a dicho oponente). Todos los oponentes Trabados con una Plaga pierden automáticamente 1 Herida al final de cada Asalto puesto que la Plaga abruma a cualquier cosa cercana. La Plaga tiene cinco veces las Heridas de un ejemplar normal de la criatura y obtiene un +10 a su Habilidad de armas. Todo intento de acertar a la Plaga con un disparo tiene un bonificador +40 al impacto.</p>",
 			"effects": {
 				"Swarm Bonus": {
 					"name":"Bonificadores por Plaga"
@@ -10399,7 +10399,7 @@
 		{
 			"id": "Tail Attack",
 			"name": "Coletazo",
-			"description": "<p>La cola de la criatura es capaz de derribar de un golpe a sus enemigos.\nEn su turno, puede llevar a cabo un Ataque gratuito gastando 1 Ventaja. El Coletazo hace el daño indicado entre paréntesis, que ya incluye su Bonificador por Fuerza . Los oponentes de menor Tamaño que la criatura y que sufren cualquier Herida a causa del ataque también pasan al Estado @Condition[Tumbado].</p>",
+			"description": "<p>La cola de la criatura es capaz de derribar de un golpe a sus enemigos.\nEn su turno, puede llevar a cabo un Ataque gratuito gastando 1 Ventaja. El Coletazo hace el daño indicado entre paréntesis, que ya incluye su Bonificador por Fuerza. Los oponentes de menor Tamaño que la criatura y que sufren cualquier Herida a causa del ataque también pasan al Estado @Condition[Tumbado].</p>",
 			"effects": {
 				"Tail Attack": {
 					"flags.wfrp4e.script":"let actorSize = game.wfrp4e.config.actorSizeNums[args.actor.details.size.value]\nlet attackerSize = game.wfrp4e.config.actorSizeNums[args.attacker.details.size.value]\n\nif (attackerSize > actorSize)\n{\n   args.actor.addCondition(\"prone\")\n   ChatMessage.create({content: `<b>Coletazo</b>: ${args.actor.data.token.name} está ahora @Condition[Tumbado]`, speaker : {alias: args.attacker.data.token.name}})\n}",
@@ -10465,7 +10465,7 @@
 		{
 			"id": "Trained",
 			"name": "Adiestrado",
-			"description": "<p>Este rasgo representa animales que han sido adiestrados mediante la Habilidad Adiestrar animales. Las Habilidades que el animal conoce se indican entre paréntesis. Tienes toda la libertad para crear tus propias habilidades adiestradas.</p>\n        <p><strong>Casa</strong>: el animal ha sido adiestrado para volver a casa si se le suelta o se pierde.</p>\n        <p><strong>Entretener</strong>: el animal ha sido adiestrado para entretener a la gente. Suma un bonificador +10 a los Chequeos.</p>\n        <p><strong>Guerra</strong>: el animal ha sido adiestrado para la guerra, obteniendo un +10 a su Habilidad de armas. También puede ignorar el Rasgo Asustadizo para ruidos fuertes.</p>\n        <p><strong>Magia</strong>: el animal está adiestrado para ignorar el Rasgo Asustadizo en relación a la Magia, lo que suele ser conveniente para la mayoría de caballos que utilizan los hechiceros.</p>\n        <p><strong>Montura</strong>: el animal aceptará un jinete. Algunas criaturas son especialmente beligerantes y no aceptarán un jinete que carezca de la habilidad correcta. Así, para montar un grifo, necesitas la Habilidad Montar (grifo).</p>\n        <p><strong>Protege</strong>: el animal ha sido adiestrado para quedarse en un sitio y merodear por él como guardia, lo que le concede el Rasgo Territorial .</p>\n        <p><strong>Tirar</strong>: el animal ha sido adiestrado para tirar de una diligencia, carreta, arado, calesa o similar.</p>\n        <p><strong>Trae</strong>: el animal ha sido adiestrado para ir a buscar cosas. Esto suele reservarse para los perros y similares.</p>\n        <p><strong>Domado</strong>: El animal está entrenado para ignorar su rasgo Bestial. Recibe [[/r 2d10]] de Empatía.</p>"
+			"description": "<p>Este rasgo representa animales que han sido adiestrados mediante la Habilidad Adiestrar animales. Las Habilidades que el animal conoce se indican entre paréntesis. Tienes toda la libertad para crear tus propias habilidades adiestradas.</p>\n        <p><strong>Casa</strong>: el animal ha sido adiestrado para volver a casa si se le suelta o se pierde.</p>\n        <p><strong>Entretener</strong>: el animal ha sido adiestrado para entretener a la gente. Suma un bonificador +10 a los Chequeos.</p>\n        <p><strong>Guerra</strong>: el animal ha sido adiestrado para la guerra, obteniendo un +10 a su Habilidad de armas. También puede ignorar el Rasgo Asustadizo para ruidos fuertes.</p>\n        <p><strong>Magia</strong>: el animal está adiestrado para ignorar el Rasgo Asustadizo en relación a la Magia, lo que suele ser conveniente para la mayoría de caballos que utilizan los hechiceros.</p>\n        <p><strong>Montura</strong>: el animal aceptará un jinete. Algunas criaturas son especialmente beligerantes y no aceptarán un jinete que carezca de la habilidad correcta. Así, para montar un grifo, necesitas la Habilidad Montar (grifo).</p>\n        <p><strong>Protege</strong>: el animal ha sido adiestrado para quedarse en un sitio y merodear por él como guardia, lo que le concede el Rasgo Territorial.</p>\n        <p><strong>Tirar</strong>: el animal ha sido adiestrado para tirar de una diligencia, carreta, arado, calesa o similar.</p>\n        <p><strong>Trae</strong>: el animal ha sido adiestrado para ir a buscar cosas. Esto suele reservarse para los perros y similares.</p>\n        <p><strong>Domado</strong>: El animal está entrenado para ignorar su rasgo Bestial. Recibe [[/r 2d10]] de Empatía.</p>"
 		},
 		{
 			"id": "Undead",
@@ -10515,7 +10515,7 @@
 		{
 			"id": "Weapon",
 			"name": "Arma",
-			"description": "<p>La criatura lleva un arma cuerpo a cuerpo, o bien utiliza dientes, zarpas o cosas similares en combate.\n El arma causa tanto daño como la cifra entre paréntesis, que ya incluye el Bonificador por Fuerza de la criatura . Típicamente será 4 + Bonificador por Fuerza (lo que representa un Arma de mano).</p>"
+			"description": "<p>La criatura lleva un arma cuerpo a cuerpo, o bien utiliza dientes, zarpas o cosas similares en combate.\n El arma causa tanto daño como la cifra entre paréntesis, que ya incluye el Bonificador por Fuerza de la criatura. Típicamente será 4 + Bonificador por Fuerza (lo que representa un Arma de mano).</p>"
 		},
 		{
 			"id": "Web",
@@ -10609,7 +10609,7 @@
 		{
 			"id": "Arcane Magic",
 			"name": "Magia arcana",
-			"description": "<p>&nbsp;</p>\n<p>Puedes, o bien estudiar uno de los ocho Saberes arcanos de la Magia (Bestias, Cielos, Fuego, Luz, Metal, Muerte, Sombra y Vida) o practicar un Saber menos conocido como Adivinación o Nigromancia. Ahora puedes memorizar hechizos de tu Saber elegido al siguiente coste en PX.</p>\n<p>&nbsp;</p>\n<div>\n<table title=\"\" border=\"1\" summary=\"\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td>\n<p>Nº de hechizos actualmente conocidos</p>\n</td>\n<td>\n<p>Coste en PX de un nuevo hechizo</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 1&nbsp;</p>\n</td>\n<td>\n<p>100 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 2</p>\n</td>\n<td>\n<p>200 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 3</p>\n</td>\n<td>\n<p>300 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 4</p>\n</td>\n<td>\n<p>400 PX</p>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<p>&nbsp;...y así sucesivamente.</p>\n<p>&nbsp;</p>\n<p>Por lo tanto, si tu Bonificador por Inteligencia es 4, el primer hechizo y los siguientes 4 te costarán 100 PX, los segundos 4 te costarán 200 PX, etc. Las reglas completas para aprender nuevos hechizos se proporcionan en el Capítulo 8: Magia. En circunstanciLo normales, no puedes aprender más de un talento de Magia arcana (Saber) . Además, cuando tienes el Talento Magia arcana , no puedes aprender los Talentos Bendecir ni Invocar . Puedes borrar de la memoria este Talento por 100 PX, pero si lo haces perderás de inmediato todos tus hechizos.</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>"
+			"description": "<p>Puedes, o bien estudiar uno de los ocho Saberes arcanos de la Magia (Bestias, Cielos, Fuego, Luz, Metal, Muerte, Sombra y Vida) o practicar un Saber menos conocido como Adivinación o Nigromancia. Ahora puedes memorizar hechizos de tu Saber elegido al siguiente coste en PX.</p>\n<div>\n<table title=\"\" border=\"1\" summary=\"\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td>\n<p>Nº de hechizos actualmente conocidos</p>\n</td>\n<td>\n<p>Coste en PX de un nuevo hechizo</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 1&nbsp;</p>\n</td>\n<td>\n<p>100 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 2</p>\n</td>\n<td>\n<p>200 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 3</p>\n</td>\n<td>\n<p>300 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 4</p>\n</td>\n<td>\n<p>400 PX</p>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<p>...y así sucesivamente.</p>\n<p>Por lo tanto, si tu Bonificador por Inteligencia es 4, el primer hechizo y los siguientes 4 te costarán 100 PX, los segundos 4 te costarán 200 PX, etc. Las reglas completas para aprender nuevos hechizos se proporcionan en @UUID[Compendium.wfrp4e-core.journals.JournalEntry.YBVrpUHEjohB1H4f]{Magia}. En circunstanciLo normales, no puedes aprender más de un talento de Magia arcana (Saber). Además, cuando tienes el Talento Magia arcana, no puedes aprender los Talentos @UUID[Compendium.wfrp4e-core.items.Item.QyjWtSdnVMT04l5Y]{Bendecir} ni @UUID[Compendium.wfrp4e-core.items.Item.voV0C2ar1bKpcpnH]{Invocar}. Puedes borrar de la memoria este Talento por 100 PX, pero si lo haces perderás de inmediato todos tus hechizos.</p>"
 		},
 		{
 			"id": "Argumentative",
@@ -10673,13 +10673,13 @@
 		{
 			"id": "Blather",
 			"name": "Parloteo",
-			"description": "<p>Denominado ‘abrir la boca y dejar que las tripas gruñan’ en Nordland o simplemente ‘decir tonterías’ en Ostland, el Parloteo implica hablar de forma rápida e incesante, o hablar de forma voluble y prolongada sobre temas intrascendentes o directamente inanes, y se utiliza para confundir y aturullar verbalmente a un objetivo. Utilizas tu Habilidad de Carisma para Parlotear . Intenta un Chequeo <strong>Enfrentado Carisma/Inteligencia</strong>. Un éxito hace que tu oponente sufta 1 Estado de Aturdido . Además, por cada nivel que tengas en Parloteo , tu oponente sufrirá otro Estado de Aturdido . Los objetivos Aturdidos por Parloteo no pueden hacer otra cosa que quedársete mirando embobados mientras intentan seguir o entender lo que dices. Una vez se acaba el último estado de Aturdido , el objetivo consigue finalmente meter baza y puede que esté algo irritado contigo, al fin y al cabo llevas bastante rato diciendo tonterías o hablando de nada en concreto. Si dejas de hablar, tu oponente pierde de inmediato todos los Estados de Aturdido originados por tu Parloteo . En general, sólo puedes intentar el Parloteo una vez por escena, o quizá más tiempo si lo permite el DJ, puesto que el objetivo se habitúa rápidamente a tus payasadas.</p>",
+			"description": "<p>Denominado ‘abrir la boca y dejar que las tripas gruñan’ en Nordland o simplemente ‘decir tonterías’ en Ostland, el Parloteo implica hablar de forma rápida e incesante, o hablar de forma voluble y prolongada sobre temas intrascendentes o directamente inanes, y se utiliza para confundir y aturullar verbalmente a un objetivo. Utilizas tu Habilidad de Carisma para Parlotear. Intenta un Chequeo <strong>Enfrentado Carisma/Inteligencia</strong>. Un éxito hace que tu oponente sufta 1 Estado de Aturdido. Además, por cada nivel que tengas en Parloteo , tu oponente sufrirá otro Estado de Aturdido. Los objetivos Aturdidos por Parloteo no pueden hacer otra cosa que quedársete mirando embobados mientras intentan seguir o entender lo que dices. Una vez se acaba el último estado de Aturdido , el objetivo consigue finalmente meter baza y puede que esté algo irritado contigo, al fin y al cabo llevas bastante rato diciendo tonterías o hablando de nada en concreto. Si dejas de hablar, tu oponente pierde de inmediato todos los Estados de Aturdido originados por tu Parloteo. En general, sólo puedes intentar el Parloteo una vez por escena, o quizá más tiempo si lo permite el DJ, puesto que el objetivo se habitúa rápidamente a tus payasadas.</p>",
 			"tests": "Carisma para Parlotear"
 		},
 		{
 			"id": "Bless",
 			"name": "Bendición",
-			"description": "<p>Uno de los dioses vela por ti, y ello te permite potenciar las más sencillas plegarias. Ahora puedes desplegar las Bendiciones de tu dios, según se indica en el Capítulo 7: Religión y creencias. En circunstanciLo normales, sólo puedes adquirir el Talento Bendición (Saber divino) una vez .</p>"
+			"description": "<p>Uno de los dioses vela por ti, y ello te permite potenciar las más sencillas plegarias. Ahora puedes desplegar las Bendiciones de tu dios, según se indica en @UUID[JournalEntry.NcH9OhleJFfaUdon]{Religión y creencias}. En circunstancias normales, sólo puedes adquirir el Talento Bendición (Saber divino) una vez.</p>"
 		},
 		{
 			"id": "Bookish",
@@ -10885,7 +10885,7 @@
 		{
 			"id": "Drilled",
 			"name": "Entrenado",
-			"description": "<p>Se te ha entrenado para luchar hombro con hombro con otros soldados. Si un enemigo te hace perder Ventaja cuando estás junto a un aliado activo que también tiene el Talento Entrenado , puedes conservar 1 punto de Ventaja perdido por cada vez que has adquirido el Talento Entrenado .</p>",
+			"description": "<p>Se te ha entrenado para luchar hombro con hombro con otros soldados. Si un enemigo te hace perder Ventaja cuando estás junto a un aliado activo que también tiene el Talento Entrenado , puedes conservar 1 punto de Ventaja perdido por cada vez que has adquirido el Talento Entrenado.</p>",
 			"tests": "Chequeos de Cuerpo a cuerpo cuando estás junto a un aliado que también está Entrenado"
 		},
 		{
@@ -10915,7 +10915,7 @@
 		{
 			"id": "Fast Hands",
 			"name": "Manos rápidas",
-			"description": "<p>Puedes mover las manos con sorprendente destreza. Los presentes no tienen derecho a Chequeos de Percepción pasivos para darse cuenta de tu uso de la Habilidad Prestidigitación, y en su lugar tan sólo pueden enfrentarse a tus Chequeos de Prestidigitación si sospechan de forma activa y están vigilando tus movimientos. Además, todo intento de utilizar Cuerpo a cuerpo (pelea) para simplemente tocar a un oponente te da un bonificador +10 x tu nivel en Manos rápidas .</p>",
+			"description": "<p>Puedes mover las manos con sorprendente destreza. Los presentes no tienen derecho a Chequeos de Percepción pasivos para darse cuenta de tu uso de la Habilidad Prestidigitación, y en su lugar tan sólo pueden enfrentarse a tus Chequeos de Prestidigitación si sospechan de forma activa y están vigilando tus movimientos. Además, todo intento de utilizar Cuerpo a cuerpo (pelea) para simplemente tocar a un oponente te da un bonificador +10 x tu nivel en Manos rápidas.</p>",
 			"tests": "Prestidigitación, Cuerpo a cuerpo (pelea) para tocar a un oponente"
 		},
 		{
@@ -10973,7 +10973,7 @@
 		{
 			"id": "Frenzy",
 			"name": "Furia",
-			"description": "<p style=\"user-select: text; color: #111111;\">Mediante un Chequeo de Voluntad, puedes inducirte a ti mismo un estado alterado, sugestionándote, aullando, mordiendo tu escudo o algo similar. Si lo consigues, te ves sujeto a la Furia .</p>\n<p style=\"user-select: text; color: #111111;\">Mientras estás sujeto a la Furia , eres inmune a todas las demás Psicologías y no huyes ni te retiras por razón alguna; por el contrario, debes moverte con toda celeridad hacia el enemigo más próximo al que puedes ver, para atacarle. Por lo general, la única Acción que puedes llevar a cabo es un Chequeo de Habilidad de armas o un Chequeo de Atletismo para llegar más rápidamente hasta un enemigo. Además, puedes llevar a cabo un Chequeo de Cuerpo a cuerpo como Acción libre cada Asalto porque estás poniendo en tus ataques todo lo que tienes. Por último, obtienes un +1 a tu Bonificador por Fuerza, tal es tu ferocidad. Permaneces en Furia hasta que todos los enemigos en tu línea visual han sido pacificados, o sufres 1 Estado de @Condition[Aturdido] o quedas @Condition[Inconsciente]. Una vez se acaba tu Furia , sufres de inmediato 1 Estado de @Condition[Fatigado].</p><blockquote class=\"foundry-note\"><p><span style=\"font-style: normal;\">El efecto está desactivado por defecto, activarlo en el apartado 'efectos' al entrar en Furia.</p></blockquote>",
+			"description": "<p style=\"user-select: text; color: #111111;\">Mediante un Chequeo de Voluntad, puedes inducirte a ti mismo un estado alterado, sugestionándote, aullando, mordiendo tu escudo o algo similar. Si lo consigues, te ves sujeto a la Furia.</p>\n<p style=\"user-select: text; color: #111111;\">Mientras estás sujeto a la Furia , eres inmune a todas las demás Psicologías y no huyes ni te retiras por razón alguna; por el contrario, debes moverte con toda celeridad hacia el enemigo más próximo al que puedes ver, para atacarle. Por lo general, la única Acción que puedes llevar a cabo es un Chequeo de Habilidad de armas o un Chequeo de Atletismo para llegar más rápidamente hasta un enemigo. Además, puedes llevar a cabo un Chequeo de Cuerpo a cuerpo como Acción libre cada Asalto porque estás poniendo en tus ataques todo lo que tienes. Por último, obtienes un +1 a tu Bonificador por Fuerza, tal es tu ferocidad. Permaneces en Furia hasta que todos los enemigos en tu línea visual han sido pacificados, o sufres 1 Estado de @Condition[Aturdido] o quedas @Condition[Inconsciente]. Una vez se acaba tu Furia , sufres de inmediato 1 Estado de @Condition[Fatigado].</p><blockquote class=\"foundry-note\"><p><span style=\"font-style: normal;\">El efecto está desactivado por defecto, activarlo en el apartado 'efectos' al entrar en Furia.</p></blockquote>",
 			"effects": {
 				"Frenzy": {
 					"name":"Furia"
@@ -11065,7 +11065,7 @@
 		{
 			"id": "Implacable",
 			"name": "Implacable",
-			"description": "<p>Cuesta bastante acabar contigo. Puedes ignorar las Heridas perdidas debido a un Estado de Sangrando . Cada nivel en este Talento te permite ignorar las Heridas perdidas debido a un Estado de Sangrando adicional.</p>",
+			"description": "<p>Cuesta bastante acabar contigo. Puedes ignorar las Heridas perdidas debido a un Estado de Sangrando. Cada nivel en este Talento te permite ignorar las Heridas perdidas debido a un Estado de Sangrando adicional.</p>",
 			"effects": {
 				"Implacable": {
 					"name":"Implacable"
@@ -11103,7 +11103,7 @@
 		{
 			"id": "Invoke",
 			"name": "Invocar",
-			"description": "<p>Has sido bendecido por uno de los dioses y puedes potenciar uno de los Milagros de tu Culto.</p>\n<p>Además, puedes comprar milagros adicionales al coste de 100 PX por milagro que conoces actualmente. Así, si ya conoces 3 milagros, el siguiente te cuesta 300 PX. Las reglas completas para aprender nuevos milagros están en el <strong>Capítulo 7: Religión y creencias</strong>. En circunstanciLo normales no podrías aprender más que un Talento de Invocar (Saber divino) . Además, no puedes aprender los Talentos Magia menor ni Magia arcana cuando tienes el Talento Invocar . Puedes borrar de tu memoria este Talento por 100 PX, pero si lo haces perderás todos los demás, y por si fuera poco te ganarás la extrema desaprobación de tu dios, los efectos de lo cual serán determinados por tu DJ.</p>"
+			"description": "<p>Has sido bendecido por uno de los dioses y puedes potenciar uno de los Milagros de tu Culto.</p>\n<p>Además, puedes comprar milagros adicionales al coste de 100 PX por milagro que conoces actualmente. Así, si ya conoces 3 milagros, el siguiente te cuesta 300 PX. Las reglas completas para aprender nuevos milagros están en @UUID[JournalEntry.NcH9OhleJFfaUdon]{Religión y creencias}. En circunstancias normales no podrías aprender más que un Talento de Invocar (Saber divino). Además, no puedes aprender los Talentos @UUID[Compendium.wfrp4e-core.items.Item.mdPGZsn2396dEpOf]{Magia menor} ni @UUID[Compendium.wfrp4e-core.items.Item.3O9clK7LGyuLTHPW]{Magia arcana} cuando tienes el Talento Invocar. Puedes borrar de tu memoria este Talento por 100 PX, pero si lo haces perderás todos los demás, y por si fuera poco te ganarás la extrema desaprobación de tu dios, los efectos de lo cual serán determinados por tu DJ.</p>"
 		},
 		{
 			"id": "Iron Jaw",
@@ -11120,12 +11120,12 @@
 		{
 			"id": "Jump Up",
 			"name": "Levantarse de un salto",
-			"description": "<p>Es difícil mantenerte en el suelo. Puedes llevar a cabo un Chequeo <strong>Desafiante (+0)</strong> de <strong>Atletismo</strong> para ponerte en pie de inmediato cada vez que pasas al Estado Tumbado . Este Chequeo de Atletismo a menudo se modifica por la Fuerza que hay tras el golpe que te derriba: por cada +10 puntos de Fuerza en los que el golpe supera tu Resistencia, sufres un penalizador -10 al Chequeo de Atletismo, y viceversa.</p>"
+			"description": "<p>Es difícil mantenerte en el suelo. Puedes llevar a cabo un Chequeo <strong>Desafiante (+0)</strong> de <strong>Atletismo</strong> para ponerte en pie de inmediato cada vez que pasas al Estado Tumbado. Este Chequeo de Atletismo a menudo se modifica por la Fuerza que hay tras el golpe que te derriba: por cada +10 puntos de Fuerza en los que el golpe supera tu Resistencia, sufres un penalizador -10 al Chequeo de Atletismo, y viceversa.</p>"
 		},
 		{
 			"id": "Kingpin",
 			"name": "Cerebro",
-			"description": "<p>Te has ganado un aire de respetabilidad a pesar de tus nefarias costumbres. Puedes ignorar la pérdida de Estatus debido al Talento Delincuente .</p>"
+			"description": "<p>Te has ganado un aire de respetabilidad a pesar de tus nefarias costumbres. Puedes ignorar la pérdida de Estatus debido al Talento Delincuente.</p>"
 		},
 		{
 			"id": "Lightning Reflexes",
@@ -11152,7 +11152,7 @@
 		{
 			"id": "Luck",
 			"name": "Suerte",
-			"description": "<p>Dicen que cuando naciste, Ranald sonrió. El número máximo de tus Puntos de Fortuna es ahora igual a tu número actual de puntos de Destino, más el número de veces que has adquirido Suerte .</p>"
+			"description": "<p>Dicen que cuando naciste, Ranald sonrió. El número máximo de tus Puntos de Fortuna es ahora igual a tu número actual de puntos de Destino, más el número de veces que has adquirido Suerte.</p>"
 		},
 		{
 			"id": "Magic Resistance",
@@ -11229,7 +11229,7 @@
 		{
 			"id": "Night Vision",
 			"name": "Visión nocturna",
-			"description": "<p>Puedes ver muy bien en la oscuridad natural. Suponiendo que tengas por lo menos una fuente de luz débil (como por ejemplo la de las estrellas, la de la luna o la bioluminiscencia) puedes ver con claridad a 20 yardas por nivel de Visión nocturna . Además, puedes extender la distancia de iluminación efectiva de cualquier fuente de luz en 20 yardas por nivel de Visión nocturna .</p>",
+			"description": "<p>Puedes ver muy bien en la oscuridad natural. Suponiendo que tengas por lo menos una fuente de luz débil (como por ejemplo la de las estrellas, la de la luna o la bioluminiscencia) puedes ver con claridad a 20 yardas por nivel de Visión nocturna. Además, puedes extender la distancia de iluminación efectiva de cualquier fuente de luz en 20 yardas por nivel de Visión nocturna.</p>",
 			"tests": "Chequeos de Percepción en condiciones de poca luz"
 		},
 		{
@@ -11305,7 +11305,7 @@
 		{
 			"id": "Public Speaker",
 			"name": "Orador",
-			"description": "<p>Eres un orador experimentado y sabes cómo influenciar a grandes grupos de personas. Consulta la siguiente tabla para ver a cuánta gente puedes influenciar ahora con tu Habilidad de Carisma, como Orador .</p>\n<p>&nbsp;</p>\n<div>\n<table title=\"\" border=\"1\" summary=\"\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td>\n<p>Talentos adquiridos</p>\n</td>\n<td>\n<p>Personas influenciadas</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>1</p>\n</td>\n<td>\n<p>Lo normal × 5</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>2</p>\n</td>\n<td>\n<p>Lo normal × 10</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>3</p>\n</td>\n<td>\n<p>&nbsp;Lo normal × 20</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>4</p>\n</td>\n<td>\n<p>&nbsp;Lo normal × 50</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>5</p>\n</td>\n<td>\n<p>&nbsp;Lo normal × 100</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>6</p>\n</td>\n<td>\n<p>&nbsp;Lo normal × 200</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>7</p>\n</td>\n<td>\n<p>&nbsp;Lo normal × 500</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>8</p>\n</td>\n<td>\n<p>&nbsp;Lo normal × 1000</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>9</p>\n</td>\n<td>\n<p>&nbsp;Todos los que pueden oír tu dorada voz</p>\n</td>\n</tr>\n</tbody>\n</table>\n</div>"
+			"description": "<p>Eres un orador experimentado y sabes cómo influenciar a grandes grupos de personas. Consulta la siguiente tabla para ver a cuánta gente puedes influenciar ahora con tu Habilidad de Carisma, como Orador.</p>\n<p>&nbsp;</p>\n<div>\n<table title=\"\" border=\"1\" summary=\"\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td>\n<p>Talentos adquiridos</p>\n</td>\n<td>\n<p>Personas influenciadas</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>1</p>\n</td>\n<td>\n<p>Lo normal × 5</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>2</p>\n</td>\n<td>\n<p>Lo normal × 10</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>3</p>\n</td>\n<td>\n<p>&nbsp;Lo normal × 20</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>4</p>\n</td>\n<td>\n<p>&nbsp;Lo normal × 50</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>5</p>\n</td>\n<td>\n<p>&nbsp;Lo normal × 100</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>6</p>\n</td>\n<td>\n<p>&nbsp;Lo normal × 200</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>7</p>\n</td>\n<td>\n<p>&nbsp;Lo normal × 500</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>8</p>\n</td>\n<td>\n<p>&nbsp;Lo normal × 1000</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>9</p>\n</td>\n<td>\n<p>&nbsp;Todos los que pueden oír tu dorada voz</p>\n</td>\n</tr>\n</tbody>\n</table>\n</div>"
 		},
 		{
 			"id": "Pure Soul",
@@ -11341,7 +11341,7 @@
 		{
 			"id": "Relentless",
 			"name": "Incansable",
-			"description": "<p>Cuando has fijado tu mente en un objetivo, no hay nada que nadie pueda hacer para impedirte llegar al mismo. Si usas Ventaja al Destrabarte, puedes guardar un número de Ventajas igual a tu nivel de Incansable . Además, puedes utilizar Ventaja para Destrabarte, incluso si tu Ventaja es menor que la de los oponentes.</p>"
+			"description": "<p>Cuando has fijado tu mente en un objetivo, no hay nada que nadie pueda hacer para impedirte llegar al mismo. Si usas Ventaja al Destrabarte, puedes guardar un número de Ventajas igual a tu nivel de Incansable. Además, puedes utilizar Ventaja para Destrabarte, incluso si tu Ventaja es menor que la de los oponentes.</p>"
 		},
 		{
 			"id": "Resistance",
@@ -11454,7 +11454,7 @@
 		{
 			"id": "Secret Identity",
 			"name": "Identidad secreta",
-			"description": "<p>Mantienes una identidad secreta que te permite parecer más rico (o quizás más pobre) de lo que realmente eres. Con permiso del DJ, elige cualquier Carrera. Mientras vayas adecuadamente vestido, podrás utilizar el Estatus social de la Carrera elegida de la que te disfraces como si fuera tuyo a efectos de modificar los Chequeos de Empatía, pudiendo incluso ignorar el Talento Delincuente . Sin embargo, mantener dicha identidad requiere Chequeos de Animar (actuar) cuando te encuentras con quienes son capaces de reconocer tu falsedad. Puedes crear una nueva Identidad secreta por cada nivel que tienes en este Talento.</p>",
+			"description": "<p>Mantienes una identidad secreta que te permite parecer más rico (o quizás más pobre) de lo que realmente eres. Con permiso del DJ, elige cualquier Carrera. Mientras vayas adecuadamente vestido, podrás utilizar el Estatus social de la Carrera elegida de la que te disfraces como si fuera tuyo a efectos de modificar los Chequeos de Empatía, pudiendo incluso ignorar el Talento Delincuente. Sin embargo, mantener dicha identidad requiere Chequeos de Animar (actuar) cuando te encuentras con quienes son capaces de reconocer tu falsedad. Puedes crear una nueva Identidad secreta por cada nivel que tienes en este Talento.</p>",
 			"tests": "Chequeos de Animar (actuar) para apoyar tus identidades secretas"
 		},
 		{
@@ -11678,7 +11678,7 @@
 		{
 			"id": "Sure Shot",
 			"name": "Disparo seguro",
-			"description": "<p>Sabes cómo encontrar los puntos débiles en la armadura de un objetivo. Cuando aciertas a un objetivo con un arma A distancia, puedes ignorar tantos puntos de Armadura como tu nivel de Disparo seguro .</p>",
+			"description": "<p>Sabes cómo encontrar los puntos débiles en la armadura de un objetivo. Cuando aciertas a un objetivo con un arma A distancia, puedes ignorar tantos puntos de Armadura como tu nivel de Disparo seguro.</p>",
 			"effects": {
 				"Sure Shot": {
 					"name":"Disparo seguro"
