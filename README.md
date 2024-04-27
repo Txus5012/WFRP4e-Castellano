@@ -30,4 +30,4 @@ Algunas automatizaciones requieren ahora escribir en castellano:
 *Notad que Devir no tradujo la palabra "Halfling". Si hay tilde, es importante ponerla.
 
 Sobre el generador de nombres:
-- Para que funcione el botón Nombre de los PNJs para generar un nombre, hay que poner "male" o "female" en género (si queréis especificarlo). Después se puede cambiar sin problema.
+- Si queréis especificar el género, para que funcione el botón Nombre de los PNJs hay que poner "Hombre" o "Mujer" (las mayúsculas no afectan) en género. Se sigue pudiendo usar "male" o "female".
