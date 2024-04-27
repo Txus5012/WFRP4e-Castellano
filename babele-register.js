@@ -1,3 +1,5 @@
+import { effects } from "./modules/effects.js";
+
 Hooks.on('init', () => {
 
     if(typeof Babele !== 'undefined') {
@@ -16,10 +18,10 @@ Babele.get().registerConverters({
         if ( value == "Instant" ) return "Instantáneo";
         if ( value == "Line of Sight" ) return "Línea de Visión";
         if ( value == "Special" ) return "Especial";
-	if ( value == "a single location" ) return "Un solo lugar";
-	if ( value == "see description" ) return "Ver descripción";
-	if ( value == "Until sunrise" ) return "Hasta el amanecer";
-	if ( value == "Until the next sunrise" ) return "Hasta el siguiente amanecer";
+		if ( value == "a single location" ) return "Un solo lugar";
+		if ( value == "see description" ) return "Ver descripción";
+		if ( value == "Until sunrise" ) return "Hasta el amanecer";
+		if ( value == "Until the next sunrise" ) return "Hasta el siguiente amanecer";
         var translw = value;
         var re  = /(.*) Bonus (\w*)/i;
         var res = re.exec( value );
@@ -204,49 +206,41 @@ Babele.get().registerConverters({
         if ( value == "Slayer" ) return "Matador";
         if ( value == "Warrior Priest" ) return "Sacerdote guerrero";
 	},
-
-	"talents_specification_label": (value) => {  // Especificación de talentos
-             if ( value == "Specification" ) return "Especificación";
-	},
 	
 	"talents_specification": (value) => {  // Especificación de talentos, valor
 	     if ( value == "Target" ) return "Objetivo";
 	     if ( value == "Everything" ) return "Todo";
-             if ( value == "Greenskins" ) return "Pieles verdes";
-     	     if ( value == "Dwarfs" ) return "Enanos";
+         if ( value == "Greenskins" ) return "Pieles verdes";
+     	 if ( value == "Dwarfs" ) return "Enanos";
 	     if ( value == "Elves" ) return "Elfos";
 	     if ( value == "Predators" ) return "Depredadores";
 	     if ( value == "Living" ) return "Vivos";
 	},
-	
-	"traits_specification_label": (value) => {  // Especificación de rasgos
-             if ( value == "Specification" ) return "Especificación";
-	},
       
 	"traits_specification": (value) => {  // Especificación de rasgos, valor
 	     if ( value == "Any" ) return "Cualquiera";
-             if ( value == "Rating" ) return "Valor";
-             if ( value == "Target" ) return "Objetivo";
+         if ( value == "Rating" ) return "Valor";
+         if ( value == "Target" ) return "Objetivo";
 	     if ( value == "Damage" ) return "Daño";
-             if ( value == "Deity" ) return "Deidad";
-             if ( value == "Diety" ) return "Deidad";
-             if ( value == "Trained Skills" ) return "Habilidades Entrenadas";
-             if ( value == "# (Type)" ) return "# (Tipo)";
+         if ( value == "Deity" ) return "Deidad";
+         if ( value == "Diety" ) return "Deidad";
+         if ( value == "Trained Skills" ) return "Habilidades Entrenadas";
+         if ( value == "# (Type)" ) return "# (Tipo)";
 	     if ( value == "Target #" ) return "# Objetivo";
 	     if ( value == "Type" ) return "Tipo";
-     	     if ( value == "Size" ) return "Tamaño";
-     	     if ( value == "Tiny" ) return "Diminuto";
-     	     if ( value == "Little" ) return "Muy pequeño";
-       	     if ( value == "Small" ) return "Pequeño";
-     	     if ( value == "Average" ) return "Normal";
-     	     if ( value == "Large" ) return "Grande";
-     	     if ( value == "Enormous" ) return "Enorme";
+         if ( value == "Size" ) return "Tamaño";
+         if ( value == "Tiny" ) return "Diminuto";
+         if ( value == "Little" ) return "Muy pequeño";
+       	 if ( value == "Small" ) return "Pequeño";
+     	 if ( value == "Average" ) return "Normal";
+     	 if ( value == "Large" ) return "Grande";
+     	 if ( value == "Enormous" ) return "Enorme";
 	     if ( value == "Monstrous" ) return "Monstruoso";
-             if ( value == "Corruption Strength" ) return "Fuerza de la Corrupción";
+         if ( value == "Corruption Strength" ) return "Fuerza de la Corrupción";
 	     if ( value == "Minor" ) return "Menor";
 	     if ( value == "Moderate" ) return "Moderado";
 	     if ( value == "Major" ) return "Mayor";
-             if ( value == "Difficulty" ) return "Dificultad";
+         if ( value == "Difficulty" ) return "Dificultad";
 	     if ( value == "Very Easy" ) return "Muy Fácil";
 	     if ( value == "Easy" ) return "Fácil";
 	     if ( value == "Average" ) return "Normal";
@@ -254,7 +248,7 @@ Babele.get().registerConverters({
 	     if ( value == "Difficult" ) return "Complicado";
 	     if ( value == "Hard" ) return "Difícil";
 	     if ( value == "Very Hard" ) return "Muy Difícil";
-             if ( value == "Lore" ) return "Saber";
+         if ( value == "Lore" ) return "Saber";
 	     if ( value == "Petty" ) return "Menor";
 	     if ( value == "Beasts" ) return "Bestias";
 	     if ( value == "Death" ) return "Muerte";
@@ -271,13 +265,13 @@ Babele.get().registerConverters({
 	     if ( value == "Any Chaos" ) return "Cualquiera del Caos";
 	     if ( value == "Any Lore" ) return "Cualquier saber";
 	     if ( value == "Poison" ) return "Veneno";
-     	     if ( value == "Venom" ) return "Veneno";
+     	 if ( value == "Venom" ) return "Veneno";
 	     if ( value == "Broken" ) return "Domado";
-     	     if ( value == "Drive" ) return "Tirar";
+     	 if ( value == "Drive" ) return "Tirar";
 	     if ( value == "Entertain" ) return "Entretener";
 	     if ( value == "Fetch" ) return "Trae";
 	     if ( value == "Guard" ) return "Protege";
-     	     if ( value == "Home" ) return "Casa";
+     	 if ( value == "Home" ) return "Casa";
 	     if ( value == "Magic" ) return "Magia";
 	     if ( value == "Mount" ) return "Montura";
 	     if ( value == "War" ) return "Guerra";
@@ -300,18 +294,18 @@ Babele.get().registerConverters({
 	},
 
 	"criticals_wounds": (value) => {  // Daño extra de críticos
-             if ( value == "Death" ) return "Muerte";
+         if ( value == "Death" ) return "Muerte";
 	},
 
 	"criticals_location": (value) => {  // Localización de críticos
-             if ( value == "Head" ) return "Cabeza";
-             if ( value == "Arm" ) return "Brazo";
+         if ( value == "Head" ) return "Cabeza";
+         if ( value == "Arm" ) return "Brazo";
 	     if ( value == "Leg" ) return "Pierna";
-             if ( value == "Body" ) return "Cuerpo";
+         if ( value == "Body" ) return "Cuerpo";
 	},
 	
 	"trappings_penalty": (value) => {  // Penalizador de accesorios
-             if ( value == "-10 Perception" ) return "-10 Percepción";
+         if ( value == "-10 Perception" ) return "-10 Percepción";
 	     if ( value == "-20 Perception" ) return "-20 Percepción";
 	     if ( value == "-10 Stealth" ) return "–10 al Movimiento silencioso";
 	},
@@ -334,10 +328,9 @@ Babele.get().registerConverters({
 	     if ( value == "Body" ) return "Cuerpo";
 	     if ( value == "Arm" ) return "Brazo";
 	     if ( value == "Hand" ) return "Mano";
-	     if ( value == "Finger" ) return "Dedo de la mano";
 	     if ( value == "Leg" ) return "Pierna";
 	     if ( value == "Foot" ) return "Pie";
-	     if ( value == "Toes" ) return "Dedos del pie";
+	     if ( value == "Toe" ) return "Dedo del pie";
 	},
 	"injuries_duration": (value) => {  // Heridas, Duración
 	     if ( value == "30 - TB" ) return "30 - BR";
@@ -361,20 +354,8 @@ Babele.get().registerConverters({
 	     if ( value == "Moo's Homebrew" ) return "Reglas Caseras de Moo";
 	},
 	
-	"effects": (effects, translations) => { // Efectos
-		return effects.map(data => {
-			let translation = translations[data.name] || translations[data._id] ;
-			if(translations && translation) {
-				return mergeObject(
-					data, 
-					mergeObject(translation, { translated: true })
-				);
-			}
+	"effects": effects,
 
-		return data;
-		});
-	},
-	
 	"bestiary_gender": (value) => {  // Bestiario, género
 	     if ( value == "Male" ) return "Varón";
 	     if ( value == "Female" ) return "Mujer";

@@ -1,5 +1,15 @@
 {
 	"label": "Tablas (B\u00E1sico)",
+    "folders": {
+        "Career Tables": "Tablas de Carrera",
+		"Character Creation": "Creaci\u00F3n de Personaje",
+		"Core Rulebook": "Libro B\u00E1sico",
+		"Corruption & Mutation Tables": "Tablas de Corrupci\u00F3n y Mutaci\u00F3n",
+		"Critical Hit Tables": "Tablas de Impactos Cr\u00EDticos",
+		"GM Booklet": "Gu\u00EDa del DJ",
+		"Hit Location": "Ubicaci\u00F3n de Impacto",
+		"Moo's Homebrew": "Reglas caseras de Moo"
+    },
 	"mapping": {
 		"tables_folders": {
 			"path": "flags.wfrp4e-core.initialization-folder",
