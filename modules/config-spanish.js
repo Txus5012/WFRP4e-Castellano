@@ -571,7 +571,7 @@ game.wfrp4e.config.symptomEffects = {
                             if (args.test.failed)
                             {
                                 let applicableCharacteristics = ["ws", "bs", "s", "fel", "ag", "t", "dex"];
-                                if (applicableCharacteristics.includes(args.preData.characteristic))
+                                if (applicableCharacteristics.includes(args.test.characteristicKey))
                                 {
                                     this.actor.addCondition("stunned");
                                 }
@@ -704,7 +704,7 @@ game.wfrp4e.config.PrepareSystemItems = function() {
         },
 
         fear : {
-            name : game.i18n.localize("NAME.Fear"),
+            name : game.i18n.localize("NAME.FearExtendedTest"),
             type : "extendedTest",
             system : {
                 completion:{value: 'remove'},
@@ -790,6 +790,37 @@ game.wfrp4e.config.PrepareSystemItems = function() {
 
 
     this.systemEffects = mergeObject(this.systemEffects, {
+        "fear": {
+            name: game.i18n.localize("NAME.Fear"),
+            icon: "systems/wfrp4e/icons/conditions/fear.png",
+            statuses: ["fear"],
+            flags: {
+                wfrp4e : {
+                    applicationData : {},
+                    scriptData : [
+                        {
+                            label : "@effect.flags.wfrp4e.dialogTitle",
+                            trigger : "dialog",
+                            script : `args.fields.slBonus -= 1`,
+                            options : {
+                                dialog : {
+                                    hideScript : "",
+                                    activateScript : `return args.data.targets[0]?.name == this.item.flags.wfrp4e?.fearName`
+                                }
+                            }
+                        },
+                        {
+                            label : "@effect.name",
+                            trigger : "immediate",
+                            script : `
+                            let name = this.item?.flags?.wfrp4e?.fearName
+                            this.effect.updateSource({"flags.wfrp4e.dialogTitle" : (name ? game.i18n.format("EFFECT.AffectTheSourceOfFearName", {name}) : game.i18n.format("EFFECT.AffectTheSourceOfFear"))})
+                            `
+                        }
+                    ]
+                }
+            }
+        },
         "enc1" : {
             name: game.i18n.localize("EFFECT.Encumbrance") + " 1",
             icon: "systems/wfrp4e/icons/effects/enc1.png",
@@ -1602,38 +1633,6 @@ game.wfrp4e.config.statusEffects = [
             }
         },
         {
-            icon: "systems/wfrp4e/icons/conditions/fear.png",
-            id: "fear",
-            statuses: ["fear"],
-            name: "WFRP4E.ConditionName.Fear",
-            flags: {
-                wfrp4e : {
-                    applicationData : {},
-                    scriptData : [
-                        {
-                            label : "@effect.flags.wfrp4e.dialogTitle",
-                            trigger : "dialog",
-                            script : `args.fields.slBonus -= 1`,
-                            options : {
-                                dialog : {
-                                    hideScript : "",
-                                    activateScript : `return args.data.targets[0]?.name == this.item.flags.wfrp4e?.fearName`
-                                }
-                            }
-                        },
-                        {
-                            label : "@effect.name",
-                            trigger : "immediate",
-                            script : `
-                            let name = this.item?.flags?.wfrp4e?.fearName
-                            this.effect.updateSource({"flags.wfrp4e.dialogTitle" : (name ? game.i18n.format("EFFECT.AffectTheSourceOfFearName", {name}) : game.i18n.format("EFFECT.AffectTheSourceOfFear"))})
-                            `
-                        }
-                    ]
-                }
-            }
-        },
-        {
             icon: "systems/wfrp4e/icons/conditions/surprised.png",
             id: "surprised",
             statuses: ["surprised"],
@@ -1775,448 +1774,6 @@ game.wfrp4e.config.scriptTriggers = {
     "startTurn" : "Comienzo del Turno",
     "endRound" : "Fin del Asalto",
     "endCombat" : "Fin del Combate"
-}
-
-game.wfrp4e.config.effectPlaceholder = {
-
-    "invoke" : 
-    `Este efecto sólo se aplica al pulsar el botón de Invocar. Puede ser asíncrono.
-    args:
-
-    ninguno`,
-    "oneTime" : 
-    `Este efecto ocurre una vez, inmediatamente al aplicar. Puede ser asíncrono.
-    args:
-
-    actor : actor propietario del efecto
-    `,
-
-    "addItems" : 
-    `Como los efectos Inmediatos, ocurre una vez, pero el efecto permanece. También permite al efecto borrar los objetos añadidos cuando el efecto se elimina. Puede ser asíncrono.
-    args:
-    
-    actor : actor propietario del efecto
-    `,
-
-    "prefillDialog" : 
-    `Este efecto se aplica antes de reproducir el diálogo de tirada, y debería cambiar los valores prellenados en la sección de bonos. Puede ser asíncrono.
-    args:
-
-    prefillModifiers : {modifier, difficulty, slBonus, successBonus}
-    type: string, 'weapon', 'skill' 'characteristic', etc.
-    item: el objeto del tipo mencionado usado
-    options: otros detalles sobre el chequeo (options.rest u options.mutate por ejemplo)
-    
-    Ejemplo: 
-    if (args.type == "skill" && args.item.name == "Atletismo") args.prefillModifiers.modifier += 10`,
-
-    "update" : 
-    `este efecto se ejecuta cuando un actor o documento embebido es cambiado. Puede ser asíncrono.
-    args:
-    item: si un objeto es modificado, se provee como un argumento
-    effect: si un efecto es modificado, se provee como un argumento
-    `,
-
-    "prePrepareData" : 
-    `Este efecto se aplica antes de calcular cualquier dato del actor. No puede ser asíncrono.
-    args:
-
-    actor : actor propietario del efecto
-    `,
-
-    "prePrepareItems" : 
-    `Este efecto se aplica antes de que los objetos se ordenen y calculen. No puede ser asíncrono.
-
-    actor : actor propietario del efecto
-    `,
-
-    "prepareData" : 
-    `Este efecto se aplica tras calcular y procesar los datos del actor. No puede ser asíncrono.
-
-    args:
-
-    actor : actor propietario del efecto
-    `,
-
-    "preWoundCalc" : 
-    `Este efecto se aplica justo antes del cálculo de heridas, ideal para cambiar atributos o añadir multiplicadores. No puede ser asíncrono.
-
-    actor : actor propietario del efecto
-    sb : Bonificador por Fuerza
-    tb : Bonificador por Resistencia
-    wpb : Bonificador por Voluntad
-    multiplier : {
-        sb : Multiplicador de BF
-        tb : Multiplicador de BR
-        wpb : Multiplicador de BVol
-    }
-
-    p.ej. para Recio: "args.multiplier.tb += 1"
-    `,
-
-    "woundCalc" : 
-    `Este efecto ocurre tras el cálculo de heridas, ideal para multiplicar el resultado. No puede ser asíncrono.
-
-    args:
-
-    actor : actor propietario del efecto
-    wounds : heridas calculadas
-
-    p.ej. para Plaga: "wounds *= 5"
-    `,
-
-    "calculateSize" : 
-    `Este efecto se aplica tras el cálculo de tamaño, que puede ser invalidado. No puede ser asíncrono.
-    args:
-    size : Valor del tamaño
-    p.ej. para Pequeño: "args.size = 'sml'"
-    `,
-
-    "preAPCalc" : `Este efecto se aplica antes de calcular los PA. No puede ser asíncrono.
-    args:
-    AP : Objeto de Armadura
-    e.g. args.AP.head.value += 1
-    `,
-    "APCalc" : `Este efecto se aplica tras calcular los PA. No puede ser asíncrono.
-    args:
-    AP : Objeto de Armadura
-    e.g. args.AP.head.value += 1
-    `,
-
-    "preApplyDamage" : 
-    `Este efecto ocurre antes de aplicar daño en un chequeo enfrentado. Puede ser asíncrono.
-    args:
-
-    actor : actor que recibe daño
-    attacker : actor atacante
-    opposedTest : objeto que contiene los datos del chequeo enfrentado
-    damageType : tipo de daño seleccionado (ignora BR, PA, etc.)
-    weaponProperties : objeto de cualidades/defectos del arma atacante
-    applyAP : si los PA reducen el daño
-    applyTB : si la BR reduce el daño
-    totalWoundLoss : Total de Heridas Perdidas ANTES DE LAS REDUCCIONES
-    AP : Objeto de la PA del defensor
-    `,
-    
-    "applyDamage" : 
-    `Este efecto ocurre después calcular el daño en un chequeo enfrentado, pero antes de actualizar los datos del actor. Puede ser asíncrono.
-
-    args:
-
-    actor : actor que recibe daño
-    attacker : actor atacante
-    opposedTest : objeto que contiene los datos del chequeo enfrentado
-    damageType : tipo de daño seleccionado (ignora BR, PA, etc.)
-    totalWoundLoss : Heridas perdidas tras mitigaciones
-    AP : datos sobre los PA usados
-    updateMsg : secuencia inicial para el mensaje de actualización de daño
-    messageElements : despliegue de secuencias usadas para mostrar cómo se calculó la mitigación de daño
-    extraMessages : texto aplicado al final de updateMsg
-    `,
-
-    "preTakeDamage" : 
-    `Este efecto ocurre antes de recibir daño en un chequeo enfrentado. Puede ser asíncrono.
-
-    args:
-
-    actor : actor que recibe daño
-    attacker : actor atacante
-    opposedTest : objeto que contiene los datos del chequeo enfrentado
-    damageType : tipo de daño seleccionado (ignora BR, PA, etc.)
-    weaponProperties : objeto de cualidades/defectos del arma atacante
-    applyAP : si PA está reduciendo el daño
-    applyTB : si BR está reduciendo el daño
-    totalWoundLoss : Pérdida Total de Heridas ANTES DE REDUCCIONES
-    AP : objeto de los PA del defensor
-    `,
-    
-    "takeDamage" : 
-    `Este efecto ocurre tras calcular el daño en un chequeo enfrentado, pero antes de actualizar los datos del actor. Puede ser asíncrono.
-
-    args:
-
-    actor : actor que recibe daño
-    attacker : actor atacante
-    opposedTest : objeto que contiene los datos del chequeo enfrentado
-    damageType : tipo de daño seleccionado (ignora BR, PA, etc.)
-    totalWoundLoss : Heridas perdidas tras mitigaciones
-    AP : datos sobre los PA usados
-    updateMsg : secuencia inicial para el mensaje de actualización de daño
-    messageElements : despliegue de secuencias usadas para mostrar cómo se calculó la mitigación de daño
-    extraMessages : texto aplicado al final de updateMsg
-    `,
-
-    "preApplyCondition" :  
-    `Este efecto ocurre antes de aplicar los efectos de una condición. Puede ser asíncrono.
-
-    args:
-
-    effect : condición aplicada
-    data : {
-        msg : Mensaje de chat sobre la aplicación de la condición
-        <otros datos, posiblemente específicos de la condición>
-    }
-    `,
-
-    "applyCondition" :  
-    `Este efecto ocurre tras aplicar los efectos de una condición. Puede ser asíncrono.
-
-    args:
-
-    effect : condición aplicada
-    data : {
-        msg : Mensaje de chat sobre la aplicación de la condición
-        <otros datos, posiblemente específicos de la condición>
-    }
-    `,
-    "prePrepareItem" : 
-    `Este efecto se aplica antes de procesar un objeto con datos del actor. No puede ser asíncrono.
-
-    args:
-
-    item : objeto a procesar
-    `,
-
-    "prepareItem" : 
-    `Este efecto se aplica tras procesar un objeto con datos del actor. No puede ser asíncrono.
-
-    args:
-
-    item : objeto procesado
-    `,
-
-    "preRollTest": 
-    `Este efecto se aplica antes de calcular un chequeo. Puede ser asíncrono.
-
-    args:
-
-    testData: Todos los datos necesarios para evaluar los resultados del chequeo
-    cardOptions: Datos para la vista, título, plantilla, etc. de la tarjeta
-    `,
-
-    "preRollWeaponTest" :  
-    `Este efecto se aplica antes de calcular un chequeo de arma. Puede ser asíncrono.
-
-    args:
-
-    testData: Todos los datos necesarios para evaluar los resultados del chequeo
-    cardOptions: Datos para la vista, título, plantilla, etc. de la tarjeta
-    `,
-
-    "preRollCastTest" :  
-    `Este efecto se aplica antes de calcular un chequeo de lanzamiento. Puede ser asíncrono.
-
-    args:
-
-    testData: Todos los datos necesarios para evaluar los resultados del chequeo
-    cardOptions: Datos para la vista, título, plantilla, etc. de la tarjeta
-    `,
-
-    "preChannellingTest" :  
-    `Este efecto se aplica antes de calcular un chequeo de canalización. Puede ser asíncrono.
-
-    args:
-
-    testData: Todos los datos necesarios para evaluar los resultados del chequeo
-    cardOptions: Datos para la vista, título, plantilla, etc. de la tarjeta
-    `,
-
-    "preRollPrayerTest" :  
-    `Este efecto se aplica antes de calcular un chequeo de plegaria. Puede ser asíncrono.
-
-    args:
-
-    testData: Todos los datos necesarios para evaluar los resultados del chequeo
-    cardOptions: Datos para la vista, título, plantilla, etc. de la tarjeta
-    `,
-
-    "preRollTraitTest" :  
-    `Este efecto se aplica antes de calcular un chequeo de rasgo. Puede ser asíncrono.
-
-    args:
-
-    testData: Todos los datos necesarios para evaluar los resultados del chequeo
-    cardOptions: Datos para la vista, título, plantilla, etc. de la tarjeta
-    `,
-
-    "rollTest" : 
-    `Este efecto se aplica tras calcular un chequeo. Puede ser asíncrono.
-
-    args:
-
-    test: objeto que contiene información del chequeo y resultado
-    cardOptions: Datos para la vista, título, plantilla, etc. de la tarjeta
-    `,
-
-    "rollIncomeTest" : 
-    `Este efecto se aplica tras calcular un chequeo de salario. Puede ser asíncrono.
-
-    args:
-
-    test: objeto que contiene información del chequeo y resultado
-    cardOptions: Datos para la vista, título, plantilla, etc. de la tarjeta
-    `,
-
-    "rollWeaponTest" : 
-    `Este efecto se aplica tras calcular un chequeo de arma. Puede ser asíncrono.
-
-    args:
-
-    test: objeto que contiene información del chequeo y resultado
-    cardOptions: Datos para la vista, título, plantilla, etc. de la tarjeta
-    `,
-
-    "rollCastTest" : 
-    `Este efecto se aplica tras calcular un chequeo de lanzamiento. Puede ser asíncrono.
-
-    args:
-
-    test: objeto que contiene información del chequeo y resultado
-    cardOptions: Datos para la vista, título, plantilla, etc. de la tarjeta
-    `,
-
-    "rollChannellingTest" : 
-    `Este efecto se aplica tras calcular un chequeo de canalización. Puede ser asíncrono.
-
-    args:
-
-    test: objeto que contiene información del chequeo y resultado
-    cardOptions: Datos para la vista, título, plantilla, etc. de la tarjeta
-    `,
-
-    "rollPrayerTest" : 
-    `Este efecto se aplica tras calcular un chequeo de plegaria. Puede ser asíncrono.
-
-    args:
-
-    test: objeto que contiene información del chequeo y resultado
-    cardOptions: Datos para la vista, título, plantilla, etc. de la tarjeta
-    `,
-
-    "rollTraitTest" : 
-    `Este efecto se aplica tras calcular un chequeo de rasgo. Puede ser asíncrono.
-
-    args:
-
-    test: objeto que contiene información del chequeo y resultado
-    cardOptions: Datos para la vista, título, plantilla, etc. de la tarjeta
-    `,
-
-    "preOpposedAttacker" : 
-    `Este efecto se aplica antes de comenzar el cálculo del resultado de un chequeo enfrentado, como atacante. Puede ser asíncrono.
-
-    args:
-
-    attackerTest: objeto de chequeo del atacante
-    defenderTest: objeto de chequeo del defensor
-    opposedTest: objeto del chequeo enfrentado, antes del cálculo
-    `,
-
-    "preOpposedDefender" : 
-    `Este efecto se aplica antes de comenzar el cálculo del resultado de un chequeo enfrentado, como defensor. Puede ser asíncrono.
-
-    args:
-
-    attackerTest: objeto de chequeo del atacante
-    defenderTest: objeto de chequeo del defensor
-    opposedTest: objeto del chequeo enfrentado, antes del cálculo
-    `,
-
-    "opposedAttacker" : 
-    `Este efecto se aplica tras comenzar el cálculo del resultado de un chequeo enfrentado, como atacante. Puede ser asíncrono.
-
-    args:
-
-    attackerTest: objeto de chequeo del atacante
-    defenderTest: objeto de chequeo del defensor
-    opposedTest: objeto del chequeo enfrentado, antes del cálculo
-    `,
-
-    "opposedDefender" : 
-    `Este efecto se aplica tras comenzar el cálculo del resultado de un chequeo enfrentado, como defensor. Puede ser asíncrono.
-
-    args:
-
-    attackerTest: objeto de chequeo del atacante
-    defenderTest: objeto de chequeo del defensor
-    opposedTest: objeto del chequeo enfrentado, antes del cálculo
-    `,
-
-    "calculateOpposedDamage" : 
-    `Este efecto se aplica durante el cálculo del daño de un chequeo enfrentado. Este efecto se ejecuta en el actor atacante. Puede ser asíncrono.
-
-    args:
-
-    damage : daño inicial antes de multiplicadores
-    damageMultiplier : multiplicadores calculado en base a la diferencia de tamaño
-    sizeDiff : diferencia numérica de tamaño, que será usada para añadir dañina/impactante
-    opposedTest : objeto del chequeo enfrentado,
-    addDamaging : si añadir la cualidad Dañina 
-    addImpact : si añadir la cualidad Impactante
-    `,
-
-    "getInitiativeFormula" : 
-    `Este efecto se ejecuta al determinar la iniciativa del actor. No puede ser asíncrono.
-
-    args:
-
-    initiative: Valor calculado de iniciativa
-    `,
-
-    "targetPrefillDialog" : 
-    `Este efecto se aplica a otro actor cuando hacen objetivo a este actor, y debería cambiar los valores prellenados en la sección de bonos. Puede ser asíncrono.
-    
-    args:
-
-    prefillModifiers : {modifier, difficulty, slBonus, successBonus}
-    type: string, 'weapon', 'skill' 'characteristic', etc.
-    item: el objeto del tipo mencionado usado
-    options: otros detalles sobre el chequeo (options.rest u options.mutate por ejemplo)
-    
-    Ejemplo: 
-    if (args.type == "skill" && args.item.name == "Athletics") args.prefillModifiers.modifier += 10`,
-
-    "endTurn" : 
-    `Este efecto se ejecuta al final del turno del actor. Puede ser asíncrono.
-
-    args:
-
-    combat: combate actual
-    `,
-
-    "startTurn" : 
-    `Este efecto se ejecuta al comienzo del turno del actor. Puede ser asíncrono.
-    
-    args:
-    
-    combat: combate actual
-    `,
-
-    "endRound" :  
-    `Este efecto se ejecuta al final del asalto. Puede ser asíncrono.
-
-    args:
-
-    combat: combate actual
-    `,
-    
-    "endCombat" :  
-    `Este efecto se ejecuta al terminar el combate. Puede ser asíncrono.
-
-    args:
-
-    combat: combate actual
-    `,
-
-    "this" : 
-    `
-    
-    Todos los efectos tienen acceso a: 
-        this.actor : actor ejecutando el efecto
-        this.effect : efecto ejecutado
-        this.item : objeto que posee el efecto, si el efecto proviene de un objeto
-    `
-
 }
 
 game.wfrp4e.config.species = {

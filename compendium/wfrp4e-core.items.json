@@ -147,7 +147,7 @@
 		{
 			"id": "Agent",
 			"name": "Agente",
-			"skills": ["Sobornar","Carisma","Frialdad","Jugar","Cotilleo","Regatear","Percepción","Movimiento silencioso (Cualquiera)","Escalar","Animar (Actuar)","Intuición","Cuerpo a cuerpo (Básica)","Lengua secreta (Cualquiera)","Prestidigitación","Criar animales","Adiestrar Animal (Paloma)","Hablar idioma (Cualquiera)","Mando"],
+			"skills": ["Sobornar","Carisma","Frialdad","Jugar","Cotilleo","Regatear","Percepción","Movimiento silencioso (Cualquiera)","Escalar","Animar (Actuar)","Intuición","Cuerpo a cuerpo (Básica)","Lengua secreta (Cualquiera)","Prestidigitación","Criar animales","Adiestrar animal (Paloma)","Hablar idioma (Cualquiera)","Mando"],
 			"talents": ["Atractivo","Disfraz","Imitador","Orador experto"],
 			"trappings": ["Cálamo","Tinta","Círculo de espías e informadores","Libro, criptografía","Palomar"],
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.ssJHG82vEHHRoAUF]{Espía}</p>"
@@ -467,7 +467,7 @@
 		{
 			"id": "Coach Master",
 			"name": "Maestro de diligencias",
-			"skills": ["Criar animales","Carisma animal","Escalar","Conducir","Aguante","Percepción","A distancia (Enmarañante)","Montar (Caballo)","Consumir alcohol","Cotilleo","Intuición","Sabiduría académica (Local)","Orientación","A distancia (De Pólvora Negra)","Adiestrar Animal (Caballo)","Intimidar","Hablar idioma (Cualquiera)","Sabiduría académica (Carreteras)"],
+			"skills": ["Criar animales","Carisma animal","Escalar","Conducir","Aguante","Percepción","A distancia (Enmarañante)","Montar (Caballo)","Consumir alcohol","Cotilleo","Intuición","Sabiduría académica (Local)","Orientación","A distancia (De Pólvora Negra)","Adiestrar animal (Caballo)","Intimidar","Hablar idioma (Cualquiera)","Sabiduría académica (Carreteras)"],
 			"talents": ["Disparo infalible","Intrépido (Forajidos)","Negociador","Olfato para los problemas"],
 			"trappings": ["Camisote de malla","Capa de calidad"],
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.tvJAKXB7R0EOr4oE]{Cochero}</p>"
@@ -659,7 +659,7 @@
 		{
 			"id": "Exterminator",
 			"name": "Exterminador",
-			"skills": ["Atletismo","Adiestrar Animal (Perro)","Carisma animal","Consumir alcohol","Aguante","Cuerpo a cuerpo (Básica)","A distancia (Honda)","Movimiento silencioso (Subterráneo o Urbano)","Criar animales","Cotilleo","Regatear","Sabiduría académica (Veneno)","Percepción","Poner trampas","Escalar","Frialdad","Esquivar","A distancia (Pistola ballesta)","Mando","Rastrear"],
+			"skills": ["Atletismo","Adiestrar animal (Perro)","Carisma animal","Consumir alcohol","Aguante","Cuerpo a cuerpo (Básica)","A distancia (Honda)","Movimiento silencioso (Subterráneo o Urbano)","Criar animales","Cotilleo","Regatear","Sabiduría académica (Veneno)","Percepción","Poner trampas","Escalar","Frialdad","Esquivar","A distancia (Pistola ballesta)","Mando","Rastrear"],
 			"talents": ["Amenazador","Decidido","Intrépido (Skaven)","Robusto"],
 			"trappings": ["Asistente","Perro grande y feroz","Saco con cebo envenenado (10 dosis de rompecorazones)"],
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.mKvUxzJyQmhgjDE0]{Cazarratas}</p>"
@@ -923,7 +923,7 @@
 		{
 			"id": "Huntsmaster",
 			"name": "Montero mayor",
-			"skills": ["Carisma animal","Escalar","Aguante","Sabiduría académica (Bestias)","Supervivencia","Percepción","A distancia (Honda)","Poner trampas","Frialdad","Intuición","Cuerpo a cuerpo (Básica)","A distancia (Arco)","Lengua secreta (Cazador)","Movimiento silencioso (Rural)","Orientación","Montar (Caballo)","Nadar","Rastrear","Criar animales","Adiestrar Animal (Cualquiera)"],
+			"skills": ["Carisma animal","Escalar","Aguante","Sabiduría académica (Bestias)","Supervivencia","Percepción","A distancia (Honda)","Poner trampas","Frialdad","Intuición","Cuerpo a cuerpo (Básica)","A distancia (Arco)","Lengua secreta (Cazador)","Movimiento silencioso (Rural)","Orientación","Montar (Caballo)","Nadar","Rastrear","Criar animales","Adiestrar animal (Cualquiera)"],
 			"talents": ["Disparo seguro","Francotirador","Intrépido (Monstruos)","Robusto"],
 			"trappings": ["Caballo de monta","Silla de montar y arreos","Perrera con perros de caza"],
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.T6c9MttfG0Fj4nDm]{Cazador}</p>"
@@ -1523,7 +1523,7 @@
 		{
 			"id": "Rat Catcher",
 			"name": "Cazarratas",
-			"skills": ["Atletismo","Adiestrar Animal (Perro)","Carisma animal","Consumir alcohol","Aguante","Cuerpo a cuerpo (Básica)","A distancia (Honda)","Movimiento silencioso (Subterráneo o Urbano)","Criar animales","Cotilleo","Regatear","Sabiduría académica (Veneno)","Percepción","Poner trampas"],
+			"skills": ["Atletismo","Adiestrar animal (Perro)","Carisma animal","Consumir alcohol","Aguante","Cuerpo a cuerpo (Básica)","A distancia (Honda)","Movimiento silencioso (Subterráneo o Urbano)","Criar animales","Cotilleo","Regatear","Sabiduría académica (Veneno)","Percepción","Poner trampas"],
 			"talents": ["Combate cerrado","Etiqueta (Gremio)","Intrépido (Ratas)","Muy resistente"],
 			"trappings": ["Pértiga para ratas muertas","Trampas para animales"],
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.mKvUxzJyQmhgjDE0]{Cazarratas}</p>"
@@ -1531,7 +1531,7 @@
 		{
 			"id": "Rat Hunter",
 			"name": "Atrapador de ratas",
-			"skills": ["Atletismo","Adiestrar Animal (Perro)","Carisma animal","Consumir alcohol","Aguante","Cuerpo a cuerpo (Básica)","A distancia (Honda)","Movimiento silencioso (Subterráneo o Urbano)"],
+			"skills": ["Atletismo","Adiestrar animal (Perro)","Carisma animal","Consumir alcohol","Aguante","Cuerpo a cuerpo (Básica)","A distancia (Honda)","Movimiento silencioso (Subterráneo o Urbano)"],
 			"talents": ["Golpe conmocionador","Golpe poderoso","Resistencia (Enfermedad)","Visión nocturna"],
 			"trappings": ["Honda","Munición para honda","Perro pequeño pero feroz","Saco"],
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.mKvUxzJyQmhgjDE0]{Cazarratas}</p>"
@@ -1651,7 +1651,7 @@
 		{
 			"id": "Route Master",
 			"name": "Maestro de la ruta",
-			"skills": ["Criar animales","Carisma animal","Escalar","Conducir","Aguante","Percepción","A distancia (Enmarañante)","Montar (Caballo)","Consumir alcohol","Cotilleo","Intuición","Sabiduría académica (Local)","Orientación","A distancia (De Pólvora Negra)","Adiestrar Animal (Caballo)","Intimidar","Hablar idioma (Cualquiera)","Sabiduría académica (Carreteras)","Carisma","Mando"],
+			"skills": ["Criar animales","Carisma animal","Escalar","Conducir","Aguante","Percepción","A distancia (Enmarañante)","Montar (Caballo)","Consumir alcohol","Cotilleo","Intuición","Sabiduría académica (Local)","Orientación","A distancia (De Pólvora Negra)","Adiestrar animal (Caballo)","Intimidar","Hablar idioma (Cualquiera)","Sabiduría académica (Carreteras)","Carisma","Mando"],
 			"talents": ["Intrépido (Hombres bestia)","Orientarse","Puntería","Recarga rápida"],
 			"trappings": ["Flota de diligencias y caballos","Mapas"],
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.tvJAKXB7R0EOr4oE]{Cochero}</p>"
@@ -1755,7 +1755,7 @@
 		{
 			"id": "Sewer Jack",
 			"name": "Alcantarillero",
-			"skills": ["Atletismo","Adiestrar Animal (Perro)","Carisma animal","Consumir alcohol","Aguante","Cuerpo a cuerpo (Básica)","A distancia (Honda)","Movimiento silencioso (Subterráneo o Urbano)","Criar animales","Cotilleo","Regatear","Sabiduría académica (Veneno)","Percepción","Poner trampas","Escalar","Frialdad","Esquivar","A distancia (Pistola ballesta)"],
+			"skills": ["Atletismo","Adiestrar animal (Perro)","Carisma animal","Consumir alcohol","Aguante","Cuerpo a cuerpo (Básica)","A distancia (Honda)","Movimiento silencioso (Subterráneo o Urbano)","Criar animales","Cotilleo","Regatear","Sabiduría académica (Veneno)","Percepción","Poner trampas","Escalar","Frialdad","Esquivar","A distancia (Pistola ballesta)"],
 			"talents": ["Denodado","Piernas recias","Rata de túnel","Recio"],
 			"trappings": ["Arma de mano","Chaqueta de cuero","Lámpara de Davrich"],
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.mKvUxzJyQmhgjDE0]{Cazarratas}</p>"
@@ -1827,7 +1827,7 @@
 		{
 			"id": "Spymaster",
 			"name": "Maestro de espías",
-			"skills": ["Sobornar","Carisma","Frialdad","Jugar","Cotilleo","Regatear","Percepción","Movimiento silencioso (Cualquiera)","Escalar","Animar (Actuar)","Intuición","Cuerpo a cuerpo (Básica)","Lengua secreta (Cualquiera)","Prestidigitación","Criar animales","Adiestrar Animal (Paloma)","Hablar idioma (Cualquiera)","Mando","Sabiduría académica (Cualquiera)","Investigar"],
+			"skills": ["Sobornar","Carisma","Frialdad","Jugar","Cotilleo","Regatear","Percepción","Movimiento silencioso (Cualquiera)","Escalar","Animar (Actuar)","Intuición","Cuerpo a cuerpo (Básica)","Lengua secreta (Cualquiera)","Prestidigitación","Criar animales","Adiestrar animal (Paloma)","Hablar idioma (Cualquiera)","Mando","Sabiduría académica (Cualquiera)","Investigar"],
 			"talents": ["Cortés","Intrigante","Memoria visual","Sobornador"],
 			"trappings": ["Despacho y personal","Gran círculo de agentes","Espías e informadores"],
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.ssJHG82vEHHRoAUF]{Espía}</p>"
@@ -1995,7 +1995,7 @@
 		{
 			"id": "Troubadour",
 			"name": "Trovador",
-			"skills": ["Atletismo","Carisma","Animar (Cualquiera)","Cotilleo","Regatear","Actuar (Cualquiera)","Tocar (Cualquiera)","Prestidigitación","Animar (Cualquiera)","Montar (Cualquiera)","Cuerpo a cuerpo (Básica)","Actuar (Cualquiera)","Tocar (Cualquiera)","A distancia (Arrojadiza)","Criar animales","Adiestrar Animal (Cualquiera)","Arte (Escritura)","Hablar idioma (Cualquiera)"],
+			"skills": ["Atletismo","Carisma","Animar (Cualquiera)","Cotilleo","Regatear","Actuar (Cualquiera)","Tocar (Cualquiera)","Prestidigitación","Animar (Cualquiera)","Montar (Cualquiera)","Cuerpo a cuerpo (Básica)","Actuar (Cualquiera)","Tocar (Cualquiera)","A distancia (Arrojadiza)","Criar animales","Adiestrar animal (Cualquiera)","Arte (Escritura)","Hablar idioma (Cualquiera)"],
 			"talents": ["Disfraz","Leer y escribir","Parloteo","Tono perfecto"],
 			"trappings": ["Animal entrenado","Material de escritura"],
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.5nIDu8oyFVShLqne]{Animador}</p>"
@@ -2003,7 +2003,7 @@
 		{
 			"id": "Troupe Leader",
 			"name": "Líder de troupe",
-			"skills": ["Atletismo","Carisma","Animar (Cualquiera)","Cotilleo","Regatear","Actuar (Cualquiera)","Tocar (Cualquiera)","Prestidigitación","Animar (Cualquiera)","Montar (Cualquiera)","Cuerpo a cuerpo (Básica)","Actuar (Cualquiera)","Tocar (Cualquiera)","A distancia (Arrojadiza)","Criar animales","Adiestrar Animal (Cualquiera)","Arte (Escritura)","Hablar idioma (Cualquiera)","Conducir","Mando"],
+			"skills": ["Atletismo","Carisma","Animar (Cualquiera)","Cotilleo","Regatear","Actuar (Cualquiera)","Tocar (Cualquiera)","Prestidigitación","Animar (Cualquiera)","Montar (Cualquiera)","Cuerpo a cuerpo (Básica)","Actuar (Cualquiera)","Tocar (Cualquiera)","A distancia (Arrojadiza)","Criar animales","Adiestrar animal (Cualquiera)","Arte (Escritura)","Hablar idioma (Cualquiera)","Conducir","Mando"],
 			"talents": ["Etiqueta (Cualquiera)","Negociador","Viajero curtido","Vigilancia"],
 			"trappings": ["Caballos de tiro y carromato (Escenario)","Guardarropa de disfraces y accesorios","Troupe de animadores"],
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.5nIDu8oyFVShLqne]{Animador}</p>"
@@ -2390,7 +2390,7 @@
 		{
 			"id": "Bugman’s XXXXXX Ale, pint",
 			"name": "Cerveza Bugman XXXXXX, pinta",
-			"description": "<p>Los mercaderes atraviesan el Viejo Mundo para comprar esta potente cerveza enana de la famosa cervecería fundada por Josef Bugman. La cerveza Bugman se distribuye en la mayoría de grandes ciudades. Una jarra de Bugman cuenta como 4 de cerveza normal a efectos de emborracharse (ver @UUID[JournalEntry.6zOdTLv3YeYeJ4hR.JournalEntryPage.38Ux3mEWYuQ4heIT]{Consumir Alcohol}), y concede inmunidad a los Chequeos de Miedo durante [[/r 1d10]] horas.</p>"
+			"description": "<p>Los mercaderes atraviesan el Viejo Mundo para comprar esta potente cerveza enana de la famosa cervecería fundada por Josef Bugman. La cerveza Bugman se distribuye en la mayoría de grandes ciudades. Una jarra de Bugman cuenta como 4 de cerveza normal a efectos de emborracharse (ver @UUID[JournalEntry.6zOdTLv3YeYeJ4hR.JournalEntryPage.38Ux3mEWYuQ4heIT]{Consumir alcohol}), y concede inmunidad a los Chequeos de Miedo durante [[/r 1d10]] horas.</p>"
 		},
 		{
 			"id": "Bullet and Powder",
@@ -9740,7 +9740,7 @@
 		{
 			"id": "Amputated Arm",
 			"name": "Brazo Amputado",
-			"description": "<p>Siempre que sufres una Herida crítica marcada como <strong>Amputación (Dificultad)</strong> debes superar un Chequeo de <strong>Aguante</strong> (la dificultad se indica en el paréntesis) o pasar al Estado @Condition[Tumbado]. Con un fallo (-2) o peor, sufres 1 Estado de @Condition[Aturdido]; con un fallo Impresionante (-4 o peor), pasas al Estado @Condition[Inconsciente].</p>\n<p>Todas las amputaciones requieren Cirugía para curar de forma adecuada, lo que significa que una Herida no se puede curar hasta que vas a ver al cirujano. Ver @UUID[Compendium.wfrp4e-core.journals.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#cirugia]{Cirugía}.</p>\n<p><strong>Brazo</strong>: Sufres un penalizador -20 a todos los Chequeos que se basan en el uso de las dos manos y no puedes empuñar armas a dos manos; un brazo herido no puede embrazar un escudo. Si el brazo perdida es tu brazo principal, sufres el penalizador habitual -20 a los Chequeos de Cuerpo a cuerpo hechos con armas empuñadas en la mano secundaria. Por cada 100 PX que gastes, podrás reducir en 5 este penalizador al aprender a hacerlo todo con la otra mano. Si pierdes ambas manos, es el momento de empezar a practicar la lucha con garfio.</p>",
+			"description": "<p>Siempre que sufres una Herida crítica marcada como <strong>Amputación (Dificultad)</strong> debes superar un Chequeo de <strong>Aguante</strong> (la dificultad se indica en el paréntesis) o pasar al Estado @Condition[Tumbado]. Con un fallo (-2) o peor, sufres 1 Estado de @Condition[Aturdido]; con un fallo Impresionante (-4 o peor), pasas al Estado @Condition[Inconsciente].</p>\n<p>Todas las amputaciones requieren Cirugía para curar de forma adecuada, lo que significa que una Herida no se puede curar hasta que vas a ver al cirujano. Ver @UUID[Compendium.wfrp4e-core.journals.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#cirugia]{Cirugía}.</p>\n<p><strong>Brazo</strong>: Sufres un penalizador -20 a todos los Chequeos que se basan en el uso de las dos manos y no puedes empuñar armas a dos manos; un brazo herido no puede embrazar un escudo. Si el brazo perdido es tu brazo principal, sufres el penalizador habitual -20 a los Chequeos de Cuerpo a cuerpo hechos con armas empuñadas en la mano secundaria. Por cada 100 PX que gastes, podrás reducir en 5 este penalizador al aprender a hacerlo todo con la otra mano. Si pierdes ambas manos, es el momento de empezar a practicar la lucha con garfio.</p>",
 			"penalty": "-20 si depende de dos manos",
 			"effects": [{
 				"name":"Brazo Amputado",
@@ -9814,7 +9814,7 @@
 				"name":"Mano Amputada",
 				"scriptData": [
 					{"label":"Depende de dos manos"},
-					{"label":"Inútil"}
+					{"label":"Inútil","script":"args.abort = true;\nthis.script.scriptNotification(`No puedes usar la ${game.wfrp4e.config.locations[this.effect.getFlag(\"wfrp4e\", \"location\")]}!`, \"error\")"}
 					]
 				}]
 		},
@@ -9873,7 +9873,7 @@
 			"effects": [{
 				"name":"Lengua Amputada",
 				"scriptData": [
-					{"label":"Lengua Amputada","script": "if(args.test.preData.skillName.includes(game.i18n.localize(\"NAME.Language\")) || args.test instanceof CastTest)\n{\n\tif (parseInt(args.test.result.SL) > 0 || args.test.succeeded)\n\t{\n\t\tif (parseInt(args.test.result.SL) > 0)\n\t\t{\n\t\t\targs.test.result.SL = \"-0\";\n\t\t\targs.test.result.description = game.i18n.localize(\"ROLL.MarginalFailure\");\n\t\t}\n\t\targs.test.result.outcome = \"failure\"\n        args.test.result.other.push(`<strong>${this.effect.name}</strong>: Máximo -0 NE.`)\n\t}\n}"}
+					{"label":"Lengua Amputada","script": "if(args.test.preData.skillName?.includes(game.i18n.localize(\"NAME.Language\")) || args.test instanceof CastTest)\n{\n\tif (parseInt(args.test.result.SL) > 0 || args.test.succeeded)\n\t{\n\t\tif (parseInt(args.test.result.SL) > 0)\n\t\t{\n\t\t\targs.test.result.SL = \"-0\";\n\t\t\targs.test.result.description = game.i18n.localize(\"ROLL.MarginalFailure\");\n\t\t}\n\t\targs.test.result.outcome = \"failure\"\n        args.test.result.other.push(`<strong>${this.effect.name}</strong>: Máximo -0 NE.`)\n\t}\n}"}
 					]
 				}]
 		},
@@ -9883,7 +9883,7 @@
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#grave]{Huesos rotos}</p><p>Uno de tus huesos se ha roto de mala manera y, o bien ha quedado en mala posición, o se ha astillado en el punto de rotura. La Ubicación de impacto queda relativamente inutilizada hasta que se cura la fractura.</p>\n<p><span style=\"font-weight: bold;\">Brazo</span>: Te quedas sin poder usar el miembro afectado puesto que te duele demasiado, y puede requerir sujeción. Sufres un penalizador -20 a todos los Chequeos que se basan en el uso de las dos manos y no puedes empuñar armas a dos manos;Si la mano perdida es tu mano principal, sufres el penalizador habitual -20 a los Chequeos de Cuerpo a cuerpo hechos con armas empuñadas en la mano secundaria.</p>",
 			"penalty": "-20 si depende de dos manos",
 			"effects": [{
-				"name":"Brazo Amputado",
+				"name":"Brazo Roto",
 				"scriptData": [
 					{"label":"Depende de dos manos"},
 					{"label":"Inútil"}
@@ -9896,7 +9896,7 @@
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#leve]{Huesos rotos}</p><p>Te has fracturado un hueso, pero sigue estando alineado por lo que puede curarse solo sin atención médica.</p>\n<p><span style=\"font-weight: bold;\">Brazo</span>: Te quedas sin poder usar el miembro afectado puesto que te duele demasiado, y puede requerir sujeción. Sufres un penalizador -20 a todos los Chequeos que se basan en el uso de las dos manos y no puedes empuñar armas a dos manos;Si la mano perdida es tu mano principal, sufres el penalizador habitual -20 a los Chequeos de Cuerpo a cuerpo hechos con armas empuñadas en la mano secundaria.</p>",
 			"penalty": "-20 si depende de dos manos",
 			"effects": [{
-				"name":"Brazo Amputado",
+				"name":"Brazo Roto",
 				"scriptData": [
 					{"label":"Depende de dos manos"},
 					{"label":"Inútil"}
@@ -11881,7 +11881,7 @@
 			"effects": [{
 				"name":"Corrupción mental",
 				"scriptData": [
-					{"label":"Añadir mutación","script":"let table = game.wfrp4e.tables.findTable(\"mutatephys\");\nif (!table)\n{\n\tui.notifications.error(\"No se pudo encontrar una tabla con la clave: mutatephys\")\n}\nlet result = (await table.roll()).results[0];\nlet uuid = `Compendium.${result.documentCollection}.${result.documentId}`\nlet item = await fromUuid(uuid);\n\nif (item)\n{\n    this.script.scriptNotification(`Añadido ${item.name}`)\n    this.actor.createEmbeddedDocuments(\"Item\", [item])\n}\nelse \n{\n    ui.notifications.error(\"No se pudo encontrar el Objeto: \" + uuid)\n}"}
+					{"label":"Añadir mutación","script":"let table = game.wfrp4e.tables.findTable(\"mutatephys\");\nif (!table)\n{\n\treturn ui.notifications.error(\"No se encontró la tabla de mutación, por favor asegúrate de que una tabla con la clave `mutatephys` ha sido importada al mundo)\n}\nlet result = (await table.roll()).results[0];\nlet uuid = `Compendium.${result.documentCollection}.${result.documentId}`\nlet item = await fromUuid(uuid);\n\nif (item)\n{\n    this.script.scriptNotification(`Añadido ${item.name}`)\n    this.actor.createEmbeddedDocuments(\"Item\", [item])\n}\nelse \n{\n    ui.notifications.error(\"No se pudo encontrar el Objeto: \" + uuid)\n}"}
 					]
 				}]
 		},
@@ -12930,8 +12930,7 @@
 				"name":"Odio visceral",
 				"scriptData": [
 					{"label":"Escoger grupo","script":"let group\nlet item = await fromUuid(\"Compendium.wfrp4e-core.items.Item.5hH73j2NgPdsLCZN\");\nlet data = item.toObject();\n\nif (this.item.name.includes(\"(\"))\n{\n\tgroup = this.item.parenthesesText\n}\n\nelse \n{\n\tgroup = await ValueDialog.create(\"Escribir el grupo odiado\", \"Grupo odiado\")\n\n\tthis.item.updateSource({name : this.item.name + ` (${group})`, \"system.tests.value\" : this.item.system.tests.value.replace(\"grupo\", group)})\n\tthis.effect.updateSource({name : this.effect.name + ` (${group})`})\n}\n\n\ndata.name = data.name.replace(\"Objetivo\", group);\nawait this.actor.createEmbeddedDocuments(\"Item\", [data], {fromEffect: this.effect.id});"},
-					{},
-					{"label":"Chequeos de combate contra @item.parenthesesText"}
+					{}
 					]
 				}]
 		},
