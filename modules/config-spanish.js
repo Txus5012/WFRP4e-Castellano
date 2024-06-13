@@ -1941,4 +1941,10 @@ game.wfrp4e.config.classTrappings = {
         "Guerreros": "Daga, Ropas, Bolsa, Un arma cuerpo a cuerpo",
         "Guerrero": "Daga, Ropas, Bolsa, Un arma cuerpo a cuerpo",
     }
+
+game.wfrp4e.config.vehicleTypes = {
+    "water" : "Acuático",
+    "land" : "Terrestre",
+    "air" : "Aéreo"
+    }
 });
