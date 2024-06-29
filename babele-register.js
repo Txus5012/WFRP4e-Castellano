@@ -1,15 +1,16 @@
+import {TranslatedCompendium} from "../babele/script/translated-compendium.js"
 import { effects } from "./modules/effects.js";
 
 Hooks.on('init', () => {
 
     if(typeof Babele !== 'undefined') {
-        Babele.get().register({
+        game.babele.register({
             module: 'wfrp4e-castellano',
             lang: 'es',
             dir: 'compendium'
         });
 
-Babele.get().registerConverters({
+game.babele.registerConverters({
 
        "spells_duration_range_target": (value) => {  // Hechizos y Plegarias
         if ( value == "" ) return "";
