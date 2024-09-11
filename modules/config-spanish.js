@@ -726,19 +726,16 @@ game.wfrp4e.config.PrepareSystemItems = function() {
                     name: game.i18n.localize("NAME.Fear"),
                     icon: "systems/wfrp4e/icons/conditions/fear.png",
                     statuses : ["fear"],
-                    flags: {
-                        wfrp4e : {
-                            applicationData : {},
+                    system: {
+                            transferData : {},
                             scriptData : [
                                 {
                                     label : "@effect.flags.wfrp4e.dialogTitle",
                                     trigger : "dialog",
                                     script : `args.fields.slBonus -= 1`,
                                     options : {
-                                        dialog : {
-                                            hideScript : "",
-                                            activateScript : `return args.data.targets[0]?.name == this.item.flags.wfrp4e?.fearName`
-                                        }
+                                        hideScript : "",
+                                        activateScript : `return args.data.targets[0]?.name == this.item.flags.wfrp4e?.fearName`
                                     }
                                 },
                                 {
@@ -756,39 +753,36 @@ game.wfrp4e.config.PrepareSystemItems = function() {
                             ]
                         }
                     }
-                }]
+                ]
 
         },
 
         terror: {
             name: game.i18n.localize("NAME.Terror"),
             icon: "systems/wfrp4e/icons/conditions/terror.png",
-            transfer: true,
-            flags: {
-                wfrp4e : {
-                    applicationData : {},
-                    scriptData : [
+            system: {
+                transferData : {},
+                scriptData : [
+                    {
+                        label : "@effect.name",
+                        trigger : "immediate",
+                        script : `
+                        let terror = this.effect.flags.wfrp4e.terrorValue;
+                        let skillName = game.i18n.localize("NAME.Cool");
+                        let test = await args.actor.setupSkill(skillName, {terror: true, appendTitle : " - Terror", skipTargets: true});
+                        await test.roll();
+                        await this.actor.applyFear(terror, name)
+                        if (test.failed)
                         {
-                            label : "@effect.name",
-                            trigger : "immediate",
-                            script : `
-                            let terror = this.effect.flags.wfrp4e.terrorValue;
-                            let skillName = game.i18n.localize("NAME.Cool");
-                            let test = await args.actor.setupSkill(skillName, {terror: true, appendTitle : " - Terror", skipTargets: true});
-                            await test.roll();
-                            await this.actor.applyFear(terror, name)
-                            if (test.failed)
-                            {
-                                if (test.result.SL < 0)
-                                    terror += Math.abs(test.result.SL)
+                            if (test.result.SL < 0)
+                                terror += Math.abs(test.result.SL)
 
-                                await this.actor.addCondition("broken", terror)
-                            }
-                            `
+                            await this.actor.addCondition("broken", terror)
                         }
-                    ]
-                },
-            }
+                        `
+                    }
+                ]
+            },
         }
     });
 
@@ -799,24 +793,22 @@ game.wfrp4e.config.PrepareSystemItems = function() {
             icon: "systems/wfrp4e/icons/conditions/fear.png",
             statuses: ["fear"],
             flags: {
-                wfrp4e : {
-                    applicationData : {},
-                    scriptData : [
+                wfrp4e: {
+                    transferData: {},
+                    scriptData: [
                         {
-                            label : "@effect.flags.wfrp4e.dialogTitle",
-                            trigger : "dialog",
-                            script : `args.fields.slBonus -= 1`,
-                            options : {
-                                dialog : {
-                                    hideScript : "",
-                                    activateScript : `return args.data.targets[0]?.name == this.item.flags.wfrp4e?.fearName`
-                                }
+                            label: "@effect.flags.wfrp4e.dialogTitle",
+                            trigger: "dialog",
+                            script: `args.fields.slBonus -= 1`,
+                            options: {
+                                    hideScript: "",
+                                    activateScript: `return args.data.targets[0]?.name == this.item.flags.wfrp4e?.fearName`
                             }
                         },
                         {
-                            label : "@effect.name",
-                            trigger : "immediate",
-                            script : `
+                            label: "@effect.name",
+                            trigger: "immediate",
+                            script: `
                             let name = this.item?.flags?.wfrp4e?.fearName
                             this.effect.updateSource({"flags.wfrp4e.dialogTitle" : (name ? game.i18n.format("EFFECT.AffectTheSourceOfFearName", {name}) : game.i18n.format("EFFECT.AffectTheSourceOfFear"))})
                             if (name)
@@ -829,18 +821,17 @@ game.wfrp4e.config.PrepareSystemItems = function() {
                 }
             }
         },
-        "enc1" : {
+        "enc1": {
             name: game.i18n.localize("EFFECT.Encumbrance") + " 1",
             icon: "systems/wfrp4e/icons/effects/enc1.png",
-            statuses : ["enc1"],
-            flags : {
-                wfrp4e : {
-                    applicationData : {},
-                    scriptData : [
-                        {
-                            label : "@effect.name",
-                            trigger : "prePrepareData",
-                            script : `
+            statuses: ["enc1"],
+            system: {
+                transferData: {},
+                scriptData: [
+                    {
+                        label: "@effect.name",
+                        trigger: "prePrepareData",
+                        script: `
                             args.actor.characteristics.ag.modifier -= 10;
 
                             if (args.actor.details.move.value > 3)
@@ -850,23 +841,21 @@ game.wfrp4e.config.PrepareSystemItems = function() {
                                     args.actor.details.move.value = 3
                             }
                             `
-                        }
-                    ]
-                }
+                    }
+                ]
             }
         },
-        "enc2" : {
+        "enc2": {
             name: game.i18n.localize("EFFECT.Encumbrance") + " 2",
             icon: "systems/wfrp4e/icons/effects/enc2.png",
-            statuses : ["enc2"],
-            flags : {
-                wfrp4e : {
-                    applicationData : {},
-                    scriptData : [
-                        {
-                            label : "@effect.name",
-                            trigger : "prePrepareData",
-                            script : `
+            statuses: ["enc2"],
+            system: {
+                transferData: {},
+                scriptData: [
+                    {
+                        label: "@effect.name",
+                        trigger: "prePrepareData",
+                        script: `
                             args.actor.characteristics.ag.modifier -= 20;
                             if (args.actor.details.move.value > 2)
                             {
@@ -875,70 +864,66 @@ game.wfrp4e.config.PrepareSystemItems = function() {
                                     args.actor.details.move.value = 2
                             }
                             `
-                        }
-                    ]
-                }
+                    }
+                ]
             }
         },
-        "enc3" : {
+        "enc3": {
             name: game.i18n.localize("EFFECT.Encumbrance") + " 3",
             icon: "systems/wfrp4e/icons/effects/enc3.png",
-            statuses : ["enc3"],
-            flags : {
-                wfrp4e : {
-                    applicationData : {},
-                    scriptData : [
-                        {
-                            label : "@effect.name",
-                            trigger : "prePrepareData",
-                            script : "args.actor.details.move.value = 0;"
-                        }
-                    ]
-                }
+            statuses: ["enc3"],
+            system: {
+                transferData: {},
+                scriptData: [
+                    {
+                        label: "@effect.name",
+                        trigger: "prePrepareData",
+                        script: "args.actor.details.move.value = 0;"
+                    }
+                ]
             }
         },
-        "cold1" : {
+        "cold1": {
             name: game.i18n.localize("EFFECT.ColdExposure") + " 1",
             icon: "",
-            statuses : ["cold1"],
-            changes : [
-                {key : "system.characteristics.bs.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.ag.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.dex.modifier", mode: 2, value: -10},
+            statuses: ["cold1"],
+            changes: [
+                { key: "system.characteristics.bs.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.ag.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.dex.modifier", mode: 2, value: -10 },
             ]
         },
         "cold2" : {
             name: game.i18n.localize("EFFECT.ColdExposure") + " 2",
             icon: "",
-            statuses : ["cold2"],
-            changes : [
-                {key : "system.characteristics.bs.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.ag.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.ws.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.s.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.t.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.i.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.dex.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.int.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.wp.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.fel.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.t.calculationBonusModifier", mode: 2, value: 1},
-                {key : "system.characteristics.s.calculationBonusModifier", mode: 2, value: 1},
-                {key : "system.characteristics.wp.calculationBonusModifier", mode: 2, value: 1},
+            statuses: ["cold2"],
+            changes: [
+                { key: "system.characteristics.bs.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.ag.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.ws.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.s.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.t.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.i.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.dex.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.int.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.wp.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.fel.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.t.calculationBonusModifier", mode: 2, value: 1 },
+                { key: "system.characteristics.s.calculationBonusModifier", mode: 2, value: 1 },
+                { key: "system.characteristics.wp.calculationBonusModifier", mode: 2, value: 1 },
             ]
         },
-        "cold3" : {
+        "cold3": {
             name: game.i18n.localize("EFFECT.ColdExposure") + " 3",
             icon: "",
-            statuses : ["cold3"],
-            flags : {
-                wfrp4e : {
-                    applicationData : {},
-                    scriptData : [
-                        {
-                            label : "@effect.name",
-                            trigger : "manual",
-                            script : `
+            statuses: ["cold3"],
+            system: {
+                transferData: {},
+                scriptData: [
+                    {
+                        label: "@effect.name",
+                        trigger: "manual",
+                        script: `
                             let tb = this.actor.characteristics.t.bonus
                             let damage = (await new Roll("1d10").roll()).total
                             damage -= tb
@@ -949,53 +934,51 @@ game.wfrp4e.config.PrepareSystemItems = function() {
                             this.actor.modifyWounds(-damage)
                             ui.notifications.notify(game.i18n.format("TookDamage", { damage: damage }))
                             `
-                        }
-                    ]
-                }
+                    }
+                ]
             }
         },
-        "heat1" : {
+        "heat1": {
             name: game.i18n.localize("EFFECT.HeatExposure") + " 1",
             icon: "",
-            statuses : ["heat1"],
-            changes : [
-                {key : "system.characteristics.int.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.wp.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.wp.calculationBonusModifier", mode: 2, value: 1},
+            statuses: ["heat1"],
+            changes: [
+                { key: "system.characteristics.int.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.wp.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.wp.calculationBonusModifier", mode: 2, value: 1 },
             ]
         },
-        "heat2" : {
+        "heat2": {
             name: game.i18n.localize("EFFECT.HeatExposure") + " 2",
             icon: "",
-            statuses : ["heat2"],
-            changes : [
-                {key : "system.characteristics.bs.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.ag.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.ws.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.s.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.t.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.i.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.dex.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.int.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.wp.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.fel.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.t.calculationBonusModifier", mode: 2, value: 1},
-                {key : "system.characteristics.s.calculationBonusModifier", mode: 2, value: 1},
-                {key : "system.characteristics.wp.calculationBonusModifier", mode: 2, value: 1},
+            statuses: ["heat2"],
+            changes: [
+                { key: "system.characteristics.bs.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.ag.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.ws.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.s.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.t.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.i.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.dex.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.int.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.wp.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.fel.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.t.calculationBonusModifier", mode: 2, value: 1 },
+                { key: "system.characteristics.s.calculationBonusModifier", mode: 2, value: 1 },
+                { key: "system.characteristics.wp.calculationBonusModifier", mode: 2, value: 1 },
             ]
         },
-        "heat3" : {
+        "heat3": {
             name: game.i18n.localize("EFFECT.HeatExposure") + " 3",
             icon: "",
-            statuses : ["heat3"],
-            flags : {
-                wfrp4e : {
-                    applicationData : {},
-                    scriptData : [
-                        {
-                            label : "@effect.name",
-                            trigger : "manual",
-                            script : `
+            statuses: ["heat3"],
+            system: {
+                transferData: {},
+                scriptData: [
+                    {
+                        label: "@effect.name",
+                        trigger: "manual",
+                        script: `
                             let tb = this.actor.characteristics.t.bonus
                             let damage = (await new Roll("1d10").roll()).total
                             damage -= tb
@@ -1005,49 +988,47 @@ game.wfrp4e.config.PrepareSystemItems = function() {
                             this.actor.modifyWounds(-damage)
                             ui.notifications.notify(game.i18n.format("TookDamage", { damage: damage }))
                             `
-                        }
-                    ]
-                }
+                    }
+                ]
             }
         },
-        "thirst1" : {
+        "thirst1": {
             name: game.i18n.localize("EFFECT.Thirst") + " 1",
             icon: "",
-            statuses : ["thirst1"],
-            changes : [
-                {key : "system.characteristics.int.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.wp.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.fel.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.wp.calculationBonusModifier", mode: 2, value: 1},
+            statuses: ["thirst1"],
+            changes: [
+                { key: "system.characteristics.int.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.wp.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.fel.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.wp.calculationBonusModifier", mode: 2, value: 1 },
             ]
         },
-        "thirst2" : {
+        "thirst2": {
             name: game.i18n.localize("EFFECT.Thirst") + " 2+",
             icon: "",
-            statuses : ["thirst2"],
-            changes : [
-                {key : "system.characteristics.bs.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.ag.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.ws.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.s.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.t.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.i.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.int.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.dex.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.wp.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.fel.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.t.calculationBonusModifier", mode: 2, value: 1},
-                {key : "system.characteristics.s.calculationBonusModifier", mode: 2, value: 1},
-                {key : "system.characteristics.wp.calculationBonusModifier", mode: 2, value: 1},
+            statuses: ["thirst2"],
+            changes: [
+                { key: "system.characteristics.bs.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.ag.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.ws.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.s.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.t.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.i.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.int.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.dex.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.wp.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.fel.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.t.calculationBonusModifier", mode: 2, value: 1 },
+                { key: "system.characteristics.s.calculationBonusModifier", mode: 2, value: 1 },
+                { key: "system.characteristics.wp.calculationBonusModifier", mode: 2, value: 1 },
             ],
-            flags : {
-                wfrp4e : {
-                    applicationData : {},
-                    scriptData : [
-                        {
-                            label : "@effect.name",
-                            trigger : "manual",
-                            script : `
+            system: {
+                transferData: {},
+                scriptData: [
+                    {
+                        label: "@effect.name",
+                        trigger: "manual",
+                        script: `
                             let tb = this.actor.characteristics.t.bonus
                             let damage = (await new Roll("1d10").roll()).total
                             damage -= tb
@@ -1057,49 +1038,47 @@ game.wfrp4e.config.PrepareSystemItems = function() {
                             this.actor.modifyWounds(-damage)
                             ui.notifications.notify(game.i18n.format("TookDamage", { damage: damage }))
                             `
-                        }
-                    ]
-                }
+                    }
+                ]
             }
         },
-        "starvation1" : {
+        "starvation1": {
             name: game.i18n.localize("EFFECT.Starvation") + " 1",
             icon: "",
-            statuses : ["starvation1"],
-            changes : [
-                {key : "system.characteristics.s.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.t.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.t.calculationBonusModifier", mode: 2, value: 1},
-                {key : "system.characteristics.s.calculationBonusModifier", mode: 2, value: 1},
+            statuses: ["starvation1"],
+            changes: [
+                { key: "system.characteristics.s.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.t.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.t.calculationBonusModifier", mode: 2, value: 1 },
+                { key: "system.characteristics.s.calculationBonusModifier", mode: 2, value: 1 },
             ]
         },
-        "starvation2" : {
+        "starvation2": {
             name: game.i18n.localize("EFFECT.Starvation") + " 2",
             icon: "",
-            statuses : ["starvation2"],
-            changes : [
-                {key : "system.characteristics.bs.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.ag.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.ws.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.s.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.t.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.i.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.int.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.dex.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.wp.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.fel.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.t.calculationBonusModifier", mode: 2, value: 1},
-                {key : "system.characteristics.s.calculationBonusModifier", mode: 2, value: 1},
-                {key : "system.characteristics.wp.calculationBonusModifier", mode: 2, value: 1},
+            statuses: ["starvation2"],
+            changes: [
+                { key: "system.characteristics.bs.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.ag.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.ws.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.s.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.t.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.i.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.int.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.dex.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.wp.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.fel.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.t.calculationBonusModifier", mode: 2, value: 1 },
+                { key: "system.characteristics.s.calculationBonusModifier", mode: 2, value: 1 },
+                { key: "system.characteristics.wp.calculationBonusModifier", mode: 2, value: 1 },
             ],
-            flags : {
-                wfrp4e : {
-                    applicationData : {},
-                    scriptData : [
-                        {
-                            label : "@effect.name",
-                            trigger : "manual",
-                            script : `
+            system: {
+                transferData: {},
+                scriptData: [
+                    {
+                        label: "@effect.name",
+                        trigger: "manual",
+                        script: `
                             let tb = this.actor.characteristics.t.bonus
                             let damage = (await new Roll("1d10").roll()).total
                             damage -= tb
@@ -1109,49 +1088,50 @@ game.wfrp4e.config.PrepareSystemItems = function() {
                             this.actor.modifyWounds(-damage)
                             ui.notifications.notify(game.i18n.format("TookDamage", { damage: damage }))
                             `
-                        }
-                    ]
-                }
+                    }
+                ]
             }
         },
-        "blackpowder":  {
+        "blackpowder": {
             name: game.i18n.localize("EFFECT.BlackpowderShock"),
             icon: "",
-            statuses : ["blackpowder"],
+            statuses: ["blackpowder"],
             flags: {
-                wfrp4e : {
+                wfrp4e: {
                     blackpowder: true,
-                    applicationData : {},
-                    scriptData : [
-                        {
-                            label : "@effect.name",
-                            trigger : "immediate",
-                            script : `
-                                test = await this.actor.setupSkill(game.i18n.localize("NAME.Cool"), {appendTitle : " - " + this.effect.name, skipTargets: true, fields : {difficulty : "average"}});
-                                await test.roll();
-                                if (test.failed)
-                                {
-                                    this.actor.addCondition("broken");
-                                }
-                                return false;
-                            `
-                        }
-                    ]
-                }
+                },
+            },
+
+            system: {
+                transferData: {},
+                scriptData: [
+                    {
+                        label: "@effect.name",
+                        trigger: "immediate",
+                        script: `
+                            test = await this.actor.setupSkill("Frialdad", {appendTitle : " - " + this.effect.name, skipTargets: true, fields : {difficulty : "average"}});
+                            await test.roll();
+                            if (test.failed)
+                            {
+                                this.actor.addCondition("broken");
+                            }
+                            return false;
+                        `
+                    }
+                ]
             }
         },
-        "infighting" : {
+        "infighting": {
             name: game.i18n.localize("EFFECT.Infighting"),
             icon: "modules/wfrp4e-core/icons/talents/in-fighter.png",
-            statuses : ["infighting"],
-            flags : {
-                wfrp4e : {
-                    applicationData : {},
-                    scriptData : [
-                        {
-                            label : "@effect.name",
-                            trigger : "prePrepareItem",
-                            script : `
+            statuses: ["infighting"],
+            system: {
+                transferData: {},
+                scriptData: [
+                    {
+                        label: "@effect.name",
+                        trigger: "prePrepareItem",
+                        script: `
                             if (args.item.type == "weapon" && args.item.isEquipped)
                             {
                                 let weaponLength = args.item.reachNum
@@ -1169,120 +1149,114 @@ game.wfrp4e.config.PrepareSystemItems = function() {
                                 }
                             }
                             `
-                        }
-                    ]
-                }
+                    }
+                ]
             }
         },
-        "defensive" : {
+        "defensive": {
             name: game.i18n.localize("EFFECT.OnDefensive"),
             icon: "",
-            statuses : ["defensive"],
-            flags : {
-                wfrp4e : {
-                    applicationData : {},
-                    scriptData : [
-                        {
-                            label : "@effect.name",
-                            trigger : "dialog",
-                            script : `args.fields.modifier += 20`,
-                            options : {
-                                dialog : {
-                                    hideScript : "return !this.actor.isOpposing",
-                                    activateScript : `
-                                        let skillName = this.effect.name.substring(this.effect.name.indexOf("[") + 1, this.effect.name.indexOf("]"))
-                                        return args.skill?.name == skillName
-                                    `
-                                }
-                            }
-                        },
-                        {
-                            label : "@effect.name",
-                            trigger : "immediate",
-                            script : `
+            statuses: ["defensive"],
+            system: {
+                transferData: {},
+                scriptData: [
+                    {
+                        label: "@effect.name",
+                        trigger: "dialog",
+                        script: `args.prefillModifiers.modifier += 20`,
+                        options: {
+                            hideScript: "return !this.actor.isOpposing",
+                            activateScript: `
+                                    let skillName = this.effect.name.substring(this.effect.name.indexOf("[") + 1, this.effect.name.indexOf("]"))
+                                    return args.skill?.name == skillName
+                                `
+                        }
+                    },
+                    {
+                        label: "@effect.name",
+                        trigger: "immediate",
+                        script: `
                                 let choice = await ItemDialog.create(this.actor.itemTypes.skill.sort((a, b) => a.name > b.name ? 1 : -1), 1, "Escoge una habilidad con la que usar A la Defensiva");    
                                 this.effect.updateSource({name : this.effect.name + " [" +  choice[0]?.name + "]"})
                                 `
-                        }
-                    ]
-                }
+                    }
+                ]
             }
         },
-        "dualwielder" : {
+        "dualwielder": {
             name: game.i18n.localize("EFFECT.DualWielder"),
             icon: "modules/wfrp4e-core/icons/talents/dual-wielder.png",
-            statuses : ["dualwielder"],
-            flags : {
-                wfrp4e : {
-                    applicationData : {},
-                    scriptData : [
-                        {
-                            label : "@effect.name",
-                            trigger : "dialog",
-                            script : `args.fields.modifier -= 10`,
-                            options : {
-                                dialog : {
-                                    hideScript : "return !this.actor.isOpposing",
-                                    activateScript : `return this.actor.isOpposing`
-                                }
-                            }
+            statuses: ["dualwielder"],
+            system: {
+                transferData: {},
+                scriptData: [
+                    {
+                        label: "@effect.name",
+                        trigger: "dialog",
+                        script: `args.prefillModifiers.modifier -= 10`,
+                        options: {
+                            hideScript: "return !this.actor.isOpposing",
+                            activateScript: `return this.actor.isOpposing`
                         }
-                    ]
-                }
+                    },
+                    {
+                        label: "Comienzo del Turno",
+                        trigger: "startTurn",
+                        script: `this.effect.delete()`,
+                    }
+                ]
             }
         },
-        "consumealcohol1" : {
+        "consumealcohol1": {
             name: game.i18n.localize("EFFECT.ConsumeAlcohol") + " 1",
             icon: "",
-            statuses : ["consumealcohol1"],
-            changes : [
-                {key : "system.characteristics.bs.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.ag.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.ws.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.int.modifier", mode: 2, value: -10},
-                {key : "system.characteristics.dex.modifier", mode: 2, value: -10},
+            statuses: ["consumealcohol1"],
+            changes: [
+                { key: "system.characteristics.bs.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.ag.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.ws.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.int.modifier", mode: 2, value: -10 },
+                { key: "system.characteristics.dex.modifier", mode: 2, value: -10 },
             ]
         },
-        "consumealcohol2" : {
+        "consumealcohol2": {
             name: game.i18n.localize("EFFECT.ConsumeAlcohol") + " 2",
             icon: "",
-            statuses : ["consumealcohol2"],
-            changes : [
-                {key : "system.characteristics.bs.modifier", mode: 2, value: -20},
-                {key : "system.characteristics.ag.modifier", mode: 2, value: -20},
-                {key : "system.characteristics.ws.modifier", mode: 2, value: -20},
-                {key : "system.characteristics.int.modifier", mode: 2, value: -20},
-                {key : "system.characteristics.dex.modifier", mode: 2, value: -20},
+            statuses: ["consumealcohol2"],
+            changes: [
+                { key: "system.characteristics.bs.modifier", mode: 2, value: -20 },
+                { key: "system.characteristics.ag.modifier", mode: 2, value: -20 },
+                { key: "system.characteristics.ws.modifier", mode: 2, value: -20 },
+                { key: "system.characteristics.int.modifier", mode: 2, value: -20 },
+                { key: "system.characteristics.dex.modifier", mode: 2, value: -20 },
             ]
         },
-        "consumealcohol3" : {
+        "consumealcohol3": {
             name: game.i18n.localize("EFFECT.ConsumeAlcohol") + " 3",
             icon: "",
-            statuses : ["consumealcohol3"],
-            changes : [
-                {key : "system.characteristics.bs.modifier", mode: 2, value: -30},
-                {key : "system.characteristics.ag.modifier", mode: 2, value: -30},
-                {key : "system.characteristics.ws.modifier", mode: 2, value: -30},
-                {key : "system.characteristics.int.modifier", mode: 2, value: -30},
-                {key : "system.characteristics.dex.modifier", mode: 2, value: -30},
+            statuses: ["consumealcohol3"],
+            changes: [
+                { key: "system.characteristics.bs.modifier", mode: 2, value: -30 },
+                { key: "system.characteristics.ag.modifier", mode: 2, value: -30 },
+                { key: "system.characteristics.ws.modifier", mode: 2, value: -30 },
+                { key: "system.characteristics.int.modifier", mode: 2, value: -30 },
+                { key: "system.characteristics.dex.modifier", mode: 2, value: -30 },
             ]
         },
-        "stinkingdrunk1" : {
+        "stinkingdrunk1": {
             name: game.i18n.localize("EFFECT.MarienburghersCourage"),
             icon: "",
-            statuses : ["stinkingdrunk1"],
-            wfrp4e : {
-                applicationData : {},
-                scriptData : [
+            statuses: ["stinkingdrunk1"],
+            system: {
+                transferData: {},
+                scriptData: [
                     {
-                        label : "@effect.name",
-                        trigger : "dialog",
-                        script : `args.fields.modifier += 20`,
-                        options : {
-                            dialog : {
-                                hideScript : "return args.skill?.name != game.i18n.localize('NAME.Cool')",
-                                activateScript : `return args.skill?.name == game.i18n.localize('NAME.Cool')`
-                            }
+                        label: "@effect.name",
+                        trigger: "dialog",
+                        script: `args.prefillModifiers.modifier += 20`,
+                        options: {
+                            hideScript: "return args.skill?.name != game.i18n.localize('NAME.Cool')",
+                            activateScript: `return args.skill?.name == game.i18n.localize('NAME.Cool')`
                         }
                     }
                 ]
@@ -1296,17 +1270,17 @@ game.wfrp4e.config.statusEffects = [
             id: "bleeding",
             statuses: ["bleeding"],
             name: "WFRP4E.ConditionName.Bleeding",
-            flags: {
-                wfrp4e: {
-                    value: 1,
-                    applicationData : {
-                        conditionTrigger : "endRound"
-                    },
-                    scriptData: [
-                        {
-                            trigger: "manual",
-                            label : "@effect.name",
-                            script : `let actor = this.actor;
+            system: {
+                condition : {
+                    value : 1,
+                    numbered: true,
+                    trigger: "endRound"
+                },
+                scriptData: [
+                    {
+                        trigger: "manual",
+                        label: "@effect.name",
+                        script: `let actor = this.actor;
                             let effect = this.effect;
                             let bleedingAmt;
                             let bleedingRoll;
@@ -1355,12 +1329,11 @@ game.wfrp4e.config.statusEffects = [
                             }
                             else
                             {
-                                return this.script.scriptMessage(msg)
+                                return this.script.message(msg)
                             }
                             `
-                        }
-                    ]
-                }
+                    }
+                ]
             }
         },
         {
@@ -1368,17 +1341,17 @@ game.wfrp4e.config.statusEffects = [
             id: "poisoned",
             statuses: ["poisoned"],
             name: "WFRP4E.ConditionName.Poisoned",
-            flags: {
-                wfrp4e: {
-                    value: 1,
-                    applicationData : {
-                        conditionTrigger : "endRound"
-                    },
-                    scriptData: [
-                        {
-                            trigger: "manual",
-                            label : "@effect.name",
-                            script : `let actor = this.actor;
+            system: {
+                condition : {
+                    value : 1,
+                    numbered: true,
+                    trigger: "endRound"
+                },
+                scriptData: [
+                    {
+                        trigger: "manual",
+                        label: "@effect.name",
+                        script: `let actor = this.actor;
                             let effect = this.effect;
                             let msg = ""
 
@@ -1398,22 +1371,19 @@ game.wfrp4e.config.statusEffects = [
                             }
                             else
                             {
-                                return this.script.scriptMessage(msg)
+                                return this.script.message(msg)
                             }
                             `
-                        },
-                        {
-                            trigger: "dialog",
-                            label : "@effect.name",
-                            script : `args.fields.modifier -= 10 * this.effect.conditionValue`,
-                            options : {
-                                dialog : {
-                                    activateScript : "return true"
-                                }
-                            }
+                    },
+                    {
+                        trigger: "dialog",
+                        label: "@effect.name",
+                        script: `args.fields.modifier -= 10 * this.effect.conditionValue`,
+                        options: {
+                                activateScript: "return true"
                         }
-                    ]
-                }
+                    }
+                ]
             }
 
         },
@@ -1422,17 +1392,17 @@ game.wfrp4e.config.statusEffects = [
             id: "ablaze",
             statuses: ["ablaze"],
             name: "WFRP4E.ConditionName.Ablaze",
-            flags: {
-                wfrp4e: {
-                    value: 1,
-                    applicationData : {
-                        conditionTrigger : "endRound"
-                    },
-                    scriptData: [
-                        {
-                            trigger: "manual",
-                            label : "@effect.name",
-                            script : `let leastProtectedLoc;
+            system: {
+                condition : {
+                    value : 1,
+                    numbered: true,
+                    trigger: "endRound"
+                },
+                scriptData: [
+                    {
+                        trigger: "manual",
+                        label: "@effect.name",
+                        script: `let leastProtectedLoc;
                             let leastProtectedValue = 999;
                             for (let loc in this.actor.status.armour)
                             {
@@ -1466,12 +1436,11 @@ game.wfrp4e.config.statusEffects = [
                             }
                             else
                             {
-                                return this.script.scriptMessage(msg)
+                                return this.script.message(msg)
                             }
                             `
-                        }
-                    ]
-                }
+                    }
+                ]
             }
         },
         {
@@ -1479,18 +1448,18 @@ game.wfrp4e.config.statusEffects = [
             id: "deafened",
             statuses: ["deafened"],
             name: "WFRP4E.ConditionName.Deafened",
-            flags: {
-                wfrp4e: {
-                    value: 1,
-                    applicationData : {},
-                    scriptData: [
-                        {
-                            trigger: "dialog",
-                            label : "Chequeos relacionados con el oído",
-                            script : `args.fields.modifier -= 10 * this.effect.conditionValue`
-                        }
-                    ]
-                }
+            system: {
+                condition : {
+                    value : 1,
+                    numbered: true
+                },
+                scriptData: [
+                    {
+                        trigger: "dialog",
+                        label: "Chequeos relacionados con el oído",
+                        script: `args.fields.modifier -= 10 * this.effect.conditionValue`
+                    }
+                ]
             }
         },
         {
@@ -1498,29 +1467,27 @@ game.wfrp4e.config.statusEffects = [
             id: "stunned",
             statuses: ["stunned"],
             name: "WFRP4E.ConditionName.Stunned",
-            flags: {
-                wfrp4e: {
-                    value: 1,
-                    applicationData : {},
-                    scriptData: [
-                        {
-                            trigger: "dialog",
-                            label : "Penalizador a todos los Chequeos (@effect.name)",
-                            script : `args.fields.modifier -= 10 * this.effect.conditionValue`,
-                            options : {
-                                dialog : {
-                                    activateScript : "return true"
-                                }
-                            }
+            system: {
+                condition : {
+                    value : 1,
+                    numbered: true
+                },
+                scriptData: [
+                    {
+                        trigger: "dialog",
+                        label: "Penalizador a todos los Chequeos (@effect.name)",
+                        script: `args.fields.modifier -= 10 * this.effect.conditionValue`,
+                        options: {
+                            activateScript: "return true"
                         }
-                        // { // Not sure what to do about this
-                        //     trigger: "dialog",
-                        //     label : "Bonus to Melee Attacks",
-                        //     script : `args.fields.modifier -= 10 * this.effect.conditionValue`,
-                        //     "options.dialog.targeter" : true
-                        // }
-                    ]
-                }
+                    }
+                    // { // Not sure what to do about this
+                    //     trigger: "dialog",
+                    //     label : "Bonus to Melee Attacks",
+                    //     script : `args.fields.modifier -= 10 * this.effect.conditionValue`,
+                    //     "options.dialog.targeter" : true
+                    // }
+                ]
             }
         },
         {
@@ -1528,23 +1495,21 @@ game.wfrp4e.config.statusEffects = [
             id: "entangled",
             statuses: ["entangled"],
             name: "WFRP4E.ConditionName.Entangled",
-            flags: {
-                wfrp4e: {
-                    value: 1,
-                    applicationData : {},
-                    scriptData: [
-                        {
-                            trigger: "dialog",
-                            label : "Chequeos relacionados con movimiento de cualquier tipo",
-                            script : `args.fields.modifier -= 10 * this.effect.conditionValue`,
-                            options : {
-                                dialog : {
-                                    activateScript : "return ['ws', 'bs', 'ag'].includes(args.characteristic)"
-                                }
-                            }
+            system: {
+                condition : {
+                    value : 1,
+                    numbered: true
+                },
+                scriptData: [
+                    {
+                        trigger: "dialog",
+                        label: "Chequeos relacionados con movimiento de cualquier tipo",
+                        script: `args.fields.modifier -= 10 * this.effect.conditionValue`,
+                        options: {
+                                activateScript: "return ['ws', 'bs', 'ag'].includes(args.characteristic)"
                         }
-                    ]
-                }
+                    }
+                ]
             }
         },
         {
@@ -1552,23 +1517,21 @@ game.wfrp4e.config.statusEffects = [
             id: "fatigued",
             statuses: ["fatigued"],
             name: "WFRP4E.ConditionName.Fatigued",
-            flags: {
-                wfrp4e: {
-                    value: 1,
-                    applicationData : {},
-                    scriptData: [
-                        {
-                            trigger: "dialog",
-                            label : "Penalizador a todos los Chequeos (@effect.name)",
-                            script : `args.fields.modifier -= 10 * this.effect.conditionValue`,
-                            options : {
-                                dialog : {
-                                    activateScript : "return true"
-                                }
-                            }
+            system: {
+                condition : {
+                    value : 1,
+                    numbered: true
+                },
+                scriptData: [
+                    {
+                        trigger: "dialog",
+                        label: "Penalizador a todos los Chequeos (@effect.name)",
+                        script: `args.fields.modifier -= 10 * this.effect.conditionValue`,
+                        options: {
+                                activateScript: "return true"
                         }
-                    ]
-                }
+                    }
+                ]
             }
         },
         {
@@ -1576,35 +1539,31 @@ game.wfrp4e.config.statusEffects = [
             id: "blinded",
             statuses: ["blinded"],
             name: "WFRP4E.ConditionName.Blinded",
-            flags: {
-                wfrp4e: {
-                    value: 1,
-                    applicationData : {},
-                    scriptData: [
-                        {
-                            trigger: "dialog",
-                            label : "Chequeos relacionados con la vista",
-                            script : `args.fields.modifier -= 10 * this.effect.conditionValue`,
-                            options : {
-                                dialog : {
-                                    activateScript : "return ['ws', 'bs', 'ag'].includes(args.characteristic)"
-                                }
-                            }
-                        },
-                        {
-                            trigger: "dialog",
-                            label : "Bonificador a ataques cuerpo a cuerpo",
-                            script : `args.fields.modifier += 10 * this.effect.conditionValue`,
-                            options : {
-                                dialog : {
-                                    targeter : true,
-                                    hideScript : "return args.item?.attackType != 'melee'",
-                                    activateScript : "return args.item?.attackType == 'melee'"
-                                }
-                            }
+            system: {
+                condition : {
+                    value : 1,
+                    numbered: true
+                },
+                scriptData: [
+                    {
+                        trigger: "dialog",
+                        label: "Chequeos relacionados con la vista",
+                        script: `args.fields.modifier -= 10 * this.effect.conditionValue`,
+                        options: {
+                                activateScript: "return ['ws', 'bs', 'ag'].includes(args.characteristic)"
                         }
-                    ]
-                }
+                    },
+                    {
+                        trigger: "dialog",
+                        label: "Bonificador a ataques cuerpo a cuerpo",
+                        script: `args.fields.modifier += 10 * this.effect.conditionValue`,
+                        options: {
+                                targeter: true,
+                                hideScript: "return args.item?.attackType != 'melee'",
+                                activateScript: "return args.item?.attackType == 'melee'"
+                        }
+                    }
+                ]
             }
         },
         {
@@ -1612,23 +1571,21 @@ game.wfrp4e.config.statusEffects = [
             id: "broken",
             statuses: ["broken"],
             name: "WFRP4E.ConditionName.Broken",
-            flags: {
-                wfrp4e: {
-                    value: 1,
-                    applicationData : {},
-                    scriptData: [
-                        {
-                            trigger: "dialog",
-                            label : "Penalizador a todos los Chequeos que no implican correr y ocultarse.",
-                            script : `args.fields.modifier -= 10 * this.effect.conditionValue`,
-                            options : {
-                                dialog : {
-                                    activateScript : "return !args.skill?.name?.includes(game.i18n.localize('NAME.Stealth')) && args.skill?.name != game.i18n.localize('NAME.Athletics')"
-                                }
-                            }
+            system: {
+                condition : {
+                    value : 1,
+                    numbered: true
+                },
+                scriptData: [
+                    {
+                        trigger: "dialog",
+                        label: "Penalizador a todos los Chequeos que no implican correr y ocultarse.",
+                        script: `args.fields.modifier -= 10 * this.effect.conditionValue`,
+                        options: {
+                            activateScript: "return !args.skill?.name?.includes(game.i18n.localize('NAME.Stealth')) && args.skill?.name != game.i18n.localize('NAME.Athletics')"
                         }
-                    ]
-                }
+                    }
+                ]
             }
         },
         {
@@ -1636,34 +1593,31 @@ game.wfrp4e.config.statusEffects = [
             id: "prone",
             statuses: ["prone"],
             name: "WFRP4E.ConditionName.Prone",
-            flags: {
-                wfrp4e: {
-                    applicationData : {},
-                    scriptData: [
-                        {
-                            trigger: "dialog",
-                            label : "Chequeos relacionados con movimiento de cualquier tipo",
-                            script : `args.fields.modifier -= 20`,
-                            options : {
-                                dialog : {
-                                    activateScript : "return ['ws', 'bs', 'ag'].includes(args.characteristic)"
-                                }
-                            }
-                        },
-                        {
-                            trigger: "dialog",
-                            label : "Bonificador a ataques cuerpo a cuerpo",
-                            script : `args.fields.modifier += 20`,
-                            options : {
-                                dialog : {
-                                    targeter : true,
-                                    hideScript : "return args.item?.system.attackType != 'melee'",
-                                    activateScript : "return args.item?.system.attackType == 'melee'"
-                                }
-                            }
+            system: {
+                condition : {
+                    value : null,
+                    numbered: false
+                },
+                scriptData: [
+                    {
+                        trigger: "dialog",
+                        label: "Chequeos relacionados con movimiento de cualquier tipo",
+                        script: `args.fields.modifier -= 20`,
+                        options: {
+                                activateScript: "return ['ws', 'bs', 'ag'].includes(args.characteristic)"
                         }
-                    ]
-                }
+                    },
+                    {
+                        trigger: "dialog",
+                        label: "Bonificador a ataques cuerpo a cuerpo",
+                        script: `args.fields.modifier += 20`,
+                        options: {
+                            targeter: true,
+                            hideScript: "return args.item?.system.attackType != 'melee'",
+                            activateScript: "return args.item?.system.attackType == 'melee'"
+                        }
+                    }
+                ]
             }
         },
         {
@@ -1671,24 +1625,23 @@ game.wfrp4e.config.statusEffects = [
             id: "surprised",
             statuses: ["surprised"],
             name: "WFRP4E.ConditionName.Surprised",
-            flags: {
-                wfrp4e: {
-                    applicationData : {},
-                    scriptData: [
-                        {
-                            trigger: "dialog",
-                            label : "Bonificador a ataques cuerpo a cuerpo",
-                            script : `args.fields.modifier += 20`,
-                            options : {
-                                dialog : {
-                                    targeter : true,
-                                    hideScript : "return args.item?.system.attackType != 'melee'",
-                                    activateScript : "return args.item?.system.attackType == 'melee'"
-                                }
-                            }
+            system: {
+                condition : {
+                    value : null,
+                    numbered: false
+                },
+                scriptData: [
+                    {
+                        trigger: "dialog",
+                        label: "Bonificador a ataques cuerpo a cuerpo",
+                        script: `args.fields.modifier += 20`,
+                        options: {
+                            targeter: true,
+                            hideScript: "return args.item?.system.attackType != 'melee'",
+                            activateScript: "return args.item?.system.attackType == 'melee'"
                         }
-                    ]
-                }
+                    }
+                ]
             }
         },
         {
@@ -1696,10 +1649,11 @@ game.wfrp4e.config.statusEffects = [
             id: "unconscious",
             statuses: ["unconscious"],
             name: "WFRP4E.ConditionName.Unconscious",
-            flags: {
-                wfrp4e: {
-                    "value": null
-                }
+            system : {
+                condition : {
+                    value : null,
+                    numbered: false
+                },
             }
         },
         {
@@ -1707,10 +1661,11 @@ game.wfrp4e.config.statusEffects = [
             id: "grappling",
             statuses: ["grappling"],
             name: "WFRP4E.ConditionName.Grappling",
-            flags: {
-                wfrp4e: {
-                    "value": null
-                }
+            system : {
+                condition : {
+                    value : null,
+                    numbered: false
+                },
             }
 
         },
@@ -1719,24 +1674,23 @@ game.wfrp4e.config.statusEffects = [
             id: "engaged",
             statuses: ["engaged"],
             name: "WFRP4E.ConditionName.Engaged",
-            flags: {
-                wfrp4e: {
-                    applicationData : {},
-                    scriptData: [
-                        {
-                            trigger: "dialog",
-                            label : "@effect.name",
-                            script : `args.abort = true
-                            ui.notifications.error(game.i18n.localize("EFFECT.ShooterEngagedError"))`,
-                            options : {
-                                dialog : {
-                                    hideScript : "return !args.weapon || args.weapon.isMelee || args.weapon.properties.qualities.pistol",
-                                    activateScript : "return args.weapon.isRanged && !args.weapon.properties.qualities.pistol"
-                                }
-                            }
+            system: {
+                condition : {
+                    value : null,
+                    numbered: false
+                },
+                scriptData: [
+                    {
+                        trigger: "dialog",
+                        label: "@effect.name",
+                        script: `args.abort = true
+                        ui.notifications.error(game.i18n.localize("EFFECT.ShooterEngagedError"))`,
+                        options: {
+                                hideScript: "return !args.weapon || args.weapon.isMelee || args.weapon.properties.qualities.pistol",
+                                activateScript: "return args.weapon.isRanged && !args.weapon.properties.qualities.pistol"
                         }
-                    ]
-                }
+                    }
+                ]
             }
         },
         {
@@ -1744,10 +1698,11 @@ game.wfrp4e.config.statusEffects = [
             id: "dead",
             statuses: ["dead"],
             name: "WFRP4E.ConditionName.Dead",
-            flags: {
-                wfrp4e: {
-                    "value": null
-                }
+            system : {
+                condition : {
+                    value : null,
+                    numbered: false
+                },
             }
         }
 	]
@@ -1804,10 +1759,14 @@ game.wfrp4e.config.scriptTriggers = {
     "getInitiativeFormula" : "Calcular Iniciativa",
     "createToken" : "Crear Icono",
     "deleteEffect" : "Efecto Eliminado",
-    "endTurn" : "Fin del Turno",
+    "startCombat"  : "WH.Trigger.StartCombat",
+    "startRound" : "WH.Trigger.StartRound",
     "startTurn" : "Comienzo del Turno",
+    "updateCombat"  : "WH.Trigger.UpdateCombat",
+    "endTurn" : "Fin del Turno",
     "endRound" : "Fin del Asalto",
-    "endCombat" : "Fin del Combate"
+    "endCombat" : "Fin del Combate",
+
 }
 
 game.wfrp4e.config.species = {
@@ -1981,4 +1940,4 @@ game.wfrp4e.config.vehicleTypes = {
     "land" : "Terrestre",
     "air" : "Aéreo"
     }
-});
+})

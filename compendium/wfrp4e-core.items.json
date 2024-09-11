@@ -2208,13 +2208,13 @@
 			"effects": [{
 				"name":"Botiquín contra venenos",
 				"scriptData": [
-					{"label":"Botiquín contra venenos","script":"let poisoned = args.actor.hasCondition(\"poisoned\")\nif (poisoned)\n{\n   this.script.scriptNotification(`Eliminados ${poisoned.conditionValue} Estados de Envenenado`)\n   poisoned.delete();  \n}\nelse\n  this.script.scriptNotification(`Sin Estados de Envenenado`)"}
+					{"label":"Botiquín contra venenos","script":"let poisoned = args.actor.hasCondition(\"poisoned\")\nif (poisoned)\n{\n   this.script.notification(`Eliminados ${poisoned.conditionValue} Estados de Envenenado`)\n   poisoned.delete();  \n}\nelse\n  this.script.notification(`Sin Estados de Envenenado`)"}
 					]
 				},
 				{
 				"name":"Aplicar Botiquín contra venenos",
 				"scriptData": [
-					{"label":"Aplicar Botiquín contra venenos","script":"if (this.item.system.quantity.value) \n{\n    this.item.system.reduceQuantity();\n    let test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Heal\"), { skipTargets: true, appendTitle: ` - ${this.effect.name}`, skipTargets: true })\n    await test.roll();\n    if (test.succeeded) \n    {\n        let actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n        actor.applyEffect({ effectData: [this.item.effects.contents[0].convertToApplied()] })\n    }\n    else \n    {\n        this.script.scriptNotification(\"¡El Chequeo de Sanar ha fallado!\", \"error\")\n    }\n}\nelse \n{\n    this.script.scriptNotification(\"¡No queda!\", \"error\")\n}"}
+					{"label":"Aplicar Botiquín contra venenos","script":"if (this.item.system.quantity.value) \n{\n    this.item.system.reduceQuantity();\n    let test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Heal\"), { skipTargets: true, appendTitle: ` - ${this.effect.name}`, skipTargets: true })\n    await test.roll();\n    if (test.succeeded) \n    {\n        let actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n        actor.applyEffect({ effectData: [this.item.effects.contents[0].convertToApplied()] })\n    }\n    else \n    {\n        this.script.notification(\"¡El Chequeo de Sanar ha fallado!\", \"error\")\n    }\n}\nelse \n{\n    this.script.notification(\"¡No queda!\", \"error\")\n}"}
 					]
 				}]
 		},
@@ -2271,7 +2271,7 @@
 			"effects": [{
 				"name":"Aplicar Loto negro",
 				"scriptData": [
-					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n     let effectData = this.item.effects.contents[1].convertToApplied();\n\teffectData.flags.wfrp4e.sourceItem = this.item.uuid\n     effectData.duration.seconds = 10800\n\tactor.applyEffect({effectData : [effectData]})\n}\nelse\n{\n\tthis.script.scriptNotification(\"¡No queda!\", \"error\")\n}"}
+					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n     let effectData = this.item.effects.contents[1].convertToApplied();\n\teffectData.flags.wfrp4e.sourceItem = this.item.uuid\n     effectData.duration.seconds = 10800\n\tactor.applyEffect({effectData : [effectData]})\n}\nelse\n{\n\tthis.script.notification(\"¡No queda!\", \"error\")\n}"}
 					]
 				},
 				{
@@ -2624,13 +2624,13 @@
 			"effects": [{
 				"name":"Faxtoryll",
 				"scriptData": [
-					{"script":"let bleeding = this.actor.hasCondition(\"bleeding\")\nif (bleeding)\n{\n   this.script.scriptNotification(`Eliminados ${bleeding.conditionValue} Estados de Sangrando`)\n   bleeding.delete();  \n}\nelse \n{\n   this.script.scriptNotification(`No tienes Estados de Sangrando`)\n}"}
+					{"script":"let bleeding = this.actor.hasCondition(\"bleeding\")\nif (bleeding)\n{\n   this.script.notification(`Eliminados ${bleeding.conditionValue} Estados de Sangrando`)\n   bleeding.delete();  \n}\nelse \n{\n   this.script.notification(`No tienes Estados de Sangrando`)\n}"}
 					]
 				},
 				{
 				"name":"Aplicar Faxtoryll",
 				"scriptData": [
-					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n\tactor.applyEffect({effectData : [this.item.effects.contents[0]]})\n}\nelse\n{\n\tthis.script.scriptNotification(\"¡No queda!\", \"error\")\n}"}
+					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n\tactor.applyEffect({effectData : [this.item.effects.contents[0]]})\n}\nelse\n{\n\tthis.script.notification(\"¡No queda!\", \"error\")\n}"}
 					]
 				}]
 		},
@@ -2756,13 +2756,13 @@
 			"effects": [{
 				"name":"Poción curativa",
 				"scriptData": [
-					{"label":"Poción curativa","script":"let wounds = this.actor.system.status.wounds\nif (wounds.value == 0)\n  return this.script.scriptNotification(\"Sin efecto con 0 Heridas\", \"error\")\n\nthis.script.scriptNotification(`Curadas ${this.actor.characteristics.t.bonus} Heridas`)\nawait this.actor.modifyWounds(this.actor.characteristics.t.bonus)"}
+					{"label":"Poción curativa","script":"let wounds = this.actor.system.status.wounds\nif (wounds.value == 0)\n  return this.script.notification(\"Sin efecto con 0 Heridas\", \"error\")\n\nthis.script.notification(`Curadas ${this.actor.characteristics.t.bonus} Heridas`)\nawait this.actor.modifyWounds(this.actor.characteristics.t.bonus)"}
 					]
 				},
 				{
 				"name":"Aplicar Poción curativa",
 				"scriptData": [
-					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n\tactor.applyEffect({effectData : [this.item.effects.contents[0]]})\n}\nelse\n{\n\tthis.script.scriptNotification(\"¡No quedan!\", \"error\")\n}"}
+					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n\tactor.applyEffect({effectData : [this.item.effects.contents[0]]})\n}\nelse\n{\n\tthis.script.notification(\"¡No quedan!\", \"error\")\n}"}
 					]
 				}]
 		},
@@ -2778,7 +2778,7 @@
 			"effects": [{
 				"name":"Aplicar Rompecorazones",
 				"scriptData": [
-					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n    let effectData = this.item.effects.contents[1].convertToApplied();\n\teffectData.flags.wfrp4e.sourceItem = this.item.uuid\n\tactor.applyEffect({effectData : [effectData]})\n}\nelse\n{\n\tthis.script.scriptNotification(\"¡No queda!\", \"error\")\n}"}
+					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n    let effectData = this.item.effects.contents[1].convertToApplied();\n\teffectData.flags.wfrp4e.sourceItem = this.item.uuid\n\tactor.applyEffect({effectData : [effectData]})\n}\nelse\n{\n\tthis.script.notification(\"¡No queda!\", \"error\")\n}"}
 					]
 				},
 				{
@@ -2966,13 +2966,13 @@
 				"scriptData": [
 					{"label":"Setas rusulas de la locura"},
 					{"label":"Furia"},
-					{"label":"Efecto eliminado","script":"\n\nif (![\"Goblin\", \"Orco\"].includes(this.actor.system.details.species.value)) {\n    let test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), { skipTargets: true, skipTargets: true, appendTitle: ` - ${this.effect.name}` })\n    await test.roll();\n    if (test.failed) {\n        let infection = await fromUuid(\"Compendium.wfrp4e-core.items.Item.1hQuVFZt9QnnbWzg\")\n        this.actor.createEmbeddedDocuments(\"Item\", [infection])\n    }\n}\n\n// Since wounds change when the effect is deleted, need to wait until after \n// the max wounds have been recalculated to apply damage\ngame.wfrp4e.utility.sleep(1000).then(async () => {\n    let roll = await new Roll(\"1d10\").roll();\n\n    roll.toMessage(this.script.getChatData());\n    this.script.scriptMessage(await this.actor.applyBasicDamage(roll.total, { damageType: game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL, suppressMsg: true }))\n\n})"}
+					{"label":"Efecto eliminado","script":"\n\nif (![\"Goblin\", \"Orco\"].includes(this.actor.system.details.species.value)) {\n    let test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), { skipTargets: true, skipTargets: true, appendTitle: ` - ${this.effect.name}` })\n    await test.roll();\n    if (test.failed) {\n        let infection = await fromUuid(\"Compendium.wfrp4e-core.items.Item.1hQuVFZt9QnnbWzg\")\n        this.actor.createEmbeddedDocuments(\"Item\", [infection])\n    }\n}\n\n// Since wounds change when the effect is deleted, need to wait until after \n// the max wounds have been recalculated to apply damage\nwarhammer.utility.sleep(1000).then(async () => {\n    let roll = await new Roll(\"1d10\").roll();\n\n    roll.toMessage(this.script.getChatData());\n    this.script.message(await this.actor.applyBasicDamage(roll.total, { damageType: game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL, suppressMsg: true }))\n\n})"}
 					]
 				},
 				{
 				"name":"Aplicar Setas rusulas de la locura",
 				"scriptData": [
-					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n     let effectData = this.item.effects.contents[0].convertToApplied();\n\teffectData.flags.wfrp4e.sourceItem = this.item.uuid\n     effectData.duration.seconds = 10800\n\tactor.applyEffect({effectData : [effectData]})\n}\nelse\n{\n\tthis.script.scriptNotification(\"¡No quedan!\", \"error\")\n}"}
+					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n     let effectData = this.item.effects.contents[0].convertToApplied();\n\teffectData.flags.wfrp4e.sourceItem = this.item.uuid\n     effectData.duration.seconds = 10800\n\tactor.applyEffect({effectData : [effectData]})\n}\nelse\n{\n\tthis.script.notification(\"¡No quedan!\", \"error\")\n}"}
 					]
 				}]
 		},
@@ -3019,7 +3019,7 @@
 			"effects": [{
 				"name":"Raíz de mandrágora",
 				"scriptData": [
-					{"label":"Comprobación de Asalto","script":"let test = await this.actor.setupCharacteristic(\"wp\", {skipTargets: true, appendTitle : ` - ${this.effect.name}`})\nawait test.roll();\nif (test.succeeded)\n{\n    this.script.scriptMessage(\"Puedes realizar una Acción o Movimiento (escoge una).\")\n}\nelse \n{\n    this.script.scriptMessage(\"No puedes realizar ni Acción ni Movimiento este Asalto.\")    \n}"},
+					{"label":"Comprobación de Asalto","script":"let test = await this.actor.setupCharacteristic(\"wp\", {skipTargets: true, appendTitle : ` - ${this.effect.name}`})\nawait test.roll();\nif (test.succeeded)\n{\n    this.script.message(\"Puedes realizar una Acción o Movimiento (escoge una).\")\n}\nelse \n{\n    this.script.message(\"No puedes realizar ni Acción ni Movimiento este Asalto.\")    \n}"},
 					{"label":"Bonificador a Chequeos de Frialdad"},
 					{"label":"Mitad de Movimiento"}
 					]
@@ -3027,7 +3027,7 @@
 				{
 				"name":"Aplicar Raíz de mandrágora",
 				"scriptData": [
-					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n     let effectData = this.item.effects.contents[0].convertToApplied();\n\teffectData.flags.wfrp4e.sourceItem = this.item.uuid\n     effectData.duration.seconds = 10800\n\tactor.applyEffect({effectData : [effectData]})\n}\nelse\n{\n\tthis.script.scriptNotification(\"¡No queda!\", \"error\")\n}"}
+					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n     let effectData = this.item.effects.contents[0].convertToApplied();\n\teffectData.flags.wfrp4e.sourceItem = this.item.uuid\n     effectData.duration.seconds = 10800\n\tactor.applyEffect({effectData : [effectData]})\n}\nelse\n{\n\tthis.script.notification(\"¡No queda!\", \"error\")\n}"}
 					]
 				}]
 		},
@@ -3241,7 +3241,7 @@
 			"effects": [{
 				"name":"Delicia de Ranald",
 				"scriptData": [
-					{"label":"Aplicar efectos secundarios","script":"let sourceItem = this.effect.sourceItem;\n\nif (sourceItem)\n{\n\tthis.actor.applyEffect({effectUuids : [sourceItem.effects.contents[1].uuid]})\n\tthis.script.scriptNotification(\"Aplicados efectos secundarios\");\n}"}
+					{"label":"Aplicar efectos secundarios","script":"let sourceItem = this.effect.sourceItem;\n\nif (sourceItem)\n{\n\tthis.actor.applyEffect({effectUuids : [sourceItem.effects.contents[1].uuid]})\n\tthis.script.notification(\"Aplicados efectos secundarios\");\n}"}
 					]
 				},
 				{
@@ -3251,7 +3251,7 @@
 				{
 				"name":"Inhalar Delicia de Ranald",
 				"scriptData": [
-					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n     let effectData = this.item.effects.contents[0].convertToApplied();\n\teffectData.flags.wfrp4e.sourceItem = this.item.uuid\n     effectData.duration.seconds = 10800\n\tactor.applyEffect({effectData : [effectData]})\n}\nelse\n{\n\tthis.script.scriptNotification(\"¡No queda!\", \"error\")\n}"}
+					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n     let effectData = this.item.effects.contents[0].convertToApplied();\n\teffectData.flags.wfrp4e.sourceItem = this.item.uuid\n     effectData.duration.seconds = 10800\n\tactor.applyEffect({effectData : [effectData]})\n}\nelse\n{\n\tthis.script.notification(\"¡No queda!\", \"error\")\n}"}
 					]
 				}]
 		},
@@ -3358,13 +3358,13 @@
 			"effects": [{
 				"name":"Salicornia",
 				"scriptData": [
-					{"label":"Salicornia","script":"let stunned = this.actor.hasCondition(\"stunned\")\nif (stunned)\n{\n   this.script.scriptNotification(`Eliminado 1 Estado de Aturdido`)\n   this.actor.removeCondition(\"stunned\");\n}\nelse \n{\n\tthis.script.scriptNotification(`Sin Estados de Aturdido`)\n}"}
+					{"label":"Salicornia","script":"let stunned = this.actor.hasCondition(\"stunned\")\nif (stunned)\n{\n   this.script.notification(`Eliminado 1 Estado de Aturdido`)\n   this.actor.removeCondition(\"stunned\");\n}\nelse \n{\n\tthis.script.notification(`Sin Estados de Aturdido`)\n}"}
 					]
 				},
 				{
 				"name":"Aplicar Salicornia",
 				"scriptData": [
-					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n\tactor.applyEffect({effectData : [this.item.effects.contents[0]]})\n}\nelse\n{\n\tthis.script.scriptNotification(\"¡No queda!\", \"error\")\n}"}
+					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n\tactor.applyEffect({effectData : [this.item.effects.contents[0]]})\n}\nelse\n{\n\tthis.script.notification(\"¡No queda!\", \"error\")\n}"}
 					]
 				}]
 		},
@@ -3563,13 +3563,13 @@
 			"effects": [{
 				"name":"Poción de vitalidad",
 				"scriptData": [
-					{"label":"Poción de vitalidad","script":"let fatigued = this.actor.hasCondition(\"fatigued\")\nif (fatigued)\n{\n   this.script.scriptNotification(`Eliminado(s) ${fatigued.conditionValue} Estado(s) de Fatigado`)\n   fatigued.delete();  \n}\nelse \n{\n\tthis.script.scriptNotification(`Sin Estados de Fatigado`)\n}"}
+					{"label":"Poción de vitalidad","script":"let fatigued = this.actor.hasCondition(\"fatigued\")\nif (fatigued)\n{\n   this.script.notification(`Eliminado(s) ${fatigued.conditionValue} Estado(s) de Fatigado`)\n   fatigued.delete();  \n}\nelse \n{\n\tthis.script.notification(`Sin Estados de Fatigado`)\n}"}
 					]
 				},
 				{
 				"name":"Aplicar Poción de vitalidad",
 				"scriptData": [
-					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n\tactor.applyEffect({effectData : [this.item.effects.contents[0]]})\n}\nelse\n{\n\tthis.script.scriptNotification(\"¡No quedan!\", \"error\")\n}"}
+					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n\tactor.applyEffect({effectData : [this.item.effects.contents[0]]})\n}\nelse\n{\n\tthis.script.notification(\"¡No quedan!\", \"error\")\n}"}
 					]
 				}]
 		},
@@ -3606,7 +3606,7 @@
 				{
 				"name":"Tomar Raíz extraña",
 				"scriptData": [
-					{"label":"Tomar Raíz extraña","script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n     let effectData = this.item.effects.contents[0].convertToApplied();\n     let minutes = Math.ceil(CONFIG.Dice.randomUniform() * 10);\n     effectData.duration.seconds = 60 * minutes\n     this.script.scriptMessage(`<strong>Duración</strong>: ${minutes} minutos.`, {whisper : ChatMessage.getWhisperRecipients(\"GM\")})\n\tactor.applyEffect({effectData : [effectData]})\n}\nelse\n{\n\tthis.script.scriptNotification(\"¡No queda!\", \"error\")\n}"}
+					{"label":"Tomar Raíz extraña","script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n     let effectData = this.item.effects.contents[0].convertToApplied();\n     let minutes = Math.ceil(CONFIG.Dice.randomUniform() * 10);\n     effectData.duration.seconds = 60 * minutes\n     this.script.message(`<strong>Duración</strong>: ${minutes} minutos.`, {whisper : ChatMessage.getWhisperRecipients(\"GM\")})\n\tactor.applyEffect({effectData : [effectData]})\n}\nelse\n{\n\tthis.script.notification(\"¡No queda!\", \"error\")\n}"}
 					]
 				}]
 		},
@@ -3664,7 +3664,7 @@
 				{
 				"name":"Da\u00F1o arterial",
 				"scriptData": [
-					{"label":"Da\u00F1o arterial","script":"if (args.opposedTest.result.hitloc.value == \"body\" && args.totalWoundLoss > 0)\n{\n    args.actor.addCondition(\"bleeding\", 2)\n    this.script.scriptMessage(\"Ganados 2 Estados de Sangrando\")\n}"}
+					{"label":"Da\u00F1o arterial","script":"if (args.opposedTest.result.hitloc.value == \"body\" && args.totalWoundLoss > 0)\n{\n    args.actor.addCondition(\"bleeding\", 2)\n    this.script.message(\"Ganados 2 Estados de Sangrando\")\n}"}
 					]
 				}]
 		},
@@ -3709,8 +3709,8 @@
 			"effects": [{
 				"name":"Brazo muy sacudido",
 				"scriptData": [
-					{"label":"Brazo muy sacudido","script":"let location = this.item.system.location.key;\n\nif (location)\n{\n    let dropped = this.item.system.weaponsAtLocation;\n\n    if (dropped.length)\n    {\n        this.script.scriptNotification(`Dejas caer ${dropped.map(i => i.name).join(\", \")}!`)\n        for(let weapon of dropped)\n        {\n            await weapon.system.toggleEquip();\n        }\n    }\n}\n\nlet roll = await new Roll(\"max(1, 1d10 - @system.characteristics.t.bonus)\", this.actor).roll()\n\nroll.toMessage(this.script.getChatData({flavor : `${this.effect.name} (Duration)`}));\n\nthis.effect.updateSource({\"duration.rounds\" : roll.total})"},
-					{"label":"Prevenir uso del brazo","script":"args.abort = true;\nthis.script.scriptNotification(`¡No puedes usar el  ${this.item.system.location.value}!`, \"error\")"}
+					{"label":"Brazo muy sacudido","script":"let location = this.item.system.location.key;\n\nif (location)\n{\n    let dropped = this.item.system.weaponsAtLocation;\n\n    if (dropped.length)\n    {\n        this.script.notification(`Dejas caer ${dropped.map(i => i.name).join(\", \")}!`)\n        for(let weapon of dropped)\n        {\n            await weapon.system.toggleEquip();\n        }\n    }\n}\n\nlet roll = await new Roll(\"max(1, 1d10 - @system.characteristics.t.bonus)\", this.actor).roll()\n\nroll.toMessage(this.script.getChatData({flavor : `${this.effect.name} (Duration)`}));\n\nthis.effect.updateSource({\"duration.rounds\" : roll.total})"},
+					{"label":"Prevenir uso del brazo","script":"args.abort = true;\nthis.script.notification(`¡No puedes usar el  ${this.item.system.location.value}!`, \"error\")"}
 					]
 				}]
 		},
@@ -3750,7 +3750,7 @@
 				{
 				"name":"Mano sangrante",
 				"scriptData": [
-					{"label":"Chequeo de Destreza","script":"let location = this.item.system.location.key\nlet test = await this.actor.setupCharacteristic(\"dex\", {context : {failure : `<strong>${this.effect.name}</strong>: ¡Deja caer el objeto!`}, skipTargets: true, appendTitle : \" - \" + this.effect.name, fields : {difficulty : \"average\"}})\nawait test.roll();\n\n\nif (location && test.failed)\n{\n    let dropped = this.item.system.weaponsAtLocation;\n\n    if (dropped.length)\n    {\n        this.script.scriptNotification(`Deja caer ${dropped.map(i => i.name).join(\", \")}!`)\n        for(let weapon of dropped)\n        {\n            await weapon.system.toggleEquip();\n        }\n    }\n}\n\nreturn test.succeeded"},
+					{"label":"Chequeo de Destreza","script":"let location = this.item.system.location.key\nlet test = await this.actor.setupCharacteristic(\"dex\", {context : {failure : `<strong>${this.effect.name}</strong>: ¡Deja caer el objeto!`}, skipTargets: true, appendTitle : \" - \" + this.effect.name, fields : {difficulty : \"average\"}})\nawait test.roll();\n\n\nif (location && test.failed)\n{\n    let dropped = this.item.system.weaponsAtLocation;\n\n    if (dropped.length)\n    {\n        this.script.notification(`Deja caer ${dropped.map(i => i.name).join(\", \")}!`)\n        for(let weapon of dropped)\n        {\n            await weapon.system.toggleEquip();\n        }\n    }\n}\n\nreturn test.succeeded"},
 					{"label":"Marcado en diálogo"}
 					]
 				}]
@@ -3971,7 +3971,7 @@
 			"effects": [{
 				"name":"Rotura de codo",
 				"scriptData": [
-					{"label":"Rotura de codo","script":"let item = await fromUuid(\"Compendium.wfrp4e-core.items.rlDZZTj5PXjuRXa2\")\nlet data = item.toObject();\ndata.system.location.key = this.item.system.location.key;\nawait this.actor.createEmbeddedDocuments(\"Item\", [data], {fromEffect: this.effect.id})\n\nlet location = this.item.system.location.key;\n\nif (location)\n{\n    let dropped = this.item.system.weaponsAtLocation;\n\n    if (dropped.length)\n    {\n        this.script.scriptNotification(`¡Dejado caer ${dropped.map(i => i.name).join(\", \")}!`)\n        for(let weapon of dropped)\n        {\n            await weapon.system.toggleEquip();\n        }\n    }\n}"}
+					{"label":"Rotura de codo","script":"let item = await fromUuid(\"Compendium.wfrp4e-core.items.rlDZZTj5PXjuRXa2\")\nlet data = item.toObject();\ndata.system.location.key = this.item.system.location.key;\nawait this.actor.createEmbeddedDocuments(\"Item\", [data], {fromEffect: this.effect.id})\n\nlet location = this.item.system.location.key;\n\nif (location)\n{\n    let dropped = this.item.system.weaponsAtLocation;\n\n    if (dropped.length)\n    {\n        this.script.notification(`¡Dejado caer ${dropped.map(i => i.name).join(\", \")}!`)\n        for(let weapon of dropped)\n        {\n            await weapon.system.toggleEquip();\n        }\n    }\n}"}
 					]
 				}]
 		},
@@ -4034,7 +4034,7 @@
 				{
 				"name":"Arteria dañada",
 				"scriptData": [
-					{"label":"Arteria dañada","script": "if (args.opposedTest.result.hitloc.value == this.item.system.location.key && args.totalWoundLoss > 0)\n{\n    args.actor.addCondition(\"bleeding\", 2);\n    this.script.scriptNotification(\"Añadido Sangrando\")\n}"}
+					{"label":"Arteria dañada","script": "if (args.opposedTest.result.hitloc.value == this.item.system.location.key && args.totalWoundLoss > 0)\n{\n    args.actor.addCondition(\"bleeding\", 2);\n    this.script.notification(\"Añadido Sangrando\")\n}"}
 					]
 				}]
 		},
@@ -4150,8 +4150,8 @@
 			"effects": [{
 				"name":"Hombro dislocado",
 				"scriptData": [
-					{"label":"Hombro dislocado","script":"await this.actor.addCondition(\"stunned\");\nlet test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {fields: {difficulty : \"hard\"}, skipTargets: true, appendTitle :  \" - \" + this.effect.name})\nawait test.roll();\nif (test.failed)\n{\n\tawait this.actor.addCondition(\"prone\")\n\tawait this.actor.addCondition(\"stunned\")\n}\n          \nlet location = this.item.system.location.key;\n\nif (location)\n{\n    let dropped = this.item.system.weaponsAtLocation;\n\n    if (dropped.length)\n    {\n        this.script.scriptNotification(`Deja caer ${dropped.map(i => i.name).join(\", \")}!`)\n        for(let weapon of dropped)\n        {\n            await weapon.system.toggleEquip();\n        }\n    }\n}"},
-					{"label":"Prevenir uso del brazo","script": "args.abort = true;\nthis.script.scriptNotification(`¡No puedes usar el ${this.item.system.location.value}!`, \"error\")"}
+					{"label":"Hombro dislocado","script":"await this.actor.addCondition(\"stunned\");\nlet test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {fields: {difficulty : \"hard\"}, skipTargets: true, appendTitle :  \" - \" + this.effect.name})\nawait test.roll();\nif (test.failed)\n{\n\tawait this.actor.addCondition(\"prone\")\n\tawait this.actor.addCondition(\"stunned\")\n}\n          \nlet location = this.item.system.location.key;\n\nif (location)\n{\n    let dropped = this.item.system.weaponsAtLocation;\n\n    if (dropped.length)\n    {\n        this.script.notification(`Deja caer ${dropped.map(i => i.name).join(\", \")}!`)\n        for(let weapon of dropped)\n        {\n            await weapon.system.toggleEquip();\n        }\n    }\n}"},
+					{"label":"Prevenir uso del brazo","script": "args.abort = true;\nthis.script.notification(`¡No puedes usar el ${this.item.system.location.value}!`, \"error\")"}
 					]
 				}]
 		},
@@ -4230,7 +4230,7 @@
 				{
 				"name":"Herida abierta en el brazo",
 				"scriptData": [
-					{"label":"Herida abierta en el brazo","script":"if (args.opposedTest.result.hitloc.value == this.item.system.location.key)\n{\n    args.actor.addCondition(\"bleeding\", 1);\n    this.script.scriptNotification(\"Añadido Sangrando\")\n}"}
+					{"label":"Herida abierta en el brazo","script":"if (args.opposedTest.result.hitloc.value == this.item.system.location.key)\n{\n    args.actor.addCondition(\"bleeding\", 1);\n    this.script.notification(\"Añadido Sangrando\")\n}"}
 					]
 				}]
 		},
@@ -4247,7 +4247,7 @@
 				{
 				"name":"Herida abierta en el pecho",
 				"scriptData": [
-					{"label":"Herida abierta en el pecho","script":"if (args.opposedTest.result.hitloc.value == \"body\" && args.totalWoundLoss > 0)\n{\n    args.actor.addCondition(\"bleeding\", 1);\n    this.script.scriptNotification(\"Añadido Sangrando\")\n}"}
+					{"label":"Herida abierta en el pecho","script":"if (args.opposedTest.result.hitloc.value == \"body\" && args.totalWoundLoss > 0)\n{\n    args.actor.addCondition(\"bleeding\", 1);\n    this.script.notification(\"Añadido Sangrando\")\n}"}
 					]
 				}]
 		},
@@ -4332,7 +4332,7 @@
 			"effects": [{
 				"name":"Brazo sacudido",
 				"scriptData": [
-					{"label":"Brazo sacudido","script":"let location = this.item.system.location.key;\n\nif (location)\n{\n    let dropped = this.item.system.weaponsAtLocation;\n\n    if (dropped.length)\n    {\n        this.script.scriptNotification(`¡Dejado caer ${dropped.map(i => i.name).join(\", \")}!`)\n        for(let weapon of dropped)\n        {\n            await weapon.system.toggleEquip();\n        }\n    }\n}"}
+					{"label":"Brazo sacudido","script":"let location = this.item.system.location.key;\n\nif (location)\n{\n    let dropped = this.item.system.weaponsAtLocation;\n\n    if (dropped.length)\n    {\n        this.script.notification(`¡Dejado caer ${dropped.map(i => i.name).join(\", \")}!`)\n        for(let weapon of dropped)\n        {\n            await weapon.system.toggleEquip();\n        }\n    }\n}"}
 					]
 				}]
 		},
@@ -4371,7 +4371,7 @@
 				{
 				"name":"Herida grave en el pecho",
 				"scriptData": [
-					{"label":"Herida grave en el pecho","script":"if (args.opposedTest.result.hitloc.value == \"body\" && args.totalWoundLoss > 0) \n{\n    args.actor.addCondition(\"bleeding\", 2)\n    this.script.scriptNotification(\"Añadido Sangrando\")\n}"}
+					{"label":"Herida grave en el pecho","script":"if (args.opposedTest.result.hitloc.value == \"body\" && args.totalWoundLoss > 0) \n{\n    args.actor.addCondition(\"bleeding\", 2)\n    this.script.notification(\"Añadido Sangrando\")\n}"}
 					]
 				}]
 		},
@@ -4868,7 +4868,7 @@
 				{
 				"name":"Muslo desgarrado",
 				"scriptData": [
-					{"label":"Muslo desgarrado","script":"if (args.opposedTest.result.hitloc.value == this.item.system.location.key && args.totalWoundLoss > 0)\n{\n    args.actor.addCondition(\"bleeding\", 1);\n    this.script.scriptNotification(\"Añadido Sangrando\")\n}"},
+					{"label":"Muslo desgarrado","script":"if (args.opposedTest.result.hitloc.value == this.item.system.location.key && args.totalWoundLoss > 0)\n{\n    args.actor.addCondition(\"bleeding\", 1);\n    this.script.notification(\"Añadido Sangrando\")\n}"},
 					{"label":"Tumbado"}
 					]
 				}]
@@ -4934,8 +4934,8 @@
 			"effects": [{
 				"name":"Brazo distendido",
 				"scriptData": [
-					{"label":"Brazo distendido","script":"let location = this.item.system.location.key;\n\nif (location)\n{\n    let dropped = this.item.system.weaponsAtLocation;\n\n    if (dropped.length)\n    {\n        this.script.scriptNotification(`¡Dejado caer ${dropped.map(i => i.name).join(\", \")}!`)\n        for(let weapon of dropped)\n        {\n            await weapon.system.toggleEquip();\n        }\n    }\n}\n\nlet roll = await new Roll(\"1d10\").roll()\n\nroll.toMessage(this.script.getChatData({flavor : `${this.effect.name} (Duración)`}));\n\nthis.effect.updateSource({\"duration.rounds\" : roll.total})"},
-					{"label":"Prevenir uso del brazo","script":"args.abort = true;\nthis.script.scriptNotification(`¡No puedes usar el ${this.item.system.location.value}!`, \"error\")"}
+					{"label":"Brazo distendido","script":"let location = this.item.system.location.key;\n\nif (location)\n{\n    let dropped = this.item.system.weaponsAtLocation;\n\n    if (dropped.length)\n    {\n        this.script.notification(`¡Dejado caer ${dropped.map(i => i.name).join(\", \")}!`)\n        for(let weapon of dropped)\n        {\n            await weapon.system.toggleEquip();\n        }\n    }\n}\n\nlet roll = await new Roll(\"1d10\").roll()\n\nroll.toMessage(this.script.getChatData({flavor : `${this.effect.name} (Duración)`}));\n\nthis.effect.updateSource({\"duration.rounds\" : roll.total})"},
+					{"label":"Prevenir uso del brazo","script":"args.abort = true;\nthis.script.notification(`¡No puedes usar el ${this.item.system.location.value}!`, \"error\")"}
 					]
 				}]
 		},
@@ -4946,8 +4946,8 @@
 			"effects": [{
 				"name":"Clavícula dislocada",
 				"scriptData": [
-					{"label":"Clavícula dislocada","script": "let location = (Math.ceil(CONFIG.Dice.randomUniform() * 2) == 2 ? \"r\" : \"l\") + \"Arm\"\n\nif (location == \"lArm\")\n{\n\tthis.script.scriptNotification(\"Sacado izquierdo\")\n}\nelse if (location == \"rArm\")\n{\n\tthis.script.scriptNotification(\"Sacado derecho\")\n}\n\nthis.effect.updateSource({\"flags.wfrp4e.location\" : location});\n\nif (location)\n{\n    let dropped = this.actor.itemTypes.weapon.filter(i => i.isEquipped & i.system.usesHands.includes(location));\n\n    if (dropped.length)\n    {\n        this.script.scriptNotification(`¡Dejado caer ${dropped.map(i => i.name).join(\", \")}!`)\n        for(let weapon of dropped)\n        {\n            await weapon.system.toggleEquip();\n        }\n    }\n}\n\nlet roll = await new Roll(\"1d10\").roll()\n\nroll.toMessage(this.script.getChatData({flavor : `${this.effect.name} (Duración)`}));\n\nthis.effect.updateSource({\"duration.rounds\" : roll.total})"},
-					{"label":"Prevenir uso del brazo","script":"args.abort = true;\nthis.script.scriptNotification(`¡No puedes usar el ${game.wfrp4e.config.locations[this.effect.getFlag(\"wfrp4e\", \"location\")]}!`, \"error\")"}
+					{"label":"Clavícula dislocada","script": "let location = (Math.ceil(CONFIG.Dice.randomUniform() * 2) == 2 ? \"r\" : \"l\") + \"Arm\"\n\nif (location == \"lArm\")\n{\n\tthis.script.notification(\"Sacado izquierdo\")\n}\nelse if (location == \"rArm\")\n{\n\tthis.script.notification(\"Sacado derecho\")\n}\n\nthis.effect.updateSource({\"flags.wfrp4e.location\" : location});\n\nif (location)\n{\n    let dropped = this.actor.itemTypes.weapon.filter(i => i.isEquipped & i.system.usesHands.includes(location));\n\n    if (dropped.length)\n    {\n        this.script.notification(`¡Dejado caer ${dropped.map(i => i.name).join(\", \")}!`)\n        for(let weapon of dropped)\n        {\n            await weapon.system.toggleEquip();\n        }\n    }\n}\n\nlet roll = await new Roll(\"1d10\").roll()\n\nroll.toMessage(this.script.getChatData({flavor : `${this.effect.name} (Duración)`}));\n\nthis.effect.updateSource({\"duration.rounds\" : roll.total})"},
+					{"label":"Prevenir uso del brazo","script":"args.abort = true;\nthis.script.notification(`¡No puedes usar el ${game.wfrp4e.config.locations[this.effect.getFlag(\"wfrp4e\", \"location\")]}!`, \"error\")"}
 					]
 				}]
 		},
@@ -6176,7 +6176,7 @@
 			"effects": [{
 				"name":"Brazos del Aethyr",
 				"scriptData": [
-					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = game.wfrp4e.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.scriptNotification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
+					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = arhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
 					]
 				}]
 		},
@@ -6187,7 +6187,7 @@
 			"effects": [{
 				"name":"Brazos del Aethyr (Bestias)",
 				"scriptData": [
-					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = game.wfrp4e.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.scriptNotification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
+					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = arhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
 					]
 				}]
 		},
@@ -6198,7 +6198,7 @@
 			"effects": [{
 				"name":"Brazos del Aethyr (Demonología)",
 				"scriptData": [
-					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = game.wfrp4e.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.scriptNotification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
+					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = arhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
 					]
 				}]
 		},
@@ -6209,7 +6209,7 @@
 			"effects": [{
 				"name":"Brazos del Aethyr (Muerte)",
 				"scriptData": [
-					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = game.wfrp4e.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.scriptNotification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
+					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = arhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
 					]
 				}]
 		},
@@ -6220,7 +6220,7 @@
 			"effects": [{
 				"name":"Brazos del Aethyr (Fuego)",
 				"scriptData": [
-					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = game.wfrp4e.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.scriptNotification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
+					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = arhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
 					]
 				}]
 		},
@@ -6231,7 +6231,7 @@
 			"effects": [{
 				"name":"Brazos del Aethyr (Cielos)",
 				"scriptData": [
-					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = game.wfrp4e.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.scriptNotification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
+					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = arhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
 					]
 				}]
 		},
@@ -6242,7 +6242,7 @@
 			"effects": [{
 				"name":"Brazos del Aethyr (Adivinación)",
 				"scriptData": [
-					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = game.wfrp4e.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.scriptNotification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
+					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = arhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
 					]
 				}]
 		},
@@ -6253,7 +6253,7 @@
 			"effects": [{
 				"name":"Brazos del Aethyr (Vida)",
 				"scriptData": [
-					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = game.wfrp4e.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.scriptNotification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
+					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = arhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
 					]
 				}]
 		},
@@ -6264,7 +6264,7 @@
 			"effects": [{
 				"name":"Brazos del Aethyr (Luz)",
 				"scriptData": [
-					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = game.wfrp4e.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.scriptNotification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
+					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = arhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
 					]
 				}]
 		},
@@ -6275,7 +6275,7 @@
 			"effects": [{
 				"name":"Brazos del Aethyr (Metal)",
 				"scriptData": [
-					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = game.wfrp4e.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.scriptNotification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
+					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = arhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
 					]
 				}]
 		},
@@ -6286,7 +6286,7 @@
 			"effects": [{
 				"name":"Brazos del Aethyr (Nigromancia)",
 				"scriptData": [
-					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = game.wfrp4e.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.scriptNotification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
+					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = arhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
 					]
 				}]
 		},
@@ -6297,7 +6297,7 @@
 			"effects": [{
 				"name":"Brazos del Aethyr (Sombras)",
 				"scriptData": [
-					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = game.wfrp4e.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.scriptNotification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
+					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = arhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
 					]
 				}]
 		},
@@ -6308,7 +6308,7 @@
 			"effects": [{
 				"name":"Brazos del Aethyr (Brujería)",
 				"scriptData": [
-					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = game.wfrp4e.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.scriptNotification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
+					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = arhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
 					]
 				}]
 		},
@@ -6319,7 +6319,7 @@
 			"effects": [{
 				"name":"Garras de ámbar",
 				"scriptData": [
-					{"label":"Garras de ámbar","script":"let amberTalons = foundry.utils.deepClone(game.wfrp4e.config.systemItems.unarmed);\n    amberTalons.name = \"Garras de ámbar\";\n    amberTalons.img = this.effect.img;\n    amberTalons.system.damage.value = \"SB + WPB\"\n    amberTalons.system.equipped = true;\n    amberTalons.system.qualities.value.push({name : \"magical\"})\n    amberTalons.effects.push({\n        label : \"Garras de ámbar\",\n        transfer: false,\n        icon : \"modules/wfrp4e-core/icons/spells/amber-talons.png\" ,\n        flags : {\n          wfrp4e : {\n              applicationData : {\n                  documentType : \"Item\"\n              },\n              scriptData : [{\n                  trigger : \"applyDamage\",\n                  script : \"if (args.totalWoundLoss >= 1)\\n{ \\n    args.actor.addCondition(\\\"bleeding\\\")\\n}\"\n              }]\n          }\n        }\n      })\n    this.actor.createEmbeddedDocuments(\"Item\", [amberTalons], {fromEffect: this.effect.id})"}
+					{"label":"Garras de ámbar","script":"let amberTalons = foundry.utils.deepClone(game.wfrp4e.config.systemItems.unarmed);\n    amberTalons.name = \"Garras de ámbar\";\n    amberTalons.img = this.effect.img;\n    amberTalons.system.damage.value = \"SB + WPB\"\n    amberTalons.system.equipped = true;\n    amberTalons.system.qualities.value.push({name : \"magical\"})\n    amberTalons.effects.push({\n        label : \"Garras de ámbar\",\n        transfer: false,\n        icon : \"modules/wfrp4e-core/icons/spells/amber-talons.png\" ,\n        system: {\n          transferData : {\n                  documentType : \"Item\"\n              },\n              scriptData : [{\n                  trigger : \"applyDamage\",\n                  script : \"if (args.totalWoundLoss >= 1)\\n{ \\n    args.actor.addCondition(\\\"bleeding\\\")\\n}\"\n              }]\n          }\n      })\n    this.actor.createEmbeddedDocuments(\"Item\", [amberTalons], {fromEffect: this.effect.id})"}
 					]
 				}]
 		},
@@ -6336,7 +6336,7 @@
 				"name":"Égida de Aqshy",
 				"scriptData": [
 					{"label":"Custodiado","script":"let useWard = await Dialog.wait({\n\ttitle : this.effect.name,\n\tcontent : `<p>¿Usar Custodiado provisto por <strong>${this.effect.name}</strong>?`,\n\tbuttons : {\n\t\tyes : {\n\t\t\tlabel : \"Sí\",\n\t\t\tcallback: () => {\n\t\t\t\treturn true;\n\t\t\t}\n\t\t},\n\t\tno : {\n\t\t\tlabel: \"No\",\n\t\t\tcallback: () => {\n\t\t\t\treturn false;\n\t\t\t}\n\t\t}\n\t}\n})\n\nif (useWard)\n\targs.ward = 9;"},
-					{"label":"Ignorar Ardiendo","script":"let ablaze = this.actor.hasCondition(\"ablaze\");\nif (ablaze)\n{\n\tablaze?.delete();\n\tthis.script.scriptNotification(\"Ignorar Ardiendo\");\n}\n"}
+					{"label":"Ignorar Ardiendo","script":"let ablaze = this.actor.hasCondition(\"ablaze\");\nif (ablaze)\n{\n\tablaze?.delete();\n\tthis.script.notification(\"Ignorar Ardiendo\");\n}\n"}
 					]
 				}]
 		},
@@ -6614,7 +6614,7 @@
 				}]
 		},
 		{
-			"id": "Bolt",
+			"id": "QmjYLCaEn3YKHxdv",
 			"name": "Rayo",
 			"description": "<p>Canalizas magia en forma de un rayo dañino. Rayo es un proyectil mágico con Daño +4.</p>"
 		},
@@ -6820,7 +6820,7 @@
 			"effects": [{
 				"name":"Caricia de Laniph",
 				"scriptData": [
-					{"label":"Caricia de Laniph","script":"let woundsGained = Math.min(args.totalWoundLoss, args.actor.status.wounds.value)\n\nwoundsGained = Math.floor(woundsGained / 2)\n\nargs.attacker.update({ \"system.status.wounds.value\": args.attacker.status.wounds.value + woundsGained })\n\nthis.script.scriptMessage(`Ganadas ${woundsGained} Heridas`)"},
+					{"label":"Caricia de Laniph","script":"let woundsGained = Math.min(args.totalWoundLoss, args.actor.status.wounds.value)\n\nwoundsGained = Math.floor(woundsGained / 2)\n\nargs.attacker.update({ \"system.status.wounds.value\": args.attacker.status.wounds.value + woundsGained })\n\nthis.script.message(`Ganadas ${woundsGained} Heridas`)"},
 					{"label":"Ignorar PA y BR"}
 					]
 				}]
@@ -6843,8 +6843,8 @@
 			"effects": [{
 				"name":"Escudo cerúleo",
 				"scriptData": [
-					{"label":"Escudo cerúleo","script":"if ((args.opposedTest.attackerTest.item && args.opposedTest.attackerTest.item.isMelee) || (args.opposedTest.attackerTest.item && !args.opposedTest.attackerTest.item.name.includes(\"A distancia\")))\n{\n    let AP = parseInt(this.effect.sourceTest.result.SL)\n    args.modifiers.ap.value += AP;\n    args.modifiers.ap.magical += AP;\n    args.modifiers.ap.details.push(`${this.effect.name} (${AP})`)\n}"},
-					{"label":"Daño cerúleo","script":"if ((args.opposedTest.attackerTest.item && args.opposedTest.attackerTest.item.isMelee) || (args.opposedTest.attackerTest.item && !args.opposedTest.attackerTest.item.name.includes(\"A distancia\")))\n{\n    let choice = await Dialog.wait({\n        title: this.effect.name,\n        content: `<p>¿Aplicar daño con <strong>${this.effect.name}</strong> al atacante?`,\n        buttons: {\n            yes: {\n                label: \"Sí\",\n                callback: () => {\n                    return true;\n                }\n            },\n            no: {\n                label: \"No\",\n                callback: () => {\n                    return false;\n                }\n            }\n        }\n    })\n\n    if (choice)\n    {\n        this.script.scriptMessage(await args.attacker.applyBasicDamage(this.actor.system.characteristics.wp.bonus, {damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_AP, suppressMsg : true}));\n    }\n}"}
+					{"label":"Escudo cerúleo"},
+					{"label":"Daño cerúleo","script":"if ((args.opposedTest.attackerTest.item && args.opposedTest.attackerTest.item.isMelee) || (args.opposedTest.attackerTest.item && !args.opposedTest.attackerTest.item.name.includes(\"A distancia\")))\n{\n    let choice = await Dialog.wait({\n        title: this.effect.name,\n        content: `<p>¿Aplicar daño con <strong>${this.effect.name}</strong> al atacante?`,\n        buttons: {\n            yes: {\n                label: \"Sí\",\n                callback: () => {\n                    return true;\n                }\n            },\n            no: {\n                label: \"No\",\n                callback: () => {\n                    return false;\n                }\n            }\n        }\n    })\n\n    if (choice)\n    {\n        this.script.message(await args.attacker.applyBasicDamage(this.actor.system.characteristics.wp.bonus, {damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_AP, suppressMsg : true}));\n    }\n}"}
 					]
 				}]
 		},
@@ -6952,7 +6952,7 @@
 			"effects": [{
 				"name":"Sangre corrosiva",
 				"scriptData": [
-					{"label":"Sangre corrosiva","script":"let content = `<b>${this.effect.name}</b>: Todos los objetivos trabados con <b>${this.actor.prototypeToken.name}</b> reciben [[/r 1d10]] de Daño, modificado por BR y PA.`\n\nthis.script.scriptMessage(content)"}
+					{"label":"Sangre corrosiva","script":"let content = `<b>${this.effect.name}</b>: Todos los objetivos trabados con <b>${this.actor.prototypeToken.name}</b> reciben [[/r 1d10]] de Daño, modificado por BR y PA.`\n\nthis.script.message(content)"}
 					]
 				}]
 		},
@@ -6963,7 +6963,7 @@
 			"effects": [{
 				"name":"Sangre corrosiva (Bestias)",
 				"scriptData": [
-					{"label":"Sangre corrosiva","script":"let content = `<b>${this.effect.name}</b>: Todos los objetivos trabados con <b>${this.actor.prototypeToken.name}</b> reciben [[/r 1d10]] de Daño, modificado por BR y PA.`\n\nthis.script.scriptMessage(content)"}
+					{"label":"Sangre corrosiva","script":"let content = `<b>${this.effect.name}</b>: Todos los objetivos trabados con <b>${this.actor.prototypeToken.name}</b> reciben [[/r 1d10]] de Daño, modificado por BR y PA.`\n\nthis.script.message(content)"}
 					]
 				}]
 		},
@@ -6974,7 +6974,7 @@
 			"effects": [{
 				"name":"Sangre corrosiva (Demonología)",
 				"scriptData": [
-					{"label":"Sangre corrosiva","script":"let content = `<b>${this.effect.name}</b>: Todos los objetivos trabados con <b>${this.actor.prototypeToken.name}</b> reciben [[/r 1d10]] de Daño, modificado por BR y PA.`\n\nthis.script.scriptMessage(content)"}
+					{"label":"Sangre corrosiva","script":"let content = `<b>${this.effect.name}</b>: Todos los objetivos trabados con <b>${this.actor.prototypeToken.name}</b> reciben [[/r 1d10]] de Daño, modificado por BR y PA.`\n\nthis.script.message(content)"}
 					]
 				}]
 		},
@@ -6985,7 +6985,7 @@
 			"effects": [{
 				"name":"Sangre corrosiva (Muerte)",
 				"scriptData": [
-					{"label":"Sangre corrosiva","script":"let content = `<b>${this.effect.name}</b>: Todos los objetivos trabados con <b>${this.actor.prototypeToken.name}</b> reciben [[/r 1d10]] de Daño, modificado por BR y PA.`\n\nthis.script.scriptMessage(content)"}
+					{"label":"Sangre corrosiva","script":"let content = `<b>${this.effect.name}</b>: Todos los objetivos trabados con <b>${this.actor.prototypeToken.name}</b> reciben [[/r 1d10]] de Daño, modificado por BR y PA.`\n\nthis.script.message(content)"}
 					]
 				}]
 		},
@@ -6996,7 +6996,7 @@
 			"effects": [{
 				"name":"Sangre corrosiva (Fuego)",
 				"scriptData": [
-					{"label":"Sangre corrosiva","script":"let content = `<b>${this.effect.name}</b>: Todos los objetivos trabados con <b>${this.actor.prototypeToken.name}</b> reciben [[/r 1d10]] de Daño, modificado por BR y PA.`\n\nthis.script.scriptMessage(content)"}
+					{"label":"Sangre corrosiva","script":"let content = `<b>${this.effect.name}</b>: Todos los objetivos trabados con <b>${this.actor.prototypeToken.name}</b> reciben [[/r 1d10]] de Daño, modificado por BR y PA.`\n\nthis.script.message(content)"}
 					]
 				}]
 		},
@@ -7007,7 +7007,7 @@
 			"effects": [{
 				"name":"Sangre corrosiva (Cielos)",
 				"scriptData": [
-					{"label":"Sangre corrosiva","script":"let content = `<b>${this.effect.name}</b>: Todos los objetivos trabados con <b>${this.actor.prototypeToken.name}</b> reciben [[/r 1d10]] de Daño, modificado por BR y PA.`\n\nthis.script.scriptMessage(content)"}
+					{"label":"Sangre corrosiva","script":"let content = `<b>${this.effect.name}</b>: Todos los objetivos trabados con <b>${this.actor.prototypeToken.name}</b> reciben [[/r 1d10]] de Daño, modificado por BR y PA.`\n\nthis.script.message(content)"}
 					]
 				}]
 		},
@@ -7018,7 +7018,7 @@
 			"effects": [{
 				"name":"Sangre corrosiva (Adivinación)",
 				"scriptData": [
-					{"label":"Sangre corrosiva","script":"let content = `<b>${this.effect.name}</b>: Todos los objetivos trabados con <b>${this.actor.prototypeToken.name}</b> reciben [[/r 1d10]] de Daño, modificado por BR y PA.`\n\nthis.script.scriptMessage(content)"}
+					{"label":"Sangre corrosiva","script":"let content = `<b>${this.effect.name}</b>: Todos los objetivos trabados con <b>${this.actor.prototypeToken.name}</b> reciben [[/r 1d10]] de Daño, modificado por BR y PA.`\n\nthis.script.message(content)"}
 					]
 				}]
 		},
@@ -7029,7 +7029,7 @@
 			"effects": [{
 				"name":"Sangre corrosiva (Vida)",
 				"scriptData": [
-					{"label":"Sangre corrosiva","script":"let content = `<b>${this.effect.name}</b>: Todos los objetivos trabados con <b>${this.actor.prototypeToken.name}</b> reciben [[/r 1d10]] de Daño, modificado por BR y PA.`\n\nthis.script.scriptMessage(content)"}
+					{"label":"Sangre corrosiva","script":"let content = `<b>${this.effect.name}</b>: Todos los objetivos trabados con <b>${this.actor.prototypeToken.name}</b> reciben [[/r 1d10]] de Daño, modificado por BR y PA.`\n\nthis.script.message(content)"}
 					]
 				}]
 		},
@@ -7040,7 +7040,7 @@
 			"effects": [{
 				"name":"Sangre corrosiva (Luz)",
 				"scriptData": [
-					{"label":"Sangre corrosiva","script":"let content = `<b>${this.effect.name}</b>: Todos los objetivos trabados con <b>${this.actor.prototypeToken.name}</b> reciben [[/r 1d10]] de Daño, modificado por BR y PA.`\n\nthis.script.scriptMessage(content)"}
+					{"label":"Sangre corrosiva","script":"let content = `<b>${this.effect.name}</b>: Todos los objetivos trabados con <b>${this.actor.prototypeToken.name}</b> reciben [[/r 1d10]] de Daño, modificado por BR y PA.`\n\nthis.script.message(content)"}
 					]
 				}]
 		},
@@ -7051,7 +7051,7 @@
 			"effects": [{
 				"name":"Sangre corrosiva (Metal)",
 				"scriptData": [
-					{"label":"Sangre corrosiva","script":"let content = `<b>${this.effect.name}</b>: Todos los objetivos trabados con <b>${this.actor.prototypeToken.name}</b> reciben [[/r 1d10]] de Daño, modificado por BR y PA.`\n\nthis.script.scriptMessage(content)"}
+					{"label":"Sangre corrosiva","script":"let content = `<b>${this.effect.name}</b>: Todos los objetivos trabados con <b>${this.actor.prototypeToken.name}</b> reciben [[/r 1d10]] de Daño, modificado por BR y PA.`\n\nthis.script.message(content)"}
 					]
 				}]
 		},
@@ -7062,7 +7062,7 @@
 			"effects": [{
 				"name":"Sangre corrosiva (Nigromancia)",
 				"scriptData": [
-					{"label":"Sangre corrosiva","script":"let content = `<b>${this.effect.name}</b>: Todos los objetivos trabados con <b>${this.actor.prototypeToken.name}</b> reciben [[/r 1d10]] de Daño, modificado por BR y PA.`\n\nthis.script.scriptMessage(content)"}
+					{"label":"Sangre corrosiva","script":"let content = `<b>${this.effect.name}</b>: Todos los objetivos trabados con <b>${this.actor.prototypeToken.name}</b> reciben [[/r 1d10]] de Daño, modificado por BR y PA.`\n\nthis.script.message(content)"}
 					]
 				}]
 		},
@@ -7073,7 +7073,7 @@
 			"effects": [{
 				"name":"Sangre corrosiva (Sombras)",
 				"scriptData": [
-					{"label":"Sangre corrosiva","script":"let content = `<b>${this.effect.name}</b>: Todos los objetivos trabados con <b>${this.actor.prototypeToken.name}</b> reciben [[/r 1d10]] de Daño, modificado por BR y PA.`\n\nthis.script.scriptMessage(content)"}
+					{"label":"Sangre corrosiva","script":"let content = `<b>${this.effect.name}</b>: Todos los objetivos trabados con <b>${this.actor.prototypeToken.name}</b> reciben [[/r 1d10]] de Daño, modificado por BR y PA.`\n\nthis.script.message(content)"}
 					]
 				}]
 		},
@@ -7084,7 +7084,7 @@
 			"effects": [{
 				"name":"Sangre corrosiva (Brujería)",
 				"scriptData": [
-					{"label":"Sangre corrosiva","script":"let content = `<b>${this.effect.name}</b>: Todos los objetivos trabados con <b>${this.actor.prototypeToken.name}</b> reciben [[/r 1d10]] de Daño, modificado por BR y PA.`\n\nthis.script.scriptMessage(content)"}
+					{"label":"Sangre corrosiva","script":"let content = `<b>${this.effect.name}</b>: Todos los objetivos trabados con <b>${this.actor.prototypeToken.name}</b> reciben [[/r 1d10]] de Daño, modificado por BR y PA.`\n\nthis.script.message(content)"}
 					]
 				}]
 		},
@@ -7117,9 +7117,9 @@
 			"effects": [{
 				"name":"Maldición del dolor incapacitante",
 				"scriptData": [
-					{"label":"Maldición del dolor incapacitante","script":"let choice = await ItemDialog.create(ItemDialog.objectToArray(game.wfrp4e.config.locations, this.effect.img), 1, \"Escoge ubicación\");\nif (choice[0])\n{\n    this.effect.updateSource({name : `${this.effect.name} (${choice[0].name})`})\nthis.effect.updateSource({\"flags.wfrp4e.location\" : choice[0].id})\n}\n\nlet location = choice[0].id;\n\nif ([\"lArm\", \"rArm\"].includes(location))\n{\n    let dropped = this.actor.itemTypes.weapon.filter(i => i.isEquipped & i.system.usesHands.includes(location));\n\n    if (dropped.length)\n    {\n        this.script.scriptNotification(`Dejado caer ${dropped.map(i => i.name).join(\", \")}!`)\n        for(let weapon of dropped)\n        {\n            await weapon.system.toggleEquip();\n        }\n    }\n}\n\nif (location == \"body\")\n{\n    await this.actor.addCondition(\"fatigued\");\n    test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {fields : {difficulty : \"hard\"}, skipTargets: true, appendTitle : ` - ${this.effect.name}`})\n    await test.roll();\n    if (test.failed)\n    {\n        this.actor.addCondition(\"prone\");\n    }\n}\n\nif (location == \"head\")\n{\n    await this.actor.addCondition(\"stunned\");\n    test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {fields : {difficulty : \"average\"}, skipTargets: true, appendTitle : ` - ${this.effect.name}`})\n    await test.roll();\n    if (test.failed)\n    {\n        this.actor.addCondition(\"unconscious\");\n    }\n}"},
+					{"label":"Maldición del dolor incapacitante","script":"let choice = await ItemDialog.create(ItemDialog.objectToArray(game.wfrp4e.config.locations, this.effect.img), 1, \"Escoge ubicación\");\nif (choice[0])\n{\n    this.effect.updateSource({name : `${this.effect.name} (${choice[0].name})`})\nthis.effect.updateSource({\"flags.wfrp4e.location\" : choice[0].id})\n}\n\nlet location = choice[0].id;\n\nif ([\"lArm\", \"rArm\"].includes(location))\n{\n    let dropped = this.actor.itemTypes.weapon.filter(i => i.isEquipped & i.system.usesHands.includes(location));\n\n    if (dropped.length)\n    {\n        this.script.notification(`Dejado caer ${dropped.map(i => i.name).join(\", \")}!`)\n        for(let weapon of dropped)\n        {\n            await weapon.system.toggleEquip();\n        }\n    }\n}\n\nif (location == \"body\")\n{\n    await this.actor.addCondition(\"fatigued\");\n    test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {fields : {difficulty : \"hard\"}, skipTargets: true, appendTitle : ` - ${this.effect.name}`})\n    await test.roll();\n    if (test.failed)\n    {\n        this.actor.addCondition(\"prone\");\n    }\n}\n\nif (location == \"head\")\n{\n    await this.actor.addCondition(\"stunned\");\n    test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {fields : {difficulty : \"average\"}, skipTargets: true, appendTitle : ` - ${this.effect.name}`})\n    await test.roll();\n    if (test.failed)\n    {\n        this.actor.addCondition(\"unconscious\");\n    }\n}"},
 					{"label":"(Pierna) Mitad de Movimiento"},
-					{"label":"Chequeos dependientes de movilidad","hideScript":"if (![\"rLeg\", \"lLeg\"].includes(this.effect.getFlag(\"wfrp4e\", \"location\")))\n\treturn true;\n\nif (args.options.dodge)\n{\n\targs.abort = true;\n\tthis.script.scriptNotification(\"¡No puedes esquivar!\")\n}\nreturn [\"t\", \"int\", \"wp\", \"fel\"].includes(args.characteristic)"},
+					{"label":"Chequeos dependientes de movilidad","hideScript":"if (![\"rLeg\", \"lLeg\"].includes(this.effect.getFlag(\"wfrp4e\", \"location\")))\n\treturn true;\n\nif (args.options.dodge)\n{\n\targs.abort = true;\n\tthis.script.notification(\"¡No puedes esquivar!\")\n}\nreturn [\"t\", \"int\", \"wp\", \"fel\"].includes(args.characteristic)"},
 					{"label":"Depende de dos manos"},
 					{"label":"Brazo inútil"}
 					]
@@ -7134,7 +7134,7 @@
 				"scriptData": [
 					{"label":"Maldición de la mala fortuna"},
 					{"label":"Sin Puntos de Fortuna"},
-					{"label":"No poder editar Puntos de Fortuna","script":"if (foundry.utils.getProperty(args.data, \"system.status.fortune.value\"))\n{\n\tthis.script.scriptNotification(\"No puedes editar la Fortuna\");\n\tdelete args.data.system.status.wounds.value;\n}"}
+					{"label":"No poder editar Puntos de Fortuna","script":"if (foundry.utils.getProperty(args.data, \"system.status.fortune.value\"))\n{\n\tthis.script.notification(\"No puedes editar la Fortuna\");\n\tdelete args.data.system.status.wounds.value;\n}"}
 					]
 				}]
 		},
@@ -7323,7 +7323,7 @@
 				{
 				"name":"Destruir demonio menor",
 				"scriptData": [
-					{"label":"Destruir demonio menor","script": "if (!this.actor.has(game.i18n.localize(\"NAME.Daemonic\")))\n    return\n\nlet caster = this.effect.sourceActor;\nif (caster) \n{\n    let wp = caster.system.characteristics.wp\n    if (this.actor.system.characteristics.wp.value >= wp.value)\n    {\n        this.script.scriptNotification(\"El objetivo tiene mayor Voluntad, sin efecto\")\n        return\n    }\n    this.actor.applyBasicDamage(wp.bonus, { damageType: game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL })\n}"}
+					{"label":"Destruir demonio menor","script": "if (!this.actor.has(game.i18n.localize(\"NAME.Daemonic\")))\n    return\n\nlet caster = this.effect.sourceActor;\nif (caster) \n{\n    let wp = caster.system.characteristics.wp\n    if (this.actor.system.characteristics.wp.value >= wp.value)\n    {\n        this.script.notification(\"El objetivo tiene mayor Voluntad, sin efecto\")\n        return\n    }\n    this.actor.applyBasicDamage(wp.bonus, { damageType: game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL })\n}"}
 					]
 				}]
 		},
@@ -7629,7 +7629,7 @@
 			"effects": [{
 				"name":"Drenar",
 				"scriptData": [
-					{"label":"Drenar","script":"args.attacker.modifyWounds(1)\nthis.script.scriptMessage(`<strong>${args.attacker.prototypeToken.name}</strong> recupera 1 Herida.`)"}
+					{"label":"Drenar","script":"args.attacker.modifyWounds(1)\nthis.script.message(`<strong>${args.attacker.prototypeToken.name}</strong> recupera 1 Herida.`)"}
 					]
 				}]
 		},
@@ -7801,7 +7801,7 @@
 			"effects": [{
 				"name":"Sangre terrenal",
 				"scriptData": [
-					{"label":"Sangre terrenal","script":"let caster = this.effect.sourceActor\n\nif (caster)\n{\n    let bonus = caster.system.characteristics.wp.bonus\n    this.actor.modifyWounds(bonus)\n\n    this.script.scriptMessage(`<strong>${this.actor.prototypeToken.name}</strong> recupera ${bonus} Heridas`)\n}"}
+					{"label":"Sangre terrenal","script":"let caster = this.effect.sourceActor\n\nif (caster)\n{\n    let bonus = caster.system.characteristics.wp.bonus\n    this.actor.modifyWounds(bonus)\n\n    this.script.message(`<strong>${this.actor.prototypeToken.name}</strong> recupera ${bonus} Heridas`)\n}"}
 					]
 				}]
 		},
@@ -8382,7 +8382,7 @@
 				"name":"Capa brillante",
 				"scriptData": [
 					{"label":"Custodiado inicial"},
-					{"label":"Aplicar Custodiado","script":"if (!args.ward)\n{\n\targs.ward = (this.effect.getFlag(\"wfrp4e\", \"ward\") || 0);\n\tif (args.wardRoll >= args.ward && args.ward > 3)\n    {\n        let newWard = Math.max(3, args.ward - 1)\n        this.script.scriptMessage(\"<strong>Custodiado</strong> mejorado a \" + newWard)\n        this.effect.setFlag(\"wfrp4e\", \"ward\", newWard)\n    }\n\n}"}
+					{"label":"Aplicar Custodiado","script":"if (!args.ward)\n{\n\targs.ward = (this.effect.getFlag(\"wfrp4e\", \"ward\") || 0);\n\tif (args.wardRoll >= args.ward && args.ward > 3)\n    {\n        let newWard = Math.max(3, args.ward - 1)\n        this.script.message(\"<strong>Custodiado</strong> mejorado a \" + newWard)\n        this.effect.setFlag(\"wfrp4e\", \"ward\", newWard)\n    }\n\n}"}
 					]
 				}]
 		},
@@ -8410,7 +8410,7 @@
 				{
 				"name":"AdE Inicial",
 				"scriptData": [
-					{"label":"Grandes fuegos de U’Zhul","script":"let aoeDamage = this.effect.sourceTest.result.damage - 5 // Easily handle magic missile damage by just subtracting 5 from the item's (which has +10 base)\n\nthis.script.scriptMessage(await this.actor.applyBasicDamage(aoeDamage, {damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_AP, suppressMsg : true}))\n\nlet test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Dodge\"), {skipTargets: true, appendTitle : ` - Ardiendo`})\n\nawait test.roll();\n\nif (!test.succeeded)\n{\n    this.actor.addCondition(\"ablaze\");\n}"}
+					{"label":"Grandes fuegos de U’Zhul","script":"let aoeDamage = this.effect.sourceTest.result.damage - 5 // Easily handle magic missile damage by just subtracting 5 from the item's (which has +10 base)\n\nthis.script.message(await this.actor.applyBasicDamage(aoeDamage, {damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_AP, suppressMsg : true}))\n\nlet test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Dodge\"), {skipTargets: true, appendTitle : ` - Ardiendo`})\n\nawait test.roll();\n\nif (!test.succeeded)\n{\n    this.actor.addCondition(\"ablaze\");\n}"}
 					]
 				},
 				{
@@ -8444,7 +8444,7 @@
 			"effects": [{
 				"name":"Luz sanadora",
 				"scriptData": [
-					{"label":"Luz sanadora","script":"let caster = this.effect.sourceActor;\nif (caster)\n{\n    let healed= caster.system.characteristics.wp.bonus + caster.system.characteristics.int.bonus\n    await this.actor.modifyWounds(healed);\n    this.script.scriptMessage(`<strong>${this.actor.prototypeToken.name}</strong> recupera ${healed} Heridas`)\n}\n \n let test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {fields : {difficulty : \"vhard\"}, context : {success : \"1 punto de Corrupción ganado en la última hora es eliminado.\", failure: \"No ocurre nada\"}})\n await test.roll();"}
+					{"label":"Luz sanadora","script":"let caster = this.effect.sourceActor;\nif (caster)\n{\n    let healed= caster.system.characteristics.wp.bonus + caster.system.characteristics.int.bonus\n    await this.actor.modifyWounds(healed);\n    this.script.message(`<strong>${this.actor.prototypeToken.name}</strong> recupera ${healed} Heridas`)\n}\n \n let test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {fields : {difficulty : \"vhard\"}, context : {success : \"1 punto de Corrupción ganado en la última hora es eliminado.\", failure: \"No ocurre nada\"}})\n await test.roll();"}
 					]
 				}]
 		},
@@ -8836,7 +8836,7 @@
 			"effects": [{
 				"name":"Nostrum",
 				"scriptData": [
-					{"script":"let caster = this.effect.sourceActor\nif (caster)\n{\n    let healed= caster.characteristics.wp.bonus\n    this.actor.modifyWounds(healed);\n    this.script.scriptMessage(`<strong>${this.actor.prototypeToken.name}</strong> recupera ${healed} Heridas`)\n}"}
+					{"script":"let caster = this.effect.sourceActor\nif (caster)\n{\n    let healed= caster.characteristics.wp.bonus\n    this.actor.modifyWounds(healed);\n    this.script.message(`<strong>${this.actor.prototypeToken.name}</strong> recupera ${healed} Heridas`)\n}"}
 					]
 				}]
 		},
@@ -8862,7 +8862,7 @@
 			"effects": [{
 				"name":"Protección de Phâ",
 				"scriptData": [
-					{"label":"Protección de Phâ","script": "this.script.scriptNotification(`¡No puedes entrar en ${this.effect.name}!`); this.actor.addCondition(\"broken\")"}
+					{"label":"Protección de Phâ","script": "this.script.notification(`¡No puedes entrar en ${this.effect.name}!`); this.actor.addCondition(\"broken\")"}
 					]
 				}]
 		},
@@ -8883,7 +8883,7 @@
 			"effects": [{
 				"name":"Amuleto protector",
 				"scriptData": [
-					{"label":"Amuleto protector","script":"if (this.actor.has(\"Resistencia a la magia\", \"talent\")) \n    return\n\nlet item = await fromUuid(\"Compendium.wfrp4e-core.items.Item.eowbsW6oHGSNJmxV\")\nthis.actor.createEmbeddedDocuments(\"Item\", [item], {fromEffect : this.effect.id})"}
+					{"label":"Amuleto protector"}
 					]
 				}]
 		},
@@ -9115,7 +9115,7 @@
 			"effects": [{
 				"name":"Santificar",
 				"scriptData": [
-					{"label":"Santificar","script":"this.script.scriptNotification(`¡No puedes entrar en ${this.effect.name}!`);"}
+					{"label":"Santificar","script":"this.script.notification(`¡No puedes entrar en ${this.effect.name}!`);"}
 					]
 				}]
 		},
@@ -9225,7 +9225,7 @@
 			"effects": [{
 				"name":"Robar vida",
 				"scriptData": [
-					{"label":"Robar vida","script":"let woundsGained = Math.min(args.actor.status.wounds.value, args.totalWoundLoss)\nwoundsGained = Math.ceil(woundsGained / 2)\n\nargs.attacker.update({\"system.status.wounds.value\" : args.attacker.system.status.wounds.value + woundsGained})\n\nargs.actor.addCondition(\"fatigued\")\nargs.attacker.hasCondition(\"fatigued\")?.delete();\n\nthis.script.scriptMessage(`<b>${args.attacker.prototypeToken.name}</b> gana ${woundsGained} Heridas`);"},
+					{"label":"Robar vida","script":"let woundsGained = Math.min(args.actor.status.wounds.value, args.totalWoundLoss)\nwoundsGained = Math.ceil(woundsGained / 2)\n\nargs.attacker.update({\"system.status.wounds.value\" : args.attacker.system.status.wounds.value + woundsGained})\n\nargs.actor.addCondition(\"fatigued\")\nargs.attacker.hasCondition(\"fatigued\")?.delete();\n\nthis.script.message(`<b>${args.attacker.prototypeToken.name}</b> gana ${woundsGained} Heridas`);"},
 					{"label":"Ignorar PA"}
 					]
 				}]
@@ -9508,7 +9508,7 @@
 			"effects": [{
 				"name":"Primer portento de Amul",
 				"scriptData": [
-					{"label":"Primer portento de Amul","script":"let fortunePoints = this.effect.sourceTest.result.overcast.usage.other.current\nlet current = this.actor.status.fortune.value\n\nthis.actor.update({\"system.status.fortune.value\" : fortunePoints + current})\n\nthis.script.scriptMessage(`Los puntos de Fortuna de <b>${this.actor.prototypeToken.name}</b> aumentan de ${current} a ${fortunePoints + current}`)"}
+					{"label":"Primer portento de Amul","script":"let fortunePoints = this.effect.sourceTest.result.overcast.usage.other.current\nlet current = this.actor.status.fortune.value\n\nthis.actor.update({\"system.status.fortune.value\" : fortunePoints + current})\n\nthis.script.message(`Los puntos de Fortuna de <b>${this.actor.prototypeToken.name}</b> aumentan de ${current} a ${fortunePoints + current}`)"}
 					]
 				}]
 		},
@@ -9520,7 +9520,7 @@
 			"effects": [{
 				"name":"Segundo portento de Amul",
 				"scriptData": [
-					{"label":"Segundo portento de Amul","script":"let fortunePoints = this.effect.sourceTest.result.overcast.usage.other.current\nlet current = this.actor.status.fortune.value\n\nthis.actor.update({\"system.status.fortune.value\" : fortunePoints + current})\n\nthis.script.scriptMessage(`Los puntos de Fortuna de <b>${this.actor.prototypeToken.name}</b> aumentan de ${current} a ${fortunePoints + current}`)"}
+					{"label":"Segundo portento de Amul","script":"let fortunePoints = this.effect.sourceTest.result.overcast.usage.other.current\nlet current = this.actor.status.fortune.value\n\nthis.actor.update({\"system.status.fortune.value\" : fortunePoints + current})\n\nthis.script.message(`Los puntos de Fortuna de <b>${this.actor.prototypeToken.name}</b> aumentan de ${current} a ${fortunePoints + current}`)"}
 					]
 				}]
 		},
@@ -9531,7 +9531,7 @@
 			"effects": [{
 				"name":"Tercer portento de Amul",
 				"scriptData": [
-					{"label":"Tercer portento de Amul","script":"let current = this.actor.status.fate.value\n\nthis.actor.update({\"system.status.fate.value\" : current + 1})\n\nthis.script.scriptMessage(`<b>Los puntos de Destino de ${this.actor.prototypeToken.name}</b> aumentan de ${current} a ${current + 1}`)"}
+					{"label":"Tercer portento de Amul","script":"let current = this.actor.status.fate.value\n\nthis.actor.update({\"system.status.fate.value\" : current + 1})\n\nthis.script.message(`<b>Los puntos de Destino de ${this.actor.prototypeToken.name}</b> aumentan de ${current} a ${current + 1}`)"}
 					]
 				}]
 		},
@@ -9816,7 +9816,7 @@
 				"name":"Mano Amputada",
 				"scriptData": [
 					{"label":"Depende de dos manos"},
-					{"label":"Inútil","script":"args.abort = true;\nthis.script.scriptNotification(`No puedes usar la ${game.wfrp4e.config.locations[this.effect.getFlag(\"wfrp4e\", \"location\")]}!`, \"error\")"}
+					{"label":"Inútil","script":"args.abort = true;\nthis.script.notification(`No puedes usar la ${game.wfrp4e.config.locations[this.effect.getFlag(\"wfrp4e\", \"location\")]}!`, \"error\")"}
 					]
 				}]
 		},
@@ -9829,7 +9829,7 @@
 				"name":"Pierna Amputada",
 				"scriptData": [
 					{"label":"Mitad de Movimiento"},
-					{"label":"Chequeos dependientes de movilidad","hideScript":"if (args.options.dodge)\n{\n\targs.abort = true;\n\tthis.script.scriptNotification(\"¡No puedes esquivar!\")\n}\nreturn [\"t\", \"int\", \"wp\", \"fel\"].includes(args.characteristic)"}
+					{"label":"Chequeos dependientes de movilidad","hideScript":"if (args.options.dodge)\n{\n\targs.abort = true;\n\tthis.script.notification(\"¡No puedes esquivar!\")\n}\nreturn [\"t\", \"int\", \"wp\", \"fel\"].includes(args.characteristic)"}
 					]
 				}]
 		},
@@ -9962,7 +9962,7 @@
 				"name":"Pierna Rota",
 				"scriptData": [
 					{"label":"Mitad de Movimiento"},
-					{"label":"Chequeos dependientes de movilidad","hideScript":"if (args.options.dodge)\n{\n\targs.abort = true;\n\tthis.script.scriptNotification(\"¡No puedes esquivar!\")\n}\nreturn [\"t\", \"int\", \"wp\", \"fel\"].includes(args.characteristic)"}
+					{"label":"Chequeos dependientes de movilidad","hideScript":"if (args.options.dodge)\n{\n\targs.abort = true;\n\tthis.script.notification(\"¡No puedes esquivar!\")\n}\nreturn [\"t\", \"int\", \"wp\", \"fel\"].includes(args.characteristic)"}
 					]
 				}]
 		},
@@ -9975,7 +9975,7 @@
 				"name":"Pierna Rota",
 				"scriptData": [
 					{"label":"Mitad de Movimiento"},
-					{"label":"Chequeos dependientes de movilidad","hideScript":"if (args.options.dodge)\n{\n\targs.abort = true;\n\tthis.script.scriptNotification(\"¡No puedes esquivar!\")\n}\nreturn [\"t\", \"int\", \"wp\", \"fel\"].includes(args.characteristic)"}
+					{"label":"Chequeos dependientes de movilidad","hideScript":"if (args.options.dodge)\n{\n\targs.abort = true;\n\tthis.script.notification(\"¡No puedes esquivar!\")\n}\nreturn [\"t\", \"int\", \"wp\", \"fel\"].includes(args.characteristic)"}
 					]
 				}]
 		},
@@ -10198,7 +10198,7 @@
 			"effects": [{
 				"name":"Boca adicional",
 				"scriptData": [
-					{"label":"Boca adicional","script":"let location = await game.wfrp4e.tables.rollTable(\"hitloc\", {hideDSN: true})\n\nthis.item.updateSource({name : `${this.item.name} (${location.description})`})\nthis.script.scriptMessage(`<strong>Ubicación:</strong> ${location.description}`, { whisper: ChatMessage.getWhisperRecipients(\"GM\") })"}
+					{"label":"Boca adicional","script":"let location = await game.wfrp4e.tables.rollTable(\"hitloc\", {hideDSN: true})\n\nthis.item.updateSource({name : `${this.item.name} (${location.description})`})\nthis.script.message(`<strong>Ubicación:</strong> ${location.description}`, { whisper: ChatMessage.getWhisperRecipients(\"GM\") })"}
 					]
 				}]
 		},
@@ -10463,7 +10463,7 @@
 			"effects": [{
 				"name":"Furia impía",
 				"scriptData": [
-					{"label":"Furia","script":"let item = await fromUuid(\"Compendium.wfrp4e-core.items.DrNUTPeodEgpWTnT\")\nthis.actor.createEmbeddedDocuments(\"Item\", [item], {fromEffect : this.effect.id});\nthis.script.scriptNotification(\"Añadida \" + item.name)"}
+					{"label":"Furia","script":"let item = await fromUuid(\"Compendium.wfrp4e-core.items.DrNUTPeodEgpWTnT\")\nthis.actor.createEmbeddedDocuments(\"Item\", [item], {fromEffect : this.effect.id});\nthis.script.notification(\"Añadida \" + item.name)"}
 					]
 				}]
 		},
@@ -10474,7 +10474,7 @@
 			"effects": [{
 				"name":"Supuración",
 				"scriptData": [
-					{"label":"Furia","script":"let location = await game.wfrp4e.tables.rollTable(\"hitloc\", {hideDSN: true})\n\nthis.item.updateSource({name : `${this.item.name} (${location.description})`})\nthis.script.scriptMessage(`<strong>Ubicación:</strong> ${location.description}`, { whisper: ChatMessage.getWhisperRecipients(\"GM\") })"}
+					{"label":"Furia","script":"let location = await game.wfrp4e.tables.rollTable(\"hitloc\", {hideDSN: true})\n\nthis.item.updateSource({name : `${this.item.name} (${location.description})`})\nthis.script.message(`<strong>Ubicación:</strong> ${location.description}`, { whisper: ChatMessage.getWhisperRecipients(\"GM\") })"}
 					]
 				}]
 		},
@@ -10574,7 +10574,7 @@
 			"effects": [{
 				"name":"Amarga catarsis",
 				"scriptData": [
-					{"label":"Amarga catarsis","script":"let cured = await Dialog.wait({\n    title : this.effect.name,\n    content : \"<p>Escribe el número de enfermedades/venenos curados.</p><input type='number'>\",\n    buttons : {\n        confirm : {\n            label : \"Confirmar\",\n            callback : (dlg) => {\n                let input = dlg.find(\"input\");\n                value = parseInt(input[0].value);\n                return value;\n            }\n        }\n    }\n})\n\n\nlet damage = 0;\n\nlet rolls = new Array(cured).fill(\"\").map(i => `max(0, 1d10 - ${this.actor.system.characteristics.fel.bonus})`)\n\nlet test = new Roll(`${rolls.join(\" + \")}`);\nawait test.roll();\ntest.toMessage({speaker : {alias : this.actor.name}, flavor : this.effect.name});\nthis.script.scriptMessage(await this.actor.applyBasicDamage(test.total, { damageType: game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL, suppressMsg : true }))"}
+					{"label":"Amarga catarsis","script":"let cured = await Dialog.wait({\n    title : this.effect.name,\n    content : \"<p>Escribe el número de enfermedades/venenos curados.</p><input type='number'>\",\n    buttons : {\n        confirm : {\n            label : \"Confirmar\",\n            callback : (dlg) => {\n                let input = dlg.find(\"input\");\n                value = parseInt(input[0].value);\n                return value;\n            }\n        }\n    }\n})\n\n\nlet damage = 0;\n\nlet rolls = new Array(cured).fill(\"\").map(i => `max(0, 1d10 - ${this.actor.system.characteristics.fel.bonus})`)\n\nlet test = new Roll(`${rolls.join(\" + \")}`);\nawait test.roll();\ntest.toMessage({speaker : {alias : this.actor.name}, flavor : this.effect.name});\nthis.script.message(await this.actor.applyBasicDamage(test.total, { damageType: game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL, suppressMsg : true }))"}
 					]
 				}]
 		},
@@ -10719,7 +10719,7 @@
 			"effects": [{
 				"name":"Bendición de la Protección",
 				"scriptData": [
-					{"label":"Bendición de la Protección","hideScript":"this.script.scriptNotification(`¡<b>${args.actor.prototypeToken.name}</b> debe pasar un Chequeo <b>Normal (+20)</b> de <b>Voluntad</b> para atacar al objetivo!`)\n\nreturn true; // No need to show this in the dialog"}
+					{"label":"Bendición de la Protección","hideScript":"this.script.notification(`¡<b>${args.actor.prototypeToken.name}</b> debe pasar un Chequeo <b>Normal (+20)</b> de <b>Voluntad</b> para atacar al objetivo!`)\n\nreturn true; // No need to show this in the dialog"}
 					]
 				}]
 		},
@@ -10752,7 +10752,7 @@
 			"effects": [{
 				"name":"Bendición de la Tenacidad",
 				"scriptData": [
-					{"label":"Bendición de la Tenacidad","script": "if (!this.actor.effects.find(e => e.isCondition))\n{\n\treturn this.script.scriptNotification(\"No hay Estados en este Actor\")\n}\n\nlet choice = await ItemDialog.create(this.actor.effects.filter(i => i.isCondition), 1, \"Escoge un Estado\")\n\nif (choice[0])\n{\n\tthis.actor.removeCondition(choice[0].conditionId)\n}\n"}
+					{"label":"Bendición de la Tenacidad","script": "if (!this.actor.effects.find(e => e.isCondition))\n{\n\treturn this.script.notification(\"No hay Estados en este Actor\")\n}\n\nlet choice = await ItemDialog.create(this.actor.effects.filter(i => i.isCondition), 1, \"Escoge un Estado\")\n\nif (choice[0])\n{\n\tthis.actor.removeCondition(choice[0].conditionId)\n}\n"}
 					]
 				}]
 		},
@@ -10961,7 +10961,7 @@
 			"effects": [{
 				"name":"Mártir",
 				"scriptData": [
-					{"label":"Mártir","script":"let sourceActor = this.effect.sourceActor;\nlet damage = args.totalWoundLoss;\nlet tb = sourceActor.system.characteristics.t.bonus\nargs.abort = `<strong>${this.effect.name}</strong>: Daño aplicado a ${sourceActor.name}`;\n\nlet message = await sourceActor.applyBasicDamage(damage - tb, {damageType: game.wfrp4e.config.DAMAGE_TYPE.IGNORE_AP, suppressMsg : true})\n\nthis.script.scriptMessage(message.replace(`${tb} BR`, `${tb} × 2 BR`))"}
+					{"label":"Mártir","script":"let sourceActor = this.effect.sourceActor;\nlet damage = args.totalWoundLoss;\nlet tb = sourceActor.system.characteristics.t.bonus\nargs.abort = `<strong>${this.effect.name}</strong>: Daño aplicado a ${sourceActor.name}`;\n\nlet message = await sourceActor.applyBasicDamage(damage - tb, {damageType: game.wfrp4e.config.DAMAGE_TYPE.IGNORE_AP, suppressMsg : true})\n\nthis.script.message(message.replace(`${tb} BR`, `${tb} × 2 BR`))"}
 					]
 				}]
 		},
@@ -11016,7 +11016,7 @@
 			"effects": [{
 				"name":"Socorro de Rhya",
 				"scriptData": [
-					{"label":"Socorro de Rhya","script":"if (!this.actor.effects.find(e => e.isCondition))\n{\n\treturn this.script.scriptNotification(\"No hay Estados en este Actor\")\n}\n\nlet choice = await ItemDialog.create(this.actor.effects.filter(i => i.isCondition), 1, \"Escoge un Estado\")\n\nif (choice[0])\n{\n\tawait this.actor.removeCondition(choice[0].conditionId)\n}\n\nif (this.actor.effects.find(e => e.isCondition))\n{\n    return false; // Delete the effect if there are still conditions, otherwise, effect remains and provides the bonus\n}"},
+					{"label":"Socorro de Rhya","script":"if (!this.actor.effects.find(e => e.isCondition))\n{\n\treturn this.script.notification(\"No hay Estados en este Actor\")\n}\n\nlet choice = await ItemDialog.create(this.actor.effects.filter(i => i.isCondition), 1, \"Escoge un Estado\")\n\nif (choice[0])\n{\n\tawait this.actor.removeCondition(choice[0].conditionId)\n}\n\nif (this.actor.effects.find(e => e.isCondition))\n{\n    return false; // Delete the effect if there are still conditions, otherwise, effect remains and provides the bonus\n}"},
 					{"label":"Bonificador al siguiente chequeo"}
 					]
 				}]
@@ -11028,13 +11028,13 @@
 			"effects": [{
 				"name":"Sanar",
 				"scriptData": [
-					{"label":"Toque de Rhya","script":"let caster = this.effect.sourceActor;\n\nthis.actor.modifyWounds(caster.system.characteristics.fel.bonus);\n\nthis.script.scriptMessage(`Sanadas ${caster.system.characteristics.fel.bonus} Heridas`);"}
+					{"label":"Toque de Rhya","script":"let caster = this.effect.sourceActor;\n\nthis.actor.modifyWounds(caster.system.characteristics.fel.bonus);\n\nthis.script.message(`Sanadas ${caster.system.characteristics.fel.bonus} Heridas`);"}
 					]
 				},
 				{
 				"name":"Curar Enfermedad",
 				"scriptData": [
-					{"label":"Toque de Rhya","script": "let choice = await ItemDialog.create(this.actor.itemTypes.disease, 1, \"Escoge una enfermedad que curar (debe estar ocurriendo de manera natural)\")\n\nthis.script.scriptMessage(`Curada <strong>${choice[0]?.name}</strong>`);\nchoice[0].delete()"}
+					{"label":"Toque de Rhya","script": "let choice = await ItemDialog.create(this.actor.itemTypes.disease, 1, \"Escoge una enfermedad que curar (debe estar ocurriendo de manera natural)\")\n\nthis.script.message(`Curada <strong>${choice[0]?.name}</strong>`);\nchoice[0].delete()"}
 					]
 				}]
 		},
@@ -11073,7 +11073,7 @@
 			"effects": [{
 				"name":"Lágrimas de Shallya",
 				"scriptData": [
-					{"label":"Lágrimas de Shallya","script":"let choice = await ItemDialog.create(this.actor.itemTypes.critical, (this.effect.sourceTest.result.overcast.usage.other.current || 1), \"Escoge las Heridas Críticas que curar (no puede reensamblar partes del cuerpo amputadas)\")\n\nthis.script.scriptMessage(`Curado <strong>${choice.map(i => i.name).join(`, `)}</strong>`);\nthis.actor.deleteEmbeddedDocuments(\"Item\", choice.map(i => i.id))"}
+					{"label":"Lágrimas de Shallya","script":"let choice = await ItemDialog.create(this.actor.itemTypes.critical, (this.effect.sourceTest.result.overcast.usage.other.current || 1), \"Escoge las Heridas Críticas que curar (no puede reensamblar partes del cuerpo amputadas)\")\n\nthis.script.message(`Curado <strong>${choice.map(i => i.name).join(`, `)}</strong>`);\nthis.actor.deleteEmbeddedDocuments(\"Item\", choice.map(i => i.id))"}
 					]
 				}]
 		},
@@ -11132,7 +11132,7 @@
 			"effects": [{
 				"name":"Sigue teniendo suerte",
 				"scriptData": [
-					{"label":"Sigue teniendo suerte","script":"let points = this.effect.sourceTest.result.overcast.usage.other.current;\n\nthis.actor.update({\"system.status.fortune.value\" : this.actor.system.status.fortune.value + points});\n\nthis.script.scriptMessage(`Ganados ${points} puntos de Fortuna.`)"}
+					{"label":"Sigue teniendo suerte","script":"let points = this.effect.sourceTest.result.overcast.usage.other.current;\n\nthis.actor.update({\"system.status.fortune.value\" : this.actor.system.status.fortune.value + points});\n\nthis.script.message(`Ganados ${points} puntos de Fortuna.`)"}
 					]
 				}]
 		},
@@ -11149,7 +11149,7 @@
 				"name":"Espada de la justicia",
 				"scriptData": [
 					{"label":"Espada de la justicia"},
-					{"label":"Ignorar PA","script":"args.applyAP = false;\n\n    this.script.scriptNotification(\"Este chequeo sólo se aplica a criminales, de lo contrario cierra el diálogo.\");\n    this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {fields : {difficulty : \"average\"}, skipTargets: true, appendTitle : ` - ${this.effect.name}`}).then(async test => \n    {\n      await test.roll();\n      if (test.failed)\n      {\n        args.actor.addCondition(\"unconscious\");\n      }\n    });"}
+					{"label":"Ignorar PA","script":"args.applyAP = false;\n\n    this.script.notification(\"Este chequeo sólo se aplica a criminales, de lo contrario cierra el diálogo.\");\n    this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {fields : {difficulty : \"average\"}, skipTargets: true, appendTitle : ` - ${this.effect.name}`}).then(async test => \n    {\n      await test.roll();\n      if (test.failed)\n      {\n        args.actor.addCondition(\"unconscious\");\n      }\n    });"}
 					]
 				}]
 		},
@@ -11228,7 +11228,7 @@
 			"effects": [{
 				"name":"Inocencia inmaculada",
 				"scriptData": [
-					{"label":"Inocencia inmaculada","script":"let test = this.effect.sourceTest;\nif (test.failed && (test.result.roll % 11 == 0 || test.result.roll == 100))\n{\n\tlet points = await new Roll(\"1d10\").roll();\n\tgame.dice3d?.showForRoll(points)\n\tthis.actor.update({\"system.status.corruption.value\" : this.actor.system.status.corruption.value + points.total})\n\tthis.script.scriptMessage(`Gana ${points.total} de Corrupción`)\n}\nelse \n{\n\tlet points = this.effect.sourceTest.result.overcast.usage.other.current;\n\tthis.actor.update({\"system.status.corruption.value\" : this.actor.system.status.corruption.value - points})\n\tthis.script.scriptMessage(`Pierde ${points} de Corrupción`)\n}"}
+					{"label":"Inocencia inmaculada","script":"let test = this.effect.sourceTest;\nif (test.failed && (test.result.roll % 11 == 0 || test.result.roll == 100))\n{\n\tlet points = await new Roll(\"1d10\").roll();\n\tgame.dice3d?.showForRoll(points)\n\tthis.actor.update({\"system.status.corruption.value\" : this.actor.system.status.corruption.value + points.total})\n\tthis.script.message(`Gana ${points.total} de Corrupción`)\n}\nelse \n{\n\tlet points = this.effect.sourceTest.result.overcast.usage.other.current;\n\tthis.actor.update({\"system.status.corruption.value\" : this.actor.system.status.corruption.value - points})\n\tthis.script.message(`Pierde ${points} de Corrupción`)\n}"}
 					]
 				}]
 		},
@@ -11325,7 +11325,7 @@
 				"name":"Furia",
 				"scriptData": [
 					{"label":"Furia"},
-					{"label":"Desactivar","script":"if (this.actor.hasCondition(\"stunned\") || this.actor.hasCondition(\"unconscious\"))\n{\n\tthis.script.scriptNotification(\"¡Desactivado!\");\n\tawait this.effect.update({\"disabled\" : true})\n}"}
+					{"label":"Desactivar","script":"if (this.actor.hasCondition(\"stunned\") || this.actor.hasCondition(\"unconscious\"))\n{\n\tthis.script.notification(\"¡Desactivado!\");\n\tawait this.effect.update({\"disabled\" : true})\n}"}
 					]
 				}]
 		},
@@ -11450,7 +11450,7 @@
 				"name":"Armadura",
 				"scriptData": [
 					{"label":"Armadura"},
-					{"label":"Establecer valor","script":"if (isNaN(parseInt(this.item.system.specification.value)))\n{\n    let value = await ValueDialog.create(\"Escribe el valor de Armadura\", this.effect.name);\n    if (value)\n    {\n     this.item.updateSource({\"system.specification.value\" : value});\n    }\n}"}
+					{"label":"Establecer valor","script":"if (isNaN(parseInt(this.item.system.specification.value)))\n{\n    let value = this.item.specifier;\n    if (!value)\n    {\n        value = await ValueDialog.create(\"Escribe el valor de Armadura\", this.effect.name);\n    }\n    if (value)\n    {\n        this.item.updateSource({\"system.specification.value\" : value, name : this.item.baseName});\n    }\n}"}
 					]
 				}]
 		},
@@ -11482,7 +11482,7 @@
 			"effects": [{
 				"name":"Mordisco",
 				"scriptData": [
-					{"label":"Mordisco (Ataque gratuito)","script":"if (this.actor.system.status.advantage.value > 0)\n{\n    await this.actor.modifyAdvantage(-1);\n    this.script.scriptNotification(\"Ventaja restada\")\n}\nelse \n{\n    return this.script.scriptNotification(\"¡No hay suficiente Ventaja!\", \"error\")\n}\n\nlet test = await this.actor.setupTrait(this.item)\nawait test.roll();"}
+					{"label":"Mordisco (Ataque gratuito)","script":"if (this.actor.system.status.advantage.value > 0)\n{\n    await this.actor.modifyAdvantage(-1);\n    this.script.notification(\"Ventaja restada\")\n}\nelse \n{\n    return this.script.notification(\"¡No hay suficiente Ventaja!\", \"error\")\n}\n\nlet test = await this.actor.setupTrait(this.item)\nawait test.roll();"}
 					]
 				}]
 		},
@@ -11515,7 +11515,7 @@
 				{
 				"name":"Aliento",
 				"scriptData": [
-					{"label":"Aliento","script":"let type = this.item.getFlag(\"wfrp4e\", \"breath\");\n\nif (type == \"cold\")\n{\n\tlet stunned = Math.max(1, Math.trunc(args.totalWoundLoss / 5))\n\tawait args.actor.addCondition(\"stunned\", stunned);\n}\n\nif (type == \"corrosion\")\n{\n    let damageItems = await Dialog.confirm({title : this.item.name, content : `<p>¿Dañados todos los Objetos portados?</p>`})\n\tif (damageItems)\n\t{\n\t\tlet msg = ``\n\t\tlet weapons = args.actor.itemTypes.weapon.filter(i => i.isEquipped);\n\t\tlet armour = args.actor.itemTypes.armour.filter(i => i.isEquipped);\n\t\tlet trappings = args.actor.itemTypes.trapping.filter(i => i.isEquipped);\n\t\tfor(let item of weapons)\n\t\t{\n\t\t\tif (item.system.properties.qualities.shield)\n\t\t\t{\n\t\t\t\tawait item.system.damageItem(1, \"shield\");\n\t\t\t}\n\t\t\telse \n\t\t\t{\n\t\t\t\tawait item.system.damageItem(1);\n\t\t\t}\n\t\t\tmsg += `<p><strong>${item.name}</strong> dañado en 1</p>`\n\t\t}\n\t\tfor(let item of armour)\n\t\t{\n\t\t\tawait item.system.damageItem(1);\n\t\t\tmsg += `<p><strong>${item.name}</strong> dañado en 1</p>`\n\t\t}\n\t\tfor(let item of trappings)\n\t\t{\n\t\t\tawait item.system.damageItem(1);\n\t\t\tmsg += `<p><strong>${item.name}</strong> dañado en 1</p>`\n\t\t}\n\t\tif (msg)\n\t\t{\n\t\t\tthis.script.scriptMessage(msg, {speaker : {alias : args.actor.name}});\n\t\t}\n\t}\n}\n\nif (type == \"fire\")\n{\n\tawait args.actor.addCondition(\"ablaze\");\n}\n\nif (type == \"electricity\")\n{\n\tawait args.actor.addCondition(\"stunned\");\n}\n\nif (type == \"poison\")\n{\n\tawait args.actor.addCondition(\"poisoned\");\n}\n\n"},
+					{"label":"Aliento","script":"let type = this.item.getFlag(\"wfrp4e\", \"breath\");\n\nif (type == \"cold\")\n{\n\tlet stunned = Math.max(1, Math.trunc(args.totalWoundLoss / 5))\n\tawait args.actor.addCondition(\"stunned\", stunned);\n}\n\nif (type == \"corrosion\")\n{\n    let damageItems = await Dialog.confirm({title : this.item.name, content : `<p>¿Dañados todos los Objetos portados?</p>`})\n\tif (damageItems)\n\t{\n\t\tlet msg = ``\n\t\tlet weapons = args.actor.itemTypes.weapon.filter(i => i.isEquipped);\n\t\tlet armour = args.actor.itemTypes.armour.filter(i => i.isEquipped);\n\t\tlet trappings = args.actor.itemTypes.trapping.filter(i => i.isEquipped);\n\t\tfor(let item of weapons)\n\t\t{\n\t\t\tif (item.system.properties.qualities.shield)\n\t\t\t{\n\t\t\t\tawait item.system.damageItem(1, \"shield\");\n\t\t\t}\n\t\t\telse \n\t\t\t{\n\t\t\t\tawait item.system.damageItem(1);\n\t\t\t}\n\t\t\tmsg += `<p><strong>${item.name}</strong> dañado en 1</p>`\n\t\t}\n\t\tfor(let item of armour)\n\t\t{\n\t\t\tawait item.system.damageItem(1);\n\t\t\tmsg += `<p><strong>${item.name}</strong> dañado en 1</p>`\n\t\t}\n\t\tfor(let item of trappings)\n\t\t{\n\t\t\tawait item.system.damageItem(1);\n\t\t\tmsg += `<p><strong>${item.name}</strong> dañado en 1</p>`\n\t\t}\n\t\tif (msg)\n\t\t{\n\t\t\tthis.script.message(msg, {speaker : {alias : args.actor.name}});\n\t\t}\n\t}\n}\n\nif (type == \"fire\")\n{\n\tawait args.actor.addCondition(\"ablaze\");\n}\n\nif (type == \"electricity\")\n{\n\tawait args.actor.addCondition(\"stunned\");\n}\n\nif (type == \"poison\")\n{\n\tawait args.actor.addCondition(\"poisoned\");\n}\n\n"},
 					{"label":"Ignorar PA"}
 					]
 				}]
@@ -11547,7 +11547,7 @@
 			"effects": [{
 				"name":"Agarrón frío",
 				"scriptData": [
-					{"label":"Agarrón frío","script":"if (this.actor.system.status.advantage.value >= 2)\n{\n    await this.actor.modifyAdvantage(-2);\n    this.script.scriptNotification(\"Ventaja restada\")\n}\nelse \n{\n    return this.script.scriptNotification(\"¡No hay suficiente Ventaja!\", \"error\")\n}\n\nlet test = await this.actor.setupTrait(this.item)\nawait test.roll();"}
+					{"label":"Agarrón frío","script":"if (this.actor.system.status.advantage.value >= 2)\n{\n    await this.actor.modifyAdvantage(-2);\n    this.script.notification(\"Ventaja restada\")\n}\nelse \n{\n    return this.script.notification(\"¡No hay suficiente Ventaja!\", \"error\")\n}\n\nlet test = await this.actor.setupTrait(this.item)\nawait test.roll();"}
 					]
 				}]
 		},
@@ -11597,7 +11597,7 @@
 			"effects": [{
 				"name":"Sangre corrosiva",
 				"scriptData": [
-					{"label":"Sangre corrosiva","script":"let content = `<b>${this.effect.name}</b>: Todos los objetivos trabados con <b>${this.actor.prototypeToken.name}</b> reciben [[/r 1d10]] de Daño, modificado por BR y PA.`\n\nthis.script.scriptMessage(content)"}
+					{"label":"Sangre corrosiva","script":"let content = `<b>${this.effect.name}</b>: Todos los objetivos trabados con <b>${this.actor.prototypeToken.name}</b> reciben [[/r 1d10]] de Daño, modificado por BR y PA.`\n\nthis.script.message(content)"}
 					]
 				}]
 		},
@@ -11733,7 +11733,7 @@
 				"name":"Furia",
 				"scriptData": [
 					{"label":"Furia"},
-					{"label":"Desactivar","script":"if (this.actor.hasCondition(\"stunned\") || this.actor.hasCondition(\"unconscious\"))\n{\n\tthis.script.scriptNotification(\"¡Desactivado!\");\n\tawait this.effect.update({\"disabled\" : true})\n}"}
+					{"label":"Desactivar","script":"if (this.actor.hasCondition(\"stunned\") || this.actor.hasCondition(\"unconscious\"))\n{\n\tthis.script.notification(\"¡Desactivado!\");\n\tawait this.effect.update({\"disabled\" : true})\n}"}
 					]
 				}]
 		},
@@ -11744,7 +11744,7 @@
 			"effects": [{
 				"name":"Frenesí",
 				"scriptData": [
-					{"label":"Frenesí","script":"if (this.actor.system.status.advantage.value == 0)\n{\n    return this.script.scriptNotification(\"¡No hay suficiente Ventaja!\", \"error\")\n}\n\nlet hatred = await fromUuid(\"Compendium.wfrp4e-core.items.Item.aE3pyW20Orvdjzj0\")\nlet frenzy = await fromUuid(\"Compendium.wfrp4e-core.items.Item.yRhhOlt18COq4e1q\");\n\nif (this.actor.system.status.advantage.value >= 3)\n{\n    this.script.scriptNotification(`Añadiendo ${frenzy.name}`)\n    this.actor.setAdvantage(0)\n    this.actor.createEmbeddedDocuments(\"Item\", [frenzy])\n}\nelse if (this.actor.system.status.advantage.value >= 1)\n{\n    let data = hatred.toObject();\n    data.system.specification.value = \"Oponentes que están en combate cercano\"\n    this.script.scriptNotification(`Añadiendo ${hatred.name}`)\n    this.actor.setAdvantage(0)\n    this.actor.createEmbeddedDocuments(\"Item\", [data])\n}"}
+					{"label":"Frenesí","script":"if (this.actor.system.status.advantage.value == 0)\n{\n    return this.script.notification(\"¡No hay suficiente Ventaja!\", \"error\")\n}\n\nlet hatred = await fromUuid(\"Compendium.wfrp4e-core.items.Item.aE3pyW20Orvdjzj0\")\nlet frenzy = await fromUuid(\"Compendium.wfrp4e-core.items.Item.yRhhOlt18COq4e1q\");\n\nif (this.actor.system.status.advantage.value >= 3)\n{\n    this.script.notification(`Añadiendo ${frenzy.name}`)\n    this.actor.setAdvantage(0)\n    this.actor.createEmbeddedDocuments(\"Item\", [frenzy])\n}\nelse if (this.actor.system.status.advantage.value >= 1)\n{\n    let data = hatred.toObject();\n    data.system.specification.value = \"Oponentes que están en combate cercano\"\n    this.script.notification(`Añadiendo ${hatred.name}`)\n    this.actor.setAdvantage(0)\n    this.actor.createEmbeddedDocuments(\"Item\", [data])\n}"}
 					]
 				}]
 		},
@@ -11754,9 +11754,9 @@
 			"description": "<p>La criatura puede emitir un aullido espeluznante, capaz de matar a quienes lo oyen. En su Turno, la criatura puede gastar toda su Ventaja (mínimo 2) para desatar un horrendo aullido como Ataque gratuito. Todos los objetivos vivos que estén a tantas yardas o menos como la Iniciativa de la criatura sufrirán de inmediato 3 estados de Ensordecido y además 1d10 Heridas ignorando Bonificadores por Resistencia y puntos de Armadura. Los afectados deben también superar un Chequeo <strong>Normal (+20)</strong> de <strong>Aguante</strong>, o sufrir 1 Estado de @Condition[Quebrantado]. \r\r</p>",
 			"effects": [{
 				"name":"Aullido fantasmal",
-				"preApplyScript":"if (this.actor.system.status.advantage.value >= 2)\n{\n    await this.actor.setAdvantage(0);\n    this.script.scriptNotification(\"Ventaja sustraída\")\n    return true;\n}\nelse \n{\n    this.script.scriptNotification(\"¡No hay suficiente Ventaja!\", \"error\")\n    return false;\n}",
+				"preApplyScript":"if (this.actor.system.status.advantage.value >= 2)\n{\n    await this.actor.setAdvantage(0);\n    this.script.notification(\"Ventaja sustraída\")\n    return true;\n}\nelse \n{\n    this.script.notification(\"¡No hay suficiente Ventaja!\", \"error\")\n    return false;\n}",
 				"scriptData": [
-					{"label":"Aullido fantasmal","script":"let roll = await new Roll(\"1d10\").roll();\nthis.script.scriptMessage(await this.actor.applyBasicDamage(roll.total, {damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL, suppressMsg: true}))\n\nawait this.actor.addCondition(\"deafened\", 3)\n\nlet test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {fields : {difficulty: \"average\" }, skipTargets: true, appendTitle : ` - ${this.effect.name}`, context : {failure: \"Gana un Estado de Quebrantado.\", success : \"Evitado el Estado de Quebrantado.\"}})\nawait test.roll();\nif (test.failed)\n{\n    this.actor.addCondition(\"broken\")\n}"}
+					{"label":"Aullido fantasmal","script":"let roll = await new Roll(\"1d10\").roll();\nthis.script.message(await this.actor.applyBasicDamage(roll.total, {damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL, suppressMsg: true}))\n\nawait this.actor.addCondition(\"deafened\", 3)\n\nlet test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {fields : {difficulty: \"average\" }, skipTargets: true, appendTitle : ` - ${this.effect.name}`, context : {failure: \"Gana un Estado de Quebrantado.\", success : \"Evitado el Estado de Quebrantado.\"}})\nawait test.roll();\nif (test.failed)\n{\n    this.actor.addCondition(\"broken\")\n}"}
 					]
 				}]
 		},
@@ -11819,7 +11819,7 @@
 			"effects": [{
 				"name":"Infectado",
 				"scriptData": [
-					{"label":"Infectado","script":"if (args.totalWoundLoss > 0)\n{\n    this.script.scriptMessage(`<b>${args.actor.name}</b> debe pasar un Chequeo <b>Fácil (+40)</b> de <b>Aguante</b> o ganar una @UUID[Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb]{Herida supurante}`, {whisper: ChatMessage.getWhisperRecipients(\"GM\")})\n}"}
+					{"label":"Infectado","script":"if (args.totalWoundLoss > 0)\n{\n    this.script.message(`<b>${args.actor.name}</b> debe pasar un Chequeo <b>Fácil (+40)</b> de <b>Aguante</b> o ganar una @UUID[Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb]{Herida supurante}`, {whisper: ChatMessage.getWhisperRecipients(\"GM\")})\n}"}
 					]
 				}]
 		},
@@ -11874,7 +11874,7 @@
 			"effects": [{
 				"name":"Corrupción mental",
 				"scriptData": [
-					{"label":"Añadir corrupción mental","script":"let table = game.wfrp4e.tables.findTable(\"mutatemental\");\nif (!table)\n{\n\tui.notifications.error(\"No se pudo encontrar una tabla con la clave: mutatemental\")\n}\nlet result = (await table.roll()).results[0];\nlet uuid = `Compendium.${result.documentCollection}.${result.documentId}`\nlet item = await fromUuid(uuid);\n\nif (item)\n{\n    this.script.scriptNotification(`Añadido ${item.name}`)\n    this.actor.createEmbeddedDocuments(\"Item\", [item])\n}\nelse \n{\n    ui.notifications.error(\"No se pudo encontrar el Objeto: \" + uuid)\n}"}
+					{"label":"Añadir corrupción mental","script":"let table = game.wfrp4e.tables.findTable(\"mutatemental\");\nif (!table)\n{\n\tui.notifications.error(\"No se pudo encontrar una tabla con la clave: mutatemental\")\n}\nlet result = (await table.roll()).results[0];\nlet uuid = `Compendium.${result.documentCollection}.${result.documentId}`\nlet item = await fromUuid(uuid);\n\nif (item)\n{\n    this.script.notification(`Añadido ${item.name}`)\n    this.actor.createEmbeddedDocuments(\"Item\", [item])\n}\nelse \n{\n    ui.notifications.error(\"No se pudo encontrar el Objeto: \" + uuid)\n}"}
 					]
 				}]
 		},
@@ -11890,7 +11890,7 @@
 			"effects": [{
 				"name":"Corrupción mental",
 				"scriptData": [
-					{"label":"Añadir mutación","script":"let table = game.wfrp4e.tables.findTable(\"mutatephys\");\nif (!table)\n{\n\treturn ui.notifications.error(\"No se encontró la tabla de mutación, por favor asegúrate de que una tabla con la clave `mutatephys` ha sido importada al mundo)\n}\nlet result = (await table.roll()).results[0];\nlet uuid = `Compendium.${result.documentCollection}.${result.documentId}`\nlet item = await fromUuid(uuid);\n\nif (item)\n{\n    this.script.scriptNotification(`Añadido ${item.name}`)\n    this.actor.createEmbeddedDocuments(\"Item\", [item])\n}\nelse \n{\n    ui.notifications.error(\"No se pudo encontrar el Objeto: \" + uuid)\n}"}
+					{"label":"Añadir mutación","script":"let table = game.wfrp4e.tables.findTable(\"mutatephys\");\nif (!table)\n{\n\treturn ui.notifications.error(\"No se encontró la tabla de mutación, por favor asegúrate de que una tabla con la clave `mutatephys` ha sido importada al mundo)\n}\nlet result = (await table.roll()).results[0];\nlet uuid = `Compendium.${result.documentCollection}.${result.documentId}`\nlet item = await fromUuid(uuid);\n\nif (item)\n{\n    this.script.notification(`Añadido ${item.name}`)\n    this.actor.createEmbeddedDocuments(\"Item\", [item])\n}\nelse \n{\n    ui.notifications.error(\"No se pudo encontrar el Objeto: \" + uuid)\n}"}
 					]
 				}]
 		},
@@ -11911,7 +11911,7 @@
 			"effects": [{
 				"name":"Mirada petrificante",
 				"scriptData": [
-					{"label":"Mirada petrificante","script":"let advantage = this.actor.system.status.advantage.value;\nif (advantage > 0)\n{\n    await this.actor.setAdvantage(0);\n    this.script.scriptNotification(\"Ventaja sustraída\")\n}\nelse \n{\n    return this.script.scriptNotification(\"¡No hay suficiente Ventaja!\", \"error\")\n}\n\nlet test = await this.actor.setupTrait(this.item, {fields : {slBonus : advantage}})\nawait test.roll();"}
+					{"label":"Mirada petrificante","script":"let advantage = this.actor.system.status.advantage.value;\nif (advantage > 0)\n{\n    await this.actor.setAdvantage(0);\n    this.script.notification(\"Ventaja sustraída\")\n}\nelse \n{\n    return this.script.notification(\"¡No hay suficiente Ventaja!\", \"error\")\n}\n\nlet test = await this.actor.setupTrait(this.item, {fields : {slBonus : advantage}})\nawait test.roll();"}
 					]
 				}]
 		},
@@ -11959,7 +11959,7 @@
 			"effects": [{
 				"name":"Regenerar",
 				"scriptData": [
-					{"label":"Regenerar","script":"let chatData = { whisper: ChatMessage.getWhisperRecipients(\"GM\") }\nlet message = \"\"\n\nlet wounds = foundry.utils.duplicate(this.actor.status.wounds)\nlet regenRoll = await new Roll(\"1d10\").roll();\nlet regen = regenRoll.total;\n\nif (wounds.value >= wounds.max)\n    return\n\nif (wounds.value > 0) \n{\n    wounds.value += regen\n    if (wounds.value > wounds.max)\n    {\n        wounds.value = wounds.max\n    }\n    message += `<b>${this.actor.name}</b> recupera ${regen} Heridas.`\n\n    if (regen == 10)\n    {\n        message += `<br>Adicionalmente, regenera una Herida Crítica.`\n    }\n}\nelse if (regen >= 8) \n{\n    message += `<b>${this.actor.name}</b> sacó un ${regen} y recupera 1 Herida.`\n    wounds.value += 1\n    if (regen == 10)\n    {\n        message += `<br>Adicionalmente, regenera una Herida Crítica.`\n    }\n}\nelse \n{\n    message += `<b>${this.actor.name}</b> Tirada de Regenerar de ${regen} - Sin efecto.`\n}\n\nawait this.actor.update({ \"system.status.wounds\": wounds })\nthis.script.scriptMessage(message, { whisper: ChatMessage.getWhisperRecipients(\"GM\") })"}
+					{"label":"Regenerar","script":"let chatData = { whisper: ChatMessage.getWhisperRecipients(\"GM\") }\nlet message = \"\"\n\nlet wounds = foundry.utils.duplicate(this.actor.status.wounds)\nlet regenRoll = await new Roll(\"1d10\").roll();\nlet regen = regenRoll.total;\n\nif (wounds.value >= wounds.max)\n    return\n\nif (wounds.value > 0) \n{\n    wounds.value += regen\n    if (wounds.value > wounds.max)\n    {\n        wounds.value = wounds.max\n    }\n    message += `<b>${this.actor.name}</b> recupera ${regen} Heridas.`\n\n    if (regen == 10)\n    {\n        message += `<br>Adicionalmente, regenera una Herida Crítica.`\n    }\n}\nelse if (regen >= 8) \n{\n    message += `<b>${this.actor.name}</b> sacó un ${regen} y recupera 1 Herida.`\n    wounds.value += 1\n    if (regen == 10)\n    {\n        message += `<br>Adicionalmente, regenera una Herida Crítica.`\n    }\n}\nelse \n{\n    message += `<b>${this.actor.name}</b> Tirada de Regenerar de ${regen} - Sin efecto.`\n}\n\nawait this.actor.update({ \"system.status.wounds\": wounds })\nthis.script.message(message, { whisper: ChatMessage.getWhisperRecipients(\"GM\") })"}
 					]
 				}]
 		},
@@ -11970,7 +11970,7 @@
 			"effects": [{
 				"name":"Tamaño",
 				"scriptData": [
-					{"label":"Tamaño","script":"if (this.item.system.specification.value == \"Tamaño\")\n{\n    let choice = await ItemDialog.create(ItemDialog.objectToArray(game.wfrp4e.config.actorSizes, this.item.img), 1, \"Escoge Tamaño\");\n    if (choice[0])\n    {\n        this.item.updateSource({\"system.specification.value\" : choice[0].name})\n        this.effect.updateSource({name : this.effect.name + ` (${choice[0].name})`})\n    }\n}"}
+					{"label":"Tamaño","script":"if (this.item.system.specification.value == \"Tamaño\")\n{\n    let size = this.item.specifier;\n    if (!size)\n    {\n        let choice = await ItemDialog.create(ItemDialog.objectToArray(game.wfrp4e.config.actorSizes, this.item.img), 1, \"Escoge Tamaño\");\n        if (choice[0])\n        {\n            size = choice[0]?.name;\n        }\n    }    this.item.updateSource({\"system.specification.value\" : size, name : this.item.baseName})\n    this.effect.updateSource({name : this.effect.name + ` (${size})`})\n}"}
 					]
 				}]
 		},
@@ -12047,8 +12047,8 @@
 			"effects": [{
 				"name":"Coletazo",
 				"scriptData": [
-					{"label":"Coletazo","script":"let actorSize = game.wfrp4e.config.actorSizeNums[args.actor.details.size.value]\nlet attackerSize = game.wfrp4e.config.actorSizeNums[args.attacker.details.size.value]\n\nif (attackerSize > actorSize)\n{\n   args.actor.addCondition(\"prone\")\n   this.script.scriptMessage(`<strong>Coletazo</strong>: ${args.actor.prototypeToken.name} está ahora <strong>Tumbado</strong>`)\n}"},
-					{"label":"Coletazo (Ataque gratuito)","script":"if (this.actor.system.status.advantage.value > 0)\n{\n    await this.actor.modifyAdvantage(-1);\n    this.script.scriptNotification(\"Ventaja sustraída\")\n}\nelse \n{\n    return this.script.scriptNotification(\"¡No hay suficiente Ventaja!\", \"error\")\n}\n\nlet test = await this.actor.setupTrait(this.item)\nawait test.roll();"}
+					{"label":"Coletazo","script":"let actorSize = game.wfrp4e.config.actorSizeNums[args.actor.details.size.value]\nlet attackerSize = game.wfrp4e.config.actorSizeNums[args.attacker.details.size.value]\n\nif (attackerSize > actorSize)\n{\n   args.actor.addCondition(\"prone\")\n   this.script.message(`<strong>Coletazo</strong>: ${args.actor.prototypeToken.name} está ahora <strong>Tumbado</strong>`)\n}"},
+					{"label":"Coletazo (Ataque gratuito)","script":"if (this.actor.system.status.advantage.value > 0)\n{\n    await this.actor.modifyAdvantage(-1);\n    this.script.notification(\"Ventaja sustraída\")\n}\nelse \n{\n    return this.script.notification(\"¡No hay suficiente Ventaja!\", \"error\")\n}\n\nlet test = await this.actor.setupTrait(this.item)\nawait test.roll();"}
 					]
 				}]
 		},
@@ -12083,7 +12083,7 @@
 				"name":"Ataque de lengua",
 				"scriptData": [
 					{"label":"Ataque de lengua (Rango)"},
-					{"label":"Lengua (Ataque gratuito)","script":"if (this.actor.system.status.advantage.value > 0)\n{\n    await this.actor.modifyAdvantage(-1);\n    this.script.scriptNotification(\"Ventaja sustraída\")\n}\nelse \n{\n    return this.script.scriptNotification(\"¡No hay suficiente Ventaja!\", \"error\")\n}\n\nlet test = await this.actor.setupTrait(this.item)\nawait test.roll();"}
+					{"label":"Lengua (Ataque gratuito)","script":"if (this.actor.system.status.advantage.value > 0)\n{\n    await this.actor.modifyAdvantage(-1);\n    this.script.notification(\"Ventaja sustraída\")\n}\nelse \n{\n    return this.script.notification(\"¡No hay suficiente Ventaja!\", \"error\")\n}\n\nlet test = await this.actor.setupTrait(this.item)\nawait test.roll();"}
 					]
 				}]
 		},
@@ -12095,7 +12095,7 @@
 				"name":"Ataque de lengua",
 				"scriptData": [
 					{"label":"Ataque de lengua (12)"},
-					{"label":"Lengua (Ataque gratuito)","script":"if (this.actor.system.status.advantage.value > 0)\n{\n    await this.actor.modifyAdvantage(-1);\n    this.script.scriptNotification(\"Ventaja sustraída\")\n}\nelse \n{\n    return this.script.scriptNotification(\"¡No hay suficiente Ventaja!\", \"error\")\n}\n\nlet test = await this.actor.setupTrait(this.item)\nawait test.roll();"}
+					{"label":"Lengua (Ataque gratuito)","script":"if (this.actor.system.status.advantage.value > 0)\n{\n    await this.actor.modifyAdvantage(-1);\n    this.script.notification(\"Ventaja sustraída\")\n}\nelse \n{\n    return this.script.notification(\"¡No hay suficiente Ventaja!\", \"error\")\n}\n\nlet test = await this.actor.setupTrait(this.item)\nawait test.roll();"}
 					]
 				}]
 		},
@@ -12156,7 +12156,7 @@
 			"effects": [{
 				"name":"Vampírico",
 				"scriptData": [
-					{"label":"Vampírico","script":"if (args.opposedTest.attackerTest.item?.name.includes(\"Mordisco\"))\n{\n    let woundsGained = args.totalWoundLoss;\n    this.script.scriptMessage(`Gana ${woundsGained} Heridas.`, { whisper: ChatMessage.getWhisperRecipients(\"GM\") })\n    this.actor.modifyWounds(woundsGained)\n}"}
+					{"label":"Vampírico","script":"if (args.opposedTest.attackerTest.item?.name.includes(\"Mordisco\"))\n{\n    let woundsGained = args.totalWoundLoss;\n    this.script.message(`Gana ${woundsGained} Heridas.`, { whisper: ChatMessage.getWhisperRecipients(\"GM\") })\n    this.actor.modifyWounds(woundsGained)\n}"}
 					]
 				}]
 		},
@@ -12180,7 +12180,7 @@
 				"name":"Vómito",
 				"scriptData": [
 					{"label":"Vómito"},
-					{"label":"Vómito (Ataque gratuito)","script":"if (this.actor.system.status.advantage.value > 0)\n{\n    await this.actor.modifyAdvantage(-3);\n    this.script.scriptNotification(\"Ventaja sustraída\")\n}\nelse \n{\n    return this.script.scriptNotification(\"¡No hay suficiente Ventaja!\", \"error\")\n}\n\nlet test = await this.actor.setupTrait(this.item)\nawait test.roll();"}
+					{"label":"Vómito (Ataque gratuito)","script":"if (this.actor.system.status.advantage.value > 0)\n{\n    await this.actor.modifyAdvantage(-3);\n    this.script.notification(\"Ventaja sustraída\")\n}\nelse \n{\n    return this.script.notification(\"¡No hay suficiente Ventaja!\", \"error\")\n}\n\nlet test = await this.actor.setupTrait(this.item)\nawait test.roll();"}
 					]
 				}]
 		},
@@ -12320,7 +12320,7 @@
 			"effects": [{
 				"name":"Gato callejero",
 				"scriptData": [
-					{"hideScript":"return !args.skill?.name.includes(\"Movimiento silencioso\")","activateScript":"return args.skill?.name == \"Movimiento silencioso (Urbano)\""}
+					{"hideScript":"return !args.skill?.name.includes(\"Movimiento silencioso\")"}
 					]
 				}]
 		},
@@ -12631,7 +12631,7 @@
 				"scriptData": [
 					{},
 					{"label":"Elegir Habilidad de Oficio","script":"if (this.item.name.includes(\"(\"))\n{\n\tlet trade = this.item.parenthesesText;\n\treturn this.item.updateSource({\"system.tests.value\" : this.item.system.tests.value.replace(\"cualquiera\", trade)})\n}\n\nlet index = game.packs\n.filter(i => i.metadata.type == \"Item\")\n.reduce((acc, pack) => acc.concat(pack.index.contents), [])\n.filter(i => i.type == \"skill\" && i.name.includes(game.i18n.localize(\"NAME.Trade\")))\n.map(i => {\n\ti.id = i._id\n\treturn i\n})\n\nlet choice = await ItemDialog.create(index, 1, \"Escoge una Habilidad de Oficio\")\nlet text;\nif (!choice[0])\n{\n    let custom = await Dialog.wait({\n        title : \"Oficio Personalizado\",\n        content : \"<input type='text'>\",\n        buttons : {\n            confirm : {\n                label : game.i18n.localize(\"Confirm\"),\n                callback : (dlg) => {\n                    return dlg.find(\"input\")[0].value\n                }\n            }\n        },\n        default : \"confirm\",\n        close : () => {\n            return \"\"\n        }\n    })   \n    text = custom || \"\"\n}\nelse \n{\n    text = game.wfrp4e.utility.extractParenthesesText(choice[0].name)\n}\n\nawait this.item.updateSource({name : this.item.name + ` (${text})`, \"system.tests.value\" : this.item.system.tests.value.replace(\"cualquiera\", text)})"},
-					{"label":"Añadir Habilidad de Oficio","script":"let skill = `Oficio (${this.item.parenthesesText})`\r\nlet currentCareer = this.actor.system.currentCareer;\r\nlet existingSkill = this.actor.itemTypes.skill.find(i => i.name == skill);\r\n\r\nif (!currentCareer) return\r\n\r\n\r\nlet inCurrentCareer = currentCareer.system.skills.includes(skill);\r\nlet craftsmanAdded = this.actor.getFlag(\"wfrp4e\", \"craftsmanAdded\") || {};\r\nif (existingSkill && inCurrentCareer && !craftsmanAdded[existingSkill.name])\r\n{\r\n\texistingSkill.system.advances.costModifier = -5;\r\n}\r\nelse \r\n{\r\n\tcraftsmanAdded[skill] = true;\r\n\tcurrentCareer.system.skills.push(skill);\r\n\tfoundry.utils.setProperty(this.actor, \"flags.wfrp4e.craftsmanAdded\", craftsmanAdded)\r\n}"}
+					{"label":"Añadir Habilidad de Oficio"}
 					]
 				}]
 		},
@@ -12642,7 +12642,7 @@
 			"effects": [{
 				"name":"Delincuente",
 				"scriptData": [
-					{"label":"Delincuente","script":"if (args.test.options.income && !args.test.options.criminal)\n{\n    args.test.options.criminal = true;\n    let currentCareer = args.test.actor.system.currentCareer;\n    let coin = {1 : \"b\", 2 : \"s\", 3 : \"s\", 4 : \"g\"}[currentCareer.system.level.value] // b, s, or g maps to 2d10, 1d10, or 1 respectively (takes the first letter)\n    let term = {1 : \"pb\", 2 : \"cp\", 3 : \"cp\", 4 : \"co\"}[currentCareer.system.level.value] // b, s, or g maps to 2d10, 1d10, or 1 respectively (takes the first letter)\n    let dieAmount = {1 : \"2d10\", 2 : \"1d10\", 3 : \"2d10\", 4 : \"1\"}[currentCareer.system.level.value] // b, s, or g maps to 2d10, 1d10, or 1 respectively (takes the first letter)\n    dieAmount = parseInt(dieAmount[0]) * this.item.system.Advances;     // Multilpy that first letter by your standing (Brass 4 = 8d10 pennies)\n    if (coin != \"g\") // Don't roll for gold, just use standing value\n    {\n        dieAmount = dieAmount + \"d10\";\n    }\n    let moneyEarned = (await new Roll(dieAmount.toString()).roll()).total;\n    let moneyString = `${moneyEarned}${coin}`\n    let transactionString = `${moneyEarned}${term}`\n\n    this.script.scriptMessage(`<a class=\"money-drag\" data-amt=\"${moneyString}\"><strong>Ganados ${game.wfrp4e.market.amountToString(game.wfrp4e.market.parseMoneyTransactionString(transactionString))} adicionales</strong></a>`, {whisper : ChatMessage.getWhisperRecipients(\"GM\")})\n}"}
+					{"label":"Delincuente","script":"if (args.test.options.income && !args.test.options.criminal)\n{\n    args.test.options.criminal = true;\n    let currentCareer = args.test.actor.system.currentCareer;\n    let coin = {1 : \"b\", 2 : \"s\", 3 : \"s\", 4 : \"g\"}[currentCareer.system.level.value] // b, s, or g maps to 2d10, 1d10, or 1 respectively (takes the first letter)\n    let term = {1 : \"pb\", 2 : \"cp\", 3 : \"cp\", 4 : \"co\"}[currentCareer.system.level.value] // b, s, or g maps to 2d10, 1d10, or 1 respectively (takes the first letter)\n    let dieAmount = {1 : \"2d10\", 2 : \"1d10\", 3 : \"2d10\", 4 : \"1\"}[currentCareer.system.level.value] // b, s, or g maps to 2d10, 1d10, or 1 respectively (takes the first letter)\n    dieAmount = parseInt(dieAmount[0]) * this.item.system.Advances;     // Multilpy that first letter by your standing (Brass 4 = 8d10 pennies)\n    if (coin != \"g\") // Don't roll for gold, just use standing value\n    {\n        dieAmount = dieAmount + \"d10\";\n    }\n    let moneyEarned = (await new Roll(dieAmount.toString()).roll()).total;\n    let moneyString = `${moneyEarned}${coin}`\n    let transactionString = `${moneyEarned}${term}`\n\n    this.script.message(`<a class=\"money-drag\" data-amt=\"${moneyString}\"><strong>Ganados ${game.wfrp4e.market.amountToString(game.wfrp4e.market.parseMoneyTransactionString(transactionString))} adicionales</strong></a>`, {whisper : ChatMessage.getWhisperRecipients(\"GM\")})\n}"}
 					]
 				}]
 		},
@@ -12700,7 +12700,7 @@
 				"name":"Pelea callejera",
 				"scriptData": [
 					{"label":"Pelea callejera"},
-					{"hideScript":"return args.skill?.name != \"Cuerpo a cuerpo (Pelea)\" && args.item?.weaponGroup?.value != \"brawling\"","activateScript":"return args.skill?.name == \"Cuerpo a cuerpo (Pelea)\" || args.item?.weaponGroup?.value == \"brawling\""}
+					{}
 					]
 				}]
 		},
@@ -12897,7 +12897,7 @@
 				"name":"Furia",
 				"scriptData": [
 					{"label":"Furia"},
-					{"label":"Desactivar","script":"if (this.actor.hasCondition(\"stunned\") || this.actor.hasCondition(\"unconscious\"))\n{\n\tthis.script.scriptNotification(\"¡Desactivado!\");\n\tawait this.effect.update({\"disabled\" : true})\n}"}
+					{"label":"Desactivar","script":"if (this.actor.hasCondition(\"stunned\") || this.actor.hasCondition(\"unconscious\"))\n{\n\tthis.script.notification(\"¡Desactivado!\");\n\tawait this.effect.update({\"disabled\" : true})\n}"}
 					]
 				}]
 		},
@@ -13043,7 +13043,7 @@
 				"name":"Dicción instintiva",
 				"scriptData": [
 					{"label":"Dicción instintiva"},
-					{"hideScript":"return args.skill?.name != \"Hablar idioma (Lengua de la magia)\"","activateScript":"return args.skill?.name == \"Hablar idioma (Lengua de la magia)\""}
+					{}
 					]
 				}]
 		},
@@ -13297,8 +13297,8 @@
 			"effects": [{
 				"name":"Tono perfecto",
 				"scriptData": [
-					{"hideScript":"return args.skill?.name != \"Animar (Cantar)\" && !args.skill?.name.includes(\"Hablar idioma\")","activateScript":"        return args.skill?.name == \"Animar (Cantar)\" || (args.skill?.name.includes(\"Hablar idioma\") && (args.skill?.name.includes(\"Lengua de la magia\") || args.skill?.name.includes(\"Eltharin\") || args.skill?.name.includes(\"Catayano\")))"},
-					{"label":"Añadir Animar (Cantar)","script":"let skill = `Animar (Cantar)`\r\nlet currentCareer = this.actor.system.currentCareer;\r\nlet existingSkill = this.actor.itemTypes.skill.find(i => i.name == skill);\r\n\r\nif (!currentCareer) return\r\n\r\n\r\nlet inCurrentCareer = currentCareer.system.skills.includes(skill);\r\nlet perfectPitchAdded = this.actor.getFlag(\"wfrp4e\", \"perfectPitchAdded\") || {};\r\nif (existingSkill && inCurrentCareer && !perfectPitchAdded[existingSkill.name])\r\n{\r\n\texistingSkill.system.advances.costModifier = -5;\r\n}\r\nelse \r\n{\r\n\tperfectPitchAdded[skill] = true;\r\n\tcurrentCareer.system.skills.push(skill);\r\n\tfoundry.utils.setProperty(this.actor, \"flags.wfrp4e.perfectPitchAdded\", perfectPitchAdded)\r\n}\r\n\r\n\r\n"}
+					{},
+					{"label":"Añadir Animar (Cantar)"}
 					]
 				}]
 		},
@@ -13456,9 +13456,7 @@
 			"tests": "Montar (Caballo) en combate",
 			"effects": [{
 				"name":"Jinete experto",
-				"scriptData": [
-					{"activateScript":"return args.skill?.name == \"Montar (Caballo)\" && game.combat?.active"}
-					]
+				"scriptData": []
 				}]
 		},
 		{
@@ -13468,9 +13466,7 @@
 			"tests": "Chequeos de Movimiento silencioso en un entorno Rural",
 			"effects": [{
 				"name":"Errante",
-				"scriptData": [
-					{"activateScript":"return args.skill?.name == \"Movimiento silencioso (Rural)\""}
-					]
+				"scriptData": []
 				}]
 		},
 		{
@@ -13894,7 +13890,7 @@
 			"effects": [{
 				"name":"Equitación acrobática",
 				"scriptData": [
-					{"activateScript":"return args.skill?.name == \"Montar (Caballo)\" || (args.options.dodge && this.actor.isMounted)"},
+					{},
 					{"label":"Sin penalizador por esquivar a caballo"}
 					]
 				}]
@@ -13905,10 +13901,8 @@
 			"description": "<p>Te sientes como en casa en túneles, alcantarillas y otros entornos subterráneos. Cuando utilizas Movimiento silencioso en un entorno subterráneo, quienes te rodean no tienen derecho a Chequeos de Percepción pasiva para detectarte; tan sólo pueden verte si están específicamente vigilando o buscando gente oculta.</p>",
 			"tests": "Chequeos de Movimiento silencioso cuando estás bajo tierra",
 			"effects": [{
-				"name":"Equitación acrobática",
-				"scriptData": [
-					{"activateScript":"return args.skill?.name == \"Movimiento silencioso (Subterráneo)\""}
-					]
+				"name":"Rata de túnel",
+				"scriptData": []
 				}]
 		},
 		{

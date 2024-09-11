@@ -14,18 +14,18 @@ export const effects = (effects, translations) => {
     }
 
     if (teffects.name) currenteffect.name = teffects.name;
-	if (teffects.preApplyScript) currenteffect.flags.wfrp4e.applicationData.preApplyScript = teffects.preApplyScript;
-	if (teffects.filter) currenteffect.flags.wfrp4e.applicationData.filter = teffects.filter;
+	if (teffects.preApplyScript) currenteffect.system.transferData.preApplyScript = teffects.preApplyScript;
+	if (teffects.filter) currenteffect.system.transferData.filter = teffects.filter;
 	
-    if (currenteffect.flags.wfrp4e.scriptData && currenteffect.flags.wfrp4e.scriptData.length > 0) {
-        effects[index].flags.wfrp4e.scriptData.forEach((scriptData, idx) => {
+    if (currenteffect.system.scriptData && currenteffect.system.scriptData.length > 0) {
+        effects[index].system.scriptData.forEach((scriptData, idx) => {
           const tscriptData = teffects.scriptData[idx];
 		  if (!tscriptData) return;
 		  if (tscriptData.label) scriptData.label = tscriptData.label;
 		  if (tscriptData.script) scriptData.script = tscriptData.script;
-		  if (tscriptData.hideScript) scriptData.options.dialog.hideScript = tscriptData.hideScript;
-		  if (tscriptData.activateScript) scriptData.options.dialog.activateScript = tscriptData.activateScript;
-		  if (tscriptData.submissionScript) scriptData.options.dialog.submissionScript = tscriptData.submissionScript;
+		  if (tscriptData.hideScript) scriptData.options.hideScript = tscriptData.hideScript;
+		  if (tscriptData.activateScript) scriptData.options.activateScript = tscriptData.activateScript;
+		  if (tscriptData.submissionScript) scriptData.options.submissionScript = tscriptData.submissionScript;
         });
     }
   })
