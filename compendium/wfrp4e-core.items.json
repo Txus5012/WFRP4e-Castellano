@@ -6176,7 +6176,7 @@
 			"effects": [{
 				"name":"Brazos del Aethyr",
 				"scriptData": [
-					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = warhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
+					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = warhammer.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = warhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
 					]
 				}]
 		},
@@ -6187,7 +6187,7 @@
 			"effects": [{
 				"name":"Brazos del Aethyr (Bestias)",
 				"scriptData": [
-					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = warhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
+					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = warhammer.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = warhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
 					]
 				}]
 		},
@@ -6198,7 +6198,7 @@
 			"effects": [{
 				"name":"Brazos del Aethyr (Demonología)",
 				"scriptData": [
-					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = warhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
+					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = warhammer.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = warhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
 					]
 				}]
 		},
@@ -6209,7 +6209,7 @@
 			"effects": [{
 				"name":"Brazos del Aethyr (Muerte)",
 				"scriptData": [
-					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = warhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
+					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = warhammer.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = warhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
 					]
 				}]
 		},
@@ -6220,7 +6220,7 @@
 			"effects": [{
 				"name":"Brazos del Aethyr (Fuego)",
 				"scriptData": [
-					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = warhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
+					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = warhammer.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = warhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
 					]
 				}]
 		},
@@ -6231,7 +6231,7 @@
 			"effects": [{
 				"name":"Brazos del Aethyr (Cielos)",
 				"scriptData": [
-					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = warhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
+					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = warhammer.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = warhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
 					]
 				}]
 		},
@@ -6242,7 +6242,7 @@
 			"effects": [{
 				"name":"Brazos del Aethyr (Adivinación)",
 				"scriptData": [
-					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = warhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
+					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = warhammer.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = warhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
 					]
 				}]
 		},
@@ -6253,7 +6253,7 @@
 			"effects": [{
 				"name":"Brazos del Aethyr (Vida)",
 				"scriptData": [
-					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = warhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
+					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = warhammer.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = warhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
 					]
 				}]
 		},
@@ -6264,7 +6264,7 @@
 			"effects": [{
 				"name":"Brazos del Aethyr (Luz)",
 				"scriptData": [
-					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = warhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
+					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = warhammer.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = warhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
 					]
 				}]
 		},
@@ -6275,7 +6275,7 @@
 			"effects": [{
 				"name":"Brazos del Aethyr (Metal)",
 				"scriptData": [
-					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = warhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
+					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = warhammer.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = warhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
 					]
 				}]
 		},
@@ -6286,7 +6286,7 @@
 			"effects": [{
 				"name":"Brazos del Aethyr (Nigromancia)",
 				"scriptData": [
-					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = warhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
+					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = warhammer.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = warhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
 					]
 				}]
 		},
@@ -6297,7 +6297,7 @@
 			"effects": [{
 				"name":"Brazos del Aethyr (Sombras)",
 				"scriptData": [
-					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = warhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
+					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = warhammer.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = warhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
 					]
 				}]
 		},
@@ -6308,7 +6308,7 @@
 			"effects": [{
 				"name":"Brazos del Aethyr (Brujería)",
 				"scriptData": [
-					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = game.wfrp4e.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = warhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
+					{"label":"Brazos del Aethyr","script":"let skills = this.actor.itemTypes.skill.filter(i => i.name.includes(game.i18n.localize(\"NAME.Melee\")))\n\nlet skill = await ItemDialog.create(skills, 1, \"Selecciona la habilidad usada por el arma\")\nlet group = warhammer.utility.extractParenthesesText(skill[0]?.name)\nlet groupKey = warhammer.utility.findKey(group, game.wfrp4e.config.weaponGroups)\n\nlet weapon = {\n\tname : this.effect.name,\n\ttype : \"weapon\",\n\timg : this.effect.img,\n\tsystem : {\n\t\t\"damage.value\" : this.actor.system.characteristics.wp.bonus,\n\t\t\"weaponGroup.value\" : groupKey || \"basic\",\n\t\t\"twohanded.value\" : [\"polearm\", \"twohanded\"].includes(groupKey),\n\t\t\"reach.value\" : \"average\",\n\t\t\"qualities.value\" : [{name : \"magical\"}]\n\t},\n}\n\nItem.implementation.create(foundry.utils.expandObject(weapon), {parent : this.actor, fromEffect : this.effect.id})\nthis.script.notification(\"Objeto creado. Posterior personalización debe hacerse manualmente en la ficha del Objeto\");"}
 					]
 				}]
 		},
@@ -11450,7 +11450,7 @@
 				"name":"Armadura",
 				"scriptData": [
 					{"label":"Armadura"},
-					{"label":"Establecer valor","script":"if (isNaN(parseInt(this.item.system.specification.value)))\n{\n    let value = this.item.specifier;\n    if (!value)\n    {\n        value = await ValueDialog.create(\"Escribe el valor de Armadura\", this.effect.name);\n    }\n    if (value)\n    {\n        this.item.updateSource({\"system.specification.value\" : value, name : this.item.baseName});\n    }\n}"}
+					{"label":"Establecer valor","script":"if (isNaN(parseInt(this.item.system.specification.value)))\n{\n    let value = this.item.specifier;\n    if (!value)\n    {\n        value = await ValueDialog.create({text : \"Escribe el valor de Armadura\", title : this.effect.name});\n    }\n    if (value)\n    {\n        this.item.updateSource({\"system.specification.value\" : value, name : this.item.baseName});\n    }\n}"}
 					]
 				}]
 		},
@@ -11515,7 +11515,7 @@
 				{
 				"name":"Aliento",
 				"scriptData": [
-					{"label":"Aliento","script":"let type = this.item.getFlag(\"wfrp4e\", \"breath\");\n\nif (type == \"cold\")\n{\n\tlet stunned = Math.max(1, Math.trunc(args.totalWoundLoss / 5))\n\tawait args.actor.addCondition(\"stunned\", stunned);\n}\n\nif (type == \"corrosion\")\n{\n    let damageItems = await Dialog.confirm({title : this.item.name, content : `<p>¿Dañados todos los Objetos portados?</p>`})\n\tif (damageItems)\n\t{\n\t\tlet msg = ``\n\t\tlet weapons = args.actor.itemTypes.weapon.filter(i => i.isEquipped);\n\t\tlet armour = args.actor.itemTypes.armour.filter(i => i.isEquipped);\n\t\tlet trappings = args.actor.itemTypes.trapping.filter(i => i.isEquipped);\n\t\tfor(let item of weapons)\n\t\t{\n\t\t\tif (item.system.properties.qualities.shield)\n\t\t\t{\n\t\t\t\tawait item.system.damageItem(1, \"shield\");\n\t\t\t}\n\t\t\telse \n\t\t\t{\n\t\t\t\tawait item.system.damageItem(1);\n\t\t\t}\n\t\t\tmsg += `<p><strong>${item.name}</strong> dañado en 1</p>`\n\t\t}\n\t\tfor(let item of armour)\n\t\t{\n\t\t\tawait item.system.damageItem(1);\n\t\t\tmsg += `<p><strong>${item.name}</strong> dañado en 1</p>`\n\t\t}\n\t\tfor(let item of trappings)\n\t\t{\n\t\t\tawait item.system.damageItem(1);\n\t\t\tmsg += `<p><strong>${item.name}</strong> dañado en 1</p>`\n\t\t}\n\t\tif (msg)\n\t\t{\n\t\t\tthis.script.message(msg, {speaker : {alias : args.actor.name}});\n\t\t}\n\t}\n}\n\nif (type == \"fire\")\n{\n\tawait args.actor.addCondition(\"ablaze\");\n}\n\nif (type == \"electricity\")\n{\n\tawait args.actor.addCondition(\"stunned\");\n}\n\nif (type == \"poison\")\n{\n\tawait args.actor.addCondition(\"poisoned\");\n}\n\n"},
+					{"label":"Aliento","script":"let type = this.item.getFlag(\"wfrp4e\", \"breath\");\n\nif (type == \"cold\")\n{\n\tlet stunned = Math.max(1, Math.trunc(args.totalWoundLoss / 5))\n\tawait args.actor.addCondition(\"stunned\", stunned);\n}\n\nif (type == \"corrosion\")\n{\n    let damageItems = await Dialog.confirm({title : this.item.name, content : `<p>¿Dañados todos los Objetos portados?</p>`})\n\tif (damageItems)\n\t{\n\t\tlet msg = ``\n\t\tlet weapons = args.actor.itemTypes.weapon.filter(i => i.isEquipped);\n\t\tlet armour = args.actor.itemTypes.armour.filter(i => i.isEquipped);\n\t\tlet trappings = args.actor.itemTypes.trapping.filter(i => i.isEquipped);\n\t\tfor(let item of weapons)\n\t\t{\n\t\t\tif (item.system.properties.qualities.shield)\n\t\t\t{\n\t\t\t\tawait item.system.damageItem(1, \"shield\");\n\t\t\t}\n\t\t\telse \n\t\t\t{\n\t\t\t\tawait item.system.damageItem(1);\n\t\t\t}\n\t\t\tmsg += `<p><strong>${item.name}</strong> dañado en 1</p>`\n\t\t}\n\t\tfor(let item of armour)\n\t\t{\n\t\t\tawait item.system.damageItem(1);\n\t\t\tmsg += `<p><strong>${item.name}</strong> dañado en 1</p>`\n\t\t}\n\t\tfor(let item of trappings)\n\t\t{\n\t\t\tawait item.system.damageItem(1);\n\t\t\tmsg += `<p><strong>${item.name}</strong> dañado en 1</p>`\n\t\t}\n\t\tif (msg)\n\t\t{\n\t\t\tthis.script.message(msg, {speaker : {alias : args.actor.name}});\n\t\t}\n\t}\n}\n\nif (type == \"fire\")\n{\n\tawait args.actor.addCondition(\"ablaze\");\n}\n\nif (type == \"electricity\")\n{\n\tawait args.actor.addCondition(\"stunned\");\n}\n\nif (type == \"poison\")\n{\n\tawait args.actor.addCondition(\"poisoned\");\n}\n\nif (type == \"warpfire\")\n{\n    await this.actor.corruptionDialog(\"moderate\")\n    this.actor.applyEffect({effectUuids : this.item.effects.getName(\"Warpfire\").uuid})\n}"},
 					{"label":"Ignorar PA"}
 					]
 				}]
@@ -11608,8 +11608,8 @@
 			"effects": [{
 				"name":"Corrupción",
 				"scriptData": [
-					{"label":"Corrupción","script":"let strength\nif (this.item.system.specification.value == \"Menor\")\n  strength = \"minor\"\nelse if (this.item.system.specification.value == \"Moderado\")\n  strength = \"moderate\"\nelse if (this.item.system.specification.value == \"Mayor\")\n  strength = \"major\"\n\ngame.wfrp4e.utility.postCorruptionTest(strength, {speaker : {alias: this.actor.prototypeToken.name}})"},
-					{"label":"Escoger fuerza","script":"if ([\"Menor\", \"Moderado\", \"Mayor\"].includes(this.item.system.specification.value))\n{\n\treturn\n}\n\nlet choice = await ItemDialog.create(ItemDialog.objectToArray({minor : \"Menor\", moderate : \"Moderado\", major : \"Mayor\"}, this.item.img), 1, \"Escoge la fuerza de la Corrupción\");\n\nthis.item.updateSource({\"system.specification.value\" : choice[0].name})"}
+					{"label":"Corrupción"},
+					{"label":"Escoger fuerza","script":"if ([game.i18n.localize(\"CORRUPTION.Minor\"), game.i18n.localize(\"CORRUPTION.Moderate\"), game.i18n.localize(\"CORRUPTION.Major\")].includes(this.item.system.specification.value))\n{\n\treturn\n}\n\nlet choice = await ItemDialog.create(ItemDialog.objectToArray({minor : game.i18n.localize(\"CORRUPTION.Minor\"), moderate : game.i18n.localize(\"CORRUPTION.Moderate\"), major : game.i18n.localize(\"CORRUPTION.Major\")}, this.item.img), 1, \"Escoge la fuerza de la Corrupción\");\n\nthis.item.updateSource({\"system.specification.value\" : choice[0].name})"}
 					]
 				}]
 		},
@@ -11710,7 +11710,7 @@
 				{
 				"name":"Establecer valor",
 				"scriptData": [
-					{"label":"Establecer valor","script":"if (isNaN(parseInt(this.item.system.specification.value)))\n{\n    let value = await ValueDialog.create(\"Escribe el valor de Miedo\", this.effect.name);\n    if (value)\n    {\n     this.item.updateSource({\"system.specification.value\" : value});\n    }\n}"}
+					{"label":"Establecer valor","script":"if (isNaN(parseInt(this.item.system.specification.value)))\n{\n    let value = await ValueDialog.create({text : \"Escribe el valor de Miedo\", title : this.effect.name});\n    if (value)\n    {\n     this.item.updateSource({\"system.specification.value\" : value});\n    }\n}"}
 					]
 				}]
 		},
@@ -11986,7 +11986,7 @@
 			"effects": [{
 				"name":"Hechicero",
 				"scriptData": [
-					{"label":"Hechicero","script":"if (isNaN(parseInt(this.item.system.specification.value)))\n{\n    let value = await ValueDialog.create(\"Escoge el Saber de los hechizos\", this.effect.name, \"\", Object.values(game.wfrp4e.config.magicLores));\n    if (value)\n    {\n     this.item.updateSource({\"system.specification.value\" : value});\n    }\n}"}
+					{"label":"Hechicero","script":"if (isNaN(parseInt(this.item.system.specification.value)))\n{\n    let value = await ValueDialog.create({text : \"Escoge el Saber de los hechizos\", title : this.effect.name}, \"\", Object.values(game.wfrp4e.config.magicLores));\n    if (value)\n    {\n     this.item.updateSource({\"system.specification.value\" : value});\n    }\n}"}
 					]
 				}]
 		},
@@ -12071,7 +12071,7 @@
 				{
 				"name":"Establecer valor",
 				"scriptData": [
-					{"label":"Establecer valor","script":"if (isNaN(parseInt(this.item.system.specification.value)))\n{\n    let value = await ValueDialog.create(\"Escribe el valor de Terror\", this.effect.name);\n    if (value)\n    {\n     this.item.updateSource({\"system.specification.value\" : value});\n    }\n}"}
+					{"label":"Establecer valor","script":"if (isNaN(parseInt(this.item.system.specification.value)))\n{\n    let value = await ValueDialog.create({text : \"Escribe el valor de Terror\", title : this.effect.name});\n    if (value)\n    {\n     this.item.updateSource({\"system.specification.value\" : value});\n    }\n}"}
 					]
 				}]
 		},
@@ -12168,7 +12168,7 @@
 				"name":"Veneno",
 				"scriptData": [
 					{"label":"Veneno"},
-					{"label":"Establecer valor","script":"if (isNaN(parseInt(this.item.system.specification.value)))\n{\n    let value = await ValueDialog.create(\"Escoge la fuerza del Veneno\", this.effect.name, \"\", Object.values(game.wfrp4e.config.difficultyNames));\n    if (value)\n    {\n     this.item.updateSource({\"system.specification.value\" : value});\n    }\n}"}
+					{"label":"Establecer valor","script":"if (isNaN(parseInt(this.item.system.specification.value)))\n{\n    let value = await ValueDialog.create({text : \"Escoge la fuerza del Veneno\", title : this.effect.name}, \"\", Object.values(game.wfrp4e.config.difficultyNames));\n    if (value)\n    {\n     this.item.updateSource({\"system.specification.value\" : value});\n    }\n}"}
 					]
 				}]
 		},
@@ -12204,7 +12204,7 @@
 				"name":"Custodiado",
 				"scriptData": [
 					{"label":"Custodiado"},
-					{"label":"Establecer valor","script":"if (isNaN(parseInt(this.item.system.specification.value)))\n{\n    let value = await ValueDialog.create(\"Valor de Custodiado\", \"Escribe el valor de Custodiado\");\n    if (value)\n    {\n     this.item.updateSource({\"system.specification.value\" : value});\n    }\n}"}
+					{"label":"Establecer valor","script":"if (isNaN(parseInt(this.item.system.specification.value)))\n{\n    let value = await ValueDialog.create({text : \"Valor de Custodiado\", title : \"Escribe el valor de Custodiado\"});\n    if (value)\n    {\n     this.item.updateSource({\"system.specification.value\" : value});\n    }\n}"}
 					]
 				}]
 		},
@@ -12442,7 +12442,13 @@
 		{
 			"id": "Bless",
 			"name": "Bendición",
-			"description": "<p>Uno de los dioses vela por ti, y ello te permite potenciar las más sencillas plegarias. Ahora puedes desplegar las Bendiciones de tu dios, según se indica en @UUID[JournalEntry.NcH9OhleJFfaUdon]{Religión y creencias}. En circunstancias normales, sólo puedes adquirir el Talento Bendición (Saber divino) una vez.</p>"
+			"description": "<p>Uno de los dioses vela por ti, y ello te permite potenciar las más sencillas plegarias. Ahora puedes desplegar las Bendiciones de tu dios, según se indica en @UUID[JournalEntry.NcH9OhleJFfaUdon]{Religión y creencias}. En circunstancias normales, sólo puedes adquirir el Talento Bendición (Saber divino) una vez.</p>",
+			"effects": [{
+				"name":"Bendición",
+				"scriptData": [
+					{"label":"Bendición","script":"if (this.actor.type != \"character\")\n{\n    return;\n}\n\nlet god = await ValueDialog.create({text : \"Escribe una deidad\", title :  \"Bendición\"})\n\nif (god)\n{\n    let prayers = await warhammer.utility.findAllItems(\"prayer\", \"Cargando Bendiciones\")\n    let blessings = prayers.filter(p => p.system.god.value.split(\",\").map(i => i.trim().toLowerCase()).includes(god.toLowerCase()) && p.system.type.value == \"blessing\")\n    let godBlessings = game.wfrp4e.config.godBlessings[god.toLowerCase()] || [];\n    if (god == \"Vieja Fe\")\n    {\n        blessings = await ItemDialog.create(prayers.filter(i => i.system.type.value == \"blessing\"), 6, {text : \"Selecciona 6 Bendiciones cualesquiera\", title :  \"Bendición\"})\n    }\n    if (godBlessings.length)\n    {\n        blessings = blessings.concat(await Promise.all(godBlessings.filter(bls => !(blessings.map(i => i.uuid).includes(bls.uuid))).map(fromUuid)));\n    }\n    if (blessings.length)\n    {\n        this.script.notification(\"Añadiendo \" + blessings.map(i => i.name).join(\", \"))\n        await this.actor.createEmbeddedDocuments(\"Item\", blessings, {fromEffect : this.effect.id})\n    }\n    else \n    {\n        this.script.notification(`No se pudo encontrar ninguna Bendición asociada a ${god}.`)\n    }\n    this.item.updateSource({name : this.item.name.replace(\"Cualquiera\", god)})\n    await this.actor.update({\"system.details.god.value\": god})\n}"}
+					]
+				}]
 		},
 		{
 			"id": "Bookish",
@@ -12630,7 +12636,7 @@
 				"name":"Artesano",
 				"scriptData": [
 					{},
-					{"label":"Elegir Habilidad de Oficio","script":"if (this.item.name.includes(\"(\"))\n{\n\tlet trade = this.item.parenthesesText;\n\treturn this.item.updateSource({\"system.tests.value\" : this.item.system.tests.value.replace(\"cualquiera\", trade)})\n}\n\nlet index = game.packs\n.filter(i => i.metadata.type == \"Item\")\n.reduce((acc, pack) => acc.concat(pack.index.contents), [])\n.filter(i => i.type == \"skill\" && i.name.includes(game.i18n.localize(\"NAME.Trade\")))\n.map(i => {\n\ti.id = i._id\n\treturn i\n})\n\nlet choice = await ItemDialog.create(index, 1, \"Escoge una Habilidad de Oficio\")\nlet text;\nif (!choice[0])\n{\n    let custom = await Dialog.wait({\n        title : \"Oficio Personalizado\",\n        content : \"<input type='text'>\",\n        buttons : {\n            confirm : {\n                label : game.i18n.localize(\"Confirm\"),\n                callback : (dlg) => {\n                    return dlg.find(\"input\")[0].value\n                }\n            }\n        },\n        default : \"confirm\",\n        close : () => {\n            return \"\"\n        }\n    })   \n    text = custom || \"\"\n}\nelse \n{\n    text = game.wfrp4e.utility.extractParenthesesText(choice[0].name)\n}\n\nawait this.item.updateSource({name : this.item.name + ` (${text})`, \"system.tests.value\" : this.item.system.tests.value.replace(\"cualquiera\", text)})"},
+					{"label":"Elegir Habilidad de Oficio","script":"if (this.item.name.includes(\"(\"))\n{\n\tlet trade = this.item.parenthesesText;\n\treturn this.item.updateSource({\"system.tests.value\" : this.item.system.tests.value.replace(\"cualquiera\", trade)})\n}\n\nlet index = game.packs\n.filter(i => i.metadata.type == \"Item\")\n.reduce((acc, pack) => acc.concat(pack.index.contents), [])\n.filter(i => i.type == \"skill\" && i.name.includes(game.i18n.localize(\"NAME.Trade\")))\n.map(i => {\n\ti.id = i._id\n\treturn i\n})\n\nlet choice = await ItemDialog.create(index, 1, \"Escoge una Habilidad de Oficio\")\nlet text;\nif (!choice[0])\n{\n    let custom = await Dialog.wait({\n        title : \"Oficio Personalizado\",\n        content : \"<input type='text'>\",\n        buttons : {\n            confirm : {\n                label : game.i18n.localize(\"Confirm\"),\n                callback : (dlg) => {\n                    return dlg.find(\"input\")[0].value\n                }\n            }\n        },\n        default : \"confirm\",\n        close : () => {\n            return \"\"\n        }\n    })   \n    text = custom || \"\"\n}\nelse \n{\n    text = warhammer.utility.extractParenthesesText(choice[0].name)\n}\n\nawait this.item.updateSource({name : this.item.name + ` (${text})`, \"system.tests.value\" : this.item.system.tests.value.replace(\"cualquiera\", text)})"},
 					{"label":"Añadir Habilidad de Oficio"}
 					]
 				}]
@@ -12784,7 +12790,7 @@
 				"name":"Etiqueta",
 				"scriptData": [
 					{},
-					{"label":"Grupo","script":"if (this.item.system.tests.value.includes(\"(grupo social)\"))\r\n{\r\n    let tests = this.item.system.tests.value\r\n    let name = this.item.name\r\n\r\n    // If name already specifies, make sure tests value reflects that\r\n    if (name.includes(\"(\") && !name.toLowerCase().includes(\"(cualquiera)\"))\r\n    {\r\n        let group = name.split(\"(\")[1].split(\")\")[0]\r\n        tests = `${tests.split(\"(\")[0].trim()} (${group})`\r\n    }\r\n    else\r\n    {\r\n        let value = await ValueDialog.create(\"Escribe grupo de Etiqueta\", this.effect.name);\r\n        if (value)\r\n        {\r\n            name = `${name.split(\"(\")[0].trim()} (${value})`\r\n            tests = this.item.system.tests.value.replace(\"grupo social\", value);\r\n        }\r\n    }\r\n    this.item.updateSource({name, \"system.tests.value\" : tests})\r\n}"}
+					{"label":"Grupo","script":"if (this.item.system.tests.value.includes(\"(grupo social)\"))\r\n{\r\n    let tests = this.item.system.tests.value\r\n    let name = this.item.name\r\n\r\n    // If name already specifies, make sure tests value reflects that\r\n    if (name.includes(\"(\") && !name.toLowerCase().includes(\"(cualquiera)\"))\r\n    {\r\n        let group = name.split(\"(\")[1].split(\")\")[0]\r\n        tests = `${tests.split(\"(\")[0].trim()} (${group})`\r\n    }\r\n    else\r\n    {\r\n        let value = await ValueDialog.create({text : \"Escribe grupo de Etiqueta\", title : this.effect.name});\r\n        if (value)\r\n        {\r\n            name = `${name.split(\"(\")[0].trim()} (${value})`\r\n            tests = this.item.system.tests.value.replace(\"grupo social\", value);\r\n        }\r\n    }\r\n    this.item.updateSource({name, \"system.tests.value\" : tests})\r\n}"}
 					]
 				}]
 		},
@@ -12964,7 +12970,7 @@
 			"effects": [{
 				"name":"Odio visceral",
 				"scriptData": [
-					{"label":"Escoger grupo","script":"let group\nlet item = await fromUuid(\"Compendium.wfrp4e-core.items.Item.5hH73j2NgPdsLCZN\");\nlet data = item.toObject();\n\nif (this.item.name.includes(\"(\"))\n{\n\tgroup = this.item.parenthesesText\n}\n\nelse \n{\n\tgroup = await ValueDialog.create(\"Escribir el grupo odiado\", \"Grupo odiado\")\n\n\tthis.item.updateSource({name : this.item.name + ` (${group})`, \"system.tests.value\" : this.item.system.tests.value.replace(\"grupo\", group)})\n\tthis.effect.updateSource({name : this.effect.name + ` (${group})`})\n}\n\n\ndata.name = data.name.replace(\"Objetivo\", group);\nawait this.actor.createEmbeddedDocuments(\"Item\", [data], {fromEffect: this.effect.id});"},
+					{"label":"Escoger grupo","script":"let group\nlet item = await fromUuid(\"Compendium.wfrp4e-core.items.Item.5hH73j2NgPdsLCZN\");\nlet data = item.toObject();\n\nif (this.item.name.includes(\"(\"))\n{\n\tgroup = this.item.parenthesesText\n}\n\nelse \n{\n\tgroup = await ValueDialog.create({text : \"Escribir el grupo odiado\", title : \"Grupo odiado\"})\n\n\tthis.item.updateSource({name : this.item.name + ` (${group})`, \"system.tests.value\" : this.item.system.tests.value.replace(\"grupo\", group)})\n\tthis.effect.updateSource({name : this.effect.name + ` (${group})`})\n}\n\n\ndata.name = data.name.replace(\"Objetivo\", group);\nawait this.actor.createEmbeddedDocuments(\"Item\", [data], {fromEffect: this.effect.id});"},
 					{}
 					]
 				}]
@@ -13165,7 +13171,9 @@
 			"description": "<p>Eres hábil en inflamar a las multitudes. Obtienes un bonificador al NE igual a tus niveles de Orador maestro a cualquier Chequeo de Carisma cuando hablas en público ante una multitud.</p>",
 			"effects": [{
 				"name":"Orador maestro",
-				"scriptData": []
+				"scriptData": [
+					{"label":"Hablar en público ante una multitud"}
+					]
 				}]
 		},
 		{
@@ -13478,7 +13486,7 @@
 				"name":"Sabio",
 				"scriptData": [
 					{},
-					{"label":"Elegir Sabiduría académica","script":"if (this.item.name.includes(\"(\"))\n{\n\treturn;\n}\n\nlet index = game.packs\n.filter(i => i.metadata.type == \"Item\")\n.reduce((acc, pack) => acc.concat(pack.index.contents), [])\n.filter(i => i.type == \"skill\" && i.name.includes(game.i18n.localize(\"NAME.Lore\")))\n.map(i => {\n\ti.id = i._id\n\treturn i\n})\n\nlet choice = await ItemDialog.create(index, 1, \"Escoge una Sabiduría académica\")\nlet text;\nif (!choice[0])\n{\n    let custom = await Dialog.wait({\n        title : \"Escribe una Sabiduría académica\",\n        content : \"<input type='text'>\",\n        buttons : {\n            confirm : {\n                label : game.i18n.localize(\"Confirm\"),\n                callback : (dlg) => {\n                    return dlg.find(\"input\")[0].value\n                }\n            }\n        },\n        default : \"confirm\",\n        close : () => {\n            return \"\"\n        }\n    })   \n    text = custom || \"\"\n}\nelse \n{\n    text = game.wfrp4e.utility.extractParenthesesText(choice[0].name)\n}\n\nawait this.item.updateSource({name : this.item.name + ` (${text})`, \"system.tests.value\" : this.item.system.tests.value.replace(\"Saber elegido\", text)})\nawait this.effect.updateSource({name : this.effect.name + ` (${text})`})"}
+					{"label":"Elegir Sabiduría académica","script":"if (this.item.name.includes(\"(\"))\n{\n\treturn;\n}\n\nlet index = game.packs\n.filter(i => i.metadata.type == \"Item\")\n.reduce((acc, pack) => acc.concat(pack.index.contents), [])\n.filter(i => i.type == \"skill\" && i.name.includes(game.i18n.localize(\"NAME.Lore\")))\n.map(i => {\n\ti.id = i._id\n\treturn i\n})\n\nlet choice = await ItemDialog.create(index, 1, \"Escoge una Sabiduría académica\")\nlet text;\nif (!choice[0])\n{\n    let custom = await Dialog.wait({\n        title : \"Escribe una Sabiduría académica\",\n        content : \"<input type='text'>\",\n        buttons : {\n            confirm : {\n                label : game.i18n.localize(\"Confirm\"),\n                callback : (dlg) => {\n                    return dlg.find(\"input\")[0].value\n                }\n            }\n        },\n        default : \"confirm\",\n        close : () => {\n            return \"\"\n        }\n    })   \n    text = custom || \"\"\n}\nelse \n{\n    text = warhammer.utility.extractParenthesesText(choice[0].name)\n}\n\nawait this.item.updateSource({name : this.item.name + ` (${text})`, \"system.tests.value\" : this.item.system.tests.value.replace(\"Saber elegido\", text)})\nawait this.effect.updateSource({name : this.effect.name + ` (${text})`})"}
 					]
 				}]
 		},
@@ -13984,7 +13992,7 @@
 			"effects": [{
 				"name":"¡Brujo!",
 				"scriptData": [
-					{"label":"Añadir Hablar idioma (Lengua de la magia)","script":"let skill = `Hablar idioma (Lengua de la magia)`\r\nlet currentCareer = this.actor.system.currentCareer;\r\nlet existingSkill = this.actor.itemTypes.skill.find(i => i.name == skill);\r\n\r\nif (!currentCareer) return\r\n\r\n\r\nlet inCurrentCareer = currentCareer.system.skills.includes(skill);\r\nlet witchAdded = actor.getFlag(\"wfrp4e\", \"witchAdded\") || {};\r\nif (existingSkill && inCurrentCareer && !witchAdded[existingSkill.name])\r\n{\r\n\texistingSkill.system.advances.costModifier = -5;\r\n}\r\nelse \r\n{\r\n\twitchAdded[skill] = true;\r\n\tcurrentCareer.system.skills.push(skill);\r\n\tfoundry.utils.setProperty(this.actor, \"flags.wfrp4e.witchAdded\", witchAdded)\r\n}"}
+					{"label":"Añadir Hablar idioma (Lengua de la magia)","script":"let skill = `Hablar idioma (Lengua de la magia)`\r\nlet currentCareer = this.actor.system.currentCareer;\r\nlet existingSkill = this.actor.itemTypes.skill.find(i => i.name == skill);\r\n\r\nif (!currentCareer) return\r\n\r\n\r\nlet inCurrentCareer = currentCareer.system.skills.concat(currentCareer.system.addedSkills).includes(skill);\r\nlet witchAdded = actor.getFlag(\"wfrp4e\", \"witchAdded\") || {};\r\nif (existingSkill && inCurrentCareer && !witchAdded[existingSkill.name])\r\n{\r\n\texistingSkill.system.advances.costModifier = -5;\r\n}\r\nelse \r\n{\r\n\twitchAdded[skill] = true;\r\n\tcurrentCareer.system.addedSkills.push(skill);\r\n\tfoundry.utils.setProperty(this.actor, \"flags.wfrp4e.witchAdded\", witchAdded)\r\n}"}
 					]
 				}]
 		}
