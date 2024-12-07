@@ -1,5 +1,11 @@
 {
 	"label": "Tablas (B\u00E1sico)",
+	"mapping": {
+		"tables_folders": {
+			"path": "flags.wfrp4e-core.initialization-folder",
+			"converter": "diaries_folder"
+			}
+	},
     "folders": {
         "Career Tables": "Tablas de Carrera",
 		"Character Creation": "Creaci\u00F3n de Personaje",

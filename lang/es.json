@@ -141,6 +141,504 @@
             "Crew" : "Tripulación",
             "Other" : "Otro"
         },
+
+        "Models" : {
+            "ammunition" : {
+                "FIELDS" : {
+                    "ammunitionType.value" : {
+                        "label" : "Tipo de munición",
+                        "hint" : "Designa que tipos de Armas pueden usar esta Munición"
+                    },
+                    "range.value" : {
+                        "label" : "Rango",
+                        "hint" : "Modifica el Ranga del Arma que usa esta Munición. p.ej. Añade: +2, Resta: -2, Multiplica: *2, Divide: /2"
+                    },
+                    "damage.value" : {
+                        "label" : "Daño",
+                        "hint" : "Modifica el Daño del Arma que usa esta Munición. Ver ejemplos de Rango arriba."
+                    },
+                    "damage.dice" : {
+                        "label" : "Dados",
+                        "hint" : "Añade una tirada de dados al Daño"
+                    },
+                    "special.value" : {
+                        "label" : "Especial"
+                    }
+                }
+            },
+            "armour" : {
+                "FIELDS" : {
+                    "armorType.value" : {
+                        "label" : "Tipo de Armadura"
+                    },
+                    "AP" : {
+                        "head" : {
+                            "label" : "Cabeza"
+                        },
+                        "lArm" : {
+                            "label" : "Brazo Izquierdo"
+                        },
+                        "rArm" : {
+                            "label" : "Brazo Derecho"
+                        },
+                        "lLeg" : {
+                            "label" : "Pierna Izquierda"
+                        },
+                        "rLeg" : {
+                            "label" : "Pierna Derecha"
+                        },
+                        "body" : {
+                            "label" : "Cuerpo"
+                        }
+                    },
+                    "special.value" : {
+                        "label" : "Especial",
+                        "hint" : "Texto misceláneo que mostrará la tarjeta de chat."
+                    }
+                }
+            },
+            "career" : {
+                "FIELDS" : {
+                    "class.value" : {
+                        "label" : "Clase"
+                    },
+                    "careergroup.value" : {
+                        "label" : "Grupo de Carrera"
+                    },
+                    "level.value" : {
+                        "label" : "Nivel de Carrera"
+                    },
+                    "status" : {
+                        "tier" : {
+                            "label" : "Grado"
+                        },
+                        "standing" : {
+                            "label" : "Posición "
+                        }
+                    }
+                }
+            },
+            "cargo" : {
+                "FIELDS" : {
+                    "tradeType" : {
+                        "label" : "Tipo de Comercio"
+                    },
+                    "cargoType.value" : {
+                        "label" : "Tipo de Cargamento"
+                    },
+                    "unitPrice.value" : {
+                        "label" : "Precio de unidad"
+                    },
+                    "origin.value" : {
+                        "label" : "Origen"
+                    },
+                    "quality" : {
+                        "value" : {
+                            "label" : "Calidad"
+                        }
+                    }
+                }
+            },
+            "container" : {
+                "FIELDS" : {
+                    "wearable.value" : {
+                        "label" : "Ponible"
+                    },
+                    "carries.value" : {
+                        "label" : "Núm"
+                    },
+                    "countEnc.value" : {
+                        "label" : "Contar Impedimenta",
+                        "hint" : "Añade esta impedimenta a la impedimenta del personaje (desactiva si no se lleva encima p.ej. un carro)"
+                    }
+                }
+            },
+            "disease" : {
+                "FIELDS" : {
+                    "contraction.value" : {
+                        "label" : "Contracción"
+                    },
+                    "incubation.value" : {
+                        "label" : "Incubación"
+                    },
+                    "duration.value" : {
+                        "label" : "Duración"
+                    },
+                    "symptoms.value" : {
+                        "label" : "Síntomas"
+                    },
+                    "permanent.value" : {
+                        "label" : "Permanente"
+                    }
+                }
+            },
+            "extendedTest" : {
+                "FIELDS" : {
+                    "SL.target" : {
+                        "label" : "NE objetivo"
+                    },
+                    "test.value" : {
+                        "label" : "Chequeo"
+                    },
+                    "difficulty.value" : {
+                        "label" : "Dificultad predeterminada"
+                    },
+                    "negativePossible.value" : {
+                        "label" : "NE negativos posible",
+                        "hint" : "Permite que el progreso de este Chequeo baje por debajo de 0"
+                    },
+                    "failingDecreases.value" : {
+                        "label" : "Fallar disminuye el progreso",
+                        "hint" : "Reduce el progreso en Chequeos fallados"
+                    },
+                    "completion.value" : {
+                        "label" : "Al Completar",
+                        "hint" : "Una vez completo, realizar esta acción"
+                    },
+                    "hide.test" : {
+                        "label" : "Esconder chequeo",
+                        "hint" : "Esconde este Chequeo a los jusgadores"
+                    },
+                    "hide.progress" : {
+                        "label" : "Esconder progreso",
+                        "hint" : "Esconde el progreso del Chequeo a los jugadores"
+                    }
+                }
+            },
+            "money" : {
+                "FIELDS" : {
+                    "coinValue.value" : {
+                        "label" : "Valor de la moneda",
+                        "hint" : "Valor de este tipo de moneda (en peniques de bronce)."
+                    }
+                }
+            },
+            "skill" : {
+                "FIELDS" : {
+                    "advanced.value" : {
+                        "label" : "Tipo de HAbilidad"
+                    },
+                    "grouped.value" : {
+                        "label" : "Especialización"
+                    },
+                    "characteristic.value" : {
+                        "label" : "Característica"
+                    },
+                    "modifier.value" : {
+                        "label" : "Modificador"
+                    },
+                    "advances.force" : {
+                        "label" : "Forzar indicador de Avance",
+                        "hint" : "Muestra el indicador de Avance sin importar la carrera, lo que permite automatizar el gasto de experiencia."
+                    },
+                    "advances.costModifier" : {
+                        "label" : "Modificador al coste de PX"
+                    }
+                }
+            },
+            "talent" : {
+                "FIELDS" : {
+                    "tests.value" : {
+                        "label" : "Chqueos"
+                    },
+                    "max.value" : {
+                        "label" : "Máx"
+                    },
+                    "advances.force" : {
+                        "label" : "Forzar indicador de Avance",
+                        "hint" : "Muestra el indicador de Avance sin importar la carrera, lo que permite automatizar el gasto de experiencia."
+                    }
+                }
+            },
+            "mutation" : {
+                "FIELDS" : {
+                    "mutationType.value" : {
+                        "label" : "Tipo de Mutación"
+                    }
+                }
+            },
+            "critical" : {
+                "FIELDS" : {
+                    "wounds.value" : {
+                        "label" : "Heridas"
+                    },
+                    "prompt" : {
+                        "label" : "Preguntar ubicación",
+                        "hint" : "Preguntar por una ubicación cuando se añada al Actor."
+                    },
+                    "location.value" : {
+                        "label" : "Ubicación"
+                    }
+                }
+            },
+            "injury" : {
+                "FIELDS" : {
+                    "duration" : {
+                        "value" : {
+                            "label": "Duración"
+                        },
+                        "permanent" : {
+                            "label" : "Permanente"
+                        }
+                    },
+                    "prompt" : {
+                        "label" : "Preguntar ubicación",
+                        "hint" : "Preguntar por la ubicación izquierda o derecha al añadirse al Actor."
+                    },
+                    "location.value" : {
+                        "label" : "Ubicación"
+                    }
+                }
+            },
+            "prayer" : {
+                "FIELDS" : {
+                    "type.value" : {
+                        "label" : "Tipo"
+                    },
+                    "god.value" : {
+                        "label" : "Dios"
+                    },
+                    "range.value" : {
+                        "label" : "Rango"
+                    },
+                    "duration.value" : {
+                        "label" : "Duración"
+                    },
+                    "target" : {
+                        "value" : {
+                            "label" : "Objetivo"
+                        },
+                        "aoe" : {
+                            "label" : "Área de efecto"
+                        },
+                        "extendableAoE" : {
+                            "label" : "AdE extendible",
+                            "hint" : "¿Puede el AdE agrandarse con NE extra?"
+                        }
+                    },
+                    "damage" : {
+                        "value" : {
+                            "label" : "Fórmula"
+                        },
+                        "dice" : {
+                            "label" : "Dados",
+                            "hint" : "Añade una tirada de dados al Daño"
+                        },
+                        "addSL" : {
+                            "label" : "Añadir NE",
+                            "hint" : "Añadir NE al valor del Daño"
+                        }
+                    },
+                    "overcast" : {
+                        "enabled" : {
+                            "label" : "Opciones extra de Prolongación"
+                        }
+                    }
+                }
+            },
+            "spell" : {
+                "FIELDS" : {
+                    "cn.value" : {
+                        "label" : "Número de Lanzamiento"
+                    },
+                    "lore.value" : {
+                        "label" : "Saber"
+                    },
+                    "skill.value" : {
+                        "label" : "Habilidad de lanzamiento"
+                    },
+                    "wind.value" : {
+                        "label" : "Habilidad de canalización"
+                    },
+                    "ritual.value" : {
+                        "label" : "Ritual"
+                    },
+                    "ritual.xp" : {
+                        "label" : "PX para aprender"
+                    },
+                    "range.vortex" : {
+                        "label" : "Vórtice aleatorio"
+                    },
+                    "range.value" : {
+                        "label" : "Rango"
+                    },
+                    "duration.value" : {
+                        "label" : "Duración"
+                    },
+                    "duration.extendable" : {
+                        "label" : "Duración extendible",
+                        "hint" : "Cuando el hechizo debería terminar, realizarás un Chequeo de Voluntad para extender la duración +1 asalto."
+                    },
+                    "magicMissile.value" : {
+                        "label" : "Misil mágico"
+                    },
+
+                    "target" : {
+                        "value" : {
+                            "label" : "Objetivo"
+                        },
+                        "aoe" : {
+                            "label" : "Área de efecto"
+                        }
+                    },
+                    "damage" : {
+                        "value" : {
+                            "label" : "Fórmula"
+                        },
+                        "dice" : {
+                            "label" : "Dados",
+                            "hint" : "Añade una tirada de dados al Daño"
+                        }
+                    },
+                    "overcast" : {
+                        "enabled" : {
+                            "label" : "Opciones extra de Prolongación"
+                        }
+                    }
+                }
+            },
+            "trait" : {
+                "FIELDS" : {
+                    "category" : {
+                        "label" : "Categoría"
+                    },
+                    "rollable" : {
+                        "value" : {
+                            "label" : "Tirable"
+                        },
+                        "damage" : {
+                            "label" : "Hace daño"
+                        },
+                        "skill" : {
+                            "label" : "Habilidad"
+                        },
+                        "rollCharacteristic" : {
+                            "label" : "Tirar Característica"
+                        },
+                        "bonusCharacteristic" : {
+                            "label" : "Bono por Característica"
+                        },
+                        "dice" : {
+                            "label" : "Tirada de dados"
+                        },
+                        "defaultDifficulty" : {
+                            "label" : "Dificultad"
+                        },
+                        "SL" : {
+                            "label" : "Añadir NE"
+                        },
+                        "attackType" : {
+                            "label" : "Tipo de ataque"
+                        }
+                    },
+                    "specification.value" : {
+                        "label" : "Especificación"
+                    }
+                }
+            },
+            "trapping" : {
+                "FIELDS" : {
+                    "trappingType.value" : {
+                        "label" : "Tipo de Accesorio"
+                    }
+                }
+            },
+            "vehicleMod" : {
+                "FIELDS" : {
+                    "modType.value" : {
+                        "label" : "Tipo de Modificación"
+                    }
+                }
+            },
+            "vehicleRole" : {
+                "FIELDS" : {
+                    "test" : {
+                        "label" : "Habilidad del Chequeo"
+                    }
+                }
+            },
+            "vehicleTest" : {
+                "FIELDS" : {
+                    "roles" : {
+                        "value" : {
+                            "label" : "Roles"
+                        },
+                        "vital" : {
+                            "label" : "Roles vitales"
+                        }
+                    },
+                    "handling" : {
+                        "label" : "Manejo de vehículo"
+                    }
+                }
+            },
+            "weapon" : {
+                "FIELDS" : {
+                    "weaponGroup.value" : {
+                        "label" : "Grupo de armas"
+                    },
+                    "skill.value" : {
+                        "label" : "Habilidad"
+                    },
+                    "modeOverride.value" : {
+                        "label" : "Tipo de ataque"
+                    },
+                    "damage" : {
+                        "value" : {
+                            "label" : "Fórmula"
+                        },
+                        "dice" : {
+                            "label" : "Dados",
+                            "hint" : "Añadir una tirada de dados al Daño"
+                        }
+                    },
+                    "reach" : {
+                        "value" : {
+                            "label" : "Alcance"
+                        }
+                    },
+                    "range" : {
+                        "value" : {
+                            "label" : "Rango"
+                        }
+                    },
+                    "ammunitionGroup" : {
+                        "value" : {
+                            "label" : "Grupo de Munición"
+                        }
+                    },
+                    "consumesAmmo" : {
+                        "value" : {
+                            "label" : "Consume Munición"
+                        }
+                    },
+                    "twohanded" : {
+                        "value" : {
+                            "label" : "A dos manos"
+                        }
+                    },
+                    "special" : {
+                        "value" : {
+                            "label" : "Especial"
+                        }
+                    }
+                }
+            }
+        },
+
+        "Components" : {
+            "Locational" : {
+                "FIELDS" : {
+                    "prompt" : {
+                        "label" : "Preguntar ubicación",
+                        "hint" : "Preguntar por una ubicación cuando se añada al Actor."
+                    },
+                    "location.value" : {
+                        "label" : "Ubicación"
+                    }
+                }
+            }
+		},
         "Dialog.Modifiers": "Modificadores de diálogo",
         "PlaceEffect": "Colocar {name}",
         "ApplyEffect" : "Aplicar {name}",
@@ -303,7 +801,7 @@
     "SETTINGS.MooConditionTriggers" : "Activador de Estados",
     "SETTINGS.MooConditionTriggersHint" : "Los Estados se activan al final del turno del personaje, en lugar de al final del asalto.",
     "SETTINGS.MooCritModifiers" : "Modificadores a la Tabla de Críticos",
-    "SETTINGS.MooCritMOdifiersHint" : "Al recibir Daño más allá de 0 Heridas, Añade o Resta 10 de la Tabla de Impactos Críticos por cada punto de Daño de diferencia con tu Bonificador por Resistencia.<br><br>Ej. Me quedan 4 Heridas, Resistencia 50. Recibo 12 de Daño. Eso pasaría 8 por encima de 0. Con un BR de 5, eso resultaría en un +30 a la tirada de crítico.<br><br>Ej. Me quedan 4 Heridas, Resistencia 50, Recibo 5 de Daño. Eso pasaría 1 por encima de 0. Con un BR de 5, eso resultaría en un -40 a la tirada de crítico.",
+    "SETTINGS.MooCritModifiersHint" : "Al recibir Daño más allá de 0 Heridas, Añade o Resta 10 de la Tabla de Impactos Críticos por cada punto de Daño de diferencia con tu Bonificador por Resistencia.<br><br>Ej. Me quedan 4 Heridas, Resistencia 50. Recibo 12 de Daño. Eso pasaría 8 por encima de 0. Con un BR de 5, eso resultaría en un +30 a la tirada de crítico.<br><br>Ej. Me quedan 4 Heridas, Resistencia 50, Recibo 5 de Daño. Eso pasaría 1 por encima de 0. Con un BR de 5, eso resultaría en un -40 a la tirada de crítico.",
     "SETTINGS.MooSLDamage" : "Cálculo del Daño Enfrentado",
     "SETTINGS.MooSLDamageHint" : "El cálculo del Daño Enfrentado se basa sólo en los NE del atacante, en lugar de la diferencia entre atacante y defensor.",
     "SETTINGS.MooRangedDamage" : "Modificación de Daño a Distancia",
@@ -358,7 +856,7 @@
     "SHEET.Post" : "Enviar al chat",
     "SHEET.NestedWarning" : "No se puede añadir contenedor más allá del 4º contenedor encadenado.",
     "SHEET.LocationWarning" : "Vacía el contenedor antes de cambiar su localización",
-    "SHEET.SkillMissingWarning" : "la Habilidad usada para Salario no se encontró en este Actor",
+    "SHEET.SkillMissingWarning" : "La Habilidad usada para Salario no se encontró en este Actor",
     "SHEET.NonCurrentCareer" : "Ésta no es tu carrera actual.",
     "SHEET.AddSkillTitle" : "Añade Habilidad de Carrera",
     "SHEET.AddSkillPrompt" : "¿Quieres añadir esta habilidad?",
@@ -378,6 +876,8 @@
     "SHEET.Collapse" : "Colapsar",
     "SHEET.TemporaryEffectHint" : "Estos Efectos Activos provienen del Actor propietario. Para interactuar con él, hacedlo a través de la ficha del Actor",
     "SHEET.ExperienceLog" : "Registro de Experiencia",
+    "Sheet.RollIncome" : "Tirar Salario",
+    "SHEET.ItemSheetEditableDisabled" : "Editar este Objeto ha sido desactivado mientras está bajo los efectos de {effects}. Desactiva o elimina estos efectos en el Actor propietario.",
 
     "LOG.MemorizedSpell" : "Memorizado {name}",
     "LOG.GainPrayer" : "Obtenido {name}",
@@ -434,6 +934,8 @@
     "SHEET.RemoveAttacker": "Eliminar Atacante",
     "SHEET.CannotDeleteItemEffect" : "Este efecto es de un Objeto en este Actor. Elimina el propio Objeto o el efecto de la hoja del Objeto.",
     "SHEET.CannotDeleteCrewEffect" : "Este efecto es de un Vehículo en el que está este Actor y debe ser eliminado en ese Vehículo.",
+    "SHEET.Attacker" : "Atacante",
+    "SHEET.LocationAP" : "PA de la Ubicación",
 
     "ACTOR.BasicSkillsTitle" : "Añadir Habilidades Básicas",
     "ACTOR.BasicSkillsPrompt": "¿Añadir Habilidades Básicas?",
@@ -528,6 +1030,8 @@
     "Status" : "Estatus",
     "Status Tier" : "Grado de Estatus",
     "Status Standing" : "Posición de Estatus",
+    "Tier" : "Grado",
+    "Standing" : "Posición",
     "Class" : "Clase",
     "Group" : "Grupo",
     "Personal Details" : "Detalles Personales",
@@ -688,6 +1192,7 @@
     "Category" : "Categoria",
     "God" : "Dios",
     "Value" : "Valor",
+	"Overrides": "Alteraciones",
     "AoE" : "AdE",
     "Radius" : "Radio",
     "Extendable Duration" : "Duración Extendible",
@@ -915,6 +1420,8 @@
     "DIALOG.ActorSelection" : "Selecciona un Actor",
     "DIALOG.ShowTable" : "Visibilidad de Tabla",
     "DIALOG.ShowTableHint": "Mostrar tabla a los jugadores en la barra lateral y el menú /table",
+    "DIALOG.LinkCareer" : "Enlazar Carrera",
+    "DIALOG.LinkCareerContent" : "¿Enlazar {new} con {old}? Esto añadirá las habilidades de {old} en {new}, preservando cualquier elección de especialización realizada en la carrera anterior.",
     "Show" : "Mostrar",
     "Hide" : "Ocultar",
     "ExpChange" : "Cambio de Experiencia",
@@ -1208,6 +1715,8 @@
     "MARKET.CreditRequest" : "Petición de Crédito",
     "MARKET.CreditCommandNotAllowed" : "Sólo a los DJs se les permite usar este comando.",
     "MARKET.PaidBy" : "Pagado por:",
+    "MARKET.PaidFor": "<b>Producto comprado:</b> {product}",
+    "MARKET.For": "por",
     "MARKET.ReceivedBy" : "Recibido por:",
     "MARKET.MoneyTransactionWrongCommand" : "Sintaxis errónea. Por favor escribe tu comando como en los siguientes ejemplos:",
     "MARKET.PayCommandExample" : "/pay 3co2cp<br>/pay 450pb<br>/pay 2cp12bp4co<br>/pay 1co John<br>/pay 12cp Kastor Lieberung",
@@ -2782,9 +3291,10 @@
   "WFRP4NPCGEN.generate.copy.npc": "Duplicar con el Generador de PNJ",
   "WFRP4NPCGEN.generate.copy.creature": "Duplicar con el Generador de Criatura",
 
+  "tokenActionHud.wfrp4e.advantage": "Ventaja",
   "tokenActionHud.wfrp4e.ammunition": "Munición",
   "tokenActionHud.wfrp4e.armour": "Armadura",
-  "tokenActionHud.wfrp4e.basic": "Básica",
+  "tokenActionHud.wfrp4e.basic": "Básicas",
   "tokenActionHud.wfrp4e.character": "Personaje",
   "tokenActionHud.wfrp4e.characteristic": "Característica",
   "tokenActionHud.wfrp4e.characteristics": "Características",
@@ -2819,10 +3329,26 @@
   "tokenActionHud.wfrp4e.actions.makeItemPiles": "Convertir a Pilas de objetos",
   "tokenActionHud.wfrp4e.actions.revertItemPile": "Revertir de Pila de objetos",
   "tokenActionHud.wfrp4e.actions.revertItemPiles": "Revertir de Pilas de objetos",
+  "tokenActionHud.wfrp4e.actions.toggleItemPiles": "Alternar Pila de objetos",
+  "tokenActionHud.wfrp4e.actions.toggleDisposition": "Alternar Disposición",
   "tokenActionHud.wfrp4e.actions.checkCareer": "Comprobar progreso de la carrera",
   "tokenActionHud.wfrp4e.actions.checkEquipment": "Comprobar equipamiento",
   "tokenActionHud.wfrp4e.actions.restRecover": "Descansar y recuperarse",
   "tokenActionHud.wfrp4e.actions.incomeRoll": "Tirar Salario",
+  "tokenActionHud.wfrp4e.actions.increaseAdvantage": "Aumentar Ventaja",
+  "tokenActionHud.wfrp4e.actions.decreaseAdvantage": "Diminuir Ventaja",
+  "tokenActionHud.wfrp4e.actions.advantage.batter": "Derribar",
+  "tokenActionHud.wfrp4e.actions.advantage.trick": "Truco",
+  "tokenActionHud.wfrp4e.actions.advantage.additionalEffort": "Esfuerzo adicional",
+  "tokenActionHud.wfrp4e.actions.advantage.fleeFromHarm": "Huir del daño",
+  "tokenActionHud.wfrp4e.actions.advantage.additionalAction": "Acción Adicional",
+  "tokenActionHud.wfrp4e.actions.awardXP.awardXP": "Recompensar con PX",
+  "tokenActionHud.wfrp4e.actions.awardXP.DialogTitle": "",
+  "tokenActionHud.wfrp4e.actions.awardXP.Amount": "Cantidad",
+  "tokenActionHud.wfrp4e.actions.awardXP.Reason": "Razón",
+  "tokenActionHud.wfrp4e.actions.awardXP.Award": "Recompensa",
+  "tokenActionHud.wfrp4e.actions.awardXP.XPNaN": "¡PX debe ser un número!",
+  "tokenActionHud.wfrp4e.actions.awardXP.ReasonEmpty": "¡Razón no debe estar vacía!",
   "tokenActionHud.wfrp4e.tooltips.AP": "Puntos de armadura",
   "tokenActionHud.wfrp4e.tooltips.CN": "NL del Hechizo",
   "tokenActionHud.wfrp4e.tooltips.ChannellingSL": "NE de canalización",
@@ -2847,6 +3373,8 @@
   "tokenActionHud.wfrp4e.settings.shiftRollMode.hint": "Selecciona que Modo de Tirada se usará al usar Acciones mientras se mantiene pulsada la tecla Mayúscula.",
   "tokenActionHud.wfrp4e.settings.bypassDefault.name": "Modo Ignorar por defecto",
   "tokenActionHud.wfrp4e.settings.bypassDefault.hint": "Si está seleccionado, todas las Tiradas ignorarán el Diálogo de tiradas por defecto. Si no lo está, todas las Tiradas mostrarán el Diálogo por defecto. Presionar la tecla Alt invierte este comportamiento (por ejemplo, manteniendo Alt mientras este ajuste está sin seleccionar ignrará el Diálogo).",
+  "tokenActionHud.wfrp4e.settings.advantageDesc.name": "Mostrar descripciones de Ventaja",
+  "tokenActionHud.wfrp4e.settings.advantageDesc.hint": "Si está seleccionado, las acciones de Ventaja Grupal ejecutadas vía TAH mostrarán sus descripciones completas en el chat. Usar Ventaja Grupal requiere el módulo Up in Arms instalado y activado.",
   "tokenActionHud.wfrp4e.settings.displayUnequipped.name": "Mostrar no equipado",
   "tokenActionHud.wfrp4e.settings.displayUnequipped.hint": "Si mostrar las armas no equipadas en la pestaña de Combate o no.",
   "tokenActionHud.wfrp4e.settings.groupLores.name": "Agrupar Saberes mágicos",

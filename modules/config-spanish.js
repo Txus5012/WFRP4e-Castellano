@@ -1109,7 +1109,7 @@ game.wfrp4e.config.PrepareSystemItems = function() {
                         label: "@effect.name",
                         trigger: "immediate",
                         script: `
-                            test = await this.actor.setupSkill("Frialdad", {appendTitle : " - " + this.effect.name, skipTargets: true, fields : {difficulty : "average"}});
+                            test = await this.actor.setupSkill(game.i18n.localize("NAME.Cool"), {appendTitle : " - " + this.effect.name, skipTargets: true, fields : {difficulty : "average"}});
                             await test.roll();
                             if (test.failed)
                             {
@@ -1270,6 +1270,7 @@ game.wfrp4e.config.statusEffects = [
             id: "bleeding",
             statuses: ["bleeding"],
             name: "WFRP4E.ConditionName.Bleeding",
+            description : "WFRP4E.Conditions.Bleeding",
             system: {
                 condition : {
                     value : 1,
@@ -1341,6 +1342,7 @@ game.wfrp4e.config.statusEffects = [
             id: "poisoned",
             statuses: ["poisoned"],
             name: "WFRP4E.ConditionName.Poisoned",
+            description : "WFRP4E.Conditions.Poisoned",
             system: {
                 condition : {
                     value : 1,
@@ -1392,6 +1394,7 @@ game.wfrp4e.config.statusEffects = [
             id: "ablaze",
             statuses: ["ablaze"],
             name: "WFRP4E.ConditionName.Ablaze",
+            description : "WFRP4E.Conditions.Ablaze",
             system: {
                 condition : {
                     value : 1,
@@ -1448,6 +1451,7 @@ game.wfrp4e.config.statusEffects = [
             id: "deafened",
             statuses: ["deafened"],
             name: "WFRP4E.ConditionName.Deafened",
+            description : "WFRP4E.Conditions.Deafened",
             system: {
                 condition : {
                     value : 1,
@@ -1495,6 +1499,7 @@ game.wfrp4e.config.statusEffects = [
             id: "entangled",
             statuses: ["entangled"],
             name: "WFRP4E.ConditionName.Entangled",
+            description : "WFRP4E.Conditions.Entangled",
             system: {
                 condition : {
                     value : 1,
@@ -1517,6 +1522,7 @@ game.wfrp4e.config.statusEffects = [
             id: "fatigued",
             statuses: ["fatigued"],
             name: "WFRP4E.ConditionName.Fatigued",
+            description : "WFRP4E.Conditions.Fatigued",
             system: {
                 condition : {
                     value : 1,
@@ -1539,6 +1545,7 @@ game.wfrp4e.config.statusEffects = [
             id: "blinded",
             statuses: ["blinded"],
             name: "WFRP4E.ConditionName.Blinded",
+            description : "WFRP4E.Conditions.Blinded",
             system: {
                 condition : {
                     value : 1,
@@ -1571,6 +1578,7 @@ game.wfrp4e.config.statusEffects = [
             id: "broken",
             statuses: ["broken"],
             name: "WFRP4E.ConditionName.Broken",
+            description : "WFRP4E.Conditions.Broken",
             system: {
                 condition : {
                     value : 1,
@@ -1593,6 +1601,7 @@ game.wfrp4e.config.statusEffects = [
             id: "prone",
             statuses: ["prone"],
             name: "WFRP4E.ConditionName.Prone",
+            description : "WFRP4E.Conditions.Prone",
             system: {
                 condition : {
                     value : null,
@@ -1625,6 +1634,7 @@ game.wfrp4e.config.statusEffects = [
             id: "surprised",
             statuses: ["surprised"],
             name: "WFRP4E.ConditionName.Surprised",
+            description : "WFRP4E.Conditions.Surprised",
             system: {
                 condition : {
                     value : null,
@@ -1649,6 +1659,7 @@ game.wfrp4e.config.statusEffects = [
             id: "unconscious",
             statuses: ["unconscious"],
             name: "WFRP4E.ConditionName.Unconscious",
+            description : "WFRP4E.Conditions.Unconscious",
             system : {
                 condition : {
                     value : null,
@@ -1661,6 +1672,7 @@ game.wfrp4e.config.statusEffects = [
             id: "grappling",
             statuses: ["grappling"],
             name: "WFRP4E.ConditionName.Grappling",
+            description : "WFRP4E.Conditions.Grappling",
             system : {
                 condition : {
                     value : null,
@@ -1674,6 +1686,7 @@ game.wfrp4e.config.statusEffects = [
             id: "engaged",
             statuses: ["engaged"],
             name: "WFRP4E.ConditionName.Engaged",
+            description : "WFRP4E.Conditions.Engaged",
             system: {
                 condition : {
                     value : null,
@@ -1698,6 +1711,7 @@ game.wfrp4e.config.statusEffects = [
             id: "dead",
             statuses: ["dead"],
             name: "WFRP4E.ConditionName.Dead",
+            description : "WFRP4E.Conditions.Dead",
             system : {
                 condition : {
                     value : null,
@@ -1748,7 +1762,7 @@ game.wfrp4e.config.statusEffects = [
                         label: "@effect.name",
                         trigger: "immediate",
                         script: `
-                            test = await this.actor.setupSkill("Frialdad", {appendTitle : " - " + this.effect.name, skipTargets: true, fields : {difficulty : "average"}});
+                            test = await this.actor.setupSkill(game.i18n.localize("NAME.Cool"), {appendTitle : " - " + this.effect.name, skipTargets: true, fields : {difficulty : "average"}});
                             await test.roll();
                             if (test.failed)
                             {
@@ -2091,7 +2105,6 @@ game.wfrp4e.config.scriptTriggers = {
     "endTurn" : "Fin del Turno",
     "endRound" : "Fin del Asalto",
     "endCombat" : "Fin del Combate",
-
 }
 
 game.wfrp4e.config.species = {

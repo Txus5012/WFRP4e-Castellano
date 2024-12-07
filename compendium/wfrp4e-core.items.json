@@ -355,7 +355,7 @@
 		{
 			"id": "Bounty Hunter",
 			"name": "Cazarrecompensas",
-			"skills": ["Sobornar","Carisma","Cotilleo","Regatear","Intuición","Cuerpo a cuerpo (Básica)","Supervivencia","Percepción","Atletismo","Aguante","Intimidar","A distancia (Ballesta)","A distancia (Enmarañante)","Rastrear","Criar animales","Escalar","Montar (Caballo)","Nadar","Conducir","Sabiduría académica (Derecho)"],
+			"skills": ["Sobornar","Carisma","Cotilleo","Regatear","Intuición","Cuerpo a cuerpo (Básica)","Supervivencia","Percepción","Atletismo","Aguante","Intimidar","A distancia (Ballesta)","A distancia (Enmarañante)","Seguir rastros","Criar animales","Escalar","Montar (Caballo)","Nadar","Conducir","Sabiduría académica (Derecho)"],
 			"talents": ["Buenas espaldas","Incansable","Puntería","Viajero curtido"],
 			"trappings": ["Ballesta","10 Virotes","Capacete de cuero","Grilletes","Órdenes de búsqueda y captura","Red"],
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.orZTfdJCm6OnUktl]{Cazarrecompensas}</p>"
@@ -363,7 +363,7 @@
 		{
 			"id": "Bounty Hunter General",
 			"name": "Cazarrecompensas general",
-			"skills": ["Sobornar","Carisma","Cotilleo","Regatear","Intuición","Cuerpo a cuerpo (Básica)","Supervivencia","Percepción","Atletismo","Aguante","Intimidar","A distancia (Ballesta)","A distancia (Enmarañante)","Rastrear","Criar animales","Escalar","Montar (Caballo)","Nadar","Conducir","Sabiduría académica (Derecho)"],
+			"skills": ["Sobornar","Carisma","Cotilleo","Regatear","Intuición","Cuerpo a cuerpo (Básica)","Supervivencia","Percepción","Atletismo","Aguante","Intimidar","A distancia (Ballesta)","A distancia (Enmarañante)","Seguir rastros","Criar animales","Escalar","Montar (Caballo)","Nadar","Conducir","Sabiduría académica (Derecho)"],
 			"talents": ["Disparo certero","Disparo seguro","Intrépido (Recompensas)","Recio"],
 			"trappings": ["Caballo de tiro", "Carreta","Camisote de malla","4 pares de grilletes"],
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.orZTfdJCm6OnUktl]{Cazarrecompensas}</p>"
@@ -563,7 +563,7 @@
 		{
 			"id": "Detective",
 			"name": "Detective",
-			"skills": ["Carisma","Escalar","Frialdad","Cotilleo","Intuición","Percepción","Movimiento silencioso (Urbano)","Rastrear","Consumir alcohol","Esquivar","Sabiduría académica (Derecho)","Cuerpo a cuerpo (Pelea)","Forzar Cerraduras","Prestidigitación","Sobornar","Tasar","Mando","Sabiduría académica (Cualquiera)","Intimidar","Sabiduría académica (Cualquiera)"],
+			"skills": ["Carisma","Escalar","Frialdad","Cotilleo","Intuición","Percepción","Movimiento silencioso (Urbano)","Seguir rastros","Consumir alcohol","Esquivar","Sabiduría académica (Derecho)","Cuerpo a cuerpo (Pelea)","Forzar Cerraduras","Prestidigitación","Sobornar","Tasar","Mando","Sabiduría académica (Cualquiera)","Intimidar","Sabiduría académica (Cualquiera)"],
 			"talents": ["Lector rápido","Memoria visual","Sabio (Cualquiera)","Sentidos desarrollados (Cualquiera)"],
 			"trappings": ["Catalejo","Red de informadores"],
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.zLWmjUbUdAOfiV3F]{Investigador}</p>"
@@ -651,7 +651,7 @@
 		{
 			"id": "Explorer",
 			"name": "Expedicionario",
-			"skills": ["Carisma animal","Escalar","Aguante","Cotilleo","Sabiduría académica (Local)","Cuerpo a cuerpo (Básica)","Supervivencia","Percepción","Atletismo","Orientación","A distancia (Arco)","Montar (Caballo)","Movimiento silencioso (Rural)","Rastrear","Criar animales","Regatear","Lengua secreta (Cazador)","Nadar","Hablar idioma (Cualquiera)","Oficio (Cartógrafo)"],
+			"skills": ["Carisma animal","Escalar","Aguante","Cotilleo","Sabiduría académica (Local)","Cuerpo a cuerpo (Básica)","Supervivencia","Percepción","Atletismo","Orientación","A distancia (Arco)","Montar (Caballo)","Movimiento silencioso (Rural)","Seguir rastros","Criar animales","Regatear","Lengua secreta (Cazador)","Nadar","Hablar idioma (Cualquiera)","Oficio (Cartógrafo)"],
 			"talents": ["Lingüística","Recio","Sabio (Local)","Tenaz"],
 			"trappings": ["Herramientas de un Oficio (Cartógrafo)","Selección de mapas"],
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.HSoeyY2cbQAndBFk]{Explorador}</p>"
@@ -659,7 +659,7 @@
 		{
 			"id": "Exterminator",
 			"name": "Exterminador",
-			"skills": ["Atletismo","Adiestrar animal (Perro)","Carisma animal","Consumir alcohol","Aguante","Cuerpo a cuerpo (Básica)","A distancia (Honda)","Movimiento silencioso (Subterráneo o Urbano)","Criar animales","Cotilleo","Regatear","Sabiduría académica (Veneno)","Percepción","Poner trampas","Escalar","Frialdad","Esquivar","A distancia (Pistola ballesta)","Mando","Rastrear"],
+			"skills": ["Atletismo","Adiestrar animal (Perro)","Carisma animal","Consumir alcohol","Aguante","Cuerpo a cuerpo (Básica)","A distancia (Honda)","Movimiento silencioso (Subterráneo o Urbano)","Criar animales","Cotilleo","Regatear","Sabiduría académica (Veneno)","Percepción","Poner trampas","Escalar","Frialdad","Esquivar","A distancia (Pistola ballesta)","Mando","Seguir rastros"],
 			"talents": ["Amenazador","Decidido","Intrépido (Skaven)","Robusto"],
 			"trappings": ["Asistente","Perro grande y feroz","Saco con cebo envenenado (10 dosis de rompecorazones)"],
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.mKvUxzJyQmhgjDE0]{Cazarratas}</p>"
@@ -923,7 +923,7 @@
 		{
 			"id": "Huntsmaster",
 			"name": "Montero mayor",
-			"skills": ["Carisma animal","Escalar","Aguante","Sabiduría académica (Bestias)","Supervivencia","Percepción","A distancia (Honda)","Poner trampas","Frialdad","Intuición","Cuerpo a cuerpo (Básica)","A distancia (Arco)","Lengua secreta (Cazador)","Movimiento silencioso (Rural)","Orientación","Montar (Caballo)","Nadar","Rastrear","Criar animales","Adiestrar animal (Cualquiera)"],
+			"skills": ["Carisma animal","Escalar","Aguante","Sabiduría académica (Bestias)","Supervivencia","Percepción","A distancia (Honda)","Poner trampas","Frialdad","Intuición","Cuerpo a cuerpo (Básica)","A distancia (Arco)","Lengua secreta (Cazador)","Movimiento silencioso (Rural)","Orientación","Montar (Caballo)","Nadar","Seguir rastros","Criar animales","Adiestrar animal (Cualquiera)"],
 			"talents": ["Disparo seguro","Francotirador","Intrépido (Monstruos)","Robusto"],
 			"trappings": ["Caballo de monta","Silla de montar y arreos","Perrera con perros de caza"],
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.T6c9MttfG0Fj4nDm]{Cazador}</p>"
@@ -971,7 +971,7 @@
 		{
 			"id": "Investigator",
 			"name": "Investigador",
-			"skills": ["Carisma","Escalar","Frialdad","Cotilleo","Intuición","Percepción","Movimiento silencioso (Urbano)","Rastrear","Consumir alcohol","Esquivar","Sabiduría académica (Derecho)","Cuerpo a cuerpo (Pelea)","Forzar Cerraduras","Prestidigitación"],
+			"skills": ["Carisma","Escalar","Frialdad","Cotilleo","Intuición","Percepción","Movimiento silencioso (Urbano)","Seguir rastros","Consumir alcohol","Esquivar","Sabiduría académica (Derecho)","Cuerpo a cuerpo (Pelea)","Forzar Cerraduras","Prestidigitación"],
 			"talents": ["Espabilado","Etiqueta (Cualquiera)","Sombra","Tenaz"],
 			"trappings": ["Arma de mano","Chaqueta de cuero","Ganzúa","Lupa"],
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.zLWmjUbUdAOfiV3F]{Investigador}</p>"
@@ -1107,7 +1107,7 @@
 		{
 			"id": "Master Bounty Hunter",
 			"name": "Cazarrecompensas maestro",
-			"skills": ["Sobornar","Carisma","Cotilleo","Regatear","Intuición","Cuerpo a cuerpo (Básica)","Supervivencia","Percepción","Atletismo","Aguante","Intimidar","A distancia (Ballesta)","A distancia (Enmarañante)","Rastrear","Criar animales","Escalar","Montar (Caballo)","Nadar"],
+			"skills": ["Sobornar","Carisma","Cotilleo","Regatear","Intuición","Cuerpo a cuerpo (Básica)","Supervivencia","Percepción","Atletismo","Aguante","Intimidar","A distancia (Ballesta)","A distancia (Enmarañante)","Seguir rastros","Criar animales","Escalar","Montar (Caballo)","Nadar"],
 			"talents": ["Corredor","Disparo infalible","Empuñar dos armas","Golpe cuidadoso"],
 			"trappings": ["Caballo de monta","Silla de montar y arreos","Camisote de malla"],
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.orZTfdJCm6OnUktl]{Cazarrecompensas}</p>"
@@ -1131,7 +1131,7 @@
 		{
 			"id": "Master Investigator",
 			"name": "Maestro investigador",
-			"skills": ["Carisma","Escalar","Frialdad","Cotilleo","Intuición","Percepción","Movimiento silencioso (Urbano)","Rastrear","Consumir alcohol","Esquivar","Sabiduría académica (Derecho)","Cuerpo a cuerpo (Pelea)","Forzar Cerraduras","Prestidigitación","Sobornar","Tasar","Mando","Sabiduría académica (Cualquiera)"],
+			"skills": ["Carisma","Escalar","Frialdad","Cotilleo","Intuición","Percepción","Movimiento silencioso (Urbano)","Seguir rastros","Consumir alcohol","Esquivar","Sabiduría académica (Derecho)","Cuerpo a cuerpo (Pelea)","Forzar Cerraduras","Prestidigitación","Sobornar","Tasar","Mando","Sabiduría académica (Cualquiera)"],
 			"talents": ["Allanamiento de morada","Cortés","Intelectual","Sexto sentido"],
 			"trappings": ["Ayudante","Despacho"],
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.zLWmjUbUdAOfiV3F]{Investigador}</p>"
@@ -1259,7 +1259,7 @@
 		{
 			"id": "Noble Lord",
 			"name": "Señor noble",
-			"skills": ["Sobornar","Consumir alcohol","Jugar","Intimidar","Mando","Sabiduría académica (Heráldica)","Cuerpo a cuerpo (De Esgrima)","Tocar (Cualquiera)","Carisma","Cotilleo","Hablar idioma (Viejomundano clásico)","Sabiduría académica (Local)","Montar (Caballo)","Cuerpo a cuerpo (De Parada)","Hablar idioma (Cualquiera)","Intuición","Sabiduría académica (Política)","Percepción","Sabiduría académica (Cualquiera)","Rastrear"],
+			"skills": ["Sobornar","Consumir alcohol","Jugar","Intimidar","Mando","Sabiduría académica (Heráldica)","Cuerpo a cuerpo (De Esgrima)","Tocar (Cualquiera)","Carisma","Cotilleo","Hablar idioma (Viejomundano clásico)","Sabiduría académica (Local)","Montar (Caballo)","Cuerpo a cuerpo (De Parada)","Hablar idioma (Cualquiera)","Intuición","Sabiduría académica (Política)","Percepción","Sabiduría académica (Cualquiera)","Seguir rastros"],
 			"talents": ["Líder de guerra","Presencia imponente","Rico","Voluntad de hierro"],
 			"trappings": ["Florete o espejo de mano","Joyas por valor de 500 coronas de oro","4 juegos de ropa cortesana e la mejor calidad","500 coronas de oro","Provincia"],
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.t41abSTLeMAdLiWS]{Noble}</p>"
@@ -1323,7 +1323,7 @@
 		{
 			"id": "Pathfinder",
 			"name": "Batidor",
-			"skills": ["Carisma animal","Escalar","Aguante","Cotilleo","Sabiduría académica (Local)","Cuerpo a cuerpo (Básica)","Supervivencia","Percepción","Atletismo","Orientación","A distancia (Arco)","Montar (Caballo)","Movimiento silencioso (Rural)","Rastrear","Criar animales","Regatear","Lengua secreta (Cazador)","Nadar"],
+			"skills": ["Carisma animal","Escalar","Aguante","Cotilleo","Sabiduría académica (Local)","Cuerpo a cuerpo (Básica)","Supervivencia","Percepción","Atletismo","Orientación","A distancia (Arco)","Montar (Caballo)","Movimiento silencioso (Rural)","Seguir rastros","Criar animales","Regatear","Lengua secreta (Cazador)","Nadar"],
 			"talents": ["Muy resistente","Piernas recias","Sentidos desarrollados (Vista)","Sexto sentido"],
 			"trappings": ["Alforjas con raciones para dos semanas","Caballo de monta","Silla de montar y arreos","Mapa","Tienda de campaña"],
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.HSoeyY2cbQAndBFk]{Explorador}</p>"
@@ -1699,7 +1699,7 @@
 		{
 			"id": "Scout",
 			"name": "Explorador",
-			"skills": ["Carisma animal","Escalar","Aguante","Cotilleo","Sabiduría académica (Local)","Cuerpo a cuerpo (Básica)","Supervivencia","Percepción","Atletismo","Orientación","A distancia (Arco)","Montar (Caballo)","Movimiento silencioso (Rural)","Rastrear"],
+			"skills": ["Carisma animal","Escalar","Aguante","Cotilleo","Sabiduría académica (Local)","Cuerpo a cuerpo (Básica)","Supervivencia","Percepción","Atletismo","Orientación","A distancia (Arco)","Montar (Caballo)","Movimiento silencioso (Rural)","Seguir rastros"],
 			"talents": ["Olfato para los problemas","Percepción de combate","Viajero curtido","Visión nocturna"],
 			"trappings": ["Arco","10 flechas","Camisote de malla"],
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.HSoeyY2cbQAndBFk]{Explorador}</p>"
@@ -1787,7 +1787,7 @@
 		{
 			"id": "Sleuth",
 			"name": "Sabueso",
-			"skills": ["Carisma","Escalar","Frialdad","Cotilleo","Intuición","Percepción","Movimiento silencioso (Urbano)","Rastrear"],
+			"skills": ["Carisma","Escalar","Frialdad","Cotilleo","Intuición","Percepción","Movimiento silencioso (Urbano)","Seguir rastros"],
 			"talents": ["Gato callejero","Leer y escribir","Sin importancia","Vigilancia"],
 			"trappings": ["Aceite de lámpara","Diario","Linterna","Pluma y tinta"],
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.zLWmjUbUdAOfiV3F]{Investigador}</p>"
@@ -1955,7 +1955,7 @@
 		{
 			"id": "mokSUD62vhpKue2Z",
 			"name": "Rastreador",
-			"skills": ["Carisma animal","Escalar","Aguante","Sabiduría académica (Bestias)","Supervivencia","Percepción","A distancia (Honda)","Poner trampas","Frialdad","Intuición","Cuerpo a cuerpo (Básica)","A distancia (Arco)","Lengua secreta (Cazador)","Movimiento silencioso (Rural)","Orientación","Montar (Caballo)","Nadar","Rastrear"],
+			"skills": ["Carisma animal","Escalar","Aguante","Sabiduría académica (Bestias)","Supervivencia","Percepción","A distancia (Honda)","Poner trampas","Frialdad","Intuición","Cuerpo a cuerpo (Básica)","A distancia (Arco)","Lengua secreta (Cazador)","Movimiento silencioso (Rural)","Orientación","Montar (Caballo)","Nadar","Seguir rastros"],
 			"talents": ["Disparo certero","Intrépido (Animales)","Proyectil infalible","Sentidos desarrollados (Cualquiera)"],
 			"trappings": ["Mochila","Saco de dormir","Tienda de campaña"],
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.T6c9MttfG0Fj4nDm]{Cazador}</p>"
@@ -2271,7 +2271,7 @@
 			"effects": [{
 				"name":"Aplicar Loto negro",
 				"scriptData": [
-					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n     let effectData = this.item.effects.contents[1].convertToApplied();\n\teffectData.flags.wfrp4e.sourceItem = this.item.uuid\n     effectData.duration.seconds = 10800\n\tactor.applyEffect({effectData : [effectData]})\n}\nelse\n{\n\tthis.script.notification(\"¡No queda!\", \"error\")\n}"}
+					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n     let effectData = this.item.effects.contents[1].convertToApplied();\n\teffectData.system.sourceData.item = this.item.uuid\n     effectData.duration.seconds = 10800\n\tactor.applyEffect({effectData : [effectData]})\n}\nelse\n{\n\tthis.script.notification(\"¡No queda!\", \"error\")\n}"}
 					]
 				},
 				{
@@ -2778,7 +2778,7 @@
 			"effects": [{
 				"name":"Aplicar Rompecorazones",
 				"scriptData": [
-					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n    let effectData = this.item.effects.contents[1].convertToApplied();\n\teffectData.flags.wfrp4e.sourceItem = this.item.uuid\n\tactor.applyEffect({effectData : [effectData]})\n}\nelse\n{\n\tthis.script.notification(\"¡No queda!\", \"error\")\n}"}
+					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n    let effectData = this.item.effects.contents[1].convertToApplied();\n\teffectData.system.sourceData.item = this.item.uuid\n\tactor.applyEffect({effectData : [effectData]})\n}\nelse\n{\n\tthis.script.notification(\"¡No queda!\", \"error\")\n}"}
 					]
 				},
 				{
@@ -2972,7 +2972,7 @@
 				{
 				"name":"Aplicar Setas rusulas de la locura",
 				"scriptData": [
-					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n     let effectData = this.item.effects.contents[0].convertToApplied();\n\teffectData.flags.wfrp4e.sourceItem = this.item.uuid\n     effectData.duration.seconds = 10800\n\tactor.applyEffect({effectData : [effectData]})\n}\nelse\n{\n\tthis.script.notification(\"¡No quedan!\", \"error\")\n}"}
+					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n     let effectData = this.item.effects.contents[0].convertToApplied();\n\teffectData.system.sourceData.item = this.item.uuid\n     effectData.duration.seconds = 10800\n\tactor.applyEffect({effectData : [effectData]})\n}\nelse\n{\n\tthis.script.notification(\"¡No quedan!\", \"error\")\n}"}
 					]
 				}]
 		},
@@ -3027,7 +3027,7 @@
 				{
 				"name":"Aplicar Raíz de mandrágora",
 				"scriptData": [
-					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n     let effectData = this.item.effects.contents[0].convertToApplied();\n\teffectData.flags.wfrp4e.sourceItem = this.item.uuid\n     effectData.duration.seconds = 10800\n\tactor.applyEffect({effectData : [effectData]})\n}\nelse\n{\n\tthis.script.notification(\"¡No queda!\", \"error\")\n}"}
+					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n     let effectData = this.item.effects.contents[0].convertToApplied();\n\teffectData.system.sourceData.item = this.item.uuid\n     effectData.duration.seconds = 10800\n\tactor.applyEffect({effectData : [effectData]})\n}\nelse\n{\n\tthis.script.notification(\"¡No queda!\", \"error\")\n}"}
 					]
 				}]
 		},
@@ -3251,7 +3251,7 @@
 				{
 				"name":"Inhalar Delicia de Ranald",
 				"scriptData": [
-					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n     let effectData = this.item.effects.contents[0].convertToApplied();\n\teffectData.flags.wfrp4e.sourceItem = this.item.uuid\n     effectData.duration.seconds = 10800\n\tactor.applyEffect({effectData : [effectData]})\n}\nelse\n{\n\tthis.script.notification(\"¡No queda!\", \"error\")\n}"}
+					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n     let effectData = this.item.effects.contents[0].convertToApplied();\n\teffectData.system.sourceData.item = this.item.uuid\n     effectData.duration.seconds = 10800\n\tactor.applyEffect({effectData : [effectData]})\n}\nelse\n{\n\tthis.script.notification(\"¡No queda!\", \"error\")\n}"}
 					]
 				}]
 		},
