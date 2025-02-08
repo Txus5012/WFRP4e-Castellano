@@ -3,12 +3,16 @@
         "Scripts": "Scripts",
         "CannotDeleteItemEffect": "Este efecto es de un Objeto en este Actor. Elimina el propio Objeto o el efecto de la ficha del Objeto.",
         "ItemDialog": "Diálogo de Objeto",
+        "Initialize": "Inicializar",
         "ScriptConfig": "Configuración de Script",
+        "DiffEditor": "Editor de diferencias",
+        "ScriptEditor": "Editor de script",
         "AddScript": "Añadir Script",
         "EffectFiltered": "Efecto filtrado",
         "EffectPrevented": "Efecto prevendio",
         "DeletingEffectItems": "Eliminando Efectos de Objeto: {items}",
         "ItemsNotAllowed": "Este Objeto no está permitido en este tipo de Actor",
+        "DiffDescription" : "Una \"diferencia\" representa alteraciones que deberían hacerse al Objeto original. Puede hacerse manualmente, o puede ser generado arrastrando y soltando un Objeto del mismo tipo.",
         "BugReporter": {
             "Title": "Reportador de fallos",
             "APIReached": "Has alcanzado el límite de uso de la API de GitHub. Necesitas esperar una hora antes de enviar o enviarlo manualmente en la página web de Github.",
@@ -32,11 +36,26 @@
             "NeedsAttention": "NECESITA ATENCIÓN",
             "Resolved": "RESUELTO"
         },
+        "Choice" : {
+            "Options" : "Opciones",
+            "Option" : "Opción",
+            "AND" : "Y",
+            "OR" : "O",
+            "Config" : "Configuración de elección",
+            "CreateOption" : "Crear opción",
+            "CreateOptionDetails" : "<p>¿Qué clase de opción?</p><p><strong>Indicador</strong>: Un Objeto que no tiene datos asociados más allá del nombre, será creado como un Objeto de tipo Equipamiento.</p><p><strong>Filtro</strong>: Define filtros para proveer una selección de Objetos.</p>",
+            "Placeholder" : "Indicador",
+            "Filter" : "Filtro",
+            "FilterPath" : "Ruta",
+            "FilterOperation" : "Operación",
+            "FilterValue" : "Valor"
+        },
         "Initialization": {
             "DeleteModuleContent": "Borrar Contenido del Módulo",
             "DeleteModuleContentPrompt": "<p><strong>AVISO</strong>: Esto borrará todo el contenido asociado con el módulo <strong>{id}</strong> que ha sido importado a este mundo.</p><p>¿Estás seguro de querer proceder?</p>",
             "ResolveDuplicates": "Resolver Duplicados"
         },
+        "ScriptLock": "Seguro de script",
         "Script": "Script",
         "ScriptTrigger" : "Disparador",
         "Targeter" : "El que hace objetivo",
@@ -112,6 +131,8 @@
             "RadiusHint": "Radio de la plantilla",
             "TemplateData": "Datos de la plantilla",
             "TemplateDataHint": "Configurar datos de la plantilla, como el color o la textura",
+            "TemplateCustomization": "Personalización de plantilla",
+            "Texture": "Textura",
             "TestIndependent": "Chequeo independiente",
             "TestIndependentHint": "Si se activa, este efecto puede ser llamado directamente deste la ficha del Actor propietario, en lugar de desde el chat",
             "PreApplyScript": "Pre-Aplicar Script",
@@ -140,6 +161,12 @@
             "Zone" : "Zona",
             "Crew" : "Tripulación",
             "Other" : "Otro"
+        },
+        "ApplyTooltips" : {
+            "Self" : "Aplica el Efecto en el Actor fuente",
+            "Target" : "Aplica el Efecto en los objetivos de la acción o en las fichas objetivo actuales.",
+            "Area" : "Coloca una Plantilla de Área para el Efecto, aplicando a las fichas en su interior.",
+            "Zone" : "Selecciona una Zona a la que aplicar este Efecto, aplicando a las fichas en su interior."
         },
 
         "Models" : {
@@ -316,7 +343,7 @@
             "skill" : {
                 "FIELDS" : {
                     "advanced.value" : {
-                        "label" : "Tipo de HAbilidad"
+                        "label" : "Tipo de Habilidad"
                     },
                     "grouped.value" : {
                         "label" : "Especialización"
@@ -639,15 +666,28 @@
                 }
             }
 		},
+        "Dialog.ValueDialog": "Diálogo de valor",
+        "Dialog.EnterValue": "Escribe valor",
+        "Dialog.SelectValue": "Selecciona valor",
         "Dialog.Modifiers": "Modificadores de diálogo",
+        "Dialog.UserEntry": "Entrada de usuario",
+        "Dialog.Initial": "Inicial",
         "PlaceEffect": "Colocar {name}",
         "ApplyEffect" : "Aplicar {name}",
         "ZoneEffect" : "Efecto de zona",
         "TokensInZone" : "Fichas en la zona",
         "FollowToken" : "Seguir Ficha",
         "SendingSocketRequest" : "Enviando solicitud de socket",
+        "ZoneConfig" : "Configuración de Zona",
+        "ZoneEffects" : "Aplicados Efectos de Zona",
         "Warning" : {
             "RenderAuraChange" : "Para reflejar el canbio en Renderiar Áura, desactiva y reactiva el Efecto fuente, o reemplaza el Icono en la Escena."
+        },
+        "Error" : {
+            "NotValidChoiceType" : "No es una elección válida",
+            "LibraryOutaded" : "Warhammer Library está obsoleta. {system} define que la versión mínima es {minimum}.",
+            "ID": "Este ID para {name} ya existe en la colección. Se le ha dado una ID única a este Documento.",
+            "CreateZoneEffect" : "Los Efectos deben ser creados vía Efecto Activo con el Tipo de Transferencia 'Zona'"
         }
     },
     "Item" : "Objeto",
@@ -682,6 +722,7 @@
     "TYPES.Item.vehicleMod" : "Modificación de Vehículo",
     "TYPES.Item.vehicleTest" : "Chequeo de Tripulación del Vehículo",
     "TYPES.Item.vehicleRole" : "Rol en Vehículo",
+    "TYPES.Item.template" : "Plantilla",
 	
     "Targets" : "Objetivos",
     "Trapping" : "Accesorio",
@@ -708,6 +749,11 @@
     "SETTINGS.AdvantageMaxHint" : "Establece un límite superior a la Ventaja en un valor predeterminado, como por ejemplo 2, 4 o más.",
     "SETTINGS.CapAdvIB" : "Limitar Ventaja en BI",
     "SETTINGS.CapAdvIBHint" : "Establece el valor máximo de Ventaja en el Bonificador por Iniciativa del personaje. Anula el ajuste Limitar Ventaja.",
+    "SETTINGS.SLMethod" : "Método de cálculo de NE",
+    "SETTINGS.SLMethodHint" : "Configura cómo se calculan los NE en los Chequeos",
+    "SETTINGS.SLDefault" : "Predeterminado",
+    "SETTINGS.SLFast" : "NE rápidos",
+    "SETTINGS.SLDOS" : "Grados de éxito",
     "SETTINGS.FastSL" : "NE Rápido",
     "SETTINGS.FastSLHint" : "Determina NE con la regla opcional NE Rápido descrita en la página 152.",
     "SETTINGS.TestsAbove100" : "Chequeos por Encima del 100%",
@@ -750,6 +796,8 @@
     "SETTINGS.UIACritsModHint" : "Cambia la cantidad en la que se modifican los Impactos Críticos (usando los reglas descritas en la página 81 de Up In Arms).",
     "SETTINGS.UIAShields" : "Propiedad Escudo de Up In Arms",
     "SETTINGS.UIAShieldsHint" : "Cambia la propiedad Escudo como se especifíca en la página 90 de Up In Arms.",
+    "SETTINGS.UIABleeding" : "Estado de Sangrando de Up In Arms",
+    "SETTINGS.UIABleedingHint" : "Cambia el Estado de Sangrando como se especifíca en la página 80 de Up In Arms",
     "SETTINGS.WeaponLength" : "Longitud del Arma",
     "SETTINGS.WeaponLengthHint" : "Usa la longitud del arma para aplicar modificadores como se describe en la regla de la página 297.",
     "SETTINGS.SoundEffects" : "Dirección de Efectos de Sonido",
@@ -867,6 +915,10 @@
     "SHEET.CareerSkill" : "Cambiando la Habilidad de Carrera",
     "SHEET.CareerSkillPrompt" : "Estás cambiado la especialización de una habilidad de tu carrera actual. ¿Quieres aplicar este cambio a la carrera también?",
     "SHEET.CareerSkillNotif" : "Cambiando {oldName} a {newName} en {career}",
+    "SHEET.LoadingSkills" : "Cargando Habilidades",
+    "SHEET.SkillSpecialization" : "Especialización de Habilidad",
+    "SHEET.SkillSpecializationText" : "Selecciona especialización, si no seleccionas ninguna, escribe una manualmente.",
+    "SHEET.SkillSpecializationEnter" : "Eescribe especialización de Habilidad",
     "SHEET.SortItems" : "Ordenar Objetos",
     "SHEET.ArmourDamaged" : "Armadura Dañada en 1",
     "SHEET.ArmourRepaired" : "Armadura Reparada en 1",
@@ -878,6 +930,10 @@
     "SHEET.ExperienceLog" : "Registro de Experiencia",
     "Sheet.RollIncome" : "Tirar Salario",
     "SHEET.ItemSheetEditableDisabled" : "Editar este Objeto ha sido desactivado mientras está bajo los efectos de {effects}. Desactiva o elimina estos efectos en el Actor propietario.",
+    "SHEET.AlterName" : "Alterar nombre",
+    "SHEET.SpecialisationAbbrev" : "Esp.",
+    "SHEET.TemplateSpecialisationTooltip" : "Cuántas especializaciones escoger (p.ej. \"Cuerpo a cuerpo\" y \"2\" corresponde a \"Cuerpo a cuerpo (dos cualesquiera)\")",
+    "SHEET.TemplateGroupTooltip" : "Proveer un número de grupo dará la opción de escoger entre cualquier Objeto con ese mismo número de grupo.",
 
     "LOG.MemorizedSpell" : "Memorizado {name}",
     "LOG.GainPrayer" : "Obtenido {name}",
@@ -936,6 +992,7 @@
     "SHEET.CannotDeleteCrewEffect" : "Este efecto es de un Vehículo en el que está este Actor y debe ser eliminado en ese Vehículo.",
     "SHEET.Attacker" : "Atacante",
     "SHEET.LocationAP" : "PA de la Ubicación",
+    "SHEET.AppliedTemplates" : "Plantillas aplicadas",
 
     "ACTOR.BasicSkillsTitle" : "Añadir Habilidades Básicas",
     "ACTOR.BasicSkillsPrompt": "¿Añadir Habilidades Básicas?",
@@ -991,6 +1048,7 @@
     "ITEM.TestSkill" : "Chequeo de Habilidad",
     "ITEM.Roles" : "Roles",
     "ITEM.VitalRoles" : "Roles vitales",
+    "ITEM.LearningXP" : "PX para aprender",
     "as weapon": "según arma",
     "half weapon": "mitad del arma",
     "third weapon": "tercio del arma",
