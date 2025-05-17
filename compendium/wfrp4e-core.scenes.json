@@ -1,11 +1,7 @@
 {
 	"label": "Escenas (Básico)",
 	"mapping": {
-		"image": "background.src",
-		"scenes_folders": {
-			"path": "flags.wfrp4e-core.initialization-folder",
-			"converter": "diaries_folder"
-			}
+		"image": "background.src"
 	},
 	"entries": [
 		{

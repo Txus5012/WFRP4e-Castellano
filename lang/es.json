@@ -1,7 +1,44 @@
 {
+    "WORLD.GameSystem" : "Sistema de juego",
 	"WH" : {
+        "Badge" : {
+            "Notes" : "NOTAS",
+            "Issues" : "PROBLEMAS",
+            "Wiki" : "WIKI",
+            "Discord" : "DISCORD"
+        },
+        "Initializer" : {
+            "SettingName" : "Contenido Premium de Warhammer",
+            "SettingLabel" : "Manejar contenido",
+            "SettingHint" : "Maneja tu contenido importado desde los módulos premium de Warhammer",
+            "Title" : "Inicialización de módulo de Warhammer",
+            "Text" : "<h3>Inicializar, actualizar o eliminar el contenido importado de los módulos premium oficiales de Warhammer</h3>",
+            "HelpText" : "<p>¿Necesitas ayuda? Comprueba <a href=https://moo-man.github.io/WFRP4e-FoundryVTT/pages/premium.html#initializiation>la Wiki</a></p>",
+            "Tooltips" : {
+                "NotInstalled" : "¡Módulo no instalado! Si has comprado este módulo, asegúrate de instalarlo desde el <strong>Menú de Módulos</strong> de Foundry",
+                "NotActive" : "¡Módulo no activado! Ve a <strong>Gestión de Módulos</strong> en la barra lateral de Ajustes para activar este módulo en el mundo."
+            },
+            "Action" : {
+                "Initialize" : "Inicializar contenido",
+                "Update" : "Actualizar contenido",
+                "Delete" : "Eliminar contenido"
+            },
+
+            "UpdaterTitle": "Actualizar contenido de {module}",
+            "UpdaterText" : "<p>Este proceso importará nuevos documentos y sobreescribirá documentos anteriormente importados con el contenido del Compendio.</p><p>ESTO SIGNIFICA QUE CUALQUIER CAMBIO QUE HAYAS HECHO SE SOBREESCRIBIRÁ. Esto no se aplica a ningún Documento propiedad de un Jugador.</p><p>Úsalo sólo si ya has inicializado este módulo anteriormente.</p>",
+            "UpdaterExclude" : "Excluir cambio de nombre",
+            "UpdaterExcludeHint" : "Marcar esto no actualizará documentos si sus nombres han sido cambiados",
+
+            "OverwriteActors": "Sobreescribir Actores",
+            "OverwriteMacros": "Sobreescribir Macros",
+            "OverwriteJournals": "Sobreescribir Diarios",
+            "OverwriteTables": "Sobreescribir Tablas",
+            "OverwriteScenes": "Sobreescribir Escenas"
+        },
+        "AdvancedConfig": "Advanced Effect Config",
         "Scripts": "Scripts",
         "CannotDeleteItemEffect": "Este efecto es de un Objeto en este Actor. Elimina el propio Objeto o el efecto de la ficha del Objeto.",
+        "ValueDialog": "Diálogo de Valor",
         "ItemDialog": "Diálogo de Objeto",
         "Initialize": "Inicializar",
         "ScriptConfig": "Configuración de Script",
@@ -55,10 +92,21 @@
             "DeleteModuleContentPrompt": "<p><strong>AVISO</strong>: Esto borrará todo el contenido asociado con el módulo <strong>{id}</strong> que ha sido importado a este mundo.</p><p>¿Estás seguro de querer proceder?</p>",
             "ResolveDuplicates": "Resolver Duplicados"
         },
-        "ScriptLock": "Seguro de script",
+        "Item": {
+            "Category": {
+                "Physical": "Físico",
+                "Vehicle": "Vehículo"
+            }
+        },
+        "ScriptLock": "Scripts bloqueados",
+        "ScriptLockTT": "Los scripts no son editables cuando son referencias. Si quieres hacer cambios: Copia el script, desbloquea, copia y entonces realiza los cambios deseados.",
         "Script": "Script",
         "ScriptTrigger" : "Disparador",
         "Targeter" : "El que hace objetivo",
+        "TargeterTT" : "Ejecuta este script en el diálogo de cualquier Actor al que está haciendo objetivo este Actor.",
+        "DefendingAgainst" : "Defendiéndose de",
+        "DefendingAgainstTT" : "Ejecuta este script en el diálogo de un Actor que ha sido hecho objetivo con este Actor u Objeto.",
+        "DialogScript" : "Script de Diálogo",
         "HideScript" : "Esconder Script",
         "ActivateScript" : "Activar Script",
         "SubmissionScript" : "Envío del Script",
@@ -150,7 +198,8 @@
             "SkipImmediatePlacement" : "Saltar Inmediato al Colocar",
             "SkipImmediatePlacementHint" : "Previene que los scripts Inmediatos se ejecuten cuando se coloca el efecto.",
             "ZoneType" : "Tipo de zona",
-            "ZoneTypeHint" : "<strong>Efecto de zona</strong> significa que el efecto está ligado a la zona, <strong>Fichas en la zona</strong> significa que se aplica a todas las Fichas en esa Zona, <strong>Seguir Ficha</strong> significa que se aplica a cualquier zona en la que se encuentre la Ficha objetivo."
+            "ZoneTypeHint" : "<strong>Efecto de zona</strong> significa que el efecto está ligado a la zona, <strong>Fichas en la zona</strong> significa que se aplica a todas las Fichas en esa Zona, <strong>Seguir Ficha</strong> significa que se aplica a cualquier zona en la que se encuentre la Ficha objetivo.",
+            "AdvancedConfig" : "Abrir Configuración Avanzada"
         },
         "TransferType" : {
             "Document" : "Documento en propiedad",
@@ -170,6 +219,72 @@
         },
 
         "Models" : {
+
+            "standard": {
+                "FIELDS": {
+                    "details" : {
+                        "mainHand" : {
+                            "label" : "Mano principal",
+                            "hint" : "La mano considerada 'primaria' cuando el sistema debe distinguirlo."
+                        },
+                        "hitLocationTable.value" : {
+                            "label" : "Tabla de Ubicación de Impactos",
+                            "hint" : "Define una tabla de ubicación de impactos personalizada para cuando este Actor es atacado."
+                        }
+                    },
+                    "settings": {
+                        "equipPoints" : {
+                            "label" : "Puntos de equipo",
+                            "hint" : "Limita las armas equipadas, 2 puntos es 2 'manos'"
+                        },
+
+                        "autoCalc": {
+                            "size": {
+                                "label": "Auto-calcular tamaño de ficha",
+                                "hint": "Cambia el tamaño de la ficha automáticamente basándose en el Tamaño del Actor"
+                            },
+                            "run": {
+                                "label": "Auto-calcular velocidad de carrera",
+                                "hint": "Por defecto la velocidad de carrera es 4 × Movimiento"
+                            },
+                            "walk": {
+                                "label": "Auto-calcular velocidad de caminar",
+                                "hint": "Por defecto la velocidad de carrera es 2 × Movimiento"
+                            },
+                            "wounds": {
+                                "label": "Auto-calcular Heridas",
+                                "hint": "Por defecto las Heridas máximas son BF + (2 × BR) + V (para tamaño Normal)"
+                            },
+                            "criticals": {
+                                "label": "Auto-calcular Críticos",
+                                "hint": "Por defecto el máximo de Críticos es BR"
+                            },
+                            "corruption": {
+                                "label": "Auto-calcular Corrupción",
+                                "hint": "Por defecto el umbral de Corrupción es BR + BV"
+                            },
+                            "encumbrance": {
+                                "label": "Auto-calcular Impedimenta",
+                                "hint": "Por defecto el umbral de Impedimenta es BF + BR"
+                            }
+                        }
+                    }
+                }
+            },
+
+            "vehicle" : {
+                "FILEDS" : {
+                    "vehicleType" : {
+                        "label" : "Tipo de Vehículo"
+                    },
+                    "status.morale.transferEffects" : {
+                        "label" : "Transferir Efectos de Moral",
+                        "hint" : "Aplicar efectos de moral a los Actores en este vehículo."
+                    }
+                }
+            },
+
+
             "ammunition" : {
                 "FIELDS" : {
                     "ammunitionType.value" : {
@@ -379,6 +494,9 @@
             },
             "mutation" : {
                 "FIELDS" : {
+                    "modifier.value": {
+                        "label": "Modificador"
+                    },
                     "mutationType.value" : {
                         "label" : "Tipo de Mutación"
                     }
@@ -650,6 +768,18 @@
                         }
                     }
                 }
+            },
+            "template" : {
+                "FIELDS" : {
+                    "alterName": {
+                        "pre": {
+                            "label": "Alterar prefijo del nombre"
+                        },
+                        "post": {
+                            "label": "Alterar sufijo del nombre"
+                        }
+                    }
+                }
             }
         },
 
@@ -664,6 +794,29 @@
                         "label" : "Ubicación"
                     }
                 }
+            }
+        },
+
+        "Theme" : {
+            "Config" : "Configuración del tema",
+            "ConfigButton" : "Configurar tema",
+            "ConfigHint" : "Activa o desactiva el estilo provisto por el sistema.",
+            "FIELDS" : {
+                "actor.enabled.label" : "Activar tema",
+                "item.enabled.label" : "Activar tema",
+                "journal.enabled.label" : "Activar tema",
+                "sidebar.enabled.label" : "Activar tema",
+                "apps.enabled.label" : "Activar tema",
+
+                "actor.font.label" : "Fuente",
+                "item.font.label" : "Fuente",
+                "journal.font.label" : "Fuente",
+                "sidebar.font.label" : "Fuente",
+                "apps.font.label" : "Fuente"
+            },
+            "Font" : {
+                "Classic" : "Clásica",
+                "Readable" : "Leíble"
             }
 		},
         "Dialog.ValueDialog": "Diálogo de valor",
@@ -687,8 +840,64 @@
             "NotValidChoiceType" : "No es una elección válida",
             "LibraryOutaded" : "Warhammer Library está obsoleta. {system} define que la versión mínima es {minimum}.",
             "ID": "Este ID para {name} ya existe en la colección. Se le ha dado una ID única a este Documento.",
-            "CreateZoneEffect" : "Los Efectos deben ser creados vía Efecto Activo con el Tipo de Transferencia 'Zona'"
-        }
+            "CreateZoneEffect" : "Los Efectos deben ser creados vía Efecto Activo con el Tipo de Transferencia 'Zona'",
+            "NoTargetedActors" : "¡No se ha hecho objetivo a ningún Actor!",
+            "NoActorAssigned" : "No hay ningún Actor asignado, puedes asignar Actores mediante la Configuración de Jugador en la parte inferior izquierda de la pantalla.",
+            "NoTargets" : "¡No se ha hecho objetivo a ningún Actor!"
+        },
+        "CompendiumBrowser": {
+            "WorldItems": "Mostrar Objetos del Mundo en el Buscador",
+            "FilterClear": "Eliminar filtros",
+            "Column": {
+                "Results": "Resultados",
+                "Source": "Fuente"
+            },
+            "Title": "Buscador de compendio",
+            "Action": {
+                "Open": "Abrir buscador de compendio"
+            },
+            "Filters": {
+                "Label": "Filtros",
+                "HasDarkvision": "Tiene visión en la oscuridad",
+                "HasSpellcasting": "Tiene Hechicero",
+                "SearchResults": "Buscar resultados"
+            },
+            "Selection": {
+                "Label": "Seleccionado: {summary}",
+                "Select": "Seleccionar",
+                "Summary": {
+                    "Max": "<span class=\"value\">{value}</span> hasta {max}",
+                    "Min": "<span class=\"value\">{value}</span> de al menos {min}",
+                    "Range": "<span class=\"value\">{value}</span> desde {min} hasta {max}",
+                    "Single": "<span class=\"value\">{value}</span> de {max}"
+                },
+                "Warning": {
+                    "Document": {
+                        "one": "documento",
+                        "other": "documentos"
+                    },
+                    "Max": "Debes seleccionar como mucho {max} {document}, {value} seleccionados.",
+                    "Min": "Debes seleccionar al menos {min} {document}, {value} seleccionados.",
+                    "Range": "Debes seleccionar entre {min} y {max} documentos, {value} seleccionados.",
+                    "Single": "Debes seleccionar {max} {document}, {value} seleccionados."
+                }
+            },
+            "Sources": {
+                "Name": "Fuentes del buscador de compendio",
+                "Label": "Configurar fuentes",
+                "FilterPackages": "Filtrar paquetes",
+                "Hint": "Configura qué compendios tienen su contenido disponible en el buscador de compendio."
+            },
+            "Tabs": {
+                "Feat.other": "Talentos",
+                "Item.other": "Objetos",
+                "Monster.other": "Monstruos"
+            },
+            "Types": {
+                "Label": "Tipos"
+            }
+        },
+    "EFFECT.TABS.scripts" : "Scripts"
     },
     "Item" : "Objeto",
 
@@ -723,6 +932,38 @@
     "TYPES.Item.vehicleTest" : "Chequeo de Tripulación del Vehículo",
     "TYPES.Item.vehicleRole" : "Rol en Vehículo",
     "TYPES.Item.template" : "Plantilla",
+
+    "SHEETS.Item.ammunition" : "Ficha de Munición",
+    "SHEETS.Item.armour" : "Ficha de Armadura",
+    "SHEETS.Item.career" : "Ficha de Carrera",
+    "SHEETS.Item.container" : "Ficha de Contenedor",
+    "SHEETS.Item.critical" : "Ficha de Crítico",
+    "SHEETS.Item.disease" : "Ficha de Enfermedad",
+    "SHEETS.Item.injury" : "Ficha de Herida",
+    "SHEETS.Item.money" : "Ficha de Dinero",
+    "SHEETS.Item.mutation" : "Ficha de Mutación",
+    "SHEETS.Item.prayer" : "Ficha de Plegaria",
+    "SHEETS.Item.psychology" : "Ficha de Psicología",
+    "SHEETS.Item.talent" : "Ficha de Talento",
+    "SHEETS.Item.trapping" : "Ficha de Accesorio",
+    "SHEETS.Item.skill" : "Ficha de Habilidad",
+    "SHEETS.Item.spell" : "Ficha de Hechizo",
+    "SHEETS.Item.trait" : "Ficha de Rasgo",
+    "SHEETS.Item.weapon" : "Ficha de Arma",
+    "SHEETS.Item.extendedTest" : "Ficha de Chequeo extendido",
+    "SHEETS.Item.cargo" : "Ficha de Cargamento",
+    "SHEETS.Item.vehicleMod" : "Ficha de Modificación de Vehículo",
+    "SHEETS.Item.vehicleTest" : "Ficha de Chequeo de Tripulación de Vehículo",
+    "SHEETS.Item.vehicleRole" : "Ficha de Rol en Vehículo",
+    "SHEETS.Item.template" : "Ficha de Plantilla",
+
+    "SHEETS.Actor.character" : "Ficha de Personaje Jugador",
+    "SHEETS.Actor.npc" : "Ficha de Personaje No Jugador",
+    "SHEETS.Actor.creature" : "Ficha de Criatura",
+    "SHEETS.Actor.vehicle" : "Ficha de Vehículo",
+
+    "TOKEN.MOVEMENT.Status.immobile": "Inmóvil",
+    "TOKEN.MOVEMENT.Status.restricted": "Restringido",
 	
     "Targets" : "Objetivos",
     "Trapping" : "Accesorio",
@@ -739,6 +980,8 @@
     "WFRP4e Homebrew": "Reglas Caseras WFRP4e",
     "Homebrew Settings": "Ajustes de Reglas de la Casa",
     "Settings for common homebrew/house rules": "Ajustes para reglas de la casa comunes.",
+    "SETTINGS.DisableTheme" : "Disactiva Tema",
+    "SETTINGS.DisableThemeHint" : "Desactiva el tema de Warhammer de la UI predeterminada de Foundry (El tema de la Ficha de Documento puede cambiarse a través de la configuración de la ficha en la parte superior de la ficha).",
     "SETTINGS.InitRule" : "Reglas de Iniciativa",
     "SETTINGS.InitHint" : "Configura que método usar para determinar quien actúa primero en combate.",
     "SETTINGS.InitDefault" : "Predeterminado (De Mayor a Menor Iniciativa, Agilidad Desempata)",
@@ -790,14 +1033,14 @@
     "SETTINGS.PlayerBrowserHint" : "Permite a los jugadores acceder al buscador de Objetos.",
     "SETTINGS.AdvantageBonus" : "Bonificador por Ventaja",
     "SETTINGS.AdvantageBonusHint" : "Configura el bono que da la Ventaja.",
-    "SETTINGS.UIACrits" : "Usar los Modificadores de Impactos Críticos de Up In Arms",
-    "SETTINGS.UIACritsHint" : "Modifica las tiradas de Impactos Críticos como se describe en la página 81 de Up In Arms.",
+    "SETTINGS.UIACrits" : "Usar los Modificadores de Impactos Críticos de ¡A las Armas!",
+    "SETTINGS.UIACritsHint" : "Modifica las tiradas de Impactos Críticos como se describe en la página 81 de ¡A las Armas!",
     "SETTINGS.UIACritsMod" : "Cantidad del Modificador de Impacto Crítico",
-    "SETTINGS.UIACritsModHint" : "Cambia la cantidad en la que se modifican los Impactos Críticos (usando los reglas descritas en la página 81 de Up In Arms).",
-    "SETTINGS.UIAShields" : "Propiedad Escudo de Up In Arms",
-    "SETTINGS.UIAShieldsHint" : "Cambia la propiedad Escudo como se especifíca en la página 90 de Up In Arms.",
-    "SETTINGS.UIABleeding" : "Estado de Sangrando de Up In Arms",
-    "SETTINGS.UIABleedingHint" : "Cambia el Estado de Sangrando como se especifíca en la página 80 de Up In Arms",
+    "SETTINGS.UIACritsModHint" : "Cambia la cantidad en la que se modifican los Impactos Críticos (usando los reglas descritas en la página 81 de ¡A las Armas!).",
+    "SETTINGS.UIAShields" : "Cualidad de Escudo de ¡A las Armas!",
+    "SETTINGS.UIAShieldsHint" : "Cambia la Cualidad Escudo como se especifíca en la página 90 de ¡A las Armas!",
+    "SETTINGS.UIABleeding" : "Estado de Sangrando de ¡A las Armas!",
+    "SETTINGS.UIABleedingHint" : "Cambia el Estado de Sangrando como se especifíca en la página 80 de ¡A las Armas!",
     "SETTINGS.WeaponLength" : "Longitud del Arma",
     "SETTINGS.WeaponLengthHint" : "Usa la longitud del arma para aplicar modificadores como se describe en la regla de la página 297.",
     "SETTINGS.SoundEffects" : "Dirección de Efectos de Sonido",
@@ -816,8 +1059,8 @@
     "SETTINGS.PlayerExperienceEditingHint" :  "Permite a los jugadores editar manualmente sus valores de puntos de experiencia.",
     "SETTINGS.UnofficialGrimoire" : "Magia de Unofficial Grimoire",
     "SETTINGS.UnofficialGrimoireHint" : "Reglas inspiradas en Unofficial Grimoire, para más detalles consultar la Wiki: <a href='https://github.com/moo-man/WFRP4e-FoundryVTT/wiki/Homebrew-Rules#magic-insiperd-by-unofficial-grimoire'>aquí</a>.",
-    "SETTINGS.UseGroupAdvantage" : "Usar Ventaja Grupal",
-    "SETTINGS.UseGroupAdvantageHint" : "Agrupa Ventajas de Jugadores y Enemigos (como se describe en Up in Arms). Para asociar un Actor con el grupo de 'Jugadores', el actor debe o bien ser propiedad de un jugador, o tener una disposición de ficha 'Amistosa', de lo contrario estarán en el grupo 'Enemigos'.",
+    "SETTINGS.UseGroupAdvantage" : "Usar Ventaja de grupo",
+    "SETTINGS.UseGroupAdvantageHint" : "Agrupa Ventajas de Jugadores y Enemigos (como se describe en ¡A las Armas!). Para asociar un Actor con el grupo de 'Jugadores', el actor debe o bien ser propiedad de un jugador, o tener una disposición de ficha 'Amistosa', de lo contrario estarán en el grupo 'Enemigos'.",
     "Configure": "Configurar",
 
     "WFRP4e Table Settings" : "Ajustes de Tablas de WFRP4e",
@@ -839,7 +1082,7 @@
     "SETTINGS.Moo": "Reglas de la Casa de Moo Man",
     "SETTINGS.MooHint": "Cambios de mecánicas variadas que creo tienen potencial para mejorar el juego. Notad que las aquí enumeradas no son una lista exhaustiva de las reglas de la casa que yo uso, sólo las que pueden ser aplicadas en el código.<br><br>Para la lista entera, por favor ved la <a href='https://github.com/moo-man/WFRP4e-FoundryVTT/wiki/Homebrew-Rules'>Página de la Wiki.</a><br>Notad que estas reglas generalmente están hechas para ser usadas todas juntas.<br>Los comentarios siempre se agradecen. Por favor usad el <a href='https://github.com/moo-man/WFRP4e-FoundryVTT/discussions/categories/moo-s-house-rules'>Panel de Discusión de Github</a> para discutir las mecánicas.",
     "SETTINGS.MooAdvantage" : "Ventaja",
-    "SETTINGS.MooAdvantageHint" : "En lugar de +10 por Ventaja, ganas +1 NE por Ventaja <b>en chequeos exitosos</b>.",
+    "SETTINGS.MooAdvantageHint" : "En lugar de +10 por Ventaja, ganas +1 NE por Ventaja <strong>en chequeos exitosos</strong>.",
     "SETTINGS.MooDifficulty" : "Opciones de Dificultad",
     "SETTINGS.MooDifficultyHint" : "Hace que los opciones de Dificultad sean simétricas.",
     "SETTINGS.MooCritsFumbles" : "MooCritiPifias",
@@ -878,14 +1121,23 @@
     "SETTINGS.MooSizeDamageHint" : "Los bonos de Daño se basan en el tamaño absoluto, en luagr del tamaño relativo (ver página de la wiki del enlace de arriba).",
     "SETTINGS.MooHomebrewItems" : "Cambios en Objetos",
     "SETTINGS.MooHomebrewItemHint" : "Cambia (incluyendo aplicación de las reglas de arriba) varios objetos. Ver página de la wiki del enlace de arriba. **Aviso: Recomendado sólo en partidas nuevas y con la mayoría de las reglas de arriba incluidas**",
-    "SETTINGS.useWoMOvercast" : "Usar las Reglas de Prolongación de Winds of Magic",
-    "SETTINGS.useWoMOvercastHint" : "Usar las mecánicas de prolongación provistas en el suplemento Winds of Magic, descritas en la página 23.",
-    "SETTINGS.useWoMChannelling" : "Usar las Reglas de Canalización de Winds of Magic",
-    "SETTINGS.useWoMChannellingHint" : "Usar las reglas de canalización provistas en el suplemento Winds of Magic, descritas en la página 22.",
-    "SETTINGS.useWoMInfluences" : "Usar las Influencias Malignas de Winds of Magic",
-    "SETTINGS.useWoMInfluencesHint" : "Usar las reglas de Influencias Malignas provistas en el suplemento Winds of Magic, descritas en la página 22.",
+    "SETTINGS.useWoMOvercast" : "Usar las Reglas de Prolongación de Vientos de la Magia",
+    "SETTINGS.useWoMOvercastHint" : "Usar las mecánicas de prolongación provistas en el suplemento Vientos de la Magia, descritas en la página 23.",
+    "SETTINGS.useWoMChannelling" : "Usar las Reglas de Canalización de Vientos de la Magia",
+    "SETTINGS.useWoMChannellingHint" : "Usar las reglas de canalización provistas en el suplemento Vientos de la Magia, descritas en la página 22.",
+    "SETTINGS.useWoMInfluences" : "Usar las Influencias Malignas de Vientos de la Magia",
+    "SETTINGS.useWoMInfluencesHint" : "Usar las reglas de Influencias Malignas provistas en el suplemento Vientos de la Magia, descritas en la página 22.",
     "SETTINGS.ChannellingIngredients" : "Ingredientes para Canalizar",
     "SETTINGS.ChannellingIngredientsHint" : "Hacer que los Ingredientes apliquen sus beneficios a los Chequeos de Canalización además de a los Chequeos de Lanzamiento.",
+    "SETTINGS.Menu" : {
+        "TableSettings" : "Ajustes de Tabla",
+        "TableSettingsLabel" : "Configura los Ajustes de Tabla",
+        "TableSettingsHint" : "Configura en que tablas se tira cuando existen varias con la misma clave.",
+
+        "HouseRules" : "Reglas caseras",
+        "HouseRulesLabel" : "Configura Reglas caseras",
+        "HouseRulesHint" : "Ajustes para reglas caseras comunes"
+    },
     
     "MOO.Prone": "<br><br><b>Regla de la Casa de Moo</b>: Se te considera una banda de alcance más lejano al determinar los ataques a distancia.",
     "MOO.Broken": "Estás aterrado, derrotado, en pánico, o de alguna forma convencido de que vas a morir. En tu turno, tu Movimiento y Acción debe usarse para huir lo más rápido posible hasta estar en un buen escondite más allá de la vista de cualquier enemigo; entonces puedes usar tu Acción en una Habilidad que te permita esconderte más eficientemente. También recibes un penalizador de –10 a todos los Chequeos que no involucren huir o esconderse.<br><br>No puedes hacer un Chequeo para recobrarte de estar Quebrantado si estás Trabado con un enemigo. Si no estás trabado, al final del cada Asalto, puedes intentar un Chequeo de Frialdad para eliminar un Estado de Quebrantado, con cada NE eliminado un Estado de Quebrantado extra, y la Dificultad está determinada por las circunstancias en las que te encuentras actualmente: es mucho más fácil recobrarse cuando te escondes detrás de un barril en un callejón lejos del peligro (Normal +20) que cuando estás a tres pasos de un Demonio esclavista clamando por tu sangre (Muy Difícil –30).<br><br>Si gastas un Asalto completo escondiéndote fuera de la línea de visión de cualquier enemigo, elimina 1 Estado de Quebrantado.<br><br><strike>Cuando todos los Estados de Quebrantado hayan sido eliminados, gana 1 Estado de Fatigado.</strike>",
@@ -993,6 +1245,7 @@
     "SHEET.Attacker" : "Atacante",
     "SHEET.LocationAP" : "PA de la Ubicación",
     "SHEET.AppliedTemplates" : "Plantillas aplicadas",
+    "SHEET.NewSkillHint" : "Escribe el nombre de la nueva Habilidad y selecciona su Característica", 
 
     "ACTOR.BasicSkillsTitle" : "Añadir Habilidades Básicas",
     "ACTOR.BasicSkillsPrompt": "¿Añadir Habilidades Básicas?",
@@ -1179,6 +1432,10 @@
     "Left Leg" : "Pierna izquierda",
     "Arms" : "Brazos",
     "Legs" : "Piernas",
+    "Front Right Leg" : "Pata delantera derecha",
+    "Front Left Leg" : "Pata delantera izquierda",
+    "Back Right Leg" : "Pata trasera derecha",
+    "Back Left Leg" : "Pata trasera izquierda",
     "Spell" : "Hechizo",
     "Total" : "Total",
     "Carries" : "Núm",
@@ -1493,8 +1750,7 @@
     "DIALOG.QuickcastingTooltip" : "Si renuncias a tu Movimiento y todas tus Acciones Gratuitas, puedes usar tu Turno para rápidamente Canalizar y Lanzar en la misma acción. Como estás precipitándote, aumenta la severidad de cualquier Disfunción sufrida en una tabla (p.ej. de Menor a Mayor o de Mayor a Catastrófica).",
     "DIALOG.EnterQuantity" : "¿Escribir Cantidad?",
     "DIALOG.PostQuantity" : "Enviar Cantidad",
-    "DIALOG.ItemQuantity" : "Cantidad de Objetos",
-    "DIALOG.QuantityHint" : "Cantidad de Objetos es la cantidad de objetos en cada envío.<br>La cantidad total reducida será Enviar Cantidad X Cantidad de Objetos<br>Seleccionar Infinita no reducirá la cantidad",
+    "DIALOG.PostQuantityContent" : "¿Cuantas veces puede ser conseguido este Objeto? Deja en blanco para no tener restricción.",
     "Post": "Enviar",
     "DIALOG.MemorizeSpell" : "Memorizar Hechizo",
     "DIALOG.MemorizeSpellContent" : "Memorizar este hechizo costará {xp} PX.",
@@ -1505,7 +1761,7 @@
     "DIALOG.ErrorMustSelectItem" : "Debes seleccionar al menos 1 Objeto",
     "LOG.CareerChange": "Cambio de carrera: {career}",
     "DIALOG.ItemDialog" : "Diálogo de Objeto",
-    "DIALOG.ChooseActor" : "Escoge un Actor para realizar el Chequeo",
+    "DIALOG.ChoosePassenger" : "Escoge pasajero",
 
     "CHAT.Quickcasting" : "Lanzamiento Rápido",
     "CHAT.CareerChoose" : "Escoge tu Carrera",
@@ -1586,7 +1842,8 @@
     "CHAT.PostMoreThanHave" : "No puedes enviar más de lo que tienes.",
     "CHAT.PostQuantityReduced" : "Cantidad reducida en {num}",
     "CHAT.NoMoreLeft" : "No quedan más instancias de Crédito.",
-    "CHAT.ExpReceived" : "Recibida <b>{amount}</b> de experiencia por <b>{reason}</b>",
+    "CHAT.ExpReceived" : "Recibida <b>{amount}</b> de experiencia por <b>{reason}</b>.",
+    "CHAT.ExpReceivedNoReason" : "Recibida <b>{amount}</b> experiencia.",
     "CHAT.DiseasesRules" : "<br>Consulta las enfermedades para sus Reglas de Contracción",
     "CHAT.CorruptionTest" : "<br><b>Haz click en un enlace de corrupción para mostrar un chequeo de Corrupción</b>",
     "CHAT.CorruptionFail" : "<b>{name}</b> gana {number} de Corrupción.",
@@ -1605,7 +1862,7 @@
     "CHAT.TestModifiers.DefenderMountLarger" : "Penalización por atacar al jinete de una montura más grande.",
     "CHAT.TestModifiers.SlowDefend" : "Atacante tiene una Arma Lenta",
     "CHAT.TestModifiers.WrapDefend" : "Atacante tiene un Arma Envolvente",
-    "CHAT.TestModifiers.IgnoreDefenderMountLarger" : "Penalizador para atacar al jinete anulado gracias al alcance del arma (Up in Arms).",
+    "CHAT.TestModifiers.IgnoreDefenderMountLarger" : "Penalizador para atacar al jinete anulado gracias al alcance del arma (¡A las Armas!).",
     "CHAT.SpreadPointBlank" : "Bocajarro: Daño aumentado en {damage}",
     "CHAT.SpreadExtreme" : "Extremo: Daño reducido en {damage}",
     "CHAT.CrewTest" : "Chequeo de Tripulación",
@@ -1752,7 +2009,7 @@
     "MARKET.Town" : "Pueblo",
     "MARKET.City" : "Ciudad",
     "MARKET.AvailabilityTest" : "Chequeo de Disponibilidad",
-    "MARKET.AvailWrongCommand": "Parámetros incorrectos. Parámetros esperados: <br>Tamaño de Asentamiento [Aldea,Pueblo,Ciudad]<br>Rareza [Común,Escaso,Raro,Exótico]<br>(opt.) Modificador de Tirada",
+    "MARKET.AvailWrongCommand": "Parámetros incorrectos. Parámetros esperados: Rareza [Común,Escaso,Raro,Exótico]<br><br>Tamaño de Asentamiento [Aldea,Pueblo,Ciudad]<br>(opt.) Modificador de Tirada",
     "MARKET.AvailCommandExample": "Ejemplo: /avail Aldea Raro 10",
     "MARKET.SettlementSize" : "Tipo de Asentamiento:",
     "MARKET.Rarity" : "Rareza:",
@@ -1770,7 +2027,7 @@
     "MARKET.PayCommand" : "Respuesta al Pago",
     "MARKET.PayRequest" : "Petición de Pago",
     "MARKET.CreditCommand" : "Respuesta a Crédito",
-    "MARKET.CreditRequest" : "Petición de Crédito",
+    "MARKET.CreditRequest" : "Recompensa",
     "MARKET.CreditCommandNotAllowed" : "Sólo a los DJs se les permite usar este comando.",
     "MARKET.PaidBy" : "Pagado por:",
     "MARKET.PaidFor": "<b>Producto comprado:</b> {product}",
@@ -1906,8 +2163,9 @@
 
     "WFRP4E.hitLocationTables.hitloc": "Estándar",
     "WFRP4E.hitLocationTables.snake": "Serpentina",
-    "WFRP4E.hitLocationTables.spider": "Arácnida", 
-    
+    "WFRP4E.hitLocationTables.spider": "Arácnida",
+    "Quadruped": "Cuadrúpedo",
+
     "WFRP4E.effectApplication.actor" : "Actor",
     "WFRP4E.effectApplication.item" : "Objeto",
     "WFRP4E.effectApplication.equipped" : "Al equipar el Objeto",
@@ -2129,6 +2387,8 @@
     "NAME.SeaLegsTalent" : "Equilibrio en cubierta",
     "NAME.Ogre": "Ogro",
 	"NAME.Lingering" : "Persistente",
+    "NAME.Amphibious" : "Anfibio",
+    "NAME.Flight" : "Vuelo",
     
     "SPEC.Any": "Cualquiera",
     "SPEC.Basic" : "Básica",
@@ -2162,7 +2422,18 @@
     "SPEC.Hearing" : "Oído",
     "SPEC.Smell" : "Olfato",
 
+
+    "SHEET.CharacterSheet" : "Ficha de Personaje",
+    "SHEET.NPCSheet" : "Ficha de PNJ",
+    "SHEET.CreatureSheet" : "Ficha de Criatura",
+    "SHEET.VehicleSheet" : "Ficha de Vehículo",
+    "SHEET.CharacterSheetNoTheme" : "Ficha de Personaje (Sin tema)",
+    "SHEET.NPCSheetNoTheme" : "Ficha de PNJ (Sin tema)",
+    "SHEET.CreatureSheetNoTheme" : "Ficha de Criatura (Sin tema)",
+    "SHEET.VehicleSheetNoTheme" : "Ficha de Vehículo (Sin tema)",
+
     "SHEET.DupPrompt" : "¿Quieres duplicar este objeto?",
+
     "SHEET.DupTitle" : "Duplicar objeto",
     "SHEET.SplitPrompt" : "Por favor introduce la cantidad a separar",
     "SHEET.SplitTitle" : "Dividir Objeto",
@@ -2180,6 +2451,8 @@
     "SHEET.Target" : "Objetivo",
     "SHEET.ToggleEffect" : "Conmutar Efecto",
     "SHEET.Additional" : "Adicional",
+    "SHEET.OtherCost": "Otro coste",
+    "SHEET.OtherCostPlaceholder": "Fórmula o número",
     "SHEET.ApplyEffect" : "Aplicar {effect}",
     "SHEET.InvokeEffect" : "Invocar {effect}",
     "SHEET.ExpChange" : "Cambio Gastado / Total",
@@ -2195,6 +2468,8 @@
     "SHEET.Improvised": "Arma Improvisada",
     "SHEET.Stomp": "Pisotear",
     "SHEET.GenerateName" : "Generar Nombre",
+    "SHEET.Randomize" : "Aleatorizar",
+    "SHEET.UnusedQualitiesHint" : "No tienes la Habilidad adecuada para usar esta Cualidad.",
     
     "DISEASE.IncubationFinished" : "Incubación de {disease} terminada. ",
 
@@ -2233,6 +2508,7 @@
     "ERROR.StandardTraitsOnVehicle" : "No puedes añadir Rasgos Estándar a un Vehículo",
     "ERROR.VehicleTraitsOnStandard" : "No puedes añadir Rasgos de Vehículo a este Actor",
     "ERROR.NoAvailableActors" : "¡No hay Actores en propiedad disponibles para elegir!",
+    "ERROR.SkillAlreadyExists" : "Ya existe una Habilidad con este nombre en este Actor",
     
     "Item Properties": "Propiedades del Objeto",
     "PROPERTY.Group" : "Grupo",
@@ -2329,11 +2605,13 @@
     "CHATOPT.UseFortuneReroll":"Usar un punto de Fortuna para repetir", 
     "CHATOPT.UseFortuneSL":"Usar un punto de Fortuna para añadir +1 NE", 
     "CHATOPT.DarkDeal": "Cerrar un Trato Oscuro y repetir (+1 Corrupción)",
-    "CHATOPT.OpposeTarget": "Enfrentar con Objetivos",
+    "CHATOPT.StartOpposed": "Comenzar Tirada enfrentada",
+    "CHATOPT.DefendOpposed": "Defender Tirada enfrentada",
     "CHATOPT.CompleteUnopposed": "Completar Todos sin Enfrentar",
     "CHATOPT.ApplyAllDamage": "Aplicar a Todos el Daño",
     "CHATOPT.Reroll": "Repetir Tirada",
     "CHATOPT.TotalPower": "Poder Total",
+    "CHATOPT.EditTest": "Editar Chequeo",
     
     "TRAVEL.TravelMessageBase": "De <b>{from}</b> hasta <b>{to}</b> : ",
     "TRAVEL.TravelMessageRoad": "<br><b>Carretera</b> : {road_distance} millas<br>&nbsp;&nbsp;En Coche : {road_days} días, el peligro es {road_danger_string}<br>&nbsp;&nbsp;En Caballo Pesado : {road_horse_heavy_days} días, el peligro es {road_danger_string}<br>&nbsp;&nbsp;En Caballo Rápido : {road_horse_fast_days} días, el peligro es {road_danger_string}<br>&nbsp;&nbsp;A Pie : {road_feet_days} días, el peligro es {road_danger_feet_string}",
@@ -2447,17 +2725,6 @@
 	
 
     "Actor Settings": "Ajustes de Actor",
-    "CONFIGURE.CalcTokenSize" : "Auto-calcular Tamaño de Ficha",
-    "CONFIGURE.CalcRun" : "Auto-calcular Velocidad de Correr",
-    "CONFIGURE.CalcWalk" : "Auto-calcular Velocidad de Caminar",
-    "CONFIGURE.CalcWounds" : "Auto-calcular Heridas",
-    "CONFIGURE.CalcCritWounds" : "Auto-calcular Heridas Críticas",
-    "CONFIGURE.CalcCorruption" : "Auto-calcular Corrupción",
-    "CONFIGURE.CalcMaxEnc" : "Auto-calcular Impedimenta Máxima",
-    "CONFIGURE.EquipPoints" : "Puntos de Equipo - Limita las armas equipadas",
-    "Hit Location Table" : "Ubicación de Impactos",
-    "CONFIGURE.AddActorEncumbrance" : "Añadir Impedimenta para Actores",
-    "CONFIGURE.MainHand" : "Mano Principal",
 
     "BUTTON.PostBug" : "Enviar un Agravio",
     "BUTTON.CharacterCreation" : "Creación de Personaje",
@@ -2520,12 +2787,13 @@
     "WFRP4E.MountButtonNotify" : "El actor de la izquierda ({mounter}) ha montado al actor de la derecha ({mountee})",
     "MountError": "Sólo puedes montar criaturas de mayor o igual tamaño.",
 
-    "Minor": "Menor",
-    "Moderate": "Moderado",
-    "Major": "Mayor",
     "minor": "Menor",
     "moderate": "Moderado",
     "major": "Mayor",
+    "Minor": "Menor",
+    "Moderate": "Moderado",
+    "Major": "Mayor",
+    "CORRUPTION.Exposure": "Exposición a Corrupción",
     "CORRUPTION.Minor": "Menor",
     "CORRUPTION.Moderate": "Moderado",
     "CORRUPTION.Major": "Mayor",
@@ -2716,7 +2984,7 @@
     "DIFFICULTY.Difficult": "Complicado (-10)",
     "DIFFICULTY.Hard": "Difícil (-20)",
     "DIFFICULTY.VHard": "Muy Difícil (-30)",
-    "DIFFICULTY.Futile": "Fútil (-40)",
+    "DIFFICULTY.Futile": "Inútil (-40)",
     "DIFFICULTY.Impossible": "Imposible (-50)",
 
     "DIFFICULTYNAME.VEasy": "Muy Fácil",
@@ -2726,7 +2994,7 @@
     "DIFFICULTYNAME.Difficult": "Complicado",
     "DIFFICULTYNAME.Hard": "Difícil",
     "DIFFICULTYNAME.VHard": "Muy Difícil",
-    "DIFFICULTYNAME.Futile": "Fútil",
+    "DIFFICULTYNAME.Futile": "Inútil",
     "DIFFICULTYNAME.Impossible": "Imposible",
 
     "DIFFICULTY.MooVEasy": "Muy Fácil (+40)",
@@ -2734,7 +3002,7 @@
     "DIFFICULTY.MooDifficult": "Complicado (-20)",
     "DIFFICULTY.MooHard": "Difícil (-30)",
     "DIFFICULTY.MooVHard": "Muy Difícil (-40)",
-    "DIFFICULTY.MooFutile": "Fútil (-50)",
+    "DIFFICULTY.MooFutile": "Inútil (-50)",
     "DIFFICULTY.MooImpossible": "Imposible (-60)",
 
     "Point Blank": "Quemarropa",
@@ -2745,7 +3013,7 @@
 
     "Career Selector": "Selector de Carrera",
     "SHEET.NoCareers": "No se encontraron Carreras",
-    "Exp Cost": "Coste de Exp",
+    "XP Cost": "Coste de PX",
     "Select": "Seleccionar",
 
     "Species Characteristics": "Características de Especie",
@@ -2759,7 +3027,7 @@
     "Minutes": "minutos",
     "Seconds": "segundos",
     "Treatment": "Tratamiento",
-    "Rounds": "asaltos",
+    "Round": "asalto",
 
     "Morrslieb - Currently On ": "Morrslieb - Actualmente Activada",
     "Morrslieb - Currently Off": "Morrslieb - Actualmente Desactivada",
@@ -2812,11 +3080,30 @@
 
     "SOCKET.SendingSocketRequest" : "Enviando solicitud de socket",
 
-    "WFRP4e Content Setup": "Ajustes del Contenido de WFRP4e",
-    "Setup": "Ajustes",
-    "WFRP4e Content Initialization": "Inicialización del Contenido de WFRP4e",
-    "Initialization": "Inicialización",
-    "Import or update the content from the WFRP4e Core Module": "Importa o actualiza el contenido del Módulo Básico de WFRP4e",
+
+    "WFRP4E.Properties.Slash" : "Las armas <em>Cortantes</em> concentran su poder de tal manera que provocan heridas abiertas. Si causas Daño crítico con el arma, el objetivo sufre 1 Estado @Condition[Sangrando] además de cualquier otro efecto del golpe crítico. Puedes gastar X Ventaja para que tu oponente sufra 1 Estado <em>Sangrando</em> adicional.",
+    "WFRP4E.Properties.Spread" : "<p>Las armas con la cualidad <em>Expansiva</em> disparan una nube creciente de proyectiles que pueden golpear a varios objetivos. Dependiendo de la distancia al objetivo, las armas con esta Cualidad se comportan de forma algo diferente.</p>    <div style='margin-left: 30px'><p><strong>A quemarropa</strong>: el disparo apunta a un solo individuo. Añade (Valor) al Daño del arma.</p>        <p><strong>De corto a largo alcance</strong>: El disparo se dirige a un individuo y a las criaturas visibles más cercanas (Valor). No puede haber dos objetivos de más de (Valor) yardas de distancia.</p>        <p><strong>Alcance extremo</strong>: igual que para corto a largo alcance, pero reduce también el daño del arma en (Valor).</p>    </div>",    
+    "WFRP4E.Properties.Unbalanced" : "El peso de algunas armas se concentra en la cabeza, lo que las hace ineficaces para bloquear ataques. Cuando esta arma se utiliza para oponerse a un ataque, se sufre un penalizador de -1 NE.",
+    "WFRP4E.Properties.Trip" : "Las armas con la Cualidad <em>Derribo</em> están diseñadas para enganchar la pierna o de otra manera hacer caer a su oponente. Después de golpearlo, puedes gastar 2 Ventajas y hacer un Chequeo Enfrentado de Fuerza/Atletismo./n Si tienes éxito, tu oponente sufre 1 Estado @Condition[Tumbado] (si están montados, sufren una caída de 2 yardas y luego sufren ese Estado). Si fracasas, no pasa nada distinto a lo habitual por no tener éxito en un Chequeo Enfrentado.",
+    "WFRP4E.Properties.Salvo" : "@UUID[Compendium.wfrp4e-up-in-arms.journals.l0NZFxzG4t0GoIFu.JournalEntryPage.Y4IiuJnk1S466SLx#salvas]{Salvas}",
+    "WFRP4E.Properties.Crewed" : "@UUID[Compendium.wfrp4e-up-in-arms.journals.l0NZFxzG4t0GoIFu.JournalEntryPage.Y4IiuJnk1S466SLx#dotación]{Dotación}",
+
+    "WFRP4E.Properties.ShieldAlternate" : "Cada vez que te enfrentes a un ataque con HA o la Habilidad de Cuerpo a cuerpo, te beneficias de una PA igual a la Protección de Escudo. Si tu arma tiene una Protección de Escudo de 2 o superior, también puedes usar tu escudo para bloquear a los disparos de proyectiles en tu línea de visión.",
+
+    "PROPERTY.Slash" : "Cortante",
+    "PROPERTY.Spread" : "Expansiva",
+    "PROPERTY.Trip" : "Derribo",
+    "PROPERTY.Unbalanced" : "Desequilibrada",
+    "PROPERTY.Crewed" : "Dotación",
+    "PROPERTY.Salvo" : "Salvas",
+    "SPEC.Catapult" : "Catapulta",
+    "WFRP4E.Conditions.Bleeding" : "<p>Estás sangrando mucho. Pierdes 1 Herida al final de cada Asalto, ignorando todos los modificadores. Además, sufres un penalizador -10 a cualquier Chequeo para resistir @Compendium[wfrp4e-core.items.kKccDTGzWzSXCBOb]{Heridas supurantes}, @Compendium[wfrp4e-core.items.1hQuVFZt9QnnbWzg]{Infección leve} o @Compendium[wfrp4e-core.items.M8XyRs9DN12XsFTQ]{Podredumbre sanguínea}. Si llegas a 0 Heridas, ya no pierdes más. Al final de cada turno, haz un Chequeo <strong>Desafiante (+0)</strong> de <strong>Aguante</strong> o sufres 1 Estado @Condition[Inconsciente] de forma inmediata.</p><p>Si estás inconsciente y perdiendo sangre, al final del Asalto tienes un 10% de probabilidades de morir por cada Estado <em>Sangrando</em> que tengas. Por ejemplo, si sufrieras 3 Estados <em>Sangrando</em>, morirías con una tirada de 1 a 30. Si sacas un doble, tu herida coagula un poco y pierdes 1 Estado <em>Sangrando</em>. No puedes recuperar la consciencia hasta que se eliminen todos los Estados <em>Sangrando</em> (ver @UUID[Compendium.wfrp4e-core.journals.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4]{Heridas}).</p><p>Un Estado <em>Sangrando</em> puede ser eliminado si se tiene éxito en un Chequeo <b>Normal (+20)</b> de <b>Sanar</b> con cada NE se elimina 1 Estado <em>Sangrando</em> o con cualquier hechizo u oración que cure Heridas, con 1 Estado eliminado por cada Herida curada. Véase también las reglas para @UUID[Compendium.wfrp4e-core.items.1wtW4N8l3UKwlLI3]{Vendaje}.</p><p>Una vez eliminados todos los Estados <em>Sangrando</em>, sufres 1 Estado @Condition[Fatigado].</p>",
+
+    "TRADE.CitrusFruit": "Cítricos",
+    "TRADE.Olives": "Aceitunas",
+    "TRADE.Saltfish": "Salazón",
+    "TRADE.Stone": "Piedra",
+
 
     "GMTOOLKIT.Message.UnexpectedNoChange" : "Algo inesperado ocurrió. No se han realizado cambios.",
     "GMTOOLKIT.Message.NoChangeMade" : "No se han realizado cambios.",
@@ -2832,22 +3119,24 @@
     "GMTOOLKIT.Settings.Advantage.PersistNotices.name" : "Notificaciones Persistentes de manejo de la Ventaja",
     "GMTOOLKIT.Settings.Advantage.PersistNotices.hint" : "Las notificaciones relativas a la Ventaja permanecen en pantalla hasta ser eliminadas manualmente. Por defecto, Foundry sólo mostrará tres notificaciones en pantalla a la vez, de modo que los nuevos mensajes pueden no ser visibles hasta que éstos hayan sido eliminados.",
     "GMTOOLKIT.Settings.Advantage.Automate.OpposedTest.name" : "Ventaja actualizada al resolver el chequeo enfrentado",
-    "GMTOOLKIT.Settings.Advantage.Automate.OpposedTest.hint" : "Incrementa la Ventaja para el personaje que gana el chequeo enfrentado en un combate activo. Elimina la Ventaja de las fichas perdedores (si no se usa la Ventaja Grupal). Esto se activa cuando el defensor tira.",
+    "GMTOOLKIT.Settings.Advantage.Automate.OpposedTest.hint" : "Incrementa la Ventaja para el personaje que gana el chequeo enfrentado en un combate activo. Elimina la Ventaja de las fichas perdedores (si no se usa la Ventaja de grupo). Esto se activa cuando el defensor tira.",
     "GMTOOLKIT.Settings.Advantage.Automate.UnopposedDamage.name" : "Actualizr Ventaja al Ser Más Astuto",
-    "GMTOOLKIT.Settings.Advantage.Automate.UnopposedDamage.hint" : "Incrementa la Ventaja para el personaje que inflige daño con un chequeo no enfrentado. Elimina la Ventaja de las fichas que reciben Heridas (si no se usa la Ventaja Grupal). Esto se activa al escoger una opción de Aplicar Daño de una tarjeta de resultado de chequeo en el chat.",
+    "GMTOOLKIT.Settings.Advantage.Automate.UnopposedDamage.hint" : "Incrementa la Ventaja para el personaje que inflige daño con un chequeo no enfrentado. Elimina la Ventaja de las fichas que reciben Heridas (si no se usa la Ventaja de grupo). Esto se activa al escoger una opción de Aplicar Daño de una tarjeta de resultado de chequeo en el chat.",
     "GMTOOLKIT.Settings.Advantage.Automate.SufferCondition.name" : "Actualizar Ventaja al sufrir un Estado",
-    "GMTOOLKIT.Settings.Advantage.Automate.SufferCondition.hint" : "Automaticamente elimina la Ventaja cuando un personaje gana un nuevo Estado durante el combate (si no se usa la Ventaja Grupal).",
+    "GMTOOLKIT.Settings.Advantage.Automate.SufferCondition.hint" : "Automaticamente elimina la Ventaja cuando un personaje gana un nuevo Estado durante el combate (si no se usa la Ventaja de grupo).",
     "GMTOOLKIT.Settings.Advantage.Automate.LoseMomentum.name" : "Perder inercia",
-    "GMTOOLKIT.Settings.Advantage.Automate.LoseMomentum.hint" : "Ventana al final de cada ronda para seleccionar combatientes que no han obtenido Ventaja durante el asalto, y reduce su Ventaja en 1 (si no se usa la Ventaja Grupal).",
+    "GMTOOLKIT.Settings.Advantage.Automate.LoseMomentum.hint" : "Ventana al final de cada ronda para seleccionar combatientes que no han obtenido Ventaja durante el asalto, y reduce su Ventaja en 1 (si no se usa la Ventaja de grupo).",
     "GMTOOLKIT.Settings.Advantage.Automate.CombatJoin.name" : "Eliminar Ventaja de la ficha al añadirlo al combate",
-    "GMTOOLKIT.Settings.Advantage.Automate.CombatJoin.hint" : "Eliminar Ventaja de fichas al añadirlas al asistente de combate (si no se usa la Ventaja Grupal), no al crear un encuentro vacío o al comienzo del combate.",
+    "GMTOOLKIT.Settings.Advantage.Automate.CombatJoin.hint" : "Eliminar Ventaja de fichas al añadirlas al asistente de combate (si no se usa la Ventaja de grupo), no al crear un encuentro vacío o al comienzo del combate.",
     "GMTOOLKIT.Settings.Advantage.Automate.CombatLeave.name" : "Eliminar Ventaja al abandonar el combate",
     "GMTOOLKIT.Settings.Advantage.Automate.CombatLeave.hint" : "Eliminar Ventaja de fichass al quitarlas del asistente de combate, en lugar de al concluir el combate.",
 
-    "GMTOOLKIT.Settings.TokenHudExtensions.Enabled.name" : "Habilitar Extensiones del Hud de Ficha",
+    "GMTOOLKIT.Settings.TokenHudExtensions.Enabled.name" : "Habilitar Extensiones del HUD de Ficha",
     "GMTOOLKIT.Settings.TokenHudExtensions.Enabled.hint" : "Crea descripciones emergentes e interacciones para los atributos clave y habilidades disponibles desde el hud de fichas controlados. Habilitado por defecto.",
     "GMTOOLKIT.Settings.TokenHudExtensions.AlwaysShowInitiative.name" : "Siempre Muestra Iniciativa en Extensión del Hud de Ficha",
     "GMTOOLKIT.Settings.TokenHudExtensions.AlwaysShowInitiative.hint" : "Si se deshabilita, los atajos y descripciones emergente de Iniciativa y Agilidad sólo estarán dsponibles en las escenas activas. Habilitado por defecto.",
+    "GMTOOLKIT.Settings.TokenHudExtensions.StatusEffectsBackground.name" : "Sobrescribir color de fondo del HUD de Efectos de Estado",
+    "GMTOOLKIT.Settings.TokenHudExtensions.StatusEffectsBackground.hint" : "Dejar en blanco para usar lo predeterminado por el sistema. Por defecto, GM Toolkit usa #CECECEFF. Especifica alternativas en cualquiera de los siguientes formatos, sin comillas: '#000000aa', 'rgba(0,0,0,0.6)', 'yellow'.",
     "GMTOOLKIT.TokenHudExtension.StatusChanged" : "{targetStatus} cambiado de {originalStatus} a {newStatus} por {targetName}",
     "GMTOOLKIT.TokenHudExtension.StatusNotChanged" : "{targetStatus} no ha sido cambiado a {originalStatus} por {targetName}",
     "GMTOOLKIT.TokenHudExtension.LittlePrayerResult" : "<p>{actorName} ofreció una Pequeña Plegaria a los Dioses ({littlePrayerResult}).</p>",
@@ -2906,7 +3195,7 @@
     "GMTOOLKIT.ResetFortune.Restored" : "La Fortuna ha sido restaurada",
     "GMTOOLKIT.ResetFortune.NoPlayerCharacters" : "No hay personajes jugadores a los que restaurar la Fortuna.",
 
-    "GMTOOLKIT.AddXP.Success" : "<p><strong>{recipient}.</strong> PX Totales: {XPTotal} -> {newXPTotal} | PX Actuales: {XPCurrent} -> {newXPCurrent}.</p>",
+    "GMTOOLKIT.AddXP.Success" : "<p><strong>{recipient}.</strong> PX Totales: {XPTotal} &rarr; {newXPTotal} | PX Actuales: {XPCurrent} &rarr; {newXPCurrent}.</p>",
     "GMTOOLKIT.AddXP.Flavor" : "Puntos de Experiencia Concedidos por {reason}",
 
     "GMTOOLKIT.Advantage.Increased" : "Ventaja de {actorName} aumentada de {startingAdvantage} a {newAdvantage}.",
@@ -2963,7 +3252,6 @@
     "GMTOOLKIT.Dialog.AddXP.Recipients.Half" : "Se recompensará con la mitad de Experiencia a: <br>{recipients}",
     "GMTOOLKIT.Dialog.AddXP.Prompt" : "¿Cuántos?",
     "GMTOOLKIT.Dialog.AddXP.Reason" : "Razón",
-    "GMTOOLKIT.Dialog.AddXP.InvalidXP" : "No se han realizado cambios. Añade un número válido de PX. Las fracciones se redondearán al número entero más cercano. Los números negativos se restarán del total del personaje",
     "GMTOOLKIT.Dialog.AddXP.Awarded" : "{award} PX concedidos a:",
 
     "GMTOOLKIT.Settings.SessionManagement.menu.name" : "Ajustes de la Gestión de Sesión",
@@ -3141,7 +3429,7 @@
 
     "GMTOOLKIT.ChatFlavour.Title" : "Editar Mensaje Descriptivo",
     "GMTOOLKIT.ChatFlavour.Placeholder" : "Describe brevemente el contexto del mensaje",
-    
+
   "WFRP4NPCGEN.actor.directory.button": "Generar PNJ",
   "WFRP4NPCGEN.compendium.load.title": "Cargando datos",
   "WFRP4NPCGEN.compendium.load.hint": "Por favor espera a la carga de datos de compendio",
@@ -3357,31 +3645,48 @@
   "tokenActionHud.wfrp4e.characteristic": "Característica",
   "tokenActionHud.wfrp4e.characteristics": "Características",
   "tokenActionHud.wfrp4e.combat": "Combate",
+  "tokenActionHud.wfrp4e.condition": "Estado",
   "tokenActionHud.wfrp4e.conditions": "Estados",
+  "tokenActionHud.wfrp4e.consumable": "Consumible",
   "tokenActionHud.wfrp4e.consumables": "Consumibles",
+  "tokenActionHud.wfrp4e.container": "Contenedor",
   "tokenActionHud.wfrp4e.containers": "Contenedores",
+  "tokenActionHud.wfrp4e.extendedTest": "Chequeo extendido",
   "tokenActionHud.wfrp4e.extendedTests": "Chequeos extendidos",
+  "tokenActionHud.wfrp4e.grimoire": "Grimorio",
   "tokenActionHud.wfrp4e.grimoires": "Grimorios",
   "tokenActionHud.wfrp4e.inventory": "Inventario",
   "tokenActionHud.wfrp4e.item": "Objeto",
   "tokenActionHud.wfrp4e.magic": "Magia",
+  "tokenActionHud.wfrp4e.prayer": "Plegaria",
+  "tokenActionHud.wfrp4e.prayersBlessing": "Bendición",
   "tokenActionHud.wfrp4e.prayersBlessings": "Bendiciones",
+  "tokenActionHud.wfrp4e.prayersMiracle": "Milagro",
   "tokenActionHud.wfrp4e.prayersMiracles": "Milagros",
+  "tokenActionHud.wfrp4e.scroll": "Pergamino mágico",
   "tokenActionHud.wfrp4e.scrolls": "Pergaminos mágicos",
+  "tokenActionHud.wfrp4e.skill": "Habilidad",
   "tokenActionHud.wfrp4e.skills": "Habilidades",
   "tokenActionHud.wfrp4e.skillsAdvanced": "Habilidades avanzadas",
   "tokenActionHud.wfrp4e.skillsBasic": "Habilidades básicas",
+  "tokenActionHud.wfrp4e.spell": "Hechizo",
   "tokenActionHud.wfrp4e.spells": "Hechizos",
   "tokenActionHud.wfrp4e.spellsArcane": "Hechizos Arcanos",
   "tokenActionHud.wfrp4e.spellsPetty": "Hechizos Menores",
+  "tokenActionHud.wfrp4e.talent": "Talento",
   "tokenActionHud.wfrp4e.talents": "Talentos",
   "tokenActionHud.wfrp4e.token": "Ficha",
+  "tokenActionHud.wfrp4e.trait": "Rasgo",
   "tokenActionHud.wfrp4e.traits": "Rasgos",
+  "tokenActionHud.wfrp4e.trapping": "Accesorio",
   "tokenActionHud.wfrp4e.trappings": "Accesorios",
   "tokenActionHud.wfrp4e.utility": "Utilidad",
+  "tokenActionHud.wfrp4e.weapon": "Arma",
   "tokenActionHud.wfrp4e.weapons": "Armas",
+  "tokenActionHud.wfrp4e.manualEffect": "Efecto manual",
   "tokenActionHud.wfrp4e.manualEffects": "Efectos manuales",
-  "tokenActionHud.wfrp4e.testIndependentEffects": "Chequeos de efectos independientes",
+  "tokenActionHud.wfrp4e.testIndependentEffect": "Chequeo de efecto independiente",
+  "tokenActionHud.wfrp4e.testIndependentEffects": "Chequeo de efectos independientes",
   "tokenActionHud.wfrp4e.actions.rollInitiative": "Tirar Iniciativa",
   "tokenActionHud.wfrp4e.actions.makeItemPile": "Convertir a Pila de objetos",
   "tokenActionHud.wfrp4e.actions.makeItemPiles": "Convertir a Pilas de objetos",
@@ -3395,11 +3700,13 @@
   "tokenActionHud.wfrp4e.actions.incomeRoll": "Tirar Salario",
   "tokenActionHud.wfrp4e.actions.increaseAdvantage": "Aumentar Ventaja",
   "tokenActionHud.wfrp4e.actions.decreaseAdvantage": "Diminuir Ventaja",
-  "tokenActionHud.wfrp4e.actions.advantage.batter": "Derribar",
+  "tokenActionHud.wfrp4e.actions.showHelp": "Ayuda",
+  "tokenActionHud.wfrp4e.actions.showHelpTooltip": "Mostrar ayuda de TAH",
+  "tokenActionHud.wfrp4e.actions.advantage.batter": "Golpear",
   "tokenActionHud.wfrp4e.actions.advantage.trick": "Truco",
   "tokenActionHud.wfrp4e.actions.advantage.additionalEffort": "Esfuerzo adicional",
-  "tokenActionHud.wfrp4e.actions.advantage.fleeFromHarm": "Huir del daño",
-  "tokenActionHud.wfrp4e.actions.advantage.additionalAction": "Acción Adicional",
+  "tokenActionHud.wfrp4e.actions.advantage.fleeFromHarm": "Huye del daño",
+  "tokenActionHud.wfrp4e.actions.advantage.additionalAction": "Acción adicional",
   "tokenActionHud.wfrp4e.actions.awardXP.awardXP": "Recompensar con PX",
   "tokenActionHud.wfrp4e.actions.awardXP.DialogTitle": "",
   "tokenActionHud.wfrp4e.actions.awardXP.Amount": "Cantidad",
@@ -3432,7 +3739,7 @@
   "tokenActionHud.wfrp4e.settings.bypassDefault.name": "Modo Ignorar por defecto",
   "tokenActionHud.wfrp4e.settings.bypassDefault.hint": "Si está seleccionado, todas las Tiradas ignorarán el Diálogo de tiradas por defecto. Si no lo está, todas las Tiradas mostrarán el Diálogo por defecto. Presionar la tecla Alt invierte este comportamiento (por ejemplo, manteniendo Alt mientras este ajuste está sin seleccionar ignrará el Diálogo).",
   "tokenActionHud.wfrp4e.settings.advantageDesc.name": "Mostrar descripciones de Ventaja",
-  "tokenActionHud.wfrp4e.settings.advantageDesc.hint": "Si está seleccionado, las acciones de Ventaja Grupal ejecutadas vía TAH mostrarán sus descripciones completas en el chat. Usar Ventaja Grupal requiere el módulo Up in Arms instalado y activado.",
+  "tokenActionHud.wfrp4e.settings.advantageDesc.hint": "Si está seleccionado, las acciones de Ventaja de grupo ejecutadas vía TAH mostrarán sus descripciones completas en el chat. Usar Ventaja de grupo requiere el módulo ¡A las Armas! instalado y activado.",
   "tokenActionHud.wfrp4e.settings.displayUnequipped.name": "Mostrar no equipado",
   "tokenActionHud.wfrp4e.settings.displayUnequipped.hint": "Si mostrar las armas no equipadas en la pestaña de Combate o no.",
   "tokenActionHud.wfrp4e.settings.groupLores.name": "Agrupar Saberes mágicos",
@@ -3440,5 +3747,42 @@
   "tokenActionHud.wfrp4e.settings.groupTrappings.name": "Agrupar Accesorios",
   "tokenActionHud.wfrp4e.settings.groupTrappings.hint": "Si mostrar los Accesorios agrupados en pestañas por categoria. Si está desactivado, los Accesorios se mostrarán como listas.",
   "tokenActionHud.wfrp4e.settings.maxCharacters.name": "Caracteres máximos",
-  "tokenActionHud.wfrp4e.settings.maxCharacters.hint": "Número máximo de caracteres mostrados en los nombres de las acciones. Escribir 0 para desactivar el recorte."
+  "tokenActionHud.wfrp4e.settings.maxCharacters.hint": "Número máximo de caracteres mostrados en los nombres de las acciones. Escribir 0 para desactivar el recorte.",
+  "tokenActionHud.wfrp4e.settings.magicBehaviour.name": "Comportamiento de la magia",
+  "tokenActionHud.wfrp4e.settings.magicBehaviour.hint": "¿Cómo debe manejarse el hacer click en los hechizos?",
+  "tokenActionHud.wfrp4e.settings.magicBehaviour.ask": "Preguntar siempre",
+  "tokenActionHud.wfrp4e.settings.magicBehaviour.cast": "Lanzar por defecto, canalizar con CTRL",
+  "tokenActionHud.wfrp4e.settings.magicBehaviour.channel": "Canalizar por defecto, lanzar con CTRL",
+  "tokenActionHud.Help.Title": "Token Action HUD WFRP4e — Ayuda",
+  "tokenActionHud.Help.Tabs.Cheatsheet": "Apuntes",
+  "tokenActionHud.Help.Tabs.Wiki": "TAH Core Wiki",
+  "tokenActionHud.Help.Mods.CTRL": "CTRL",
+  "tokenActionHud.Help.Mods.SHIFT": "MAY",
+  "tokenActionHud.Help.Mods.ALT": "ALT",
+  "tokenActionHud.Help.Header.ModuleOn": "Módulo en Foundry VTT",
+  "tokenActionHud.Help.Header.ProjectOn": "Proyecto en Github",
+  "tokenActionHud.Help.Header.CheckOtherModules": "Mira en mi perfil de FVTT para ver otros módulos",
+  "tokenActionHud.Help.Header.CoreSettings": "Ajustes básicos de TAH",
+  "tokenActionHud.Help.Header.Settings": "Ajustes de TAH WFRP4e",
+  "tokenActionHud.Help.LoadingWiki": "Cargando wiki...",
+  "tokenActionHud.Help.Wiki": "Wiki cargado de",
+  "tokenActionHud.Help.Action": "Acción",
+  "tokenActionHud.Help.Modifiers": "Modificadores clave",
+  "tokenActionHud.Help.Rollable": "Tirable",
+  "tokenActionHud.Help.Stackable": "Apilable",
+  "tokenActionHud.Help.RollDialog": "Abrir diálogo de tirada",
+  "tokenActionHud.Help.ItemSheet": "Mostrar hoja de objeto",
+  "tokenActionHud.Help.ParentItemSheet": "Mostrar hoja de objeto raíz",
+  "tokenActionHud.Help.PostChat": "Enviar objeto al chat",
+  "tokenActionHud.Help.BypassDialog": "Saltar diálogo",
+  "tokenActionHud.Help.ShiftMode": "Usa el modo de tirada alternativo (ver ajustes)",
+  "tokenActionHud.Help.DamageItem": "Daña objeto",
+  "tokenActionHud.Help.RepairItem": "Repara objeto",
+  "tokenActionHud.Help.TriggerEffect": "Dispara efecto",
+  "tokenActionHud.Help.UseAdvantageAction": "Usa acción de Ventaja",
+  "tokenActionHud.Help.ApplyCondition": "Aplica 1 nivel de Estado",
+  "tokenActionHud.Help.RemoveCondition": "Elimina 1 nivel de Estado",
+  "tokenActionHud.Help.ToggleCondition": "Alterna Estado",
+  "tokenActionHud.Help.AltMagicMethod": "Usa el comportamiento de magia alternativo, si el ajuste no es \"Preguntar siempre\"",
+  "tokenActionHud.Help.PerformUtilityAction": "Realizar acción de utilidad"
 }

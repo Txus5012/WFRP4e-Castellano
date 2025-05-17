@@ -1,11 +1,5 @@
 {
 	"label": "Tablas (B\u00E1sico)",
-	"mapping": {
-		"tables_folders": {
-			"path": "flags.wfrp4e-core.initialization-folder",
-			"converter": "diaries_folder"
-			}
-	},
     "folders": {
         "Career Tables": "Tablas de Carrera",
 		"Character Creation": "Creaci\u00F3n de Personaje",
@@ -16,12 +10,6 @@
 		"Hit Location": "Ubicaci\u00F3n de Impacto",
 		"Moo's Homebrew": "Reglas caseras de Moo"
     },
-	"mapping": {
-		"tables_folders": {
-			"path": "flags.wfrp4e-core.initialization-folder",
-			"converter": "diaries_folder"
-			}
-	},
 	"entries": [
 		{
 			"id": "Career - Dwarf",
@@ -1040,7 +1028,7 @@
 				"65-65": "\u2026necesita que los Personajes silencien a alguien\u2026",
 				"66-66": "\u2026necesita que los Personajes silencien a alguien\u2026",
 				"67-67": "\u2026necesita que los Personajes se infiltren tras las l\u00EDneas enemigas\u2026",
-				"67-68": "\u2026necesita que los Personajes se infiltren tras las l\u00EDneas enemigas\u2026",
+				"68-68": "\u2026necesita que los Personajes se infiltren tras las l\u00EDneas enemigas\u2026",
 				"69-69": "\u2026necesita que los Personajes le saquen de contrabando de la ciudad\u2026",
 				"70-70": "\u2026necesita que los Personajes le saquen de contrabando de la ciudad\u2026",
 				"71-71": "\u2026necesita que los Personajes agrien un poco de medicina en el Templo de Shallya\u2026",

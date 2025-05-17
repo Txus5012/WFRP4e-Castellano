@@ -81,6 +81,7 @@
 			"path": "system.incubation.unit",
 			"converter": "disease_units"
 			},
+		"incubation_text": "system.incubation.text",
 		"diseases_duration": {
 			"path": "system.duration.unit",
 			"converter": "disease_units"
@@ -1969,7 +1970,7 @@
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.h7GdfctKdjWL0Ejp]{Mercader}</p>"
 		},
 		{
-			"id": "Trapper",
+			"id": "LYBKDZ0AhutYewfD",
 			"name": "Trampero",
 			"skills": ["Carisma animal","Escalar","Aguante","Sabiduría académica (Bestias)","Supervivencia","Percepción","A distancia (Honda)","Poner trampas"],
 			"talents": ["Errante","Experto en trampas","Recio","Zancadas (Cualquiera)"],
@@ -2966,7 +2967,7 @@
 				"scriptData": [
 					{"label":"Setas rusulas de la locura"},
 					{"label":"Furia"},
-					{"label":"Efecto eliminado","script":"\n\nif (![\"Goblin\", \"Orco\"].includes(this.actor.system.details.species.value)) {\n    let test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), { skipTargets: true, skipTargets: true, appendTitle: ` - ${this.effect.name}` })\n    await test.roll();\n    if (test.failed) {\n        let infection = await fromUuid(\"Compendium.wfrp4e-core.items.Item.1hQuVFZt9QnnbWzg\")\n        this.actor.createEmbeddedDocuments(\"Item\", [infection])\n    }\n}\n\n// Since wounds change when the effect is deleted, need to wait until after \n// the max wounds have been recalculated to apply damage\nwarhammer.utility.sleep(1000).then(async () => {\n    let roll = await new Roll(\"1d10\").roll();\n\n    roll.toMessage(this.script.getChatData());\n    this.script.message(await this.actor.applyBasicDamage(roll.total, { damageType: game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL, suppressMsg: true }))\n\n})"}
+					{"label":"Efecto eliminado","script":"\n\nif (![\"Goblin\", \"Orco\"].includes(this.actor.system.details.species.value)) {\n    let test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), { skipTargets: true, skipTargets: true, appendTitle: ` - ${this.effect.name}` })\n    await test.roll();\n    if (test.failed) {\n        let infection = await fromUuid(\"Compendium.wfrp4e-core.items.Item.1hQuVFZt9QnnbWzg\")\n        this.actor.createEmbeddedDocuments(\"Item\", [infection])\n    }\n}\n\n// Since wounds change when the effect is deleted, need to wait until after \n// the max wounds have been recalculated to apply damage\nwarhammer.utility.sleep(1000).then(async () => {\n    let roll = await new Roll(\"1d10\").roll({allowInteractive : false});\n\n    roll.toMessage(this.script.getChatData());\n    this.script.message(await this.actor.applyBasicDamage(roll.total, { damageType: game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL, suppressMsg: true }))\n\n})"}
 					]
 				},
 				{
@@ -3709,7 +3710,7 @@
 			"effects": [{
 				"name":"Brazo muy sacudido",
 				"scriptData": [
-					{"label":"Brazo muy sacudido","script":"let location = this.item.system.location.key;\n\nif (location)\n{\n    let dropped = this.item.system.weaponsAtLocation;\n\n    if (dropped.length)\n    {\n        this.script.notification(`Dejas caer ${dropped.map(i => i.name).join(\", \")}!`)\n        for(let weapon of dropped)\n        {\n            await weapon.system.toggleEquip();\n        }\n    }\n}\n\nlet roll = await new Roll(\"max(1, 1d10 - @system.characteristics.t.bonus)\", this.actor).roll()\n\nroll.toMessage(this.script.getChatData({flavor : `${this.effect.name} (Duration)`}));\n\nthis.effect.updateSource({\"duration.rounds\" : roll.total})"},
+					{"label":"Brazo muy sacudido","script":"let location = this.item.system.location.key;\n\nif (location)\n{\n    let dropped = this.item.system.weaponsAtLocation;\n\n    if (dropped.length)\n    {\n        this.script.notification(`Dejas caer ${dropped.map(i => i.name).join(\", \")}!`)\n        for(let weapon of dropped)\n        {\n            await weapon.system.toggleEquip();\n        }\n    }\n}\n\nlet roll = await new Roll(\"max(1, 1d10 - @system.characteristics.t.bonus)\", this.actor).roll({allowInteractive : false})\n\nroll.toMessage(this.script.getChatData({flavor : `${this.effect.name} (Duration)`}));\n\nthis.effect.updateSource({\"duration.rounds\" : roll.total})"},
 					{"label":"Prevenir uso del brazo","script":"args.abort = true;\nthis.script.notification(`¡No puedes usar el  ${this.item.system.location.value}!`, \"error\")"}
 					]
 				}]
@@ -3734,6 +3735,24 @@
 				"scriptData": [
 					{"label":"Chequeos relacionados con la vista"},
 					{"label":"Bonificador a los ataques cuerpo a cuerpo"}
+					]
+				}]
+		},
+		{
+			"id": "Bleeding hand",
+			"name": "Mano sangrante",
+			"description": "<p>Tienes un buen corte en la mano, lo que hace que te cueste trabajo empuñar las cosas sin que te resbalen. Sufres 1 Estado de @Condition[Sangrando]. Mientras sufres de dicho Estado, haz un Chequeo <strong>Normal (+20)</strong> de <strong>Destreza</strong> antes de llevar a cabo acción alguna que requiera tener algo firmemente sujeto en dicha mano; si fallas, el objeto resbala.</p>",
+			"effects": [{
+				"name":"Sangrando",
+				"scriptData": [
+					{"label":"Sangrando"}
+					]
+				},
+				{
+				"name":"Mano sangrante",
+				"scriptData": [
+					{"label":"Chequeo de Destreza","script":"let location = this.item.system.location.key\nlet test = await this.actor.setupCharacteristic(\"dex\", {context : {failure : `<strong>${this.effect.name}</strong>: ¡Deja caer el objeto!`}, skipTargets: true, appendTitle : \" - \" + this.effect.name, fields : {difficulty : \"average\"}})\nawait test.roll();\n\n\nif (location && test.failed)\n{\n    let dropped = this.item.system.weaponsAtLocation;\n\n    if (dropped.length)\n    {\n        this.script.notification(`Deja caer ${dropped.map(i => i.name).join(\", \")}!`)\n        for(let weapon of dropped)\n        {\n            await weapon.system.toggleEquip();\n        }\n    }\n}\n\nreturn test.succeeded"},
+					{"label":"Marcado en diálogo"}
 					]
 				}]
 		},
@@ -4131,7 +4150,7 @@
 				}]
 		},
 		{
-			"id": "8GrHGyhYlbdxqluu",
+			"id": "Dislocated Knee",
 			"name": "Rodilla dislocada",
 			"description": "<p>Tu rodilla se sale de su sitio. Sufres el Estado @Condition[Tumbado]. Debes superar un Chequeo <strong>Difícil (-20)</strong> de <strong>Aguante</strong>, o sufres 1 Estado de @Condition[Aturdido], que no se elimina hasta que recibes Atención médica. Después de recibirla, debes superar un Chequeo <strong>Prolongado Normal (+20)</strong> de <strong>Sanar</strong>, en el que necesitas 6 NE para recolocar la rodilla, en cuyo momento recuperas su uso. Tu Movimiento se reduce a la mitad y todos los Chequeos hechos con esta pierna sufren un penalizador -10 durante [[/r d10]] días.</p>",
 			"effects": [{
@@ -4462,7 +4481,7 @@
 				{
 				"name":"Mandíbula aplastada",
 				"scriptData": [
-					{"label":"Mandíbula aplastada","script":"brokenbone = await fromUuid(\"Compendium.wfrp4e-core.items.hCadFsTRvLN9faaY\")\nteeth = await fromUuid(\"Compendium.wfrp4e-core.items.fBcZhOBn8IpoVqQ1\")\ntongue = await fromUuid(\"Compendium.wfrp4e-core.items.rkJA1DlK51QuRlJy\")\nbrokenbone = brokenbone.toObject();\nteeth = teeth.toObject();\ntongue = tongue.toObject();\n\n\nlet roll = await new Roll(\"1d10\").roll();\nroll.toMessage(this.script.getChatData({flavor : \"Dientes perdidos\"}))\n\nteeth.system.location.value = `${roll.total} ${teeth.system.location.value}`\nbrokenbone.system.location.value = \"Mandíbula\"\nthis.actor.createEmbeddedDocuments(\"Item\", [brokenbone, teeth, tongue])\n\nlet test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {fields: {difficulty : \"vhard\"}, skipTargets: true, appendTitle : ` - ${this.effect.name}`})\nawait test.roll();\nif (test.failed)\n{\n    this.actor.addCondition(\"unconscious\")\n}"}
+					{"label":"Mandíbula aplastada","script":"brokenbone = await fromUuid(\"Compendium.wfrp4e-core.items.hCadFsTRvLN9faaY\")\nteeth = await fromUuid(\"Compendium.wfrp4e-core.items.fBcZhOBn8IpoVqQ1\")\ntongue = await fromUuid(\"Compendium.wfrp4e-core.items.rkJA1DlK51QuRlJy\")\nbrokenbone = brokenbone.toObject();\nteeth = teeth.toObject();\ntongue = tongue.toObject();\n\n\nlet roll = await new Roll(\"1d10\").roll({allowInteractive : false});\nroll.toMessage(this.script.getChatData({flavor : \"Dientes perdidos\"}))\n\nteeth.system.location.value = `${roll.total} ${teeth.system.location.value}`\nbrokenbone.system.location.value = \"Mandíbula\"\nthis.actor.createEmbeddedDocuments(\"Item\", [brokenbone, teeth, tongue])\n\nlet test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {fields: {difficulty : \"vhard\"}, skipTargets: true, appendTitle : ` - ${this.effect.name}`})\nawait test.roll();\nif (test.failed)\n{\n    this.actor.addCondition(\"unconscious\")\n}"}
 					]
 				}]
 		},
@@ -4727,7 +4746,7 @@
 				{
 				"name":"Boca machacada",
 				"scriptData": [
-					{"label":"Boca machacada","script":"teeth = await fromUuid(\"Compendium.wfrp4e-core.items.fBcZhOBn8IpoVqQ1\")\nteeth = teeth.toObject();\n\nlet roll = await new Roll(\"1d10\").roll();\nroll.toMessage(this.script.getChatData({flavor : \"Dientes perdidos\"}))\nteeth.system.location.value = `${roll.total} ${teeth.system.location.value}`\nthis.actor.createEmbeddedDocuments(\"Item\", [teeth])"}
+					{"label":"Boca machacada","script":"teeth = await fromUuid(\"Compendium.wfrp4e-core.items.fBcZhOBn8IpoVqQ1\")\nteeth = teeth.toObject();\n\nlet roll = await new Roll(\"1d10\").roll({allowInteractive : false});\nroll.toMessage(this.script.getChatData({flavor : \"Dientes perdidos\"}))\nteeth.system.location.value = `${roll.total} ${teeth.system.location.value}`\nthis.actor.createEmbeddedDocuments(\"Item\", [teeth])"}
 					]
 				}]
 		},
@@ -4881,7 +4900,7 @@
 				"name":"Esguince de tobillo",
 				"scriptData": [
 					{"label":"Esguince de tobillo"},
-					{"label":"Duración","script":"let roll = await new Roll(\"1d10\").roll()\n\nroll.toMessage(this.script.getChatData({flavor : `${this.effect.name} (Duración)`}));\n\nthis.effect.updateSource({\"duration.rounds\" : roll.total})"}
+					{"label":"Duración","script":"let roll = await new Roll(\"1d10\").roll({allowInteractive : false})\n\nroll.toMessage(this.script.getChatData({flavor : `${this.effect.name} (Duración)`}));\n\nthis.effect.updateSource({\"duration.rounds\" : roll.total})"}
 					]
 				}]
 		},
@@ -4897,14 +4916,14 @@
 				}]
 		},
 		{
-			"id": "wnYgHZm503oOERSf",
+			"id": "Twisted Knee",
 			"name": "Rodilla dislocada",
 			"description": "<p>Tu rodilla se dobla más allá de lo posible. Tus Chequeos de Agilidad sufren un penalizador -20 durante [[/r 1d10]] asaltos.</p>",
 			"effects": [{
 				"name":"Rodilla dislocada",
 				"scriptData": [
 					{"label":"Rodilla dislocada"},
-					{"label":"Duración","script":"let roll = await new Roll(\"1d10\").roll()\n\nroll.toMessage(this.script.getChatData({flavor : `${this.effect.name} (Duración)`}));\n\nthis.effect.updateSource({\"duration.rounds\" : roll.total})"}
+					{"label":"Duración","script":"let roll = await new Roll(\"1d10\").roll({allowInteractive : false})\n\nroll.toMessage(this.script.getChatData({flavor : `${this.effect.name} (Duración)`}));\n\nthis.effect.updateSource({\"duration.rounds\" : roll.total})"}
 					]
 				}]
 		},
@@ -4923,7 +4942,7 @@
 				"scriptData": [
 					{"label":"Sin aliento"},
 					{"label":"Mitad de Movimiento"},
-					{"label":"Duración","script":"let roll = await new Roll(\"1d10\").roll()\n\nroll.toMessage(this.script.getChatData({flavor : `${this.effect.name} (Duración)`}));\n\nthis.effect.updateSource({\"duration.rounds\" : roll.total})"}
+					{"label":"Duración","script":"let roll = await new Roll(\"1d10\").roll({allowInteractive : false})\n\nroll.toMessage(this.script.getChatData({flavor : `${this.effect.name} (Duración)`}));\n\nthis.effect.updateSource({\"duration.rounds\" : roll.total})"}
 					]
 				}]
 		},
@@ -4934,7 +4953,7 @@
 			"effects": [{
 				"name":"Brazo distendido",
 				"scriptData": [
-					{"label":"Brazo distendido","script":"let location = this.item.system.location.key;\n\nif (location)\n{\n    let dropped = this.item.system.weaponsAtLocation;\n\n    if (dropped.length)\n    {\n        this.script.notification(`¡Dejado caer ${dropped.map(i => i.name).join(\", \")}!`)\n        for(let weapon of dropped)\n        {\n            await weapon.system.toggleEquip();\n        }\n    }\n}\n\nlet roll = await new Roll(\"1d10\").roll()\n\nroll.toMessage(this.script.getChatData({flavor : `${this.effect.name} (Duración)`}));\n\nthis.effect.updateSource({\"duration.rounds\" : roll.total})"},
+					{"label":"Brazo distendido","script":"let location = this.item.system.location.key;\n\nif (location)\n{\n    let dropped = this.item.system.weaponsAtLocation;\n\n    if (dropped.length)\n    {\n        this.script.notification(`¡Dejado caer ${dropped.map(i => i.name).join(\", \")}!`)\n        for(let weapon of dropped)\n        {\n            await weapon.system.toggleEquip();\n        }\n    }\n}\n\nlet roll = await new Roll(\"1d10\").roll({allowInteractive : false})\n\nroll.toMessage(this.script.getChatData({flavor : `${this.effect.name} (Duración)`}));\n\nthis.effect.updateSource({\"duration.rounds\" : roll.total})"},
 					{"label":"Prevenir uso del brazo","script":"args.abort = true;\nthis.script.notification(`¡No puedes usar el ${this.item.system.location.value}!`, \"error\")"}
 					]
 				}]
@@ -4946,7 +4965,7 @@
 			"effects": [{
 				"name":"Clavícula dislocada",
 				"scriptData": [
-					{"label":"Clavícula dislocada","script": "let location = (Math.ceil(CONFIG.Dice.randomUniform() * 2) == 2 ? \"r\" : \"l\") + \"Arm\"\n\nif (location == \"lArm\")\n{\n\tthis.script.notification(\"Sacado izquierdo\")\n}\nelse if (location == \"rArm\")\n{\n\tthis.script.notification(\"Sacado derecho\")\n}\n\nthis.effect.updateSource({\"flags.wfrp4e.location\" : location});\n\nif (location)\n{\n    let dropped = this.actor.itemTypes.weapon.filter(i => i.isEquipped & i.system.usesHands.includes(location));\n\n    if (dropped.length)\n    {\n        this.script.notification(`¡Dejado caer ${dropped.map(i => i.name).join(\", \")}!`)\n        for(let weapon of dropped)\n        {\n            await weapon.system.toggleEquip();\n        }\n    }\n}\n\nlet roll = await new Roll(\"1d10\").roll()\n\nroll.toMessage(this.script.getChatData({flavor : `${this.effect.name} (Duración)`}));\n\nthis.effect.updateSource({\"duration.rounds\" : roll.total})"},
+					{"label":"Clavícula dislocada","script": "let location = (Math.ceil(CONFIG.Dice.randomUniform() * 2) == 2 ? \"r\" : \"l\") + \"Arm\"\n\nif (location == \"lArm\")\n{\n\tthis.script.notification(\"Sacado izquierdo\")\n}\nelse if (location == \"rArm\")\n{\n\tthis.script.notification(\"Sacado derecho\")\n}\n\nthis.effect.updateSource({\"flags.wfrp4e.location\" : location});\n\nif (location)\n{\n    let dropped = this.actor.itemTypes.weapon.filter(i => i.isEquipped & i.system.usesHands.includes(location));\n\n    if (dropped.length)\n    {\n        this.script.notification(`¡Dejado caer ${dropped.map(i => i.name).join(\", \")}!`)\n        for(let weapon of dropped)\n        {\n            await weapon.system.toggleEquip();\n        }\n    }\n}\n\nlet roll = await new Roll(\"1d10\").roll({allowInteractive : false})\n\nroll.toMessage(this.script.getChatData({flavor : `${this.effect.name} (Duración)`}));\n\nthis.effect.updateSource({\"duration.rounds\" : roll.total})"},
 					{"label":"Prevenir uso del brazo","script":"args.abort = true;\nthis.script.notification(`¡No puedes usar el ${game.wfrp4e.config.locations[this.effect.getFlag(\"wfrp4e\", \"location\")]}!`, \"error\")"}
 					]
 				}]
@@ -4982,7 +5001,7 @@
 			"name": "Herida supurante",
 			"description": "<p>Los cortes y las abrasiones infectados son moneda común, lo que significa que existen muchas supersticiones sobre cómo tratarlos. Los emplastos hechos de estiércol envuelto en hojas, la piel de sapo y las plumas de paloma son muy comunes, igual que frotar la herida contra el buen suelo de Sigmar. Muchos físicos tachan de tonterías dichas prácticas, y prefieren curaciones más científicas, como por ejemplo mezclar la bilis de un buey negro con tres cucharadas de la orina del paciente y media cucharada de sal marina, lo que después se aplica a la herida ulcerada y llena de pus. Los gritos que ello provoca demuestran lo efectivo que es el remedio.</p>",
 			"contraction": "Si fallas un Chequeo Fácil (+40) de Aguante después de un combate con una criatura que tiene el rasgo Infectada (ver Bestiario). También puedes desarrollar una Herida supurante a partir de una Infección leve.",
-			"incubation": "1d10 días, o instantáneamente si se desarrolla a partir de otro síntoma.",
+			"incubation_text": "o instantáneamente si se desarrolla a partir de otro síntoma.",
 			"symptoms": "Fiebre, Herido, Malestar, Persistente (Desafiante)",
 			"effects": [{
 				"name":"Fiebre",
@@ -5302,6 +5321,11 @@
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Arte}"
 		},
 		{
+			"id": "Art (Writing)",
+			"name": "Arte (Escritura)",
+			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Arte}"
+		},
+		{
 			"id": "Athletics",
 			"name": "Atletismo",
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.Ss6Gp732GjscYke0]{Atletismo}"
@@ -5491,6 +5515,11 @@
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Hablar idioma}"
 		},
 		{
+			"id": "Language (Battle)",
+			"name": "Hablar idioma (Lengua de Batalla)",
+			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Hablar idioma}"
+		},
+		{
 			"id": "Language (Bretonnian)",
 			"name": "Hablar idioma (Bretoniano)",
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Hablar idioma}"
@@ -5518,6 +5547,11 @@
 		{
 			"id": "Language (Grumbarth)",
 			"name": "Hablar idioma (Grumbarth)",
+			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Hablar idioma}"
+		},
+		{
+			"id": "Language (Guilder)",
+			"name": "Hablar idioma (Gremial)",
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Hablar idioma}"
 		},
 		{
@@ -5551,6 +5585,11 @@
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Hablar idioma}"
 		},
 		{
+			"id": "Language (s Choice)",
+			"name": "Hablar idioma (A elección del DJ)",
+			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Hablar idioma}"
+		},
+		{
 			"id": "Language (Thieves Tongue)",
 			"name": "Hablar idioma (Lengua de Ladrones)",
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Hablar idioma}"
@@ -5573,6 +5612,11 @@
 		{
 			"id": "Lore ()",
 			"name": "Sabiduría académica ()",
+			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Sabiduría académica}"
+		},
+		{
+			"id": "Lore (Anatomy)",
+			"name": "Sabiduría académica (Anatomía)",
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Sabiduría académica}"
 		},
 		{
@@ -5601,8 +5645,18 @@
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Sabiduría académica}"
 		},
 		{
+			"id": "Lore (Local)",
+			"name": "Sabiduría académica (Local)",
+			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Sabiduría académica}"
+		},
+		{
 			"id": "Lore (Magick)",
 			"name": "Sabiduría académica (Magia)",
+			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Sabiduría académica}"
+		},
+		{
+			"id": "Lore (Medicine)",
+			"name": "Sabiduría académica (Medicina)",
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Sabiduría académica}"
 		},
 		{
@@ -5738,6 +5792,11 @@
 		{
 			"id": "Play (Bagpipe)",
 			"name": "Tocar (Gaita)",
+			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.N63wZOWw6ZLYnePN]{Tocar}"
+		},
+		{
+			"id": "Play (Drum)",
+			"name": "Tocar (Tambor)",
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.N63wZOWw6ZLYnePN]{Tocar}"
 		},
 		{
@@ -5885,6 +5944,12 @@
 			"name": "Navegar (Navío lobo)",
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.DLrOPZtVMLgSyxaj]{Navegar}"
 		},
+
+		{
+			"id": "Secret Signs",
+			"name": "Lengua secreta",
+			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.X2FppoPGuEwJKssM]{Lengua secreta}"
+		},
 		{
 			"id": "Secret Signs ()",
 			"name": "Lengua secreta ()",
@@ -5976,6 +6041,11 @@
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu]{Oficio}"
 		},
 		{
+			"id": "Trade (Barber)",
+			"name": "Oficio (Barbero)",
+			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu]{Oficio}"
+		},
+		{
 			"id": "Trade (Calligrapher)",
 			"name": "Oficio (Calígrafo)",
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu]{Oficio}"
@@ -5998,6 +6068,11 @@
 		{
 			"id": "Trade (Embalmer)",
 			"name": "Oficio (Embalsamador)",
+			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu]{Oficio}"
+		},
+		{
+			"id": "Trade (Scribe)",
+			"name": "Oficio (Escriba)",
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu]{Oficio}"
 		},
 		{
@@ -6335,7 +6410,7 @@
 			"effects": [{
 				"name":"Égida de Aqshy",
 				"scriptData": [
-					{"label":"Custodiado","script":"let useWard = await Dialog.wait({\n\ttitle : this.effect.name,\n\tcontent : `<p>¿Usar Custodiado provisto por <strong>${this.effect.name}</strong>?`,\n\tbuttons : {\n\t\tyes : {\n\t\t\tlabel : \"Sí\",\n\t\t\tcallback: () => {\n\t\t\t\treturn true;\n\t\t\t}\n\t\t},\n\t\tno : {\n\t\t\tlabel: \"No\",\n\t\t\tcallback: () => {\n\t\t\t\treturn false;\n\t\t\t}\n\t\t}\n\t}\n})\n\nif (useWard)\n\targs.ward = 9;"},
+					{"label":"Custodiado","script":"let useWard = await foundry.applications.api.DialogV2.confirm({\n\tcontent : `<p>¿Usar Custodiado provisto por <strong>${this.effect.name}</strong>?`,\n\twindow : {\n\t\ttitle : this.effect.name,\t}\n})\n\nif (useWard)\n\targs.ward = 9;"},
 					{"label":"Ignorar Ardiendo","script":"let ablaze = this.actor.hasCondition(\"ablaze\");\nif (ablaze)\n{\n\tablaze?.delete();\n\tthis.script.notification(\"Ignorar Ardiendo\");\n}\n"}
 					]
 				}]
@@ -6347,7 +6422,7 @@
 			"effects": [{
 				"name":"Escudo contra las flechas",
 				"scriptData": [
-					{"label":"Escudo contra las flechas","script":"if (args.opposedTest?.attackerTest?.item?.system?.isRanged) \n{\n    let choice = await Dialog.wait({\n        title: this.effect.name,\n        content: `<p>¿Abortar daño con <strong>${this.effect.name}</strong>?`,\n        buttons: {\n            yes: {\n                label: \"Sí\",\n                callback: () => {\n                    return true;\n                }\n            },\n            no: {\n                label: \"No\",\n                callback: () => {\n                    return false;\n                }\n            }\n        }\n    })\n\n    if (choice)\n    {\n        args.abort = `<strong>${this.effect.name}</strong>: Daño cancelado`\n    }\n}"}
+					{"label":"Escudo contra las flechas","script":"if (args.opposedTest?.attackerTest?.item?.system?.isRanged) \n{\n    let choice = await foundry.applications.api.DialogV2.confirm({window: {title : this.item.name}, content : `<p>¿Abortar daño con <strong>${this.effect.name}</strong>?</p>`})\n\n    if (choice)\n    {\n        args.abort = `<strong>${this.effect.name}</strong>: Daño cancelado`\n    }\n}"}
 					]
 				}]
 		},
@@ -6832,7 +6907,7 @@
 			"effects": [{
 				"name":"Cauterizar",
 				"scriptData": [
-					{"label":"Cauterizar","script":"let roll = (await new Roll(\"1d10\").roll())\nroll.toMessage({flavor: \"Heridas curadas\", speaker : {alias : this.actor.name}})\n\nthis.actor.modifyWounds(roll.total)\n\nthis.actor.hasCondition(\"bleeding\")?.delete();"}
+					{"label":"Cauterizar","script":"let roll = (await new Roll(\"1d10\").roll({allowInteractive : false}))\nroll.toMessage({flavor: \"Heridas curadas\", speaker : {alias : this.actor.name}})\n\nthis.actor.modifyWounds(roll.total)\n\nthis.actor.hasCondition(\"bleeding\")?.delete();"}
 					]
 				}]
 		},
@@ -6844,7 +6919,7 @@
 				"name":"Escudo cerúleo",
 				"scriptData": [
 					{"label":"Escudo cerúleo"},
-					{"label":"Daño cerúleo","script":"if ((args.opposedTest.attackerTest.item && args.opposedTest.attackerTest.item.isMelee) || (args.opposedTest.attackerTest.item && !args.opposedTest.attackerTest.item.name.includes(\"A distancia\")))\n{\n    let choice = await Dialog.wait({\n        title: this.effect.name,\n        content: `<p>¿Aplicar daño con <strong>${this.effect.name}</strong> al atacante?`,\n        buttons: {\n            yes: {\n                label: \"Sí\",\n                callback: () => {\n                    return true;\n                }\n            },\n            no: {\n                label: \"No\",\n                callback: () => {\n                    return false;\n                }\n            }\n        }\n    })\n\n    if (choice)\n    {\n        this.script.message(await args.attacker.applyBasicDamage(this.actor.system.characteristics.wp.bonus, {damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_AP, suppressMsg : true}));\n    }\n}"}
+					{"label":"Daño cerúleo","script":"if ((args.opposedTest.attackerTest.item && args.opposedTest.attackerTest.item.isMelee) || (args.opposedTest.attackerTest.item && !args.opposedTest.attackerTest.item.name.includes(\"A distancia\")))\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({window : {title : this.effect.name}, content : `<p>¿Aplicar daño con <strong>${this.effect.name}</strong> al atacante?`})\n    if (choice)\n    {\n        this.script.message(await args.attacker.applyBasicDamage(this.actor.system.characteristics.wp.bonus, {damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_AP, suppressMsg : true}));\n    }\n}"}
 					]
 				}]
 		},
@@ -7119,7 +7194,7 @@
 				"scriptData": [
 					{"label":"Maldición del dolor incapacitante","script":"let choice = await ItemDialog.create(ItemDialog.objectToArray(game.wfrp4e.config.locations, this.effect.img), 1, \"Escoge ubicación\");\nif (choice[0])\n{\n    this.effect.updateSource({name : `${this.effect.name} (${choice[0].name})`})\nthis.effect.updateSource({\"flags.wfrp4e.location\" : choice[0].id})\n}\n\nlet location = choice[0].id;\n\nif ([\"lArm\", \"rArm\"].includes(location))\n{\n    let dropped = this.actor.itemTypes.weapon.filter(i => i.isEquipped & i.system.usesHands.includes(location));\n\n    if (dropped.length)\n    {\n        this.script.notification(`Dejado caer ${dropped.map(i => i.name).join(\", \")}!`)\n        for(let weapon of dropped)\n        {\n            await weapon.system.toggleEquip();\n        }\n    }\n}\n\nif (location == \"body\")\n{\n    await this.actor.addCondition(\"fatigued\");\n    test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {fields : {difficulty : \"hard\"}, skipTargets: true, appendTitle : ` - ${this.effect.name}`})\n    await test.roll();\n    if (test.failed)\n    {\n        this.actor.addCondition(\"prone\");\n    }\n}\n\nif (location == \"head\")\n{\n    await this.actor.addCondition(\"stunned\");\n    test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {fields : {difficulty : \"average\"}, skipTargets: true, appendTitle : ` - ${this.effect.name}`})\n    await test.roll();\n    if (test.failed)\n    {\n        this.actor.addCondition(\"unconscious\");\n    }\n}"},
 					{"label":"(Pierna) Mitad de Movimiento"},
-					{"label":"Chequeos dependientes de movilidad","hideScript":"if (![\"rLeg\", \"lLeg\"].includes(this.effect.getFlag(\"wfrp4e\", \"location\")))\n\treturn true;\n\nif (args.options.dodge)\n{\n\targs.abort = true;\n\tthis.script.notification(\"¡No puedes esquivar!\")\n}\nreturn [\"t\", \"int\", \"wp\", \"fel\"].includes(args.characteristic)"},
+					{"label":"Chequeos dependientes de movilidad","hideScript":"if (![\"rLeg\", \"lLeg\"].includes(this.effect.getFlag(\"wfrp4e\", \"location\")))\n\treturn true;\n\nif (args.context.dodge)\n{\n\targs.abort = true;\n\tthis.script.notification(\"¡No puedes esquivar!\")\n}\nreturn [\"t\", \"int\", \"wp\", \"fel\"].includes(args.characteristic)"},
 					{"label":"Depende de dos manos"},
 					{"label":"Brazo inútil"}
 					]
@@ -7482,7 +7557,7 @@
 			"effects": [{
 				"name":"Cúpula",
 				"scriptData": [
-					{"label":"Cúpula","script":"\nlet choice = await Dialog.wait({\n    title: this.effect.name,\n    content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>`,\n    buttons: {\n        yes: {\n            label: \"Sí\",\n            callback: () => {\n                return true;\n            }\n        },\n        no: {\n            label: \"No\",\n            callback: () => {\n                return false;\n            }\n        }\n    }\n})\n\nif (choice)\n{\n\targs.ward = 6;\n}"}
+					{"label":"Cúpula","script":"if (!args.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -7493,7 +7568,7 @@
 			"effects": [{
 				"name":"Cúpula (Bestias)",
 				"scriptData": [
-					{"label":"Cúpula","script":"\nlet choice = await Dialog.wait({\n    title: this.effect.name,\n    content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>`,\n    buttons: {\n        yes: {\n            label: \"Sí\",\n            callback: () => {\n                return true;\n            }\n        },\n        no: {\n            label: \"No\",\n            callback: () => {\n                return false;\n            }\n        }\n    }\n})\n\nif (choice)\n{\n\targs.ward = 6;\n}"}
+					{"label":"Cúpula","script":"if (!args.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -7504,7 +7579,7 @@
 			"effects": [{
 				"name":"Cúpula (Demonología)",
 				"scriptData": [
-					{"label":"Cúpula","script":"\nlet choice = await Dialog.wait({\n    title: this.effect.name,\n    content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>`,\n    buttons: {\n        yes: {\n            label: \"Sí\",\n            callback: () => {\n                return true;\n            }\n        },\n        no: {\n            label: \"No\",\n            callback: () => {\n                return false;\n            }\n        }\n    }\n})\n\nif (choice)\n{\n\targs.ward = 6;\n}"}
+					{"label":"Cúpula","script":"if (!args.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -7515,7 +7590,7 @@
 			"effects": [{
 				"name":"Cúpula (Muerte)",
 				"scriptData": [
-					{"label":"Cúpula","script":"\nlet choice = await Dialog.wait({\n    title: this.effect.name,\n    content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>`,\n    buttons: {\n        yes: {\n            label: \"Sí\",\n            callback: () => {\n                return true;\n            }\n        },\n        no: {\n            label: \"No\",\n            callback: () => {\n                return false;\n            }\n        }\n    }\n})\n\nif (choice)\n{\n\targs.ward = 6;\n}"}
+					{"label":"Cúpula","script":"if (!args.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -7526,7 +7601,7 @@
 			"effects": [{
 				"name":"Cúpula (Fuego)",
 				"scriptData": [
-					{"label":"Cúpula","script":"\nlet choice = await Dialog.wait({\n    title: this.effect.name,\n    content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>`,\n    buttons: {\n        yes: {\n            label: \"Sí\",\n            callback: () => {\n                return true;\n            }\n        },\n        no: {\n            label: \"No\",\n            callback: () => {\n                return false;\n            }\n        }\n    }\n})\n\nif (choice)\n{\n\targs.ward = 6;\n}"}
+					{"label":"Cúpula","script":"if (!args.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -7537,7 +7612,7 @@
 			"effects": [{
 				"name":"Cúpula (Cielos)",
 				"scriptData": [
-					{"label":"Cúpula","script":"\nlet choice = await Dialog.wait({\n    title: this.effect.name,\n    content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>`,\n    buttons: {\n        yes: {\n            label: \"Sí\",\n            callback: () => {\n                return true;\n            }\n        },\n        no: {\n            label: \"No\",\n            callback: () => {\n                return false;\n            }\n        }\n    }\n})\n\nif (choice)\n{\n\targs.ward = 6;\n}"}
+					{"label":"Cúpula","script":"if (!args.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -7548,7 +7623,7 @@
 			"effects": [{
 				"name":"Cúpula (Adivinación)",
 				"scriptData": [
-					{"label":"Cúpula","script":"\nlet choice = await Dialog.wait({\n    title: this.effect.name,\n    content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>`,\n    buttons: {\n        yes: {\n            label: \"Sí\",\n            callback: () => {\n                return true;\n            }\n        },\n        no: {\n            label: \"No\",\n            callback: () => {\n                return false;\n            }\n        }\n    }\n})\n\nif (choice)\n{\n\targs.ward = 6;\n}"}
+					{"label":"Cúpula","script":"if (!args.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -7559,7 +7634,7 @@
 			"effects": [{
 				"name":"Cúpula (Vida)",
 				"scriptData": [
-					{"label":"Cúpula","script":"\nlet choice = await Dialog.wait({\n    title: this.effect.name,\n    content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>`,\n    buttons: {\n        yes: {\n            label: \"Sí\",\n            callback: () => {\n                return true;\n            }\n        },\n        no: {\n            label: \"No\",\n            callback: () => {\n                return false;\n            }\n        }\n    }\n})\n\nif (choice)\n{\n\targs.ward = 6;\n}"}
+					{"label":"Cúpula","script":"if (!args.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -7570,7 +7645,7 @@
 			"effects": [{
 				"name":"Cúpula (Luz)",
 				"scriptData": [
-					{"label":"Cúpula","script":"\nlet choice = await Dialog.wait({\n    title: this.effect.name,\n    content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>`,\n    buttons: {\n        yes: {\n            label: \"Sí\",\n            callback: () => {\n                return true;\n            }\n        },\n        no: {\n            label: \"No\",\n            callback: () => {\n                return false;\n            }\n        }\n    }\n})\n\nif (choice)\n{\n\targs.ward = 6;\n}"}
+					{"label":"Cúpula","script":"if (!args.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -7581,7 +7656,7 @@
 			"effects": [{
 				"name":"Cúpula (Metal)",
 				"scriptData": [
-					{"label":"Cúpula","script":"\nlet choice = await Dialog.wait({\n    title: this.effect.name,\n    content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>`,\n    buttons: {\n        yes: {\n            label: \"Sí\",\n            callback: () => {\n                return true;\n            }\n        },\n        no: {\n            label: \"No\",\n            callback: () => {\n                return false;\n            }\n        }\n    }\n})\n\nif (choice)\n{\n\targs.ward = 6;\n}"}
+					{"label":"Cúpula","script":"if (!args.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -7592,7 +7667,7 @@
 			"effects": [{
 				"name":"Cúpula (Nigromancia)",
 				"scriptData": [
-					{"label":"Cúpula","script":"\nlet choice = await Dialog.wait({\n    title: this.effect.name,\n    content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>`,\n    buttons: {\n        yes: {\n            label: \"Sí\",\n            callback: () => {\n                return true;\n            }\n        },\n        no: {\n            label: \"No\",\n            callback: () => {\n                return false;\n            }\n        }\n    }\n})\n\nif (choice)\n{\n\targs.ward = 6;\n}"}
+					{"label":"Cúpula","script":"if (!args.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -7603,7 +7678,7 @@
 			"effects": [{
 				"name":"Cúpula (Sombras)",
 				"scriptData": [
-					{"label":"Cúpula","script":"\nlet choice = await Dialog.wait({\n    title: this.effect.name,\n    content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>`,\n    buttons: {\n        yes: {\n            label: \"Sí\",\n            callback: () => {\n                return true;\n            }\n        },\n        no: {\n            label: \"No\",\n            callback: () => {\n                return false;\n            }\n        }\n    }\n})\n\nif (choice)\n{\n\targs.ward = 6;\n}"}
+					{"label":"Cúpula","script":"if (!args.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -7614,7 +7689,7 @@
 			"effects": [{
 				"name":"Cúpula (Brujería)",
 				"scriptData": [
-					{"label":"Cúpula","script":"\nlet choice = await Dialog.wait({\n    title: this.effect.name,\n    content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>`,\n    buttons: {\n        yes: {\n            label: \"Sí\",\n            callback: () => {\n                return true;\n            }\n        },\n        no: {\n            label: \"No\",\n            callback: () => {\n                return false;\n            }\n        }\n    }\n})\n\nif (choice)\n{\n\targs.ward = 6;\n}"}
+					{"label":"Cúpula","script":"if (!args.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -8369,7 +8444,7 @@
 			"effects": [{
 				"name":"Forja de Chamon",
 				"scriptData": [
-					{"label":"Forja de Chamon","script":"let caster = this.effect.sourceActor\nlet targetedItem = this.actor.items.get(this.effect.flags.wfrp4e.itemTargets[0])\n\nlet qualities = foundry.utils.deepClone(game.wfrp4e.config.itemQualities);\nlet flaws = foundry.utils.deepClone(game.wfrp4e.config.itemFlaws);\n\nif (targetedItem.type == \"weapon\")\n{\n    foundry.utils.mergeObject(qualities, game.wfrp4e.config.weaponQualities)\n    foundry.utils.mergeObject(flaws, game.wfrp4e.config.weaponFlaws)\n}\nelse if (targetedItem.type == \"armour\")\n{\n    foundry.utils.mergeObject(qualities, game.wfrp4e.config.armorQualities)\n    foundry.utils.mergeObject(flaws, game.wfrp4e.config.armorFlaws)\n}\n\nfor(let q in qualities)\n{\n    // If the weapon already has a flaw, don't put it in the dialog\n    if (targetedItem.system.properties.qualities[q])\n    {\n        delete qualities[q]\n    }\n}\nfor(let f in flaws)\n{\n    // If a weapon doesn't have a flaw, don't put it in the dialog\n    if (!targetedItem.system.properties.flaws[f])\n    {\n        delete flaws[f]\n    }\n}\n            \nlet added = await ItemDialog.create(ItemDialog.objectToArray(qualities), \"unlimited\", \"Escoge Cualidades para añadir\");\nlet removed = []\nif (!foundry.utils.isEmpty(flaws))\n{\n    removed = await ItemDialog.create(ItemDialog.objectToArray(flaws), \"unlimited\", \"Escoge Defectos para eliminar\");\n}\n\nthis.effect.updateSource({\"flags.wfrp4e.propertiesChanged\" : {added : added.map(i => i.id), removed : removed.map(i => i.id)}})\n"},
+					{"label":"Forja de Chamon","script":"let caster = this.effect.sourceActor\nlet targetedItem = this.effect.system.itemTargets[0];\n\nlet qualities = foundry.utils.deepClone(game.wfrp4e.config.itemQualities);\nlet flaws = foundry.utils.deepClone(game.wfrp4e.config.itemFlaws);\n\nif (targetedItem.type == \"weapon\")\n{\n    foundry.utils.mergeObject(qualities, game.wfrp4e.config.weaponQualities)\n    foundry.utils.mergeObject(flaws, game.wfrp4e.config.weaponFlaws)\n}\nelse if (targetedItem.type == \"armour\")\n{\n    foundry.utils.mergeObject(qualities, game.wfrp4e.config.armorQualities)\n    foundry.utils.mergeObject(flaws, game.wfrp4e.config.armorFlaws)\n}\n\nfor(let q in qualities)\n{\n    // If the weapon already has a flaw, don't put it in the dialog\n    if (targetedItem.system.properties.qualities[q])\n    {\n        delete qualities[q]\n    }\n}\nfor(let f in flaws)\n{\n    // If a weapon doesn't have a flaw, don't put it in the dialog\n    if (!targetedItem.system.properties.flaws[f])\n    {\n        delete flaws[f]\n    }\n}\n            \nlet added = await ItemDialog.create(ItemDialog.objectToArray(qualities), \"unlimited\", \"Escoge Cualidades para añadir\");\nlet removed = []\nif (!foundry.utils.isEmpty(flaws))\n{\n    removed = await ItemDialog.create(ItemDialog.objectToArray(flaws), \"unlimited\", \"Escoge Defectos para eliminar\");\n}\n\nthis.effect.updateSource({\"flags.wfrp4e.propertiesChanged\" : {added : added.map(i => i.id), removed : removed.map(i => i.id)}})\n"},
 					{"label":"Añadir propiedades"}
 					]
 				}]
@@ -9829,7 +9904,7 @@
 				"name":"Pierna Amputada",
 				"scriptData": [
 					{"label":"Mitad de Movimiento"},
-					{"label":"Chequeos dependientes de movilidad","hideScript":"if (args.options.dodge)\n{\n\targs.abort = true;\n\tthis.script.notification(\"¡No puedes esquivar!\")\n}\nreturn [\"t\", \"int\", \"wp\", \"fel\"].includes(args.characteristic)"}
+					{"label":"Chequeos dependientes de movilidad","hideScript":"if (args.context.dodge)\n{\n\targs.abort = true;\n\tthis.script.notification(\"¡No puedes esquivar!\")\n}\nreturn [\"t\", \"int\", \"wp\", \"fel\"].includes(args.characteristic)"}
 					]
 				}]
 		},
@@ -9875,7 +9950,7 @@
 			"effects": [{
 				"name":"Lengua Amputada",
 				"scriptData": [
-					{"label":"Lengua Amputada","script": "if(args.test.preData.skillName?.includes(game.i18n.localize(\"NAME.Language\")) || args.test instanceof CastTest)\n{\n\tif (parseInt(args.test.result.SL) > 0 || args.test.succeeded)\n\t{\n\t\tif (parseInt(args.test.result.SL) > 0)\n\t\t{\n\t\t\targs.test.result.SL = \"-0\";\n\t\t\targs.test.result.description = game.i18n.localize(\"ROLL.MarginalFailure\");\n\t\t}\n\t\targs.test.result.outcome = \"failure\"\n        args.test.result.other.push(`<strong>${this.effect.name}</strong>: Máximo -0 NE.`)\n\t}\n}"}
+					{"label":"Lengua Amputada","script": "if(args.test.preData.skillName?.includes(game.i18n.localize(\"NAME.Language\")) || args.test instanceof game.wfrp4e.rolls.CastTest)\n{\n\tif (parseInt(args.test.result.SL) > 0 || args.test.succeeded)\n\t{\n\t\tif (parseInt(args.test.result.SL) > 0)\n\t\t{\n\t\t\targs.test.result.SL = \"-0\";\n\t\t\targs.test.result.description = game.i18n.localize(\"ROLL.MarginalFailure\");\n\t\t}\n\t\targs.test.result.outcome = \"failure\"\n        args.test.result.other.push(`<strong>${this.effect.name}</strong>: Máximo -0 NE.`)\n\t}\n}"}
 					]
 				}]
 		},
@@ -9962,7 +10037,7 @@
 				"name":"Pierna Rota",
 				"scriptData": [
 					{"label":"Mitad de Movimiento"},
-					{"label":"Chequeos dependientes de movilidad","hideScript":"if (args.options.dodge)\n{\n\targs.abort = true;\n\tthis.script.notification(\"¡No puedes esquivar!\")\n}\nreturn [\"t\", \"int\", \"wp\", \"fel\"].includes(args.characteristic)"}
+					{"label":"Chequeos dependientes de movilidad","hideScript":"if (args.context.dodge)\n{\n\targs.abort = true;\n\tthis.script.notification(\"¡No puedes esquivar!\")\n}\nreturn [\"t\", \"int\", \"wp\", \"fel\"].includes(args.characteristic)"}
 					]
 				}]
 		},
@@ -9975,7 +10050,7 @@
 				"name":"Pierna Rota",
 				"scriptData": [
 					{"label":"Mitad de Movimiento"},
-					{"label":"Chequeos dependientes de movilidad","hideScript":"if (args.options.dodge)\n{\n\targs.abort = true;\n\tthis.script.notification(\"¡No puedes esquivar!\")\n}\nreturn [\"t\", \"int\", \"wp\", \"fel\"].includes(args.characteristic)"}
+					{"label":"Chequeos dependientes de movilidad","hideScript":"if (args.context.dodge)\n{\n\targs.abort = true;\n\tthis.script.notification(\"¡No puedes esquivar!\")\n}\nreturn [\"t\", \"int\", \"wp\", \"fel\"].includes(args.characteristic)"}
 					]
 				}]
 		},
@@ -10574,7 +10649,7 @@
 			"effects": [{
 				"name":"Amarga catarsis",
 				"scriptData": [
-					{"label":"Amarga catarsis","script":"let cured = await Dialog.wait({\n    title : this.effect.name,\n    content : \"<p>Escribe el número de enfermedades/venenos curados.</p><input type='number'>\",\n    buttons : {\n        confirm : {\n            label : \"Confirmar\",\n            callback : (dlg) => {\n                let input = dlg.find(\"input\");\n                value = parseInt(input[0].value);\n                return value;\n            }\n        }\n    }\n})\n\n\nlet damage = 0;\n\nlet rolls = new Array(cured).fill(\"\").map(i => `max(0, 1d10 - ${this.actor.system.characteristics.fel.bonus})`)\n\nlet test = new Roll(`${rolls.join(\" + \")}`);\nawait test.roll();\ntest.toMessage({speaker : {alias : this.actor.name}, flavor : this.effect.name});\nthis.script.message(await this.actor.applyBasicDamage(test.total, { damageType: game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL, suppressMsg : true }))"}
+					{"label":"Amarga catarsis","script":"let cured = ValueDialog.create({text : \"Escribe el número de enfermedades/venenos curados.\", title : this.effect.name})\n\nlet damage = 0;\n\nlet rolls = new Array(cured).fill(\"\").map(i => `max(0, 1d10 - ${this.actor.system.characteristics.fel.bonus})`)\n\nlet test = new Roll(`${rolls.join(\" + \")}`);\nawait test.roll();\ntest.toMessage({speaker : {alias : this.actor.name}, flavor : this.effect.name});\nthis.script.message(await this.actor.applyBasicDamage(test.total, { damageType: game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL, suppressMsg : true }))"}
 					]
 				}]
 		},
@@ -10952,7 +11027,8 @@
 		{
 			"id": "Manann's Bounty",
 			"name": "Botín de Manann",
-			"description": "<p>Imploras a Manann para que te dé sustento. Si buscas en una masa de agua, obtienes suficiente pescado para alimentar a 1 persona; si buscas en el mar, obtienes suficiente pescado para sustentar a 2 personas. Por cada +2 NE, puedes alimentar a otra persona.</p>"
+			"description": "<p>Imploras a Manann para que te dé sustento. Si buscas en una masa de agua, obtienes suficiente pescado para alimentar a 1 persona; si buscas en el mar, obtienes suficiente pescado para sustentar a 2 personas. Por cada +2 NE, puedes alimentar a otra persona.</p>",
+			"overcast": "Gente alimentada"
 		},
 		{
 			"id": "Martyr",
@@ -11025,6 +11101,7 @@
 			"id": "Rhya's Touch",
 			"name": "Toque de Rhya",
 			"description": "<p>Impones las manos sobre un objetivo herido o enfermo mientras cantas tus plegarias. Elige uno de los siguientes efectos:</p>\n<p>• Curar tantas Heridas como tu bonificador por Empatía</p>\n<p>• Curar 1 enfermedad de origen natural</p>\n<p>Por cada +2 NE puedes elegir otro efecto, y puedes elegir el mismo efecto de forma repetida. Este Milagro es lento, y sus efectos tardan por lo menos 10 minutos en manifestarse. Si se interrumpe, hay que intentarlo de nuevo desde el principio.</p>",
+			"overcast": "Opciones",
 			"effects": [{
 				"name":"Sanar",
 				"scriptData": [
@@ -11109,7 +11186,7 @@
 			"effects": [{
 				"name":"Fuego del alma",
 				"scriptData": [
-					{"label":"Fuego del alma","script":"let roll;\nif (this.actor.has(game.i18n.localize(\"NAME.Daemonic\")) || this.actor.has(game.i18n.localize(\"NAME.Undead\")) || [\"Goblin\", \"Orco\", \"Muerto viviente\"].includes(this.actor.system.details.species.value))\n{\n    roll = await new Roll(`1d10 + ${this.effect.sourceTest.result.overcast.usage.other.current}`).roll()\n}\nelse \n{\n    roll = await new Roll(`1d10`).roll()\n}\n\nroll.toMessage(this.script.getChatData())\nawait this.actor.applyBasicDamage(roll.total, {damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL, suppressMsg : true})\n\nif (this.actor.has(game.i18n.localize(\"NAME.Undead\")) || args.actor.has(game.i18n.localize(\"NAME.Daemonic\")))\n{\n  this.actor.addCondition(\"ablaze\")\n}"}
+					{"label":"Fuego del alma","script":"let roll;\nif (this.actor.has(game.i18n.localize(\"NAME.Daemonic\")) || this.actor.has(game.i18n.localize(\"NAME.Undead\")) || [\"Goblin\", \"Orco\", \"Muerto viviente\"].includes(this.actor.system.details.species.value))\n{\n    roll = await new Roll(`1d10 + ${this.effect.sourceTest.result.overcast.usage.other.current}`).roll({allowInteractive : false})\n}\nelse \n{\n    roll = await new Roll(`1d10`).roll({allowInteractive : false})\n}\n\nroll.toMessage(this.script.getChatData())\nawait this.actor.applyBasicDamage(roll.total, {damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL, suppressMsg : true})\n\nif (this.actor.has(game.i18n.localize(\"NAME.Undead\")) || args.actor.has(game.i18n.localize(\"NAME.Daemonic\")))\n{\n  this.actor.addCondition(\"ablaze\")\n}"}
 					]
 				}]
 		},
@@ -11228,7 +11305,7 @@
 			"effects": [{
 				"name":"Inocencia inmaculada",
 				"scriptData": [
-					{"label":"Inocencia inmaculada","script":"let test = this.effect.sourceTest;\nif (test.failed && (test.result.roll % 11 == 0 || test.result.roll == 100))\n{\n\tlet points = await new Roll(\"1d10\").roll();\n\tgame.dice3d?.showForRoll(points)\n\tthis.actor.update({\"system.status.corruption.value\" : this.actor.system.status.corruption.value + points.total})\n\tthis.script.message(`Gana ${points.total} de Corrupción`)\n}\nelse \n{\n\tlet points = this.effect.sourceTest.result.overcast.usage.other.current;\n\tthis.actor.update({\"system.status.corruption.value\" : this.actor.system.status.corruption.value - points})\n\tthis.script.message(`Pierde ${points} de Corrupción`)\n}"}
+					{"label":"Inocencia inmaculada","script":"let test = this.effect.sourceTest;\nif (test.failed && (test.result.roll % 11 == 0 || test.result.roll == 100))\n{\n\tlet points = await new Roll(\"1d10\").roll({allowInteractive : false});\n\tgame.dice3d?.showForRoll(points)\n\tthis.actor.update({\"system.status.corruption.value\" : this.actor.system.status.corruption.value + points.total})\n\tthis.script.message(`Gana ${points.total} de Corrupción`)\n}\nelse \n{\n\tlet points = this.effect.sourceTest.result.overcast.usage.other.current;\n\tthis.actor.update({\"system.status.corruption.value\" : this.actor.system.status.corruption.value - points})\n\tthis.script.message(`Pierde ${points} de Corrupción`)\n}"}
 					]
 				}]
 		},
@@ -11515,7 +11592,7 @@
 				{
 				"name":"Aliento",
 				"scriptData": [
-					{"label":"Aliento","script":"let type = this.item.getFlag(\"wfrp4e\", \"breath\");\n\nif (type == \"cold\")\n{\n\tlet stunned = Math.max(1, Math.trunc(args.totalWoundLoss / 5))\n\tawait args.actor.addCondition(\"stunned\", stunned);\n}\n\nif (type == \"corrosion\")\n{\n    let damageItems = await Dialog.confirm({title : this.item.name, content : `<p>¿Dañados todos los Objetos portados?</p>`})\n\tif (damageItems)\n\t{\n\t\tlet msg = ``\n\t\tlet weapons = args.actor.itemTypes.weapon.filter(i => i.isEquipped);\n\t\tlet armour = args.actor.itemTypes.armour.filter(i => i.isEquipped);\n\t\tlet trappings = args.actor.itemTypes.trapping.filter(i => i.isEquipped);\n\t\tfor(let item of weapons)\n\t\t{\n\t\t\tif (item.system.properties.qualities.shield)\n\t\t\t{\n\t\t\t\tawait item.system.damageItem(1, \"shield\");\n\t\t\t}\n\t\t\telse \n\t\t\t{\n\t\t\t\tawait item.system.damageItem(1);\n\t\t\t}\n\t\t\tmsg += `<p><strong>${item.name}</strong> dañado en 1</p>`\n\t\t}\n\t\tfor(let item of armour)\n\t\t{\n\t\t\tawait item.system.damageItem(1);\n\t\t\tmsg += `<p><strong>${item.name}</strong> dañado en 1</p>`\n\t\t}\n\t\tfor(let item of trappings)\n\t\t{\n\t\t\tawait item.system.damageItem(1);\n\t\t\tmsg += `<p><strong>${item.name}</strong> dañado en 1</p>`\n\t\t}\n\t\tif (msg)\n\t\t{\n\t\t\tthis.script.message(msg, {speaker : {alias : args.actor.name}});\n\t\t}\n\t}\n}\n\nif (type == \"fire\")\n{\n\tawait args.actor.addCondition(\"ablaze\");\n}\n\nif (type == \"electricity\")\n{\n\tawait args.actor.addCondition(\"stunned\");\n}\n\nif (type == \"poison\")\n{\n\tawait args.actor.addCondition(\"poisoned\");\n}\n\nif (type == \"warpfire\")\n{\n    await this.actor.corruptionDialog(\"moderate\")\n    this.actor.applyEffect({effectUuids : this.item.effects.getName(\"Warpfire\").uuid})\n}"},
+					{"label":"Aliento","script":"let type = this.item.getFlag(\"wfrp4e\", \"breath\");\n\nif (type == \"cold\")\n{\n\tlet stunned = Math.max(1, Math.trunc(args.totalWoundLoss / 5))\n\tawait args.actor.addCondition(\"stunned\", stunned);\n}\n\nif (type == \"corrosion\")\n{\n    let damageItems = await foundry.applications.api.DialogV2.confirm({window: {title : this.item.name}, content : `<p>¿Dañar todos los Objetos portados?</p>`})\n\tif (damageItems)\n\t{\n\t\tlet msg = ``\n\t\tlet weapons = args.actor.itemTypes.weapon.filter(i => i.isEquipped);\n\t\tlet armour = args.actor.itemTypes.armour.filter(i => i.isEquipped);\n\t\tlet trappings = args.actor.itemTypes.trapping.filter(i => i.isEquipped);\n\t\tfor(let item of weapons)\n\t\t{\n\t\t\tif (item.system.properties.qualities.shield)\n\t\t\t{\n\t\t\t\tawait item.system.damageItem(1, \"shield\");\n\t\t\t}\n\t\t\telse \n\t\t\t{\n\t\t\t\tawait item.system.damageItem(1);\n\t\t\t}\n\t\t\tmsg += `<p><strong>${item.name}</strong> dañado en 1</p>`\n\t\t}\n\t\tfor(let item of armour)\n\t\t{\n\t\t\tawait item.system.damageItem(1);\n\t\t\tmsg += `<p><strong>${item.name}</strong> dañado en 1</p>`\n\t\t}\n\t\tfor(let item of trappings)\n\t\t{\n\t\t\tawait item.system.damageItem(1);\n\t\t\tmsg += `<p><strong>${item.name}</strong> dañado en 1</p>`\n\t\t}\n\t\tif (msg)\n\t\t{\n\t\t\tthis.script.message(msg, {speaker : {alias : args.actor.name}});\n\t\t}\n\t}\n}\n\nif (type == \"fire\")\n{\n\tawait args.actor.addCondition(\"ablaze\");\n}\n\nif (type == \"electricity\")\n{\n\tawait args.actor.addCondition(\"stunned\");\n}\n\nif (type == \"poison\")\n{\n\tawait args.actor.addCondition(\"poisoned\");\n}\n\nif (type == \"warpfire\")\n{\n    await this.actor.corruptionDialog(\"moderate\")\n    this.actor.applyEffect({effectUuids : this.item.effects.getName(\"Warpfire\").uuid})\n}"},
 					{"label":"Ignorar PA"}
 					]
 				}]
@@ -11756,7 +11833,7 @@
 				"name":"Aullido fantasmal",
 				"preApplyScript":"if (this.actor.system.status.advantage.value >= 2)\n{\n    await this.actor.setAdvantage(0);\n    this.script.notification(\"Ventaja sustraída\")\n    return true;\n}\nelse \n{\n    this.script.notification(\"¡No hay suficiente Ventaja!\", \"error\")\n    return false;\n}",
 				"scriptData": [
-					{"label":"Aullido fantasmal","script":"let roll = await new Roll(\"1d10\").roll();\nthis.script.message(await this.actor.applyBasicDamage(roll.total, {damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL, suppressMsg: true}))\n\nawait this.actor.addCondition(\"deafened\", 3)\n\nlet test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {fields : {difficulty: \"average\" }, skipTargets: true, appendTitle : ` - ${this.effect.name}`, context : {failure: \"Gana un Estado de Quebrantado.\", success : \"Evitado el Estado de Quebrantado.\"}})\nawait test.roll();\nif (test.failed)\n{\n    this.actor.addCondition(\"broken\")\n}"}
+					{"label":"Aullido fantasmal","script":"let roll = await new Roll(\"1d10\").roll({allowInteractive : false});\nthis.script.message(await this.actor.applyBasicDamage(roll.total, {damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_ALL, suppressMsg: true}))\n\nawait this.actor.addCondition(\"deafened\", 3)\n\nlet test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {fields : {difficulty: \"average\" }, skipTargets: true, appendTitle : ` - ${this.effect.name}`, context : {failure: \"Gana un Estado de Quebrantado.\", success : \"Evitado el Estado de Quebrantado.\"}})\nawait test.roll();\nif (test.failed)\n{\n    this.actor.addCondition(\"broken\")\n}"}
 					]
 				}]
 		},
@@ -11959,14 +12036,14 @@
 			"effects": [{
 				"name":"Regenerar",
 				"scriptData": [
-					{"label":"Regenerar","script":"let chatData = { whisper: ChatMessage.getWhisperRecipients(\"GM\") }\nlet message = \"\"\n\nlet wounds = foundry.utils.duplicate(this.actor.status.wounds)\nlet regenRoll = await new Roll(\"1d10\").roll();\nlet regen = regenRoll.total;\n\nif (wounds.value >= wounds.max)\n    return\n\nif (wounds.value > 0) \n{\n    wounds.value += regen\n    if (wounds.value > wounds.max)\n    {\n        wounds.value = wounds.max\n    }\n    message += `<b>${this.actor.name}</b> recupera ${regen} Heridas.`\n\n    if (regen == 10)\n    {\n        message += `<br>Adicionalmente, regenera una Herida Crítica.`\n    }\n}\nelse if (regen >= 8) \n{\n    message += `<b>${this.actor.name}</b> sacó un ${regen} y recupera 1 Herida.`\n    wounds.value += 1\n    if (regen == 10)\n    {\n        message += `<br>Adicionalmente, regenera una Herida Crítica.`\n    }\n}\nelse \n{\n    message += `<b>${this.actor.name}</b> Tirada de Regenerar de ${regen} - Sin efecto.`\n}\n\nawait this.actor.update({ \"system.status.wounds\": wounds })\nthis.script.message(message, { whisper: ChatMessage.getWhisperRecipients(\"GM\") })"}
+					{"label":"Regenerar","script":"let chatData = { whisper: ChatMessage.getWhisperRecipients(\"GM\") }\nlet message = \"\"\n\nlet wounds = foundry.utils.duplicate(this.actor.status.wounds)\nlet regenRoll = await new Roll(\"1d10\").roll({allowInteractive : false});\nlet regen = regenRoll.total;\n\nif (wounds.value >= wounds.max)\n    return\n\nif (wounds.value > 0) \n{\n    wounds.value += regen\n    if (wounds.value > wounds.max)\n    {\n        wounds.value = wounds.max\n    }\n    message += `<b>${this.actor.name}</b> recupera ${regen} Heridas.`\n\n    if (regen == 10)\n    {\n        message += `<br>Adicionalmente, regenera una Herida Crítica.`\n    }\n}\nelse if (regen >= 8) \n{\n    message += `<b>${this.actor.name}</b> sacó un ${regen} y recupera 1 Herida.`\n    wounds.value += 1\n    if (regen == 10)\n    {\n        message += `<br>Adicionalmente, regenera una Herida Crítica.`\n    }\n}\nelse \n{\n    message += `<b>${this.actor.name}</b> Tirada de Regenerar de ${regen} - Sin efecto.`\n}\n\nawait this.actor.update({ \"system.status.wounds\": wounds })\nthis.script.message(message, { whisper: ChatMessage.getWhisperRecipients(\"GM\") })"}
 					]
 				}]
 		},
 		{
 			"id": "Size",
 			"name": "Tamaño",
-			"description": "<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Este rasgo representa criaturas cuyo tamaño difiere del estándar del juego (es decir, aproximadamente de tamaño humano). Hay siete pasos de Tamaño, que van desde Minúsculo hasta Monstruoso.</p>\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">&nbsp;</p>\n<div style=\"direction: ltr;\">\n<table style=\"direction: ltr; border-color: #a3a3a3; border-width: 1pt;\" title=\"\" border=\"1\" summary=\"\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td style=\"vertical-align: top; width: .868in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\"><span style=\"font-weight: bold;\">Tamaño</span></p>\n</td>\n<td style=\"vertical-align: top; width: 2.0819in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\"><span style=\"font-weight: bold;\">&nbsp;Ejemplos</span></p>\n</td>\n</tr>\n<tr>\n<td style=\"vertical-align: top; width: .868in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Minúsculo</p>\n</td>\n<td style=\"vertical-align: top; width: 2.0819in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Mariposa, ratón, paloma</p>\n</td>\n</tr>\n<tr>\n<td style=\"vertical-align: top; width: .868in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Muy pequeño</p>\n</td>\n<td style=\"vertical-align: top; width: 2.0819in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Gato, halcón, bebé humano</p>\n</td>\n</tr>\n<tr>\n<td style=\"vertical-align: top; width: .868in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Pequeño</p>\n</td>\n<td style=\"vertical-align: top; width: 2.1513in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Rata gigante, halfling, niño humano</p>\n</td>\n</tr>\n<tr>\n<td style=\"vertical-align: top; width: .868in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Normal</p>\n</td>\n<td style=\"vertical-align: top; width: 2.0819in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Enano, elfo, humano</p>\n</td>\n</tr>\n<tr>\n<td style=\"vertical-align: top; width: .868in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Grande</p>\n</td>\n<td style=\"vertical-align: top; width: 2.0819in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Caballo, ogro, trol</p>\n</td>\n</tr>\n<tr>\n<td style=\"vertical-align: top; width: .8875in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Enorme</p>\n</td>\n<td style=\"vertical-align: top; width: 2.0625in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Grifo, serpiente alada, mantícora</p>\n</td>\n</tr>\n<tr>\n<td style=\"vertical-align: top; width: .8875in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Monstruoso</p>\n</td>\n<td style=\"vertical-align: top; width: 2.1319in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Dragón, gigante, demonio mayor</p>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<p>&nbsp;</p>\n<h3>Usando Tamaño</h3>\n<p>&nbsp;</p>\n<p>Si quieres usar el Tamaño para hacer mayor a una criatura (por ejemplo, convirtiendo una araña gigante en una araña gigantesca), aumenta en +10 la Fuerza y la Resistencia y reduce en -5 la Agilidad por cada paso de tamaño en que incrementes la criatura. Invierte esto, si quieres hacer más pequeña a una criatura.&nbsp;</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<h3>Modificadores al combate por tamaño</h3>\n<p>Si es mayor:</p>\n<ul type=\"disc\">\n<li>Sus armas obtienen la Cualidad Dañina si la criatura es un paso mayor e Impactante si es dos pasos mayor o más.</li>\n<li>Multiplica cualquier Daño causado por el número de pasos que es mayor (así, 2 pasos = x2,3 pasos = x3, y así sucesivamente); esta multiplicación se calcula una vez aplicados todos los bonificadores.</li>\n<li>Todos los impactos con éxito contra los objetivos menores activan la regla del Golpe mortal, incluso si el objetivo sobrevive.</li>\n</ul>\n<ul type=\"disc\">\n\n</ul>\n<p>&nbsp;</p>\n<p>Si es menor:</p>\n<p>• Obtiene un bonificador +10 al impacto.</p>\n<p>&nbsp;</p>\n<h3>Defender contra criaturas grandes</h3>\n<p>Sufres un penalizador de -2 NE por cada paso más grande que es tu oponente cuando utilizas Cuerpo a cuerpo para defenderte en un Chequeo Enfrentado. Se recomienda esquivar a un gigante que va armado con un árbol, ¡y no intentar pararlo!</p>\n<p>&nbsp;</p>\n\n<h3>Miedo y Terror</h3>\n<p>Si se percibe que una criatura es agresiva, causa Miedo en cualquier criatura más pequeña que ella, y Terror en cualquier criatura dos o más pasos más pequeña. La intensidad del Miedo o del Terror es igual a la diferencia de Tamaño en pasos. Así, si la criatura es Grande y su oponente es Pequeño, causará Terror 2.</p>\n<p>&nbsp;</p>\n<h3>Movimiento en Combate</h3>\n<p>Una criatura que es mayor ignora la necesidad de Destrabarse si quiere abandonar el Combate cuerpo a cuerpo; en lugar de eso, aparta del camino a empujones a los combatientes más pequeños y se mueve por donde quiere.</p>\n<p>&nbsp;</p>\n<h3>Fuerza Enfrentada</h3>\n<p>Durante los Chequeos <strong>Enfrentados de Fuerza</strong> (y similares), si una criatura es 2 pasos o más mayor, gana automáticamente. Si una criatura es 1 paso mayor, la criatura más pequeña debe conseguir un Crítico para oponerse a la tirada. Si lo hace, los NE se comparan de la forma habitual. Todos los demás resultados significan que la criatura mayor gana.</p>\n<p>&nbsp;</p>\n<h3>Pisotear</h3>\n<p>Las criaturas que son mayores que sus oponentes pueden llevar a cabo un Pisoteo como Ataque Gratuito, gastando 1 Ventaja, al dar una patada hacia abajo o golpear de alguna otra manera a los oponentes más pequeños, sacándolos del paso. Este ataque tiene un Daño igual a su Bonificador por Fuerza + 0 y usa Cuerpo a cuerpo (pelea).</p>\n<p>&nbsp;</p>\n<h3>Heridas</h3>\n<p>Las criaturas más grandes disponen de más Heridas.</p>\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">&nbsp;</p>\n<div style=\"direction: ltr;\">\n<table style=\"direction: ltr; border-collapse: collapse; border: 1pt solid #A3A3A3;\" title=\"\" border=\"1\" summary=\"\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td style=\"vertical-align: top; width: .8472in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\"><span style=\"font-weight: bold;\">Tamaño </span></p>\n</td>\n<td style=\"vertical-align: top; width: 3.9312in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\"><span style=\"font-weight: bold;\">Heridas</span></p>\n</td>\n</tr>\n<tr>\n<td style=\"vertical-align: top; width: .8472in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Minúsculo</p>\n</td>\n<td style=\"vertical-align: top; width: 3.9312in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">1</p>\n</td>\n</tr>\n<tr>\n<td style=\"vertical-align: top; width: .8472in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Muy pequeño</p>\n</td>\n<td style=\"vertical-align: top; width: 3.9312in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Bonificador por Resistencia</p>\n</td>\n</tr>\n<tr>\n<td style=\"vertical-align: top; width: .8472in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Pequeño</p>\n</td>\n<td style=\"vertical-align: top; width: 3.9312in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">(2xBonificador por Resistencia) + Bonificador por Voluntad</p>\n</td>\n</tr>\n<tr>\n<td style=\"vertical-align: top; width: .8472in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Normal</p>\n</td>\n<td style=\"vertical-align: top; width: 3.9312in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Bonificador por Fuerza + (2xBonificador por Resistencia) + Bonificador por Voluntad</p>\n</td>\n</tr>\n<tr>\n<td style=\"vertical-align: top; width: .8472in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Grande</p>\n</td>\n<td style=\"vertical-align: top; width: 4.0in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">(Bonificador por Fuerza + [2xBonificador por Resistencia] + Bonificador por Voluntad) x 2</p>\n</td>\n</tr>\n<tr>\n<td style=\"vertical-align: top; width: .8666in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Enorme</p>\n</td>\n<td style=\"vertical-align: top; width: 3.9812in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">(Bonificador por Fuerza + [2xBonificador por Resistencia] + Bonificador por Voluntad) ×4</p>\n</td>\n</tr>\n<tr>\n<td style=\"vertical-align: top; width: .8666in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">Monstruoso</p>\n</td>\n<td style=\"vertical-align: top; width: 3.9812in; padding: 4pt 4pt 4pt 4pt; border: 1pt solid #A3A3A3;\">\n<p style=\"margin: 0in; font-family: Calibri; font-size: 11.0pt; color: #231f20;\">(Bonificador por Fuerza + [2xBonificador por Resistencia] + Bonificador por Voluntad) ×8</p>\n</td>\n</tr>\n</tbody>\n</table>\n</div>",
+			"description":"<p>@UUID[Compendium.wfrp4e-core.journals.JournalEntry.3ZynTGhFpgwv6l1n.JournalEntryPage.JY7F6lwqt2YGPddY]{Tamaño}</p>",
 			"effects": [{
 				"name":"Tamaño",
 				"scriptData": [
@@ -12128,7 +12205,7 @@
 			"effects": [{
 				"name":"Adiestrado",
 				"scriptData": [
-					{"label":"Adiestrado","script":"let specification = this.item.system.specification.value;\nlet choice = [];\n\nif (!specification || specification == \"Habilidades Entrenadas\")\n{\n    choice = await ItemDialog.create(ItemDialog.objectToArray({\n        home: \"Casa\",\n        broken: \"Domado\",\n        entertain: \"Entretener\",\n        war: \"Guerra\",\n        magic: \"Magia\",\n        mount: \"Montura\",\n        guard: \"Protege\",\n        drive: \"Tirar\",\n        fetch: \"Trae\"\n    }, this.effect.img), \"unlimited\", \"Escoge entrenamiento\");\n}\nelse \n{\n    choice = specification.split(\", \").map(i => {\n        return {\n            id : i.toLowerCase(),\n            name : i\n        }\n    });\n}\n\nif (choice.length)\n{\n    let changes = foundry.utils.deepClone(this.effect.changes);\n\n    for(let training of choice)\n    {\n        switch(training.id)\n        {\n            case \"broken\" : \n                let roll = await new Roll(\"2d10\").roll();   \n                roll.toMessage(this.script.getChatData());\n                changes.push({value : roll.total, mode : 2, key : \"system.characteristics.fel.modifier\"})\n\n                if (this.actor.type == \"creature\")\n                {\n                    let bestial = this.actor.itemTypes.trait.find(i => i.name == \"Bestial\");\n                    if (bestial)\n                    {\n                        bestial.update({\"system.disabled\" : true})\n                    }\n                }\n                break;\n\n            case \"drive\" : \n\n                break;\n\n            case \"entertain\" : \n\n                break;\n\n            case \"fetch\" : \n\n                break;\n\n            case \"guard\" : \n                let territorial = await fromUuid(\"Compendium.wfrp4e-core.items.Item.JIAe7i7dqTQBu4do\");\n                await this.actor.createEmbeddedDocuments(\"Item\", [territorial], {fromEffect: this.effect.id})\n                foundry.utils.setProperty(args, \"options.keepId\", true);\n                break;\n\n            case \"home\" : \n\n                break;\n\n            case \"magic\" : \n\n                break;\n\n            case \"mount\" : \n\n                break;\n\n            case \"war\" : \n                changes.push({value : 10, mode : 2, key : \"system.characteristics.ws.modifier\"})\n                break;\n        }\n    }\n    this.effect.updateSource({name : `${this.effect.name} (${choice.map(i => i.name).join(\", \")})`, changes, \"flags.wfrp4e.trained\" : choice.map(i => i.id)})\n    this.item.updateSource({\"system.specification.value\" : `${choice.map(i => i.name).join(\", \")}`})\n}"},
+					{"label":"Adiestrado","script":"let specification = this.item.system.specification.value;\nlet choice = [];\n\nif (!specification || specification == \"Habilidades Entrenadas\")\n{\n    choice = await ItemDialog.create(ItemDialog.objectToArray({\n        home: \"Casa\",\n        broken: \"Domado\",\n        entertain: \"Entretener\",\n        war: \"Guerra\",\n        magic: \"Magia\",\n        mount: \"Montura\",\n        guard: \"Protege\",\n        drive: \"Tirar\",\n        fetch: \"Trae\"\n    }, this.effect.img), \"unlimited\", \"Escoge entrenamiento\");\n}\nelse \n{\n    choice = specification.split(\", \").map(i => {\n        return {\n            id : i.toLowerCase(),\n            name : i\n        }\n    });\n}\n\nif (choice.length)\n{\n    let changes = foundry.utils.deepClone(this.effect.changes);\n\n    for(let training of choice)\n    {\n        switch(training.id)\n        {\n            case \"broken\" : \n                let roll = await new Roll(\"2d10\").roll({allowInteractive : false});   \n                roll.toMessage(this.script.getChatData());\n                changes.push({value : roll.total, mode : 2, key : \"system.characteristics.fel.modifier\"})\n\n                if (this.actor.type == \"creature\")\n                {\n                    let bestial = this.actor.itemTypes.trait.find(i => i.name == \"Bestial\");\n                    if (bestial)\n                    {\n                        bestial.update({\"system.disabled\" : true})\n                    }\n                }\n                break;\n\n            case \"drive\" : \n\n                break;\n\n            case \"entertain\" : \n\n                break;\n\n            case \"fetch\" : \n\n                break;\n\n            case \"guard\" : \n                let territorial = await fromUuid(\"Compendium.wfrp4e-core.items.Item.JIAe7i7dqTQBu4do\");\n                await this.actor.createEmbeddedDocuments(\"Item\", [territorial], {fromEffect: this.effect.id})\n                foundry.utils.setProperty(args, \"options.keepId\", true);\n                break;\n\n            case \"home\" : \n\n                break;\n\n            case \"magic\" : \n\n                break;\n\n            case \"mount\" : \n\n                break;\n\n            case \"war\" : \n                changes.push({value : 10, mode : 2, key : \"system.characteristics.ws.modifier\"})\n                break;\n        }\n    }\n    this.effect.updateSource({name : `${this.effect.name} (${choice.map(i => i.name).join(\", \")})`, changes, \"flags.wfrp4e.trained\" : choice.map(i => i.id)})\n    this.item.updateSource({\"system.specification.value\" : `${choice.map(i => i.name).join(\", \")}`})\n}"},
 					{"label":"Adiestrado (Entretener)"}
 					]
 				}]
@@ -12358,7 +12435,7 @@
 			"effects": [{
 				"name":"Discutidor",
 				"scriptData": [
-					{"label":"Discutidor","script":"if (args.test.options.useOnesArgumentative && (args.test.result.roll <= game.settings.get(\"wfrp4e\", \"automaticSuccess\") || args.test.result.roll <= args.test.target))\n{\n\nlet SL = Math.floor(args.test.target / 10) - Math.floor(args.test.result.roll / 10)\nlet ones = Number(args.test.result.roll.toString().split(\"\").pop())\n\nif (ones > SL)\n\targs.test.data.result.SL = \"+\" + (ones + args.test.successBonus + args.test.slBonus)\n   args.test.result.other.push(`<b>${this.effect.name}</b>: Usado dado de unidades como NE.`)\n}"}
+					{"label":"Discutidor","script":"if (args.test.options.useOnesArgumentative && (args.test.result.roll <= game.settings.get(\"wfrp4e\", \"automaticSuccess\") || args.test.result.roll <= args.test.target))\n{\n\nlet SL = Math.floor(args.test.target / 10) - Math.floor(args.test.result.roll / 10)\nlet ones = Number(args.test.result.roll.toString().split(\"\").pop())\nif (ones == 0)\n{\n   ones = 10;\n}\n\nif (ones > SL)\n\targs.test.data.result.SL = \"+\" + (ones + args.test.successBonus + args.test.slBonus)\n   args.test.result.other.push(`<b>${this.effect.name}</b>: Usado dado de unidades como NE.`)\n}"}
 					]
 				}]
 		},
@@ -12380,7 +12457,7 @@
 			"effects": [{
 				"name":"Atractivo",
 				"scriptData": [
-					{"label":"Atractivo","script":"if (args.test.options.useOnesAttractive && (args.test.result.roll <= game.settings.get(\"wfrp4e\", \"automaticSuccess\") || args.test.result.roll <= args.test.target))\n{\n\nlet SL = Math.floor(args.test.target / 10) - Math.floor(args.test.result.roll / 10)\nlet ones = Number(args.test.result.roll.toString().split(\"\").pop())\n\nif (ones > SL)\n\targs.test.data.result.SL = \"+\" + (ones + args.test.successBonus + args.test.slBonus)\n   args.test.result.other.push(`<b>${this.effect.name}</b>: Usado dado de unidades como NE`)\n}"}
+					{"label":"Atractivo","script":"if (args.test.options.useOnesAttractive && (args.test.result.roll <= game.settings.get(\"wfrp4e\", \"automaticSuccess\") || args.test.result.roll <= args.test.target))\n{\n\nlet SL = Math.floor(args.test.target / 10) - Math.floor(args.test.result.roll / 10)\nlet ones = Number(args.test.result.roll.toString().split(\"\").pop())\nif (ones == 0)\n{\n   ones = 10;\n}\nif (ones > SL)\n\targs.test.data.result.SL = \"+\" + (ones + args.test.successBonus + args.test.slBonus)\n   args.test.result.other.push(`<b>${this.effect.name}</b>: Usado dado de unidades como NE`)\n}"}
 					]
 				}]
 		},
@@ -12406,7 +12483,7 @@
 					{"label":"Golpear el filo","script":"if (args.test.options.beatBlade && (args.test.result.roll <= game.settings.get(\"wfrp4e\", \"automaticSuccess\") || args.test.result.roll <= args.test.target))\n{\n   args.test.result.other.push(`<b>${this.effect.name}</b>: El oponente pierde ${Number(args.test.result.SL) + 1} de Ventaja`)\n}"}
 					]
 				}]
-			},
+		},
 		{
 			"id": "Beneath Notice",
 			"name": "Sin importancia",
@@ -12446,7 +12523,7 @@
 			"effects": [{
 				"name":"Bendición",
 				"scriptData": [
-					{"label":"Bendición","script":"if (this.actor.type != \"character\")\n{\n    return;\n}\n\nlet god = await ValueDialog.create({text : \"Escribe una deidad\", title :  \"Bendición\"})\n\nif (god)\n{\n    let prayers = await warhammer.utility.findAllItems(\"prayer\", \"Cargando Bendiciones\")\n    let blessings = prayers.filter(p => p.system.god.value.split(\",\").map(i => i.trim().toLowerCase()).includes(god.toLowerCase()) && p.system.type.value == \"blessing\")\n    let godBlessings = game.wfrp4e.config.godBlessings[god.toLowerCase()] || [];\n    if (god == \"Vieja Fe\")\n    {\n        blessings = await ItemDialog.create(prayers.filter(i => i.system.type.value == \"blessing\"), 6, {text : \"Selecciona 6 Bendiciones cualesquiera\", title :  \"Bendición\"})\n    }\n    if (godBlessings.length)\n    {\n        blessings = blessings.concat(await Promise.all(godBlessings.filter(bls => !(blessings.map(i => i.uuid).includes(bls.uuid))).map(fromUuid)));\n    }\n    if (blessings.length)\n    {\n        this.script.notification(\"Añadiendo \" + blessings.map(i => i.name).join(\", \"))\n        await this.actor.createEmbeddedDocuments(\"Item\", blessings, {fromEffect : this.effect.id})\n    }\n    else \n    {\n        this.script.notification(`No se pudo encontrar ninguna Bendición asociada a ${god}.`)\n    }\n    this.item.updateSource({name : this.item.name.replace(\"Cualquiera\", god)})\n    await this.actor.update({\"system.details.god.value\": god})\n}"}
+					{"label":"Bendición","script":"if (this.actor.type != \"character\")\n{\n    return;\n}\n\nlet god = await ValueDialog.create({text : \"Escribe una deidad\", title :  \"Bendición\"})\n\nif (god)\n{\n    let prayers = await warhammer.utility.findAllItems(\"prayer\", \"Cargando Bendiciones\", true, [\"system.type.value\", \"system.god.value\"])\n    let blessings = prayers.filter(p => p.system.god.value.split(\",\").map(i => i.trim().toLowerCase()).includes(god.toLowerCase()) && p.system.type.value == \"blessing\")\n    let configBlessings  = await Promise.all((game.wfrp4e.config.godBlessings[god.toLowerCase()] || []).map(fromUuid));\n    if (god == \"Vieja Fe\")\n    {\n        blessings = await ItemDialog.create(prayers.filter(i => i.system.type.value == \"blessing\"), 6, {text : \"Selecciona 6 Bendiciones cualesquiera\", title :  \"Bendición\"})\n    }\n    if (configBlessings.length)\n    {\n        // Combine blessings defined by config with actual blessing items found that specify this god, avoiding duplicates\n        blessings = blessings.concat(\n            configBlessings.map(i => {return {uuid : i.uuid, name : i.name}})\n            .filter(bls => !(blessings.find(i => i.uuid == bls.uuid)))\n        );\n    }\n    if (blessings.length)\n    {\n        this.script.notification(\"Añadiendo \" + blessings.map(i => i.name).join(\", \"))\n        await this.actor.addEffectItems(blessings.map(i => i.uuid), this.effect)\n    }\n    else \n    {\n        this.script.notification(`No se pudo encontrar ninguna Bendición asociada a ${god}.`)\n    }\n    this.item.updateSource({name : this.item.name.replace(\"Cualquiera\", god)})\n    await this.actor.update({\"system.details.god.value\": god})\n}"}
 					]
 				}]
 		},
@@ -12648,7 +12725,7 @@
 			"effects": [{
 				"name":"Delincuente",
 				"scriptData": [
-					{"label":"Delincuente","script":"if (args.test.options.income && !args.test.options.criminal)\n{\n    args.test.options.criminal = true;\n    let currentCareer = args.test.actor.system.currentCareer;\n    let coin = {1 : \"b\", 2 : \"s\", 3 : \"s\", 4 : \"g\"}[currentCareer.system.level.value] // b, s, or g maps to 2d10, 1d10, or 1 respectively (takes the first letter)\n    let term = {1 : \"pb\", 2 : \"cp\", 3 : \"cp\", 4 : \"co\"}[currentCareer.system.level.value] // b, s, or g maps to 2d10, 1d10, or 1 respectively (takes the first letter)\n    let dieAmount = {1 : \"2d10\", 2 : \"1d10\", 3 : \"2d10\", 4 : \"1\"}[currentCareer.system.level.value] // b, s, or g maps to 2d10, 1d10, or 1 respectively (takes the first letter)\n    dieAmount = parseInt(dieAmount[0]) * this.item.system.Advances;     // Multilpy that first letter by your standing (Brass 4 = 8d10 pennies)\n    if (coin != \"g\") // Don't roll for gold, just use standing value\n    {\n        dieAmount = dieAmount + \"d10\";\n    }\n    let moneyEarned = (await new Roll(dieAmount.toString()).roll()).total;\n    let moneyString = `${moneyEarned}${coin}`\n    let transactionString = `${moneyEarned}${term}`\n\n    this.script.message(`<a class=\"money-drag\" data-amt=\"${moneyString}\"><strong>Ganados ${game.wfrp4e.market.amountToString(game.wfrp4e.market.parseMoneyTransactionString(transactionString))} adicionales</strong></a>`, {whisper : ChatMessage.getWhisperRecipients(\"GM\")})\n}"}
+					{"label":"Delincuente","script":"if (args.test.options.income && !args.test.options.criminal)\n{\n    args.test.options.criminal = true;\n    let currentCareer = args.test.actor.system.currentCareer;\n    let coin = {1 : \"b\", 2 : \"s\", 3 : \"s\", 4 : \"g\"}[currentCareer.system.level.value] // b, s, or g maps to 2d10, 1d10, or 1 respectively (takes the first letter)\n    let term = {1 : \"pb\", 2 : \"cp\", 3 : \"cp\", 4 : \"co\"}[currentCareer.system.level.value] // b, s, or g maps to 2d10, 1d10, or 1 respectively (takes the first letter)\n    let dieAmount = {1 : \"2d10\", 2 : \"1d10\", 3 : \"2d10\", 4 : \"1\"}[currentCareer.system.level.value] // b, s, or g maps to 2d10, 1d10, or 1 respectively (takes the first letter)\n    dieAmount = parseInt(dieAmount[0]) * this.item.system.Advances;     // Multilpy that first letter by your standing (Brass 4 = 8d10 pennies)\n    if (coin != \"g\") // Don't roll for gold, just use standing value\n    {\n        dieAmount = dieAmount + \"d10\";\n    }\n    let moneyEarned = (await new Roll(dieAmount.toString()).roll({allowInteractive : false})).total;\n    let moneyString = `${moneyEarned}${coin}`\n    let transactionString = `${moneyEarned}${term}`\n\n    this.script.message(`<a class=\"money-drag\" data-amt=\"${moneyString}\"><strong>Ganados ${game.wfrp4e.market.amountToString(game.wfrp4e.market.parseMoneyTransactionString(transactionString))} adicionales</strong></a>`, {whisper : ChatMessage.getWhisperRecipients(\"GM\")})\n}"}
 					]
 				}]
 		},
@@ -12725,7 +12802,7 @@
 		{
 			"id": "Distract",
 			"name": "Distraer",
-			"description": "<p>Estás entrenado en movimientos sencillos para distraer o sobresaltar a tu oponente, desviando su atención de tus verdaderas intenciones. Puedes utilizar tu Movimiento para llevar a cabo una Distracción. Esto se resuelve mediante un Chequeo <strong>Enfrentado de Atletismo/ Frialdad</strong>. Si ganas, tu oponente no puede obtener Ventaja alguna hasta el final del siguiente Asalto.</p>",
+			"description": "<p>Estás entrenado en movimientos sencillos para distraer o sobresaltar a tu oponente, desviando su atención de tus verdaderas intenciones. Puedes utilizar tu Movimiento para llevar a cabo una Distracción. Esto se resuelve mediante un Chequeo <strong>Enfrentado de Atletismo/Frialdad</strong>. Si ganas, tu oponente no puede obtener Ventaja alguna hasta el final del siguiente Asalto.</p>",
 			"tests": "Atletismo para Distraer",
 			"effects": [{
 				"name":"Distraer",
@@ -12754,7 +12831,7 @@
 		{
 			"id": "Dual Wielder",
 			"name": "Empuñar dos armas",
-			"description": "<p>Cuando empuñas dos armas, puedes atacar con ambas como tu Acción. Tira para impacto con el arma que empuñas en tu mano principal. Si aciertas, determina el Daño de la forma habitual, pero recuerda la tirada de dado, puesto que la usarás de nuevo. Si el primer golpe impacta, una vez se resuelve, el arma de tu mano secundaria ('mano torpe') puede entonces tomar como objetivo a un oponente disponible a tu elección, utilizando la misma tirada de dado del primer golpe, pero invertida. Así pues, si sacaste 34 al impacto con la primera arma, usarás 43 para impactar con la segunda. Recuerda modificar esta segunda tirada con tu penalizador por mano torpe (-20 a menos que dispongas del Talento Ambidiestro). Este segundo ataque es Enfrentado a una nueva tirada de defensa, y el daño que causa se calcula de la forma habitual. La única excepción a lo antedicho es que saques un Crítico en tu primer golpe. En ese caso, utiliza la tirada de la Tabla de Críticos como tirada del segundo ataque. Así pues, si conseguiste un crítico a la cabeza y sacaste un 56 en la Tabla de Críticos para una Herida grave en el Ojo, tu segundo ataque tendrá un valor de impacto de 56. Si eliges atacar con las dos armas, todas tus tiradas defensivas hasta el inicio de tu siguiente Turno sufrirán un penalizador -10. No obtienes Ventaja cuando atacas con éxito o hieres a un oponente cuando empuñas dos armas si no aciertas con ambos ataques.</p>",
+			"description": "<p>Cuando empuñas dos armas, puedes atacar con ambas como tu Acción. Tira para impacto con el arma que empuñas en tu mano principal. Si aciertas, determina el Daño de la forma habitual, pero recuerda la tirada de dado, puesto que la usarás de nuevo. Si el primer golpe impacta, una vez se resuelve, el arma de tu mano secundaria ('mano torpe') puede entonces tomar como objetivo a un oponente disponible a tu elección, utilizando la misma tirada de dado del primer golpe, pero invertida. Así pues, si sacaste 34 al impacto con la primera arma, usarás 43 para impactar con la segunda. Recuerda modificar esta segunda tirada con tu penalizador por mano torpe (-20 a menos que dispongas del Talento Ambidiestro). Este segundo ataque es Enfrentado a una nueva tirada de defensa, y el daño que causa se calcula de la forma habitual. La única excepción a lo antedicho es que saques un Crítico en tu primer golpe. En ese caso, utiliza la tirada de la Tabla de Críticos como tirada del segundo ataque. Así pues, si conseguiste un crítico a la cabeza y sacaste un 56 en la Tabla de Críticos para una Herida grave en el Ojo, tu segundo ataque tendrá un valor de impacto de 56. Si eliges atacar con las dos armas, todas tus tiradas defensivas hasta el inicio de tu siguiente Turno sufrirán un penalizador -10. No obtienes Ventaja cuando atacas con éxito o hieres a un oponente cuando empuñas dos armas si no aciertas con ambos ataques.</p><blockquote class=\"foundry-note\"><p>Tras completar con éxito un Chequeo Enfrentado usando tu arma primaria contra un oponente, aparecerá en el chat un botón para tirar el Chequeo secundario. Ten en cuenta que sólo estará disponible si hay también equipada un arma en la mano mala.</p></blockquote>",
 			"tests": "Cuerpo a cuerpo o A distancia al atacar con dos armas",
 			"effects": [{
 				"name":"Empuñar dos armas",
@@ -12877,7 +12954,7 @@
 		{
 			"id": "Flee!",
 			"name": "¡A correr!",
-			"description": "<p>Cuando tu vida peligra, eres capaz de impresionantes ráfagas develocidad. Tu Atributo de Movimiento cuenta como 1 punto más cuando Huyes</p>",
+			"description": "<p>Cuando tu vida peligra, eres capaz de impresionantes ráfagas develocidad. Tu Atributo de Movimiento cuenta como 1 punto más cuando Huyes.</p>",
 			"tests": "Atletismo cuando huyes",
 			"effects": [{
 				"name":"¡A correr!",
@@ -12952,7 +13029,7 @@
 				}]
 		},
 		{
-			"id": "zImcTgEl2XNnbu5W",
+			"id": "Hardy",
 			"name": "Recio",
 			"description": "<p>Obtienes una suma permanente a tus Heridas igual a tu Bonificador por Resistencia. Si tu Bonificador por Resistencia se incrementa, también lo hace el número de Heridas que proporciona este Talento.</p>",
 			"effects": [{
@@ -13486,7 +13563,7 @@
 				"name":"Sabio",
 				"scriptData": [
 					{},
-					{"label":"Elegir Sabiduría académica","script":"if (this.item.name.includes(\"(\"))\n{\n\treturn;\n}\n\nlet index = game.packs\n.filter(i => i.metadata.type == \"Item\")\n.reduce((acc, pack) => acc.concat(pack.index.contents), [])\n.filter(i => i.type == \"skill\" && i.name.includes(game.i18n.localize(\"NAME.Lore\")))\n.map(i => {\n\ti.id = i._id\n\treturn i\n})\n\nlet choice = await ItemDialog.create(index, 1, \"Escoge una Sabiduría académica\")\nlet text;\nif (!choice[0])\n{\n    let custom = await Dialog.wait({\n        title : \"Escribe una Sabiduría académica\",\n        content : \"<input type='text'>\",\n        buttons : {\n            confirm : {\n                label : game.i18n.localize(\"Confirm\"),\n                callback : (dlg) => {\n                    return dlg.find(\"input\")[0].value\n                }\n            }\n        },\n        default : \"confirm\",\n        close : () => {\n            return \"\"\n        }\n    })   \n    text = custom || \"\"\n}\nelse \n{\n    text = warhammer.utility.extractParenthesesText(choice[0].name)\n}\n\nawait this.item.updateSource({name : this.item.name + ` (${text})`, \"system.tests.value\" : this.item.system.tests.value.replace(\"Saber elegido\", text)})\nawait this.effect.updateSource({name : this.effect.name + ` (${text})`})"}
+					{"label":"Elegir Sabiduría académica","script":"if (this.item.name.includes(\"(\"))\n{\n\treturn;\n}\n\nlet index = game.packs\n.filter(i => i.metadata.type == \"Item\")\n.reduce((acc, pack) => acc.concat(pack.index.contents), [])\n.filter(i => i.type == \"skill\" && i.name.includes(game.i18n.localize(\"NAME.Lore\")))\n.map(i => {\n\ti.id = i._id\n\treturn i\n})\n\nlet choice = await ItemDialog.create(index, 1, \"Escoge una Sabiduría académica\")\nlet text;\nif (!choice[0])\n{\n    let custom = await ValueDialog.create({text : \"Escribir Saber\", title : this.effect.name});\n    text = custom || \"\";\n}\nelse \n{\n    text = warhammer.utility.extractParenthesesText(choice[0].name)\n}\n\nawait this.item.updateSource({name : this.item.name + ` (${text})`, \"system.tests.value\" : this.item.system.tests.value.replace(\"Saber elegido\", text)})\nawait this.effect.updateSource({name : this.effect.name + ` (${text})`})"}
 					]
 				}]
 		},

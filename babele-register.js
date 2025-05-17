@@ -1,5 +1,8 @@
 import {TranslatedCompendium} from "../babele/script/translated-compendium.js"
-import { effects } from "./modules/effects.js";
+import { effects } from "./modules/converters.js";
+import { templatesskills } from "./modules/converters.js";
+import { templatestalents } from "./modules/converters.js";
+import { templatestrappings } from "./modules/converters.js";
 
 Hooks.on('init', () => {
 
@@ -16,9 +19,12 @@ game.babele.registerConverters({
         if ( value == "" ) return "";
         if ( value == "Touch" ) return "Toque";
         if ( value == "You" ) return "Tú";
+        if ( value == "Self" ) return "Uno mismo";
         if ( value == "Instant" ) return "Instantáneo";
         if ( value == "Line of Sight" ) return "Línea de Visión";
         if ( value == "Special" ) return "Especial";
+		if ( value == "See text" ) return "Ver texto";
+		if ( value == "Any ally" ) return "Cualquier aliado";
 		if ( value == "a single location" ) return "Un solo lugar";
 		if ( value == "see description" ) return "Ver descripción";
 		if ( value == "Until sunrise" ) return "Hasta el amanecer";
@@ -60,6 +66,7 @@ game.babele.registerConverters({
         if ( charac == "Dexterity") charac = "Destreza";
         if ( charac == "Intelligence") charac = "Inteligencia";
         if ( charac == "Willpower") charac = "Voluntad";
+        if ( charac == "WIllpower") charac = "Voluntad";
         if ( charac == "Fellowship") charac = "Empatía";
 
         if ( characbonus == "Weapon Skill") charac = "Bonificador por Habilidad de Armas";
@@ -169,17 +176,13 @@ game.babele.registerConverters({
         if ( value == "Bounty Hunter" ) return "Cazarrecompensas";
         if ( value == "Coachman" ) return "Cochero";
         if ( value == "Entertainer" ) return "Animador";
-        if ( value == "Engineer" ) return "Ingeniero";
         if ( value == "Flagellant" ) return "Flagelante";
         if ( value == "Messenger" ) return "Mensajero";
         if ( value == "Pedlar" ) return "Vendedor ambulante";
-        if ( value == "Engineer" ) return "Ingeniero";
         if ( value == "Road warden" ) return "Guarda de caminos";
-        if ( value == "Engineer" ) return "Ingeniero";
         if ( value == "Witch Hunter" ) return "Cazador de brujas";
         if ( value == "Boatman" ) return "Barquero";
         if ( value == "Huffer" ) return "Práctico";
-        if ( value == "Engineer" ) return "Ingeniero";
         if ( value == "Riverwarden" ) return "Guardián del río";
         if ( value == "Riverwoman" ) return "Mujer del río";
         if ( value == "Seaman" ) return "Marino";
@@ -188,17 +191,13 @@ game.babele.registerConverters({
         if ( value == "Wrecker" ) return "Raquero";
         if ( value == "Bawd" ) return "Chalán";
         if ( value == "Charlatan" ) return "Charlatán";
-        if ( value == "Engineer" ) return "Ingeniero";
         if ( value == "Fence" ) return "Perista";
         if ( value == "Grave Robber" ) return "Ladrón de tumbas";
         if ( value == "Outlaw" ) return "Forajido";
-        if ( value == "Engineer" ) return "Ingeniero";
         if ( value == "Racketeer" ) return "Pandillero";
         if ( value == "Thief" ) return "Ladrón";
-        if ( value == "Engineer" ) return "Ingeniero";
         if ( value == "Witch" ) return "Brujo";
         if ( value == "Cavalryman" ) return "Reitre";
-        if ( value == "Engineer" ) return "Ingeniero";
         if ( value == "Guard" ) return "Guardia";
         if ( value == "Knight" ) return "Caballero";
         if ( value == "Pit Fighter" ) return "Guerrero de foso";
@@ -206,6 +205,21 @@ game.babele.registerConverters({
         if ( value == "Soldier" ) return "Soldado";
         if ( value == "Slayer" ) return "Matador";
         if ( value == "Warrior Priest" ) return "Sacerdote guerrero";
+        if ( value == "Archer" ) return "Arquero";
+        if ( value == "Artillerist" ) return "Artillero";
+        if ( value == "Camp Follower" ) return "Seguidor de campamento";
+        if ( value == "Cartographer" ) return "Cartógrafo";
+        if ( value == "Freelance" ) return "Caballero de fortuna";
+        if ( value == "Greatsword" ) return "Gran espadero";
+        if ( value == "Halberdier" ) return "Alabardero";
+        if ( value == "Handgunner" ) return "Fusilero";
+        if ( value == "Knight of the Blazing Sun" ) return "Caballero del Sol Llameante";
+        if ( value == "Knight of the White Wolf" ) return "Caballero del Lobo Blanco";
+        if ( value == "Knight Panther" ) return "Caballero Pantera";
+        if ( value == "Light Cavalry" ) return "Caballería ligera";
+        if ( value == "Pikeman" ) return "Piquero";
+        if ( value == "Priest of Myrmidia" ) return "Sacerdote de Myrmidia";
+        if ( value == "Siege Specialist" ) return "Especialista en asedios";
 	},
 	
 	"talents_specification": (value) => {  // Especificación de talentos, valor
@@ -276,6 +290,7 @@ game.babele.registerConverters({
 	     if ( value == "Magic" ) return "Magia";
 	     if ( value == "Mount" ) return "Montura";
 	     if ( value == "War" ) return "Guerra";
+	     if ( value == "Broken, Mount, Shock Cavalry, War" ) return "Domado, Montura, Caballería de choque, Guerra";
 	     if ( value == "Sigmarites" ) return "Sigmaritas";
 	     if ( value == "Witch" ) return "Brujo";
 	     if ( value == "the Rich, Beastmen" ) return "Los ricos, los hombres bestia";
@@ -317,6 +332,11 @@ game.babele.registerConverters({
 	     if ( value == "Third weapon" ) return "Tercio del arma";
 	     if ( value == "Quarter weapon" ) return "Cuarto del arma";
 	     if ( value == "Twice weapon" ) return "Doble del arma";
+	     if ( value == "As Weapon" ) return "Según arma";
+	     if ( value == "Half Weapon" ) return "Mitad del arma";
+	     if ( value == "Third Weapon" ) return "Tercio del arma";
+	     if ( value == "Quarter Weapon" ) return "Cuarto del arma";
+	     if ( value == "Twice Weapon" ) return "Doble del arma";
 	},
 	
 	"injuries_location": (value) => {  // Heridas, Localización
@@ -344,17 +364,6 @@ game.babele.registerConverters({
 	     if ( value == "minutes" ) return "minutos";
 	},
 	
-	"diaries_folder": (value) => {  // Diarios y Tablas, Carpetas
-	     if ( value == "Core Rulebook" ) return "Libro Básico";
-	     if ( value == "Career Tables" ) return "Tablas de Carrera";
-	     if ( value == "Character Creation" ) return "Creación de Personaje";
-	     if ( value == "Corruption & Mutation Tables" ) return "Tablas de Corrupción y Mutación";
-	     if ( value == "Critical Hit Tables" ) return "Tablas de Impactos Críticos";
-	     if ( value == "GM Booklet" ) return "Libreta de DJ";
-	     if ( value == "Hit Location" ) return "Ubicación de Impacto";
-	     if ( value == "Moo's Homebrew" ) return "Reglas Caseras de Moo";
-	},
-	
 	"effects": effects,
 
 	"bestiary_gender": (value) => {  // Bestiario, género
@@ -364,6 +373,9 @@ game.babele.registerConverters({
 	     if ( value == "Varies" ) return "Varía";
 	},
 
+	"templatesskills": templatesskills,
+	"templatestalents": templatestalents,
+	"templatestrappings": templatestrappings,
   });
  }
     

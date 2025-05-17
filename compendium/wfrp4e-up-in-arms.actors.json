@@ -1,0 +1,68 @@
+{
+	"label": "Actores (¡A las Armas!)",
+	"mapping": {
+		"species": "system.details.species.value",
+		"gender": {
+			"path": "system.details.gender.value",
+			"converter": "bestiary_gender"
+			},
+		"status": "system.details.status.value",
+		"notes": "system.details.biography.value",
+		"gmnotes": "system.details.gmnotes.value"
+		},
+	"entries": [
+		{
+			"id": "Demigryph Mount",
+			"name": "Semigrifo montura",
+			"species": "Semigrifo"
+		},
+		{
+			"id": "Destrier",
+			"name": "Destrero",
+			"species": "Caballo",
+			"notes": "<section id=\"secret-KVVskb3Id1ELGbjT\" class=\"secret\"><p>Se crían caballos para muchos usos, incluyendo rápidas monturas para los mensajeros, recios destreros para los caballeros y poderosos caballos de tiro para los granjeros. Son tan útiles, que el comercio caballar es casi un deporte competitivo en Reikland. Algunos ‘tratantes de caballos’ poco escrupulosos están ansiosos de hacer dinero a expensas de los compradores ignorantes, pintando y limando dientes de caballos de edad, o metiendo trapos nariz arriba para absorber la mucosidad, de forma que el comprador poco avispado debería tener cuidado.</p></section>"
+		},
+		{
+			"id": "Doktor",
+			"name": "Doktor",
+			"status": "Plata 5",
+			"gmnotes": "<p></p><blockquote class=\"foundry-note\"><p>Añade la plantilla @UUID[Compendium.wfrp4e-up-in-arms.items.gjtcCTmRPxTL4oAL]{Asalariado} para crear un Asalariado.</p><p>Ver @UUID[JournalEntry.wt3pKdkmXuAHrVyl.JournalEntryPage.QD3EDNjFCIcnaoZw]{Perfiles de asalariados} para más detalles.</p></blockquote>"
+		},
+		{
+			"id": "Lawyer",
+			"name": "Abogado",
+			"status": "Plata 3",
+			"gmnotes": "<p></p><blockquote class=\"foundry-note\"><p>Añade la plantilla @UUID[Compendium.wfrp4e-up-in-arms.items.gjtcCTmRPxTL4oAL]{Asalariado} para crear un Asalariado.</p><p>Ver @UUID[JournalEntry.wt3pKdkmXuAHrVyl.JournalEntryPage.QD3EDNjFCIcnaoZw]{Perfiles de asalariados} para más detalles.</p></blockquote>"
+		},
+		{
+			"id": "Local Scout",
+			"name": "Explorador local",
+			"status": "Plata 1",
+			"gmnotes": "<p></p><blockquote class=\"foundry-note\"><p>Añade la plantilla @UUID[Compendium.wfrp4e-up-in-arms.items.gjtcCTmRPxTL4oAL]{Asalariado} para crear un Asalariado.</p><p>Ver @UUID[JournalEntry.wt3pKdkmXuAHrVyl.JournalEntryPage.QD3EDNjFCIcnaoZw]{Perfiles de asalariados} para más detalles.</p></blockquote>"
+		},
+		{
+			"id": "Porter",
+			"name": "Mozo de cuerda",
+			"status": "Plata 1",
+			"gmnotes": "<p></p><blockquote class=\"foundry-note\"><p>Añade la plantilla @UUID[Compendium.wfrp4e-up-in-arms.items.gjtcCTmRPxTL4oAL]{Asalariado} para crear un Asalariado.</p><p>Ver @UUID[JournalEntry.wt3pKdkmXuAHrVyl.JournalEntryPage.QD3EDNjFCIcnaoZw]{Perfiles de asalariados} para más detalles.</p></blockquote>"
+		},
+		{
+			"id": "Riding Horse",
+			"name": "Caballo de monta",
+			"species": "Caballo",
+			"notes": "<section id=\"secret-KVVskb3Id1ELGbjT\" class=\"secret\"><p>Se crían caballos para muchos usos, incluyendo rápidas monturas para los mensajeros, recios destreros para los caballeros y poderosos caballos de tiro para los granjeros. Son tan útiles, que el comercio caballar es casi un deporte competitivo en Reikland. Algunos ‘tratantes de caballos’ poco escrupulosos están ansiosos de hacer dinero a expensas de los compradores ignorantes, pintando y limando dientes de caballos de edad, o metiendo trapos nariz arriba para absorber la mucosidad, de forma que el comprador poco avispado debería tener cuidado.</p></section>"
+		},
+		{
+			"id": "Scribe",
+			"name": "Escribano",
+			"status": "Plata 2",
+			"gmnotes": "<p></p><blockquote class=\"foundry-note\"><p>Añade la plantilla @UUID[Compendium.wfrp4e-up-in-arms.items.gjtcCTmRPxTL4oAL]{Asalariado} para crear un Asalariado.</p><p>Ver @UUID[JournalEntry.wt3pKdkmXuAHrVyl.JournalEntryPage.QD3EDNjFCIcnaoZw]{Perfiles de asalariados} para más detalles.</p></blockquote>"
+		},
+		{
+			"id": "Seasoned Mercenary",
+			"name": "Mercenario experimentado",
+			"status": "Plata 3",
+			"gmnotes": "<p></p><blockquote class=\"foundry-note\"><p>Añade la plantilla @UUID[Compendium.wfrp4e-up-in-arms.items.gjtcCTmRPxTL4oAL]{Asalariado} para crear un Asalariado.</p><p>Ver @UUID[JournalEntry.wt3pKdkmXuAHrVyl.JournalEntryPage.QD3EDNjFCIcnaoZw]{Perfiles de asalariados} para más detalles.</p></blockquote>"
+		}
+	]
+}

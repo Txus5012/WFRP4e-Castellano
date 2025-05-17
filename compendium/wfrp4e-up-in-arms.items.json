@@ -1,0 +1,1676 @@
+{
+	"label": "Objetos (¡A las Armas!)",
+    "folders": {
+        "Careers": "Carreras",
+		"Criticals": "Críticos",
+		"Prayers": "Plegarias",
+		"Talents": "Talentos",
+		"Traits": "Rasgos",
+		"Trappings": "Accesorios",
+		"Ammunition": "Munición",
+		"Weapons": "Armas"
+    },
+	"mapping": {
+	    "skills": "system.skills",
+	    "talents": "system.talents",
+	    "class": {
+		      "path": "system.class.value",
+		      "converter": "career_class"
+		    },
+	    "careergroup": {
+		      "path": "system.careergroup.value",
+		      "converter": "career_careergroup"
+		    },
+	    "trappings": "system.trappings",
+		"range": {
+			"path": "system.range.value",
+			"converter": "trappings_range"
+			},
+		"effects": {
+			"path": "effects",
+			"converter": "effects"
+			},
+		"wounds": {
+			"path": "system.wounds.value",
+			"converter": "criticals_wounds"
+			},	
+		"location": {
+			"path": "system.location.value",
+			"converter": "criticals_location"
+			},
+		"spell_duration": {
+			"path": "system.duration.value",
+			"converter": "spells_duration_range_target"
+		},
+		"spell_range": {
+			"path": "system.range.value",
+			"converter": "spells_duration_range_target"
+		},
+		"target": {
+			"path": "system.target.value",
+			"converter": "spells_duration_range_target"
+		},    
+		"damage": {
+			"path": "system.damage.value",
+			"converter": "spells_damage"
+		},
+		"specification": {
+			"path": "system.specification.value",
+			"converter": "traits_specification"
+			},
+		"tests": "system.tests.value",
+		"templatesskills": {
+			"path": "system.skills.list",
+			"converter": "templatesskills"
+			},
+		"templatestalents": {
+			"path": "system.talents.list",
+			"converter": "templatestalents"
+			},
+		"templatestrappings": {
+			"path": "system.trappings.options",
+			"converter": "templatestrappings"
+			}
+	},
+	"entries": [
+		{
+			"id": "Apprentice Artillerist",
+			"name": "Aprendiz artillero",
+			"skills": ["Criar animales","Frialdad","Conducir","Aguante","Tasar","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Básico)","Orientación","Percepción","A distancia (ballesta, catapulta, ingeniería o pólvora negra)"],
+			"talents": ["Buenas espaldas","Guerrero nato","Recarga rápida","Francotirador"],
+			"trappings" : ["Delantal de cuero"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.PgIAJWjuYUxR8NRc.JournalEntryPage.KID8Xu7W7Jvygl9K]{Artillero}</p>"
+		},
+		{
+			"id": "Archer",
+			"name": "Arquero",
+			"skills": ["Atletismo","Escalar","Consumir alcohol","Esquivar","Aguante","Hablar idioma (Lengua de Batalla)","Percepción","Tocar (Cuerno)","A distancia (Arco)","Movimiento silencioso (Rural)","Jugar","Cotilleo","Cuerpo a cuerpo (Básico)","Supervivencia","Seguir rastros","Oficio (Flechero)"],
+			"talents": ["Disparo seguro","Entrenado","Etiqueta (Soldados)","Puntería"],
+			"trappings" : ["Arco de calidad","Espada","Gorro"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.PgIAJWjuYUxR8NRc.JournalEntryPage.tczPk698eLFpVOsm]{Arquero}</p>"
+		},
+		{
+			"id": "Archer Captain",
+			"name": "Capitán arquero",
+			"skills": ["Atletismo","Escalar","Consumir alcohol","Esquivar","Aguante","Hablar idioma (Lengua de Batalla)","Percepción","Tocar (Cuerno)","A distancia (Arco)","Movimiento silencioso (Rural)","Jugar","Cotilleo","Cuerpo a cuerpo (Básico)","Supervivencia","Seguir rastros","Oficio (Flechero)","Frialdad","Mando","Orientación","Montar (Caballo)","Sabiduría académica (Guerra)","Lengua secreta (Explorador)"],
+			"talents": ["Denodado","Inspirador","Líder de guerra","Viajero curtido"],
+			"trappings" : ["Caballo de guerra ligero con silla y guarnición","Despacho acreditativo","Símbolo de rango"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.PgIAJWjuYUxR8NRc.JournalEntryPage.tczPk698eLFpVOsm]{Arquero}</p>"
+		},
+		{
+			"id": "Archer Sergeant",
+			"name": "Sargento arquero",
+			"skills": ["Atletismo","Escalar","Consumir alcohol","Esquivar","Aguante","Hablar idioma (Lengua de Batalla)","Percepción","Tocar (Cuerno)","A distancia (Arco)","Movimiento silencioso (Rural)","Jugar","Cotilleo","Cuerpo a cuerpo (Básico)","Supervivencia","Seguir rastros","Oficio (Flechero)","Frialdad","Mando","Orientación","Montar (Caballo)"],
+			"talents": ["Francotirador","Imperturbable","Percepción de combate","Proyectil infalible"],
+			"trappings" : ["Uniforme de calidad","Símbolo de rango"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.PgIAJWjuYUxR8NRc.JournalEntryPage.tczPk698eLFpVOsm]{Arquero}</p>"
+		},
+		{
+			"id": "Artillerist",
+			"name": "Artillero",
+			"skills": ["Criar animales","Frialdad","Conducir","Aguante","Tasar","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Básico)","Orientación","Percepción","A distancia (ballesta, catapulta, ingeniería o pólvora negra)","Consumir alcohol","Jugar","Cotilleo","Supervivencia","A distancia (Pólvora Negra o Catapulta o Ballesta o Ingeniería)","Oficio (Carpintero o Armero)"],
+			"talents": ["Comandante de dotación","Etiqueta (Soldados)","Francotirador","Orientarse"],
+			"trappings" : ["Arma (Cualquiera)","Herramientas de un Oficio","Telescopio","Uniforme"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.PgIAJWjuYUxR8NRc.JournalEntryPage.KID8Xu7W7Jvygl9K]{Artillero}</p>"
+		},
+		{
+			"id": "Artillerist Captain",
+			"name": "Capitán artillero",
+			"skills": ["Criar animales","Frialdad","Conducir","Aguante","Tasar","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Básico)","Orientación","Percepción","A distancia (ballesta, catapulta, ingeniería o pólvora negra)","Consumir alcohol","Jugar","Cotilleo","Supervivencia","A distancia (Pólvora Negra o Catapulta o Ballesta o Ingeniería)","Oficio (Carpintero o Armero)","Intuición","Mando","Sabiduría académica (Artillería)","Montar (Caballo)"],
+			"talents": ["Percepción de combate","Leer y escribir","Manitas","Imperturbable"],
+			"trappings" : ["Símbolo de rango","Uniforme de calidad"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.PgIAJWjuYUxR8NRc.JournalEntryPage.KID8Xu7W7Jvygl9K]{Artillero}</p>"
+		},
+		{
+			"id": "Banner Captain",
+			"name": "Capitán de estandarte",
+			"skills": ["Atletismo","Escalar","Consumir alcohol","Esquivar","Aguante","Jugar","Hablar idioma (Lengua de Batalla)","Hablar idioma (Tileano)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (Arma de Asta)","Frialdad","Cotilleo","Sanar","Intimidar","Sabiduría académica (Guerra)","Supervivencia","Jugar","Intuición","Mando","Percepción","Sabiduría académica (Derecho)","Montar (Caballo)"],
+			"talents": ["Imperturbable","Inspirador","Muy resistente","Líder de guerra"],
+			"trappings" : ["Bastón de rango","Brazales y polainas de acero","Caballo de guerra ligero","Estandarte de la unidad","Portaestandarte","Uniforme de calidad"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.1BTD0otB4pln0o8j.JournalEntryPage.mGMZSWoJnbnRze1h]{Piquero}</p>"
+		},
+		{
+			"id": "Bowman",
+			"name": "Aprendiz de arquero",
+			"skills": ["Atletismo","Escalar","Consumir alcohol","Esquivar","Aguante","Hablar idioma (Lengua de Batalla)","Percepción","Tocar (Cuerno)","A distancia (Arco)","Movimiento silencioso (Rural)"],
+			"talents": ["Buenas espaldas","Disparo infalible","Disparo rápido","Guerrero nato"],
+			"trappings" : ["Arco","Carcaj y 10 flechas","Mochila","Uniforme"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.PgIAJWjuYUxR8NRc.JournalEntryPage.tczPk698eLFpVOsm]{Arquero}</p>"
+		},
+		{
+			"id": "Camp Chief",
+			"name": "Jefe de campamento",
+			"skills": ["Carisma","Consumir alcohol","Esquivar","Animar (Cualquiera)","Cotilleo","Regatear","Cuerpo a cuerpo (Cualquiera)","Supervivencia","Percepción","Actuar (Baile)","Atletismo","Sobornar","Aguante","Jugar","A distancia (Cualquiera)","Movimiento silencioso (Rural)","Frialdad","Intimidar","Intuición","Hablar idioma (Cualquiera)","Tasar","Mando"],
+			"talents": ["Decidido","Denodado","Inspirador","Orador"],
+			"trappings" : ["Anillo de los seguidores de campamentos","Caballo de monta","Silla de montar y arreos"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.PgIAJWjuYUxR8NRc.JournalEntryPage.PyuVaepgBmUkbfrz]{Seguidor de campamento}</p>"
+		},
+		{
+			"id": "Camp Follower",
+			"name": "Seguidor de campamento",
+			"skills": ["Carisma","Consumir alcohol","Esquivar","Animar (Cualquiera)","Cotilleo","Regatear","Cuerpo a cuerpo (Cualquiera)","Supervivencia","Percepción","Actuar (Baile)","Atletismo","Sobornar","Aguante","Jugar","A distancia (Cualquiera)","Movimiento silencioso (Rural)"],
+			"talents": ["Ayunador","Errante","Etiqueta (Soldados)","Experto en dados"],
+			"trappings" : ["Sombrero de calidad","Tienda de campaña"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.PgIAJWjuYUxR8NRc.JournalEntryPage.PyuVaepgBmUkbfrz]{Seguidor de campamento}</p>"
+		},
+		{
+			"id": "Captain",
+			"name": "Capitán",
+			"skills": ["Criar animales","Esquivar","Aguante","Regatear","Sanar","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Básica)","Supervivencia","A distancia (Arrojadiza)","Montar (Caballo)","Carisma","Consumir alcohol","Jugar","Cotilleo","Cuerpo a cuerpo (De Caballería)","A distancia (Arco)","Conducir","Intuición","Mando","Sabiduría académica (Guerra)","Sabiduría académica (Derecho o Heráldica)","A distanica (De Pólvora Negra)"],
+			"talents": ["Inspirador","Líder de guerra","Negociador","Presencia imponente"],
+			"trappings" : ["Caballo de guerra","Coraza","Correa con un par de pistolas con pólvora y munición o arco con carcaj con 10 flechas","Ropa ostentosa"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.1BTD0otB4pln0o8j.JournalEntryPage.1i3Y6jOqCTmlbVeo]{Caballería ligera}</p>"
+		},
+		{
+			"id": "Cartographer",
+			"name": "Cartógrafo",
+			"skills": ["Arte (Cartografía)","Escalar","Tasar","Sabiduría académica (Geografía)","Cuerpo a cuerpo (Básica)","Orientación","Supervivencia","Percepción","Movimiento silencioso (Rural)","Oficio (Cartógrafo)","Carisma","Aguante","Cotilleo","Regatear","Sabiduría académica (Heráldica)","Montar (Caballo)"],
+			"talents": ["¡A correr!","Sangre fría","Viajero curtido","Zancadas (Cualquiera)"],
+			"trappings" : ["Caballo","Silla de montar y arreos","Teodolito"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.PgIAJWjuYUxR8NRc.JournalEntryPage.6xKxqvKM5exJhiAA]{Cartógrafo}</p>"
+		},
+		{
+			"id": "Chartered Cartographer",
+			"name": "Cartógrafo colegiado",
+			"skills": ["Arte (Cartografía)","Escalar","Tasar","Sabiduría académica (Geografía)","Cuerpo a cuerpo (Básica)","Orientación","Supervivencia","Percepción","Movimiento silencioso (Rural)","Oficio (Cartógrafo)","Carisma","Aguante","Cotilleo","Regatear","Sabiduría académica (Heráldica)","Montar (Caballo)","Intuición","Hablar idioma (Gremio)","Investigar","Lengua secreta (Gremio)"],
+			"talents": ["Dedos ágiles","Etiqueta (Gremio)","Imperturbable","Intelectual"],
+			"trappings" : ["Carta constitutiva","Ropas de viaje de calidad"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.PgIAJWjuYUxR8NRc.JournalEntryPage.6xKxqvKM5exJhiAA]{Cartógrafo}</p>"
+		},
+		{
+			"id": "Isir3duZW3XqMtyU",
+			"name": "Comandante de compañía (Círculo Interior)",
+			"skills": ["Atletismo","Criar animales","Carisma animal","Sanar","Sabiduría académica (Heráldica)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (De Caballería)","Supervivencia","Montar (Caballo)","Oficio (Herrador)","Frialdad","Esquivar","Aguante","Intimidar","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Cualquiera)","Consumir alcohol","Mando","Sabiduría académica (Guerra)","Percepción","Sabiduría académica (Cualquiera)","Lengua secreta (Ulric)"],
+			"talents": ["Decidido","Implacable","Inspirador","Voluntad de hierro"],
+			"trappings" : ["Compañía de caballeros del Lobo Blanco","Novicio"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.Ub8PlkaAIWPxX2AH.JournalEntryPage.pVLlBMBG95DVUGGj]{Caballero del Lobo Blanco}</p>"
+		},
+		{
+			"id": "xQ9JREArZkDHi5g0",
+			"name": "Comandante de compañía (Círculo Interior)",
+			"skills": ["Atletismo","Criar animales","Carisma animal","Sanar","Sabiduría académica (Imperio)","Sabiduría académica (Heráldica)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (De Caballería)","Montar (Caballo)","Oficio (Herrador)","Frialdad","Esquivar","Aguante","Intimidar","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Cualquiera)","Carisma","Hablar idioma (Cualquiera)","Mando","Sabiduría académica (Guerra)","Lengua secreta (Caballeros Pantera)","Sabiduría académica (Cualquiera)"],
+			"talents": ["Desarmar","Golpear letal","Inspirador","Voluntad de hierro"],
+			"trappings" : ["Escudero","Gran unidad de Caballeros Pantera o varias pequeñas unidades de caballeros"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.Ub8PlkaAIWPxX2AH.JournalEntryPage.FmalmVn3AhtabhMN]{Caballero Pantera}</p>"
+		},
+		{
+			"id": "Crossbowman",
+			"name": "Ballestero",
+			"skills": ["Atletismo","Escalar","Consumir alcohol","Aguante","Jugar","Cotilleo","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Básica)","Supervivencia","A distancia (Ballesta)"],
+			"talents": ["Buenas espaldas","Etiqueta (Mercenarios)","Recarga rápida","Francotirador"],
+			"trappings" : ["Ballesta","Virote","Chaqueta de cuero","Capacete de cuero","Pavés","Sombrero de plumas"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.1BTD0otB4pln0o8j.JournalEntryPage.mcdsHRtcQToDaN82]{Especialista en asedios}</p>"
+		},
+		{
+			"id": "File Leader",
+			"name": "Jefe de fila",
+			"skills": ["Atletismo","Escalar","Consumir alcohol","Esquivar","Aguante","Jugar","Hablar idioma (Lengua de Batalla)","Hablar idioma (Tileano)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (Arma de Asta)","Frialdad","Cotilleo","Sanar","Intimidar","Sabiduría académica (Guerra)","Supervivencia","Jugar","Intuición","Mando","Percepción"],
+			"talents": ["Percepción de combate","Primeros auxilios","Reflejos de combate","Robusto"],
+			"trappings" : ["Fajín de rango","Coraza de acero"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.1BTD0otB4pln0o8j.JournalEntryPage.mGMZSWoJnbnRze1h]{Piquero}</p>"
+		},
+		{
+			"id": "First Eagle",
+			"name": "Primer Águila",
+			"skills": ["Frialdad","Esquivar","Hablar idioma (Lengua de Batalla)","Mando","Sabiduría académica (Guerra)","Sabiduría académica (Teología)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (Arma de Asta)","Percepción","Rezar"],
+			"talents": ["Bendición (Myrmidia)","Etiqueta (Cultistas)","Leer y escribir","Percepción de combate"],
+			"trappings" : ["Icono myrmidiano","Jubón de cuero","Lanza","Libro sagrado de Mymidia","Túnica blanca"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.Xm25vHdfMlXME9Uz.JournalEntryPage.lKjbkmp0AGMYYPp0]{Sacerdote de Myrmidia}</p>"
+		},
+		{
+			"id": "First Knight",
+			"name": "Primer caballero",
+			"skills": ["Atletismo","Criar animales","Carisma animal","Sanar","Sabiduría académica (Imperio)","Sabiduría académica (Heráldica)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (De Caballería)","Montar (Caballo)","Oficio (Herrador)","Frialdad","Esquivar","Aguante","Intimidar","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Cualquiera)","Carisma","Hablar idioma (Cualquiera)","Mando","Sabiduría académica (Guerra)"],
+			"talents": ["Denodado","Imperturbable","Intrépido (Caos)","Líder de guerra"],
+			"trappings" : ["Barda","Pequeña unidad de Caballeros Pantera"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.Ub8PlkaAIWPxX2AH.JournalEntryPage.FmalmVn3AhtabhMN]{Caballero Pantera}</p>"
+		},
+		{
+			"id": "Freelance Captain",
+			"name": "Capitán de fortuna",
+			"skills": ["Atletismo","Criar animales","Carisma animal","Consumir alcohol","Sanar","Cotilleo","Cuerpo a cuerpo (De Caballería)","Supervivencia","Montar (Caballo)","Oficio (Herrador)","Carisma","Frialdad","Esquivar","Aguante","Intimidar","Intuición","Cuerpo a cuerpo (Cualquiera)","Regatear","Jugar","Mando","Sabiduría académica (Guerra)"],
+			"talents": ["Denodado","Imperturbable","Líder de guerra","Maestro de combate"],
+			"trappings" : ["Barda","Pequeño séquito de seguidores"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.Ub8PlkaAIWPxX2AH.JournalEntryPage.TpwhRuvLbZT8gpQr]{Caballero de fortuna}</p>"
+		},
+		{
+			"id": "Freelance Knight",
+			"name": "Caballero de fortuna",
+			"skills": ["Atletismo","Criar animales","Carisma animal","Consumir alcohol","Sanar","Cotilleo","Cuerpo a cuerpo (De Caballería)","Supervivencia","Montar (Caballo)","Oficio (Herrador)","Carisma","Frialdad","Esquivar","Aguante","Intimidar","Intuición","Cuerpo a cuerpo (Cualquiera)"],
+			"talents": ["Ayunador","Etiqueta (Cualquiera)","Golpe poderoso","Viajero curtido"],
+			"trappings" : ["Arma cuerpo a cuerpo (Cualquiera)","Armadura de placas y yelmo","Destrero","Silla de montar y arreos","Heráldica personal"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.Ub8PlkaAIWPxX2AH.JournalEntryPage.TpwhRuvLbZT8gpQr]{Caballero de fortuna}</p>"
+		},
+		{
+			"id": "Greatsword",
+			"name": "Gran espadero",
+			"skills": ["Atletismo","Consumir alcohol","Frialdad","Esquivar","Aguante","Cotilleo","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (A Dos Manos)","Tocar (Tambor)","Jugar","Intimidar","Sabiduría académica (Heráldica)","Cuerpo a cuerpo (Cualquiera)","Supervivencia","Percepción"],
+			"talents": ["Etiqueta (Soldados)","Golpe poderoso","Intrépido (Cualquiera)","Reflejos de combate"],
+			"trappings" : ["Armadura completa","Gran sombrero con plumas"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.PgIAJWjuYUxR8NRc.JournalEntryPage.B2GyhjJbcXpXPQQ5]{Gran espadero}</p>"
+		},
+		{
+			"id": "Greatsword Cadet",
+			"name": "Cadete gran espadero",
+			"skills": ["Atletismo","Consumir alcohol","Frialdad","Esquivar","Aguante","Cotilleo","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (A Dos Manos)","Tocar (Tambor)"],
+			"talents": ["Buenas espaldas","Entrenado","Guerrero nato","Imperturbable"],
+			"trappings" : ["Coraza de metal","Uniforme","Zweihänder (mandoble)"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.PgIAJWjuYUxR8NRc.JournalEntryPage.B2GyhjJbcXpXPQQ5]{Gran espadero}</p>"
+		},
+		{
+			"id": "Greatsword Captain",
+			"name": "Capitán gran espadero",
+			"skills": ["Atletismo","Consumir alcohol","Frialdad","Esquivar","Aguante","Cotilleo","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (A Dos Manos)","Tocar (Tambor)","Jugar","Intimidar","Sabiduría académica (Heráldica)","Cuerpo a cuerpo (Cualquiera)","Supervivencia","Percepción","Intuición","Mando","Orientación","Montar (Caballo)","Carisma","Sabiduría académica (Guerra)"],
+			"talents": ["Denodado","Inspirador","Orador","Presencia imponente"],
+			"trappings" : ["Caballo de guerra ligero con silla de montar y guarnición","Despacho acreditativo","Símbolo de rango","Uniforme de calidad"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.PgIAJWjuYUxR8NRc.JournalEntryPage.B2GyhjJbcXpXPQQ5]{Gran espadero}</p>"
+		},
+		{
+			"id": "Greatsword Sergeant",
+			"name": "Sargento gran espadero",
+			"skills": ["Atletismo","Consumir alcohol","Frialdad","Esquivar","Aguante","Cotilleo","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (A Dos Manos)","Tocar (Tambor)","Jugar","Intimidar","Sabiduría académica (Heráldica)","Cuerpo a cuerpo (Cualquiera)","Supervivencia","Percepción","Intuición","Mando","Orientación","Montar (Caballo)"],
+			"talents": ["Combate cerrado","Imperturbable","Líder de guerra","Percepción de combate"],
+			"trappings" : ["Manual sobre el arte de combatir con zweihänder","Símbolo de rango","Zweihänder de calidad"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.PgIAJWjuYUxR8NRc.JournalEntryPage.B2GyhjJbcXpXPQQ5]{Gran espadero}</p>"
+		},
+		{
+			"id": "Halberdier",
+			"name": "Alabardero",
+			"skills": ["Atletismo","Consumir alcohol","Frialdad","Esquivar","Aguante","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (Arma de Asta)","Actuar (Desfile)","Tocar (Tambor)","Escalar","Jugar","Cotilleo","Intimidar","Supervivencia","Percepción"],
+			"talents": ["Combate cercano","Etiqueta (Soldados)","Golpe poderoso","Intrépido (Cualquiera)"],
+			"trappings" : ["Alabarda de calidad","Casco","Coraza de metal"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.PgIAJWjuYUxR8NRc.JournalEntryPage.aG6quE0EZ0tLE6Vl]{Alabardero}</p>"
+		},
+		{
+			"id": "Halberdier Captain",
+			"name": "Capitán alabardero",
+			"skills": ["Atletismo","Consumir alcohol","Frialdad","Esquivar","Aguante","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (Arma de Asta)","Actuar (Desfile)","Tocar (Tambor)","Escalar","Jugar","Cotilleo","Intimidar","Supervivencia","Percepción","Intuición","Mando","Orientación","Montar (Caballo)","Carisma","Sabiduría académica (Guerra)"],
+			"talents": ["Inspirador","Orador experto","Presencia imponente","Viajero curtido"],
+			"trappings" : ["Despacho acreditativo","Caballo de guerra ligero","Silla de montar y arreos","Espada de calidad","Símbolo de rango"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.PgIAJWjuYUxR8NRc.JournalEntryPage.aG6quE0EZ0tLE6Vl]{Alabardero}</p>"
+		},
+		{
+			"id": "Halberdier Recruit",
+			"name": "Recluta alabardero",
+			"skills": ["Atletismo","Consumir alcohol","Frialdad","Esquivar","Aguante","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (Arma de Asta)","Actuar (Desfile)","Tocar (Tambor)"],
+			"talents": ["Buenas espaldas","Entrenado","Experto en dados","Guerrero nato"],
+			"trappings" : ["Alabarda","Coraza de cuero","Uniforme"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.PgIAJWjuYUxR8NRc.JournalEntryPage.aG6quE0EZ0tLE6Vl]{Alabardero}</p>"
+		},
+		{
+			"id": "Halberdier Sergeant",
+			"name": "Sargento alabardero",
+			"skills": ["Atletismo","Consumir alcohol","Frialdad","Esquivar","Aguante","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (Arma de Asta)","Actuar (Desfile)","Tocar (Tambor)","Escalar","Jugar","Cotilleo","Intimidar","Supervivencia","Percepción","Intuición","Mando","Orientación","Montar (Caballo)"],
+			"talents": ["Denodado","Imperturbable","Líder de guerra","Percepción de combate"],
+			"trappings" : ["Símbolo de rango","Uniforme de calidad"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.PgIAJWjuYUxR8NRc.JournalEntryPage.aG6quE0EZ0tLE6Vl]{Alabardero}</p>"
+		},
+		{
+			"id": "Handgunner",
+			"name": "Fusilero",
+			"skills": ["Atletismo","Consumir alcohol","Frialdad","Esquivar","Aguante","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Básica)","Percepción","Tocar (Flauta)","A distancia (De Pólvora Negra)","Escalar","Jugar","Cotilleo","Intuición","Supervivencia","Oficio (Armero)"],
+			"talents": ["Disparo rápido","Entrenado","Etiqueta (Soldados)","Recarga rápida"],
+			"trappings" : ["Gran sombrero de plumas","Fusil de calidad"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.PgIAJWjuYUxR8NRc.JournalEntryPage.hCtfLrI7R6mJg6YV]{Fusilero}</p>"
+		},
+		{
+			"id": "Handgunner Captain",
+			"name": "Capitán fusilero",
+			"skills": ["Atletismo","Consumir alcohol","Frialdad","Esquivar","Aguante","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Básica)","Percepción","Tocar (Flauta)","A distancia (De Pólvora Negra)","Escalar","Jugar","Cotilleo","Intuición","Supervivencia","Oficio (Armero)","Mando","Orientación","A distancia (De Ingeniería)","Montar (Caballo)","Carisma","Sabiduría académica (Guerra)"],
+			"talents": ["Denodado","Inspirador","Líder de guerra","Viajero curtido"],
+			"trappings" : ["Caballo de guerra ligero","Silla de montar y arreos","Despacho acreditativo","Símbolo de rango"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.PgIAJWjuYUxR8NRc.JournalEntryPage.hCtfLrI7R6mJg6YV]{Fusilero}</p>"
+		},
+		{
+			"id": "Handgunner Recruit",
+			"name": "Recluta fusilero",
+			"skills": ["Atletismo","Consumir alcohol","Frialdad","Esquivar","Aguante","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Básica)","Percepción","Tocar (Flauta)","A distancia (De Pólvora Negra)"],
+			"talents": ["Disparo preciso","Artillero","Tirador","Francotirador"],
+			"trappings" : ["Arma corta","Uniforme"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.PgIAJWjuYUxR8NRc.JournalEntryPage.hCtfLrI7R6mJg6YV]{Fusilero}</p>"
+		},
+		{
+			"id": "Handgunner Sergeant",
+			"name": "Sargento fusilero",
+			"skills": ["Atletismo","Consumir alcohol","Frialdad","Esquivar","Aguante","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Básica)","Percepción","Tocar (Flauta)","A distancia (De Pólvora Negra)","Escalar","Jugar","Cotilleo","Intuición","Supervivencia","Oficio (Armero)","Mando","Orientación","A distancia (De Ingeniería)","Montar (Caballo)"],
+			"talents": ["Disparo seguro","Imperturbable","Percepción de combate","Proyectil infalible"],
+			"trappings" : ["Símbolo de rango","Uniforme de calidad"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.PgIAJWjuYUxR8NRc.JournalEntryPage.hCtfLrI7R6mJg6YV]{Fusilero}</p>"
+		},
+		{
+			"id": "Hochmeister",
+			"name": "Gran Maestre",
+			"skills": ["Atletismo","Criar animales","Carisma animal","Sanar","Hablar idioma (Viejomundano clásico)","Sabiduría académica (Heráldica)","Sabiduría académica (Cualquiera)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (De Caballería)","Montar (Caballo)","Frialdad","Esquivar","Aguante","Intimidar","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Cualquiera)","Sabiduría académica (Guerra)","Carisma","A distancia (Cualquiera)","Mando","Investigar"],
+			"talents": ["Desarmar","Imperturbable","Intrépido (Cualquiera)","Líder de guerra"],
+			"trappings" : ["Barda","Pequeña unidad de caballeros del Sol Llameante"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.Ub8PlkaAIWPxX2AH.JournalEntryPage.azFTHnCxn5nb4c7m]{Caballero del Sol Llameante}</p>"
+		},
+		{
+			"id": "6snqiJEmmAXtE6lW",
+			"name": "Caballero",
+			"skills": ["Atletismo","Criar animales","Carisma animal","Sanar","Hablar idioma (Viejomundano clásico)","Sabiduría académica (Heráldica)","Sabiduría académica (Cualquiera)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (De Caballería)","Montar (Caballo)","Frialdad","Esquivar","Aguante","Intimidar","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Cualquiera)","Sabiduría académica (Guerra)"],
+			"talents": ["Escudero","Etiqueta (Cualquiera)","Golpe letal","Viajero curtido"],
+			"trappings" : ["Arma cuerpo a cuerpo (Cualquiera)","Armadura de placas y yelmo","Destrero","Silla de montar y arreos","Lanza"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.Ub8PlkaAIWPxX2AH.JournalEntryPage.azFTHnCxn5nb4c7m]{Caballero del Sol Llameante}</p>"
+		},
+		{
+			"id": "BJDcsaKX4rNkOetn",
+			"name": "Caballero",
+			"skills": ["Atletismo","Criar animales","Carisma animal","Sanar","Sabiduría académica (Heráldica)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (De Caballería)","Supervivencia","Montar (Caballo)","Oficio (Herrador)","Frialdad","Esquivar","Aguante","Intimidar","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Cualquiera)"],
+			"talents": ["Amenazador","Golpe letal","Golpe poderoso","Viajero curtido"],
+			"trappings" : ["Armadura completa","Capa de piel de lobo","Destrero","Silla de montar y arreos"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.Ub8PlkaAIWPxX2AH.JournalEntryPage.pVLlBMBG95DVUGGj]{Caballero del Lobo Blanco}</p>"
+		},
+		{
+			"id": "ab5Ol9OFI1bgHmbV",
+			"name": "Caballero",
+			"skills": ["Atletismo","Criar animales","Carisma animal","Sanar","Sabiduría académica (Imperio)","Sabiduría académica (Heráldica)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (De Caballería)","Montar (Caballo)","Oficio (Herrador)","Frialdad","Esquivar","Aguante","Intimidar","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Cualquiera)"],
+			"talents": ["Amenazador","Escudero","Golpe poderoso","Sangre fría"],
+			"trappings" : ["Anillo o medallón con el emblema de la pantera","Armadura completa y gran yelmo con cresta bestial","Destrero","Silla de montar y arreos","Espada","Lanza","Piel de un gran felino"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.Ub8PlkaAIWPxX2AH.JournalEntryPage.FmalmVn3AhtabhMN]{Caballero Pantera}</p>"
+		},
+		{
+			"id": "Knight Commander",
+			"name": "Comandante caballero",
+			"skills": ["Atletismo","Criar animales","Carisma animal","Consumir alcohol","Sanar","Cotilleo","Cuerpo a cuerpo (De Caballería)","Supervivencia","Montar (Caballo)","Oficio (Herrador)","Carisma","Frialdad","Esquivar","Aguante","Intimidar","Intuición","Cuerpo a cuerpo (Cualquiera)","Regatear","Jugar","Mando","Sabiduría académica (Guerra)","Hablar idioma (Lengua de Batalla)","Sabiduría académica (Cualquiera)"],
+			"talents": ["Desarmar","Inspirador","Suerte","Voluntad de hierro"],
+			"trappings" : ["Compañía de caballeros","Escudero"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.Ub8PlkaAIWPxX2AH.JournalEntryPage.TpwhRuvLbZT8gpQr]{Caballero de fortuna}</p>"
+		},
+		{
+			"id": "Knight of the Inner Circle",
+			"name": "Caballero del Círculo Interior",
+			"skills": ["Atletismo","Criar animales","Carisma animal","Sanar","Hablar idioma (Viejomundano clásico)","Sabiduría académica (Heráldica)","Sabiduría académica (Cualquiera)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (De Caballería)","Montar (Caballo)","Frialdad","Esquivar","Aguante","Intimidar","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Cualquiera)","Sabiduría académica (Guerra)","Carisma","A distancia (Cualquiera)","Mando","Investigar","Lengua secreta (Sol Llameante)","Sabiduría académica (Cualquiera)"],
+			"talents": ["Denodado","Golpe poderoso","Inspirador","Rico"],
+			"trappings" : ["Escudero","Gran yelmo con emblema del Sol","Unidad grande de caballeros o varias pequeñas unidades de caballeros"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.Ub8PlkaAIWPxX2AH.JournalEntryPage.azFTHnCxn5nb4c7m]{Caballero del Sol Llameante}</p>"
+		},
+		{
+			"id": "kIxfFhzCZIBsn2Y7",
+			"name": "Lancero",
+			"skills": ["Criar animales","Esquivar","Aguante","Regatear","Sanar","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Básica)","Supervivencia","A distancia (Arrojadiza)","Montar (Caballo)","Carisma","Consumir alcohol","Jugar","Cotilleo","Cuerpo a cuerpo (De Caballería)","A distancia (Arco)","Conducir","Intuición","Mando","Sabiduría académica (Guerra)"],
+			"talents": ["Equitación acrobática","Recarga rápida","Reflejos de combate","Viajero curtido"],
+			"trappings" : ["Calzas de malla","Escudero","Lanza de caballería","Paje"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.1BTD0otB4pln0o8j.JournalEntryPage.1i3Y6jOqCTmlbVeo]{Caballería ligera}</p>"
+		},
+		{
+			"id": "Light Cavalry",
+			"name": "Caballería ligera",
+			"skills": ["Criar animales","Esquivar","Aguante","Regatear","Sanar","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Básica)","Supervivencia","A distancia (Arrojadiza)","Montar (Caballo)","Carisma","Consumir alcohol","Jugar","Cotilleo","Cuerpo a cuerpo (De Caballería)","A distancia (Arco)"],
+			"talents": ["Errante","Jinete experto","Orientarse","Percepción de combate"],
+			"trappings" : ["Caballo de guerra ligero","Cota de malla","Yelmo abierto de placas"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.1BTD0otB4pln0o8j.JournalEntryPage.1i3Y6jOqCTmlbVeo]{Caballería ligera}</p>"
+		},
+		{
+			"id": "Master Artillerist",
+			"name": "Maestro artillero",
+			"skills": ["Criar animales","Frialdad","Conducir","Aguante","Tasar","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Básico)","Orientación","Percepción","A distancia (ballesta, catapulta, ingeniería o pólvora negra)","Consumir alcohol","Jugar","Cotilleo","Supervivencia","A distancia (Pólvora Negra o Catapulta o Ballesta o Ingeniería)","Oficio (Carpintero o Armero)","Intuición","Mando","Sabiduría académica (Artillería)","Montar (Caballo)","Carisma","Sabiduría académica (Guerra)"],
+			"talents": ["Denodado","Inspirador","Orador","Viajero experimentado"],
+			"trappings" : ["Caballo de guerra ligero","Silla de montar y arreos","Despacho acreditativo","Mapa","Pieza de artillería y armón","Símbolo de rango"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.PgIAJWjuYUxR8NRc.JournalEntryPage.KID8Xu7W7Jvygl9K]{Artillero}</p>"
+		},
+		{
+			"id": "Master Cartographer",
+			"name": "Maestro cartógrafo",
+			"skills": ["Arte (Cartografía)","Escalar","Tasar","Sabiduría académica (Geografía)","Cuerpo a cuerpo (Básica)","Orientación","Supervivencia","Percepción","Movimiento silencioso (Rural)","Oficio (Cartógrafo)","Carisma","Aguante","Cotilleo","Regatear","Sabiduría académica (Heráldica)","Montar (Caballo)","Intuición","Hablar idioma (Gremio)","Investigar","Lengua secreta (Gremio)","Hablar idioma (Cualquera)","Sabiduría académica (Cualquiera)"],
+			"talents": ["Artesano maestro (Cartógrafo)","Denodado","Negociador","Obra maestra"],
+			"trappings" : ["Estudio","Teodolito de calidad"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.PgIAJWjuYUxR8NRc.JournalEntryPage.6xKxqvKM5exJhiAA]{Cartógrafo}</p>"
+		},
+		{
+			"id": "8BFuW6timifRDI3u",
+			"name": "Novato",
+			"skills": ["Atletismo","Criar animales","Carisma animal","Sanar","Hablar idioma (Viejomundano clásico)","Sabiduría académica (Heráldica)","Sabiduría académica (Cualquiera)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (De Caballería)","Montar (Caballo)"],
+			"talents": ["Guerrero nato","Leer y escribir","Robusto","Sangre noble"],
+			"trappings" : ["Caballo","Silla de montar y arreos","Camisote de malla","Chaqueta de cuero","Escudo","Herramientas de un Oficio (Herrador)","Símbolo religioso (Myrmidia)"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.Ub8PlkaAIWPxX2AH.JournalEntryPage.azFTHnCxn5nb4c7m]{Caballero del Sol Llameante}</p>"
+		},
+		{
+			"id": "TFBXbxzcvuPcPCY7",
+			"name": "Novicio",
+			"skills": ["Atletismo","Criar animales","Carisma animal","Sanar","Sabiduría académica (Heráldica)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (De Caballería)","Supervivencia","Montar (Caballo)","Oficio (Herrador)"],
+			"talents": ["Guerrero nato","Jinete experto","Recio","Resistente"],
+			"trappings" : ["Caballo","Silla de montar y arreos","Camisote de malla","Chaqueta de cuero","Herramientas de un Oficio (Herrador)","Martillo de caballería","Símbolo religioso (Ulric)"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.Ub8PlkaAIWPxX2AH.JournalEntryPage.pVLlBMBG95DVUGGj]{Caballero del Lobo Blanco}</p>"
+		},
+		{
+			"id": "Pikeman",
+			"name": "Piquero",
+			"skills": ["Atletismo","Escalar","Consumir alcohol","Esquivar","Aguante","Jugar","Hablar idioma (Lengua de Batalla)","Hablar idioma (Tileano)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (Arma de Asta)","Frialdad","Cotilleo","Sanar","Intimidar","Sabiduría académica (Guerra)","Supervivencia"],
+			"talents": ["Combate cerrado","Etiqueta (Mercenarios)","Experto en dados","Intrépido (Caballería)"],
+			"trappings" : ["Cota de malla","Dados","Yelmo abierto de placas"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.1BTD0otB4pln0o8j.JournalEntryPage.mGMZSWoJnbnRze1h]{Piquero}</p>"
+		},
+		{
+			"id": "Priest Captain",
+			"name": "Sacerdote capitán",
+			"skills": ["Frialdad","Esquivar","Hablar idioma (Lengua de Batalla)","Mando","Sabiduría académica (Guerra)","Sabiduría académica (Teología)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (Arma de Asta)","Percepción","Rezar","Carisma","Animar (Discursos)","Sanar","Intuición","Cuerpo a cuerpo (Cualquiera)","A distancia (Cualquiera)","Sabiduría académica (Cualquiera)","Cuerpo a cuerpo (Cualquiera)","Investigar","Oficio (Herrero o Armero)","Criar animales","Montar (Caballo)"],
+			"talents": ["Intrépido (Cualquiera)","Líder de guerra","Maestro del combate","Reflejos de combate"],
+			"trappings" : ["Reliquia religiosa (myrmidiana)"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.Xm25vHdfMlXME9Uz.JournalEntryPage.lKjbkmp0AGMYYPp0]{Sacerdote de Myrmidia}</p>"
+		},
+		{
+			"id": "Priest Sergeant",
+			"name": "Sacerdote sargento",
+			"skills": ["Frialdad","Esquivar","Hablar idioma (Lengua de Batalla)","Mando","Sabiduría académica (Guerra)","Sabiduría académica (Teología)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (Arma de Asta)","Percepción","Rezar","Carisma","Animar (Discursos)","Sanar","Intuición","Cuerpo a cuerpo (Cualquiera)","A distancia (Cualquiera)","Sabiduría académica (Cualquiera)","Cuerpo a cuerpo (Cualquiera)","Investigar","Oficio (Herrero o Armero)"],
+			"talents": ["Alma pura","Denodado","Intelectual","Visiones sagradas"],
+			"trappings" : ["Armadura completa"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.Xm25vHdfMlXME9Uz.JournalEntryPage.lKjbkmp0AGMYYPp0]{Sacerdote de Myrmidia}</p>"
+		},
+		{
+			"id": "Recruit",
+			"name": "Recluta",
+			"skills": ["Atletismo","Escalar","Consumir alcohol","Esquivar","Aguante","Jugar","Hablar idioma (Lengua de Batalla)","Hablar idioma (Tileano)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (Arma de Asta)"],
+			"talents": ["Entrenado","Golpe de reacción","Guerrero nato","Muy fuerte"],
+			"trappings" : ["Coraza de cuero","Capacete de cuero","Pica","Uniforme con los colores de la unidad"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.1BTD0otB4pln0o8j.JournalEntryPage.mGMZSWoJnbnRze1h]{Piquero}</p>"
+		},
+		{
+			"id": "Reiver",
+			"name": "Reiver",
+			"skills": ["Criar animales","Esquivar","Aguante","Regatear","Sanar","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Básica)","Supervivencia","A distancia (Arrojadiza)","Montar (Caballo)"],
+			"talents": ["Buenas espaldas","Etiqueta (Mercenarios)","Mano dura","Primeros auxilios"],
+			"trappings" : ["Caballo","Silla de montar y arreos","Chaqueta de cuero","Escudo o Rodela","Jabalina"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.1BTD0otB4pln0o8j.JournalEntryPage.1i3Y6jOqCTmlbVeo]{Caballería ligera}</p>"
+		},
+		{
+			"id": "Ribaud",
+			"name": "Ribaldo",
+			"skills": ["Carisma","Consumir alcohol","Esquivar","Animar (Cualquiera)","Cotilleo","Regatear","Cuerpo a cuerpo (Cualquiera)","Supervivencia","Percepción","Actuar (Baile)"],
+			"talents": ["Atractivo","Parloteo","Pelea callejera","Sin importancia"],
+			"trappings" : ["Mochila","Petate"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.PgIAJWjuYUxR8NRc.JournalEntryPage.PyuVaepgBmUkbfrz]{Seguidor de campamento}</p>"
+		},
+		{
+			"id": "Ribaud",
+			"name": "Ribaldo",
+			"skills": ["Carisma","Consumir alcohol","Esquivar","Animar (Cualquiera)","Cotilleo","Regatear","Cuerpo a cuerpo (Cualquiera)","Supervivencia","Percepción","Actuar (Baile)"],
+			"talents": ["Atractivo","Parloteo","Pelea callejera","Sin importancia"],
+			"trappings" : ["Mochila","Petate"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.PgIAJWjuYUxR8NRc.JournalEntryPage.PyuVaepgBmUkbfrz]{Seguidor de campamento}</p>"
+		},
+		{
+			"id": "Sapper",
+			"name": "Zapador",
+			"skills": ["Atletismo","Escalar","Consumir alcohol","Aguante","Jugar","Cotilleo","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Básica)","Supervivencia","A distancia (Ballesta)","Intuición","Sabiduría académica (Ingeniería)","Cuerpo a cuerpo (A Dos Manos)","Percepción","Poner trampas","Oficio (Minero)","Mando","A distancia (Catapulta)","A distancia (De Ingeniería)","Oficio (Explosivos)"],
+			"talents": ["Artesano (explosivos)","Artillero","Disparo infalible","Imperturbable"],
+			"trappings" : ["Coraza de acero","Herramientas de un Oficio (Ingeniero)","Libros de tablas balísticas","Lote de seis mechas de 60 segundos","Pistola con balas y munición"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.1BTD0otB4pln0o8j.JournalEntryPage.mcdsHRtcQToDaN82]{Especialista en asedios}</p>"
+		},
+		{
+			"id": "Seasoned Scavenger",
+			"name": "Carroñero experimentado",
+			"skills": ["Carisma","Consumir alcohol","Esquivar","Animar (Cualquiera)","Cotilleo","Regatear","Cuerpo a cuerpo (Cualquiera)","Supervivencia","Percepción","Actuar (Baile)","Atletismo","Sobornar","Aguante","Jugar","A distancia (Cualquiera)","Movimiento silencioso (Rural)","Frialdad","Intimidar","Intuición","Hablar idioma (Cualquiera)"],
+			"talents": ["Fornido","Imperturbable","Muy resistente","Viajero curtido"],
+			"trappings" : ["Ropas de calidad"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.PgIAJWjuYUxR8NRc.JournalEntryPage.PyuVaepgBmUkbfrz]{Seguidor de campamento}</p>"
+		},
+		{
+			"id": "Siege Master",
+			"name": "Maestro de asedio",
+			"skills": ["Atletismo","Escalar","Consumir alcohol","Aguante","Jugar","Cotilleo","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Básica)","Supervivencia","A distancia (Ballesta)","Intuición","Sabiduría académica (Ingeniería)","Cuerpo a cuerpo (A Dos Manos)","Percepción","Poner trampas","Oficio (Minero)","Mando","A distancia (Catapulta)","A distancia (De Ingeniería)","Oficio (Explosivos)","Sabiduría académica (Derecho)","Montar (Caballo)"],
+			"talents": ["Espabilado","Líder de guerra","Maestro artesano (Ingeniería)","Percepción de combate"],
+			"trappings" : ["Caballo de guerra ligero","Tienda pabellón con criado","Ropa de calidad"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.1BTD0otB4pln0o8j.JournalEntryPage.mcdsHRtcQToDaN82]{Especialista en asedios}</p>"
+		},
+		{
+			"id": "Siege Specialist",
+			"name": "Especialista en asedios",
+			"skills": ["Atletismo","Escalar","Consumir alcohol","Aguante","Jugar","Cotilleo","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Básica)","Supervivencia","A distancia (Ballesta)","Intuición","Sabiduría académica (Ingeniería)","Cuerpo a cuerpo (A Dos Manos)","Percepción","Poner trampas","Oficio (Minero)"],
+			"talents": ["Combate cerrado","Orientarse","Rata de túnel","Recio"],
+			"trappings" : ["Pala","Pico a dos manos"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.1BTD0otB4pln0o8j.JournalEntryPage.mcdsHRtcQToDaN82]{Especialista en asedios}</p>"
+		},
+		{
+			"id": "TLx7hxFsMrlI5cUs",
+			"name": "Escudero",
+			"skills": ["Atletismo","Criar animales","Carisma animal","Consumir alcohol","Sanar","Cotilleo","Cuerpo a cuerpo (De Caballería)","Supervivencia","Montar (Caballo)","Oficio (Herrador)"],
+			"talents": ["Guerrero nato","Jinete experto","Percepción de combate","Robusto"],
+			"trappings" : ["Caballo de monta","Silla de montar y arreos","Camisote de malla","Chaqueta de cuero","Escudo","Herramientas de un Oficio (Herrador)"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.Ub8PlkaAIWPxX2AH.JournalEntryPage.TpwhRuvLbZT8gpQr]{Caballero de fortuna}</p>"
+		},
+		{
+			"id": "jg9aBz9Jme3W5Mfi",
+			"name": "Escudero",
+			"skills": ["Atletismo","Criar animales","Carisma animal","Sanar","Sabiduría académica (Imperio)","Sabiduría académica (Heráldica)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (De Caballería)","Montar (Caballo)","Oficio (Herrador)"],
+			"talents": ["Etiqueta (Cualquiera)","Fornido","Guerrero nato","Jinete experto"],
+			"trappings" : ["Camisote de malla","Caballo de monta","Silla de montar y arrreos","Chaqueta de cuero","Escudo","Herramientas de un Oficio (Herrador)"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.Ub8PlkaAIWPxX2AH.JournalEntryPage.FmalmVn3AhtabhMN]{Caballero Pantera}</p>"
+		},
+		{
+			"id": "Surveyor",
+			"name": "Topógrafo",
+			"skills": ["Arte (Cartografía)","Escalar","Tasar","Sabiduría académica (Geografía)","Cuerpo a cuerpo (Básica)","Orientación","Supervivencia","Percepción","Movimiento silencioso (Rural)","Oficio (Cartógrafo)"],
+			"talents": ["Artístico","Errante","Leer y escribir","Orientarse"],
+			"trappings" : ["Material de escritura","Vitela"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.PgIAJWjuYUxR8NRc.JournalEntryPage.6xKxqvKM5exJhiAA]{Cartógrafo}</p>"
+		},
+		{
+			"id": "Templar Sergeant",
+			"name": "Sargento templario",
+			"skills": ["Atletismo","Criar animales","Carisma animal","Sanar","Sabiduría académica (Heráldica)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (De Caballería)","Supervivencia","Montar (Caballo)","Oficio (Herrador)","Frialdad","Esquivar","Aguante","Intimidar","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Cualquiera)","Consumir alcohol","Mando","Sabiduría académica (Guerra)","Percepción"],
+			"talents": ["Asalto furioso","Imperturbable","Intrépido (Cualquiera)","Líder de guerra"],
+			"trappings" : ["Barda","Pequeña unidad de caballeros del Lobo Blanco"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.Ub8PlkaAIWPxX2AH.JournalEntryPage.pVLlBMBG95DVUGGj]{Caballero del Lobo Blanco}</p>"
+		},
+		{
+			"id": "Warrior Priest",
+			"name": "Sacerdote guerrero",
+			"skills": ["Frialdad","Esquivar","Hablar idioma (Lengua de Batalla)","Mando","Sabiduría académica (Guerra)","Sabiduría académica (Teología)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (Arma de Asta)","Percepción","Rezar","Carisma","Animar (Discursos)","Sanar","Intuición","Cuerpo a cuerpo (Cualquiera)","A distancia (Cualquiera)"],
+			"talents": ["Entrenado","Escudero","Inspirador","Invocar (Myrmidia)"],
+			"trappings" : ["Coraza","Casco","Escudo"],
+			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.Xm25vHdfMlXME9Uz.JournalEntryPage.lKjbkmp0AGMYYPp0]{Sacerdote de Myrmidia}</p>"
+		},
+		{
+			"id": "Bandages",
+			"name": "Vendajes",
+			"description": "<p>Un Chequeo de <strong>Sanar</strong> o <strong>Destreza</strong> con éxito elimina +1 Estado de @Condition[Sangrando] adicional.</p>"
+		},
+		{
+			"id": "Book",
+			"name": "Libro"
+		},
+		{
+			"id": "Book (Law)",
+			"name": "Libro (Derecho)",
+			"description": "<p>Las leyes varían de forma considerable de una región a otra. Las ciudades con imprenta recopilan su legislación en volúmenes encuadernados, mientras que los jueces de las poblaciones más pequeñas a menudo se basan en documentos manuscritos de hace siglos. Los libros de derecho utilizados por los abogados ambulantes o por los jueces, a menudo combinan páginas impresas y manuscritas de diferentes poblaciones del Imperio, reunidas y encuadernadas juntas bajo la misma cubierta.</p>"
+		},
+		{
+			"id": "Book (Medicine)",
+			"name": "Libro (Medicina)",
+			"description": "<p>Los textos médicos pueden estar o bien escritos a mano o bien impresos, dependiendo del prestigio del físico que sea su autor. Las iluminaciones son comunes, y suelen incluir dibujos detallados de autopsias y diagramas de operaciones.</p>"
+		},
+		{
+			"id": "Court Robes",
+			"name": "Ropas de cortesano"
+		},
+		{
+			"id": "Leather Gloves",
+			"name": "Guantes de cuero"
+		},
+		{
+			"id": "Porter's Cap",
+			"name": "Gorro de porteador",
+			"description": "<p>Los sombreros de calidad son símbolos de estatus en los pueblos y ciudades del Imperio. Cuanto más llamativo el sombrero, mejor.</p>"
+		},
+		{
+			"id": "Magnifying Glass",
+			"name": "Lupa"
+		},
+		{
+			"id": "Parchment",
+			"name": "Pergamino"
+		},
+		{
+			"id": "Rations, 2 weeks",
+			"name": "Raciones, 2 semanas"
+		},
+		{
+			"id": "Saddle and Tack",
+			"name": "Silla de montar y arreos"
+		},
+		{
+			"id": "Trade Tools (Medicine)",
+			"name": "Herramientas de un Oficio (Medicina)",
+			"description": "<p><strong>Boticario</strong>: Las herramientas incluyen un almirez con su mano, cucharillas, frascos, y una balanza con sus pesos. Los talleres también incluyen mecheros de aceite y estantes llenos de ingredientes.</p>\n<p>&nbsp;</p>\n<p><strong>Artesano</strong>: el abanico potencial de herramientas utilizadas por los Artesanos es enorme. Los grupos de ejemplos incluyen:</p>\n<ul type=\"disc\">\n<li><strong>Carpintero</strong>: martillo y clavos, sierra, vara de medir, tiza y plomadas. Los talleres también incluyen tornos, cepillos de carpintero, sargentos y una buena cantidad de madera.</li>\n</ul>\n<ul type=\"disc\">\n<li><strong>Grabador</strong>: gubias, sacabocados, cera, ácido, martillo y cinceles. Los talleres también incluyen troqueles y prensas.</li>\n</ul>\n<ul type=\"disc\">\n<li><strong>Herrero</strong>: martillo, pinzas, perforadoras, estampadoras, brocas y barrenas. Los talleres también incluyen un yunque, una fragua, un bloque de estampación, martillos pilones y lingotes de metal.</li>\n</ul>\n<p>&nbsp;</p>\n<p><strong>Otros tipos de artesanos</strong>: Albañil, Alfarero, Armero, Calígrafo, Calafate, Cantero, Cartógrafo, Cerero, Cervecero, Cocinero, Curtidor, Embalsamador, Fabricante de arcos, Fabricante de armaduras, Fabricante de armas, Guarnicionero, Joyero, Orfebre, Pintor, Sastre, Soplador de vidrio, Tallador, Tallista, Tejedor, Tonelero, Vinatero y Zapatero.</p>\n<p>&nbsp;</p>\n<p><strong>Artista</strong>: pinceles y pintura, martillo y cinceles, limas y escofinas y espátulas. Los talleres también incluyen caballetes o pedestales y materiales en forma de tela, pergamino, vitela, madera, arcilla o piedra sin tallar.</p>\n<p><strong>Ingeniero</strong>: reloj de arena, vara de medir, mecha, escuadra y cartabón. Los talleres también incluyen poleas, sogas y mesas de dibujo.</p>\n<p><strong>Herbolario</strong>: mortero y mano de mortero, cuchillitos, tijeras de podar y guantes. Los talleres también incluyen tendederos para secar, filtros, embudos, cuencos y frascos.</p>\n<p><strong>Navegante</strong>: cuadrante, astrolabio, cartas de navegación y compases, reloj de arena y escandallo.</p>\n<p><strong>Físico</strong>: agujas y sutura, vendas, escalpelo, vinagre, fórceps y un espéculo. Los talleres también incluyen dibujos de anatomía, accesorios surtidos y una mesa de operaciones.</p>"
+		},
+		{
+			"id": "Ahlspiess",
+			"name": "Ahlspiess (pica de lezna)",
+			"description": "<p>Consta de una púa larga y delgada en un asta de lanza, comprometiendo su capacidad para infligir cortes a cambio de penetrar mejor en el blindaje.</p>"
+		},
+		{
+			"id": "Animal Carcass",
+			"name": "Cadáver de animal",
+			"description": "<p>Un cadáver de animal inflige Daño +4 a todos los que estén en el área de Explosión 3. Además, cada objetivo dentro de Ráfaga 20 debe tener éxito un Chequeo <strong>Muy fácil (+60)</strong> de <strong>Aguante</strong> Test o desarrollar una @UUID[Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb]{Herida supurante}.</p>",
+			"effects": [{
+				"name":"Cadáver de animal",
+				"scriptData": [
+					{"label":"Cadáver de animal","script":"let test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {skipTargets: true, appendTitle :  ` - ${this.effect.name}`, fields : {difficulty: \"veasy\"}})\nawait test.roll();\nif (test.failed)\n{\n      this.script.notification(\"Desarrollas una <strong>Herida supurante</strong>\")\n      let item = await fromUuid(\"Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb\")\n      this.actor.createEmbeddedDocuments(\"Item\", [item.toObject()])\n}\nelse\n{\n    this.script.notification(\"Evitada una <strong>Herida supurante</strong>\")\n}\n"}
+					]
+				}]
+		},
+		{
+			"id": "Aqshy-Infused Powder",
+			"name": "Pólvora infundida de Aqshy",
+			"description": "<p>Para los muy valientes, o ingenuos, esta pólvora se crea a partir de arena del desierto de Nehekhara, infundida con <em>Aqshy</em> adicional por medios conocidos solo por el @UUID[Compendium.wfrp4e-wom.journals.wjJ2wq1bzzON74vV.JournalEntryPage.NR69EPiMhbeKPook#the-bright-college]{Colegio Brillante} de Altdorf. Es más explosiva que la pólvora normal, pero desgasta los cañones mucho más rápido que su homóloga mundana. Cualquier fracaso en un Chequeo que incluya un 8, un 9 o un 10 en el dado, cuenta como una Pifia cuando se usa esta pólvora.</p>",
+			"effects": [{
+				"name":"Pólvora infundida de Aqshy",
+				"scriptData": [
+					{"label":"Pólvora infundida de Aqshy"}
+					]
+				}]
+		},
+		{
+			"id": "Arquebus",
+			"name": "Arcabuz",
+			"description": "<p>Poco más que un cañón a escala, el arcabuz es un diseño muy antiguo que a menudo evita tales innovaciones como miras, un gatillo o incluso un mango o empuñadura. Aunque los primeros ejemplares disparaban proyectiles similares o más pequeños que los utilizados en las armas modernas de pólvora negra, las que sobreviven en la actualidad en el Imperio suelen ser armas de mayor calibre, guardadas por nobles que buscaban impresionar a los visitantes. Sin embargo, el gran tamaño de estas reliquias las hace realmente útiles cuando el calibre de los nuevos diseños deja algo que desear.</p>"
+		},
+		{
+			"id": "Axe",
+			"name": "Hacha",
+			"description": "<p>Muy querida por los enanos, el hacha no es tan ágil en la mano como una espada, pero su pesada cabeza hendedora puede crearle problemas a armaduras y escudos.</p>"
+		},
+		{
+			"id": "Ball and Powder",
+			"name": "Bala y Pólvora"
+		},
+		{
+			"id": "Ballista",
+			"name": "Balista",
+			"description": "<p>Son ballestas gigantes que disparan enormes cuadrillos de hierro (<em>NdC: la munición de ballesta se llama ‘virote’ y la de balista, ‘cuadrillo’</em>) que se asemejan a los postes de una cerca. Pueden partir a una persona como a un pollo o perforar un enorme y limpio agujero a través de madera maciza.</p>"
+		},
+		{
+			"id": "Ballock Knife",
+			"name": "Cuchillo de doble filo",
+			"description": "<p>La hoja corta y delgada de un cuchillo de doble filo es un arma pobre, a menos que tengas un oponente blindado a tu merced.</p><p>* Las Cualidades <em>Empalante</em> y <em>Precisa</em> solo se aplican si el objetivo está @Condition[Sorprendido] o @Condition[Tumbado].</p>",
+			"effects": [{
+				"name":"Cuchillo de doble filo",
+				"scriptData": [
+					{"label":"Añadir Precisa y Empalante"},
+					{"label":"Cuchillo de doble filo - Empalante","script":"if (args.opposedTest.attackerTest.options.ballockKnife)\n{\n    args.weaponProperties.impale = true;\n    args.extraMessages.push(`<strong>${this.item.name}</strong>: Añadido Empalante`)\n}"}
+					]
+				}]
+		},
+		{
+			"id": "Bandoleer",
+			"name": "Bandolera",
+			"description": "<p>Es un cinturón de cuero que se lleva en diagonal, con una docena de pequeños recipientes (<em>NdC: llamados ‘los doce apóstoles”</em>) colgando del mismo, normalmente de madera. Estos recipientes pueden ser rellenados con una medida precisa de pólvora negra para cargar una pistola de forma más rápida y sencilla.</p>"
+		},
+		{
+			"id": "Barbed Arrow",
+			"name": "Flecha con púas"
+		},
+		{
+			"id": "Bastard Sword",
+			"name": "Espada bastarda",
+			"description": "<p>También conocida como espada de mano y media, la bastarda es más larga y pesada que una espada típica, pero más corta y ligera que un <em>zweihander</em>. Un luchador con la Habilidad de Cuerpo a cuerpo (básico) podría usar una espada bastarda como arma a una mano, pero sufre los Defectos <em>Fatigosa</em> y <em>Lenta</em>.</p>",
+			"effects": [{
+				"name":"Espada bastarda",
+				"scriptData": [
+					{"label":"Espada bastarda"},
+					{"label":"Alternar A dos manos"}
+					]
+				}]
+		},
+		{
+			"id": "Bill",
+			"name": "Bisarma",
+			"description": "<p>Derivada de una herramienta del campo, la bisarma tiene una hoja con forma de gancho que puede usarse para atrapar a los enemigos o derribarlos.</p>"
+		},
+		{
+			"id": "Blunderbuss",
+			"name": "Trabuco",
+			"description": "<p>El trabuco es una forma primitiva de arma de fuego, que cuenta con un amplio orificio que intercambia precisión por funcionalidad. Normalmente se carga con pólvora, relleno y muchos proyectiles pequeños para mejorar las posibilidades de acertar. Puede ser cargado con cualquier @UUID[Compendium.wfrp4e-up-in-arms.items.AcL9KS6PCEl3NRyV]{Bala pequeña y Pólvora} o @UUID[Compendium.wfrp4e-up-in-arms.items.8Zyc8e60wzrC0AAi]{Munición improvisada y Pólvora}.</p>"
+		},
+		{
+			"id": "Boat Hook",
+			"name": "Bichero",
+			"description": "<p>Los ganchos son utilizados por los estibadores para ayudar con la carga y su sujeción, pero pueden volverse armas feroces si se empuñan con un propósito.</p>"
+		},
+		{
+			"id": "Bodkin Arrow",
+			"name": "Flecha Bodkin"
+		},
+		{
+			"id": "Bolt",
+			"name": "Cuadrillo"
+		},
+		{
+			"id": "2hdBYV1uH62i4csv",
+			"name": "Bomba",
+			"description": "<blockquote class=\"foundry-note\">    <p>Este Objeto es Munición para @UUID[JournalEntry.l0NZFxzG4t0GoIFu.JournalEntryPage.Y4IiuJnk1S466SLx#armas-de-asedio]{armas de asedio}. Para el arma arrojadiza, usa @UUID[Compendium.wfrp4e-core.items.X8WFQf0HB9yXKjdD]{Bomba}, para Munición usada con armas de Pólvora Negra e Ingeniería, usa @UUID[Compendium.wfrp4e-up-in-arms.items.A9QGISjhQq3w9uhK]{Bomba}</p></blockquote>"
+		},
+		{
+			"id": "A9QGISjhQq3w9uhK",
+			"name": "Bomba",
+			"description": "<p>A menudo arrojadas, ha habido muchos intentos de lanzar dispositivos cargados de pólvora negra, brea o alquitrán más lejos de lo que puede conseguirse a mano. Tales dispositivos pueden ser cargados en un @UUID[Compendium.wfrp4e-up-in-arms.items.hRXoLcdkE97BBJlL]{mortero de mano} para arrojarlos bastante lejos.</p><p>Este tipo de munición no puede cargarse con mucha antelación, ya que la mecha de la munición debe estar encendida antes de que pueda ser cargada en el @UUID[Compendium.wfrp4e-up-in-arms.items.hRXoLcdkE97BBJlL]{mortero de mano}. Al cargarlo, debes decidir cuántos turnos de mecha utilizas para la munición.</p><p>Un turno de mecha significa que explotará en el final del turno actual, dos turnos significa que se apaga al final de tu siguiente turno y así sucesivamente. La munición detona en ese momento, independientemente de si has disparado el arma o no. Debes mantener un registro de esto, ya que el DJ no está obligado a recordártelo hasta que llegue el momento.</p>"
+		},
+		{
+			"id": "Bow String",
+			"name": "Cuerda de arco",
+			"description": "<p>Hechas de cáñamo o cordel similar, las cuerdas de los arcos tienden a romperse, sobre todo en los momentos cruciales. Llevar un par de repuesto suele ser ser una buena política. Las de buena calidad se romperán menos.</p>"
+		},
+		{
+			"id": "Bullet and Powder",
+			"name": "Bala y Pólvora",
+			"description": "<p>Se dispara con la mayoría de las @UUID[Compendium.wfrp4e-up-in-arms.items.pu2OkOWm15zEqWzz]{pistolas} y @UUID[Compendium.wfrp4e-up-in-arms.items.ivuGhpoG9e9fN3Ks]{revólveres} y sus variantes, las balas vienen en una bolsita aceitada y suelen venderse con suficiente pólvora para disparar en circunstancias normales.</p>"
+		},
+		{
+			"id": "Bullets and Powder (Swivel Gun)",
+			"name": "Balas y Pólvora (Cañón giratorio)"
+		},
+		{
+			"id": "Cane Pistol",
+			"name": "Bastón pistola",
+			"description": "<p>Se trata de una pequeña pistola de bajo calibre oculta en un bastón. Esta arma es poco práctica, pero muy difícil de detectar. Los que buscan armas ocultas deben tener éxito en un Chequeo <strong>Difícil (-20)</strong> de <strong>Percepción</strong> para identificarlo como tal, o <strong>Muy Difícil (-30)</strong> de <strong>Percepción</strong> si no están familiarizados con las armas de pólvora negra.</p>"
+		},
+		{
+			"id": "Cannon (large)",
+			"name": "Cañón (grande)",
+			"description": "<p>Los cañones más grandes están restringidos a las fortalezas o posiciones bien preparadas en el campo de batalla, aunque los de tamaño pequeño y mediano pueden montarse en barcos o vagonetas. En los campos de batalla, las balas de cañón infligen daño a las hileras de tropas rebotando a través de ellas. Dado que la mayoría de las situaciones de combate en <strong>WJdR</strong> tratan de escaramuzas más pequeñas, limita la Calidad a Explosiva 2 para representar el daño a los objetivos cercanos, pero si están situados en fila, el DJ debe considerar que la bala podría alcanzar múltiples objetivos.</p>"
+		},
+		{
+			"id": "Cannon (medium)",
+			"name": "Cañón (mediano)",
+			"description": "<p>Los cañones más grandes están restringidos a las fortalezas o posiciones bien preparadas en el campo de batalla, aunque los de tamaño pequeño y mediano pueden montarse en barcos o vagonetas. En los campos de batalla, las balas de cañón infligen daño a las hileras de tropas rebotando a través de ellas. Dado que la mayoría de las situaciones de combate en <strong>WJdR</strong> tratan de escaramuzas más pequeñas, limita la Calidad a Explosiva 2 para representar el daño a los objetivos cercanos, pero si están situados en fila, el DJ debe considerar que la bala podría alcanzar múltiples objetivos.</p>"
+		},
+		{
+			"id": "Cannon (small)",
+			"name": "Cañón (pequeño)",
+			"description": "<p>Los cañones más grandes están restringidos a las fortalezas o posiciones bien preparadas en el campo de batalla, aunque los de tamaño pequeño y mediano pueden montarse en barcos o vagonetas. En los campos de batalla, las balas de cañón infligen daño a las hileras de tropas rebotando a través de ellas. Dado que la mayoría de las situaciones de combate en <strong>WJdR</strong> tratan de escaramuzas más pequeñas, limita la Calidad a Explosiva 2 para representar el daño a los objetivos cercanos, pero si están situados en fila, el DJ debe considerar que la bala podría alcanzar múltiples objetivos.</p>"
+		},
+		{
+			"id": "Captain Braun's Insta-Boiler",
+			"name": "Hervidor instantáneo del Capitán Braun",
+			"description": "<p>Parece una olla alta con una tapa abovedada. Tiene un espacio en el fondo para el fuego, con una cámara cerrada con otra tapa por encima. Se afirma que puede cocinar guisos rápidamente y a temperaturas más bajas. Como el Horno multiusos, se puede utilizar en movimiento (con mucho cuidado), requiere menos combustible y es más difícil de detectar que un fuego abierto.</p>"
+		},
+		{
+			"id": "Captain Braun's Multi-Stove",
+			"name": "Horno multiusos del Capitán Braun",
+			"description": "<p>Un arsenal parece surgir de las forjas de Nuln cada año. Esta pesada caja de hierro, del famoso inventor Capitán Braun, tiene varios compartimentos en su interior para poder cocinar comida diferente a la vez. Este incluso afirmó que se puede seguir cocinando en movimiento, aunque se recalienta un poco. Las principales ventajas de este artilugio son que necesita mucho menos combustible para calentarse, mantiene el calor durante más tiempo y reduce considerablemente los restos que queden del fuego. Algunos cocineros desconfían de este invento ya que les parece una pérdida de esfuerzo acarrear tal artilugio cuando un fuego convencional podría funcionar igual de bien.</p>"
+		},
+		{
+			"id": "Catapult (large)",
+			"name": "Catapulta (grande)",
+			"description": "<p>Las catapultas son armas de fuego indirecto que lanzan rocas, bombas o artefactos incendiarios en un arco elevado, cayendo sobre las cabezas de los objetivos.</p>"
+		},
+		{
+			"id": "Catapult (medium)",
+			"name": "Catapulta (mediano)",
+			"description": "<p>Las catapultas son armas de fuego indirecto que lanzan rocas, bombas o artefactos incendiarios en un arco elevado, cayendo sobre las cabezas de los objetivos.</p>"
+		},
+		{
+			"id": "Catapult (small)",
+			"name": "Catapulta (pequeño)",
+			"description": "<p>Las catapultas son armas de fuego indirecto que lanzan rocas, bombas o artefactos incendiarios en un arco elevado, cayendo sobre las cabezas de los objetivos.</p>"
+		},
+		{
+			"id": "Cavalry Hammer",
+			"name": "Martillo de caballería",
+			"description": "<p>Los martillos de caballería son grandes, pesados y los favoritos de los Caballeros del Lobo Blanco. A pie, pueden utilizarse con la Habilidad de Cuerpo a cuerpo (a dos manos).</p>"
+		},
+		{
+			"id": "Cloak",
+			"name": "Capa",
+			"description": "<p>Algunos expertos en esgrima y parada recomiendan tener a mano una capa de tela gruesa. Cuando se relía alrededor del brazo puede utilizarse para distraer a los adversarios o desviar sus ataques. Incluso se puede lanzar sobre un oponente con la esperanza de que se pierda entre sus pliegues. Sin embargo, las capas no son adecuadas para ataques de enmarañar. Cuando hagas un Chequeo para ver si un oponente queda enmarañado en una capa, tiene una Fuerza de 25.</p>"
+		},
+		{
+			"id": "Club",
+			"name": "Garrote",
+			"description": "<p>Los palos se encuentran tan a menudo como se fabrican. El precio indica que un comprador necesita semejante arma en un apuro, aunque si un PJ está en un bosque, puede procurarse un garrote si tiene éxito en un Chequeo Prolongado <strong>Desafiante (+0)</strong> de <strong>Supervivencia</strong> que requiere un total de 7 NE.</p>"
+		},
+		{
+			"id": "Compass",
+			"name": "Brújula",
+			"description": "<p>Esta brújula rudimentaria es una aguja de metal en equilibrio sobre un alfiler. Los estudiosos debaten sobre la naturaleza del dispositivo. Algunos sospechan que tiene cierta afinidad por la materia del Caos. Algunos sugieren que puede ser atraída por un gran pedazo de piedra bruja en algún lugar de los Páramos del Norte, pero es fiable e inestimable para una buena orientación.</p>"
+		},
+		{
+			"id": "Dagger",
+			"name": "Daga",
+			"description": "<p>Estas hojas se fabrican específicamente para el combate. Una espada rota puede emplearse como daga, pero sufre del Defecto <em>Peligrosa</em> si carece de una empuñadura en condiciones.</p>"
+		},
+		{
+			"id": "Demi-Lance",
+			"name": "Media lanza",
+			"description": "<p>Las lanzas se parecen a las lanzas cortas, pero con una empuñadura pesada diseñada para sujetar el arma contra el brazo y el pecho de un caballero a la carga. La media lanza es similar, pero más corta y ligera.</p><p>* Las lanzas y medias lanzas cuentan como @UUID[Compendium.wfrp4e-up-in-arms.items.okPRj8ixa55d9ETF]{armas improvisadas} si se usan en un asalto en el que no has cargado.</p>"
+		},
+		{
+			"id": "Double-barrelled Handgun",
+			"name": "Pistola de doble cañón",
+			"description": "<p>Si tener un cañón es bueno, ¿dos será mejor? Tan compleja como puede ser un arma de fuego sigue siendo fácil de utilizar por el soldado común, una pistola de doble cañón tiene dos cañones y dos gatillos. Aunque pesadas, la mayoría vienen con un dispositivo para recargar varios cañones a la vez, lo que permite al usuario disparar con mayor frecuencia.</p>"
+		},
+		{
+			"id": "Flail",
+			"name": "Mayal",
+			"description": "<p>Los mayales hechos para la batalla incorporan basculantes metálicos y refuerzos, lo que les permite ser más potentes.</p>"
+		},
+		{
+			"id": "Flamberge Zweihander",
+			"name": "Zweihander flamberga",
+			"description": "<p>los famosos regimientos de grandes espaderos del Imperio están armados con enormes hojas de acero, tan largas como muchas armas de asta. Algunos maestros armeros se esfuerzan aún más en añadir ondas y filos dentados a sus espadas. Estas armas se conocen como espadas flambergas y las heridas que provocan pueden ser más profundas como resultado de su poder de corte.</p>"
+		},
+		{
+			"id": "Foil",
+			"name": "Florete",
+			"description": "<p>El florete es una espada ligera con una hoja con una fina punta afilada. Son ligeros en la mano con un buen equilibrio en la empuñadura, pero a falta de una embestida dramática, tienden infligir pequeñas heridas de punción.</p>"
+		},
+		{
+			"id": "Fuse",
+			"name": "Detonador",
+			"description": "<p>Es similar a la mecha pero quema mucho más rápido, ofreciendo una forma de detonar pólvora negra desde una cierta distancia. Se vende por yardas y arde a una pulgada por segundo. Un detonador de calidad estándar puede fallar alrededor del 5% de las veces a más de diez yardas. Los de mala calidad pueden fallar cada cinco yardas.</p><p>* El precio es por yarda.</p>"
+		},
+		{
+			"id": "Garrote",
+			"name": "Garrote",
+			"description": "<p>Se trata de un trozo de cuerda o alambre destinado a colocarse alrededor del cuello y que se aprieta con las manos. Un PJ de una posada o de una ciudad podría hacer un garrote si tiene éxito en un Chequeo Prolongado <strong>Desafiante (+0)</strong> de <strong>Oficio (abacero, ingeniero, sastre o curtidor)</strong>, requiriendo un total de 5 NE.</p>"
+		},
+		{
+			"id": "Grain Flail",
+			"name": "Mayal para grano",
+			"description": "<p>El dicho común de que los campesinos pueden usar sus rejas de arado como armas es exagerada, pero en las manos adecuadas, uno de estos mayales resulta realmente peligroso. Un mayal para grano consiste en un mango de madera unido por una cadena a un palo pesado.</p>"
+		},
+		{
+			"id": "Grapeshot and Powder",
+			"name": "Metralla y Pólvora"
+		},
+		{
+			"id": "Grapple",
+			"name": "Garfio",
+			"description": "<p>Propuesto para la Armada Imperial para su uso en acciones de abordaje o para romper los aparejos enemigos, los garfios consisten en un gancho fuertemente acolchado diseñado para ser disparado desde un @UUID[Compendium.wfrp4e-up-in-arms.items.hRXoLcdkE97BBJlL]{mortero de mano} junto con 20 o más yardas de cuerda. Esto puede ser usado para atar una cuerda a una cierta distancia o para atrapar a un enemigo que se escapa, en cuyo caso inflige 1 Estado @Condition[Enmarañado] si tiene éxito en el golpe.</p><p>Para los que estén pensando en utilizar este dispositivo para entrar sigilosamente en algún sitio, hay que recordarles que es extremadamente ruidoso.</p>",
+			"effects": [{
+				"name":"Garfio",
+				"scriptData": [
+					{"label":"Enmarañado"}
+					]
+				}]
+		},
+		{
+			"id": "Great Axe",
+			"name": "Gran hacha",
+			"description": "<p>Su uso es más bien raro en el Imperio, pero se emplea más a menudo en las tribus nórdicas para contrarrestar las armaduras pesadas.</p>"
+		},
+		{
+			"id": "Griffonsfoot Pistol",
+			"name": "Pistola garra de grifo",
+			"description": "<p>Esta arma se emplea mejor contra un grupo reducido de enemigos. Un solo gatillo dispara los seis cañones y la recarga requiere seis balas y una cantidad proporcional de pólvora.</p>"
+		},
+		{
+			"id": "Gun Axe",
+			"name": "Hacha pistola",
+			"description": "<p>Esta arma es más o menos como uno podría imaginar, un arma de mano combinada con un hacha. Puede utilizarse como un hacha o un arma de fuego. Sin embargo, si se utiliza como un hacha mientras está cargada, cualquier fracaso crítico disparará el arma contra el cuerpo del usuario.</p>"
+		},
+		{
+			"id": "Gun Halberd",
+			"name": "Alabarda pistola",
+			"description": "<p>Emplea los mismos principios que el hacha pistola, esta arma funciona como alabarda y como arma de fuego, con el cañón del arma de fuego integrado en el mango de la Alabarda. Si se usa como alabarda mientras está cargada, cualquier fracaso crítico disparará el arma contra cualquiera que tenga la mala suerte de estar justo detrás del usuario.</p>"
+		},
+		{
+			"id": "Halberd",
+			"name": "Alabarda",
+			"description": "<p>El arma arquetípica de las fuerzas del Imperio, la alabarda puede emplearse con efectos similares a una lanza o un hacha.</p>"
+		},
+		{
+			"id": "Hand Mortar",
+			"name": "Mortero de mano",
+			"description": "<p>Parece un @UUID[Compendium.wfrp4e-up-in-arms.items.DQtxITVRh2pd8hxp]{trabuco} corto y achaparrado, pero es un mortero a escala diseñado para lanzar bombas y otros objetos grandes en la dirección deseada. Su uso es bastante peligroso, ya que cargar un poco de pólvora de más o equivocarse con la mecha de una bomba cargada, hará que el arma explote de forma espectacular. Cualquier pifia mientras se recargue el arma hará que explote. Sin embargo, abre muchas oportunidades a quienes estén dispuestos a arriesgar en su uso.</p>"
+		},
+		{
+			"id": "Handgun",
+			"name": "Arma corta",
+			"description": "<p>Un arma de fuego simple a dos manos, que suele utilizar un diseño de cerrojo de rueda o de piedra. Son ampliamente utilizadas por las tropas estatales del Imperio.</p>"
+		},
+		{
+			"id": "Helblaster Volley Gun",
+			"name": "Cañón de salvas Helblaster",
+			"description": "<p>Tiene nueve barriles separados y divididos en tres grupos de tres barriles fijados a una manivela circular. Al girar la manivela, un ingenioso sistema de levas enciende cada carga por turno, impulsando una ráfaga de proyectiles letales desde el arma.</p><p>La ventaja del Helblaster es que puede hacer varios disparos a la vez en una salva devastadora. Una salva completa destroza los regimientos más duros, causando inmensas bajas en un abrir y cerrar de ojos. Una desventaja es que tiene tendencia a atascarse o a fallar y, una vez que ha fallado, suele quedar inutilizado. Las posibilidades de poder disparar por un tiempo prolongado son escasas, ya que es muy probable que el arma funcione mal dada su complejidad.</p>"
+		},
+		{
+			"id": "Helstorm Rocket Battery",
+			"name": "Batería de cohetes Helstorm",
+			"description": "<p>El ingeniero Herman Faulkstein inventó esta arma experimental, inspirado por una exhibición de fuegos artificiales de Catai en Altdorf. Consta de un carro de artillería con ruedas y nueve cañones de pólvora con cohetes cargados fijados a un armazón. La elevación puede ajustarse para disparar a objetivos en tierra o aire. No son especialmente precisos y son más adecuados para disparar sobre grandes regimientos que sobre pequeños grupos.</p>"
+		},
+		{
+			"id": "Hochland Long Rifle",
+			"name": "Rifle largo de Hochland",
+			"description": "<p>Una de las legendarias e increíblemente precisas armas utilizadas por los cazadores de Hochland, estos rifles son increíblemente apreciados. A menudo se utilizan para apuntar a oficiales enemigos, con lo que tales armas se consideran antideportivas por muchos nobles y los soldados enemigos apresados a quienes se pilla con uno de ellos son ahorcados sumariamente.</p>"
+		},
+		{
+			"id": "Improvised Shot and Powder",
+			"name": "Munición improvisada y Pólvora",
+			"description": "<p>Un poco de pólvora, posiblemente húmeda, y cualquier piedra que parezca encajar en el cañón de un arma. El coste es solo el de la pólvora, pues se espera que tú te procures tu propia piedra.</p>"
+		},
+		{
+			"id": "Improvised Weapon",
+			"name": "Arma improvisada",
+			"description": "<p>Todo objeto duro y pesado que no esté destinado a ser utilizado como arma puede servir en un momento desesperado. Esta entrada incluye artículos como las patas de una silla, piedras, tacos de billar y botellas.</p>"
+		},
+		{
+			"id": "MQV1cMMZQZnyzZx2",
+			"name": "Incendiaria",
+			"description": "<blockquote class=\"foundry-note\">    <p>Este objeto es munición para @UUID[JournalEntry.l0NZFxzG4t0GoIFu.JournalEntryPage.Y4IiuJnk1S466SLx#armas-de-asedio]{armas de asedio}. Para el arma arrojadiza, usa @UUID[Compendium.wfrp4e-core.items.vI0oorwbZdlszudf]{Incendiaria}, para Munición usada con armas de Pólvora Negra e Ingeniería, usa @UUID[Compendium.wfrp4e-core.items.vI0oorwbZdlszudf]{Incendiaria}</p>    <p>Para usarla con @UUID[Compendium.wfrp4e-up-in-arms.items.d2LzU8hNCH97njsK]{morteros}, cambia el Tipo de Munición a <strong>Pólvora Negra y Explosivos</strong></p></blockquote>",
+			"effects": [{
+				"name":"Incendiaria",
+				"scriptData": [
+					{"label":"Incendiaria"}
+					]
+				}]
+		},
+		{
+			"id": "gCRiirLG9h9yxKzp",
+			"name": "Incendiaria",
+			"description": "<blockquote class=\"foundry-note\">    <p>Este objeto es munición para armas de @UUID[JournalEntry.2EGaOiGaaunZ2RuS.JournalEntryPage.SGWjMaw6OrZ06Nbp]{Pólvora Negra e Ingeniería}. Para el arma arrojadiza, usa @UUID[Compendium.wfrp4e-core.items.vI0oorwbZdlszudf]{Incendiaria}, para Munición de Asedio, usa @UUID[Compendium.wfrp4e-up-in-arms.items.MQV1cMMZQZnyzZx2]{Incendiaria}</p><p>Para usarla con @UUID[Compendium.wfrp4e-up-in-arms.items.d2LzU8hNCH97njsK]{morteros}, cambia el Tipo de Munición a <strong>Pólvora Negra y Explosivos</strong></p></blockquote><p>A menudo arrojadas, ha habido muchos intentos de lanzar dispositivos cargados de pólvora negra, brea o alquitrán más lejos de lo que puede conseguirse a mano. Tales dispositivos pueden ser cargados en un @UUID[Compendium.wfrp4e-up-in-arms.items.hRXoLcdkE97BBJlL]{mortero de mano} para arrojarlos bastante lejos.</p><p>Este tipo de munición no puede cargarse con mucha antelación, ya que la mecha de la munición debe estar encendida antes de que pueda ser cargada en el @UUID[Compendium.wfrp4e-up-in-arms.items.hRXoLcdkE97BBJlL]{mortero de mano}. Al cargarlo, debes decidir cuántos turnos de mecha utilizas para la munición.</p><p>Un turno de mecha significa que explotará en el final del turno actual, dos turnos significa que se apaga al final de tu siguiente turno y así sucesivamente. La munición detona en ese momento, independientemente de si has disparado el arma o no. Debes mantener un registro de esto, ya que el DJ no está obligado a recordártelo hasta que llegue el momento.</p>",
+			"effects": [{
+				"name":"Incendiaria",
+				"scriptData": [
+					{"label":"Incendiaria"}
+					]
+				}]
+		},
+		{
+			"id": "Knife",
+			"name": "Cuchillo",
+			"description": "<p>Este epígrafe comprende las hojas cortas y afiladas destinadas a fines distintos al combate, como la cocina o la caza.</p>"
+		},
+		{
+			"id": "Knuckledusters",
+			"name": "Nudillera",
+			"description": "<p>Unas nudilleras pueden añadirle una considerable potencia a los golpes de un boxeador, y además, pueden improvisarse a partir de tejidos y herramientas. Un PJ en una ubicación urbana puede hacerse unos si tiene éxito en un Chequeo Prolongado <strong>Desafiante (+0)</strong> de <strong>Oficio (carpintero, ingeniero, herrero, sastre o curtidor)</strong>, requiriendo un total de 10 NE.</p>"
+		},
+		{
+			"id": "Locked Gauntlet",
+			"name": "Guantelete cerrado",
+			"description": "<p>Un guantelete cerrado está formado por placas de acero que envuelven el puño y pueden mantenerse cerradas con un tornillo o cierre. Aunque puede utilizarse como arma de combate, se emplea más comúnmente como método para garantizar que el portador no suelte un arma sostenida en esa mano. Un guantelete cerrado puede adquirirse como parte de una armadura completa. Añade su precio al de la armadura. Utiliza la Impedimenta de la propia armadura; el guantelete no añade un peso significativo.</p><p>Normalmente, un PJ equipado con un guantelete se vería obligado a soltar el objeto que tuviera en esa mano, pero aquí no es el caso. En su lugar, sufre un penalizador -20 a todos los Chequeos realizados con ese objeto, incluidos los Chequeos de Cuerpo a cuerpo, por mucho que lo hayan tenido en la mano mientras las circunstancias que le habrían hecho soltarlo sigan en efecto (hasta un mínimo de un turno). Si durante ese tiempo ocurre algo que le haría soltar el objeto de nuevo, lo hace a pesar de llevar el guantelete cerrado.</p><p><strong>Ejemplo</strong>: <em>Jenna la Mercenaria lleva una espada en la mano derecha. Esa mano dispone de un guantelete cerrado y antes de entrar en combate se asegura de que la espada está bien asegurada. Durante un combate, el oponente de Jenna utiliza el Talento de Desarmar, que normalmente haría que Jenna soltara la espada, pero debido a su guantelete cerrado, la mantiene agarrada. Sufre un -20 a los Chequeos de Cuerpo a cuerpo durante un turno, tras el cual recupera el agarre y lucha con normalidad.</em></p>"
+		},
+		{
+			"id": "Lance",
+			"name": "Lanza de caballería",
+			"description": "<p>Las lanzas se parecen a las lanzas cortas, pero con una empuñadura pesada diseñada para sujetar el arma contra el brazo y el pecho de un caballero a la carga. La media lanza es similar, pero más corta y ligera.</p><p>* Las lanzas y medias lanzas cuentan como @UUID[Compendium.wfrp4e-up-in-arms.items.okPRj8ixa55d9ETF]{armas improvisadas} si se usan en un asalto en el que no has cargado.</p>"
+		},
+		{
+			"id": "Large Bullet and Powder",
+			"name": "Bala grande y Pólvora",
+			"description": "<p>Técnicamente es una pequeña bala de cañón y se carga en armas de gran calibre como un @UUID[Compendium.wfrp4e-up-in-arms.items.HblRPlASKOI73aOE]{arcabuz} o un @UUID[Compendium.wfrp4e-up-in-arms.items.hRXoLcdkE97BBJlL]{mortero de mano}. Quien dispare tal artefacto, o se encuentre a menos de 2 yardas del usuario, debe realizar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Aguante</strong> o sufrir 1 Estado @Condition[Ensordecido].</p>"
+		},
+		{
+			"id": "Mace",
+			"name": "Maza",
+			"description": "<p>La maza típica es un asta de metal con una cabeza pesada en forma de rebordes o salientes en punta. Aunque es menos más ágil que una espada, inflige golpes contundentes.</p>"
+		},
+		{
+			"id": "Main Gauche",
+			"name": "Daga de guardamano",
+			"description": "<p>Una daga de guardamano es una daga especialmente diseñada para la esgrima. Se llama así porque es típicamente utilizada en la mano izquierda por los luchadores diestros como complemento de un arma de esgrima.</p><p>Un luchador sin la Habilidad de Cuerpo a cuerpo (parada) podría utilizar una daga de guardamano como arma principal, aunque la llamarían daga y perdería la Cualidad Defensiva.</p>"
+		},
+		{
+			"id": "Mancatcher",
+			"name": "Atrapahombres",
+			"description": "<p>El atrapahombres es una extraña arma de asta con una cabeza semicircular adornada con pinchos cortos. El arma puede atrapar a una persona alrededor del cuello, forzando a que deje de luchar por miedo a sufrir más heridas. Su uso no es muy común en el Imperio, aunque los skavens y hobgoblins los emplean regularmente. Algunos vienen con mecanismos de resorte. Estos cuestan 4 co, pero el portador se beneficia de un bonificador de +20 a cualquier Chequeo de Fuerza cuando quiere enmarañar a sus oponentes.</p>"
+		},
+		{
+			"id": "Matchlock Blunderbuss",
+			"name": "Trabuco de mecha",
+			"description": "<p>Se trata de un diseño anterior al trabuco; esta arma tiene los mismos inconvenientes que la @UUID[Compendium.wfrp4e-up-in-arms.items.zcn4bYbkz5N4PZJv]{pistola de mecha}.</p>"
+		},
+		{
+			"id": "Matchlock Handgun",
+			"name": "Pistola de mecha",
+			"description": "<p>Un diseño anterior a la pistola, todavía corren algunas de estas reliquias alrededor del Imperio y a menudo pueden adquirirse a bajo precio. Antes de utilizarla, el usuario debe gastar una Acción para encender la mecha de su arma. Una mecha encendida arderá durante bastante tiempo, a menos que la lluvia o el viento la apaguen.</p>"
+		},
+		{
+			"id": "Military Pick",
+			"name": "Pica",
+			"description": "<p>Las picas vulgares son poco más que un metal puntiagudo en la punta de un palo, aunque las mejor hechas son de acero. No son armas ágiles, pero están bien diseñadas para traspasar blindajes.</p>"
+		},
+		{
+			"id": "Military Flail",
+			"name": "Mayal militar",
+			"description": "<p>Los mayales hechos para la batalla incorporan basculantes metálicos y refuerzos, lo que les permite ser más potentes.</p>"
+		},
+		{
+			"id": "Mortar",
+			"name": "Mortero",
+			"description": "<p>Un mortero es el equivalente en pólvora negra de una catapulta, disparando una bola pesada o una bomba en un arco elevado. En el campo de batalla, se utilizan principalmente en asedios, lanzando explosivos por encima de los muros del castillo.</p>"
+		},
+		{
+			"id": "Ostrich Feather",
+			"name": "Pluma de avestruz",
+			"description": "<p>Corre la moda entre cortesanos y militares de llevar grandes plumas de estas raras aves de Arabia. Las hay de todos los colores. Uno puede pensar que una pluma brillante en el sombrero de un soldado puede equivaler a llevar una diana en la cabeza, pero los soldados lo interpretan como una prueba de valor. Algunos comerciantes intentan hacer pasar las plumas de cualquier ave común o de jardín como avestruz auténtico.</p>"
+		},
+		{
+			"id": "Paper Cartridge",
+			"name": "Cartucho de papel",
+			"description": "<p>Son paquetes ya preparados con proyectil, pólvora y relleno, haciendo que la recarga sea mucho más fácil. Los Chequeos para recargar un arma adecuada con esta munición se benefician de un bonificador +10.</p>",
+			"effects": [{
+				"name":"Cartucho de papel",
+				"scriptData": [
+					{"label":"Cartucho de papel"}
+					]
+				}]
+		},
+		{
+			"id": "Partizan/Glaive",
+			"name": "Partesana/Guja",
+			"description": "<p>Las partesanas son lanzas con hojas gruesas, mientras que las gujas son armas de asta que montan una hoja hendida u hoja de espada como cabeza. Ambas actúan de la misma manera, sacrificando parte del alcance para infligir golpes cortantes más fuertes.</p>"
+		},
+		{
+			"id": "Partizan/Glaive",
+			"name": "Partesana/Guja",
+			"description": "<p>Las partesanas son lanzas con hojas gruesas, mientras que las gujas son armas de asta que montan una hoja hendida u hoja de espada como cabeza. Ambas actúan de la misma manera, sacrificando parte del alcance para infligir golpes cortantes más fuertes.</p>"
+		},
+		{
+			"id": "Pavise",
+			"name": "Pavés",
+			"description": "<p>El pavés es un escudo grande llevado por los ballesteros para proporcionar refugio en el campo de batalla mientras recargan, clavándolo en el suelo como un muro personal. Mide aproximadamente 4 pies de alto y suele llevar pintado el nombre de la unidad. Es más eficaz cuando se despliegan varios en fila con otros ballesteros, ahí el pavés proporciona una buena cobertura cuando se dispara a las tropas contrarias y proporciona defensa contra las incursiones enemigas, con el soldado empuñando una lanza o espada desde detrás.</p><p>El pavés puede utilizarse de dos formas distintas.</p><p>Puede emplearse como un escudo grande. No es una buena manera de utilizarlo ya que es una construcción pesada de madera y cuero. En este caso ofrece todas las Cualidades de un @UUID[Compendium.wfrp4e-core.items.CYkA9Ax6BN7eiTvf]{escudo grande} (<em>Escudo 3, Defensiva, Inofensiva</em>), sufre los Defectos <em>Lenta</em> y <em>Fatigosa.</em>. Un pavés utilizado de esta forma sigue teniendo una Impedimenta de 4 y solo hace +BF+2 de Daño.</p><p>Su uso previsto es para ser configurado como una pieza de cobertura portátil. Al portador le cuesta 2 acciones colocar el pavés. Esta dirección puede depender de la brújula (norte, sur, este u oeste), en relación con el cuerpo del portador (izquierda, derecha, delante o detrás) o desde un punto de referencia concreto (<em>‘entre el castillo y yo’</em>).</p><p>Siempre que el portador permanezca a menos de 1 yarda detrás del pavés, proporciona protección a su portador contra cualquier ataque con proyectiles que vienen de la dirección indicada, concediendo <em>Escudo 5</em> y <em>Defensiva</em>. Si un oponente se enfrenta a él cuerpo a cuerpo, el pavés solo proporciona protección si el ataque se realiza desde esa dirección y solo en el primer turno de combate.</p><p><strong>Ejemplo</strong>: <em>Braganza, el especialista en asedios, se ha abierto camino al sur de una fortaleza enemiga. Clava su pavés en el suelo de tal manera que mire hacia la fortaleza. Obtiene la Cualidad Escudo 5 a cualquier ataque procedente del norte, pero no tiene esa protección para ataques procedentes del sur, oeste o este. Si alguien sale de la fortaleza y carga hacia Braganza, podría hacer uso de Escudo 5 para el primer Asalto de combate cuerpo a cuerpo. Si le cargan por los lados o por la retaguardia, no puede usar la mencionada Cualidad.</em></p>"
+		},
+		{
+			"id": "Pebble",
+			"name": "Guijarro"
+		},
+		{
+			"id": "Pepperbox",
+			"name": "Pimentero",
+			"description": "<p>Una forma más simple de una @UUID[Compendium.wfrp4e-up-in-arms.items.Neriv2FSubZWLTTq]{pistola de repetición}, un pimentero es una disposición de cuatro cañones precargados colocados delante de un único mecanismo de disparo. Cada vez que se dispara, debe ser girada, cargada o preparada manualmente para disparar de nuevo. Esto requiere muy poco tiempo en comparación con recargar el arma, pero significa que el usuario debe tener una segunda mano libre para operarlo o pierde su rasgo de <em>Repetidora</em>.</p>",
+			"effects": [{
+				"name":"Pimentero",
+				"scriptData": [
+					{"label":"Pimentero"}
+					]
+				}]
+		},
+		{
+			"id": "Pick",
+			"name": "Pico",
+			"description": "<p>Los picos militares a dos manos son raros de ver, sustituyendo su uso por diversas formas de arma de asta. Se sabe que ciertas especies subterráneas los utilizan con asiduidad.</p>"
+		},
+		{
+			"id": "Pike",
+			"name": "Pica",
+			"description": "<p>Estas lanzas muy largas y pesadas no suelen emplearse fuera de los regimientos especialmente entrenados. Los mercenarios tileanos son especialmente famosos por su dominio y utilización en las formaciones.</p>"
+		},
+		{
+			"id": "Pistol",
+			"name": "Pistola",
+			"description": "<p>Un arma de pólvora negra más pequeña, diseñada para ser disparada a una mano. Normalmente se utilizan en duelos o por soldados de caballería como los Batidores, que requieren una mano para llevar las riendas de su montura. Los individuos ricos a veces llevan un par de pistolas en lugar de tener que recargar una de ellas.</p>"
+		},
+		{
+			"id": "Pollaxe",
+			"name": "Hacha de armas",
+			"description": "<p>Adopta muchas formas, pero la arquetípica presenta una cabeza con un pincho corto en la parte superior para el empuje, una cabeza de hacha a un lado para cortar y una cabeza de martillo en el otro para golpear.</p>"
+		},
+		{
+			"id": "Precision Shot and Powder",
+			"name": "Bala de precisión y Pólvora",
+			"description": "<p>Se trata de pólvora preparada por expertos y balas cuidadosamente alisadas y redondeadas, que se pueden combinar para permitir disparos más fiables y precisos con cualquier arma de pólvora negra adecuada.</p>"
+		},
+		{
+			"id": "Quarterstaff",
+			"name": "Bastón",
+			"description": "<p>Son palos rectos de madera tan altos como su portador. A menudo se encuentran tanto como se fabrican. El precio indica que el comprador necesita un arma así en un apuro, aunque si un PJ está en un entorno boscoso, puede hacerse con uno si tiene éxito en un Chequeo Prolongado <strong>Desafiante (+0)</strong> de <strong>Supervivencia</strong>, requiriendo un total de 20 NE.</p>"
+		},
+		{
+			"id": "Rapier",
+			"name": "Espada ropera",
+			"description": "<p>Se trata de una espada larga y fina. Como el florete, tiene una punta fina, pero la hoja afilada conserva gran parte del poder de corte de una espada tradicional.</p>"
+		},
+		{
+			"id": "Repeater Handgun",
+			"name": "Arma corta de repetición",
+			"description": "<p>Un arma corta de repetición utiliza un complejo mecanismo para colocar munición en situación de disparar cada vez que se apriete el gatillo. Es raro ver dos de estas armas iguales, aunque los mecanismos giratorios son su denominador común.</p>"
+		},
+		{
+			"id": "Repeater Pistol",
+			"name": "Pistola de repetición",
+			"description": "<p>Aún más difícil de crear que un @UUID[Compendium.wfrp4e-up-in-arms.items.vwvprQOKH9Rtti4b]{arma corta de repetición} debido a su menor tamaño, las pistolas tienen mucho en común con sus primas mayores. Los mecanismos son similares, con cámaras giratorias llenas de munición. Se deben realizar pequeños ajustes necesarios constantemente y en manos de un pistolero no entrenado, tales armas fallan bastante a menudo.</p>"
+		},
+		{
+			"id": "Rocket",
+			"name": "Cohete"
+		},
+		{
+			"id": "Sabre",
+			"name": "Sable",
+			"description": "<p>El sable es similar a la cimitarra, pero un poco más largo y recto. Puede usarse a pie con la Habilidad de Cuerpo a cuerpo (básico), aunque su Cualidad <em>Cortante</em> (1V) se convierte en <em>Cortante</em> (2V). Los esgrimistas expertos pueden hacer un buen uso de un sable, utilizado con la Habilidad de Cuerpo a cuerpo (esgrima), con lo que conserva su Cualidad <em>Cortante</em> (1V).</p>",
+			"effects": [{
+				"name":"Sable",
+				"scriptData": [
+					{"label":"Sable"}
+					]
+				}]
+		},
+		{
+			"id": "Sap",
+			"name": "Cachiporra",
+			"description": "<p>Una cachiporra bien hecha consiste en un pedazo de cuero o pieza textil relleno de arena, perdigones de mosquete, barras de hierro o pequeños objetos pesados similares. En casos desesperados, se podría fabricar con materiales adecuados recogidos en un entorno urbano. Un PJ en una taberna, tienda o ubicación urbana podría hacerse una si tiene éxito en un Chequeo Prolongado <strong>Desafiante (+0)</strong> de <strong>Oficio (carpintero, ingeniero, herrero, sastre o curtidor)</strong>, requiriendo un total de 15 NE.</p>"
+		},
+		{
+			"id": "Scimitar",
+			"name": "Cimitarra",
+			"description": "<p>Popular en el este del Imperio, Kislev y Arabia, la cimitarra tiene una hoja curva que puede infligir terribles heridas cortantes. Su diseño compromete la capacidad del que la emplea para embestir y empujar, lo que significa que aunque las cimitarras tienen una longitud similar a las espadas rectas, tienen un alcance menor.</p>"
+		},
+		{
+			"id": "Scrap and Powder",
+			"name": "Chatarra y Pólvora",
+			"description": "<p>La chatarra es un término genérico para referirse a los residuos viejos, clavos de tejado, fragmentos de herradura usados, puntas de flecha y otros trozos de material afilado y puntiagudo rebuscados en cualquier montón de escombros que se pueda encontrar. Los ataques se benefician del rasgo @UUID[Compendium.wfrp4e-core.items.V0c3qBU1CMm8bmsW]{Infectada}.</p>",
+			"effects": [{
+				"name":"Infectada",
+				"scriptData": [
+					{"label":"Infectada","script":"if (args.totalWoundLoss > 0)\n     this.script.message(`<b>Infectada ${args.actor.name}</b> debe superar un Chequeo <b>Fácil (+40)</b> de <b>Aguante</b> o sufrir una @UUID[Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb]{Herida supurante}`, {whisper: ChatMessage.getWhisperRecipients(\"GM\") })"}
+					]
+				}]
+		},
+		{
+			"id": "Sealskin",
+			"name": "Piel de foca",
+			"description": "<p>Un abrigo de piel de foca protegerá de las inclemencias del tiempo. Los pescadores del Mar de las Garras no pueden vivir sin ellas. Cuanto más te adentres en el interior, menos probabilidades hay de que sea piel de foca auténtica, pero otras imitaciones peludas del mismo estilo hacen un trabajo casi igual de bueno. Suelen venir con unas manoplas a juego que son ideales para mantener las manos calientes, pero imposibilitan movimientos demasiado ágiles con ellas. Una buena piel de foca puede dar bonificadores para resistir la @UUID[Compendium.wfrp4e-core.journals.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#exposicion-a-la-intemperie]{exposición al frío}.</p>"
+		},
+		{
+			"id": "Sharp Stick",
+			"name": "Palo afilado"
+		},
+		{
+			"id": "Silk Underwear",
+			"name": "Ropa interior de seda",
+			"description": "<p>Los pequeños lujos ayudan a aliviar el estrés y la monotonía de la vida militar. Uno de esos lujos, para los desfiles y en campaña, es la mejor ropa interior de seda de Catay. También reduce las rozaduras.</p>"
+		},
+		{
+			"id": "Slow Match",
+			"name": "Mecha",
+			"description": "<p>Una mecha es un trozo de cuerda delgada infundida con sustancias inflamables. Arde lentamente y constantemente, proporcionando una chispa lista para un arma de mecha. Se vende por yardas y durante una hora arde la longitud de un pie.</p><p>* El precio es por yarda.</p>"
+		},
+		{
+			"id": "Small Shot and Powder",
+			"name": "Perdigones y Pólvora",
+			"description": "<p>A menudo utilizados para la caza de aves y otras criaturas pequeñas que se mueven rápido, son mucho más pequeños que las balas de los cañones de la mayoría de las armas y se espera que el usuario utilice una docena para cada carga.</p>"
+		},
+		{
+			"id": "Small Shot and Powder (Swivel Gun)",
+			"name": "Perdigones y Pólvora (Cañón giratorio)"
+		},
+		{
+			"id": "Smallsword",
+			"name": "Espadín",
+			"description": "<p>Una versión ligera del florete. El espadín no se considera un arma como tal y su uso es más frecuente en competiciones deportivas o duelos a primera sangre. Los espadines con puntas y hojas romas se utilizan a menudo como armas deportivas, obteniendo el Defecto <em>Inofensiva</em>.</p>"
+		},
+		{
+			"id": "Spear",
+			"name": "Lanza",
+			"description": "<p>Además del bastón, la lanza es, probablemente, el arma más utilizada en el Viejo Mundo. Casi todas las especies y naciones emplean tropas armadas con lanzas, aparte de los enanos que, por lo general, tienden a evitar las armas de asta.</p>"
+		},
+		{
+			"id": "Spiked Gauntlet",
+			"name": "Guantelete armado",
+			"description": "<p>Un guantelete armado se puede comprar como parte de un conjunto de armadura completa para el brazo. Añade el precio del guantelete al de la armadura, pero solo usa la Impedimenta de la propia armadura; el guantelete no supone un peso o volumen adicional significativo.</p>"
+		},
+		{
+			"id": "Stone",
+			"name": "Piedra"
+		},
+		{
+			"id": "Swivel Gun",
+			"name": "Cañón giratorio",
+			"description": "<p>Un cañón giratorio es como un trabuco, pero más grande. Debido a su peso, normalmente se monta en un pivote o trípode.</p>"
+		},
+		{
+			"id": "Sword",
+			"name": "Espada",
+			"description": "<p>La espada es el arma con la que todos se miden. Una espada de calidad tiene una punta de aguja para empujar, una hoja afilada por ambos lados y está equilibrada para que el peso esté cerca de la mano, haciéndola ágil para el ataque y la defensa.</p>"
+		},
+		{
+			"id": "Swordbreaker",
+			"name": "Rompespadas",
+			"description": "<p>Estas armas están diseñadas como largas dagas o robustas espadas cortas. Sus hojas son más gruesas que las de las espadas y a lo largo de un lado tienen varias ranuras profundas. Este diseño compromete la capacidad de corte del arma, pero permite a un usuario habilidoso atrapar la hoja de un oponente y mantenerla sujeta (<em>NdC: o, aplicando la fuerza adecuada, romperla</em>).</p>"
+		},
+		{
+			"id": "Theodolite",
+			"name": "Teodolito",
+			"description": "<p>Un teodolito es una pieza de equipo técnico que se utiliza para medir ángulos a grandes distancias y es práctico para medir terrenos. Cualquiera con <em>Oficio (cartógrafo)</em> puede utilizar uno eficazmente.</p><p>Algunos son poco más que bucles de metal por los que mirar, con un ángulo ajustable. Los nuevos modelos de Tilea pueden ajustarse en tres dimensiones e incorporan medidas angulares de precisión, escalas de pie de rey y oculares telescópicos. Vienen con trípodes y requieren al menos un Asalto para su instalación.</p>"
+		},
+		{
+			"id": "Volley Gun",
+			"name": "Cañón de salvas",
+			"description": "<p>El cañón de salvas se parece a un cañón de repetición, con una compleja manivela circular y palancas. Normalmente hay siete barriles: uno en el centro, con seis más agrupados a su alrededor en forma hexagonal. Pese a ser mortal para los que tiene delante, un cañón de salvas también puede ser peligroso para un usuario inexperto.</p><p>Cada vez que se dispara, el usuario debe hacer un Chequeo <strong>Normal (+20)</strong> de <strong>Aguante</strong>, sufriendo 1 Herida por cada nivel de fracaso mientras el arma lo golpea violentamente contra el hombro. En un fracaso asombroso, el usuario sufre un golpe crítico en el hombro: usa la Tabla de Heridas críticas, ajustando los detalles según sea necesario para reflejar un impacto en el hombro.</p><p>Los cañones de salvas admiten balas del mismo calibre que un cañón de pólvora negra, aunque se usa 1 bala y carga para cada disparo.</p>"
+		},
+		{
+			"id": "4K8ai0xrndckUr0e",
+			"name": "Martillo de guerra",
+			"description": "<p>Vienen en varios diseños, pero suelen tener una cabeza plana y pesada en un lado para infligir daño contundente y una punta con pinchos en el otro para penetrar en la armadura.</p>"
+		},
+		{
+			"id": "9chPZw59vJ4dKjaC",
+			"name": "Martillo de guerra",
+			"description": "<p>El martillo de guerra a dos manos es un arma difícil de dominar, pero se asocia con los enanos y el culto sigmarita.</p>"
+		},
+		{
+			"id": "Weighted Net",
+			"name": "Red con pesos",
+			"description": "<p>Una red con pesos es engorrosa y torpe, pero capaz de obstaculizar gravemente la capacidad de lucha cuando se utiliza de manera adecuada. Cuando haces un Chequeo para ver si un oponente queda enmarañado en una red con pesos, la red tiene una Fuerza de 55.</p>"
+		},
+		{
+			"id": "Whetstone",
+			"name": "Piedra de afilar",
+			"description": "<p>Mantener la espada afiladas siempre es una buena práctica. Lo que ocurra si no lo haces depende del DJ. Los servicios de afilado son bastante comunes a lo largo del Imperio y un afilador hará el trabajo por un par de peniques por cuchilla. Sin embargo, si quieres hacerlo tú mismo, podría valer la pena invertir en una piedra de afilar.</p>"
+		},
+		{
+			"id": "Zweihander",
+			"name": "Zweihander (mandoble)",
+			"description": "<p>los famosos regimientos de grandes espaderos del Imperio están armados con enormes hojas de acero, tan largas como muchas armas de asta. Algunos maestros armeros se esfuerzan aún más en añadir ondas y filos dentados a sus espadas. Estas armas se conocen como espadas flambergas y las heridas que provocan pueden ser más profundas como resultado de su poder de corte.</p>"
+		},
+		{
+			"id": "Dramatic Injury",
+			"name": "Herida dramática",
+			"description": "<p>Un pinchazo en la mejilla. Sufres 1 Estado @Condition[Sangrando]. Una vez curada, la cicatriz proporciona un Bonificador de +1 NE a los Chequeos sociales convenientes. Solo puedes obtener este Bonificador una vez.</p>",
+			"effects": [{
+				"name":"Sangrando",
+				"scriptData": [
+					{"label":"Sangrando"}
+					]
+				},
+				{
+				"name":"Herida dramática",
+				"scriptData": [
+					{"label":"Cicatriz impresionante"}
+					]
+				}]
+		},
+		{
+			"id": "Jarred Arm",
+			"name": "Contusión en el brazo",
+			"description": "<p>Sueltas cualquier cosa que lleves en esa mano, quedando inutilizada durante [[/r 1d10]] menos tantos Asaltos como tu Bonificador por Resistencia. Durante este tiempo, trata la mano como si la hubieras perdido. (véase @UUID[Compendium.wfrp4e-core.journals.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#miembros-amputados]{Miembros amputados})</p>",
+			"effects": [{
+				"name":"Contusión en el brazo",
+				"scriptData": [
+					{"label":"Contusión en el brazo","script":"let location = this.item.system.location.key;\n\nif (location)\n{\n    let dropped = this.item.system.weaponsAtLocation;\n\n    if (dropped.length)\n    {\n        this.script.notification(`Soltado ${dropped.map(i => i.name).join(\", \")}!`)\n        for(let weapon of dropped)\n        {\n            await weapon.system.toggleEquip();\n        }\n    }\n}\n\nlet roll = await new Roll(\"max(1, 1d10 - @system.characteristics.t.bonus)\", this.actor).roll()\n\nroll.toMessage(this.script.getChatData({flavor : `${this.effect.name} (Duration)`}));\n\nthis.effect.updateSource({\"duration.rounds\" : roll.total})"},
+					{"label":"Prevenir uso del brazo","script":"args.abort = true;\nthis.script.notification(`¡No puedes usar el  ${this.item.system.location.value}!`, \"error\")"}
+					]
+				}]
+		},
+		{
+			"id": "Jolted Wrist",
+			"name": "Muñeca torcida",
+			"description": "<p>Sueltas cualquier objeto que lleves en esa mano.</p>",
+			"effects": [{
+				"name":"Muñeca torcida",
+				"scriptData": [
+					{"label":"Muñeca torcida","script":"let location = this.item.system.location.key;\n\nif (location)\n{\n    let dropped = this.item.system.weaponsAtLocation;\n\n    if (dropped.length)\n    {\n        this.script.notification(`Soltado ${dropped.map(i => i.name).join(\", \")}!`)\n        for(let weapon of dropped)\n        {\n            await weapon.system.toggleEquip();\n        }\n    }\n\n}"}
+					]
+				}]
+		},
+		{
+			"id": "Lost Footing",
+			"name": "Pérdida de equilibrio",
+			"description": "<p>Ten éxito en un Chequeo <strong>Desafiante (+0)</strong> de <strong>Atletismo</strong> o sufres 1 Estado @Condition[Tumbado].</p>",
+			"effects": [{
+				"name":"Pérdida de equilibrio",
+				"scriptData": [
+					{"label":"Pérdida de equilibrio"}
+					]
+				}]
+		},
+		{
+			"id": "Rattling Blow",
+			"name": "Golpe directo",
+			"description": "<p>El golpe inunda tu visión de luces parpadeantes. Sufres 1 Estado @Condition[Aturdido].</p>",
+			"effects": [{
+				"name":"Aturdido",
+				"scriptData": [
+					{"label":"Aturdido"}
+					]
+				}]
+		},
+		{
+			"id": "Shattered Skull",
+			"name": "Cráneo destrozado",
+			"description": "<p>Te estalla la cabeza y te desplomas, muriendo al instante.</p>",
+			"effects": [{
+				"name":"Cráneo destrozado",
+				"scriptData": [
+					{"label":"Cráneo destrozado"}
+					]
+				}]
+		},
+		{
+			"id": "Stubbed Toe",
+			"name": "Golpe en el meñique (pie)",
+			"description": "<p>Ten éxito en un Chequeo <strong>Normal (+20)</strong> de <strong>Aguante</strong> o sufres un -10 en los Chequeos de Agilidad hasta el final del siguiente turno.</p>",
+			"effects": [{
+				"name":"Golpe en el meñique (pie)",
+				"scriptData": [
+					{"label":"Golpe en el meñique (pie)"},
+					{"label":"Inmediato"}
+					]
+				}]
+		},
+		{
+			"id": "Winded",
+			"name": "Sin aliento",
+			"description": "<p>Sufres 1 Estado @Condition[Aturdido]. Aturdido. Ten éxito en un chequeo <strong>Normal (+20)</strong> de <strong>Aguante</strong> o sufres 1 Estado @Condition[Tumbado]. El movimiento se reduce a la mitad durante [[/r 1d10]] Asaltos mientras recuperas el aliento.</p>",
+			"effects": [{
+				"name":"Aturdido",
+				"scriptData": [
+					{"label":"Aturdido"}
+					]
+				},
+				{
+				"name":"Sin aliento",
+				"scriptData": [
+					{"label":"Sin aliento"},
+					{"label":"Mitad de Movimiento"},
+					{"label":"Duración"}
+					]
+				}]
+		},
+		{
+			"id": "Command the Legion",
+			"name": "Comandar legión",
+			"description": "<p>Myrmidia lleva tus órdenes por el campo de batalla. Puedes emitir una orden a cualquier aliado dentro de tu línea de visión. La orden debe ser relevante para el logro de una lucha armada o de una estrategia en curso. Cualquier Chequeo de Mando que realices se beneficia de un bonificador de +10.</p>"
+		},
+		{
+			"id": "Dismay Foe",
+			"name": "Consternación del enemigo",
+			"description": "<p>Encarnas a Myrmidia en su aspecto más iracundo. Obtienes el Rasgo de criatura @Terror[1]{Terror 1}.</p>",
+			"effects": [{
+				"name":"Consternación del enemigo",
+				"scriptData": [
+					{"label":"Consternación del enemigo"}
+					]
+				}]
+		},
+		{
+			"id": "In Good Order",
+			"name": "Mal menor",
+			"description": "<p>Sabiendo que la situación es desesperada, rezas para que tus fuerzas no sufran una derrota desastrosa. Mientras el milagro esté funcionando, cualquier aliado puede interrumpir el combate sin permitir que el enemigo obtenga ventaja o haga ataques gratuitos (ver @UUID[Compendium.wfrp4e-core.journals.NS3YGlJQxwTggjRX.JournalEntryPage.bdfiyhEYtKs7irqc#huir]{Huir}).</p>"
+		},
+		{
+			"id": "Know Your Enemy",
+			"name": "Conoce a tu enemigo",
+			"description": "<p>Llamas a Myrmidia para que te informe de las fortalezas y debilidades de un enemigo cercano. El DJ debe permitirte comprobar el perfil, los rasgos, las habilidades y los talentos del objetivo.</p>"
+		},
+		{
+			"id": "On Deadly Ground",
+			"name": "Ante el campo de muerte",
+			"description": "<p>Sabiendo que la victoria no puede asegurarse a menos que tus fuerzas se mantengan firmes, invocas a Myrmidia para desterrar todo pensamiento de retirada de las mentes de tus aliados. Mientras el milagro está en juego, tus aliados no sufren Estados de @Condition[Quebrantado].</p>",
+			"effects": [{
+				"name":"Ante el campo de muerte",
+				"scriptData": [
+					{"label":"Ante el campo de muerte","script":"if (this.actor.hasCondition(\"broken\"))\n{\n    this.actor.removeCondition(\"broken\")\n    this.script.notification(`No puede tener Quebrantado`);\n}"}
+					]
+				}]
+		},
+		{
+			"id": "Quick Strike",
+			"name": "Ataque veloz",
+			"description": "<p>Infundido con el poder de Myrmidia, te beneficias de unos reflejos aumentados y puedes anticipar las acciones y movimientos de tu oponente. Al comienzo de cada Asalto, mientras dure el Milagro, puedes intentar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Iniciativa</strong> para obtener un ataque gratuito inmediato fuera de la secuencia de turnos. Este ataque se resuelve con cualquier arma que lleves en la mano principal.</p>",
+			"effects": [{
+				"name":"Ataque veloz",
+				"scriptData": [
+					{"label":"Ataque veloz"}
+					]
+				}]
+		},
+		{
+			"id": "Shieldmaiden's Devotion",
+			"name": "Devoción de la doncella escudera",
+			"description": "<p>Tus oraciones cantadas llenan los corazones de los fieles con la intrepidez de sus doncellas escuderas más valientes. Todos los myrmidianos dentro del alcance obtienen +1 en el Talento @UUID[Compendium.wfrp4e-core.items.8pVzgPkgWpTJvfhG]{Intrépido (enemigo)}. Este enemigo puede ser un individuo en particular o una especie concreta.</p>",
+			"effects": [{
+				"name":"Devoción de la doncella escudera",
+				"scriptData": [
+					{"label":"Devoción de la doncella escudera","script":"let item = await fromUuid(\"Compendium.wfrp4e-core.items.Item.8pVzgPkgWpTJvfhG\");\nlet data = item.toObject();\n\ndata.name += \" (Enemigo)\";\n\nthis.actor.createEmbeddedDocuments(\"Item\", [data], {fromEffect: this.effect.id})"}
+					]
+				}]
+		},
+		{
+			"id": "Skill of Combat",
+			"name": "Habilidad de combate",
+			"description": "<p>Encarnas en tus aliados la habilidad de Myrmidia. Mientras dure este Milagro, todos los aliados a su alcance se benefician de un +10 a su HA y HP.</p>",
+			"effects": [{
+				"name":"Habilidad de combate",
+				"scriptData": []
+				}]
+		},
+		{
+			"id": "Vengeful Wrath",
+			"name": "Ira vengativa",
+			"description": "<p>Estás imbuido por completo de la justa indignación de Myrmidia. Mientras dure el Milagro, deberás cargar y atacar al enemigo impenitente más cercano. Puedes repetir cualquier tirada de Habilidad de Cuerpo a cuerpo que hagas mientras el Milagro esté activo.</p>"
+		},
+		{
+			"id": "Beat Blade",
+			"name": "Golpear el filo",
+			"description": "<p>Estás entrenado para dar golpes fuertes y controlados hacia el arma de tu oponente, creando una abertura para un ataque o simplemente impidiendo un ataque entrante. Por tu acción, puedes elegir Golpear el filo antes de tirar. Haz un Chequeo de Cuerpo a cuerpo; si tienes éxito, el Fondo de Ventajas del enemigo pierde -1 de Ventaja y pierde otro -1 si obtienes 6 NE. Este Chequeo no puede Enfrentarse. Este Talento no sirve de nada si tu oponente no tiene arma o tiene un Tamaño mucho mayor que tú.</p>",
+			"tests": "Cuerpo a cuerpo para Golpear el filo.",
+			"effects": [{
+				"name":"Golpear el filo",
+				"scriptData": []
+				}]
+		},
+		{
+			"id": "Crew Commander",
+			"name": "Comandante de dotación",
+			"description": "<p>Un PJ con este talento tiene práctica en gestionar dotaciones encargadas de armas de asedio y piezas de artillería. Puede hacer un Chequeo <b>Desafiante (+0)</b> de <b>Mando</b> para ayudar a una dotación con un arma con el Defecto <em>Dotación</em>. Si el PJ tiene éxito, la dotación le escucha y los miembros pueden usar la Habilidad A distancia del PJ al disparar el arma.</p>",
+			"tests": "A distancia al disparar un arma con el Defecto <em>Dotación</em>",
+			"effects": [{
+				"name":"Comandante de dotación",
+				"scriptData": []
+				}]
+		},
+		{
+			"id": "Distract",
+			"name": "Distraer",
+			"description": "<p>Estás entrenado en movimientos sencillos para distraer o sobresaltar a tu oponente, desviando la mirada de tu verdadera intención. Puedes usar tu Movimiento para realizar una Distracción. Esto se resuelve mediante un Chequeo <strong>Enfrentado</strong> de <strong>Atletismo/Frialdad</strong> contra tu objetivo. Si tienes éxito, tu oponente no puede generar Ventajas para su Grupo hasta el final del siguiente Asalto.</p>",
+			"tests": "Atletismo para distraer",
+			"effects": [{
+				"name":"Distraer",
+				"scriptData": [
+					{"label":"Distraer"}
+					]
+				}]
+		},
+		{
+			"id": "Drilled",
+			"name": "Entrenado",
+			"description": "<p>Has sido entrenado para luchar hombro con hombro con otros soldados. Los PJs con este Talento cuentan como dos combatientes al determinar si se pierde la @UUID[JournalEntry.JSMqi4MYrqsPBDUL.JournalEntryPage.njjUtJFlaiYB2ZMr#losing-advantage]{Ventaja}.</p>",
+			"tests": "Chequeos Cuerpo a cuerpo cuando se está al lado de un aliado con el Talento <em>Entrenado</em>",
+			"effects": [{
+				"name":"Entrenado",
+				"scriptData": []
+				}]
+		},
+		{
+			"id": "Flee!",
+			"name": "¡A correr!",
+			"description": "<p>Cuando tu vida está en juego, eres capaz de correr a grandes velocidades. Tu Atributo de Movimiento cuenta como 1 más alto cuando sales corriendo o cuando eres la Presa en una persecución.</p>",
+			"tests": "Atletismo cuando huyes o eres la Presa en una persecución",
+			"effects": [{
+				"name":"¡A correr!",
+				"scriptData": []
+				}]
+		},
+		{
+			"id": "Gunner",
+			"name": "Artillero",
+			"description": "<p>Puedes recargar armas de pólvora negra con facilidad. Añades un NE igual a tu nivel en <em>Artillero</em> a cualquier Chequeo Enfrentado para recargar un arma de pólvora negra. Recargar un arma de pólvora negra durante el combate también cuenta como una acción de @UUID[JournalEntry.JSMqi4MYrqsPBDUL.JournalEntryPage.njjUtJFlaiYB2ZMr#acciones-alteradas-en-combate]{Evaluar}. Obtienes una Ventaja +1 adicional cuando haces ese Chequeo de Evaluar.</p>",
+			"effects": [{
+				"name":"Artillero",
+				"scriptData": [
+					{"label":"Artillero"}
+					]
+				}]
+		},
+		{
+			"id": "Rapid Reload",
+			"name": "Recarga rápida",
+			"description": "<p>Puedes recargar armas a distancia con facilidad. Añades tantos NE como tu nivel en <em>Recarga rápida</em> a cualquier Chequeo Prolongado para recargar un arma a distancia. Recargar un arma a distancia durante el combate también cuenta como una acción de @UUID[JournalEntry.JSMqi4MYrqsPBDUL.JournalEntryPage.njjUtJFlaiYB2ZMr#acciones-alteradas-en-combate]{Evaluar}. Obtienes una Ventaja +1 adicional al realizar ese Chequeo de Evaluar.</p>",
+			"effects": [{
+				"name":"Recarga rápida",
+				"scriptData": [
+					{"label":"Recarga rápida"}
+					]
+				}]
+		},
+		{
+			"id": "Relentless",
+			"name": "Incansable",
+			"description": "<p>Cuando tienes la mente puesta en un objetivo, nadie puede hacer nada para impedir que lo alcances. El coste de la acción @UUID[JournalEntry.JSMqi4MYrqsPBDUL.JournalEntryPage.njjUtJFlaiYB2ZMr#beneficios-de-la-ventaja]{Huye del daño} se reduce a 1.</p>"
+		},
+		{
+			"id": "Resistance (Disease)",
+			"name": "Resistencia (Enfermedad)",
+			"description": "<p>Tu recia constitución te permite sobrevivir con más facilidad a una amenaza específica. Puedes tener éxito automáticamente en el primer Chequeo para resistir la amenaza específica, como por ejemplo Magia, Veneno, Enfermedad o Mutación en cada sesión de juego. Si el NE es importante, utiliza tu Bonificador por Resistencia como NE para el Chequeo.</p>",
+			"tests": "Todos los utilizados para resistirse a la Enfermedad",
+			"effects": [{
+				"name":"Resistencia",
+				"scriptData": [
+					{},
+					{"label":"Escoger Resistencia","script":"let resistance\nif (this.item.name.includes(\"(\") && !this.item.name.toLowerCase().includes(\"(cualquiera)\"))\n{\n\tresistance = this.item.parenthesesText\n}\nelse \n{\n    resistance = await Dialog.wait({\n        title : \"Escribe grupo\",\n                content : \"<input type='text'>\",\n        buttons : {\n                    confirm : {\n                label : game.i18n.localize(\"Confirm\"),\n                        callback : (dlg) => {\n                    return dlg.find(\"input\")[0].value\n        }\n                    }\n                },\n\tdefault : \"confirm\",\n                close : () => {\n            return \"\"\n                }\n            })\n    \n    if (resistance)\n    {\n        this.item.updateSource({name :  `${this.item.name.split(\"(\")[0].trim()} (${resistance})`})\n        this.effect.updateSource({name : this.effect.name + ` (${resistance})`})\n    }\n}    \nthis.item.updateSource({\"system.tests.value\" : this.item.system.tests.value.replace(\"la Amenaza asociada\", resistance)})\n\nif (resistance && !this.effect.name.includes(\"(\"))\n{\n    this.effect.updateSource({name : this.effect.name += ` (${resistance})`})\n}"}
+					]
+				}]
+		},
+		{
+			"id": "Reversal",
+			"name": "Giro",
+			"description": "<p>Estás acostumbrado a los combates desesperados, siendo capaz de sobreponerte a circunstancias adversas. Si tienes éxito en un Chequeo Enfrentado de Cuerpo a cuerpo, en lugar de obtener +1 de Ventaja, puedes extraer 1 Ventaja del Fondo de Ventajas del adversario y añadirla a la tuya propia. Si haces esto, no causas ningún Daño, aunque sea tu Turno en el Asalto.</p>",
+			"tests": "Cuerpo a cuerpo al defender",
+			"effects": [{
+				"name":"Giro",
+				"scriptData": []
+				}]
+		},
+		{
+			"id": "Roughrider",
+			"name": "Jinete experto",
+			"description": "<p>Te sientes como en casa en la silla de montar, incluso en las situaciones más difíciles, y sabes cómo sacar el máximo partido a tu montura durante el conflicto. Suponiendo que tengas la Habilidad Montar, puedes ordenar a tu montura que realice una Acción, no solo un Movimiento, sin un Chequeo de Montar.</p><p>Además, cuenta que tu tamaño es el mismo que el de tu montura para resistir el Miedo y Terror causado únicamente por el tamaño de tu oponente, así de fuerte es tu confianza cuando estás montado.</p><p><em><b>Ejemplo</b>: otra persona a caballo no causaría Miedo, pero un demonio o un muerto viviente sí.</em></p>",
+			"tests": "Montar al estar en combate",
+			"effects": [{
+				"name":"Jinete experto",
+				"scriptData": []
+				}]
+		},
+		{
+			"id": "Shieldsman",
+			"name": "Escudero",
+			"description": "<p>Eres hábil utilizando tu escudo para maniobrar entre los demás en combate para que puedas aprovechar una situación desesperada. Cuando uses un Escudo para defenderte, una vez por turno, puedes gastar 2 Ventajas para causar Daño cuando te atacan como si fuera tu Acción, o bien para separar a tu oponente 2 yardas de ti, y no cuentan como si estuvieras en combate.</p>",
+			"tests": "Cualquier Chequeo para defender con un escudo",
+			"effects": [{
+				"name":"Escudero",
+				"scriptData": []
+				}]
+		},
+		{
+			"id": "Strike to Injure",
+			"name": "Golpe letal",
+			"description": "<p>Eres un experto en golpear a los enemigos en los sitios más vulnerables. Cuando tires en la tabla de Daño crítico, tira dos veces y elige el resultado que prefieras.</p>"
+		},
+		{
+			"id": "Armour (Head, Body, and Forelegs)",
+			"name": "Armadura (Cabeza, cuerpo y patas delanteras)",
+			"description": "<p>La criatura está protegida por armadura o por una piel gruesa. Dispone de tantos puntos de Armadura como la cifra entre paréntesis en todas las Ubicaciones de impacto.</p>",
+			"effects": [{
+				"name":"Armadura",
+				"scriptData": [
+					{"label":"Armadura"}
+					]
+				}]
+		},
+		{
+			"id": "Armour (Rear Legs)",
+			"name": "Armadura (Patas traseras)",
+			"description": "<p>La criatura está protegida por armadura o por una piel gruesa. Dispone de tantos puntos de Armadura como la cifra entre paréntesis en todas las Ubicaciones de impacto.</p>",
+			"effects": [{
+				"name":"Armadura",
+				"scriptData": [
+					{"label":"Armadura"}
+					]
+				}]
+		},
+		{
+			"id": "Bright Spark",
+			"name": "Joven promesa",
+			"templatesskills": [
+				{"name": "Intuición"},
+				{"name": "Sabiduría académica (Local)"},
+				{"name": "Percepción"}
+				],
+			"templatestrappings": [
+				{"name": "Calzas de malla"},
+				{"name": "Cota de malla"},
+				{"name": "Cofia de malla"},
+				{"name": "Arma de mano"}
+				]
+		},
+		{
+			"id": "Diamond in the Rough",
+			"name": "Diamante en bruto",
+			"effects": [{
+				"name":"Diamante en bruto",
+				"scriptData": [
+					{"label":"Añadir Talentos","script":"let talents = (await Promise.all([game.wfrp4e.tables.rollTable(\"talents\"), game.wfrp4e.tables.rollTable(\"talents\"), game.wfrp4e.tables.rollTable(\"talents\")])).map(i => i.text);\nlet items = [];\n\nfor (let talent of talents)\n{\n    let talentItem = await game.wfrp4e.utility.findTalent(talent)\n    if (talentItem)\n    {\n        items.push(talentItem.toObject());\n    }\n    else \n    {\n        ui.notifications.warn(`No se pudo encontrar ${talent}`, {permanent : true})\n    }\n}\n\nthis.script.notification(`Añadidos ${talents.join(\", \")}`);\nawait this.actor.createEmbeddedDocuments(\"Item\", items, {fromEffect: this.effect.id});"}
+					]
+				}]
+		},
+		{
+			"id": "Hireling",
+			"name": "Asalariado",
+			"effects": [{
+				"name":"Asalariado",
+				"scriptData": [
+					{"label":"Asalariado","script":"        const templateMap = {\n            'P2e7Yx98bK3u110a' : \"\",\n            'iuMp3KLaMT2WCmie' : \"4s01nHFKVKTEZd3B\", \n            'RBuYcT5tppwcmnC5' : \"h3yuJDWnixliXeBG\", \n            'vcGpNwNbhvfzVveQ' : \"7QrsbofccMOE1YsF\", \n            'jmhKZy0w9TzkEK9c' : \"scVTPVyDDbli4WZL\", \n            '9Byj6k7SmdTYis2V' : \"4Cd7Dknee2WjReOo\", \n            'laJwc2l9tzJPgaaJ' : \"2hJ2a5YjbwZWWYrd\",\n        }\n        let template = (await game.wfrp4e.tables.rollTable(\"hireling-templates\")).object;\n        let physicalQuirk = (await game.wfrp4e.tables.rollTable(\"physical-quirks\")).text;\n        let workEthic = (await game.wfrp4e.tables.rollTable(\"work-ethic\")).text;\n        let personalityQuirk = (await game.wfrp4e.tables.rollTable(\"personality-quirks\")).text;\n\n\n        let templateItem = await warhammer.utility.findItemId(templateMap[template._id]);\n\n        let bio = \n        `\n        <p><strong>Plantilla</strong>: ${template.text}</p>\n        <p><strong>Rareza física</strong>: ${physicalQuirk}</p>\n        <p><strong>Ética laboral</strong>: ${workEthic}</p>\n        <p><strong>Rareza de la personalidad</strong>: ${personalityQuirk}</p>\n        `\n\n        await this.actor.update({\"system.details.gmnotes.value\" : bio})\n\n        if (templateItem)\n        {\n            this.actor.createEmbeddedDocuments(\"Item\", [templateItem.toObject()])\n        }"}
+					]
+				}]
+		},
+		{
+			"id": "Infirm",
+			"name": "Enclenque",
+			"effects": [{
+				"name":"Enclenque",
+				"scriptData": [
+					{"label":"Habilidades"}
+					]
+				}]
+		},
+		{
+			"id": "Old Salt",
+			"name": "Viejo lobo de mar",
+			"templatesskills": [
+				{"name": "Consumir alcohol"},
+				{"name": "Remar"},
+				{"name": "Navegar"},
+				{"name": "Nadar"}
+				]
+		},
+		{
+			"id": "Reformed Rogue",
+			"name": "Pícaro reformado",
+			"templatesskills": [
+				{"name": "Percepción"},
+				{"name": "Prestidigitación"},
+				{"name": "Sigilo (Urbano)"}
+				],
+			"templatestalents": [
+				{"name": "Delincuente"},
+				{"name": "Etiqueta (Criminales)"}
+				],
+			"templatestrappings": [
+				{"name": "Soga, 10 yardas"},
+				{"name": "Ganzuas"},
+				{"name": "Máscara"}
+				]
+		},
+		{
+			"id": "Trained (Shock Cavalry)",
+			"name": "Adiestrado (Caballería de choque)",
+			"description": "<p>Este rasgo representa animales que han sido adiestrados mediante la Habilidad Adiestrar animales. Las Habilidades que el animal conoce se indican entre paréntesis. Tienes toda la libertad para crear tus propias habilidades adiestradas.</p><p><strong>Caballería de choque: </strong>Este Rasgo solo puede aplicarse a un animal que ya tenga el Rasgo @UUID[Compendium.wfrp4e-core.items.V0naR1YbYCl0KIxp]{Adiestrado (Guerra)}. La mayor parte de la caballería, incluso la entrenada para hacer frente a los rigores de la guerra, no cargará contra un enemigo bien armado y con una buena formación. Las monturas con este Rasgo han sido especialmente entrenadas para ignorar el peligro y se lanzan en masa contra los enemigos.</p><p>Al realizar una Carga, los jinetes de las monturas con este Rasgo pueden moverse a través de criaturas más pequeñas para alcanzar su objetivo. Cada criatura pisoteada por la montura debe hacer un Chequeo <strong>Desafiante (+0)</strong> de <strong>Esquivar</strong> o sufrir 4+BF en Daño.</p><p>Cada criatura que sufra daño de esta forma reduce el Movimiento restante de la montura en 2 yardas. Las criaturas del tamaño de la montura o mayor, detienen su avance. En cualquier caso, una vez finalizada la Carga, cualquier criatura enemiga dentro del alcance cuerpo a cuerpo cuenta ahora como si estuviera @UUID[Compendium.wfrp4e-core.journals.NS3YGlJQxwTggjRX.JournalEntryPage.wmA76Q2zJJ9HrkvA#trabado]{en combate} y la Carga se resuelve como si una de esas criaturas fuese el objetivo.</p><p>Las criaturas más pequeñas montadas pueden renunciar a su oportunidad de esquivar, o hacer un solo ataque con un arma que estén sosteniendo contra la montura o su jinete si no han actuado ya durante el Asalto. A menos que este ataque mate o inutilice a la montura, la Carga continúa.</p>",
+			"effects": [{
+				"name":"Arrollar",
+				"scriptData": [
+					{"label":"Arrollar"}
+					]
+				}]
+		},
+		{
+			"id": "Veteran of Adventures",
+			"name": "Veterano de aventuras",
+			"templatesskills": [
+				{"name": "Frialdad"},
+				{"name": "Esquivar"},
+				{"name": "Cuerpo a cuerpo (Básica)"},
+				{"name": "Cuerpo a cuerpo (Arma de Asta)"}
+				],
+			"templatestalents": [
+				{"name": "Reflejos de combate"}
+				],
+			"templatestrappings": [
+				{"name": "Chaqueta de cuero"},
+				{"name": "Calzas de cuero"},
+				{"name": "Capacete de cuero"},
+				{"name": "Arma de mano"},
+				{"name": "Lanza"},
+				{"name": "Escudo"}
+				]
+		},
+		{
+			"id": "Weapon (Talons)",
+			"name": "Arma (Garras)",
+			"description": "<p>La criatura lleva un arma cuerpo a cuerpo, o bien utiliza dientes, zarpas o cosas similares en combate.\n El arma causa tanto daño como la cifra entre paréntesis, que ya incluye el Bonificador por Fuerza de la criatura. Típicamente será 4 + Bonificador por Fuerza (lo que representa un Arma de mano).</p>"
+		}
+	]
+}
