@@ -66,7 +66,6 @@ game.babele.registerConverters({
         if ( charac == "Dexterity") charac = "Destreza";
         if ( charac == "Intelligence") charac = "Inteligencia";
         if ( charac == "Willpower") charac = "Voluntad";
-        if ( charac == "WIllpower") charac = "Voluntad";
         if ( charac == "Fellowship") charac = "Empatía";
 
         if ( characbonus == "Weapon Skill") charac = "Bonificador por Habilidad de Armas";
