@@ -6,7 +6,7 @@ Han sido traducidas fichas, tarjetas de chat, menús, notificaciones, etc.
 
 La traducción incluye el sistema, el módulo básico y ¡A las Armas!. Ningún otro módulo está incluido.
 
-Traduce también los módulos [GM Toolkit (WFRP 4e)](https://github.com/Jagusti/fvtt-wfrp4e-gmtoolkit),  [[WFRP4] NPC generator](https://gitlab.com/greenskin-foundryvtt/wfrp4e-npc-generator) y [Token Action HUD WFRP4e](https://github.com/Foundry-Workshop/token-action-hud-wfrp4e).
+Traduce también los módulos [GM Toolkit (WFRP 4e)](https://github.com/Jagusti/fvtt-wfrp4e-gmtoolkit),  [[WFRP4] NPC generator](https://gitlab.com/greenskin-foundryvtt/wfrp4e-npc-generator), [Token Action HUD WFRP4e](https://github.com/Foundry-Workshop/token-action-hud-wfrp4e) y [Chat Commander](https://gitlab.com/woodentavern/foundryvtt-chat-command-lib) (junto a su módulo para [WFRP4e](https://github.com/Foundry-Workshop/chat-commander-wfrp4e)).
 
 ## Instalación
 Copia el siguiente enlace y pégalo en Add-On Modules => Install Module => Manifest URL
