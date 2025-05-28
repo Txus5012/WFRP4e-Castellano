@@ -95,3 +95,24 @@ export const templatestrappings = (options, translations) => {
 
   return options;
 };
+
+export const tablenames = (results, translations) => {
+  if (results.length === 0) {
+    return results;
+  }
+
+  if (!translations) {
+    return results;
+  }
+
+  results.forEach((currentttablenames, index, _scriptDataArray) => {
+    const ttablenames = translations[index];
+    if (!ttablenames) {
+      return;
+    }
+
+    if (ttablenames.name) currentttablenames.name = ttablenames.name;
+  })
+
+  return results;
+};

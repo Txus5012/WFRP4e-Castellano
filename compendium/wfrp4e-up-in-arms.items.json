@@ -24,7 +24,7 @@
 	    "trappings": "system.trappings",
 		"range": {
 			"path": "system.range.value",
-			"converter": "trappings_range"
+			"converter": "spells_duration_range_target"
 			},
 		"effects": {
 			"path": "effects",
@@ -40,10 +40,6 @@
 			},
 		"spell_duration": {
 			"path": "system.duration.value",
-			"converter": "spells_duration_range_target"
-		},
-		"spell_range": {
-			"path": "system.range.value",
 			"converter": "spells_duration_range_target"
 		},
 		"target": {

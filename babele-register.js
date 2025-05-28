@@ -3,6 +3,7 @@ import { effects } from "./modules/converters.js";
 import { templatesskills } from "./modules/converters.js";
 import { templatestalents } from "./modules/converters.js";
 import { templatestrappings } from "./modules/converters.js";
+import { tablenames } from "./modules/converters.js";
 
 Hooks.on('init', () => {
 
@@ -15,7 +16,7 @@ Hooks.on('init', () => {
 
 game.babele.registerConverters({
 
-       "spells_duration_range_target": (value) => {  // Hechizos y Plegarias
+       "spells_duration_range_target": (value) => {  // Hechizos y Plegarias, Rango de munición
         if ( value == "" ) return "";
         if ( value == "Touch" ) return "Toque";
         if ( value == "You" ) return "Tú";
@@ -23,12 +24,22 @@ game.babele.registerConverters({
         if ( value == "Instant" ) return "Instantáneo";
         if ( value == "Line of Sight" ) return "Línea de Visión";
         if ( value == "Special" ) return "Especial";
-		if ( value == "See text" ) return "Ver texto";
-		if ( value == "Any ally" ) return "Cualquier aliado";
-		if ( value == "a single location" ) return "Un solo lugar";
-		if ( value == "see description" ) return "Ver descripción";
-		if ( value == "Until sunrise" ) return "Hasta el amanecer";
-		if ( value == "Until the next sunrise" ) return "Hasta el siguiente amanecer";
+        if ( value == "See text" ) return "Ver texto";
+        if ( value == "Any ally" ) return "Cualquier aliado";
+        if ( value == "a single location" ) return "Un solo lugar";
+        if ( value == "see description" ) return "Ver descripción";
+        if ( value == "Until sunrise" ) return "Hasta el amanecer";
+        if ( value == "Until the next sunrise" ) return "Hasta el siguiente amanecer";
+	    if ( value == "As weapon" ) return "Según arma";
+	    if ( value == "Half weapon" ) return "Mitad del arma";
+	    if ( value == "Third weapon" ) return "Tercio del arma";
+	    if ( value == "Quarter weapon" ) return "Cuarto del arma";
+	    if ( value == "Twice weapon" ) return "Doble del arma";
+	    if ( value == "As Weapon" ) return "Según arma";
+	    if ( value == "Half Weapon" ) return "Mitad del arma";
+	    if ( value == "Third Weapon" ) return "Tercio del arma";
+	    if ( value == "Quarter Weapon" ) return "Cuarto del arma";
+	    if ( value == "Twice Weapon" ) return "Doble del arma";
         var translw = value;
         var re  = /(.*) Bonus (\w*)/i;
         var res = re.exec( value );
@@ -66,6 +77,7 @@ game.babele.registerConverters({
         if ( charac == "Dexterity") charac = "Destreza";
         if ( charac == "Intelligence") charac = "Inteligencia";
         if ( charac == "Willpower") charac = "Voluntad";
+        if ( charac == "WIllpower") charac = "Voluntad";
         if ( charac == "Fellowship") charac = "Empatía";
 
         if ( characbonus == "Weapon Skill") charac = "Bonificador por Habilidad de Armas";
@@ -324,19 +336,6 @@ game.babele.registerConverters({
 	     if ( value == "-20 Perception" ) return "-20 Percepción";
 	     if ( value == "-10 Stealth" ) return "–10 al Movimiento silencioso";
 	},
-
-	"trappings_range": (value) => {  // Alcance de armas a distancia
-	     if ( value == "As weapon" ) return "Según arma";
-	     if ( value == "Half weapon" ) return "Mitad del arma";
-	     if ( value == "Third weapon" ) return "Tercio del arma";
-	     if ( value == "Quarter weapon" ) return "Cuarto del arma";
-	     if ( value == "Twice weapon" ) return "Doble del arma";
-	     if ( value == "As Weapon" ) return "Según arma";
-	     if ( value == "Half Weapon" ) return "Mitad del arma";
-	     if ( value == "Third Weapon" ) return "Tercio del arma";
-	     if ( value == "Quarter Weapon" ) return "Cuarto del arma";
-	     if ( value == "Twice Weapon" ) return "Doble del arma";
-	},
 	
 	"injuries_location": (value) => {  // Heridas, Localización
 	     if ( value == "Head" ) return "Cabeza";
@@ -375,7 +374,13 @@ game.babele.registerConverters({
 	"templatesskills": templatesskills,
 	"templatestalents": templatestalents,
 	"templatestrappings": templatestrappings,
+	"tablenames": tablenames,
   });
  }
     
 });
+
+Hooks.on("aa.getRequiredData",(data)=>{
+const originalName = data.item.flags.babele.originalName
+if (originalName) { data.overrideNames.push(originalName) }
+})

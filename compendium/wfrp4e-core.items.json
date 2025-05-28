@@ -59,7 +59,7 @@
 			},
 		"range": {
 			"path": "system.range.value",
-			"converter": "trappings_range"
+			"converter": "spells_duration_range_target"
 			},
 		"special": "system.special.value",
 		"effects": {
@@ -90,10 +90,6 @@
 		"permanent": "system.permanent.value",
 		"spell_duration": {
 			"path": "system.duration.value",
-			"converter": "spells_duration_range_target"
-		},
-		"spell_range": {
-			"path": "system.range.value",
 			"converter": "spells_duration_range_target"
 		},
 		"target": {
@@ -7712,7 +7708,7 @@
 			"id": "Drop",
 			"name": "Soltar",
 			"description": "<p>Canalizas magia a un objeto empuñado por un oponente. Se puede tratar de un arma, de una cuerda o de la mano de alguien. A menos que se supere un Chequeo <strong>Desafiante (+0)</strong> de <strong>Destreza</strong> el oponente suelta el objeto. Por cada +2 NE puedes imponer un -10 adicional en el Chequeo de Destreza.</p>",
-			"overcast": "Penalizador al Chequeo",
+			"overcast": "Penalizador",
 			"effects": [{
 				"name":"Soltar",
 				"scriptData": [
@@ -7724,7 +7720,7 @@
 			"id": "Drop (Beasts)",
 			"name": "Soltar (Bestias)",
 			"description": "<p>Canalizas magia a un objeto empuñado por un oponente. Se puede tratar de un arma, de una cuerda o de la mano de alguien. A menos que se supere un Chequeo <strong>Desafiante (+0)</strong> de <strong>Destreza</strong> el oponente suelta el objeto. Por cada +2 NE puedes imponer un -10 adicional en el Chequeo de Destreza.</p><p>\n\n <b>Saber:</b> Siempre que lanzas con éxito un hechizo del Saber de las Bestias, también puedes obtener el Rasgo de criatura @Compendium[wfrp4e-core.items.pTorrE0l3VybAbtn]{Miedo (1)} durante los siguientes [[/r 1d10]] Asaltos.</p>",
-			"overcast": "Penalizador al Chequeo",
+			"overcast": "Penalizador",
 			"effects": [{
 				"name":"Soltar (Bestias)",
 				"scriptData": [
@@ -7736,7 +7732,7 @@
 			"id": "Drop (Daemonology)",
 			"name": "Soltar (Demonología)",
 			"description": "<p>Canalizas magia a un objeto empuñado por un oponente. Se puede tratar de un arma, de una cuerda o de la mano de alguien. A menos que se supere un Chequeo <strong>Desafiante (+0)</strong> de <strong>Destreza</strong> el oponente suelta el objeto. Por cada +2 NE puedes imponer un -10 adicional en el Chequeo de Destreza.</p>",
-			"overcast": "Penalizador al Chequeo",
+			"overcast": "Penalizador",
 			"effects": [{
 				"name":"Soltar (Demonología)",
 				"scriptData": [
@@ -7748,7 +7744,7 @@
 			"id": "Drop (Death)",
 			"name": "Soltar (Muerte)",
 			"description": "<p>Canalizas magia a un objeto empuñado por un oponente. Se puede tratar de un arma, de una cuerda o de la mano de alguien. A menos que se supere un Chequeo <strong>Desafiante (+0)</strong> de <strong>Destreza</strong> el oponente suelta el objeto. Por cada +2 NE puedes imponer un -10 adicional en el Chequeo de Destreza.</p><p>\n\n <b>Saber:</b> Los objetivos afligidos por los hechizos del Saber de la Muerte quedan drenados de vida, debilitados y apáticos. Puedes asignar +1 Estado de @Condition[Fatigado] a cualquier objetivo vivo afectado por un hechizo de este Saber. Un objetivo tan sólo puede tener 1 Estado de Fatigado de esta forma en un momento dado.</p>",
-			"overcast": "Penalizador al Chequeo",
+			"overcast": "Penalizador",
 			"effects": [{
 				"name":"Soltar (Muerte)",
 				"scriptData": [
@@ -7760,7 +7756,7 @@
 			"id": "Drop (Fire)",
 			"name": "Soltar (Fuego)",
 			"description": "<p>Canalizas magia a un objeto empuñado por un oponente. Se puede tratar de un arma, de una cuerda o de la mano de alguien. A menos que se supere un Chequeo <strong>Desafiante (+0)</strong> de <strong>Destreza</strong> el oponente suelta el objeto. Por cada +2 NE puedes imponer un -10 adicional en el Chequeo de Destreza.</p><p>\n\n <b>Saber:</b> Puedes infligir +1 Estado de @Condition[Ardiendo] a cualquier objetivo de los hechizos del Saber del Fuego, a menos que éste también disponga del Talento Magia arcana (fuego). Cada Estado de Ardiendo a una distancia en yardas igual o menor que tu Bonificador por Voluntad suma +10 a los intentos de Canalizar o Lanzar con el Aqshy.</p>",
-			"overcast": "Penalizador al Chequeo",
+			"overcast": "Penalizador",
 			"effects": [{
 				"name":"Soltar (Fuego)",
 				"scriptData": [
@@ -7772,7 +7768,7 @@
 			"id": "Drop (Heavens)",
 			"name": "Soltar (Cielos)",
 			"description": "<p>Canalizas magia a un objeto empuñado por un oponente. Se puede tratar de un arma, de una cuerda o de la mano de alguien. A menos que se supere un Chequeo <strong>Desafiante (+0)</strong> de <strong>Destreza</strong> el oponente suelta el objeto. Por cada +2 NE puedes imponer un -10 adicional en el Chequeo de Destreza.</p><p>\n\n <b>Saber:</b> Los hechizos que causan Daño ignoran los puntos de Armadura debidos a llevar armadura metálica, y saltan a todos los demás objetivos que están a 2 yardas o menos, excepto quienes tienen el Talento Magia arcana (cielos), infligiendo impactos con un Daño igual a tu Bonificador por Voluntad, lo que se trata como un proyectil mágico.</p>",
-			"overcast": "Penalizador al Chequeo",
+			"overcast": "Penalizador",
 			"effects": [{
 				"name":"Soltar (Cielos)",
 				"scriptData": [
@@ -7784,7 +7780,7 @@
 			"id": "Drop (Hedgecraft)",
 			"name": "Soltar (Adivinación)",
 			"description": "<p>Canalizas magia a un objeto empuñado por un oponente. Se puede tratar de un arma, de una cuerda o de la mano de alguien. A menos que se supere un Chequeo <strong>Desafiante (+0)</strong> de <strong>Destreza</strong> el oponente suelta el objeto. Por cada +2 NE puedes imponer un -10 adicional en el Chequeo de Destreza.</p><p>\n\n <b>Saber:</b> Los hechizos de Adivinación no se pueden lanzar sin ingredientes, que forman parte integral del proceso de lanzamiento. Afortunadamente, los ingredientes que utilizan se encuentran fácilmente en los límites de los asentamientos, y suelen ser hierbas o plantas. Obtienes 1 + NE ingredientes mediante una tirada con éxito de forrajeo, utilizando Sabiduría académica (Herboristería) tal y como se describe en Buscar comida y hierbas, o bien los puedes comprar por 5 peniques de bronce cada uno.</p>",
-			"overcast": "Penalizador al Chequeo",
+			"overcast": "Penalizador",
 			"effects": [{
 				"name":"Soltar (Adivinación)",
 				"scriptData": [
@@ -7796,7 +7792,7 @@
 			"id": "Drop (Life)",
 			"name": "Soltar (Vida)",
 			"description": "<p>Canalizas magia a un objeto empuñado por un oponente. Se puede tratar de un arma, de una cuerda o de la mano de alguien. A menos que se supere un Chequeo <strong>Desafiante (+0)</strong> de <strong>Destreza</strong> el oponente suelta el objeto. Por cada +2 NE puedes imponer un -10 adicional en el Chequeo de Destreza.</p><p>\n\n <b>Saber:</b> Cuando te encuentres en un entorno rural o en las tierras salvajes obtendrás un bonificador +10 a las tiradas de Lanzamiento y Canalización. Las criaturas vivas, es decir las que carecen de los Rasgos de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} o @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente} que sean objeto de hechizos arcanos del saber de la vida, verán todos sus estados de @Condition[Fatigado] y de @Condition[Sangrando] eliminados después de haber aplicado cualquier otro efecto, conforme la magia de la vida fluya a través de ellos. Las criaturas con el Rasgo de criatura @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, por otra parte, sufren tanto Daño adicional como tu Bonificador por Voluntad, ignorando el Bonificador por Resistencia y los puntos de Armadura, si se ven afectados por cualquier hechizo lanzado con el Saber de la Vida.</p>",
-			"overcast": "Penalizador al Chequeo",
+			"overcast": "Penalizador",
 			"effects": [{
 				"name":"Soltar (Vida)",
 				"scriptData": [
@@ -7808,7 +7804,7 @@
 			"id": "Drop (Light)",
 			"name": "Soltar (Luz)",
 			"description": "<p>Canalizas magia a un objeto empuñado por un oponente. Se puede tratar de un arma, de una cuerda o de la mano de alguien. A menos que se supere un Chequeo <strong>Desafiante (+0)</strong> de <strong>Destreza</strong> el oponente suelta el objeto. Por cada +2 NE puedes imponer un -10 adicional en el Chequeo de Destreza.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz). Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
-			"overcast": "Penalizador al Chequeo",
+			"overcast": "Penalizador",
 			"effects": [{
 				"name":"Soltar (Luz)",
 				"scriptData": [
@@ -7820,7 +7816,7 @@
 			"id": "Drop (Metal)",
 			"name": "Soltar (Metal)",
 			"description": "<p>Canalizas magia a un objeto empuñado por un oponente. Se puede tratar de un arma, de una cuerda o de la mano de alguien. A menos que se supere un Chequeo <strong>Desafiante (+0)</strong> de <strong>Destreza</strong> el oponente suelta el objeto. Por cada +2 NE puedes imponer un -10 adicional en el Chequeo de Destreza.</p><p>\n\n <b>Saber:</b> Los hechizos que infligen Daño ignoran los puntos de Armadura procedentes de armaduras metálicas, e infligen tanto Daño adicional como el número de puntos de Armadura metálica de que se dispone en cualquier Ubicación de impacto acertada. Por lo tanto, si tu hechizo impacta en una ubicación del Brazo protegida por 2 puntos de Armadura metálica, causa +2 de Daño adicional, ignorando los puntos de Armadura.</p>",
-			"overcast": "Penalizador al Chequeo",
+			"overcast": "Penalizador",
 			"effects": [{
 				"name":"Soltar (Metal)",
 				"scriptData": [
@@ -7832,7 +7828,7 @@
 			"id": "Drop (Necromancy)",
 			"name": "Soltar (Nigromancia)",
 			"description": "<p>Canalizas magia a un objeto empuñado por un oponente. Se puede tratar de un arma, de una cuerda o de la mano de alguien. A menos que se supere un Chequeo <strong>Desafiante (+0)</strong> de <strong>Destreza</strong> el oponente suelta el objeto. Por cada +2 NE puedes imponer un -10 adicional en el Chequeo de Destreza.</p>",
-			"overcast": "Penalizador al Chequeo",
+			"overcast": "Penalizador",
 			"effects": [{
 				"name":"Soltar (Nigromancia)",
 				"scriptData": [
@@ -7844,7 +7840,7 @@
 			"id": "Drop (Shadow)",
 			"name": "Soltar (Sombras)",
 			"description": "<p>Canalizas magia a un objeto empuñado por un oponente. Se puede tratar de un arma, de una cuerda o de la mano de alguien. A menos que se supere un Chequeo <strong>Desafiante (+0)</strong> de <strong>Destreza</strong> el oponente suelta el objeto. Por cada +2 NE puedes imponer un -10 adicional en el Chequeo de Destreza.</p><p>\n\n <b>Saber:</b> Todos los hechizos lanzados del Saber de las Sombras que infligen Daño ignoran todos los puntos de Armadura no mágicos.</p>",
-			"overcast": "Penalizador al Chequeo",
+			"overcast": "Penalizador",
 			"effects": [{
 				"name":"Soltar (Sombras)",
 				"scriptData": [
@@ -7856,7 +7852,7 @@
 			"id": "Drop (Witchcraft)",
 			"name": "Soltar (Brujería)",
 			"description": "<p>Canalizas magia a un objeto empuñado por un oponente. Se puede tratar de un arma, de una cuerda o de la mano de alguien. A menos que se supere un Chequeo <strong>Desafiante (+0)</strong> de <strong>Destreza</strong> el oponente suelta el objeto. Por cada +2 NE puedes imponer un -10 adicional en el Chequeo de Destreza.</p><p>\n\n <b>Saber:</b> Cada vez que los practicantes de la Brujería tiran en la Tabla de Disfunciones, se anotan además 1 punto de Corrupción. Además, podrás infligir 1 Estado de @Condition[Sangrando] a cualquiera que sea objetivo de los hechizos del Saber de la Brujería. Por último, canalizar o lanzar hechizos de este Saber requiere automáticamente una tirada en la @Table[minormis]{Tabla de Disfunciones menores} a menos que se haga con un ingrediente, pero el ingrediente no proporciona protección alguna si sacas una Disfunción. Afortunadamente, los ingredientes para el Saber de la Brujería son fácilmente conseguibles: partes corporales de animales pequeños en su mayoría. Los ingredientes cuestan el NL de un hechizo en peniques de bronce, en vez de chelines de plata, si se han de comprar. Alternativamente, se puede forrajear en busca de ingredientes, utilizando la Habilidad Supervivencia: una tirada con éxito de forrajeo permite reunir 1 + NE ingredientes, tal y como se describe en Buscar comida y hierbas.</p>",
-			"overcast": "Penalizador al Chequeo",
+			"overcast": "Penalizador",
 			"effects": [{
 				"name":"Soltar (Brujería)",
 				"scriptData": [
@@ -11681,12 +11677,12 @@
 		{
 			"id": "Corruption",
 			"name": "Corrupción",
-			"description": "<p>La criatura está mancillada por el Caos, o quizás infundida de Magia Oscura. La potencia de la Corrupción se indica entre paréntesis. (@Corruption[minor]{Menor}, @Corruption[moderate]{Moderada}, or @Corruption[major]{Mayor}).</p>",
+			"description": "<p>La criatura está mancillada por el Caos, o quizás infundida de Magia Oscura. La potencia de la Corrupción se indica entre paréntesis. (@Corruption[Menor]{Menor}, @Corruption[Moderada]{Moderada}, or @Corruption[Mayor]{Mayor}).</p>",
 			"effects": [{
 				"name":"Corrupción",
 				"scriptData": [
 					{"label":"Corrupción"},
-					{"label":"Escoger fuerza","script":"if ([game.i18n.localize(\"CORRUPTION.Minor\"), game.i18n.localize(\"CORRUPTION.Moderate\"), game.i18n.localize(\"CORRUPTION.Major\")].includes(this.item.system.specification.value))\n{\n\treturn\n}\n\nlet choice = await ItemDialog.create(ItemDialog.objectToArray({minor : game.i18n.localize(\"CORRUPTION.Minor\"), moderate : game.i18n.localize(\"CORRUPTION.Moderate\"), major : game.i18n.localize(\"CORRUPTION.Major\")}, this.item.img), 1, \"Escoge la fuerza de la Corrupción\");\n\nthis.item.updateSource({\"system.specification.value\" : choice[0].name})"}
+					{"label":"Escoger fuerza","script":"if ([game.i18n.localize(\"CORRUPTION.Minor\"), game.i18n.localize(\"CORRUPTION.Moderate\"), game.i18n.localize(\"CORRUPTION.Major\")].includes(this.item.system.specification.value))\n{\n\treturn\n}\n\nlet choice = await ItemDialog.create(ItemDialog.objectToArray({menor : game.i18n.localize(\"CORRUPTION.Minor\"), moderada : game.i18n.localize(\"CORRUPTION.Moderate\"), mayor : game.i18n.localize(\"CORRUPTION.Major\")}, this.item.img), 1, \"Escoge la fuerza de la Corrupción\");\n\nthis.item.updateSource({\"system.specification.value\" : choice[0].name})"}
 					]
 				}]
 		},
@@ -13475,7 +13471,7 @@
 				"name":"Resistencia",
 				"scriptData": [
 					{},
-					{"label":"Escoger Resistencia","script":"let resistance\nif (this.item.name.includes(\"(\") && !this.item.name.toLowerCase().includes(\"(cualquiera)\"))\n{\n\tresistance = this.item.parenthesesText\n}\nelse \n{\n    resistance = await Dialog.wait({\n        title : \"Escribe grupo\",\n                content : \"<input type='text'>\",\n        buttons : {\n                    confirm : {\n                label : game.i18n.localize(\"Confirm\"),\n                        callback : (dlg) => {\n                    return dlg.find(\"input\")[0].value\n        }\n                    }\n                },\n\tdefault : \"confirm\",\n                close : () => {\n            return \"\"\n                }\n            })\n    \n    if (resistance)\n    {\n        this.item.updateSource({name :  `${this.item.name.split(\"(\")[0].trim()} (${resistance})`})\n        this.effect.updateSource({name : this.effect.name + ` (${resistance})`})\n    }\n}    \nthis.item.updateSource({\"system.tests.value\" : this.item.system.tests.value.replace(\"la Amenaza asociada\", resistance)})\n\nif (resistance && !this.effect.name.includes(\"(\"))\n{\n    this.effect.updateSource({name : this.effect.name += ` (${resistance})`})\n}"}
+					{"label":"Escoger Resistencia","script":"let resistance\nif (this.item.name.includes(\"(\") && !this.item.name.toLowerCase().includes(\"(cualquiera)\"))\n{\n\tresistance = this.item.parenthesesText\n}\nelse \n{\n    resistance = await ValueDialog.create({text : \"Escribe la resistencia\", title : \"Resistencia\"}) \n    \n    if (resistance)\n    {\n        this.item.updateSource({name : `${this.item.name.split(\"(\")[0].trim()} (${resistance})`})\n        this.effect.updateSource({name : this.effect.name + ` (${resistance})`})\n    }\n}    \nthis.item.updateSource({\"system.tests.value\" : this.item.system.tests.value.replace(\"la Amenaza asociada\", resistance)})\n\nif (resistance && !this.effect.name.includes(\"(\"))\n{\n    this.effect.updateSource({name : this.effect.name += ` (${resistance})`})\n}"}
 					]
 				}]
 		},

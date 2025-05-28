@@ -44,6 +44,7 @@
         "ScriptConfig": "Configuración de Script",
         "DiffEditor": "Editor de diferencias",
         "ScriptEditor": "Editor de script",
+        "RichEditor": "Editor de texto enriquecido",
         "AddScript": "Añadir Script",
         "EffectFiltered": "Efecto filtrado",
         "EffectPrevented": "Efecto prevendio",
@@ -964,6 +965,7 @@
 
     "TOKEN.MOVEMENT.Status.immobile": "Inmóvil",
     "TOKEN.MOVEMENT.Status.restricted": "Restringido",
+	"TOKEN.CharLink": "Ficha vinculada al Actor",
 	
     "Targets" : "Objetivos",
     "Trapping" : "Accesorio",
@@ -1878,7 +1880,7 @@
     "CHAT.CommandLine.Help.Label.Command" : "Comando",
     "CHAT.CommandLine.Help.Label.Example": "Ejemplo",
     "CHAT.CommandLine.Help.Label.Note": "Nota",
-    "CHAT.CommandLine.Help.Tables.Title" : "Tablas",
+    "CHAT.CommandLine.Help.Tables.Description" : "Tirar en una tabla",
     "CHAT.CommandLine.Help.Tables.Usage.Command" : "/table <table-name> <column> <modifier>",
     "CHAT.CommandLine.Help.Tables.Usage.Example" : "<br>/table critarm +20<br>/table career human",
     "CHAT.CommandLine.Help.Tables.Usage.Note" : "/table <anything-unrecognized> mostrará el menú de ayuda de tablas.",
@@ -1897,7 +1899,7 @@
     "CHAT.CommandLine.Help.NameGeneration.Title" : "Generación de Nombre",
     "CHAT.CommandLine.Help.NameGeneration.Usage.Command" : "/name",
     "CHAT.CommandLine.Help.NameGeneration.Usage.Example" : "<br>/name dwarf<br>/name helf male<br>/name welf female",
-    "CHAT.CommandLine.Help.NameGeneration.Usage.Note" : "Genera un nombre en el chat (Accesible también al hacer click en la etiqueta 'Nombre' de una ficha de PNJ o criatura).<br><b>Nota del traductor</b>: Las especies se escriben dwarf (enano), halfling, helf (alto elfo), human (humano) y welf (elfo silvano). Los géneros se escriben female (femenino) y male (masculino).",
+    "CHAT.CommandLine.Help.NameGeneration.Usage.Note" : "Genera un nombre en el chat (Accesible también al hacer click en la etiqueta 'Nombre' de una ficha de PNJ o criatura).<br><b>Nota del traductor</b>: Las especies se escriben dwarf (enano), halfling, helf (alto elfo), human (humano) y welf (elfo silvano). Los géneros se pueden escribir también en inglés: <em>female</em> (femenino) y <em>male</em> (masculino).",
     "CHAT.CommandLine.Help.AvailabilityTest.Title" : "Chequeo de Disponibilidad",
     "CHAT.CommandLine.Help.AvailabilityTest.Usage.Command" : "/avail",
     "CHAT.CommandLine.Help.AvailabilityTest.Usage.Example" : "<br>/avail pueblo común<br>/avail ciudad exótico",
@@ -1912,8 +1914,8 @@
     "CHAT.CommandLine.Help.Credit.Usage.Note" : "Este comando es sólo para el DJ. Una cantidad de dinero escrita por el DJ será enviada a los actores/jugadores, con las siguientes opciones: <ul><li><strong>/credit cantidad split (por defecto)</strong> : Muestra una tarjeta de chat a todos los usuarios, con un botón para recibir el dinero. Ejemplo : /credit 12co2pb</li><li><strong>/credit cantidad nombre_de_jugador</strong>: DJ y Jugadores. Muestra una tarjeta de chat sólo al jugador designado.</li><li><strong>/credit cantidad nombre_de_actor</strong>: Sólo DJ. Aumenta automáticamente el dinero del actor designado en dicha cantidad. Puede usarse sólo una parte del nombre del actor: si el nombre del actor es Kastor Lieberung, puedes escribir /credit 12cp kastor. Si el actor tiene un jugador conectado, una tarjeta de chat le preguntará si aprueba el comando. Si el actor no es propiedad de un jugador (o el jugador no está conectado), la cantidad se aumenta automáticamente.</li></ul>",
     "CHAT.CommandLine.Help.Corruption.Title" : "Corrupción",
     "CHAT.CommandLine.Help.Corruption.Usage.Command" : "/corruption",
-    "CHAT.CommandLine.Help.Corruption.Usage.Example" : "<br>/corruption minor<br>/corruption moderate",
-    "CHAT.CommandLine.Help.Corruption.Usage.Note" : "Usa esto para forzar a tus jugadores a tirar contra influencias corruptoras.<br><b>Nota del traductor</b>: La fuerza de la corrupción se escribe minor (menor), moderate (moderada) o major (mayor).",
+    "CHAT.CommandLine.Help.Corruption.Usage.Example" : "<br>/corruption menor<br>/corruption moderada",
+    "CHAT.CommandLine.Help.Corruption.Usage.Note" : "Usa esto para pedir a tus jugadores tirar contra influencias corruptoras.",
     "CHAT.CommandLine.Help.Exp.Title" : "Experiencia",
     "CHAT.CommandLine.Help.Exp.Usage.Command" : "/exp",
     "CHAT.CommandLine.Help.Exp.Usage.Example" : "<br>/exp 50<br>/exp 100 Derrotar al jefe",
@@ -2090,6 +2092,7 @@
     "WFRP4E.ConditionName.Grappling" : "Presa",
     "WFRP4E.ConditionName.Fear" : "Miedo",
     "WFRP4E.ConditionName.Engaged": "Trabado",
+    "WFRP4E.ConditionName.Defeated": "Derrotado",
     "WFRP4E.ConditionName.Dead" : "Muerto",
 
     "WFRP4E.LocationsTable": "Localización de Impacto",
@@ -2788,14 +2791,14 @@
     "MountError": "Sólo puedes montar criaturas de mayor o igual tamaño.",
 
     "minor": "Menor",
-    "moderate": "Moderado",
+    "moderate": "Moderada",
     "major": "Mayor",
-    "Minor": "Menor",
-    "Moderate": "Moderado",
-    "Major": "Mayor",
+    "menor": "Menor",
+    "moderada": "Moderada",
+    "mayor": "Mayor",
     "CORRUPTION.Exposure": "Exposición a Corrupción",
     "CORRUPTION.Minor": "Menor",
-    "CORRUPTION.Moderate": "Moderado",
+    "CORRUPTION.Moderate": "Moderada",
     "CORRUPTION.Major": "Mayor",
     "Quantity": "Cantidad",
     "Infinite": "Infinito",
@@ -3181,7 +3184,7 @@
 
     "GMTOOLKIT.Settings.Vision.menu.name" : "Ajustes de Visión de Ficha",
     "GMTOOLKIT.Settings.Vision.menu.label" : "Configurar Ajustes de Visión de Ficha",
-    "GMTOOLKIT.Settings.Vision.menu.hint" : "Establecer opciones por defecto para la visión de fichas usadas por la macro Establecer Luz y Visión de Ficha y Luz.",
+    "GMTOOLKIT.Settings.Vision.menu.hint" : "Establecer opciones por defecto para la visión de fichas usadas por la macro Establecer luz y visión de la ficha.",
     "GMTOOLKIT.Settings.Vision.menu.title" : "Ajustes de Visión de Ficha",
     "GMTOOLKIT.Settings.Vision.NormalSight.name" : "Rango de Visión Normal",
     "GMTOOLKIT.Settings.Vision.NormalSight.hint" : "Distancia Máxima (yardas) que una ficha sin visión mejorada puede ver sin una fuente de luz externa de noche o condiciones de penumbra.",
@@ -3243,7 +3246,7 @@
 
     "GMTOOLKIT.Settings.AddXP.Prompt.name" : "Preguntar la cantidad de PX",
     "GMTOOLKIT.Settings.AddXP.Prompt.hint" : "Siempre preguntar cuantos PX añadir.",
-    "GMTOOLKIT.Settings.AddXP.Default.name" : "Recompensa de PX por defecto al usar la macro Add XP o la rutina Session Turnover",
+    "GMTOOLKIT.Settings.AddXP.Default.name" : "Recompensa de PX por defecto al usar la macro Añadir PX o la rutina Fin de la sesión",
     "GMTOOLKIT.Settings.AddXP.Default.hint" : "Cantidad de PX que añadir por defecto.",
     "GMTOOLKIT.Settings.AddXP.Reason.name" : "Razón por defecto de PX",
     "GMTOOLKIT.Settings.AddXP.Reason.hint" : "Razón por defecto para recompensar con experiencia (guardado en el Registro de Experiencia en el apartado Notas de la hoja de personaje). Usa %date% o %session% para incluir automáticamente la fecha o referencia de la sesión.",
@@ -3261,7 +3264,7 @@
     "GMTOOLKIT.Settings.SessionEnd.ExportChat.name" : "Exportar Chat al Final de la Sesión",
     "GMTOOLKIT.Settings.SessionEnd.ExportChat.hint" : "Preguntar si guardar el registro del chat al ejecutar la rutina de Session Turnover.",
     "GMTOOLKIT.Settings.SessionTurnover.SessionID.name" : "Referencia de Sesión",
-    "GMTOOLKIT.Settings.SessionTurnover.SessionID.hint" : "Reemplaza la variable %session% a la razón por defecto de la macro Add XP. Los números enteros se incrementan automáticamente al ejecutar la rutina Session Turnover. Alternativamente, establecer manualmente una frase más descriptiva (eg, \"Episodio 2.3\", \"Climax del Ritual\", etc).",
+    "GMTOOLKIT.Settings.SessionTurnover.SessionID.hint" : "Reemplaza la variable %session% a la razón por defecto de la macro Añadir PX. Los números enteros se incrementan automáticamente al ejecutar la rutina Session Turnover. Alternativamente, establecer manualmente una frase más descriptiva (eg, \"Episodio 2.3\", \"Climax del Ritual\", etc).",
     "GMTOOLKIT.Settings.SessionTurnover.HoldingScene.name" : "Escena de Espera",
     "GMTOOLKIT.Settings.SessionTurnover.HoldingScene.hint" : "Nombre de la escena a la que hacer transición automáticamente entre sesiones. Activado mediante la rutina Session Turnover. Dejar en blanco para no cambiar la escena. Puede usarse para páginas de inicio y centros de campaña.",
     "GMTOOLKIT.Settings.SessionTurnover.DefaultParty.name" : "Selección de Grupo Predeterminada",
@@ -3321,7 +3324,7 @@
 
     "GMTOOLKIT.Settings.DarkWhispers.menu.name" : "Ajustes de Susurros Oscuros",
     "GMTOOLKIT.Settings.DarkWhispers.menu.label" : "Configurar Susurros Oscuros",
-    "GMTOOLKIT.Settings.DarkWhispers.menu.hint" : "Establecer opciones por defecto para la macro Susurros Oscuros.",
+    "GMTOOLKIT.Settings.DarkWhispers.menu.hint" : "Establecer opciones por defecto para la macro Enviar susurros Oscuros.",
     "GMTOOLKIT.Settings.DarkWhispers.menu.title" : "Ajustes de Susurros Oscuros",
 
     "GMTOOLKIT.Message.DarkWhispers.NoPermission" : "¡Sólo los DJs pueden enviar Susurros Oscuros!",
@@ -3375,7 +3378,10 @@
     "GMTOOLKIT.Macro.GMToolkitSettings": "Ajustes de GM Toolkit",
     "GMTOOLKIT.Macro.ToggleCompendiumPackVisibility": "Cambiar Visibilidad de Pack de Compendios",
     "GMTOOLKIT.Macro.CheckConditions": "Comprobar Estados",
-    "GMTOOLKIT.Macro.LaunchDamageConsole": "Iniciar Consola de Daño",    
+    "GMTOOLKIT.Macro.LaunchDamageConsole": "Iniciar Consola de Daño",
+    "GMTOOLKIT.Macro.CanvasToolbox": "Caja de herramientas del Lienzo",
+    "GMTOOLKIT.Macro.CombatToolbox": "Caja de herramientas del Combate",
+    "GMTOOLKIT.Macro.SessionToolbox": "Caja de herramientas de la Sesión",
     
     "GMTOOLKIT.Table.DarkWhispers": "Susurros Oscuros",
 
@@ -3784,5 +3790,225 @@
   "tokenActionHud.Help.RemoveCondition": "Elimina 1 nivel de Estado",
   "tokenActionHud.Help.ToggleCondition": "Alterna Estado",
   "tokenActionHud.Help.AltMagicMethod": "Usa el comportamiento de magia alternativo, si el ajuste no es \"Preguntar siempre\"",
-  "tokenActionHud.Help.PerformUtilityAction": "Realizar acción de utilidad"
+  "tokenActionHud.Help.PerformUtilityAction": "Realizar acción de utilidad",
+
+    "_chatcommands": {
+        "settings": {
+            "enableAutocomplete": "Activar autocompletar",
+            "enableAutocompleteHint": "Muestra un menú para autocompletar mientras escribes comandos en el chat. Requiere recargar para aplicar.",
+            "maxEntries": "Entradas máximas de autocompletar",
+            "maxEntriesHint": "Limita cuántas entradas pueden mostrarse en el menú autocompletar. Las entradas adicionales se reemplazarán con un mensaje de desbordamiento.",
+            "autocompleteCore": "Autocompletar comandos base",
+            "autocompleteCoreHint": "Incluir los comandos base de FoundryVTT para autocompletar. Requiere recargar para aplicar.",
+            "displayFooter": "Mostrar alias y módulo",
+            "displayFooterHint": "Muestra alias y el módulo fuente al autocompletar comandos."
+        },
+        "extraEntries": "Escribe parámetros para encontrar resultados adicionales.",
+        "noEntries": "Ningún comando registrado coincide con lo escrito.",
+        "insufficientPermissions": "No tienes permisos para usar el comando {command}.",
+        "coreCommands": {
+            "ic": "Envía un mensaje como el personaje actualmente seleccionado o asociado.",
+            "ooc": "Envía un mensaje fuera de personaje.",
+            "emote": "Realiza un gesto como as the el personaje actualmente seleccionado o asociado.",
+            "whisper": {
+                "description": "Envía un mensaje privado a otro jugador.",
+                "gm": "Directores de Juego",
+                "players": "Jugadores"
+            },
+            "roll": {
+                "basic": "Tira algunos dados.",
+                "gm": "Tira algunos dados que sólo son visibles para el Director de Juego y tú.",
+                "blind": "Tira algunos dados que sólo son visibles para el Director de Juego.",
+                "self": "Tira algunos dados que sólo son visibles para ti.",
+                "public": "Tira algunos dados que son visibles para todos.",
+                "simpleInfo": "Sintaxis básica: <span class='parameter'>Cantidad</span>d<span class='parameter'>Caras</span>+,-,*,/<span class='parameter'>Más tiradas o números</span>",
+                "descriptionInfo": "Tiradas etiquetadas: <span class='parameter'>Tirada</span>[<span class='parameter'>Descripción de los dados</span>] # <span class='parameter'>Descripción de la tirada</span>",
+                "modifierInfo": "Modificadores: Ver <a href='https://foundryvtt.com/article/dice-modifiers/'>Modificadores a los dados</a>.",
+                "advancedInfo": "Reservas, variables y funciones: Ver <a href='https://foundryvtt.com/article/dice-advanced/'>Dados avanzados</a>.",
+                "recent": "Recientemente usados"
+            }
+        }
+    },
+
+  "Forien": {
+    "ChatCommanderWFRP4e": {
+      "Commands": {
+        "Arguments": "Argumentos disponibles",
+        "ExampleCommands": "Comandos de ejemplo:",
+
+        "TableDescription": "Selecciona a una tabla de sistema en la que tirar",
+        "TableHelp": "Ayuda: Muestra todas las tablas como enlaces cliqueables en el chat.",
+        "TableModExample": "Modificadores de ejemplo: <strong>{mod}</strong>",
+        "Table": {
+          "table": "<span class='parameter'>table</span> — clave de la tabla en la que tirar",
+          "column": "<span class='parameter'>column</span> — columna en la que tirar",
+          "modifier": "<span class='parameter'>modifier</span> — modificador a la tirada"
+        },
+        "TableExamples": {
+          "Wrath": "Ira de los dioses",
+          "WelfCareer": "Carrera – Elfo silvano",
+          "CritBody35": "Herida crítica – Cuerpo, Modificador +35",
+          "JobWho": "¡Necesito trabajo! – Quién, Modificador -10"
+        },
+
+        "ConditionsDescription": "Enviar la descripción del Estado al chat",
+        "ConditionsHint": "Sintaxis: <span class='parameter'>key</span>",
+
+        "PropertiesDescription": "Enviar la descripción de la Propiedad de Objeto al chat",
+        "PropertiesHint": "Sintaxis: <span class='parameter'>key</span>",
+
+        "CharGenDescription": "Entrar en la Creación de Personaje.",
+
+        "NameGenDescription": "Generador de nombres.",
+        "Name": {
+          "gender": "<span class='parameter'>gender</span> — especifíca el género del nombre",
+          "species": "<span class='parameter'>species</span> — especifica la especie de la que generar el nombre"
+        },
+
+        "AvailabilityDescription": "Tira la disponibilidad de un objeto basado en asentamiento y rareza.",
+        "AvailabilityHelp": "Ayuda: Muestra ayuda para el Chequeo de Disponibilidad en el chat.",
+        "Availability": {
+          "rarity":"<span class='parameter'>rarity</span> — rareza del objeto",
+          "size": "<span class='parameter'>size</span> — tamaño del asentamiento",
+          "modifier": "<span class='parameter'>modifier</span> — modificador a la tirada"
+        },
+
+        "PlayerPayDescription": "Pagar una cantidad especificada de dinero con el dinero del inventario del personaje.",
+        "PlayerPayAmountHint": "Sintaxis: <span class='parameter'>amount</span>",
+        "AmountExample": "Cantidades de ejemplo:",
+
+        "GMPayDescription": "Maneja el mostrar la tarjeta de chat \"Pagar\" o el pago automático.",
+        "GMPayAmountHint": "Sintaxis: <span class='parameter'>amount</span> — muestra la tarjeta de chat \"Pagar\" para todos los usuarios",
+        "GMPayPlayerHint": "Sintaxis: <span class='parameter'>amount</span> <span class='parameter'>player</span> — muestra la tarjeta de chat \"Pagar\" sólo al jugador especificado",
+        "GMPayActorHint": "Sintaxis: <span class='parameter'>amount</span> <span class='parameter'>actor</span> — reduce automáticamente <code>amount</code> del actor especificado",
+
+        "Pay": {
+          "amount": "<span class='parameter'>amount</span> — una cantidad de dinero",
+          "for": "<span class='parameter'>for</span> — razón del pago",
+          "target": "<span class='parameter'>target</span> — actor o jugador objetivo del comando"
+        },
+
+        "ReasonExample": "Razones de ejemplo:",
+        "ReasonExamples": {
+          "CheapAle": "Licor barato",
+          "RoomBoard": "Habitación y hospedaje",
+          "UnfairTax": "Tasas injustas en la puerta",
+          "CleaningCellar": "Limpiar la bodega",
+          "SavingPrincess": "Salvar a la princesa"
+        },
+
+        "CreditDescription": "Manejar dar dinero a los jugadores.",
+        "CreditAmountHint": "Sintaxis: <span class='parameter'>&lt;amount&gt;</span> — muestra una tarjeta de chat a todos los usuarios que les permite recibir una porción del dinero",
+        "CreditPlayerHint": "Sintaxis: <span class='parameter'>&lt;amount&gt;</span> <span class='parameter'>target=&lt;player&gt;</span> — muestra la tarjeta de chat sólo al jugador especificado",
+        "CreditActorHint": "Sintaxis: <span class='parameter'>&lt;amount&gt;</span> <span class='parameter'>target=&lt;actor&gt;</span> — recompensa automáticamente con <code>amount</code> de dinero al actor especificado",
+        "Each": "Each — (Por defecto) Cada usuario recibirá la <code>amount</code> especificada",
+        "Split": "Split — La <code>amount</code> especificada se repartirá entre todos los usuarios conectados, o en pilas `<code>split</code>`.",
+
+        "Credit": {
+          "amount": "<span class='parameter'>amount</span> — una cantidad de dinero",
+          "mode": "<span class='parameter'>mode</span> — modo de crédito",
+          "split": "<span class='parameter'>split</span> — repartir cantidad",
+          "target": "<span class='parameter'>target</span> — actor o jugador objetivo del comando",
+          "reason": "<span class='parameter'>reason</span> — razón para el crédito"
+        },
+
+        "CorruptionDescription": "Pide a todos los jugadores que tiren contra Influencias corruptoras de una determinada fuerza.",
+        "CorruptionHint": "Sintaxis: <span class='parameter'>strength</span>",
+        "CorruptionMinor": "Menor — fallar hará que el personaje del jugador sufra 1 punto de Corrupción.",
+        "CorruptionModerate": "Moderada — fallar hará que el personaje del jugador sufra 2 puntos de Corrupción.",
+        "CorruptionMajor": "Mayor — fallar hará que el personaje del jugador sufra 3 puntos de Corrupción.",
+
+        "Corruption": {
+          "strength": "<span class='parameter'>strength</span> — fuerza de la Corrupción",
+          "skill": "<span class='parameter'>skill</span> — habilidad para resistir",
+          "source": "<span class='parameter'>source</span> — fuente de la corrupción"
+        },
+        "CorruptionExamples": {
+          "WitnessedLesserDaemon": "Ver un demonio menor",
+          "ExposureToWarpstone": "Una exposición prolongada a piedra bruja refinada",
+          "DealWithDaemon": "Hacer un trato con un demonio",
+          "MinorExample": "Exposición menor por \"{reason}\", resistida con Frialdad",
+          "ModerateExample": "Exposición moderada por \"{reason}\", resistida con Aguante",
+          "MajorExample": "Exposición mayor por \"{reason}\""
+        },
+
+        "FearDescription": "Pide a los jugadores realizar un Chequeo de Miedo",
+        "FearHint": "Sintaxis: <span class='parameter'>strength</span> <span class='parameter'>[source]</span>",
+        "FearStrengthExample": "Fuerza de ejemplo: <strong>{strength}</strong>",
+        "Fear": {
+          "rating": "<span class='parameter'>rating</span> — valor del Miedo (fuerza)",
+          "source": "<span class='parameter'>source</span> — fuente del Miedo"
+        },
+        "FearExamples": {
+          "Paranoia": "Paranoia sin explicación",
+          "Skeleton": "Esqueleto",
+          "CloseMorsslieb": "¡Morrslieb está demasiado cerca!",
+          "example": "{source} (Miedo {rating})"
+        },
+
+
+        "TerrorDescription": "Pide a los jugadores realizar un Chequeo de Terror",
+        "TerrorHint": "Sintaxis: <span class='parameter'>strength</span> <span class='parameter'>[source]</span>",
+        "TerrorStrengthExample": "Fuerza de ejemplo: <strong>{strength}</strong>",
+        "Terror": {
+          "rating": "<span class='parameter'>rating</span> — valor del Terror (fuerza)",
+          "source": "<span class='parameter'>source</span> — fuente del Terror"
+        },
+        "TerrorExamples": {
+          "Terrifying": "Hechicero terrorífico",
+          "Varghulf": "Varghulf",
+          "SteppedLego": "Ver a alguien pisar un LEGO",
+          "example": "{source} (Terror {rating})"
+        },
+
+        "TravelDescription": "Mostrar distancia y tiempo de viaje entre dos localidades",
+        "TravelHint": "Sintaxis: <span class='parameter'>from</span> <span class='parameter'>to</span>",
+        "TravelHelp": "Muestra todas las localidades como enlaces cliqueables en el chat.",
+        "Travel": {
+          "from": "<span class='parameter'>from</span> — localidad de inicio",
+          "to": "<span class='parameter'>to</span> — localidad de destino"
+        },
+
+        "ExpDescription": "Enviar una tarjet de chat que permite a los jugadores recibir Experiencia",
+        "ExpHint": "Sintaxis: <span class='parameter'>experience</span> <span class='parameter'>[reason]</span>",
+        "ExpExample": "Ejemplo de experiencia: <strong>{exp}</strong>",
+        "Exp": {
+          "amount": "<span class='parameter'>amount</span> — cantidad de PX concedidos",
+          "reason": "<span class='parameter'>reason</span> — razón para los PX"
+        },
+
+        "ExpExamples": {
+          "Roleplaying": "Buena interpretación",
+          "AmbitionShort": "Completar una Ambición a corto plazo",
+          "SessionPoor": "Jugar una sesión (rendimiento pobre)",
+          "SessionGood": "Jugar una sesión (rendimiento bueno)",
+          "SessionExceptional": "Jugar una sesión (rendimiento excepcional)",
+          "DefeatedBoss": "Derrotar a la némesis de una campaña",
+          "example": "+{amount} por {reason}"
+        },
+
+        "TradeDescription": "Abre el diálogo de Comercio usando las reglas de comercio de \"Muerte en el Reik\" o \"Mar de las Garras\""
+      },
+
+      "Tags": {
+        "Item": "Objeto",
+        "Weapon": "Arma",
+        "Armour": "Armadura",
+        "Quality": "Cualidad",
+        "Flaw": "Defecto",
+        "User": "Usuario",
+        "Actor": "Actor"
+      },
+
+      "NameGen": {
+        "Female": "Mujer",
+        "Male": "Hombre"
+      },
+
+      "for": "por",
+      "and": "y",
+      "each": "a cada uno",
+      "split": "separar en {count} partes"
+    }
+  }
 }

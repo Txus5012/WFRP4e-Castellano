@@ -19,4 +19,8 @@ Hooks.on("renderCompendiumDirectory", async () => {
 		await game.folders.getName("Hireling").update({"name":  "Asalariado"  })
 		await game.folders.getName("Job").update({"name":  "Trabajo"  })
 	}
+
+	if (game.folders.getName("Toolboxes")) {
+		await game.folders.getName("Toolboxes").update({"name":  "Cajas de herramientas"  })
+	}
 })

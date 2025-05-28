@@ -1,6 +1,4 @@
-Hooks.once("init", async function () {
-
-const WFRP4E = {}
+Hooks.once("setup", async function () {
 
 CONFIG.JournalEntry.noteIcons = {
     "Marcador": "systems/wfrp4e/icons/buildings/point_of_interest.png",
@@ -679,6 +677,9 @@ game.wfrp4e.config.symptomEffects = {
             }
         }
     }
+})
+
+Hooks.once("init", async function () {
 
 game.wfrp4e.config.PrepareSystemItems = function() {
 
@@ -1845,7 +1846,7 @@ game.wfrp4e.config.statusEffects = [
                 scriptData : [{
                     label : game.i18n.localize("PROPERTY.Blast"),
                     trigger : "rollWeaponTest",
-                    script : "if (args.test.succeeded) args.result.other.push(`<a class='aoe-template' data-type='radius'><i class='fas fa-ruler-combined'></i>Explosión de ${this.item.properties.qualities.blast.value} yardas</a>`)",
+                    script : "if (args.test.succeeded) args.test.result.other.push(`<a class='aoe-template' data-type='radius'><i class='fas fa-ruler-combined'></i>Explosión de ${this.item.properties.qualities.blast.value} yardas</a>`)",
                 }]
             }
         },

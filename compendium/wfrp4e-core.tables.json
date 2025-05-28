@@ -10,6 +10,12 @@
 		"Hit Location": "Ubicaci\u00F3n de Impacto",
 		"Moo's Homebrew": "Reglas caseras de Moo"
     },
+	"mapping": {
+		"tablenames": {
+			"path": "results",
+			"converter": "tablenames"
+		}
+	},
 	"entries": [
 		{
 			"id": "Career - Dwarf",
@@ -1419,12 +1425,19 @@
 			"id": "Species",
 			"name": "Especies",
 			"results": {
-				"1-90": "Humano",
-				"91-94": "Halfling",
-				"95-98": "Enano",
-				"99-99": "Alto Elfo",
-				"100-100": "Elfo Silvano"
-				}
+				"1-90": "<p>@UUID[Compendium.wfrp4e-core.journals.JournalEntry.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#humans-(reiklander)]{Humano}</p>",
+				"91-94": "<p>@UUID[Compendium.wfrp4e-core.journals.JournalEntry.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#halflings]{Halfling}</p>",
+				"95-98": "<p>@UUID[Compendium.wfrp4e-core.journals.JournalEntry.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#dwarfs]{Enano}</p>",
+				"99-99": "<p>@UUID[Compendium.wfrp4e-core.journals.JournalEntry.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#high-elves]{Alto Elfo}</p>",
+				"100-100": "<p>@UUID[Compendium.wfrp4e-core.journals.JournalEntry.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#wood-elves]{Elfo Silvano}</p>"
+				},
+			"tablenames": [
+				{"name": "Humano"},
+				{"name": "Halfling"},
+				{"name": "Enano"},
+				{"name": "Alto Elfo"},
+				{"name": "Elfo Silvano"}
+				]
 		},
 		{
 			"id": "Talents - Character Creation",
