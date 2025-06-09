@@ -5239,242 +5239,242 @@
 		{
 			"id": "Animal Care",
 			"name": "Criar animales",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QZx9CbhGkIaDMQD3]{Criar animales}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QZx9CbhGkIaDMQD3 caption=false]{Criar animales}"
 		},
 		{
 			"id": "Animal Training ( )",
 			"name": "Adiestrar animal ( )",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.vbOc3JVfG2nfK1P0]{Adiestrar animal}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.vbOc3JVfG2nfK1P0 caption=false]{Adiestrar animal}"
 		},
 		{
 			"id": "Animal Training (Demigryph)",
 			"name": "Adiestrar animal (Semigrifo)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.vbOc3JVfG2nfK1P0]{Adiestrar animal}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.vbOc3JVfG2nfK1P0 caption=false]{Adiestrar animal}"
 		},
 		{
 			"id": "Animal Training (Dog)",
 			"name": "Adiestrar animal (Perro)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.vbOc3JVfG2nfK1P0]{Adiestrar animal}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.vbOc3JVfG2nfK1P0 caption=false]{Adiestrar animal}"
 		},
 		{
 			"id": "Animal Training (Horse)",
 			"name": "Adiestrar animal (Caballo)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.vbOc3JVfG2nfK1P0]{Adiestrar animal}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.vbOc3JVfG2nfK1P0 caption=false]{Adiestrar animal}"
 		},
 		{
 			"id": "Animal Training (Pegasus)",
 			"name": "Adiestrar animal (Pegaso)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.vbOc3JVfG2nfK1P0]{Adiestrar animal}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.vbOc3JVfG2nfK1P0 caption=false]{Adiestrar animal}"
 		},
 		{
 			"id": "Animal Training (Pigeon)",
 			"name": "Adiestrar animal (Paloma)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.vbOc3JVfG2nfK1P0]{Adiestrar animal}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.vbOc3JVfG2nfK1P0 caption=false]{Adiestrar animal}"
 		},
 		{
 			"id": "Art",
 			"name": "Arte",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Arte}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y caption=false]{Arte}"
 		},
 		{
 			"id": "Art ( )",
 			"name": "Arte ( )",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Arte}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y caption=false]{Arte}"
 		},
 		{
 			"id": "Art (Cartography)",
 			"name": "Arte (Cartografía)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Arte}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y caption=false]{Arte}"
 		},
 		{
 			"id": "Art (Engraving)",
 			"name": "Arte (Grabado)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Arte}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y caption=false]{Arte}"
 		},
 		{
 			"id": "Art (Mosaics)",
 			"name": "Arte (Mosaico)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Arte}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y caption=false]{Arte}"
 		},
 		{
 			"id": "Art (Painting)",
 			"name": "Arte (Pintura)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Arte}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y caption=false]{Arte}"
 		},
 		{
 			"id": "Art (Sculpture)",
 			"name": "Arte (Escultura)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Arte}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y caption=false]{Arte}"
 		},
 		{
 			"id": "Art (Tattoo)",
 			"name": "Arte (Tatuajes)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Arte}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y caption=false]{Arte}"
 		},
 		{
 			"id": "Art (Weaving)",
 			"name": "Arte (Tejido)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Arte}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y caption=false]{Arte}"
 		},
 		{
 			"id": "Art (Writing)",
 			"name": "Arte (Escritura)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y]{Arte}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y caption=false]{Arte}"
 		},
 		{
 			"id": "Athletics",
 			"name": "Atletismo",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.Ss6Gp732GjscYke0]{Atletismo}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.Ss6Gp732GjscYke0 caption=false]{Atletismo}"
 		},
 		{
 			"id": "Bribery",
 			"name": "Sobornar",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.IwGXgEPOkNVZ0SwI]{Sobornar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.IwGXgEPOkNVZ0SwI caption=false]{Sobornar}"
 		},
 		{
 			"id": "Channelling",
 			"name": "Canalización",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tXu8Hrd4desq1Rja]{Canalización}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tXu8Hrd4desq1Rja caption=false]{Canalización}"
 		},
 		{
 			"id": "Channelling ( )",
 			"name": "Canalización ( )",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tXu8Hrd4desq1Rja]{Canalización}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tXu8Hrd4desq1Rja caption=false]{Canalización}"
 		},
 		{
 			"id": "Channelling (Aqshy)",
 			"name": "Canalización (Aqshy)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tXu8Hrd4desq1Rja]{Canalización}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tXu8Hrd4desq1Rja caption=false]{Canalización}"
 		},
 		{
 			"id": "Channelling (Azyr)",
 			"name": "Canalización (Azyr)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tXu8Hrd4desq1Rja]{Canalización}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tXu8Hrd4desq1Rja caption=false]{Canalización}"
 		},
 		{
 			"id": "Channelling (Chamon)",
 			"name": "Canalización (Chamon)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tXu8Hrd4desq1Rja]{Canalización}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tXu8Hrd4desq1Rja caption=false]{Canalización}"
 		},
 		{
 			"id": "Channelling (Dhar)",
 			"name": "Canalización (Dhar)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tXu8Hrd4desq1Rja]{Canalización}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tXu8Hrd4desq1Rja caption=false]{Canalización}"
 		},
 		{
 			"id": "Channelling (Ghur)",
 			"name": "Canalización (Ghur)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tXu8Hrd4desq1Rja]{Canalización}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tXu8Hrd4desq1Rja caption=false]{Canalización}"
 		},
 		{
 			"id": "Channelling (Ghyran)",
 			"name": "Canalización (Ghyran)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tXu8Hrd4desq1Rja]{Canalización}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tXu8Hrd4desq1Rja caption=false]{Canalización}"
 		},
 		{
 			"id": "Channelling (Hysh)",
 			"name": "Canalización (Hysh)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tXu8Hrd4desq1Rja]{Canalización}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tXu8Hrd4desq1Rja caption=false]{Canalización}"
 		},
 		{
 			"id": "Channelling (Shyish)",
 			"name": "Canalización (Shyish)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tXu8Hrd4desq1Rja]{Canalización}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tXu8Hrd4desq1Rja caption=false]{Canalización}"
 		},
 		{
 			"id": "Channelling (Ulgu)",
 			"name": "Canalización (Ulgu)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tXu8Hrd4desq1Rja]{Canalización}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tXu8Hrd4desq1Rja caption=false]{Canalización}"
 		},
 		{
 			"id": "Charm",
 			"name": "Carisma",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.9OommpqxE34iocmg]{Carisma}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.9OommpqxE34iocmg caption=false]{Carisma}"
 		},
 		{
 			"id": "Charm Animal",
 			"name": "Carisma animal",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.1N6sOXgrqF1KkIh0]{Carisma animal}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.1N6sOXgrqF1KkIh0 caption=false]{Carisma animal}"
 		},
 		{
 			"id": "Climb",
 			"name": "Escalar",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.yOONKSIBrg4FOl20]{Escalar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.yOONKSIBrg4FOl20 caption=false]{Escalar}"
 		},
 		{
 			"id": "Consume Alcohol",
 			"name": "Consumir alcohol",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.38Ux3mEWYuQ4heIT]{Consumir alcohol}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.38Ux3mEWYuQ4heIT caption=false]{Consumir alcohol}"
 		},
 		{
 			"id": "Cool",
 			"name": "Frialdad",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.m14pGtefJzDYhgzW]{Frialdad}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.m14pGtefJzDYhgzW caption=false]{Frialdad}"
 		},
 		{
 			"id": "Dodge",
 			"name": "Esquivar",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.dPpyiMhPwVGJnJrv]{Esquivar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.dPpyiMhPwVGJnJrv caption=false]{Esquivar}"
 		},
 		{
 			"id": "Drive",
 			"name": "Conducir",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.uLPWAFSfT5Vf1zZl]{Conducir}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.uLPWAFSfT5Vf1zZl caption=false]{Conducir}"
 		},
 		{
 			"id": "Endurance",
 			"name": "Aguante",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.E9UyI8AMrBqgCX4a]{Aguante}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.E9UyI8AMrBqgCX4a caption=false]{Aguante}"
 		},
 		{
 			"id": "Entertain",
 			"name": "Animar",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Animar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui caption=false]{Animar}"
 		},
 		{
 			"id": "Entertain ()",
 			"name": "Animar ()",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Animar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui caption=false]{Animar}"
 		},
 		{
 			"id": "Entertain (Comedy)",
 			"name": "Animar (Comedia)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Animar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui caption=false]{Animar}"
 		},
 		{
 			"id": "Entertain (Singing)",
 			"name": "Animar (Cantar)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Animar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui caption=false]{Animar}"
 		},
 		{
 			"id": "Entertain (Storytelling)",
 			"name": "Animar (Relatar)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui]{Animar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui caption=false]{Animar}"
 		},
 		{
 			"id": "Evaluate",
 			"name": "Tasar",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.NtJ85TY8yY3WOGHN]{Tasar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.NtJ85TY8yY3WOGHN caption=false]{Tasar}"
 		},
 		{
 			"id": "Gamble",
 			"name": "Jugar",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.JVBD7pcdOPJ4nCjq]{Jugar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.JVBD7pcdOPJ4nCjq caption=false]{Jugar}"
 		},
 		{
 			"id": "Gossip",
 			"name": "Cotilleo",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.ns3PDbblIFcwqyQi]{Cotilleo}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.ns3PDbblIFcwqyQi caption=false]{Cotilleo}"
 		},
 		{
 			"id": "Haggle",
 			"name": "Regatear",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.qSSRHdEK5P7VRmKW]{Regatear}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.qSSRHdEK5P7VRmKW caption=false]{Regatear}"
 		},
 		{
 			"id": "Heal",
 			"name": "Sanar",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.dSf8QWBvN6mlpHBF]{Sanar}",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.dSf8QWBvN6mlpHBF caption=false]{Sanar}",
 			"effects": [{
 				"name":"Sanar",
 				"scriptData": [
@@ -5488,603 +5488,603 @@
 		{
 			"id": "Intimidate",
 			"name": "Intimidar",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mDs8HUZopZAb1fH0]{Intimidar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mDs8HUZopZAb1fH0 caption=false]{Intimidar}"
 		},
 		{
 			"id": "Intuition",
 			"name": "Intuición",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.31VEXGfn6houFutI]{Intuición}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.31VEXGfn6houFutI caption=false]{Intuición}"
 		},
 		{
 			"id": "Language ()",
 			"name": "Hablar idioma ()",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Hablar idioma}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
 		},
 		{
 			"id": "Language (Albion)",
 			"name": "Hablar idioma (Albionés)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Hablar idioma}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
 		},
 		{
 			"id": "Language (Battle Tongue)",
 			"name": "Hablar idioma (Lengua de Batalla)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Hablar idioma}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
 		},
 		{
 			"id": "Language (Battle)",
 			"name": "Hablar idioma (Lengua de Batalla)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Hablar idioma}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
 		},
 		{
 			"id": "Language (Bretonnian)",
 			"name": "Hablar idioma (Bretoniano)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Hablar idioma}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
 		},
 		{
 			"id": "Language (Classical)",
 			"name": "Hablar idioma (Viejomundano clásico)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Hablar idioma}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
 		},
 		{
 			"id": "Language (Elthárin)",
 			"name": "Hablar idioma (Eltharin)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Hablar idioma}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
 		},
 		{
 			"id": "Language (Estalian)",
 			"name": "Hablar idioma (Estaliano)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Hablar idioma}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
 		},
 		{
 			"id": "Language (Gospodarinyi)",
 			"name": "Hablar idioma (Gospodarinyi)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Hablar idioma}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
 		},
 		{
 			"id": "Language (Grumbarth)",
 			"name": "Hablar idioma (Grumbarth)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Hablar idioma}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
 		},
 		{
 			"id": "Language (Guilder)",
 			"name": "Hablar idioma (Gremial)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Hablar idioma}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
 		},
 		{
 			"id": "Language (Khazalid)",
 			"name": "Hablar idioma (Khazalid)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Hablar idioma}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
 		},
 		{
 			"id": "Language (Magick)",
 			"name": "Hablar idioma (Lengua de la magia)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Hablar idioma}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
 		},
 		{
 			"id": "Language (Mootish)",
 			"name": "Hablar idioma (Asambleario)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Hablar idioma}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
 		},
 		{
 			"id": "Language (Norse)",
 			"name": "Hablar idioma (Nórdico)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Hablar idioma}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
 		},
 		{
 			"id": "Language (Queekish)",
 			"name": "Hablar idioma (Chillonés)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Hablar idioma}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
 		},
 		{
 			"id": "Language (Reikspiel)",
 			"name": "Hablar idioma (Reiklandés)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Hablar idioma}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
 		},
 		{
 			"id": "Language (s Choice)",
 			"name": "Hablar idioma (A elección del DJ)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Hablar idioma}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
 		},
 		{
 			"id": "Language (Thieves Tongue)",
 			"name": "Hablar idioma (Lengua de Ladrones)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Hablar idioma}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
 		},
 		{
 			"id": "Language (Tilean)",
 			"name": "Hablar idioma (Tileano)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Hablar idioma}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
 		},
 		{
 			"id": "Language (Wastelander)",
 			"name": "Hablar idioma (Tierras Desoladas)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl]{Hablar idioma}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
 		},
 		{
 			"id": "Leadership",
 			"name": "Mando",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.haKq6qZXYj7Bweu4]{Mando}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.haKq6qZXYj7Bweu4 caption=false]{Mando}"
 		},
 		{
 			"id": "Lore ()",
 			"name": "Sabiduría académica ()",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Sabiduría académica}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
 		},
 		{
 			"id": "Lore (Anatomy)",
 			"name": "Sabiduría académica (Anatomía)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Sabiduría académica}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
 		},
 		{
 			"id": "Lore (Engineering)",
 			"name": "Sabiduría académica (Ingeniería)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Sabiduría académica}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
 		},
 		{
 			"id": "Lore (Geology)",
 			"name": "Sabiduría académica (Geología)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Sabiduría académica}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
 		},
 		{
 			"id": "Lore (Heraldry)",
 			"name": "Sabiduría académica (Heráldica)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Sabiduría académica}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
 		},
 		{
 			"id": "Lore (History)",
 			"name": "Sabiduría académica (Historia)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Sabiduría académica}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
 		},
 		{
 			"id": "Lore (Law)",
 			"name": "Sabiduría académica (Derecho)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Sabiduría académica}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
 		},
 		{
 			"id": "Lore (Local)",
 			"name": "Sabiduría académica (Local)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Sabiduría académica}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
 		},
 		{
 			"id": "Lore (Magick)",
 			"name": "Sabiduría académica (Magia)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Sabiduría académica}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
 		},
 		{
 			"id": "Lore (Medicine)",
 			"name": "Sabiduría académica (Medicina)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Sabiduría académica}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
 		},
 		{
 			"id": "Lore (Metallurgy)",
 			"name": "Sabiduría académica (Metalurgia)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Sabiduría académica}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
 		},
 		{
 			"id": "Lore (Science)",
 			"name": "Sabiduría académica (Ciencias)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Sabiduría académica}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
 		},
 		{
 			"id": "Lore (Theology)",
 			"name": "Sabiduría académica (Teología)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc]{Sabiduría académica}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
 		},
 		{
 			"id": "Melee",
 			"name": "Cuerpo a cuerpo",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Cuerpo a cuerpo}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f caption=false]{Cuerpo a cuerpo}"
 		},
 		{
 			"id": "Melee ()",
 			"name": "Cuerpo a cuerpo ()",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Cuerpo a cuerpo}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f caption=false]{Cuerpo a cuerpo}"
 		},
 		{
 			"id": "Melee (Basic)",
 			"name": "Cuerpo a cuerpo (Básica)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Cuerpo a cuerpo}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f caption=false]{Cuerpo a cuerpo}"
 		},
 		{
 			"id": "Melee (Brawling)",
 			"name": "Cuerpo a cuerpo (Pelea)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Cuerpo a cuerpo}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f caption=false]{Cuerpo a cuerpo}"
 		},
 		{
 			"id": "Melee (Cavalry)",
 			"name": "Cuerpo a cuerpo (De Caballería)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Cuerpo a cuerpo}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f caption=false]{Cuerpo a cuerpo}"
 		},
 		{
 			"id": "Melee (Fencing)",
 			"name": "Cuerpo a cuerpo (De Esgrima)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Cuerpo a cuerpo}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f caption=false]{Cuerpo a cuerpo}"
 		},
 		{
 			"id": "Melee (Flail)",
 			"name": "Cuerpo a cuerpo (Mayal)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Cuerpo a cuerpo}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f caption=false]{Cuerpo a cuerpo}"
 		},
 		{
 			"id": "Melee (Parry)",
 			"name": "Cuerpo a cuerpo (De Parada)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Cuerpo a cuerpo}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f caption=false]{Cuerpo a cuerpo}"
 		},
 		{
 			"id": "Melee (Polearm)",
 			"name": "Cuerpo a cuerpo (Arma de Asta)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Cuerpo a cuerpo}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f caption=false]{Cuerpo a cuerpo}"
 		},
 		{
 			"id": "Melee (Two-Handed)",
 			"name": "Cuerpo a cuerpo (A Dos Manos)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f]{Cuerpo a cuerpo}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f caption=false]{Cuerpo a cuerpo}"
 		},
 		{
 			"id": "Navigation",
 			"name": "Orientación",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.rf7gtZko4KJvjFaE]{Orientación}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.rf7gtZko4KJvjFaE caption=false]{Orientación}"
 		},
 		{
 			"id": "Outdoor Survival",
 			"name": "Supervivencia",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.cFqWFER60SjM5Wn3]{Supervivencia}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.cFqWFER60SjM5Wn3 caption=false]{Supervivencia}"
 		},
 		{
 			"id": "Perception",
 			"name": "Percepción",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.6Jhks0zDRpJeN6dW]{Percepción}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.6Jhks0zDRpJeN6dW caption=false]{Percepción}"
 		},
 		{
 			"id": "Perform ()",
 			"name": "Actuar ()",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.6MQIGorN3WgXWfJB]{Actuar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.6MQIGorN3WgXWfJB caption=false]{Actuar}"
 		},
 		{
 			"id": "Perform (Acrobatics)",
 			"name": "Actuar (Acrobacias)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.6MQIGorN3WgXWfJB]{Actuar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.6MQIGorN3WgXWfJB caption=false]{Actuar}"
 		},
 		{
 			"id": "Perform (Clowning)",
 			"name": "Actuar (Payasadas)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.6MQIGorN3WgXWfJB]{Actuar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.6MQIGorN3WgXWfJB caption=false]{Actuar}"
 		},
 		{
 			"id": "Perform (Dancing)",
 			"name": "Actuar (Baile)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.6MQIGorN3WgXWfJB]{Actuar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.6MQIGorN3WgXWfJB caption=false]{Actuar}"
 		},
 		{
 			"id": "Perform (Firebreathing)",
 			"name": "Actuar (Tragafuegos)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.6MQIGorN3WgXWfJB]{Actuar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.6MQIGorN3WgXWfJB caption=false]{Actuar}"
 		},
 		{
 			"id": "Perform (Juggling)",
 			"name": "Actuar (Malabarismo)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.6MQIGorN3WgXWfJB]{Actuar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.6MQIGorN3WgXWfJB caption=false]{Actuar}"
 		},
 		{
 			"id": "Perform (Miming)",
 			"name": "Actuar (Mimo)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.6MQIGorN3WgXWfJB]{Actuar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.6MQIGorN3WgXWfJB caption=false]{Actuar}"
 		},
 		{
 			"id": "Perform (Rope Walking)",
 			"name": "Actuar (Funambulismo)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.6MQIGorN3WgXWfJB]{Actuar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.6MQIGorN3WgXWfJB caption=false]{Actuar}"
 		},
 		{
 			"id": "Pick Lock",
 			"name": "Forzar cerraduras",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.XexqYWmxO5dy2us3]{Forzar cerraduras}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.XexqYWmxO5dy2us3 caption=false]{Forzar cerraduras}"
 		},
 		{
 			"id": "Play ()",
 			"name": "Tocar ()",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.N63wZOWw6ZLYnePN]{Tocar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.N63wZOWw6ZLYnePN caption=false]{Tocar}"
 		},
 		{
 			"id": "Play (Bagpipe)",
 			"name": "Tocar (Gaita)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.N63wZOWw6ZLYnePN]{Tocar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.N63wZOWw6ZLYnePN caption=false]{Tocar}"
 		},
 		{
 			"id": "Play (Drum)",
 			"name": "Tocar (Tambor)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.N63wZOWw6ZLYnePN]{Tocar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.N63wZOWw6ZLYnePN caption=false]{Tocar}"
 		},
 		{
 			"id": "Play (Harpsichord)",
 			"name": "Tocar (Clavicémbalo)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.N63wZOWw6ZLYnePN]{Tocar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.N63wZOWw6ZLYnePN caption=false]{Tocar}"
 		},
 		{
 			"id": "Play (Horn)",
 			"name": "Tocar (Cuerno)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.N63wZOWw6ZLYnePN]{Tocar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.N63wZOWw6ZLYnePN caption=false]{Tocar}"
 		},
 		{
 			"id": "Play (Lute)",
 			"name": "Tocar (Laúd)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.N63wZOWw6ZLYnePN]{Tocar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.N63wZOWw6ZLYnePN caption=false]{Tocar}"
 		},
 		{
 			"id": "Play (Violin)",
 			"name": "Tocar (Violín)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.N63wZOWw6ZLYnePN]{Tocar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.N63wZOWw6ZLYnePN caption=false]{Tocar}"
 		},
 		{
 			"id": "Pray",
 			"name": "Rezar",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.NRfh04q1bZBIND0A]{Rezar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.NRfh04q1bZBIND0A caption=false]{Rezar}"
 		},
 		{
 			"id": "Ranged ()",
 			"name": "A distancia ()",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jJYOiSQNgC9v7cM5]{A distancia}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jJYOiSQNgC9v7cM5 caption=false]{A distancia}"
 		},
 		{
 			"id": "Ranged (Blackpowder)",
 			"name": "A distancia (De Pólvora Negra)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jJYOiSQNgC9v7cM5]{A distancia}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jJYOiSQNgC9v7cM5 caption=false]{A distancia}"
 		},
 		{
 			"id": "Ranged (Bow)",
 			"name": "A distancia (Arco)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jJYOiSQNgC9v7cM5]{A distancia}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jJYOiSQNgC9v7cM5 caption=false]{A distancia}"
 		},
 		{
 			"id": "Ranged (Crossbow)",
 			"name": "A distancia (Ballesta)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jJYOiSQNgC9v7cM5]{A distancia}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jJYOiSQNgC9v7cM5 caption=false]{A distancia}"
 		},
 		{
 			"id": "Ranged (Engineering)",
 			"name": "A distancia (De Ingeniería)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jJYOiSQNgC9v7cM5]{A distancia}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jJYOiSQNgC9v7cM5 caption=false]{A distancia}"
 		},
 		{
 			"id": "Ranged (Entangling)",
 			"name": "A distancia (Enmarañante)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jJYOiSQNgC9v7cM5]{A distancia}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jJYOiSQNgC9v7cM5 caption=false]{A distancia}"
 		},
 		{
 			"id": "Ranged (Explosives)",
 			"name": "A distancia (Explosiva)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jJYOiSQNgC9v7cM5]{A distancia}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jJYOiSQNgC9v7cM5 caption=false]{A distancia}"
 		},
 		{
 			"id": "Ranged (Sling)",
 			"name": "A distancia (Honda)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jJYOiSQNgC9v7cM5]{A distancia}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jJYOiSQNgC9v7cM5 caption=false]{A distancia}"
 		},
 		{
 			"id": "Ranged (Throwing)",
 			"name": "A distancia (Arrojadiza)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jJYOiSQNgC9v7cM5]{A distancia}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jJYOiSQNgC9v7cM5 caption=false]{A distancia}"
 		},
 		{
 			"id": "Research",
 			"name": "Investigar",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.Nv0jexKy05qTOnuN]{Investigar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.Nv0jexKy05qTOnuN caption=false]{Investigar}"
 		},
 		{
 			"id": "Ride",
 			"name": "Montar",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Montar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe caption=false]{Montar}"
 		},
 		{
 			"id": "Ride ()",
 			"name": "Montar ()",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Montar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe caption=false]{Montar}"
 		},
 		{
 			"id": "Ride (Demigryph)",
 			"name": "Montar (Semigrifo)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Montar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe caption=false]{Montar}"
 		},
 		{
 			"id": "Ride (Great Wolf)",
 			"name": "Montar (Gran Lobo)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Montar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe caption=false]{Montar}"
 		},
 		{
 			"id": "Ride (Griffon)",
 			"name": "Montar (Grifo)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Montar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe caption=false]{Montar}"
 		},
 		{
 			"id": "Ride (Horse)",
 			"name": "Montar (Caballo)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Montar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe caption=false]{Montar}"
 		},
 		{
 			"id": "Ride (Pegasus)",
 			"name": "Montar (Pegaso)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe]{Montar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe caption=false]{Montar}"
 		},
 		{
 			"id": "Row",
 			"name": "Remar",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.ACCaGYXdz9yKyxgG]{Remar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.ACCaGYXdz9yKyxgG caption=false]{Remar}"
 		},
 		{
 			"id": "Sail ()",
 			"name": "Navegar ()",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.DLrOPZtVMLgSyxaj]{Navegar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.DLrOPZtVMLgSyxaj caption=false]{Navegar}"
 		},
 		{
 			"id": "Sail (Barge)",
 			"name": "Navegar (Gabarra)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.DLrOPZtVMLgSyxaj]{Navegar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.DLrOPZtVMLgSyxaj caption=false]{Navegar}"
 		},
 		{
 			"id": "Sail (Caravel)",
 			"name": "Navegar (Carabela)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.DLrOPZtVMLgSyxaj]{Navegar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.DLrOPZtVMLgSyxaj caption=false]{Navegar}"
 		},
 		{
 			"id": "Sail (Cog)",
 			"name": "Navegar (Coca)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.DLrOPZtVMLgSyxaj]{Navegar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.DLrOPZtVMLgSyxaj caption=false]{Navegar}"
 		},
 		{
 			"id": "Sail (Frigate)",
 			"name": "Navegar (Fragata)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.DLrOPZtVMLgSyxaj]{Navegar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.DLrOPZtVMLgSyxaj caption=false]{Navegar}"
 		},
 		{
 			"id": "Sail (Wolfship)",
 			"name": "Navegar (Navío lobo)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.DLrOPZtVMLgSyxaj]{Navegar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.DLrOPZtVMLgSyxaj caption=false]{Navegar}"
 		},
 
 		{
 			"id": "Secret Signs",
 			"name": "Lengua secreta",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.X2FppoPGuEwJKssM]{Lengua secreta}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.X2FppoPGuEwJKssM caption=false]{Lengua secreta}"
 		},
 		{
 			"id": "Secret Signs ()",
 			"name": "Lengua secreta ()",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.X2FppoPGuEwJKssM]{Lengua secreta}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.X2FppoPGuEwJKssM caption=false]{Lengua secreta}"
 		},
 		{
 			"id": "Secret Signs (Grey Order)",
 			"name": "Lengua secreta (Orden Gris)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.X2FppoPGuEwJKssM]{Lengua secreta}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.X2FppoPGuEwJKssM caption=false]{Lengua secreta}"
 		},
 		{
 			"id": "Secret Signs (Guilder)",
 			"name": "Lengua secreta (Gremial)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.X2FppoPGuEwJKssM]{Lengua secreta}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.X2FppoPGuEwJKssM caption=false]{Lengua secreta}"
 		},
 		{
 			"id": "Secret Signs (Ranger)",
 			"name": "Lengua secreta (Rural)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.X2FppoPGuEwJKssM]{Lengua secreta}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.X2FppoPGuEwJKssM caption=false]{Lengua secreta}"
 		},
 		{
 			"id": "Secret Signs (Scout)",
 			"name": "Lengua secreta (Explorador)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.X2FppoPGuEwJKssM]{Lengua secreta}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.X2FppoPGuEwJKssM caption=false]{Lengua secreta}"
 		},
 		{
 			"id": "Secret Signs (Thief)",
 			"name": "Lengua secreta (Ladrón)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.X2FppoPGuEwJKssM]{Lengua secreta}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.X2FppoPGuEwJKssM caption=false]{Lengua secreta}"
 		},
 		{
 			"id": "Secret Signs (Vagabond)",
 			"name": "Lengua secreta (Vagabundo)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.X2FppoPGuEwJKssM]{Lengua secreta}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.X2FppoPGuEwJKssM caption=false]{Lengua secreta}"
 		},
 		{
 			"id": "Set Trap",
 			"name": "Poner trampas",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.fmMkUHUwOPwex8mj]{Poner trampas}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.fmMkUHUwOPwex8mj caption=false]{Poner trampas}"
 		},
 		{
 			"id": "Sleight of Hand",
 			"name": "Prestidigitación",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.bGqmHCju8VZ8q2Pv]{Prestidigitación}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.bGqmHCju8VZ8q2Pv caption=false]{Prestidigitación}"
 		},
 		{
 			"id": "Stealth",
 			"name": "Movimiento silencioso",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Movimiento silencioso}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Movimiento silencioso}"
 		},
 		{
 			"id": "Stealth ()",
 			"name": "Movimiento silencioso ()",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Movimiento silencioso}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Movimiento silencioso}"
 		},
 		{
 			"id": "Stealth (Rural)",
 			"name": "Movimiento silencioso (Rural)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Movimiento silencioso}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Movimiento silencioso}"
 		},
 		{
 			"id": "Stealth (Underground)",
 			"name": "Movimiento silencioso (Subterráneo)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Movimiento silencioso}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Movimiento silencioso}"
 		},
 		{
 			"id": "Stealth (Urban)",
 			"name": "Movimiento silencioso (Urbano)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE]{Movimiento silencioso}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.OcTx7sDraGiGcvnE caption=false]{Movimiento silencioso}"
 		},
 		{
 			"id": "Swim",
 			"name": "Nadar",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QoWDfx8SIhpCiIX5]{Nadar}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QoWDfx8SIhpCiIX5 caption=false]{Nadar}"
 		},
 		{
 			"id": "Track",
 			"name": "Seguir rastros",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.EWHNXyzDLPBpoVxK]{Seguir rastros}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.EWHNXyzDLPBpoVxK caption=false]{Seguir rastros}"
 		},
 		{
 			"id": "Trade ()",
 			"name": "Oficio ()",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu]{Oficio}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
 		},
 		{
 			"id": "Trade (Apothecary)",
 			"name": "Oficio (Boticario)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu]{Oficio}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
 		},
 		{
 			"id": "Trade (Barber)",
 			"name": "Oficio (Barbero)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu]{Oficio}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
 		},
 		{
 			"id": "Trade (Calligrapher)",
 			"name": "Oficio (Calígrafo)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu]{Oficio}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
 		},
 		{
 			"id": "Trade (Carpenter)",
 			"name": "Oficio (Carpintero)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu]{Oficio}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
 		},
 		{
 			"id": "Trade (Chandler)",
 			"name": "Oficio (Cerero)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu]{Oficio}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
 		},
 		{
 			"id": "Trade (Cook)",
 			"name": "Oficio (Cocinero)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu]{Oficio}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
 		},
 		{
 			"id": "Trade (Embalmer)",
 			"name": "Oficio (Embalsamador)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu]{Oficio}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
 		},
 		{
 			"id": "Trade (Scribe)",
 			"name": "Oficio (Escriba)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu]{Oficio}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
 		},
 		{
 			"id": "Trade (Smith)",
 			"name": "Oficio (Herrero)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu]{Oficio}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
 		},
 		{
 			"id": "Trade (Tanner)",
 			"name": "Oficio (Curtidor)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu]{Oficio}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
 		},
 		{
 			"id": "Trade (Cheesemonger)",
 			"name": "Oficio (Quesero)",
-			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu]{Oficio}"
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
 		},
 		{
 			"id": "Acquiescence",
@@ -7553,7 +7553,7 @@
 			"effects": [{
 				"name":"Cúpula",
 				"scriptData": [
-					{"label":"Cúpula","script":"if (!args.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
+					{"label":"Cúpula","script":"if (!args.opposedTest.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -7564,7 +7564,7 @@
 			"effects": [{
 				"name":"Cúpula (Bestias)",
 				"scriptData": [
-					{"label":"Cúpula","script":"if (!args.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
+					{"label":"Cúpula","script":"if (!args.opposedTest.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -7575,7 +7575,7 @@
 			"effects": [{
 				"name":"Cúpula (Demonología)",
 				"scriptData": [
-					{"label":"Cúpula","script":"if (!args.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
+					{"label":"Cúpula","script":"if (!args.opposedTest.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -7586,7 +7586,7 @@
 			"effects": [{
 				"name":"Cúpula (Muerte)",
 				"scriptData": [
-					{"label":"Cúpula","script":"if (!args.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
+					{"label":"Cúpula","script":"if (!args.opposedTest.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -7597,7 +7597,7 @@
 			"effects": [{
 				"name":"Cúpula (Fuego)",
 				"scriptData": [
-					{"label":"Cúpula","script":"if (!args.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
+					{"label":"Cúpula","script":"if (!args.opposedTest.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -7608,7 +7608,7 @@
 			"effects": [{
 				"name":"Cúpula (Cielos)",
 				"scriptData": [
-					{"label":"Cúpula","script":"if (!args.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
+					{"label":"Cúpula","script":"if (!args.opposedTest.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -7619,7 +7619,7 @@
 			"effects": [{
 				"name":"Cúpula (Adivinación)",
 				"scriptData": [
-					{"label":"Cúpula","script":"if (!args.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
+					{"label":"Cúpula","script":"if (!args.opposedTest.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -7630,7 +7630,7 @@
 			"effects": [{
 				"name":"Cúpula (Vida)",
 				"scriptData": [
-					{"label":"Cúpula","script":"if (!args.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
+					{"label":"Cúpula","script":"if (!args.opposedTest.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -7641,7 +7641,7 @@
 			"effects": [{
 				"name":"Cúpula (Luz)",
 				"scriptData": [
-					{"label":"Cúpula","script":"if (!args.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
+					{"label":"Cúpula","script":"if (!args.opposedTest.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -7652,7 +7652,7 @@
 			"effects": [{
 				"name":"Cúpula (Metal)",
 				"scriptData": [
-					{"label":"Cúpula","script":"if (!args.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
+					{"label":"Cúpula","script":"if (!args.opposedTest.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -7663,7 +7663,7 @@
 			"effects": [{
 				"name":"Cúpula (Nigromancia)",
 				"scriptData": [
-					{"label":"Cúpula","script":"if (!args.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
+					{"label":"Cúpula","script":"if (!args.opposedTest.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -7674,7 +7674,7 @@
 			"effects": [{
 				"name":"Cúpula (Sombras)",
 				"scriptData": [
-					{"label":"Cúpula","script":"if (!args.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
+					{"label":"Cúpula","script":"if (!args.opposedTest.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -7685,7 +7685,7 @@
 			"effects": [{
 				"name":"Cúpula (Brujería)",
 				"scriptData": [
-					{"label":"Cúpula","script":"if (!args.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
+					{"label":"Cúpula","script":"if (!args.opposedTest.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -12709,7 +12709,7 @@
 				"name":"Artesano",
 				"scriptData": [
 					{},
-					{"label":"Elegir Habilidad de Oficio","script":"if (this.item.name.includes(\"(\"))\n{\n\tlet trade = this.item.parenthesesText;\n\treturn this.item.updateSource({\"system.tests.value\" : this.item.system.tests.value.replace(\"cualquiera\", trade)})\n}\n\nlet index = game.packs\n.filter(i => i.metadata.type == \"Item\")\n.reduce((acc, pack) => acc.concat(pack.index.contents), [])\n.filter(i => i.type == \"skill\" && i.name.includes(game.i18n.localize(\"NAME.Trade\")))\n.map(i => {\n\ti.id = i._id\n\treturn i\n})\n\nlet choice = await ItemDialog.create(index, 1, \"Escoge una Habilidad de Oficio\")\nlet text;\nif (!choice[0])\n{\n    let custom = await Dialog.wait({\n        title : \"Oficio Personalizado\",\n        content : \"<input type='text'>\",\n        buttons : {\n            confirm : {\n                label : game.i18n.localize(\"Confirm\"),\n                callback : (dlg) => {\n                    return dlg.find(\"input\")[0].value\n                }\n            }\n        },\n        default : \"confirm\",\n        close : () => {\n            return \"\"\n        }\n    })   \n    text = custom || \"\"\n}\nelse \n{\n    text = warhammer.utility.extractParenthesesText(choice[0].name)\n}\n\nawait this.item.updateSource({name : this.item.name + ` (${text})`, \"system.tests.value\" : this.item.system.tests.value.replace(\"cualquiera\", text)})"},
+					{"label":"Elegir Habilidad de Oficio","script":"if (this.item.name.includes(\"(\"))\n{\n\tlet trade = this.item.parenthesesText;\n\treturn this.item.updateSource({\"system.tests.value\" : this.item.system.tests.value.replace(\"cualquiera\", trade)})\n}\n\nlet index = game.packs\n.filter(i => i.metadata.type == \"Item\")\n.reduce((acc, pack) => acc.concat(pack.index.contents), [])\n.filter(i => i.type == \"skill\" && i.name.includes(game.i18n.localize(\"NAME.Trade\")))\n.map(i => {\n\ti.id = i._id\n\treturn i\n})\n\nlet choice = await ItemDialog.create(index, 1, {text : \"Escoge una Habilidad de Oficio, o no selecciones ninguna para escribirla manualmente\", title : this.effect.name})\nlet text;\nif (!choice[0])\n{\n    let custom = await Dialog.wait({\n        title : \"Oficio Personalizado\",\n        content : \"<input type='text'>\",\n        buttons : {\n            confirm : {\n                label : game.i18n.localize(\"Confirm\"),\n                callback : (dlg) => {\n                    return dlg.find(\"input\")[0].value\n                }\n            }\n        },\n        default : \"confirm\",\n        close : () => {\n            return \"\"\n        }\n    })   \n    text = custom || \"\"\n}\nelse \n{\n    text = warhammer.utility.extractParenthesesText(choice[0].name)\n}\n\nawait this.item.updateSource({name : this.item.name + ` (${text})`, \"system.tests.value\" : this.item.system.tests.value.replace(\"cualquiera\", text)})"},
 					{"label":"Añadir Habilidad de Oficio"}
 					]
 				}]

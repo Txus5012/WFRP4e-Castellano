@@ -798,28 +798,6 @@
             }
         },
 
-        "Theme" : {
-            "Config" : "Configuración del tema",
-            "ConfigButton" : "Configurar tema",
-            "ConfigHint" : "Activa o desactiva el estilo provisto por el sistema.",
-            "FIELDS" : {
-                "actor.enabled.label" : "Activar tema",
-                "item.enabled.label" : "Activar tema",
-                "journal.enabled.label" : "Activar tema",
-                "sidebar.enabled.label" : "Activar tema",
-                "apps.enabled.label" : "Activar tema",
-
-                "actor.font.label" : "Fuente",
-                "item.font.label" : "Fuente",
-                "journal.font.label" : "Fuente",
-                "sidebar.font.label" : "Fuente",
-                "apps.font.label" : "Fuente"
-            },
-            "Font" : {
-                "Classic" : "Clásica",
-                "Readable" : "Leíble"
-            }
-		},
         "Dialog.ValueDialog": "Diálogo de valor",
         "Dialog.EnterValue": "Escribe valor",
         "Dialog.SelectValue": "Selecciona valor",
@@ -834,6 +812,7 @@
         "SendingSocketRequest" : "Enviando solicitud de socket",
         "ZoneConfig" : "Configuración de Zona",
         "ZoneEffects" : "Aplicados Efectos de Zona",
+        "RollMode" : "Modo de tirada",
         "Warning" : {
             "RenderAuraChange" : "Para reflejar el canbio en Renderiar Áura, desactiva y reactiva el Efecto fuente, o reemplaza el Icono en la Escena."
         },
@@ -897,6 +876,30 @@
             "Types": {
                 "Label": "Tipos"
             }
+        },
+
+        "Theme" : {
+            "Config" : "Configuración de tema",
+            "ConfigButton" : "Configurar tema",
+            "ConfigHint" : "Activar o desactivar el estilo provisto por el sistema.",
+            "FIELDS" : {
+                "actor.enabled.label" : "Activar tema",
+                "item.enabled.label" : "Activar tema",
+                "journal.enabled.label" : "Activar tema",
+                "sidebar.enabled.label" : "Activar tema",
+                "apps.enabled.label" : "Activar tema",
+
+                "actor.font.label" : "Fuente",
+                "item.font.label" : "Fuente",
+                "journal.font.label" : "Fuente",
+                "sidebar.font.label" : "Fuente",
+                "apps.font.label" : "Fuente"
+            },
+            "Font" : {
+                "Classic" : "Clásica",
+                "Readable" : "Leible"
+            }
+
         },
     "EFFECT.TABS.scripts" : "Scripts"
     },
@@ -1029,8 +1032,6 @@
     "SETTINGS.FocusTurnStartHint" : "Al comienzo del turno del combatiente, mueve la cámara hacia ellos.",
     "SETTINGS.HideTestData" : "Esconder Datos del Chequeo",
     "SETTINGS.HideTestDataHint" : "Las tarjetas de chat de chequeos de DJ no muestran datos sensible del PNJ a los jugadores.",
-    "SETTINGS.ManualChatCards" : "Tarjetas de Chat Manuales",
-    "SETTINGS.ManualChatCardsHint" : "Muestra un resultado de tirada en blanco para rellenar si se usan dados físicos.",
     "SETTINGS.PlayerBrowser" : "Acceso de jugadores al buscador",
     "SETTINGS.PlayerBrowserHint" : "Permite a los jugadores acceder al buscador de Objetos.",
     "SETTINGS.AdvantageBonus" : "Bonificador por Ventaja",
@@ -1084,7 +1085,7 @@
     "SETTINGS.Moo": "Reglas de la Casa de Moo Man",
     "SETTINGS.MooHint": "Cambios de mecánicas variadas que creo tienen potencial para mejorar el juego. Notad que las aquí enumeradas no son una lista exhaustiva de las reglas de la casa que yo uso, sólo las que pueden ser aplicadas en el código.<br><br>Para la lista entera, por favor ved la <a href='https://github.com/moo-man/WFRP4e-FoundryVTT/wiki/Homebrew-Rules'>Página de la Wiki.</a><br>Notad que estas reglas generalmente están hechas para ser usadas todas juntas.<br>Los comentarios siempre se agradecen. Por favor usad el <a href='https://github.com/moo-man/WFRP4e-FoundryVTT/discussions/categories/moo-s-house-rules'>Panel de Discusión de Github</a> para discutir las mecánicas.",
     "SETTINGS.MooAdvantage" : "Ventaja",
-    "SETTINGS.MooAdvantageHint" : "En lugar de +10 por Ventaja, ganas +1 NE por Ventaja <strong>en chequeos exitosos</strong>.",
+    "SETTINGS.MooAdvantageHint" : "En lugar de +10 por Ventaja, ganas +1 NE por Ventaja en chequeos exitosos.",
     "SETTINGS.MooDifficulty" : "Opciones de Dificultad",
     "SETTINGS.MooDifficultyHint" : "Hace que los opciones de Dificultad sean simétricas.",
     "SETTINGS.MooCritsFumbles" : "MooCritiPifias",
