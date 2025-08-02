@@ -1,0 +1,761 @@
+{
+	"label": "Tablas (Vientos de la Magia)",
+    "folders": {
+        "Familiar Personality": "Personalidad del familiar",
+		"Grimoire": "Grimorio",
+		"Marks": "Marcas",
+		"Miscast": "Disfunción",
+		"Other": "Otras",
+		"Potion Spoilage": "Deterioro en pociones",
+		"Scroll": "Pergamino",
+		"Symbol": "Símbolo",
+		"Vortex": "Vórtice"
+    },
+	"mapping": {
+		"tablenames": {
+			"path": "results",
+			"converter": "tablenames"
+		}
+	},
+	"entries": [
+		{
+			"id": "Potion Spoilage Effects - Extreme",
+			"name": "Efectos de deterioro en pociones - Extremo",
+			"results": {
+				"1-4": "Bubas",
+				"5-6": "Hidropesía",
+				"7-8": "Sangre fina",
+				"9-10": "Hongos",
+				"11-12": "Cólicos",
+				"13-14": "Alucinaciones",
+				"15-16": "Olvidadizo",
+				"17-18": "Hedor intenso",
+				"19-20": "Veneno",
+				"21-22": "Brebaje potente",
+				"23-24": "Sarna",
+				"25-26": "Pérdida sensorial",
+				"27-28": "Chillidos",
+				"29-30": "Llagas supurantes",
+				"31-32": "Hormigueo",
+				"33-34": "Pedo sonoro",
+				"35-36": "Efecto retardado (tirar de nuevo)",
+				"37-38": "Efecto retardado (tirar de nuevo)",
+				"39-40": "Pudrición ósea",
+				"41-42": "Corrupción",
+				"43-44": "Corrupción",
+				"45-46": "Embriagante",
+				"47-48": "Desorientado",
+				"49-50": "Muerte aparente",
+				"51-52": "Muerte aparente",
+				"53-54": "Bocio",
+				"55-56": "Bocio",
+				"57-58": "Quemadura intestinal (4)",
+				"59-60": "Quemadura intestinal (4)",
+				"61-62": "Quemadura intestinal (5)",
+				"63-64": "Quemadura intestinal (5)",
+				"65-66": "Quemadura intestinal (6)",
+				"67-68": "Quemadura intestinal (7)",
+				"69-70": "Quemadura intestinal (8)",
+				"71-72": "Quemadura intestinal (9)",
+				"73-74": "Olvidadizo",
+				"75-76": "Olvidadizo",
+				"77-78": "Olvidadizo",
+				"79-80": "Veneno",
+				"81-82": "Veneno",
+				"83-84": "Veneno",
+				"85-86": "Tira en Efecto menor",
+				"87-88": "Tira en Efecto moderado",
+				"89-90": "Tira en Efecto mayor",
+				"91-92": "Tira dos veces",
+				"93-94": "Tira dos veces",
+				"95-96": "Tira dos veces",
+				"97-98": "¡Mortal!",
+				"99-100": "¡Mortal!"
+			}
+		},
+		{
+			"id": "Potion Spoilage Effects - Major",
+			"name": "Efectos de deterioro en pociones - Mayor",
+			"results": {
+				"1-4": "Sin efecto",
+				"5-6": "Bubas",
+				"7-8": "Bubas",
+				"9-10": "Hidropesía",
+				"11-12": "Hidropesía",
+				"13-14": "Sangre fina",
+				"15-16": "Sangre fina",
+				"17-18": "Hongos",
+				"19-20": "Hongos",
+				"21-22": "Cólicos",
+				"23-24": "Cólicos",
+				"25-26": "Alucinaciones",
+				"27-28": "Alucinaciones",
+				"29-30": "Olvidadizo",
+				"31-32": "Olvidadizo",
+				"33-34": "Hedor intenso",
+				"35-36": "Hedor intenso",
+				"37-38": "Veneno",
+				"39-40": "Veneno",
+				"41-42": "Brebaje potente",
+				"43-44": "Brebaje potente",
+				"45-46": "Sarna",
+				"47-48": "Sarna",
+				"49-50": "Pérdida sensorial",
+				"51-52": "Pérdida sensorial",
+				"53-54": "Chillidos",
+				"55-56": "Chillidos",
+				"57-58": "Llagas supurantes",
+				"59-60": "Llagas supurantes",
+				"61-62": "Hormigueo",
+				"63-64": "Hormigueo",
+				"65-66": "Pedo sonoro",
+				"67-68": "Pedo sonoro",
+				"69-70": "Arcadas",
+				"71-72": "Arcadas",
+				"73-74": "Quemadura intestinal (4)",
+				"75-76": "Quemadura intestinal (4)",
+				"77-78": "Quemadura intestinal (5)",
+				"79-80": "Quemadura intestinal (6)",
+				"81-82": "Quemadura intestinal (7)",
+				"83-84": "Quemadura intestinal (8)",
+				"85-86": "Olvidadizo",
+				"87-88": "Tira en Efecto menor",
+				"89-90": "Tira en Efecto moderado",
+				"91-92": "Tira en Efecto extremo",
+				"93-94": "Tira dos veces",
+				"95-96": "Tira dos veces",
+				"97-98": "Tira tres veces",
+				"99-100": "¡Mortal!"
+			}
+		},
+		{
+			"id": "Potion Spoilage Effects - Moderate",
+			"name": "Efectos de deterioro en pociones - Moderada",
+			"results": {
+				"1-4": "Sin efecto",
+				"5-6": "Sin efecto",
+				"7-8": "Sin efecto",
+				"9-10": "Mal aliento",
+				"11-12": "Juanetes",
+				"13-14": "Cambio de color",
+				"15-16": "Sudores",
+				"17-18": "Erupciones",
+				"19-20": "Bocio",
+				"21-22": "Cólicos",
+				"23-24": "Caída del cabello",
+				"25-26": "Alucinaciones",
+				"27-28": "Picores",
+				"29-30": "Orbes supurantes",
+				"31-32": "Hedor intenso",
+				"33-34": "Hambriento",
+				"35-36": "Manchas",
+				"37-38": "Hormigueo",
+				"39-40": "Vapores",
+				"41-42": "Pedo sonoro",
+				"43-44": "Cambio de voz",
+				"45-46": "Verrugas",
+				"47-48": "Quiste",
+				"49-50": "Bubas",
+				"51-52": "Hidropesía",
+				"53-54": "Sangre fina",
+				"55-56": "Hongos",
+				"57-58": "Bocio",
+				"59-60": "Alucinaciones",
+				"61-62": "Olvidadizo",
+				"63-64": "Hedor intenso",
+				"65-66": "Veneno",
+				"67-68": "Brebaje potente",
+				"69-70": "Sarna",
+				"71-72": "Pérdida sensorial",
+				"73-74": "Chillidos",
+				"75-76": "Llagas supurantes",
+				"77-78": "Hormigueo",
+				"79-80": "Pedo sonoro",
+				"81-82": "Verrugas",
+				"83-84": "Quiste",
+				"85-86": "Arcadas",
+				"87-88": "Arcadas",
+				"89-90": "Quemadura intestinal (2)",
+				"91-92": "Tira en Efecto menor",
+				"93-94": "Tira en Efecto mayor",
+				"95-96": "Tira dos veces",
+				"97-98": "Tira dos veces",
+				"99-100": "Tira tres veces"
+			}
+		},
+		{
+			"id": "Potion Spoilage Effects - Minor",
+			"name": "Efectos de deterioro en pociones - Menor",
+			"results": {
+				"1-4": "Sin efecto",
+				"5-6": "Sin efecto",
+				"7-8": "Sin efecto",
+				"9-10": "Sin efecto",
+				"11-12": "Sin efecto",
+				"13-14": "Sin efecto",
+				"15-16": "Sin efecto",
+				"17-18": "Mal aliento",
+				"19-20": "Mal aliento",
+				"21-22": "Juanetes",
+				"23-24": "Juanetes",
+				"25-26": "Cambio de color",
+				"27-28": "Cambio de color",
+				"29-30": "Sudores",
+				"31-32": "Sudores",
+				"33-34": "Erupciones",
+				"35-36": "Erupciones",
+				"37-38": "Bocio",
+				"39-40": "Bocio",
+				"41-42": "Cólicos",
+				"43-44": "Cólicos",
+				"45-46": "Caída del cabello",
+				"47-48": "Caída del cabello",
+				"49-50": "Alucinaciones",
+				"51-52": "Alucinaciones",
+				"53-54": "Picores",
+				"55-56": "Picores",
+				"57-58": "Orbes supurantes",
+				"59-60": "Orbes supurantes",
+				"61-62": "Hedor intenso",
+				"63-64": "Hedor intenso",
+				"65-66": "Hambriento",
+				"67-68": "Hambriento",
+				"69-70": "Manchas",
+				"71-72": "Manchas",
+				"73-74": "Hormigueo",
+				"75-76": "Hormigueo",
+				"77-78": "Vapores",
+				"79-80": "Vapores",
+				"81-82": "Pedo sonoro",
+				"83-84": "Pedo sonoro",
+				"85-86": "Cambio de voz",
+				"87-88": "Cambio de voz",
+				"89-90": "Verrugas",
+				"91-92": "Verrugas",
+				"93-94": "Quiste",
+				"95-96": "Quiste",
+				"97-98": "Tira en Efecto moderado",
+				"99-100": "Tira dos veces"
+			}
+		},
+		{
+			"id": "Grimoire Miscast Table",
+			"name": "Tabla de Disfunciones de Grimorio",
+			"results": {
+				"1-2": "<b>Grabado en la mente</b>: La cabeza del hechicero parece que va a explotar, con un intenso dolor al sufrir [[1d10 + 1]] de Daño que ignora los Puntos de Armadura. Sin embargo, el hechicero memoriza inmediatamente el hechizo.",
+				"3-10": "<b>Sin dolor no hay recompensa</b>: El hechicero es atormentado por el dolor, sufriendo [[1d10 + 4]] de Daño que ignora los Puntos de Armadura.",
+				"11-90": "Sin efecto.",
+				"91-95": "<b>Perdido en el aire</b>: La energía mágica quema el hechizo del grimorio y se pierde.",
+				"96-100": "<b>Libro en llamas</b>: El grimorio queda completamente destruido."
+				}
+		},
+		{
+			"id": "Major Miscast Table (Winds of Magic)",
+			"name": "Tabla de Disfunciones Mayores (Vientos de la Magia)",
+			"results": {
+				"1-5": "<b>Voces fantasmales</b>: todo el mundo en un radio igual a tu Voluntad oye susurros de voces oscuramente seductoras que emanan del Reino del Caos. Toda criatura inteligente deberá superar un Chequeo <strong>Normal (+20)</strong> de <strong>Frialdad</strong> o anotarse 1 Punto de Corrupción.",
+				"6-10": "<b>Choque del <em>Aethyr</em></b>: sufres [[1d10]] Heridas, ignorando tu Bonificador por Resistencia y tus Puntos de Armadura. Deberás superar un Chequeo <strong>Normal (+20)</strong> de <strong>Aguante</strong>, o sufrir también 1 Estado de @Condition[Aturdido].",
+				"11-15": "<b>Habitante de la muerte</b>: tus pasos dejan la muerte tras de sí. Durante las siguientes [[1d10]] horas, toda vida vegetal cercana a ti se marchita y se muere.",
+				"16-20": "<b>Problemas por partida doble</b>: el efecto del hechizo que lanzas se repite en otro lugar en un radio de [[1d10]] millas. A discreción del DJ, debería haber consecuencias donde fuera posible.",
+				"21-25": "<b>Fuego del alma</b>: sufres 1 Estado de @Condition[Ardiendo], mientras te rodean llamas impías de un color asociado a tu Saber.",
+				"26-30": "<b>Don de lenguas</b>: balbuceas de forma ininteligible durante [[1d10]] Asaltos. Durante este tiempo, no puedes comunicarte verbalmente ni llevar a cabo ningún Chequeo de Lanzamiento, aunque por lo demás puedes actuar normalmente.",
+				"31-35": "<b>Plagado</b>: debes enfrentarte a una plaga de @UUID[Compendium.wfrp4e-core.actors.oenbbB0PitRWUBfZ]{ratas}, @UUID[Compendium.wfrp4e-core.actors.VPVnyae6VHeD9cEP]{arañas gigantes}, @UUID[Compendium.wfrp4e-core.actors.AAiKqD1IoweDpJI7]{serpientes} o bestias del Aethyr similares (a elección del DJ). Utiliza los perfiles estándar para el tipo de criatura relevante, añadiendo el Rasgo de criatura @UUID[Compendium.wfrp4e-core.items.E2Es82TvBKa7CoDG]{Plaga}. Al cabo de [[1d10]] Asaltos, si no ha sido destruida todavía, la plaga se retira.",
+				"36-40": "<b>Muñeco de trapo</b>: eres lanzado [[1d10]] yardas por el aire en una dirección aleatoria, sufriendo [[1d10]] Heridas al aterrizar (que ignoran los Puntos de Armadura) y pasas al Estado de @Condition[Tumbado].",
+				"41-45": "<b>Miembro congelado</b>: un miembro (determinado al azar) se te congela durante [[1d10]] horas. El miembro queda inútil, como si hubiera sido @UUID[JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#miembros-amputados]{Amputado}.",
+				"46-50": "<b>Visión oscurecida</b>: pierdes el beneficio del Talento @UUID[Compendium.wfrp4e-core.items.OEjUvJKi0xmBwbS2]{Clarividencia} durante [[1d10]] horas. Los Chequeos de Canalización también sufren un penalizador -20 mientras eso sucede.",
+				"51-55": "<b>Premonición caótica</b>: obtienes una reserva adicional de [[1d10]] puntos de Fortuna (con la que puedes superar tu límite natural). Cada vez que gastas uno de estos puntos, te anotas 1 Punto de Corrupción. Todos los puntos que conserves al final de la sesión se perderán. El DJ también te asigna un número de símbolos invertidos igual a tu Bonificador por Voluntad.",
+				"56-60": "<b>Levitación</b>: te ves impulsado por el aire por los Vientos de la Magia, flotando a [[1d10]] yardas por encima del suelo durante [[1d10]] minutos. Otros PJs te pueden mover a la fuerza y tú te puedes mover usando hechizos, alas o similares, pero si se te deja con tus propios medios, vuelves de forma continua a tu posición de levitar. Consulta las reglas de @UUID[JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.bdfiyhEYtKs7irqc#caidas]{Caída} para lo que sucede cuando termina la levitación.",
+				"61-65": "<b>Regurgitación</b>: vomitas de forma incontrolable, arrojando más vómito maloliente del que tu cuerpo podría contener. Sufres 1 Estado de @Condition[Aturdido] que dura [[1d10]] Asaltos.",
+				"66-70": "<b>Terremoto del Caos</b>: todas las criaturas en un radio de [[1d100]] yardas deberán superar un Chequeo <strong>Normal (+20)</strong> de <strong>Atletismo</strong> o sufrirán 1 Estado de @Condition[Tumbado].",
+				"71-75": "<b>Olvido</b>: pierdes todo recuerdo del hechizo que intentas lanzar. Si ya lo habías memorizado, eres incapaz de recordarlo y debes memorizarlo de nuevo. Si se intenta lanzar desde un grimorio, la página en la que está escrito arde. El hechizo se pierde y, a menos que se tomen rápidamente las medidas adecuadas, el grimorio sufre 1 Estado de @Condition[Ardiendo].",
+				"76-80": "<b>Corazón de traidor</b>: los Dioses Oscuros te animan a cometer un acto pérfido y horrible. Si atacas o traicionas de alguna forma a un aliado hasta el alcance máximo de tus capacidades, recuperas todos tus Puntos de Fortuna. Si haces que otro PJ pierda un Punto de Destino, obtienes +1 Punto de Destino.",
+				"81-85": "<b>Debilitamiento asqueroso</b>: te anotas 1 Punto de Corrupción, pasas al Estado de @Condition[Tumbado] y sufres 1 Estado de @Condition[Fatigado].",
+				"86-90": "<b>Hedor infernal</b>: ¡Ahora sí que hueles realmente mal! Obtienes el Rasgo de Criatura @UUID[Compendium.wfrp4e-core.items.MVI0lXcg6vvtooAF]{Molesto} y probablemente la enemistad de cualquiera con sentido del olfato. Esto dura [[1d10]] horas.",
+				"91-95": "<b>Drenaje de poder</b>: eres incapaz de utilizar el Talento que normalmente empleas para lanzar hechizos (por lo general, @UUID[Compendium.wfrp4e-core.items.3O9clK7LGyuLTHPW]{Magia arcana}) durante [[1d10]] minutos.",
+				"96-100": "<b>Retroalimentación del Aethyr</b>: cualquiera que esté en un radio en yardas igual a tu Bonificador por Voluntad (tanto amigos como enemigos) sufrirá [[1d10]] Heridas, ignorando el Bonificador por Resistencia y los Puntos de Armadura, además pasará al Estado @Condition[Tumbado]. Si no hay objetivos dentro de dicho radio, la magia no tiene dónde disiparse, por lo que tu cabeza explota, matándote instantáneamente."
+				}
+		},
+		{
+			"id": "Minor Miscast Table (Winds of Magic)",
+			"name": "Tabla de Disfunciones Menores (Vientos de la Magia)",
+			"results": {
+				"1-5": "<b>Signo del brujo</b>: la siguiente criatura viva que nazca en un radio de 1 milla será un mutante.",
+				"6-10": "<b>Leche agria</b>: toda la leche en un radio de [[1d100]] yardas se agria de inmediato</p>.",
+				"11-15": "<b>Marchitamiento</b>: se marchitan tantos campos como tu Bonificador por Voluntad en un radio de tantas millas como tu Bonificador por Voluntad; además todas las cosechas se pudren de la noche a la mañana.",
+				"16-20": "<b>Cera del alma</b>: tus oídos se taponan instantáneamente con una gruesa capa de cerumen. Sufres 1 Estado de @Condition[Ensordecido], que no se elimina hasta que alguien te los limpia (mediante un éxito en un Chequeo <strong>Normal (+20)</strong> de <strong>Sanar</strong>).",
+				"21-25": "<b>Aliento helado</b>: la temperatura a tu alrededor desciende repentinamente y el aliento de la gente es perfectamente visible. Las personas que se encuentran a tantas yardas como tu Bonificador por Voluntad de ti deben realizar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Aguante</strong> o sufrir -10 en HP, Agilidad y Destreza debido al frío repentino hasta que abandonan la zona. El efecto dura 1 minuto.",
+				"26-30": "<b>Desatar</b>: sobre tu persona, toda hebilla se desabrocha y todo nudo se desata, lo que puede causar que se caiga el cinturón, que se abran las bolsas, que se caiga la mochila y que la armadura se suelte.",
+				"31-35": "<b>Atuendo descarriado</b>: tus ropas parecen moverse con mente propia. Sufres 1 Estado de @Condition[Enmarañado] con una Fuerza de [[1d10 × 5]] para resistirte.",
+				"36-40": "<b>Maldición de la templanza</b>: todo el alcohol en un radio de [[1d100]] yardas se estropea, pasando a tener un sabor amargo y repugnante. Esto explica por qué los hechizos son tan mal vistos en muchas tabernas del Viejo Mundo.",
+				"41-45": "<b>Lengua empalagosa</b>: todos tus Chequeos de Hablar idioma (incluidos los de Lanzar hechizos) sufren un penalizador de -10 durante [[1d10]] Asaltos.",
+				"46-50": "<b>Distraído</b>: si estás en combate, sufres 1 Estado de @Condition[Sorprendido]. De lo contrario, quedas completamente sobresaltado, con el corazón latiendo a toda velocidad e incapaz de concentrarte durante unos momentos.",
+				"51-55": "<b>Visiones impías</b>: visiones fugaces de actos profanos e impíos te hostigan. Sufres 1 Estado de @Condition[Cegado] y deberás tener éxito en un Chequeo <strong>Desafiante (+0)</strong> de <strong>Frialdad</strong> o sufrir otro.",
+				"56-60": "<b>Ojos brujos</b>: tus ojos se vuelven de un color antinatural asociado a tu Saber durante [[1d10]] horas. Mientras, tus ojos permanecen descoloridos y sufres 1 Estado de @Condition[Cegado] que no se puede eliminar por ningún medio. Pierdes la capacidad de utilizar los Talentos de @UUID[Compendium.wfrp4e-core.items.6w30u0VPsAicrqb5]{Sentir magia} y @UUID[Compendium.wfrp4e-core.items.OEjUvJKi0xmBwbS2]{Clarividencia} durante este tiempo.",
+				"61-65": "<b>Quebrarse</b>: te sangran profusamente la nariz, los ojos y los oídos. Sufres 1 Estado de @Condition[Sangrando].",
+				"66-70": "<b>Susurros letales</b>: el DJ puede elegir dos símbolos invertidos de la Tabla de Símbolos. Deberás tener éxito en un Chequeo <strong>Normal (+20)</strong> de <strong>Voluntad</strong> o sufrirás 1 Punto de Corrupción.",
+				"71-75": "<b>¡El horror!</b>: te ves perturbado por un repentino aluvión de visiones sobrecogedoras del Reino del Caos. El DJ puede elegir un símbolo invertido de la Tabla de Símbolos. Deberás tener éxito en un Chequeo <strong>Difícil (-20)</strong> de <strong>Frialdad</strong> o sufrir 1 Estado de @Condition[Quebrantado].",
+				"76-80": "<b>Maldición de la Corrupción</b>: te anotas 1 Punto de Corrupción",
+				"81-85": "<b>Rebelión intestinal</b>: tus tripas se mueven de forma incontrolable y pierdes el control de los esfínteres. Sufres 1 Estado de @Condition[Fatigado], que no se puede eliminar hasta que te cambias de ropa y te limpias.",
+				"86-90": "<b>Marcado por la magia</b>: encarnas un signo físico del Viento con el que trabajas.</p><p>@Table[hysh-marks]{Marcas de Hysh}</p><p>@Table[chamon-marks]{Marcas de Chamon}</p><p>@Table[ghyran-marks]{Marcas de Ghyran}</p><p>@Table[azyr-marks]{Marcas de Azyr}</p><p>@Table[ulgu-marks]{Marcas de Ulgu}</p><p>@Table[shyish-marks]{Marcas de Shyish}</p><p>@Table[aqshy-marks]{Marcas de Aqshy}</p><p>@Table[ghur-marks]{Marcas de Ghur}</p><p>Si ninguna Tabla de Marcas Arcanas se adapta a tu tradición mágica, o si obtienes una marca que ya tienes, tira de nuevo en la @Table[majormis]{Tabla de Disfunciones Mayores}.",
+				"91-95": "<b>Desventura múltiple</b>: tira dos veces en @Table[minormis]{esta misma tabla} repitiendo cualquier resultado entre 91 y 100.",
+				"96-100": "<b>Caos en cascada</b>: tira de nuevo, pero en la @Table[majormis]{Tabla de Disfunciones Mayores}."
+				}
+		},
+		{
+			"id": "Random Grimoire - Characteristic 1",
+			"name": "Grimorio aleatorio - Característica 1",
+			"results": {
+				"1-20": "Incluye hechizos de Magia arcana y/o Magia menor.",
+				"21-30": "Incluye hechizos de Magia arcana y/o Magia menor.",
+				"31-40": "Está mal redactado y el texto es difícil de leer. Aumenta el NL en 1.",
+				"41-50": "Muy mal redactado y el texto es difícil de leer. Aumenta el NL en 1 y cuestan 50 PX para memorizar.",
+				"51-60": "El hechizo está redactado con elegancia y claridad, siendo más fácil de lanzar. Reduce el NL en 1, después de duplicarse por el lanzamiento desde el grimorio.",
+				"61-70": "El hechicero ha añadido notas sobre los procesos subyacentes al aprendizaje de los hechizos. Reduce en 50 los PX para memorizar los hechizos.",
+				"71-80": "Contiene numerosas anotaciones, secretos, pistas o simplemente divagaciones sin sentido.",
+				"81-85": "Está codificado. Los hechizos están escritos en un código que debe ser descifrado antes de ser lanzados o memorizados (Chequeo <strong>Prolongado</strong> de <strong>Lengua secreta</strong>, un total de 40 NE por hechizo).",
+				"86-90": "Es falso. El grimorio parece verdadero, pero es obra de un embaucador.",
+				"91-95": "Está incompleto. Algunos o todos los hechizos están inacabados o faltan palabras clave. Los hechizos pueden completarse si se supera un Chequeo <strong>Desafiante (+0)</strong> de <strong>Investigar</strong> con un total de 20 NE por hechizo.",
+				"96-100": "Está dañado. Sólo se pueden leer los hechizos."
+				}
+		},
+		{
+			"id": "Random Grimoire - Characteristic 2",
+			"name": "Grimorio aleatorio - Característica 2",
+			"results": {
+				"1-20": "Está envuelto en cuero para protegerlo del fuego, del agua y otras fuentes de deterioro.",
+				"21-30": "El grimorio está cerrado.",
+				"31-40": "El grimorio está cerrado y protegido.",
+				"41-50": "La cubierta está decorada con joyas, grabados, etc.",
+				"51-60": "Es robado y su dueño lo está buscando.",
+				"61-70": "Está encuadernado en un material inusual, como piel o cuero de una criatura exótica.",
+				"71-80": "Las páginas están hechas de un material que no es papel, como por ejemplo vitela, metal o piel.",
+				"81-85": "Es bien conocido. El grimorio es famoso, ya sea por su contenido o propietario.",
+				"86-90": "Influencia corruptora. Hay una pequeña cantidad de piedra bruja en polvo incrustada en el lomo.",
+				"91-95": "¡Trampa! Hay una pequeña cantidad de veneno colocada en pequeñas agujas del lomo o pegada a las páginas. Supera un Chequeo <strong>Muy difícil (-30)</strong> de <strong>Percepción</strong> para detectar la trampa antes de activarla.",
+				"96-100": "Tira dos veces más."
+				}
+		},
+		{
+			"id": "Random Grimoire - Lore",
+			"name": "Grimorio aleatorio - Saber",
+			"results": {
+				"1-20": "Arcano",
+				"21-30": "Magia menor o tira de nuevo",
+				"31-40": "Saber de la Luz",
+				"41-50": "Saber del Metal",
+				"51-60": "Saber de la Vida",
+				"61-70": "Saber de los Cielos",
+				"71-80": "Saber de las Sombras",
+				"81-85": "Saber de la Muerte",
+				"86-90": "Saber del Fuego",
+				"91-95": "Saber de las Bestias",
+				"96-100": "Magia Oscura o Magia del Caos"
+				}
+		},
+		{
+			"id": "Random Grimoire - Max CN",
+			"name": "Grimorio aleatorio - NL Máx."
+		},
+		{
+			"id": "Random Grimoire - Spells",
+			"name": "Grimorio aleatorio - Hechizos"
+		},
+		{
+			"id": "Random Grimoire - Type",
+			"name": "Grimorio aleatorio - Tipo",
+			"results": {
+				"1-20": "Libro",
+				"21-30": "Libro",
+				"31-40": "Libro",
+				"41-50": "Libro",
+				"51-60": "Libro",
+				"61-70": "Libro",
+				"71-80": "Libro",
+				"81-85": "Papeles sueltos en una caja o bolsa",
+				"86-90": "Pergamino largo (a lo largo)",
+				"91-95": "Pergamino largo (a lo ancho)",
+				"96-100": "Caja de pergaminos (1 por hechizo) atados con un cinto"
+				}
+		},
+		{
+			"id": "Arcane Marks of Aqshy",
+			"name": "Marcas Arcanas de Aqshy"
+		},
+		{
+			"id": "Arcane Marks of Azyr",
+			"name": "Marcas Arcanas de Azyr"
+		},
+		{
+			"id": "Arcane Marks of Chamon",
+			"name": "Marcas Arcanas de Chamon"
+		},
+		{
+			"id": "Arcane Marks of Ghur",
+			"name": "Marcas Arcanas de Ghur"
+		},
+		{
+			"id": "Arcane Marks of Ghyran",
+			"name": "Marcas Arcanas de Ghyran"
+		},
+		{
+			"id": "Arcane Marks of Hysh",
+			"name": "Marcas Arcanas de Hysh"
+		},
+		{
+			"id": "Arcane Marks of Shyish",
+			"name": "Marcas Arcanas de Shyish"
+		},
+		{
+			"id": "Arcane Marks of Ulgu",
+			"name": "Marcas Arcanas de Ulgu"
+		},
+		{
+			"id": "Beast Unbroken Actions",
+			"name": "Acciones de Bestia liberada",
+			"results": {
+				"1-3": "<b>Distraído</b>: el objetivo se rasca el pelaje, defeca o se hurga la nariz.",
+				"4-6": "<b>Asustado</b>: el objetivo se mueve al azar en cualquier dirección, chocando contra obstáculos o atacando a criaturas a su paso.",
+				"7-9": "<b>Amistoso</b>: el objetivo ríe maniacamente y se arrastra o baila hacia el PJ más cercano.",
+				"10-10": "<b>Enfurecido</b>: el objetivo lanzará un grito primitivo, provocando  @Fear[1]{Miedo (1)} a cualquiera sin el Talento de <em>Magia arcana (Saber de las Bestias)</em> que pueda oírlo."
+				}
+		},
+		{
+			"id": "Bewilder Actions",
+			"name": "Acciones de Desconcertar",
+			"results": {
+				"1-2": "<b>Confundido</b>: el objetivo debe superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Voluntad</strong> para realizar acciones.",
+				"3-4": "<b>Errante</b>: el objetivo puede actuar normalmente, pero se mueve en una dirección aleatoria.",
+				"5-6": "<b>Ataque</b>: el objetivo carga contra el objetivo más cercano.",
+				"7-8": "<b>Inactivo</b>: el objetivo sólo puede quedarse quieto y Esquivar.",
+				"9-10": "<b>Hacerse un ovillo</b>: el objetivo sufre 1 Estado de @Condition[Tumbado] y queda @UUID[Compendium.wfrp4e-core.journals.NS3YGlJQxwTggjRX.JournalEntryPage.wmA76Q2zJJ9HrkvA#objetivos-indefensos]{Indefenso}."
+				}
+		},
+		{
+			"id": "Brewing Disasters",
+			"name": "Accidentes en la Elaboración",
+			"results": {
+				"1-3": "<b>Estropeada</b>: creas la poción, pero está estropeada. Tira en la tabla de @Table[potion-spoilage]{Efectos de deterioro en pociones}.",
+				"4-4": "<b>Humo y hedor</b>: sale un denso humo de los recipientes de cocción cuando consigues calentar la poción. Tú y tu equipo oleréis fuertemente a azufre durante muchos días después. Muchos boticarios y alquimistas consideran este proceso como un rito de iniciación.",
+				"5-5": "<b>Manos de mantequilla</b>: arruinas el lote de pociones cuando se te cae parte de la cristalería en un momento crítico, cuya reparación o sustitución cuesta el 5% del coste total del laboratorio.",
+				"6-6": "<b>Dolores de cabeza</b>: arruinas el lote y debes hacer un Chequeo <strong>Complicado (-10)</strong> de <strong>Aguante</strong> o sufrir 1 Estado de @Condition[Envenenado].",
+				"7-7": "<b>Quemaduras ácidas</b>: te salpicas con reactivos cáusticos. Sufres un impacto de Daño [[1d10]] y, si no recibes la atención de un curandero en menos de una hora, quedas marcado permanentemente. Muchos boticarios y alquimistas consideran tales cicatrices como una insignia de honor.",
+				"8-8": "<b>¡Explosión trivial!</b>: tu equipo se daña, costando el 10% del coste total del laboratorio en repararlo o reemplazarlo. Sufres un golpe de Daño [[1d10 + 2]].",
+				"9-9": "<b>¡Explosión!</b>: tu equipo resulta dañado y su reparación o sustitución cuesta el 20% del coste total del laboratorio. Sufres un impacto de Daño [[1d10 + 4]].",
+				"10-10": "<b>¡Incendio!</b>: tu laboratorio se incendia. Tu equipo resulta dañado, con un coste del 30% del coste total del laboratorio.",
+				"11-11": "<b>¡Explosión mayor!</b>: tu laboratorio queda destruido. Sufres un impacto de Daño [[1d10 + 6]]."
+				}
+		},
+		{
+			"id": "Chaotic Corruption Effects",
+			"name": "Efectos de la Corrupción del Caos",
+			"results": {
+				"1-5": "Pilares de calaveras",
+				"6-10": "Cielo cobrizo",
+				"11-15": "Lluvia de sangre",
+				"16-20": "Animales frenéticos",
+				"21-25": "Hierba cortante",
+				"26-30": "Árboles susurrantes",
+				"31-35": "Flores embriagantes",
+				"36-40": "Voces seductoras",
+				"41-45": "Animales sin pelo",
+				"46-50": "Zarcillos carnosos",
+				"51-55": "Árboles cristalizados",
+				"56-60": "Suelo multicolor",
+				"61-65": "Agua fosforescente",
+				"66-70": "Rayos verdes",
+				"71-75": "Clima aleatorio",
+				"76-80": "Plantas en descomposición",
+				"81-85": "Árboles enfermos",
+				"86-90": "Agua pútrida",
+				"91-95": "Enjambres de moscas abotargadas",
+				"96-100": "Flores con pústulas"
+				}
+		},
+		{
+			"id": "Crystal Maze",
+			"name": "Laberinto de cristal",
+			"results": {
+				"1-3": "<b>Escape</b>: el objetivo vuelve al reino material de dónde desapareció.",
+				"4-6": "<b>Confuso</b>: el objetivo vuelve a tirar en el siguiente Asalto.",
+				"7-9": "<b>Perdido</b>: el objetivo se pierde durante [[1d10]] horas y tira para resistir una @Corruption[moderada]{Exposición moderada a la Corrupción} cuando quiera volver.",
+				"10-10": "<b>Condenación</b>: el objetivo se pierde para siempre en el Reino de Tzeentch."
+				}
+		},
+		{
+			"id": "Cursed Knuckleduster Diseases",
+			"name": "Enfermedades de las nudilleras malditas"
+		},
+		{
+			"id": "Magical Flux",
+			"name": "Flujo mágico",
+			"results": {
+				"1-1": "Saber de las Bestias",
+				"2-2": "Saber de la Muerte",
+				"3-3": "Saber del Fuego",
+				"4-4": "Saber de los Cielos",
+				"5-5": "Saber del Metal",
+				"6-6": "Saber de la Vida",
+				"7-7": "Saber de la Luz",
+				"8-8": "Saber de las Sombras",
+				"9-9": "Brujería",
+				"10-10": "Magia oscura y Magia del Caos"
+				}
+		},
+		{
+			"id": "Necromantic Corruption Effects",
+			"name": "Efectos de la Corrupción Nigromántica",
+			"results": {
+				"1-5": "Bosque petrificado",
+				"6-10": "Cultivos estériles",
+				"11-15": "Lobos funestos",
+				"16-20": "Murciélagos vampiro",
+				"21-25": "Agua envenenada",
+				"26-30": "Muertos vivientes",
+				"31-35": "Tierra ennegrecida",
+				"36-40": "Plantas marchitas",
+				"41-45": "Enjambres de insectos",
+				"46-50": "Aves carroñeras",
+				"51-55": "Montículos de huesos",
+				"56-60": "Cielo sin sol",
+				"61-65": "Lluvia de ceniza",
+				"66-70": "Anfitriones espirituales",
+				"71-75": "Grupos de necrófagos",
+				"76-80": "Ciénaga pestilente",
+				"81-85": "Frío penetrante",
+				"86-90": "Esqueletos de animales",
+				"91-95": "Bandadas de murciélagos",
+				"96-100": "Niebla terrible"
+				}
+		},
+		{
+			"id": "Random Caster",
+			"name": "Lanzador aleatorio",
+			"results": {
+				"1-5": "@UUID[Compendium.wfrp4e-core.journals.YBVrpUHEjohB1H4f.JournalEntryPage.SCijiCw628GLE2pT#hechizos-menores]{Magia menor}",
+				"6-10": "@UUID[Compendium.wfrp4e-core.journals.YBVrpUHEjohB1H4f.JournalEntryPage.SCijiCw628GLE2pT#hechizos-arcanos]{Magia arcana}",
+				"11-15": "@UUID[Compendium.wfrp4e-core.journals.YBVrpUHEjohB1H4f.JournalEntryPage.SCijiCw628GLE2pT#el-saber-de-las-bestias]{Saber de las Bestias}",
+				"16-20": "@UUID[Compendium.wfrp4e-core.journals.YBVrpUHEjohB1H4f.JournalEntryPage.SCijiCw628GLE2pT#el-saber-de-la-muerte]{Saber de la Muerte}",
+				"21-25": "@UUID[Compendium.wfrp4e-core.journals.YBVrpUHEjohB1H4f.JournalEntryPage.SCijiCw628GLE2pT#el-saber-del-fuego]{Saber del Fuego}",
+				"26-30": "@UUID[Compendium.wfrp4e-core.journals.YBVrpUHEjohB1H4f.JournalEntryPage.SCijiCw628GLE2pT#el-saber-de-los-cielos]{Saber de los Cielos}",
+				"31-35": "@UUID[Compendium.wfrp4e-core.journals.YBVrpUHEjohB1H4f.JournalEntryPage.SCijiCw628GLE2pT#el-saber-del-metal]{Saber del Metal}",
+				"36-40": "@UUID[Compendium.wfrp4e-core.journals.YBVrpUHEjohB1H4f.JournalEntryPage.SCijiCw628GLE2pT#el-saber-de-la-vida]{Saber de la Vida}",
+				"41-45": "@UUID[Compendium.wfrp4e-core.journals.YBVrpUHEjohB1H4f.JournalEntryPage.SCijiCw628GLE2pT#el-saber-de-la-luz]{Saber de la Luz}",
+				"46-50": "@UUID[Compendium.wfrp4e-core.journals.YBVrpUHEjohB1H4f.JournalEntryPage.SCijiCw628GLE2pT#el-saber-de-las-sombras]{Saber de las Sombras}",
+				"51-55": "@UUID[Compendium.wfrp4e-core.journals.YBVrpUHEjohB1H4f.JournalEntryPage.SCijiCw628GLE2pT#el-saber-de-la-adivinacion]{Saber de la Adivinación}",
+				"56-60": "@UUID[Compendium.wfrp4e-core.journals.YBVrpUHEjohB1H4f.JournalEntryPage.SCijiCw628GLE2pT#el-saber-de-la-brujeria]{Saber de la Brujería}",
+				"61-65": "@UUID[Compendium.wfrp4e-core.journals.YBVrpUHEjohB1H4f.JournalEntryPage.SCijiCw628GLE2pT#el-saber-de-la-demonologia]{Saber de la Demonología}",
+				"66-70": "@UUID[Compendium.wfrp4e-core.journals.YBVrpUHEjohB1H4f.JournalEntryPage.SCijiCw628GLE2pT#el-saber-de-la-nigromancia]{Saber de la Nigromancia}",
+				"71-80": "@UUID[Compendium.wfrp4e-core.journals.YBVrpUHEjohB1H4f.JournalEntryPage.SCijiCw628GLE2pT#saber-de-nurgle]{Saber de Nurgle}",
+				"81-85": "@UUID[Compendium.wfrp4e-core.journals.YBVrpUHEjohB1H4f.JournalEntryPage.SCijiCw628GLE2pT#saber-de-slaanesh]{Saber de Slaanesh}",
+				"86-95": "@UUID[Compendium.wfrp4e-core.journals.YBVrpUHEjohB1H4f.JournalEntryPage.SCijiCw628GLE2pT#saber-de-tzeentch]{Saber de Tzeentch}",
+				"96-100": "A elección del DJ"
+				}
+		},
+		{
+			"id": "Sensory Loss",
+			"name": "Pérdida sensorial",
+			"results": {
+				"1-3": "Pierdes la vista",
+				"4-6": "Pierdes el oído",
+				"7-8": "Pierdes el olfato",
+				"9-9": "Pierdes el tacto",
+				"10-10": "Pierdes el gusto"
+				}
+		},
+		{
+			"id": "Spell Syphon",
+			"name": "Imbibición de hechizos",
+			"results": {
+				"1-2": "<b>Sin efecto</b>: las energías mágicas hierven en una inofensiva pero espectacular llamarada de energía.",
+				"3-7": "<b>Imbibición de Hechizo</b>: los Escribas Azules lanzan el hechizo en lugar del hechicero. Esto se suma a cualquier hechizo que pueden lanzar en ese Asalto.",
+				"8-9": "<b>Hechizo reflejado</b>: tanto el lanzador como los Escribas Azules lanzan el hechizo. Los Escribas Azules pueden lanzar un hechizo adicional en este Asalto.",
+				"10-10": "<b>Derrame de energía</b>: las energías del hechizo son fatalmente interrumpidas. Tanto el lanzador como los Escribas Azules se encuentran en el centro de una Explosión 5, con Daño 6."
+				}
+		},
+		{
+			"id": "Scroll - Lore",
+			"name": "Pergamino -  Saber",
+			"results": {
+				"1-3": "@UUID[Compendium.wfrp4e-core.journals.YBVrpUHEjohB1H4f.JournalEntryPage.SCijiCw628GLE2pT#hechizos-menores]{Menor}",
+				"4-25": "@UUID[Compendium.wfrp4e-core.journals.YBVrpUHEjohB1H4f.JournalEntryPage.SCijiCw628GLE2pT#hechizos-arcanos]{Magia arcana}",
+				"26-33": "@UUID[Compendium.wfrp4e-core.journals.YBVrpUHEjohB1H4f.JournalEntryPage.SCijiCw628GLE2pT#el-saber-de-las-bestias]{Bestias}",
+				"34-41": "@UUID[Compendium.wfrp4e-core.journals.YBVrpUHEjohB1H4f.JournalEntryPage.SCijiCw628GLE2pT#el-saber-de-la-muerte]{Muerte}",
+				"42-49": "@UUID[Compendium.wfrp4e-core.journals.YBVrpUHEjohB1H4f.JournalEntryPage.SCijiCw628GLE2pT#el-saber-del-fuego]{Fuego}",
+				"50-57": "@UUID[Compendium.wfrp4e-core.journals.YBVrpUHEjohB1H4f.JournalEntryPage.SCijiCw628GLE2pT#el-saber-de-los-cielos]{Cielos}",
+				"58-65": "@UUID[Compendium.wfrp4e-core.journals.YBVrpUHEjohB1H4f.JournalEntryPage.SCijiCw628GLE2pT#el-saber-del-metal]{Metal}",
+				"66-73": "@UUID[Compendium.wfrp4e-core.journals.YBVrpUHEjohB1H4f.JournalEntryPage.SCijiCw628GLE2pT#el-saber-de-la-vida]{Vida}",
+				"74-81": "@UUID[Compendium.wfrp4e-core.journals.YBVrpUHEjohB1H4f.JournalEntryPage.SCijiCw628GLE2pT#el-saber-de-la-luz]{Luz}",
+				"82-89": "@UUID[Compendium.wfrp4e-core.journals.YBVrpUHEjohB1H4f.JournalEntryPage.SCijiCw628GLE2pT#el-saber-de-las-sombras]{Sombras}",
+				"90-90": "@UUID[Compendium.wfrp4e-core.journals.YBVrpUHEjohB1H4f.JournalEntryPage.SCijiCw628GLE2pT#el-saber-de-la-adivinacion]{Adivinación}",
+				"91-93": "@UUID[Compendium.wfrp4e-core.journals.YBVrpUHEjohB1H4f.JournalEntryPage.SCijiCw628GLE2pT#el-saber-de-la-brujeria]{Brujería}",
+				"94-96": "@UUID[Compendium.wfrp4e-core.journals.YBVrpUHEjohB1H4f.JournalEntryPage.SCijiCw628GLE2pT#el-saber-de-la-demonologia]{Demonología}",
+				"97-99": "@UUID[Compendium.wfrp4e-core.journals.YBVrpUHEjohB1H4f.JournalEntryPage.SCijiCw628GLE2pT#el-saber-de-la-nigromancia]{Nigromancia}",
+				"100-100": "@UUID[JournalEntry.YBVrpUHEjohB1H4f.JournalEntryPage.SCijiCw628GLE2pT#magia-del-caos]{Magia del Caos {Cualquier Dios del Caos)}"
+				}
+		},
+		{
+			"id": "Scroll - Max CN",
+			"name": "Pergamino -  NL máx."
+		},
+		{
+			"id": "Familiar Personality - Aqshy",
+			"name": "Personalidad del familiar - Aqshy",
+			"results": {
+				"1-1": "Dinámico",
+				"2-2": "Sarcástico",
+				"3-3": "Rencoroso",
+				"4-4": "Irritado",
+				"5-5": "Vivaz",
+				"6-6": "Maniático",
+				"7-7": "Iracundo",
+				"8-8": "Furioso",
+				"9-9": "Temperamental",
+				"10-10": "Melancólico"
+				}
+		},
+		{
+			"id": "Familiar Personality - Azyr",
+			"name": "Personalidad del familiar - Azyr",
+			"results": {
+				"1-1": "Arrogante",
+				"2-2": "Soñador",
+				"3-3": "Idealista",
+				"4-4": "Selenófilo",
+				"5-5": "Conocedor",
+				"6-6": "Presumido",
+				"7-7": "Orgulloso",
+				"8-8": "Inspirado",
+				"9-9": "Pretencioso",
+				"10-10": "Gracioso"
+				}
+		},
+		{
+			"id": "Familiar Personality - Chamon",
+			"name": "Personalidad del familiar - Chamon",
+			"results": {
+				"1-1": "Ambicioso",
+				"2-2": "Avaricioso",
+				"3-3": "Epicúreo",
+				"4-4": "Volátil",
+				"5-5": "Tacaño",
+				"6-6": "Burocrático",
+				"7-7": "Confiado",
+				"8-8": "Divertido",
+				"9-9": "Generoso",
+				"10-10": "Ególatra"
+				}
+		},
+		{
+			"id": "Familiar Personality - Ghur",
+			"name": "Personalidad del familiar - Ghur",
+			"results": {
+				"1-1": "Feral",
+				"2-2": "Tímido",
+				"3-3": "Depredador",
+				"4-4": "Distante",
+				"5-5": "Ansioso",
+				"6-6": "Feroz",
+				"7-7": "Temeroso",
+				"8-8": "Físico",
+				"9-9": "Rápido",
+				"10-10": "Salvaje"
+				}
+		},
+		{
+			"id": "Familiar Personality - Ghyran",
+			"name": "Personalidad del familiar - Ghyran",
+			"results": {
+				"1-1": "Rústico",
+				"2-2": "Simplón",
+				"3-3": "Cuidadoso",
+				"4-4": "Amable",
+				"5-5": "Diligente",
+				"6-6": "Amistoso",
+				"7-7": "Bucólico",
+				"8-8": "Firme",
+				"9-9": "Verborreico",
+				"10-10": "Vulgar"
+				}
+		},
+		{
+			"id": "Familiar Personality - Hysh",
+			"name": "Personalidad del familiar - Hysh",
+			"results": {
+				"1-1": "Altivo",
+				"2-2": "Pensativo",
+				"3-3": "Sublime",
+				"4-4": "Piadoso",
+				"5-5": "Pomposo",
+				"6-6": "Tenso",
+				"7-7": "Estudioso",
+				"8-8": "Ensimismado",
+				"9-9": "Tradicional",
+				"10-10": "Espiritual"
+				}
+		},
+		{
+			"id": "Familiar Personality - Shyish",
+			"name": "Personalidad del familiar - Shyish",
+			"results": {
+				"1-1": "Morboso",
+				"2-2": "Taciturno",
+				"3-3": "Sardónico",
+				"4-4": "Sombrío",
+				"5-5": "Serio",
+				"6-6": "Distante",
+				"7-7": "Perezoso",
+				"8-8": "Estoico",
+				"9-9": "Fatalista",
+				"10-10": "Condenado"
+				}
+		},
+		{
+			"id": "Familiar Personality - Ulgu",
+			"name": "Personalidad del familiar - Ulgu",
+			"results": {
+				"1-1": "Reservado",
+				"2-2": "Desconfiado",
+				"3-3": "Precavido",
+				"4-4": "Tímido",
+				"5-5": "Cínico",
+				"6-6": "Ladino",
+				"7-7": "Taimado",
+				"8-8": "Astuto",
+				"9-9": "Irónico",
+				"10-10": "Distante"
+				}
+		},
+		{
+			"id": "Symbols",
+			"name": "Símbolos"
+		},
+		{
+			"id": "Symbols (Reversed)",
+			"name": "Símbolos (Invertidos)"
+		},
+		{
+			"id": "Vortex Movement Table - Abstract",
+			"name": "Tabla del movimiento del vórtice - Abstracto",
+			"results": {
+				"1-1": "El vórtice desaparece",
+				"2-2": "El lanzador elige la dirección",
+				"3-3": "El lanzador elige la dirección",
+				"4-4": "El lanzador elige la dirección",
+				"5-5": "El lanzador elige la dirección",
+				"6-6": "El vórtice permance en su sitio",
+				"7-7": "El DJ elige la dirección",
+				"8-8": "El DJ elige la dirección",
+				"9-9": "El DJ elige la dirección",
+				"10-10": "El DJ elige la dirección"
+				}
+		},
+		{
+			"id": "Vortex Movement Table - Map Based",
+			"name": "Tabla del movimiento del vórtice - Basado en mapa",
+			"results": {
+				"1-1": "El vórtice desaparece",
+				"5-5": "El vórtice permance en su sitio"
+				}
+		}
+	]
+}

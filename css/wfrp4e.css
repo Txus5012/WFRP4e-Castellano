@@ -1,0 +1,9 @@
+.wfrp4e.item.sheet.application:not(.no-theme) {
+  border-image-outset: 0px 57px 0px 0px;
+}
+.wfrp4e.item.sheet.application:not(.no-theme) .window-header {
+  width: 465px;
+}
+.wfrp4e.item.sheet.application:not(.no-theme) .window-content {
+  width: 450px;
+}

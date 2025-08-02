@@ -1,7 +1,7 @@
 {
-	"label": "Tablas (\u00A1A las Armas!)",
+	"label": "Tablas (¡A las Armas!)",
     "folders": {
-        "Criticals": "Cr\u00EDticos",
+        "Criticals": "Críticos",
 		"Hireling": "Asalariado",
 		"Job": "Trabajo"
     },
@@ -10,11 +10,11 @@
 			"id": "Hireling Templates",
 			"name": "Plantillas de Asalariado",
 			"results": {
-				"1-25": "El Asalariado trabaja como se espera de \u00E9l, no uses ninguna plantilla.",
-				"26-40": "El Asalariado tiene experiencia en aventuras y sabe cuidar de s\u00ED mismo. Usa la plantilla @UUID[Compendium.wfrp4e-up-in-arms.items.4s01nHFKVKTEZd3B]{Veterano de aventuras}.",
-				"41-55": "Lamentablemente, el Asalariado es un enclenque, es d\u00E9bil o tiene alg\u00FAn otro problema, aunque no lo admita ante sus posibles clientes. Usa la plantilla @UUID[Compendium.wfrp4e-up-in-arms.items.h3yuJDWnixliXeBG]{Enclenque}.",
+				"1-25": "El Asalariado trabaja como se espera de él, no uses ninguna plantilla.",
+				"26-40": "El Asalariado tiene experiencia en aventuras y sabe cuidar de sí mismo. Usa la plantilla @UUID[Compendium.wfrp4e-up-in-arms.items.4s01nHFKVKTEZd3B]{Veterano de aventuras}.",
+				"41-55": "Lamentablemente, el Asalariado es un enclenque, es débil o tiene algún otro problema, aunque no lo admita ante sus posibles clientes. Usa la plantilla @UUID[Compendium.wfrp4e-up-in-arms.items.h3yuJDWnixliXeBG]{Enclenque}.",
 				"56-69": "El Asalariado tiene un grado inusual de ingenio. Usa la plantilla @UUID[Compendium.wfrp4e-up-in-arms.items.7QrsbofccMOE1YsF]{Joven promesa}.",
-				"70-85": "El Asalariado tiene un pasado delictivo. Usa la plantilla @UUID[Compendium.wfrp4e-up-in-arms.items.scVTPVyDDbli4WZL]{P\u00EDcaro reformado}.",
+				"70-85": "El Asalariado tiene un pasado delictivo. Usa la plantilla @UUID[Compendium.wfrp4e-up-in-arms.items.scVTPVyDDbli4WZL]{Pícaro reformado}.",
 				"86-95": "El Asalariado ha pasado mucho tiempo en el mar. Usar la plantilla @UUID[Compendium.wfrp4e-up-in-arms.items.4Cd7Dknee2WjReOo]{Viejo lobo de mar}.",
 				"96-99": "El Asalariado no ha demostrado su potencial, pero tiene un gran potencial. Usa la plantilla @UUID[Compendium.wfrp4e-up-in-arms.items.2hJ2a5YjbwZWWYrd]{Diamante en bruto}."
 				}
@@ -23,127 +23,127 @@
 			"id": "Personality Quirks",
 			"name": "Rarezas de la Personalidad",
 			"results": {
-				"1-5": "El Asalariado no tiene h\u00E1bitos inusuales y posee una personalidad equilibrada.",
-				"6-10": "Est\u00E1 en una b\u00FAsqueda constante de reconocimiento, atribuy\u00E9ndose el m\u00E9rito de todos los \u00E9xitos y culpando a los dem\u00E1s de sus fracasos.",
-				"11-14": "Es alegre y animado en una reuni\u00F3n inicial, aunque desagradable y cr\u00EDtico despu\u00E9s.",
-				"15-19": "Tiene una compulsi\u00F3n a cometer peque\u00F1os hurtos. Si se le acusa de un delito, culpa inmediatamente al halfling m\u00E1s cercano.",
-				"20-24": "Tiene creencias religiosas piadosas; obedece las restricciones de su dios preferido con m\u00E1s diligencia santurrona de lo que cabr\u00EDa esperar de un sumo sacerdote. No permanecer\u00E1 al servicio de alguien que tenga valores contrarios a su religi\u00F3n.",
+				"1-5": "El Asalariado no tiene hábitos inusuales y posee una personalidad equilibrada.",
+				"6-10": "Está en una búsqueda constante de reconocimiento, atribuyéndose el mérito de todos los éxitos y culpando a los demás de sus fracasos.",
+				"11-14": "Es alegre y animado en una reunión inicial, aunque desagradable y crítico después.",
+				"15-19": "Tiene una compulsión a cometer pequeños hurtos. Si se le acusa de un delito, culpa inmediatamente al halfling más cercano.",
+				"20-24": "Tiene creencias religiosas piadosas; obedece las restricciones de su dios preferido con más diligencia santurrona de lo que cabría esperar de un sumo sacerdote. No permanecerá al servicio de alguien que tenga valores contrarios a su religión.",
 				"25-28": "No respeta el espacio personal.",
-				"29-32": "Nunca deja de hablar del <em>middenbol</em>. \u2018Adivina a qui\u00E9n han fichado los Carcelarios del Lado Sur para la pr\u00F3xima temporada. \u00A1El mism\u00EDsimo Wolfgardt Hoffstedder! \u00BFC\u00F3mo afectar\u00E1 a sus famosas cuatro primeras formaciones ofensivas, eh? Hablando de a\u00F1adir algo m\u00E1s de dinamismo. El entrenador de los Ingenieros va a estar hasta altas horas de la noche pensando c\u00F3mo contrarrestarlo, \u00BFno? <em>\u00A1Middenbol, middenbol, middenbol!</em>\u2019",
-				"33-36": "Es un obsesionado de la historia b\u00E9lica. Lee sobre conflictos, generales y campos de batalla siempre que tiene ocasi\u00F3n. Conoce los nombres de 16 dise\u00F1os diferentes de alabarda. Se cree un genio de la estrategia. Es tan t\u00E1ctico como un nabo.",
-				"37-40": "Es una persona familiar. Echa de menos a sus hijos. Pasa momentos tranquilos mirando con nostalgia un retrato de su c\u00F3nyuge que guarda en un medall\u00F3n de plata.",
-				"41-45": "Sufre una @Table[mutatemental]{Corrupci\u00F3n mental}.",
-				"46-50": "Es un taca\u00F1o. No se preocupa demasiado por recibir un buen salario, pero no soporta desprenderse del dinero que gana.",
-				"51-55": "Muy fiable a menos que sufra una fractura por cualquier motivo. Soporta el trauma reanudando un h\u00E1bito de consumir ra\u00EDz extra\u00F1a que antes ten\u00EDa bajo control.",
-				"56-60": "Es bastante pretencioso intelectualmente. Cita a Leonardo di Miragliano y Jacopo Tarradasch cada vez que puede. Sugiere aventurarse en tierras extranjeras, no porque piense que hay dinero de por medio, sino porque ha o\u00EDdo hablar maravillas de la aut\u00E9ntica cocina local.",
+				"29-32": "Nunca deja de hablar del <em>middenbol</em>. `Adivina a quién han fichado los Carcelarios del Lado Sur para la próxima temporada. ¡El mismísimo Wolfgardt Hoffstedder! ¿Cómo afectará a sus famosas cuatro primeras formaciones ofensivas, eh? Hablando de añadir algo más de dinamismo. El entrenador de los Ingenieros va a estar hasta altas horas de la noche pensando cómo contrarrestarlo, ¿no? <em>¡Middenbol, middenbol, middenbol!</em>´",
+				"33-36": "Es un obsesionado de la historia bélica. Lee sobre conflictos, generales y campos de batalla siempre que tiene ocasión. Conoce los nombres de 16 diseños diferentes de alabarda. Se cree un genio de la estrategia. Es tan táctico como un nabo.",
+				"37-40": "Es una persona familiar. Echa de menos a sus hijos. Pasa momentos tranquilos mirando con nostalgia un retrato de su cónyuge que guarda en un medallón de plata.",
+				"41-45": "Sufre una @Table[mutatemental]{Corrupción mental}.",
+				"46-50": "Es un tacaño. No se preocupa demasiado por recibir un buen salario, pero no soporta desprenderse del dinero que gana.",
+				"51-55": "Muy fiable a menos que sufra una fractura por cualquier motivo. Soporta el trauma reanudando un hábito de consumir raíz extraña que antes tenía bajo control.",
+				"56-60": "Es bastante pretencioso intelectualmente. Cita a Leonardo di Miragliano y Jacopo Tarradasch cada vez que puede. Sugiere aventurarse en tierras extranjeras, no porque piense que hay dinero de por medio, sino porque ha oído hablar maravillas de la auténtica cocina local.",
 				"61-65": "Da opiniones en voz alta sobre un tema social de moda que le apasiona.",
-				"66-71": "Lleva un la\u00FAd barato sin afinar. Lo saca para cantar en cuanto tiene ocasi\u00F3n.",
-				"72-75": "Es un mentiroso patol\u00F3gico al que le aterroriza admitir cualquier fechor\u00EDa y desprecia a todo el mundo.",
-				"76-79": "Es incapaz de asumir una posici\u00F3n de mando, pero est\u00E1 obsesionado con dar consejos in\u00FAtiles a los que lideran.",
-				"80-86": "Es entusiasta y creativo, con muchas ideas. Aunque no siempre son constructivas, algunas s\u00ED lo son, y le complace ver c\u00F3mo sus compa\u00F1eros las llevan a cabo sin ning\u00FAn deseo de cr\u00E9dito extra o recompensa.",
-				"87-92": "Imp\u00EDo y orgulloso de serlo. No respeta las creencias espirituales de los dem\u00E1s y somete cualquier conversaci\u00F3n sobre principios o valores a un desd\u00E9n c\u00EDnico.",
-				"93-96": "Descarado y burl\u00F3n con todos los que le rodean. Piensa que la gente que se ofende necesita tener la piel m\u00E1s gruesa. Sin embargo, \u00E9l mismo tiene la piel muy fina y considera fuera de lugar incluso la burla m\u00E1s suave sobre su propia persona.",
+				"66-71": "Lleva un laúd barato sin afinar. Lo saca para cantar en cuanto tiene ocasión.",
+				"72-75": "Es un mentiroso patológico al que le aterroriza admitir cualquier fechoría y desprecia a todo el mundo.",
+				"76-79": "Es incapaz de asumir una posición de mando, pero está obsesionado con dar consejos inútiles a los que lideran.",
+				"80-86": "Es entusiasta y creativo, con muchas ideas. Aunque no siempre son constructivas, algunas sí lo son, y le complace ver cómo sus compañeros las llevan a cabo sin ningún deseo de crédito extra o recompensa.",
+				"87-92": "Impío y orgulloso de serlo. No respeta las creencias espirituales de los demás y somete cualquier conversación sobre principios o valores a un desdén cínico.",
+				"93-96": "Descarado y burlón con todos los que le rodean. Piensa que la gente que se ofende necesita tener la piel más gruesa. Sin embargo, él mismo tiene la piel muy fina y considera fuera de lugar incluso la burla más suave sobre su propia persona.",
 				"97-100": "No se deja intimidar por el peligro ni las dificultades. Lo ha visto todo y su mirada de las mil yardas lo demuestra."
 				}
 		},
 		{
 			"id": "Physical Quirks",
-			"name": "Rarezas F\u00EDsicas",
+			"name": "Rarezas Físicas",
 			"results": {
 				"1-6": "El Asalariado parece anodino.",
 				"7-8": "Le falta una mano y lleva un @UUID[Compendium.wfrp4e-core.items.YivL32R2L3J098VD]{Gancho}.",
 				"9-10": "Falta la parte inferior de una de sus piernas y lleva una @UUID[Compendium.wfrp4e-core.items.lJ6Av6wQfORR4mnu]{Pierna postiza}.",
 				"11-12": "Le falta un ojo.",
-				"13-13": "El Asalariado est\u00E1 desarrollando una mutaci\u00F3n lentamente. El cambio es lento y sutil, pero en [[/r 1d10]] meses se manifestar\u00E1 por completo.",
+				"13-13": "El Asalariado está desarrollando una mutación lentamente. El cambio es lento y sutil, pero en [[/r 1d10]] meses se manifestará por completo.",
 				"14-19": "Es muy bajito, corpulento y peludo. A veces lo confunden con un enano.",
-				"20-25": "M\u00E1s bien alto, delgado y con aires misteriosos. A veces lo confunden con un elfo.",
-				"26-29": "Bastante baboso. Le cuesta hablar largo y tendido sin salpicar con gotas de saliva a los que est\u00E1n cerca.",
+				"20-25": "Más bien alto, delgado y con aires misteriosos. A veces lo confunden con un elfo.",
+				"26-29": "Bastante baboso. Le cuesta hablar largo y tendido sin salpicar con gotas de saliva a los que están cerca.",
 				"30-32": "Tiene un tono de voz alto y chirriante.",
 				"33-38": "Tiene un estilo impactante.",
 				"39-44": "Provoca sonrisas y carcajadas todo el tiempo. Que le digan que sea serio lo empeora.",
 				"45-55": "El hecho de que esta persona resistiera los estragos de una viruela es evidente por su piel.",
 				"56-60": "Desprende un terrible olor corporal que parece desafiar todos los intentos de enmascararlo o erradicarlo.",
-				"61-65": "Es alto y corpulento, aunque su tama\u00F1o aparente no implica que sea necesariamente fuerte y resistente.",
-				"66-70": "Le faltan m\u00E1s de la mitad de los dientes y los que le quedan est\u00E1n bastante descoloridos y desgastados.",
-				"71-75": "Siempre parece y suena furioso a pesar de su \u00E1nimo genuino.",
+				"61-65": "Es alto y corpulento, aunque su tamaño aparente no implica que sea necesariamente fuerte y resistente.",
+				"66-70": "Le faltan más de la mitad de los dientes y los que le quedan están bastante descoloridos y desgastados.",
+				"71-75": "Siempre parece y suena furioso a pesar de su ánimo genuino.",
 				"76-79": "Parece joven a pesar de ser mayor, o anciano a pesar de ser joven.",
-				"80-83": "Tiene un tatuaje de un sigilo m\u00E1gico en el brazo. Se niega a discutir c\u00F3mo o por qu\u00E9 lo consigui\u00F3.",
-				"84-89": "Tiene un magn\u00EDfico bigote, una gran y tupida barba o un peinado colorido y complejo.",
+				"80-83": "Tiene un tatuaje de un sigilo mágico en el brazo. Se niega a discutir cómo o por qué lo consiguió.",
+				"84-89": "Tiene un magnífico bigote, una gran y tupida barba o un peinado colorido y complejo.",
 				"90-94": "Lleva muchas joyas baratas.",
-				"95-99": "Tiene una enorme verruga marr\u00F3n en la nariz o en la mejilla.",
+				"95-99": "Tiene una enorme verruga marrón en la nariz o en la mejilla.",
 				"100-100": "Tiene un asombroso parecido con alguien conocido por los PJs."
 				}
 		},
 		{
 			"id": "Work Ethic",
-			"name": "\u00C9tica Laboral",
+			"name": "Ética Laboral",
 			"results": {
-				"1-25": "El Asalariado cumple con un d\u00EDa de trabajo honesto por la paga de un d\u00EDa honrado.",
-				"26-30": "Solo trabajar\u00E1 a nivel local, no desea viajar a ning\u00FAn sitio.",
-				"31-36": "Si el empleador establece un trabajo pero luego deja de requerir los servicios del Asalariado, \u00E9ste se resentir\u00E1 amargamente y se esforzar\u00E1 por difamar la reputaci\u00F3n del empleador.",
+				"1-25": "El Asalariado cumple con un día de trabajo honesto por la paga de un día honrado.",
+				"26-30": "Solo trabajará a nivel local, no desea viajar a ningún sitio.",
+				"31-36": "Si el empleador establece un trabajo pero luego deja de requerir los servicios del Asalariado, éste se resentirá amargamente y se esforzará por difamar la reputación del empleador.",
 				"37-40": "Es ambicioso y diligente. Siempre rinde bien y busca oportunidades para asumir tareas adicionales y desarrollarse.",
-				"41-55": "No le gusta que se le pida que trabaje en <em>marktag</em> y <em>festag</em> (m\u00E9rcades y sab\u00E1tico). Exige el doble de sueldo si se espera que trabaje esos d\u00EDas.",
-				"56-60": "El Asalariado es un estafador que exige dinero por adelantado. Tanto si se les da dinero como si no, no aparecer\u00E1 cuando haya que hacer un trabajo de verdad.",
-				"61-72": "El Asalariado tiene una percepci\u00F3n algo inflada de su valor y exige un 10% m\u00E1s de lo que suelen cobrar los de su clase.",
-				"73-85": "El Asalariado es bastante vago. A menos que el empleador supere un Chequeo <strong>Dif\u00EDcil (-20)</strong> de <strong>Mando</strong> al dar instrucciones, busca escaquearse en todo momento.",
-				"86-89": "Es un terrible bur\u00F3crata y muy estricto con el proceso. Quiere todo por escrito antes de aceptar un trabajo, aunque no sepa leer.",
-				"90-95": "Considera que el trabajo, aunque importante, es de menor importancia, ya que da prioridad a la experiencia vital y puede abandonar sus funciones si se le proporciona alg\u00FAn tipo de distracci\u00F3n.",
+				"41-55": "No le gusta que se le pida que trabaje en <em>marktag</em> y <em>festag</em> (mércades y sabático). Exige el doble de sueldo si se espera que trabaje esos días.",
+				"56-60": "El Asalariado es un estafador que exige dinero por adelantado. Tanto si se les da dinero como si no, no aparecerá cuando haya que hacer un trabajo de verdad.",
+				"61-72": "El Asalariado tiene una percepción algo inflada de su valor y exige un 10% más de lo que suelen cobrar los de su clase.",
+				"73-85": "El Asalariado es bastante vago. A menos que el empleador supere un Chequeo <strong>Difícil (-20)</strong> de <strong>Mando</strong> al dar instrucciones, busca escaquearse en todo momento.",
+				"86-89": "Es un terrible burócrata y muy estricto con el proceso. Quiere todo por escrito antes de aceptar un trabajo, aunque no sepa leer.",
+				"90-95": "Considera que el trabajo, aunque importante, es de menor importancia, ya que da prioridad a la experiencia vital y puede abandonar sus funciones si se le proporciona algún tipo de distracción.",
 				"96-100": "En cuanto el empleador deja de mirarlo, se pone a perder el tiempo."
 				}
 		},
 		{
 			"id": "Arm Critical Wounds (Up In Arms)",
-			"name": "Impactos Cr\u00EDticos en el Brazo (\u00A1A las Armas!)"
+			"name": "Impactos Críticos en el Brazo (¡A las Armas!)"
 		},
 		{
 			"id": "Body Critical Wounds (Up In Arms)",
-			"name": "Impactos Cr\u00EDticos en el Cuerpo (\u00A1A las Armas!)"
+			"name": "Impactos Críticos en el Cuerpo (¡A las Armas!)"
 		},
 		{
 			"id": "Head Critical Wounds (Up In Arms)",
-			"name": "Impactos Cr\u00EDticos en la Cabeza (\u00A1A las Armas!)"
+			"name": "Impactos Críticos en la Cabeza (¡A las Armas!)"
 		},
 		{
 			"id": "Leg Critical Wounds (Up In Arms)",
-			"name": "Impactos Cr\u00EDticos en la Pierna (\u00A1A las Armas!)"
+			"name": "Impactos Críticos en la Pierna (¡A las Armas!)"
 		},
 		{
 			"id": "Structure Critical Damage",
-			"name": "Da\u00F1o cr\u00EDtico a estructuras",
+			"name": "Daño crítico a estructuras",
 			"results": {
-				"1-35": "<p><strong>Nombre:</strong><em> Astillado</em></p><p><strong>Heridas: </strong>T</p><p><strong>Descripci\u00F3n</strong>: Determina al azar un \u00FAnico PJ que se encuentre en la estructura o la est\u00E9 utilizando para cubrirse. Es alcanzado por escombros voladores y sufre un da\u00F1o igual al Bonificador por Resistencia de la propia estructura.</p>",
-				"36-50": "<p><strong>Nombre:</strong><em> Sacudido</em></p><p><strong>Heridas: </strong>1</p><p><strong>Descripci\u00F3n</strong>: Todos los que est\u00E1n en la estructura se tambalean por el impacto. Cualquier PJ sobre o dentro de la estructura debe hacer un Chequeo <strong>F\u00E1cil (+40)</strong> de <strong>Atletismo</strong> o sufrir 1 Estado @Condition[Sorprendido].</p>",
-				"51-60": "<p><strong>Nombre:</strong><em> Agujereado</em></p><p><strong>Heridas: </strong>1</p><p><strong>Descripci\u00F3n</strong>: Se abre una peque\u00F1a brecha en la estructura. Esto afecta a su capacidad para proporcionar cobertura, por lo que una estructura que proporcionaba un penalizador de cobertura Complicado (-10) ahora es solo Desafiante (-0).</p>",
-				"61-70": "<p><strong>Nombre:</strong><em> Tambaleo</em></p><p><strong>Heridas: </strong>2</p><p><strong>Descripci\u00F3n</strong>: Todos los que est\u00E1n en la estructura se tambalean por el impacto. Cualquier PJ sobre o dentro de la estructura debe realizar un Chequeo <strong>Normal (+20)</strong> de <strong>Atletismo</strong> o sufrir 1 Estado @Condition[Tumbado].</p>",
-				"71-80": "<p><strong>Nombre:</strong><em> Lluvia de astillas</em></p><p><strong>Heridas: </strong>2</p><p><strong>Descripci\u00F3n</strong>: Todos los PJs que est\u00E9n sobre la estructura o us\u00E1ndola como cobertura, son golpeados por escombros voladores y sufren un Da\u00F1o igual al Bonificador por Resistencia de la misma.</p>",
-				"81-90": "<p><strong>Nombre:</strong><em> Colapso parcial</em></p><p><strong>Heridas: </strong>3</p><p><strong>Descripci\u00F3n</strong>: Una gran parte de la estructura se desploma. Los PJs sobre o dentro de la estructura deben tener \u00E9xito en un Chequeo <strong>Desafiante (+0)</strong> de <strong>Atletismo</strong> Test o @UUID[Compendium.wfrp4e-core.journals.NS3YGlJQxwTggjRX.JournalEntryPage.bdfiyhEYtKs7irqc#caidas]{caer}. El l\u00EDmite de Imp. de la estructura se reduce a la mitad y si alguna pieza de artiller\u00EDa (u otro equipo pesado) tiene ahora m\u00E1s IMP. que el l\u00EDmite de Imp., cae y queda inservible hasta que sea reparada.</p>",
-				"91-95": "<p><strong>Nombre:</strong><em> Ruptura</em></p><p><strong>Heridas: </strong>3</p><p><strong>Descripci\u00F3n</strong>: Se abre un enorme agujero en la estructura. Los PJs sobre o dentro de la estructura son golpeados por escombros voladores y sufren un Da\u00F1o igual al Bonificador por Resistencia de la misma. La estructura ya no proporciona cobertura a quienes se encuentran sobre ella o en su interior.</p>",
-				"96-100": "<p><strong>Nombre:</strong><em> Colapso total</em></p><p><strong>Heridas: </strong>Destruido</p><p><strong>Descripci\u00F3n</strong>: La estructura se derrumba. Los PJs que usan la estructura para cubrirse son golpeados por escombros voladores y sufren un Da\u00F1o igual al Bonificador por Resistencia de la misma. Los PJs sobre o dentro de la estructura deben hacer un Chequeo para caer, y luego sufrir Da\u00F1o como si fueran golpeados por un arma con una Fuerza igual a las Heridas restantes de la estructura. Cualquier pieza de artiller\u00EDa (u otro equipo pesado) se desprende de la estructura y queda inutilizada hasta su reparaci\u00F3n.</p>"
+				"1-35": "<p><strong>Nombre:</strong><em> Astillado</em></p><p><strong>Heridas: </strong>T</p><p><strong>Descripción</strong>: Determina al azar un único PJ que se encuentre en la estructura o la esté utilizando para cubrirse. Es alcanzado por escombros voladores y sufre un daño igual al Bonificador por Resistencia de la propia estructura.</p>",
+				"36-50": "<p><strong>Nombre:</strong><em> Sacudido</em></p><p><strong>Heridas: </strong>1</p><p><strong>Descripción</strong>: Todos los que están en la estructura se tambalean por el impacto. Cualquier PJ sobre o dentro de la estructura debe hacer un Chequeo <strong>Fácil (+40)</strong> de <strong>Atletismo</strong> o sufrir 1 Estado @Condition[Sorprendido].</p>",
+				"51-60": "<p><strong>Nombre:</strong><em> Agujereado</em></p><p><strong>Heridas: </strong>1</p><p><strong>Descripción</strong>: Se abre una pequeña brecha en la estructura. Esto afecta a su capacidad para proporcionar cobertura, por lo que una estructura que proporcionaba un penalizador de cobertura Complicado (-10) ahora es solo Desafiante (-0).</p>",
+				"61-70": "<p><strong>Nombre:</strong><em> Tambaleo</em></p><p><strong>Heridas: </strong>2</p><p><strong>Descripción</strong>: Todos los que están en la estructura se tambalean por el impacto. Cualquier PJ sobre o dentro de la estructura debe realizar un Chequeo <strong>Normal (+20)</strong> de <strong>Atletismo</strong> o sufrir 1 Estado @Condition[Tumbado].</p>",
+				"71-80": "<p><strong>Nombre:</strong><em> Lluvia de astillas</em></p><p><strong>Heridas: </strong>2</p><p><strong>Descripción</strong>: Todos los PJs que estén sobre la estructura o usándola como cobertura, son golpeados por escombros voladores y sufren un Daño igual al Bonificador por Resistencia de la misma.</p>",
+				"81-90": "<p><strong>Nombre:</strong><em> Colapso parcial</em></p><p><strong>Heridas: </strong>3</p><p><strong>Descripción</strong>: Una gran parte de la estructura se desploma. Los PJs sobre o dentro de la estructura deben tener éxito en un Chequeo <strong>Desafiante (+0)</strong> de <strong>Atletismo</strong> Test o @UUID[Compendium.wfrp4e-core.journals.NS3YGlJQxwTggjRX.JournalEntryPage.bdfiyhEYtKs7irqc#caidas]{caer}. El límite de Imp. de la estructura se reduce a la mitad y si alguna pieza de artillería (u otro equipo pesado) tiene ahora más IMP. que el límite de Imp., cae y queda inservible hasta que sea reparada.</p>",
+				"91-95": "<p><strong>Nombre:</strong><em> Ruptura</em></p><p><strong>Heridas: </strong>3</p><p><strong>Descripción</strong>: Se abre un enorme agujero en la estructura. Los PJs sobre o dentro de la estructura son golpeados por escombros voladores y sufren un Daño igual al Bonificador por Resistencia de la misma. La estructura ya no proporciona cobertura a quienes se encuentran sobre ella o en su interior.</p>",
+				"96-100": "<p><strong>Nombre:</strong><em> Colapso total</em></p><p><strong>Heridas: </strong>Destruido</p><p><strong>Descripción</strong>: La estructura se derrumba. Los PJs que usan la estructura para cubrirse son golpeados por escombros voladores y sufren un Daño igual al Bonificador por Resistencia de la misma. Los PJs sobre o dentro de la estructura deben hacer un Chequeo para caer, y luego sufrir Daño como si fueran golpeados por un arma con una Fuerza igual a las Heridas restantes de la estructura. Cualquier pieza de artillería (u otro equipo pesado) se desprende de la estructura y queda inutilizada hasta su reparación.</p>"
 				}
 		},
 		{
 			"id": "Job Generator - Location",
-			"name": "Generador de trabajos - Localizaci\u00F3n",
+			"name": "Generador de trabajos - Localización",
 			"results": {
-				"1-5": "Una siniestra caba\u00F1a en el linde del bosque.",
-				"6-10": "Un matadero de segunda categor\u00EDa.",
+				"1-5": "Una siniestra cabaña en el linde del bosque.",
+				"6-10": "Un matadero de segunda categoría.",
 				"11-15": "Un colmenar lleno de abejas bastante territoriales.",
-				"16-20": "Un almac\u00E9n que apesta a p\u00F3lvora negra.",
-				"21-25": "Una torre de se\u00F1ales imperial.",
+				"16-20": "Un almacén que apesta a pólvora negra.",
+				"21-25": "Una torre de señales imperial.",
 				"26-30": "Una posada con excedentes de productos porcinos.",
-				"31-35": "Una gran casa adosada de estilo stirland\u00E9s con cortinas inusualmente gruesas.",
+				"31-35": "Una gran casa adosada de estilo stirlandés con cortinas inusualmente gruesas.",
 				"36-40": "Un campamento militar.",
 				"41-45": "Un buen establo con dos sementales agresivos.",
-				"46-50": "Un corral con una jaur\u00EDa de perros hambrientos.",
+				"46-50": "Un corral con una jauría de perros hambrientos.",
 				"51-55": "Una cloaca que huele realmente mal.",
-				"56-60": "Un despacho lleno de papeles y l\u00E1mparas de aceite.",
+				"56-60": "Un despacho lleno de papeles y lámparas de aceite.",
 				"61-65": "Un claro en una colina con un gran megalito.",
 				"66-70": "Un foso de lucha en activo.",
 				"71-75": "Una cueva llena de huesos rotos.",
 				"76-80": "Un cementerio con algunas parcelas recientemente alteradas.",
 				"81-85": "La torre de un mago, con la planta baja cubierta de algo inusual.",
 				"86-90": "Un templo abandonado de Verena.",
-				"91-95": "Un s\u00F3tano utilizado como lugar secreto de reuni\u00F3n.",
+				"91-95": "Un sótano utilizado como lugar secreto de reunión.",
 				"96-100": "Un muelle podrido en algunos lugares."
 				}
 		},
@@ -151,10 +151,10 @@
 			"id": "Job Generator - Objective",
 			"name": "Generador de trabajos - Objetivo",
 			"results": {
-				"1-5": "Un cofre cerrado incre\u00EDblemente pesado.",
+				"1-5": "Un cofre cerrado increíblemente pesado.",
 				"6-10": "Varias bolsas de especias raras de Ind.",
 				"11-15": "Un frasco sellado de Arabia.",
-				"16-20": "Una placa de oro tra\u00EDda de las Tierras del Sur.",
+				"16-20": "Una placa de oro traída de las Tierras del Sur.",
 				"21-25": "Una espada rota en tres pedazos.",
 				"26-30": "Un exquisito collar de obsidiana.",
 				"31-35": "Un noble secuestrado.",
@@ -165,27 +165,27 @@
 				"56-60": "El martillo de guerra ornamentado de un sacerdote de Sigmar.",
 				"61-65": "Un tomo prohibido.",
 				"66-70": "Un arma de fuego enana.",
-				"71-75": "Un ni\u00F1o desaparecido llorando.",
-				"76-80": "Un cr\u00E1neo aparentemente hecho de cristal.",
-				"81-85": "Un talism\u00E1n de jade, de un dedo de largo, con una inscripci\u00F3n con runas extra\u00F1as.",
-				"86-90": "Una pieza de armadura, anta\u00F1o utilizada por un famoso general.",
+				"71-75": "Un niño desaparecido llorando.",
+				"76-80": "Un cráneo aparentemente hecho de cristal.",
+				"81-85": "Un talismán de jade, de un dedo de largo, con una inscripción con runas extrañas.",
+				"86-90": "Una pieza de armadura, antaño utilizada por un famoso general.",
 				"91-95": "Un mapa que detalla ciertos secretos.",
-				"96-100": "Una pieza de ingenier\u00EDa enana."
+				"96-100": "Una pieza de ingeniería enana."
 				}
 		},
 		{
 			"id": "Job Generator - Personality",
 			"name": "Generador de trabajos - Personalidad",
 			"results": {
-				"1-5": "Un rom\u00E1ntico empedernido.",
+				"1-5": "Un romántico empedernido.",
 				"6-10": "Un ingeniero enano furioso.",
 				"11-15": "Un noble disoluto.",
 				"16-20": "Un chef halfling desesperado.",
-				"21-25": "El l\u00EDder de una secta.",
+				"21-25": "El líder de una secta.",
 				"26-30": "Un guardia veterano.",
-				"31-35": "Un diplom\u00E1tico elfo.",
+				"31-35": "Un diplomático elfo.",
 				"36-40": "Un cazarratas paranoico.",
-				"41-45": "Un hu\u00E9rfano quejumbroso.",
+				"41-45": "Un huérfano quejumbroso.",
 				"46-50": "Un noble exiliado.",
 				"51-55": "Un matatroles furioso",
 				"56-60": "Un sacerdote prominente.",
@@ -195,13 +195,13 @@
 				"76-80": "Un cazador de brujas agresivo.",
 				"81-85": "Un delincuente intimidante.",
 				"86-90": "Un investigador diminuto.",
-				"91-95": "Un general con un ej\u00E9rcito a sus \u00F3rdenes.",
+				"91-95": "Un general con un ejército a sus órdenes.",
 				"96-100": "Un emisario imperial."
 				}
 		},
 		{
 			"id": "Hit Location - Quadruped",
-			"name": "Ubicaci\u00F3n de Impacto - Cuadr\u00FApedo",
+			"name": "Ubicación de Impacto - Cuadrúpedo",
 			"results": {
 				"1-16": "Cabeza",
 				"17-56": "Cuerpo",
@@ -213,12 +213,12 @@
 		},
 		{
 			"id": "Salvo Misfire",
-			"name": "Fallos de la artiller\u00EDa de salvas",
+			"name": "Fallos de la artillería de salvas",
 			"results": {
-				"1-4": "Todos los tripulantes sufren Da\u00F1o completo en su Ubicaci\u00F3n de Impacto del brazo principal utilizando el dado de unidades como NE del impacto. La pieza de artiller\u00EDa queda destruida.",
-				"5-7": "Toda la tripulaci\u00F3n sufre Da\u00F1o completo a una Ubicaci\u00F3n de Impacto generada aleatoriamente utilizando el dado de unidades como NE del impacto. La pieza de artiller\u00EDa queda destruida.",
-				"8-9": "Por cada punto restante de Salvas, toda la tripulaci\u00F3n sufre Da\u00F1o completo a Ubicaciones de Impacto generadas aleatoriamente utilizando el dado de unidades como NE del impacto. La pieza de artiller\u00EDa queda destruida.",
-				"10-10": "Por cada punto restante de Salvas, se dispara en una direcci\u00F3n aleatoria a una distancia de d100 yardas. Cualquier PJ estacionado en un punto entre la m\u00E1quina y las Ubicaciones a las que dispara, debe tener \u00E9xito en un Chequeo <strong>Muy dif\u00EDcil (-30)</strong> de <strong>Esquivar</strong> para evitar ser alcanzado por un proyectil."
+				"1-4": "Todos los tripulantes sufren Daño completo en su Ubicación de Impacto del brazo principal utilizando el dado de unidades como NE del impacto. La pieza de artillería queda destruida.",
+				"5-7": "Toda la tripulación sufre Daño completo a una Ubicación de Impacto generada aleatoriamente utilizando el dado de unidades como NE del impacto. La pieza de artillería queda destruida.",
+				"8-9": "Por cada punto restante de Salvas, toda la tripulación sufre Daño completo a Ubicaciones de Impacto generadas aleatoriamente utilizando el dado de unidades como NE del impacto. La pieza de artillería queda destruida.",
+				"10-10": "Por cada punto restante de Salvas, se dispara en una dirección aleatoria a una distancia de d100 yardas. Cualquier PJ estacionado en un punto entre la máquina y las Ubicaciones a las que dispara, debe tener éxito en un Chequeo <strong>Muy difícil (-30)</strong> de <strong>Esquivar</strong> para evitar ser alcanzado por un proyectil."
 				}
 		}
 	]

@@ -14,6 +14,7 @@ export const effects = (effects, translations) => {
     }
 
     if (teffects.name) currenteffect.name = teffects.name;
+	if (teffects.avoidTestSkill) currenteffect.system.transferData.avoidTest.skill = teffects.avoidTestSkill;
 	if (teffects.preApplyScript) currenteffect.system.transferData.preApplyScript = teffects.preApplyScript;
 	if (teffects.filter) currenteffect.system.transferData.filter = teffects.filter;
 	

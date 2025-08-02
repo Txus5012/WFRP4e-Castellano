@@ -2355,6 +2355,15 @@
 			"description": "<p>Los libros de religión pueden adoptar cualquier forma en el Imperio, que es muy reputado por su observancia religiosa. Hay un mercado ávido de los textos más populares, la mayoría de los cuales se imprimen en ediciones baratas.</p>"
 		},
 		{
+			"id": "Grimoire",
+			"name": "Grimorio",
+			"description": "<p>Los grimorios (los libros de hechizos) los suelen escribir a mano los hechiceros y a menudo están protegidos por candados. A veces también están protegidos por alarmas o custodias mágicas. Llevar encima un grimorio es un delito de herejía si el hechicero que es su propietario no tiene una licencia expedida por los Colegios de Magia.</p>"
+		},
+		{
+			"id": "Grimoire of Dark Magicks",
+			"name": "Grimorio de magias oscuras"
+		},
+		{
 			"id": "Boots",
 			"name": "Botas",
 			"description": ""
@@ -5387,6 +5396,16 @@
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tXu8Hrd4desq1Rja caption=false]{Canalización}"
 		},
 		{
+			"id": "Channelling (Wind)",
+			"name": "Canalización (Viento)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tXu8Hrd4desq1Rja caption=false]{Canalización}"
+		},
+		{
+			"id": "Channelling (Mòna’s Marsh Magic)",
+			"name": "Canalización (Magia del pantano de Mòna)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tXu8Hrd4desq1Rja caption=false]{Canalización}"
+		},
+		{
 			"id": "Charm",
 			"name": "Carisma",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.9OommpqxE34iocmg caption=false]{Carisma}"
@@ -5449,6 +5468,16 @@
 		{
 			"id": "Entertain (Storytelling)",
 			"name": "Animar (Relatar)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui caption=false]{Animar}"
+		},
+		{
+			"id": "Entertain (Acting)",
+			"name": "Animar (Actuar)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui caption=false]{Animar}"
+		},
+		{
+			"id": "Entertain (Fortune Telling)",
+			"name": "Animar (Adivinación)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui caption=false]{Animar}"
 		},
 		{
@@ -5601,6 +5630,16 @@
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
 		},
 		{
+			"id": "Language (Nehekharan)",
+			"name": "Hablar idioma (Nehekharano)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
+		},
+		{
+			"id": "Language (Dark Tongue)",
+			"name": "Hablar idioma (Lengua oscura)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
+		},
+		{
 			"id": "Leadership",
 			"name": "Mando",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.haKq6qZXYj7Bweu4 caption=false]{Mando}"
@@ -5671,6 +5710,116 @@
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
 		},
 		{
+			"id": "Lore (Araby)",
+			"name": "Sabiduría académica (Arabia)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		{
+			"id": "Lore (Magic)",
+			"name": "Sabiduría académica (Magia)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		{
+			"id": "Lore (Necromancy)",
+			"name": "Sabiduría académica (Nigromancia)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		{
+			"id": "Lore (Nehekhara)",
+			"name": "Sabiduría académica (Nehekhara)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		{
+			"id": "Lore (Chemistry)",
+			"name": "Sabiduría académica (Química)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		{
+			"id": "Lore (Altdorf)",
+			"name": "Sabiduría académica (Altdorf)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		{
+			"id": "Lore (Daemonology)",
+			"name": "Sabiduría académica (Demonología)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		{
+			"id": "Lore (Dark Magic)",
+			"name": "Sabiduría académica (Magia oscura)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		{
+			"id": "Lore (Tzeentch)",
+			"name": "Sabiduría académica (Tzeentch)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		{
+			"id": "Lore (Warfare)",
+			"name": "Sabiduría académica (Guerra)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		{
+			"id": "Lore (Dragons)",
+			"name": "Sabiduría académica (Dragones)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		{
+			"id": "Lore (Reikland)",
+			"name": "Sabiduría académica (Reikland)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		{
+			"id": "Lore (Nuln)",
+			"name": "Sabiduría académica (Nuln)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		{
+			"id": "Lore (Politics)",
+			"name": "Sabiduría académica (Política)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		{
+			"id": "Lore (Animals)",
+			"name": "Sabiduría académica (Animales)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		{
+			"id": "Lore (Middenland)",
+			"name": "Sabiduría académica (Middenland)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		{
+			"id": "Lore (Astronomy)",
+			"name": "Sabiduría académica (Astronomía)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		{
+			"id": "Lore (Prophecy)",
+			"name": "Sabiduría académica (Profecía)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		{
+			"id": "Lore (Plants)",
+			"name": "Sabiduría académica (Plantas)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		{
+			"id": "Lore (Stirland)",
+			"name": "Sabiduría académica (Stirland)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		{
+			"id": "Lore (Sylvania)",
+			"name": "Sabiduría académica (Sylvania)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		{
+			"id": "Lore (Undead)",
+			"name": "Sabiduría académica (Muertos vivientes)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		{
 			"id": "Melee",
 			"name": "Cuerpo a cuerpo",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f caption=false]{Cuerpo a cuerpo}"
@@ -5717,6 +5866,11 @@
 		},
 		{
 			"id": "Melee (Two-Handed)",
+			"name": "Cuerpo a cuerpo (A Dos Manos)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f caption=false]{Cuerpo a cuerpo}"
+		},
+		{
+			"id": "Melee (Two-handed)",
 			"name": "Cuerpo a cuerpo (A Dos Manos)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.mk4p8y3RetTuMe2f caption=false]{Cuerpo a cuerpo}"
 		},
@@ -5906,6 +6060,11 @@
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe caption=false]{Montar}"
 		},
 		{
+			"id": "Ride (Dragon)",
+			"name": "Montar (Dragon)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.QQukmSP68cF8MzJe caption=false]{Montar}"
+		},
+		{
 			"id": "Row",
 			"name": "Remar",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.ACCaGYXdz9yKyxgG caption=false]{Remar}"
@@ -5979,6 +6138,11 @@
 		{
 			"id": "Secret Signs (Vagabond)",
 			"name": "Lengua secreta (Vagabundo)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.X2FppoPGuEwJKssM caption=false]{Lengua secreta}"
+		},
+		{
+			"id": "Secret Signs (Black Chamber)",
+			"name": "Lengua secreta (Cámara Negra)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.X2FppoPGuEwJKssM caption=false]{Lengua secreta}"
 		},
 		{
@@ -6084,6 +6248,31 @@
 		{
 			"id": "Trade (Cheesemonger)",
 			"name": "Oficio (Quesero)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
+		},
+		{
+			"id": "Trade (Alchemist)",
+			"name": "Oficio (Alquimista)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
+		},
+		{
+			"id": "Trade (Blacksmith)",
+			"name": "Oficio (Herrero)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
+		},
+		{
+			"id": "Trade (Engineer)",
+			"name": "Oficio (Ingeniero)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
+		},
+		{
+			"id": "Trade (Goldsmith)",
+			"name": "Oficio (Orfebre)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
+		},
+		{
+			"id": "Trade (Farrier)",
+			"name": "Oficio (Herrador)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
 		},
 		{
@@ -6402,12 +6591,12 @@
 		{
 			"id": "Aqshy’s Aegis",
 			"name": "Égida de Aqshy",
-			"description": "<p>Te envuelves en un flamígero manto de Aqshy , que canaliza llamas hacia la égida. Eres completamente inmune al Daño procedente de fuegos no mágicos, incluyendo las armas de aliento de los monstruos, e ignoras todo Estado de Ardiendo que sufres. Obtienes el Rasgo de criatura @Compendium[wfrp4e-core.items.Bvd2aZ0gQUXHfCTh]{Custodiado (9+)} contra los ataques de fuego mágico, incluyendo los hechizos del Saber del Fuego.</p><p>\n\n <b>Saber:</b> Puedes infligir +1 Estado de @Condition[Ardiendo] a cualquier objetivo de los hechizos del Saber del Fuego, a menos que éste también disponga del Talento Magia arcana (fuego). Cada Estado de Ardiendo a una distancia en yardas igual o menor que tu Bonificador por Voluntad suma +10 a los intentos de Canalizar o Lanzar con el Aqshy.</p>",
+			"description": "<p>Te envuelves en un flamígero manto de <em>Aqshy</em>, que canaliza llamas hacia la égida. Eres completamente inmune al Daño procedente de fuegos no mágicos, incluyendo las armas de aliento de los monstruos, e ignoras todo Estado de Ardiendo que sufres. Obtienes el Rasgo de criatura @Compendium[wfrp4e-core.items.Bvd2aZ0gQUXHfCTh]{Custodiado (9+)} contra los ataques de fuego mágico, incluyendo los hechizos del Saber del Fuego.</p><p>\n\n <b>Saber:</b> Puedes infligir +1 Estado de @Condition[Ardiendo] a cualquier objetivo de los hechizos del Saber del Fuego, a menos que éste también disponga del Talento Magia arcana (fuego). Cada Estado de Ardiendo a una distancia en yardas igual o menor que tu Bonificador por Voluntad suma +10 a los intentos de Canalizar o Lanzar con el Aqshy.</p>",
 			"effects": [{
 				"name":"Égida de Aqshy",
 				"scriptData": [
 					{"label":"Custodiado","script":"let useWard = await foundry.applications.api.DialogV2.confirm({\n\tcontent : `<p>¿Usar Custodiado provisto por <strong>${this.effect.name}</strong>?`,\n\twindow : {\n\t\ttitle : this.effect.name,\t}\n})\n\nif (useWard)\n\targs.ward = 9;"},
-					{"label":"Ignorar Ardiendo","script":"let ablaze = this.actor.hasCondition(\"ablaze\");\nif (ablaze)\n{\n\tablaze?.delete();\n\tthis.script.notification(\"Ignorar Ardiendo\");\n}\n"}
+					{"label":"Ignorar Ardiendo","script":"let ablaze = this.actor.hasCondition(\"ablaze\");\nif (ablaze)\n{\n\tablaze?.delete();\n\tthis.script.notification(\"Ignorar Ardiendo\");\n}"}
 					]
 				}]
 		},
@@ -6557,7 +6746,7 @@
 		{
 			"id": "Banishment",
 			"name": "Destierro",
-			"description": "<p>Envías un halo limpiador de <em>Hysh</em> que sale de tus manos, y que afecta a todas las criaturas del Área de efecto cuya Resistencia es menor que tu Voluntad. Los objetivos con los Rasgos de criatura <em>Muerto viviente</em> o <em>Demoníaco</em> obtienen el Rasgo de criatura <em>Inestable</em>. Si ya tienen dicho rasgo, quedan reducidos a 0 Heridas.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz). Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
+			"description": "<p>Envías un halo limpiador de <em>Hysh</em> que sale de tus manos, y que afecta a todas las criaturas del Área de efecto cuya Resistencia es menor que tu Voluntad. Los objetivos con los Rasgos de criatura  @UUID[Compendium.wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente} o @UUID[Compendium.wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} obtienen el Rasgo de criatura @UUID[Compendium.wfrp4e-core.items.Item.D0ImWEIMSDgElsnl]{Inestable}. Si ya tienen dicho rasgo, quedan reducidos a 0 Heridas.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz). Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
 			"effects": [{
 				"name":"Destierro",
 				"scriptData": [
@@ -6589,7 +6778,7 @@
 		{
 			"id": "Beast Master",
 			"name": "Amo de las bestias",
-			"description": "<p>Tu aliento se condensa y tus ojos adoptan un brillo ámbar mientras el <em>Ghur</em> te infunde. Tu mirada y tus palabras convencen a 1 criatura con el Rasgo Bestial de que eres el líder de su manada, y luchará a muerte para protegerte. Mientras esté sujeta a tu dominio, seguirá tus instrucciones, entendiendo de forma instintiva cosas sencillas. Si la criatura es liberada del hechizo (o bien porque ha concluido su duración, o bien porque ha sido dispersado) te tendrá el suficiente respeto y miedo residuales como para no atacarte, a menos que se le obligue a ello. Tus aliados podrían no tener tanta suerte.</p><p>\n\n <b>Saber:</b> Siempre que lanzas con éxito un hechizo del Saber de las Bestias, también puedes obtener el Rasgo de criatura @Compendium[wfrp4e-core.items.pTorrE0l3VybAbtn]{Miedo (1)} durante los siguientes [[/r 1d10]] Asaltos.</p>"
+			"description": "<p>Tu aliento se condensa y tus ojos adoptan un brillo ámbar mientras el <em>Ghur</em> te infunde. Tu mirada y tus palabras convencen a 1 criatura con el Rasgo @UUID[Compendium.wfrp4e-core.items.AGcJl5rHjkyIQBPP]{Bestial} de que eres el líder de su manada, y luchará a muerte para protegerte. Mientras esté sujeta a tu dominio, seguirá tus instrucciones, entendiendo de forma instintiva cosas sencillas. Si la criatura es liberada del hechizo (o bien porque ha concluido su duración, o bien porque ha sido dispersado) te tendrá el suficiente respeto y miedo residuales como para no atacarte, a menos que se le obligue a ello. Tus aliados podrían no tener tanta suerte.</p><p>\n\n <b>Saber:</b> Siempre que lanzas con éxito un hechizo del Saber de las Bestias, también puedes obtener el Rasgo de criatura @Compendium[wfrp4e-core.items.pTorrE0l3VybAbtn]{Miedo (1)} durante los siguientes [[/r 1d10]] Asaltos.</p>"
 		},
 		{
 			"id": "Beast Tongue",
@@ -6598,7 +6787,7 @@
 			"effects": [{
 				"name":"Lengua de las bestias",
 				"scriptData": [
-					{"label":"Lengua de las bestias"}
+					{"label":"Carisma animal o Adiestrar animal"}
 					]
 				}]
 		},
@@ -6887,7 +7076,7 @@
 		{
 			"id": "Caress of Laniph",
 			"name": "Caricia de Laniph",
-			"description": "<p>Conforme extiendes la mano, ésta parece marchita, e incluso esquelética, atrayendo el Shyish del cuerpo de tu objetivo. Esto cuenta como un proyectil mágico con Daño +6, que ignora el Bonificador por Resistencia y los puntos de Armadura. Por cada 2 Heridas infligidas, puedes recuperar 1 Herida sufrida.</p><p>\n\n <b>Saber:</b> Los objetivos afligidos por los hechizos del Saber de la Muerte quedan drenados de vida, debilitados y apáticos. Puedes asignar +1 Estado de @Condition[Fatigado] a cualquier objetivo vivo afectado por un hechizo de este Saber. Un objetivo tan sólo puede tener 1 Estado de Fatigado de esta forma en un momento dado.</p>",
+			"description": "<p>Conforme extiendes la mano, ésta parece marchita, e incluso esquelética, atrayendo el <em>Shyish</em> del cuerpo de tu objetivo. Esto cuenta como un <em>proyectil mágico</em> con Daño +6, que ignora el Bonificador por Resistencia y los puntos de Armadura. Por cada 2 Heridas infligidas, puedes recuperar 1 Herida sufrida.</p><p>\n\n <b>Saber:</b> Los objetivos afligidos por los hechizos del Saber de la Muerte quedan drenados de vida, debilitados y apáticos. Puedes asignar +1 Estado de @Condition[Fatigado] a cualquier objetivo vivo afectado por un hechizo de este Saber. Un objetivo tan sólo puede tener 1 Estado de Fatigado de esta forma en un momento dado.</p>",
 			"effects": [{
 				"name":"Caricia de Laniph",
 				"scriptData": [
@@ -6903,7 +7092,7 @@
 			"effects": [{
 				"name":"Cauterizar",
 				"scriptData": [
-					{"label":"Cauterizar","script":"let roll = (await new Roll(\"1d10\").roll({allowInteractive : false}))\nroll.toMessage({flavor: \"Heridas curadas\", speaker : {alias : this.actor.name}})\n\nthis.actor.modifyWounds(roll.total)\n\nthis.actor.hasCondition(\"bleeding\")?.delete();"}
+					{"label":"Cauterizar","script":"let roll = (await new Roll(\"1d10\").roll())\nroll.toMessage({flavor: \"Heridas curadas\", speaker : {alias : this.actor.name}})\n\nthis.actor.modifyWounds(roll.total)\n\nthis.actor.hasCondition(\"bleeding\")?.delete();"}
 					]
 				}]
 		},
@@ -6987,7 +7176,7 @@
 		{
 			"id": "Choking Shadows",
 			"name": "Sombras ahogadoras",
-			"description": "<p>Enrollas zarcillos sombríos de <em>Ulgu</em> alrededor del cuello de tus enemigos. Suponiendo que tengan necesidad de respirar, sufrirán +1 Estado de @Condition[Fatigado], no podrán hablar y estarán sujetos a las reglas de Asfixia.<p>",
+			"description": "<p>Enrollas zarcillos sombríos de <em>Ulgu</em> alrededor del cuello de tus enemigos. Suponiendo que tengan necesidad de respirar, sufrirán +1 Estado de @Condition[Fatigado], no podrán hablar y estarán sujetos a las reglas de @UUID[Compendium.wfrp4e-core.journals.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#ahogamiento-y-asfixia]{Asfixia}.<p>",
 			"effects": [{
 				"name":"Sombras ahogadoras",
 				"scriptData": [
@@ -7365,7 +7554,7 @@
 				}]
 		},
 		{
-			"id": "T8nErqWnkqdvcNVz",
+			"id": "Dart",
 			"name": "Dardo",
 			"description": "<p>Haces que un pequeño dardo de energía mágica surja volando de tus dedos. Éste es un proyectil mágico con un Daño de +0.</p><p>\n\n <b>Saber:</b> Ninguno</p>"
 		},
@@ -7879,7 +8068,8 @@
 		{
 			"id": "Earthpool",
 			"name": "Manantial de la tierra",
-			"description": "<p>Al lanzar el hechizo, desapareces de inmediato en el suelo en medio de un torrente salvaje de <em>Ghyran</em>. Apareces al inicio del siguiente Asalto en cualquier punto a una distancia en yardas menor o igual que tu Voluntad, surgiendo violentamente de la tierra. Por cada +2 NE puedes aumentar la distancia recorrida en tantas yardas como tu Voluntad. Todos los enemigos a quienes te enfrentes cuando aparezcas sufrirán 1 Estado de @Condition[Sorprendido]. Este hechizo no te permite moverte a través de la piedra, pero sí a través del agua.</p><p>\n\n <b>Saber:</b> Cuando te encuentres en un entorno rural o en las tierras salvajes obtendrás un bonificador +10 a las tiradas de Lanzamiento y Canalización. Las criaturas vivas, es decir las que carecen de los Rasgos de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} o @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente} que sean objeto de hechizos arcanos del saber de la vida, verán todos sus estados de @Condition[Fatigado] y de @Condition[Sangrando] eliminados después de haber aplicado cualquier otro efecto, conforme la magia de la vida fluya a través de ellos. Las criaturas con el Rasgo de criatura @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, por otra parte, sufren tanto Daño adicional como tu Bonificador por Voluntad, ignorando el Bonificador por Resistencia y los puntos de Armadura, si se ven afectados por cualquier hechizo lanzado con el Saber de la Vida.</p>"
+			"description": "<p>Al lanzar el hechizo, desapareces de inmediato en el suelo en medio de un torrente salvaje de <em>Ghyran</em>. Apareces al inicio del siguiente Asalto en cualquier punto a una distancia en yardas menor o igual que tu Voluntad, surgiendo violentamente de la tierra. Por cada +2 NE puedes aumentar la distancia recorrida en tantas yardas como tu Voluntad. Todos los enemigos a quienes te enfrentes cuando aparezcas sufrirán 1 Estado de @Condition[Sorprendido]. Este hechizo no te permite moverte a través de la piedra, pero sí a través del agua.</p><p>\n\n <b>Saber:</b> Cuando te encuentres en un entorno rural o en las tierras salvajes obtendrás un bonificador +10 a las tiradas de Lanzamiento y Canalización. Las criaturas vivas, es decir las que carecen de los Rasgos de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} o @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente} que sean objeto de hechizos arcanos del saber de la vida, verán todos sus estados de @Condition[Fatigado] y de @Condition[Sangrando] eliminados después de haber aplicado cualquier otro efecto, conforme la magia de la vida fluya a través de ellos. Las criaturas con el Rasgo de criatura @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, por otra parte, sufren tanto Daño adicional como tu Bonificador por Voluntad, ignorando el Bonificador por Resistencia y los puntos de Armadura, si se ven afectados por cualquier hechizo lanzado con el Saber de la Vida.</p>",
+			"overcast": "Distacia (yds.)"
 		},
 		{
 			"id": "Eavesdrop",
@@ -7889,7 +8079,7 @@
 		{
 			"id": "Enchant Weapon",
 			"name": "Hechizar arma",
-			"description": "<p>Envuelves un solo objeto no mágico en gruesas bandas de Chamon, mejorando su potencia. Mientras dure el hechizo contará como mágico, obtendrá un Bonificador al Daño igual a tu Bonificador por Voluntad y además tendrá la Cualidad <em>Irrompible</em>. Por cada +3 NE podrás añadir 1 Cualidad o eliminar 1 Defecto del arma mientras dure el hechizo.</p><p>\n\n <b>Saber:</b> Los hechizos que infligen Daño ignoran los puntos de Armadura procedentes de armaduras metálicas, e infligen tanto Daño adicional como el número de puntos de Armadura metálica de que se dispone en cualquier Ubicación de impacto acertada. Por lo tanto, si tu hechizo impacta en una ubicación del Brazo protegida por 2 puntos de Armadura metálica, causa +2 de Daño adicional, ignorando los puntos de Armadura.</p>",
+			"description": "<p>Envuelves un solo objeto no mágico en gruesas bandas de <em>Chamon</em>, mejorando su potencia. Mientras dure el hechizo contará como mágico, obtendrá un Bonificador al Daño igual a tu Bonificador por Voluntad y además tendrá la Cualidad @UUID[Compendium.wfrp4e-core.journals.sLomXnc8R8518cWN.JournalEntryPage.wdXywmb7FBVipOw8#irrompible]{Irrompible}. Por cada +3 NE podrás añadir 1 Cualidad o eliminar 1 Defecto del arma mientras dure el hechizo.</p><p>\n\n <b>Saber:</b> Los hechizos que infligen Daño ignoran los puntos de Armadura procedentes de armaduras metálicas, e infligen tanto Daño adicional como el número de puntos de Armadura metálica de que se dispone en cualquier Ubicación de impacto acertada. Por lo tanto, si tu hechizo impacta en una ubicación del Brazo protegida por 2 puntos de Armadura metálica, causa +2 de Daño adicional, ignorando los puntos de Armadura.</p>",
 			"effects": [{
 				"name":"Hechizar arma",
 				"scriptData": [
@@ -7898,7 +8088,7 @@
 				}]
 		},
 		{
-			"id": "WeIdAA7KArjUZfyH",
+			"id": "Entangle",
 			"name": "Enmarañar",
 			"description": "<p>Utilizando la magia, inmovilizas a tu objetivo, envolviéndole en lo que mejor encaja con tu Saber: zarcillos, sombras, su propia ropa… Tu objetivo sufre 1 Estado de @Condition[Enmarañado] con una Fuerza igual a tu Inteligencia. Por cada +2 NE, puedes imponer al objetivo +1 Estado adicional de <em>Enmarañado</em>. El hechizo dura hasta que se eliminan todos los Estados de <em>Enmarañado</em>.</p>",
 			"overcast": "Enmarañado",
@@ -8249,7 +8439,7 @@
 		{
 			"id": "Flaming Sword of Rhuin",
 			"name": "Espada ígnea de Rhuin",
-			"description": "<p>Envuelves una espada en llamas mágicas. El arma tiene Daño +6 y la Cualidad <em>Impactante</em> y todo aquel a quien impacta sufre +1 Estado de @Condition[Ardiendo]. Si quien la empuña no tiene el Talento Magia arcana (fuego) y pifia un ataque con la Espada flamígera , sufre +1 Estado de @Condition[Ardiendo].</p><p>\n\n <b>Saber:</b> Puedes infligir +1 Estado de @Condition[Ardiendo] a cualquier objetivo de los hechizos del Saber del Fuego, a menos que éste también disponga del Talento Magia arcana (fuego). Cada Estado de Ardiendo a una distancia en yardas igual o menor que tu Bonificador por Voluntad suma +10 a los intentos de Canalizar o Lanzar con el Aqshy.</p>",
+			"description": "<p>Envuelves una espada en llamas mágicas. El arma tiene Daño +6 y la Cualidad @UUID[Compendium.wfrp4e-core.journals.sLomXnc8R8518cWN.JournalEntryPage.wdXywmb7FBVipOw8#impactante]{Impactante} y todo aquel a quien impacta sufre +1 Estado de @Condition[Ardiendo]. Si quien la empuña no tiene el Talento Magia arcana (fuego) y pifia un ataque con la Espada flamígera , sufre +1 Estado de @Condition[Ardiendo].</p><p>\n\n <b>Saber:</b> Puedes infligir +1 Estado de @Condition[Ardiendo] a cualquier objetivo de los hechizos del Saber del Fuego, a menos que éste también disponga del Talento Magia arcana (fuego). Cada Estado de Ardiendo a una distancia en yardas igual o menor que tu Bonificador por Voluntad suma +10 a los intentos de Canalizar o Lanzar con el Aqshy.</p>",
 			"effects": [{
 				"name":"Espada ígnea de Rhuin",
 				"scriptData": [
@@ -8411,7 +8601,8 @@
 				"name":"Bandada de muerte",
 				"filter":"return this.actor.itemTypes.talent.find(i => i.name == \"Magia arcana (Bestias)\")",
 				"scriptData": [
-					{"label":"Bandada de muerte"}
+					{"label":"Bandada de muerte"},
+					{"label":"Quitar"}
 					]
 				}]
 		},
@@ -8436,7 +8627,7 @@
 			"id": "Forge of Chamon",
 			"name": "Forja de Chamon",
 			"description": "<p>Alteras la calidad de un solo objeto hecho de metal. Puedes añadir 1 Cualidad o eliminar 1 Defecto. Por cada +2 NE puedes añadir otra Cualidad o eliminar otro Defecto.</p><p>\n\n <b>Saber:</b> Los hechizos que infligen Daño ignoran los puntos de Armadura procedentes de armaduras metálicas, e infligen tanto Daño adicional como el número de puntos de Armadura metálica de que se dispone en cualquier Ubicación de impacto acertada. Por lo tanto, si tu hechizo impacta en una ubicación del Brazo protegida por 2 puntos de Armadura metálica, causa +2 de Daño adicional, ignorando los puntos de Armadura.</p>",
-			"overcast": "Añadido/Quitado",
+			"overcast": "Añadido/Eliminado",
 			"effects": [{
 				"name":"Forja de Chamon",
 				"scriptData": [
@@ -8522,7 +8713,7 @@
 		{
 			"id": "Hunter's Hide",
 			"name": "Piel del cazador",
-			"description": "<p>Te envuelves en un manto brillante de <em>Ghur</em>. Mientras dura el hechizo, obtienes un Bonificador +20 a la Resistencia y los Rasgos de criatura @Compendium[wfrp4e-core.items.JQa5DLnTs2SEzRrc]{Visión en la oscuridad} y @Compendium[wfrp4e-core.items.pTorrE0l3VybAbtn]{Miedo (1)}, así como el Talento @Compendium[wfrp4e-core.items.9h82z72XGo9tfgQS]{Sentidos desarrollados (olfato)}.</p><p>\n\n <b>Saber:</b> Siempre que lanzas con éxito un hechizo del Saber de las Bestias, también puedes obtener el Rasgo de criatura @Compendium[wfrp4e-core.items.pTorrE0l3VybAbtn]{Miedo (1)} durante los siguientes [[/r 1d10]] Asaltos.</p>",
+			"description": "<p>Te envuelves en un manto brillante de <em>Ghur</em>. Mientras dura el hechizo, obtienes un Bonificador +20 a la Resistencia y los Rasgos de criatura @Compendium[wfrp4e-core.items.JQa5DLnTs2SEzRrc]{Visión en la oscuridad} y @Compendium[wfrp4e-core.items.pTorrE0l3VybAbtn]{Miedo (1)}, así como el Talento @Compendium[wfrp4e-core.items.9h82z72XGo9tfgQS]{Sentidos desarrollados (Olfato)}.</p><p>\n\n <b>Saber:</b> Siempre que lanzas con éxito un hechizo del Saber de las Bestias, también puedes obtener el Rasgo de criatura @Compendium[wfrp4e-core.items.pTorrE0l3VybAbtn]{Miedo (1)} durante los siguientes [[/r 1d10]] Asaltos.</p>",
 			"effects": [{
 				"name":"Piel del cazador",
 				"scriptData": [
@@ -8543,7 +8734,7 @@
 		{
 			"id": "Lifebloom",
 			"name": "Flor de la vida",
-			"description": "<p>Utilizas el <em>Ghyran</em> para inundar una zona marchita o desolada. Puedes tomar como objetivo o bien el lecho de un río seco, un pozo, un campo o un animal doméstico. Si lanzas con éxito el hechizo, el objetivo rebosa de vida:</p>\n<ul type=\"disc\">\n<li>Un río seco empieza a fluir de nuevo</li>\n<li>Un pozo seco o contaminado se vuelve limpio y potable</li>\n<li>Un campo de labranza, viñedo o huerto se llena de vida, con todas sus cosechas madurando por completo de inmediato</li>\n<li>Un animal enfermo o improductivo se vuelve saludable. La bestia afectada es ahora saludablemente productiva (las vacas producen leche, las gallinas ponen huevos, el pelaje de las ovejas y de las vacas es saludable y lustroso) y cualquier enfermedad se cura</li>\n</ul><p>\n\n <b>Saber:</b> Cuando te encuentres en un entorno rural o en las tierras salvajes obtendrás un bonificador +10 a las tiradas de Lanzamiento y Canalización. Las criaturas vivas, es decir las que carecen de los Rasgos de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} o @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente} que sean objeto de hechizos arcanos del saber de la vida, verán todos sus estados de @Condition[Fatigado] y de @Condition[Sangrando] eliminados después de haber aplicado cualquier otro efecto, conforme la magia de la vida fluya a través de ellos. Las criaturas con el Rasgo de criatura @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, por otra parte, sufren tanto Daño adicional como tu Bonificador por Voluntad, ignorando el Bonificador por Resistencia y los puntos de Armadura, si se ven afectados por cualquier hechizo lanzado con el Saber de la Vida.</p>"
+			"description": "<p>Utilizas el <em>Ghyran</em> para inundar una zona marchita o desolada. Puedes tomar como objetivo o bien el lecho de un río seco, un pozo, un campo o un animal doméstico. Si lanzas con éxito el hechizo, el objetivo rebosa de vida:</p>\n<ul type=\"disc\">\n<li>Un río seco empieza a fluir de nuevo.</li>\n<li>Un pozo seco o contaminado se vuelve limpio y potable.</li>\n<li>Un campo de labranza, viñedo o huerto se llena de vida, con todas sus cosechas madurando por completo de inmediato.</li>\n<li>Un animal enfermo o improductivo se vuelve saludable. La bestia afectada es ahora saludablemente productiva (las vacas producen leche, las gallinas ponen huevos, el pelaje de las ovejas y de las vacas es saludable y lustroso) y cualquier enfermedad se cura.</li>\n</ul><p>\n\n <b>Saber:</b> Cuando te encuentres en un entorno rural o en las tierras salvajes obtendrás un bonificador +10 a las tiradas de Lanzamiento y Canalización. Las criaturas vivas, es decir las que carecen de los Rasgos de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} o @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente} que sean objeto de hechizos arcanos del saber de la vida, verán todos sus estados de @Condition[Fatigado] y de @Condition[Sangrando] eliminados después de haber aplicado cualquier otro efecto, conforme la magia de la vida fluya a través de ellos. Las criaturas con el Rasgo de criatura @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, por otra parte, sufren tanto Daño adicional como tu Bonificador por Voluntad, ignorando el Bonificador por Resistencia y los puntos de Armadura, si se ven afectados por cualquier hechizo lanzado con el Saber de la Vida.</p>"
 		},
 		{
 			"id": "Light",
@@ -8711,7 +8902,7 @@
 		{
 			"id": "Mindslip",
 			"name": "Resbalón mental",
-			"description": "<p>Conjuras delicadas hebras de<em>Ulgu</em> en la mente de tu objetivo, haciendo que toda memoria previa de ti desaparezca mientras dura el hechizo. Una vez se haya acabado el hechizo, el objetivo deberá superar un Chequeo <strong>Normal (+20)</strong> de <strong>Inteligencia</strong>, o la pérdida de memoria será permanente hasta ser dispersada.</p><p>\n\n <b>Saber:</b> Todos los hechizos lanzados del Saber de las Sombras que infligen Daño ignoran todos los puntos de Armadura no mágicos.</p>"
+			"description": "<p>Conjuras delicadas hebras de <em>Ulgu</em> en la mente de tu objetivo, haciendo que toda memoria previa de ti desaparezca mientras dura el hechizo. Una vez se haya acabado el hechizo, el objetivo deberá superar un Chequeo <strong>Normal (+20)</strong> de <strong>Inteligencia</strong>, o la pérdida de memoria será permanente hasta ser dispersada.</p><p>\n\n <b>Saber:</b> Todos los hechizos lanzados del Saber de las Sombras que infligen Daño ignoran todos los puntos de Armadura no mágicos.</p>"
 		},
 		{
 			"id": "Mirkride",
@@ -8874,13 +9065,13 @@
 		{
 			"id": "Mystifying Miasma",
 			"name": "Miasma desorientador",
-			"description": "<p>Conjuras una masa giratoria de niebla, atravesada por sombras agitadas, que revolotea y confunde los sentidos. Quien se encuentre en el interior de la niebla y no disponga del Talento <em>Magia arcana (Sombras)</em> se verá afectado por el Miasma , sufriendo +1 Estado de @Condition[Cegado,], @Condition[Ensordecido], y @Condition[Fatigado], hasta el final de la Duración del hechizo. Todo afectado que intente moverse deberá tener éxito en un Chequeo <strong>Desafiante (+0)</strong> de </strong>Percepción</strong>, o pasar al Estado @Condition[Tumbado]. Si el hechizo es dispersado una vez está en juego, todo el que se ha visto afectado por el mismo deberá llevar a cabo un Chequeo <strong>Muy fácil (+40)</strong> de <strong>Iniciativa</strong> o sufrir 1 Estado de @Condition[Aturdido].</p><p>\n\n <b>Saber:</b> Todos los hechizos lanzados del Saber de las Sombras que infligen Daño ignoran todos los puntos de Armadura no mágicos.</p>",
+			"description": "<p>Conjuras una masa giratoria de niebla, atravesada por sombras agitadas, que revolotea y confunde los sentidos. Quien se encuentre en el interior de la niebla y no disponga del Talento <em>Magia arcana (Sombras)</em> se verá afectado por el Miasma , sufriendo +1 Estado de @Condition[Cegado], @Condition[Ensordecido], y @Condition[Fatigado], hasta el final de la Duración del hechizo. Todo afectado que intente moverse deberá tener éxito en un Chequeo <strong>Desafiante (+0)</strong> de </strong>Percepción</strong>, o pasar al Estado @Condition[Tumbado]. Si el hechizo es dispersado una vez está en juego, todo el que se ha visto afectado por el mismo deberá llevar a cabo un Chequeo <strong>Muy fácil (+40)</strong> de <strong>Iniciativa</strong> o sufrir 1 Estado de @Condition[Aturdido].</p><p>\n\n <b>Saber:</b> Todos los hechizos lanzados del Saber de las Sombras que infligen Daño ignoran todos los puntos de Armadura no mágicos.</p>",
 			"effects": [{
 				"name":"Miasma desorientador",
 				"filter":"return this.actor.itemTypes.talent.find(i => i.name == \"Magia arcana (Sombra)\") || this.actor.itemTypes.talent.find(i => i.name == \"Magia arcana (Sombras)\")",
 				"scriptData": [
 					{"label":"Miasma desorientador"},
-					{"label":"Aturdido","script":"let test = await this.actor.setupCharacteristic(\"i\", {skipTargets: true, appendTitle : \" - Aturdido\", fields : {difficulty : \"easy\"}})\nawait test.roll();\n\nif (!test.succeeded)\n{\n\tthis.actor.addCondition(\"stunned\");\n}"}
+					{"label":"Aturdido"}
 					]
 				}]
 		},
@@ -8892,7 +9083,7 @@
 		{
 			"id": "Net of Amyntok",
 			"name": "Red de Amyntok",
-			"description": "<p>Lanzas una delicada red tejida con hebras de<em>Hysh</em> sobre tus objetivos, cuya mente se ve abrumada por acertijos y rompecabezas, que les dejan paralizados de indecisión. Los objetivos sufren +1 Estado de @Condition[Aturdido], del que no se pueden deshacer mientras el hechizo está en funcionamiento. Al recuperarse de dicho Estado, los objetivos Chequean su Inteligencia en lugar de la Habilidad Aguante. Los objetivos con el Rasgo de criatura <em>Bestial</em> son inmunes a este hechizo.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz). Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
+			"description": "<p>Lanzas una delicada red tejida con hebras de<em>Hysh</em> sobre tus objetivos, cuya mente se ve abrumada por acertijos y rompecabezas, que les dejan paralizados de indecisión. Los objetivos sufren +1 Estado de @Condition[Aturdido], del que no se pueden deshacer mientras el hechizo está en funcionamiento. Al recuperarse de dicho Estado, los objetivos Chequean su Inteligencia en lugar de la Habilidad Aguante. Los objetivos con el Rasgo de criatura @UUID[Compendium.wfrp4e-core.items.AGcJl5rHjkyIQBPP]{Bestial} son inmunes a este hechizo.</p><p>\n\n <b>Saber:</b> Puedes infligir 1 Estado de @Condition[Cegado] a los que tomas como objetivo de los hechizos del Saber de la Luz, a menos que tengan el Talento Magia arcana (luz). Si un objetivo tiene el Rasgo de criatura @Compendium[wfrp4e-core.items.v3uzEthcq0JRar0J]{Demoníaco} or @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente}, los hechizos también le infligen 1 impacto adicional con un Daño igual a tu Bonificador por Inteligencia, que ignora el Bonificador por Resistencia y los puntos de Armadura.<p>",
 			"effects": [{
 				"name":"Red de Amyntok",
 				"scriptData": [
@@ -9182,7 +9373,7 @@
 		{
 			"id": "Sanctify",
 			"name": "Santificar",
-			"description": "<p>Duración: tantos minutos como tu Voluntad Inscribiendo un círculo mágico, lo proteges con Shyish , creando una barrera impenetrable contra los muertos vivientes. Las criaturas con el Rasgo de criatura @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente} no pueden ni entrar ni salir del círculo.</p><p>\n\n <b>Saber:</b> Los objetivos afligidos por los hechizos del Saber de la Muerte quedan drenados de vida, debilitados y apáticos. Puedes asignar +1 Estado de @Condition[Fatigado] a cualquier objetivo vivo afectado por un hechizo de este Saber. Un objetivo tan sólo puede tener 1 Estado de Fatigado de esta forma en un momento dado.</p>",
+			"description": "<p>Inscribiendo un círculo mágico, lo proteges con Shyish , creando una barrera impenetrable contra los muertos vivientes. Las criaturas con el Rasgo de criatura @Compendium[wfrp4e-core.items.PFTD9gDvRWW9uh5g]{Muerto viviente} no pueden ni entrar ni salir del círculo.</p><p>\n\n <b>Saber:</b> Los objetivos afligidos por los hechizos del Saber de la Muerte quedan drenados de vida, debilitados y apáticos. Puedes asignar +1 Estado de @Condition[Fatigado] a cualquier objetivo vivo afectado por un hechizo de este Saber. Un objetivo tan sólo puede tener 1 Estado de Fatigado de esta forma en un momento dado.</p>",
 			"effects": [{
 				"name":"Santificar",
 				"scriptData": [
@@ -9215,12 +9406,12 @@
 		{
 			"id": "Shadowsteed",
 			"name": "Montura de sombras",
-			"description": "<p>Convocas a un corcel sombrío. La carne antinatural de la criatura es negra como la medianoche, y a veces parece ser a la vez sólida e insustancial. Utiliza las reglas para un caballo de monta. Cuando la Montura de sombras está fuera de la luz solar, también obtiene los siguientes Rasgos de criatura: @Compendium[wfrp4e-core.items.Bvd2aZ0gQUXHfCTh]{Custodia (9+)}, @Compendium[wfrp4e-core.items.tNWrJUOArwfWXsPw]{Etéreo}, @Compendium[wfrp4e-core.items.wMwSRDmgiF2IdCJr]{Inmune al dolor}, @Compendium[wfrp4e-core.items.mDgEMOoJpi8DkRYb]{Mágico}, @Compendium[wfrp4e-core.items.pTorrE0l3VybAbtn]{Miedo (1)}, @Compendium[wfrp4e-core.items.OzwDT6kzoLYeeR2d]{Sigiloso}, @Compendium[wfrp4e-core.items.JQa5DLnTs2SEzRrc]{Visión en la oscuridad} y @Compendium[wfrp4e-core.items.UmxGZRV0Lw3TZ0Kx]{Zancada}.</p>\n<p>&nbsp;</p>\n<p>Incluso cuando son insustanciales, las Monturas de sombras se pueden montar. Los jinetes con el Talento @Compendium[wfrp4e-core.items.3O9clK7LGyuLTHPW]{Magia arcana (sombra)} lo hacen con un bonificador +20 a los Chequeos de Montar. Los que carecen de dicho Talento sufren un penalizador -20 a los Chequeos de Montar. Las Monturas de sombras son incansables, por lo que no necesitan descanso (¡aunque sus inquietos jinetes podrían necesitarlo!). Cuando los primeros rayos del alba despuntan sobre el horizonte, la montura se funde en una niebla insustancial. Si aún la está montando cuando acaba el hechizo, o cuando éste es disipado, el jinete sufre Daño por Caída.</p><p>\n\n <b>Saber:</b> Todos los hechizos lanzados del Saber de las Sombras que infligen Daño ignoran todos los puntos de Armadura no mágicos.</p>"
+			"description": "<p>Convocas a un corcel sombrío. La carne antinatural de la criatura es negra como la medianoche, y a veces parece ser a la vez sólida e insustancial. Utiliza las reglas para un @UUID[Compendium.wfrp4e-core.actors.b1R5sW6lYIViJ2ki]{caballo de monta}. Cuando la <em>Montura de sombras</em> está fuera de la luz solar, también obtiene los siguientes Rasgos de criatura: @Compendium[wfrp4e-core.items.Bvd2aZ0gQUXHfCTh]{Custodia (9+)}, @Compendium[wfrp4e-core.items.tNWrJUOArwfWXsPw]{Etéreo}, @Compendium[wfrp4e-core.items.wMwSRDmgiF2IdCJr]{Inmune al dolor}, @Compendium[wfrp4e-core.items.mDgEMOoJpi8DkRYb]{Mágico}, @Compendium[wfrp4e-core.items.pTorrE0l3VybAbtn]{Miedo (1)}, @Compendium[wfrp4e-core.items.OzwDT6kzoLYeeR2d]{Sigiloso}, @Compendium[wfrp4e-core.items.JQa5DLnTs2SEzRrc]{Visión en la oscuridad} y @Compendium[wfrp4e-core.items.UmxGZRV0Lw3TZ0Kx]{Zancada}.</p>\n<p>&nbsp;</p>\n<p>Incluso cuando son insustanciales, las <em>Monturas de sombras</em> se pueden montar. Los jinetes con el Talento @Compendium[wfrp4e-core.items.3O9clK7LGyuLTHPW]{Magia arcana (sombra)} lo hacen con un bonificador +20 a los Chequeos de Montar. Los que carecen de dicho Talento sufren un penalizador -20 a los Chequeos de Montar. Las <em>Monturas de sombras</em> son incansables, por lo que no necesitan descanso (¡aunque sus inquietos jinetes podrían necesitarlo!). Cuando los primeros rayos del alba despuntan sobre el horizonte, la montura se funde en una niebla insustancial. Si aún la está montando cuando acaba el hechizo, o cuando éste es disipado, el jinete sufre Daño por @UUID[Compendium.wfrp4e-core.journals.NS3YGlJQxwTggjRX.JournalEntryPage.bdfiyhEYtKs7irqc#caidas]{Caída}.</p><p>\n\n <b>Saber:</b> Todos los hechizos lanzados del Saber de las Sombras que infligen Daño ignoran todos los puntos de Armadura no mágicos.</p>"
 		},
 		{
 			"id": "Shadowstep",
 			"name": "Paso de las sombras",
-			"description": "<p>Creas un portal sombrío de <em>Ulgu</em> través del Aethyr. Desapareces de tu ubicación actual y apareces inmediatamente a tantas yardas de distancia como tu Voluntad. Todos los enemigos Trabados contigo sufren 1 Estado de @Condition[Sorprendido] al aparecer o reaparecer.</p><p>\n\n <b>Saber:</b> Todos los hechizos lanzados del Saber de las Sombras que infligen Daño ignoran todos los puntos de Armadura no mágicos.</p>"
+			"description": "<p>Creas un portal sombrío de <em>Ulgu</em> a través del Aethyr. Desapareces de tu ubicación actual y apareces inmediatamente a tantas yardas de distancia como tu Voluntad. Todos los enemigos Trabados contigo sufren 1 Estado de @Condition[Sorprendido] al aparecer o reaparecer.</p><p>\n\n <b>Saber:</b> Todos los hechizos lanzados del Saber de las Sombras que infligen Daño ignoran todos los puntos de Armadura no mágicos.</p>"
 		},
 		{
 			"id": "Shock",
@@ -9287,7 +9478,11 @@
 		{
 			"id": "Starcrossed",
 			"name": "Desafortunado",
-			"description": "<p>Mientras este hechizo permanece activo, puedes gastar puntos de Fortuna para obligar a un oponente a repetir sus Chequeos.</p><p>\n\n <b>Saber:</b> Los hechizos que causan Daño ignoran los puntos de Armadura debidos a llevar armadura metálica, y saltan a todos los demás objetivos que están a 2 yardas o menos, excepto quienes tienen el Talento Magia arcana (cielos), infligiendo impactos con un Daño igual a tu Bonificador por Voluntad, lo que se trata como un proyectil mágico.</p>"
+			"description": "<p>Mientras este hechizo permanece activo, puedes gastar puntos de Fortuna para obligar a un oponente a repetir sus Chequeos.</p><p>\n\n <b>Saber:</b> Los hechizos que causan Daño ignoran los puntos de Armadura debidos a llevar armadura metálica, y saltan a todos los demás objetivos que están a 2 yardas o menos, excepto quienes tienen el Talento Magia arcana (cielos), infligiendo impactos con un Daño igual a tu Bonificador por Voluntad, lo que se trata como un proyectil mágico.</p>",
+			"effects": [{
+				"name":"Desafortunado",
+				"scriptData": []
+				}]
 		},
 		{
 			"id": "Steal Life",
@@ -9320,7 +9515,7 @@
 		{
 			"id": "T'Essla's Arc",
 			"name": "Arco de T’Essla",
-			"description": "<p>Un crujiente relámpago surge de la punta de tus dedos, acertando a tu objetivo. Éste es un proyectil mágico, con Daño +10, que inflige +1 Estado de@Condition[Cegado].</p><p>\n\n <b>Saber:</b> Los hechizos que causan Daño ignoran los puntos de Armadura debidos a llevar armadura metálica, y saltan a todos los demás objetivos que están a 2 yardas o menos, excepto quienes tienen el Talento Magia arcana (cielos), infligiendo impactos con un Daño igual a tu Bonificador por Voluntad, lo que se trata como un proyectil mágico.</p>",
+			"description": "<p>Un crujiente relámpago surge de la punta de tus dedos, acertando a tu objetivo. Éste es un proyectil mágico, con Daño +10, que inflige +1 Estado de @Condition[Cegado].</p><p>\n\n <b>Saber:</b> Los hechizos que causan Daño ignoran los puntos de Armadura debidos a llevar armadura metálica, y saltan a todos los demás objetivos que están a 2 yardas o menos, excepto quienes tienen el Talento Magia arcana (cielos), infligiendo impactos con un Daño igual a tu Bonificador por Voluntad, lo que se trata como un proyectil mágico.</p>",
 			"effects": [{
 				"name":"Arco de T’Essla",
 				"scriptData": [
@@ -9613,7 +9808,8 @@
 			"effects": [{
 				"name":"Transmutación de Chamon",
 				"scriptData": [
-					{"label":"Transmutación de Chamon"}
+					{"label":"Ignorar BR"},
+					{"label":"Añadir Estados"}
 					]
 				},
 				{
@@ -10945,7 +11141,7 @@
 		{
 			"id": "Heed Not the Witch",
 			"name": "No hagáis caso a la bruja",
-			"description": "<p>Llamas a Sigmar para que proteja a quienes están próximos a ti de la maligna influencia del Caos. Todo hechizo que tenga como objetivo a alguien o a algo que esté dentro de un radio de tantas yardas como tu Bonificador por Empatía sufrirá un penalizador -20 a los Chequeos de Hablar idioma (magia), además de cualquier otro penalizador. Por cada +2 NE puedes incrementar el Área de efecto en tantas yardas como tu Bonificador por Empatía.</p>",
+			"description": "<p>Llamas a Sigmar para que proteja a quienes están próximos a ti de la maligna influencia del Caos. Todo hechizo que tenga como objetivo a alguien o a algo que esté dentro de un radio de tantas yardas como tu Bonificador por Empatía sufrirá un penalizador -20 a los Chequeos de Hablar idioma (Lengua de la magia), además de cualquier otro penalizador. Por cada +2 NE puedes incrementar el Área de efecto en tantas yardas como tu Bonificador por Empatía.</p>",
 			"effects": [{
 				"name":"No hagáis caso a la bruja",
 				"scriptData": [
@@ -11528,6 +11724,42 @@
 				}]
 		},
 		{
+			"id": "Armour (5)",
+			"name": "Armadura (5)",
+			"description": "<p>La criatura está protegida por armadura o por una piel gruesa. Dispone de tantos puntos de Armadura como la cifra entre paréntesis en todas las Ubicaciones de impacto.</p>",
+			"effects": [{
+				"name":"Armadura",
+				"scriptData": [
+					{"label":"Armadura"},
+					{"label":"Establecer valor","script":"if (isNaN(parseInt(this.item.system.specification.value)))\n{\n    let value = this.item.specifier;\n    if (!value)\n    {\n        value = await ValueDialog.create({text : \"Escribe el valor de Armadura\", title : this.effect.name});\n    }\n    if (value)\n    {\n        this.item.updateSource({\"system.specification.value\" : value, name : this.item.baseName});\n    }\n}"}
+					]
+				}]
+		},
+		{
+			"id": "Armour (Furs)",
+			"name": "Armadura (Pieles)",
+			"description": "<p>La criatura está protegida por armadura o por una piel gruesa. Dispone de tantos puntos de Armadura como la cifra entre paréntesis en todas las Ubicaciones de impacto.</p>",
+			"effects": [{
+				"name":"Armadura",
+				"scriptData": [
+					{"label":"Armadura"},
+					{"label":"Establecer valor","script":"if (isNaN(parseInt(this.item.system.specification.value)))\n{\n    let value = this.item.specifier;\n    if (!value)\n    {\n        value = await ValueDialog.create({text : \"Escribe el valor de Armadura\", title : this.effect.name});\n    }\n    if (value)\n    {\n        this.item.updateSource({\"system.specification.value\" : value, name : this.item.baseName});\n    }\n}"}
+					]
+				}]
+		},
+		{
+			"id": "Armour (Hide)",
+			"name": "Armadura (Piel)",
+			"description": "<p>La criatura está protegida por armadura o por una piel gruesa. Dispone de tantos puntos de Armadura como la cifra entre paréntesis en todas las Ubicaciones de impacto.</p>",
+			"effects": [{
+				"name":"Armadura",
+				"scriptData": [
+					{"label":"Armadura"},
+					{"label":"Establecer valor","script":"if (isNaN(parseInt(this.item.system.specification.value)))\n{\n    let value = this.item.specifier;\n    if (!value)\n    {\n        value = await ValueDialog.create({text : \"Escribe el valor de Armadura\", title : this.effect.name});\n    }\n    if (value)\n    {\n        this.item.updateSource({\"system.specification.value\" : value, name : this.item.baseName});\n    }\n}"}
+					]
+				}]
+		},
+		{
 			"id": "Belligerent",
 			"name": "Beligerante",
 			"description": "<p>A la criatura le encanta ganar un combate. Mientras tenga más Ventaja que su oponente será inmune a la Psicología. \r\r</p>"
@@ -11588,7 +11820,7 @@
 				{
 				"name":"Aliento",
 				"scriptData": [
-					{"label":"Aliento","script":"let type = this.item.getFlag(\"wfrp4e\", \"breath\");\n\nif (type == \"cold\")\n{\n\tlet stunned = Math.max(1, Math.trunc(args.totalWoundLoss / 5))\n\tawait args.actor.addCondition(\"stunned\", stunned);\n}\n\nif (type == \"corrosion\")\n{\n    let damageItems = await foundry.applications.api.DialogV2.confirm({window: {title : this.item.name}, content : `<p>¿Dañar todos los Objetos portados?</p>`})\n\tif (damageItems)\n\t{\n\t\tlet msg = ``\n\t\tlet weapons = args.actor.itemTypes.weapon.filter(i => i.isEquipped);\n\t\tlet armour = args.actor.itemTypes.armour.filter(i => i.isEquipped);\n\t\tlet trappings = args.actor.itemTypes.trapping.filter(i => i.isEquipped);\n\t\tfor(let item of weapons)\n\t\t{\n\t\t\tif (item.system.properties.qualities.shield)\n\t\t\t{\n\t\t\t\tawait item.system.damageItem(1, \"shield\");\n\t\t\t}\n\t\t\telse \n\t\t\t{\n\t\t\t\tawait item.system.damageItem(1);\n\t\t\t}\n\t\t\tmsg += `<p><strong>${item.name}</strong> dañado en 1</p>`\n\t\t}\n\t\tfor(let item of armour)\n\t\t{\n\t\t\tawait item.system.damageItem(1);\n\t\t\tmsg += `<p><strong>${item.name}</strong> dañado en 1</p>`\n\t\t}\n\t\tfor(let item of trappings)\n\t\t{\n\t\t\tawait item.system.damageItem(1);\n\t\t\tmsg += `<p><strong>${item.name}</strong> dañado en 1</p>`\n\t\t}\n\t\tif (msg)\n\t\t{\n\t\t\tthis.script.message(msg, {speaker : {alias : args.actor.name}});\n\t\t}\n\t}\n}\n\nif (type == \"fire\")\n{\n\tawait args.actor.addCondition(\"ablaze\");\n}\n\nif (type == \"electricity\")\n{\n\tawait args.actor.addCondition(\"stunned\");\n}\n\nif (type == \"poison\")\n{\n\tawait args.actor.addCondition(\"poisoned\");\n}\n\nif (type == \"warpfire\")\n{\n    await this.actor.corruptionDialog(\"moderate\")\n    this.actor.applyEffect({effectUuids : this.item.effects.getName(\"Warpfire\").uuid})\n}"},
+					{"label":"Aliento","script":"let type = this.item.getFlag(\"wfrp4e\", \"breath\");\n\nif (type == \"cold\")\n{\n\tlet stunned = Math.max(1, Math.trunc(args.totalWoundLoss / 5))\n\tawait args.actor.addCondition(\"stunned\", stunned);\n}\n\nif (type == \"corrosion\")\n{\n    let damageItems = await foundry.applications.api.DialogV2.confirm({window: {title : this.item.name}, content : `<p>¿Dañar todos los Objetos portados?</p>`})\n\tif (damageItems)\n\t{\n\t\tlet msg = ``\n\t\tlet weapons = args.actor.itemTypes.weapon.filter(i => i.isEquipped);\n\t\tlet armour = args.actor.itemTypes.armour.filter(i => i.isEquipped);\n\t\tlet trappings = args.actor.itemTypes.trapping.filter(i => i.isEquipped);\n\t\tfor(let item of weapons)\n\t\t{\n\t\t\tif (item.system.properties.qualities.shield)\n\t\t\t{\n\t\t\t\tawait item.system.damageItem(1, \"shield\");\n\t\t\t}\n\t\t\telse \n\t\t\t{\n\t\t\t\tawait item.system.damageItem(1);\n\t\t\t}\n\t\t\tmsg += `<p><strong>${item.name}</strong> dañado en 1</p>`\n\t\t}\n\t\tfor(let item of armour)\n\t\t{\n\t\t\tawait item.system.damageItem(1);\n\t\t\tmsg += `<p><strong>${item.name}</strong> dañado en 1</p>`\n\t\t}\n\t\tfor(let item of trappings)\n\t\t{\n\t\t\tawait item.system.damageItem(1);\n\t\t\tmsg += `<p><strong>${item.name}</strong> dañado en 1</p>`\n\t\t}\n\t\tif (msg)\n\t\t{\n\t\t\tthis.script.message(msg, {speaker : {alias : args.actor.name}});\n\t\t}\n\t}\n}\n\nif (type == \"fire\")\n{\n\tawait args.actor.addCondition(\"ablaze\");\n}\n\nif (type == \"electricity\")\n{\n\tawait args.actor.addCondition(\"stunned\");\n}\n\nif (type == \"poison\")\n{\n\tawait args.actor.addCondition(\"poisoned\");\n}\n\nif (type == \"warpfire\")\n{\n    await this.actor.corruptionDialog(\"moderada\")\n    this.actor.applyEffect({effectUuids : this.item.effects.getName(\"Warpfire\").uuid})\n}"},
 					{"label":"Ignorar PA"}
 					]
 				}]
@@ -11980,7 +12212,7 @@
 		{
 			"id": "Petrifying Gaze",
 			"name": "Mirada petrificante",
-			"description": "<p>La mirada de la criatura puede convertir la carne en piedra. Como su Acción, puede gastar toda su Ventaja (mínimo 1) para desatar su mirada. La criatura lleva a cabo un Chequeo <strong>Enfrentado</strong> de <strong>Habilidad de proyectiles/Iniciativa</strong>, sumando 1 NE por Ventaja gastada. Su oponente sufre 1 Estado de @Condition[Aturdido] por cada 2 NE por los que la criatura gana. Si gana por lo menos por 6 NE, su objetivo se convierte permanentemente en piedra.\n        \n        Si el objetivo es un hechicero, el Chequeo puede ser Enfrentado con Hablar idioma (magia) en lugar de Iniciativa, al lanzarse un contrahechizo.</p>",
+			"description": "<p>La mirada de la criatura puede convertir la carne en piedra. Como su Acción, puede gastar toda su Ventaja (mínimo 1) para desatar su mirada. La criatura lleva a cabo un Chequeo <strong>Enfrentado</strong> de <strong>Habilidad de proyectiles/Iniciativa</strong>, sumando 1 NE por Ventaja gastada. Su oponente sufre 1 Estado de @Condition[Aturdido] por cada 2 NE por los que la criatura gana. Si gana por lo menos por 6 NE, su objetivo se convierte permanentemente en piedra.\n        \n        Si el objetivo es un hechicero, el Chequeo puede ser Enfrentado con Hablar idioma (Lengua de la magia) en lugar de Iniciativa, al lanzarse un contrahechizo.</p>",
 			"effects": [{
 				"name":"Mirada petrificante",
 				"scriptData": [
@@ -12287,6 +12519,31 @@
 			"description": "<p>La criatura lleva un arma cuerpo a cuerpo, o bien utiliza dientes, zarpas o cosas similares en combate.\n El arma causa tanto daño como la cifra entre paréntesis, que ya incluye el Bonificador por Fuerza de la criatura. Típicamente será 4 + Bonificador por Fuerza (lo que representa un Arma de mano).</p>"
 		},
 		{
+			"id": "Weapon (Bite)",
+			"name": "Arma (Mordisco)",
+			"description": "<p>La criatura lleva un arma cuerpo a cuerpo, o bien utiliza dientes, zarpas o cosas similares en combate.\n El arma causa tanto daño como la cifra entre paréntesis, que ya incluye el Bonificador por Fuerza de la criatura. Típicamente será 4 + Bonificador por Fuerza (lo que representa un Arma de mano).</p>"
+		},
+		{
+			"id": "Weapon (Claws)",
+			"name": "Arma (Garras)",
+			"description": "<p>La criatura lleva un arma cuerpo a cuerpo, o bien utiliza dientes, zarpas o cosas similares en combate.\n El arma causa tanto daño como la cifra entre paréntesis, que ya incluye el Bonificador por Fuerza de la criatura. Típicamente será 4 + Bonificador por Fuerza (lo que representa un Arma de mano).</p>"
+		},
+		{
+			"id": "Weapon (Huge Glaive)",
+			"name": "Arma (Archa enorme)",
+			"description": "<p>La criatura lleva un arma cuerpo a cuerpo, o bien utiliza dientes, zarpas o cosas similares en combate.\n El arma causa tanto daño como la cifra entre paréntesis, que ya incluye el Bonificador por Fuerza de la criatura. Típicamente será 4 + Bonificador por Fuerza (lo que representa un Arma de mano).</p>"
+		},
+		{
+			"id": "Weapon (Quill)",
+			"name": "Arma (Pluma)",
+			"description": "<p>La criatura lleva un arma cuerpo a cuerpo, o bien utiliza dientes, zarpas o cosas similares en combate.\n El arma causa tanto daño como la cifra entre paréntesis, que ya incluye el Bonificador por Fuerza de la criatura. Típicamente será 4 + Bonificador por Fuerza (lo que representa un Arma de mano).</p>"
+		},
+		{
+			"id": "Weapon (Teeth and Horns)",
+			"name": "Arma (Dientes y cuernos)",
+			"description": "<p>La criatura lleva un arma cuerpo a cuerpo, o bien utiliza dientes, zarpas o cosas similares en combate.\n El arma causa tanto daño como la cifra entre paréntesis, que ya incluye el Bonificador por Fuerza de la criatura. Típicamente será 4 + Bonificador por Fuerza (lo que representa un Arma de mano).</p>"
+		},
+		{
 			"id": "Web",
 			"name": "Telaraña",
 			"description": "<p>La criatura puede crear telarañas para atrapar a enemigos incautos. Siempre que acierta, sus oponentes sufren 1 Estado de @Condition[Enmarañado], con una Fuerza igual a la cifra entre paréntesis.</p>",
@@ -12377,7 +12634,7 @@
 			"id": "Aethyric Attunement",
 			"name": "Afinidad con el Aethyr",
 			"description": "<p>Tu experiencia, tu talento o tu entrenamiento te permiten manipular de forma más segura los Vientos de la Magia. No sufres una Disfunción mágica si sacas un doble en un Chequeo con éxito de Canalización.</p>",
-			"tests": "Canalización (cualquiera)",
+			"tests": "Canalización (Cualquiera)",
 			"effects": [{
 				"name":"Afinidad con el Aethyr",
 				"scriptData": [
@@ -12421,6 +12678,71 @@
 		{
 			"id": "Arcane Magic",
 			"name": "Magia arcana",
+			"description": "<p>Puedes, o bien estudiar uno de los ocho Saberes arcanos de la Magia (Bestias, Cielos, Fuego, Luz, Metal, Muerte, Sombra y Vida) o practicar un Saber menos conocido como Adivinación o Nigromancia. Ahora puedes memorizar hechizos de tu Saber elegido al siguiente coste en PX.</p>\n<div>\n<table title=\"\" border=\"1\" summary=\"\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td>\n<p>Nº de hechizos actualmente conocidos</p>\n</td>\n<td>\n<p>Coste en PX de un nuevo hechizo</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 1&nbsp;</p>\n</td>\n<td>\n<p>100 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 2</p>\n</td>\n<td>\n<p>200 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 3</p>\n</td>\n<td>\n<p>300 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 4</p>\n</td>\n<td>\n<p>400 PX</p>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<p>...y así sucesivamente.</p>\n<p>Por lo tanto, si tu Bonificador por Inteligencia es 4, el primer hechizo y los siguientes 4 te costarán 100 PX, los segundos 4 te costarán 200 PX, etc. Las reglas completas para aprender nuevos hechizos se proporcionan en @UUID[Compendium.wfrp4e-core.journals.JournalEntry.YBVrpUHEjohB1H4f]{Magia}. En circunstanciLo normales, no puedes aprender más de un talento de Magia arcana (Saber). Además, cuando tienes el Talento Magia arcana, no puedes aprender los Talentos @UUID[Compendium.wfrp4e-core.items.Item.QyjWtSdnVMT04l5Y]{Bendecir} ni @UUID[Compendium.wfrp4e-core.items.Item.voV0C2ar1bKpcpnH]{Invocar}. Puedes borrar de la memoria este Talento por 100 PX, pero si lo haces perderás de inmediato todos tus hechizos.</p>"
+		},
+		{
+			"id": "Arcane Magic (Beasts)",
+			"name": "Magia arcana (Bestias)",
+			"description": "<p>Puedes, o bien estudiar uno de los ocho Saberes arcanos de la Magia (Bestias, Cielos, Fuego, Luz, Metal, Muerte, Sombra y Vida) o practicar un Saber menos conocido como Adivinación o Nigromancia. Ahora puedes memorizar hechizos de tu Saber elegido al siguiente coste en PX.</p>\n<div>\n<table title=\"\" border=\"1\" summary=\"\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td>\n<p>Nº de hechizos actualmente conocidos</p>\n</td>\n<td>\n<p>Coste en PX de un nuevo hechizo</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 1&nbsp;</p>\n</td>\n<td>\n<p>100 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 2</p>\n</td>\n<td>\n<p>200 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 3</p>\n</td>\n<td>\n<p>300 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 4</p>\n</td>\n<td>\n<p>400 PX</p>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<p>...y así sucesivamente.</p>\n<p>Por lo tanto, si tu Bonificador por Inteligencia es 4, el primer hechizo y los siguientes 4 te costarán 100 PX, los segundos 4 te costarán 200 PX, etc. Las reglas completas para aprender nuevos hechizos se proporcionan en @UUID[Compendium.wfrp4e-core.journals.JournalEntry.YBVrpUHEjohB1H4f]{Magia}. En circunstanciLo normales, no puedes aprender más de un talento de Magia arcana (Saber). Además, cuando tienes el Talento Magia arcana, no puedes aprender los Talentos @UUID[Compendium.wfrp4e-core.items.Item.QyjWtSdnVMT04l5Y]{Bendecir} ni @UUID[Compendium.wfrp4e-core.items.Item.voV0C2ar1bKpcpnH]{Invocar}. Puedes borrar de la memoria este Talento por 100 PX, pero si lo haces perderás de inmediato todos tus hechizos.</p>"
+		},
+		{
+			"id": "Arcane Magic (Lore of Beasts)",
+			"name": "Magia arcana (Saber de las Bestias)",
+			"description": "<p>Puedes, o bien estudiar uno de los ocho Saberes arcanos de la Magia (Bestias, Cielos, Fuego, Luz, Metal, Muerte, Sombra y Vida) o practicar un Saber menos conocido como Adivinación o Nigromancia. Ahora puedes memorizar hechizos de tu Saber elegido al siguiente coste en PX.</p>\n<div>\n<table title=\"\" border=\"1\" summary=\"\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td>\n<p>Nº de hechizos actualmente conocidos</p>\n</td>\n<td>\n<p>Coste en PX de un nuevo hechizo</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 1&nbsp;</p>\n</td>\n<td>\n<p>100 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 2</p>\n</td>\n<td>\n<p>200 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 3</p>\n</td>\n<td>\n<p>300 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 4</p>\n</td>\n<td>\n<p>400 PX</p>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<p>...y así sucesivamente.</p>\n<p>Por lo tanto, si tu Bonificador por Inteligencia es 4, el primer hechizo y los siguientes 4 te costarán 100 PX, los segundos 4 te costarán 200 PX, etc. Las reglas completas para aprender nuevos hechizos se proporcionan en @UUID[Compendium.wfrp4e-core.journals.JournalEntry.YBVrpUHEjohB1H4f]{Magia}. En circunstanciLo normales, no puedes aprender más de un talento de Magia arcana (Saber). Además, cuando tienes el Talento Magia arcana, no puedes aprender los Talentos @UUID[Compendium.wfrp4e-core.items.Item.QyjWtSdnVMT04l5Y]{Bendecir} ni @UUID[Compendium.wfrp4e-core.items.Item.voV0C2ar1bKpcpnH]{Invocar}. Puedes borrar de la memoria este Talento por 100 PX, pero si lo haces perderás de inmediato todos tus hechizos.</p>"
+		},
+		{
+			"id": "Arcane Magic (Death)",
+			"name": "Magia arcana (Muerte)",
+			"description": "<p>Puedes, o bien estudiar uno de los ocho Saberes arcanos de la Magia (Bestias, Cielos, Fuego, Luz, Metal, Muerte, Sombra y Vida) o practicar un Saber menos conocido como Adivinación o Nigromancia. Ahora puedes memorizar hechizos de tu Saber elegido al siguiente coste en PX.</p>\n<div>\n<table title=\"\" border=\"1\" summary=\"\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td>\n<p>Nº de hechizos actualmente conocidos</p>\n</td>\n<td>\n<p>Coste en PX de un nuevo hechizo</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 1&nbsp;</p>\n</td>\n<td>\n<p>100 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 2</p>\n</td>\n<td>\n<p>200 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 3</p>\n</td>\n<td>\n<p>300 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 4</p>\n</td>\n<td>\n<p>400 PX</p>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<p>...y así sucesivamente.</p>\n<p>Por lo tanto, si tu Bonificador por Inteligencia es 4, el primer hechizo y los siguientes 4 te costarán 100 PX, los segundos 4 te costarán 200 PX, etc. Las reglas completas para aprender nuevos hechizos se proporcionan en @UUID[Compendium.wfrp4e-core.journals.JournalEntry.YBVrpUHEjohB1H4f]{Magia}. En circunstanciLo normales, no puedes aprender más de un talento de Magia arcana (Saber). Además, cuando tienes el Talento Magia arcana, no puedes aprender los Talentos @UUID[Compendium.wfrp4e-core.items.Item.QyjWtSdnVMT04l5Y]{Bendecir} ni @UUID[Compendium.wfrp4e-core.items.Item.voV0C2ar1bKpcpnH]{Invocar}. Puedes borrar de la memoria este Talento por 100 PX, pero si lo haces perderás de inmediato todos tus hechizos.</p>"
+		},
+		{
+			"id": "Arcane Magic (Fire)",
+			"name": "Magia arcana (Fuego)",
+			"description": "<p>Puedes, o bien estudiar uno de los ocho Saberes arcanos de la Magia (Bestias, Cielos, Fuego, Luz, Metal, Muerte, Sombra y Vida) o practicar un Saber menos conocido como Adivinación o Nigromancia. Ahora puedes memorizar hechizos de tu Saber elegido al siguiente coste en PX.</p>\n<div>\n<table title=\"\" border=\"1\" summary=\"\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td>\n<p>Nº de hechizos actualmente conocidos</p>\n</td>\n<td>\n<p>Coste en PX de un nuevo hechizo</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 1&nbsp;</p>\n</td>\n<td>\n<p>100 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 2</p>\n</td>\n<td>\n<p>200 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 3</p>\n</td>\n<td>\n<p>300 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 4</p>\n</td>\n<td>\n<p>400 PX</p>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<p>...y así sucesivamente.</p>\n<p>Por lo tanto, si tu Bonificador por Inteligencia es 4, el primer hechizo y los siguientes 4 te costarán 100 PX, los segundos 4 te costarán 200 PX, etc. Las reglas completas para aprender nuevos hechizos se proporcionan en @UUID[Compendium.wfrp4e-core.journals.JournalEntry.YBVrpUHEjohB1H4f]{Magia}. En circunstanciLo normales, no puedes aprender más de un talento de Magia arcana (Saber). Además, cuando tienes el Talento Magia arcana, no puedes aprender los Talentos @UUID[Compendium.wfrp4e-core.items.Item.QyjWtSdnVMT04l5Y]{Bendecir} ni @UUID[Compendium.wfrp4e-core.items.Item.voV0C2ar1bKpcpnH]{Invocar}. Puedes borrar de la memoria este Talento por 100 PX, pero si lo haces perderás de inmediato todos tus hechizos.</p>"
+		},
+		{
+			"id": "Arcane Magic (Lore of Fire)",
+			"name": "Magia arcana (Saber del Fuego)",
+			"description": "<p>Puedes, o bien estudiar uno de los ocho Saberes arcanos de la Magia (Bestias, Cielos, Fuego, Luz, Metal, Muerte, Sombra y Vida) o practicar un Saber menos conocido como Adivinación o Nigromancia. Ahora puedes memorizar hechizos de tu Saber elegido al siguiente coste en PX.</p>\n<div>\n<table title=\"\" border=\"1\" summary=\"\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td>\n<p>Nº de hechizos actualmente conocidos</p>\n</td>\n<td>\n<p>Coste en PX de un nuevo hechizo</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 1&nbsp;</p>\n</td>\n<td>\n<p>100 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 2</p>\n</td>\n<td>\n<p>200 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 3</p>\n</td>\n<td>\n<p>300 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 4</p>\n</td>\n<td>\n<p>400 PX</p>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<p>...y así sucesivamente.</p>\n<p>Por lo tanto, si tu Bonificador por Inteligencia es 4, el primer hechizo y los siguientes 4 te costarán 100 PX, los segundos 4 te costarán 200 PX, etc. Las reglas completas para aprender nuevos hechizos se proporcionan en @UUID[Compendium.wfrp4e-core.journals.JournalEntry.YBVrpUHEjohB1H4f]{Magia}. En circunstanciLo normales, no puedes aprender más de un talento de Magia arcana (Saber). Además, cuando tienes el Talento Magia arcana, no puedes aprender los Talentos @UUID[Compendium.wfrp4e-core.items.Item.QyjWtSdnVMT04l5Y]{Bendecir} ni @UUID[Compendium.wfrp4e-core.items.Item.voV0C2ar1bKpcpnH]{Invocar}. Puedes borrar de la memoria este Talento por 100 PX, pero si lo haces perderás de inmediato todos tus hechizos.</p>"
+		},
+		{
+			"id": "Arcane Magic (Heavens)",
+			"name": "Magia arcana (Cielos)",
+			"description": "<p>Puedes, o bien estudiar uno de los ocho Saberes arcanos de la Magia (Bestias, Cielos, Fuego, Luz, Metal, Muerte, Sombra y Vida) o practicar un Saber menos conocido como Adivinación o Nigromancia. Ahora puedes memorizar hechizos de tu Saber elegido al siguiente coste en PX.</p>\n<div>\n<table title=\"\" border=\"1\" summary=\"\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td>\n<p>Nº de hechizos actualmente conocidos</p>\n</td>\n<td>\n<p>Coste en PX de un nuevo hechizo</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 1&nbsp;</p>\n</td>\n<td>\n<p>100 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 2</p>\n</td>\n<td>\n<p>200 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 3</p>\n</td>\n<td>\n<p>300 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 4</p>\n</td>\n<td>\n<p>400 PX</p>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<p>...y así sucesivamente.</p>\n<p>Por lo tanto, si tu Bonificador por Inteligencia es 4, el primer hechizo y los siguientes 4 te costarán 100 PX, los segundos 4 te costarán 200 PX, etc. Las reglas completas para aprender nuevos hechizos se proporcionan en @UUID[Compendium.wfrp4e-core.journals.JournalEntry.YBVrpUHEjohB1H4f]{Magia}. En circunstanciLo normales, no puedes aprender más de un talento de Magia arcana (Saber). Además, cuando tienes el Talento Magia arcana, no puedes aprender los Talentos @UUID[Compendium.wfrp4e-core.items.Item.QyjWtSdnVMT04l5Y]{Bendecir} ni @UUID[Compendium.wfrp4e-core.items.Item.voV0C2ar1bKpcpnH]{Invocar}. Puedes borrar de la memoria este Talento por 100 PX, pero si lo haces perderás de inmediato todos tus hechizos.</p>"
+		},
+		{
+			"id": "Arcane Magic (Life)",
+			"name": "Magia arcana (Vida)",
+			"description": "<p>Puedes, o bien estudiar uno de los ocho Saberes arcanos de la Magia (Bestias, Cielos, Fuego, Luz, Metal, Muerte, Sombra y Vida) o practicar un Saber menos conocido como Adivinación o Nigromancia. Ahora puedes memorizar hechizos de tu Saber elegido al siguiente coste en PX.</p>\n<div>\n<table title=\"\" border=\"1\" summary=\"\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td>\n<p>Nº de hechizos actualmente conocidos</p>\n</td>\n<td>\n<p>Coste en PX de un nuevo hechizo</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 1&nbsp;</p>\n</td>\n<td>\n<p>100 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 2</p>\n</td>\n<td>\n<p>200 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 3</p>\n</td>\n<td>\n<p>300 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 4</p>\n</td>\n<td>\n<p>400 PX</p>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<p>...y así sucesivamente.</p>\n<p>Por lo tanto, si tu Bonificador por Inteligencia es 4, el primer hechizo y los siguientes 4 te costarán 100 PX, los segundos 4 te costarán 200 PX, etc. Las reglas completas para aprender nuevos hechizos se proporcionan en @UUID[Compendium.wfrp4e-core.journals.JournalEntry.YBVrpUHEjohB1H4f]{Magia}. En circunstanciLo normales, no puedes aprender más de un talento de Magia arcana (Saber). Además, cuando tienes el Talento Magia arcana, no puedes aprender los Talentos @UUID[Compendium.wfrp4e-core.items.Item.QyjWtSdnVMT04l5Y]{Bendecir} ni @UUID[Compendium.wfrp4e-core.items.Item.voV0C2ar1bKpcpnH]{Invocar}. Puedes borrar de la memoria este Talento por 100 PX, pero si lo haces perderás de inmediato todos tus hechizos.</p>"
+		},
+		{
+			"id": "Arcane Magic (Light)",
+			"name": "Magia arcana (Luz)",
+			"description": "<p>Puedes, o bien estudiar uno de los ocho Saberes arcanos de la Magia (Bestias, Cielos, Fuego, Luz, Metal, Muerte, Sombra y Vida) o practicar un Saber menos conocido como Adivinación o Nigromancia. Ahora puedes memorizar hechizos de tu Saber elegido al siguiente coste en PX.</p>\n<div>\n<table title=\"\" border=\"1\" summary=\"\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td>\n<p>Nº de hechizos actualmente conocidos</p>\n</td>\n<td>\n<p>Coste en PX de un nuevo hechizo</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 1&nbsp;</p>\n</td>\n<td>\n<p>100 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 2</p>\n</td>\n<td>\n<p>200 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 3</p>\n</td>\n<td>\n<p>300 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 4</p>\n</td>\n<td>\n<p>400 PX</p>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<p>...y así sucesivamente.</p>\n<p>Por lo tanto, si tu Bonificador por Inteligencia es 4, el primer hechizo y los siguientes 4 te costarán 100 PX, los segundos 4 te costarán 200 PX, etc. Las reglas completas para aprender nuevos hechizos se proporcionan en @UUID[Compendium.wfrp4e-core.journals.JournalEntry.YBVrpUHEjohB1H4f]{Magia}. En circunstanciLo normales, no puedes aprender más de un talento de Magia arcana (Saber). Además, cuando tienes el Talento Magia arcana, no puedes aprender los Talentos @UUID[Compendium.wfrp4e-core.items.Item.QyjWtSdnVMT04l5Y]{Bendecir} ni @UUID[Compendium.wfrp4e-core.items.Item.voV0C2ar1bKpcpnH]{Invocar}. Puedes borrar de la memoria este Talento por 100 PX, pero si lo haces perderás de inmediato todos tus hechizos.</p>"
+		},
+		{
+			"id": "Arcane Magic (Metal)",
+			"name": "Magia arcana (Metal)",
+			"description": "<p>Puedes, o bien estudiar uno de los ocho Saberes arcanos de la Magia (Bestias, Cielos, Fuego, Luz, Metal, Muerte, Sombra y Vida) o practicar un Saber menos conocido como Adivinación o Nigromancia. Ahora puedes memorizar hechizos de tu Saber elegido al siguiente coste en PX.</p>\n<div>\n<table title=\"\" border=\"1\" summary=\"\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td>\n<p>Nº de hechizos actualmente conocidos</p>\n</td>\n<td>\n<p>Coste en PX de un nuevo hechizo</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 1&nbsp;</p>\n</td>\n<td>\n<p>100 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 2</p>\n</td>\n<td>\n<p>200 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 3</p>\n</td>\n<td>\n<p>300 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 4</p>\n</td>\n<td>\n<p>400 PX</p>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<p>...y así sucesivamente.</p>\n<p>Por lo tanto, si tu Bonificador por Inteligencia es 4, el primer hechizo y los siguientes 4 te costarán 100 PX, los segundos 4 te costarán 200 PX, etc. Las reglas completas para aprender nuevos hechizos se proporcionan en @UUID[Compendium.wfrp4e-core.journals.JournalEntry.YBVrpUHEjohB1H4f]{Magia}. En circunstanciLo normales, no puedes aprender más de un talento de Magia arcana (Saber). Además, cuando tienes el Talento Magia arcana, no puedes aprender los Talentos @UUID[Compendium.wfrp4e-core.items.Item.QyjWtSdnVMT04l5Y]{Bendecir} ni @UUID[Compendium.wfrp4e-core.items.Item.voV0C2ar1bKpcpnH]{Invocar}. Puedes borrar de la memoria este Talento por 100 PX, pero si lo haces perderás de inmediato todos tus hechizos.</p>"
+		},
+		{
+			"id": "Arcane Magic (Shadow)",
+			"name": "Magia arcana (Sombras)",
+			"description": "<p>Puedes, o bien estudiar uno de los ocho Saberes arcanos de la Magia (Bestias, Cielos, Fuego, Luz, Metal, Muerte, Sombra y Vida) o practicar un Saber menos conocido como Adivinación o Nigromancia. Ahora puedes memorizar hechizos de tu Saber elegido al siguiente coste en PX.</p>\n<div>\n<table title=\"\" border=\"1\" summary=\"\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td>\n<p>Nº de hechizos actualmente conocidos</p>\n</td>\n<td>\n<p>Coste en PX de un nuevo hechizo</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 1&nbsp;</p>\n</td>\n<td>\n<p>100 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 2</p>\n</td>\n<td>\n<p>200 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 3</p>\n</td>\n<td>\n<p>300 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 4</p>\n</td>\n<td>\n<p>400 PX</p>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<p>...y así sucesivamente.</p>\n<p>Por lo tanto, si tu Bonificador por Inteligencia es 4, el primer hechizo y los siguientes 4 te costarán 100 PX, los segundos 4 te costarán 200 PX, etc. Las reglas completas para aprender nuevos hechizos se proporcionan en @UUID[Compendium.wfrp4e-core.journals.JournalEntry.YBVrpUHEjohB1H4f]{Magia}. En circunstanciLo normales, no puedes aprender más de un talento de Magia arcana (Saber). Además, cuando tienes el Talento Magia arcana, no puedes aprender los Talentos @UUID[Compendium.wfrp4e-core.items.Item.QyjWtSdnVMT04l5Y]{Bendecir} ni @UUID[Compendium.wfrp4e-core.items.Item.voV0C2ar1bKpcpnH]{Invocar}. Puedes borrar de la memoria este Talento por 100 PX, pero si lo haces perderás de inmediato todos tus hechizos.</p>"
+		},
+		{
+			"id": "Arcane Magic (Lore of Shadows)",
+			"name": "Magia arcana (Saber de las Sombras)",
+			"description": "<p>Puedes, o bien estudiar uno de los ocho Saberes arcanos de la Magia (Bestias, Cielos, Fuego, Luz, Metal, Muerte, Sombra y Vida) o practicar un Saber menos conocido como Adivinación o Nigromancia. Ahora puedes memorizar hechizos de tu Saber elegido al siguiente coste en PX.</p>\n<div>\n<table title=\"\" border=\"1\" summary=\"\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td>\n<p>Nº de hechizos actualmente conocidos</p>\n</td>\n<td>\n<p>Coste en PX de un nuevo hechizo</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 1&nbsp;</p>\n</td>\n<td>\n<p>100 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 2</p>\n</td>\n<td>\n<p>200 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 3</p>\n</td>\n<td>\n<p>300 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 4</p>\n</td>\n<td>\n<p>400 PX</p>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<p>...y así sucesivamente.</p>\n<p>Por lo tanto, si tu Bonificador por Inteligencia es 4, el primer hechizo y los siguientes 4 te costarán 100 PX, los segundos 4 te costarán 200 PX, etc. Las reglas completas para aprender nuevos hechizos se proporcionan en @UUID[Compendium.wfrp4e-core.journals.JournalEntry.YBVrpUHEjohB1H4f]{Magia}. En circunstanciLo normales, no puedes aprender más de un talento de Magia arcana (Saber). Además, cuando tienes el Talento Magia arcana, no puedes aprender los Talentos @UUID[Compendium.wfrp4e-core.items.Item.QyjWtSdnVMT04l5Y]{Bendecir} ni @UUID[Compendium.wfrp4e-core.items.Item.voV0C2ar1bKpcpnH]{Invocar}. Puedes borrar de la memoria este Talento por 100 PX, pero si lo haces perderás de inmediato todos tus hechizos.</p>"
+		},
+		{
+			"id": "Arcane Magic (Daemonology, Lore of Light)",
+			"name": "Magia arcana (Demonología, Saber de la Luz)",
+			"description": "<p>Puedes, o bien estudiar uno de los ocho Saberes arcanos de la Magia (Bestias, Cielos, Fuego, Luz, Metal, Muerte, Sombra y Vida) o practicar un Saber menos conocido como Adivinación o Nigromancia. Ahora puedes memorizar hechizos de tu Saber elegido al siguiente coste en PX.</p>\n<div>\n<table title=\"\" border=\"1\" summary=\"\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td>\n<p>Nº de hechizos actualmente conocidos</p>\n</td>\n<td>\n<p>Coste en PX de un nuevo hechizo</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 1&nbsp;</p>\n</td>\n<td>\n<p>100 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 2</p>\n</td>\n<td>\n<p>200 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 3</p>\n</td>\n<td>\n<p>300 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 4</p>\n</td>\n<td>\n<p>400 PX</p>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<p>...y así sucesivamente.</p>\n<p>Por lo tanto, si tu Bonificador por Inteligencia es 4, el primer hechizo y los siguientes 4 te costarán 100 PX, los segundos 4 te costarán 200 PX, etc. Las reglas completas para aprender nuevos hechizos se proporcionan en @UUID[Compendium.wfrp4e-core.journals.JournalEntry.YBVrpUHEjohB1H4f]{Magia}. En circunstanciLo normales, no puedes aprender más de un talento de Magia arcana (Saber). Además, cuando tienes el Talento Magia arcana, no puedes aprender los Talentos @UUID[Compendium.wfrp4e-core.items.Item.QyjWtSdnVMT04l5Y]{Bendecir} ni @UUID[Compendium.wfrp4e-core.items.Item.voV0C2ar1bKpcpnH]{Invocar}. Puedes borrar de la memoria este Talento por 100 PX, pero si lo haces perderás de inmediato todos tus hechizos.</p>"
+		},
+		{
+			"id": "Arcane Magic (Mòna’s Marsh Magic)",
+			"name": "Magia arcana (Magia del pantano de Mòna)",
 			"description": "<p>Puedes, o bien estudiar uno de los ocho Saberes arcanos de la Magia (Bestias, Cielos, Fuego, Luz, Metal, Muerte, Sombra y Vida) o practicar un Saber menos conocido como Adivinación o Nigromancia. Ahora puedes memorizar hechizos de tu Saber elegido al siguiente coste en PX.</p>\n<div>\n<table title=\"\" border=\"1\" summary=\"\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td>\n<p>Nº de hechizos actualmente conocidos</p>\n</td>\n<td>\n<p>Coste en PX de un nuevo hechizo</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 1&nbsp;</p>\n</td>\n<td>\n<p>100 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 2</p>\n</td>\n<td>\n<p>200 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 3</p>\n</td>\n<td>\n<p>300 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 4</p>\n</td>\n<td>\n<p>400 PX</p>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<p>...y así sucesivamente.</p>\n<p>Por lo tanto, si tu Bonificador por Inteligencia es 4, el primer hechizo y los siguientes 4 te costarán 100 PX, los segundos 4 te costarán 200 PX, etc. Las reglas completas para aprender nuevos hechizos se proporcionan en @UUID[Compendium.wfrp4e-core.journals.JournalEntry.YBVrpUHEjohB1H4f]{Magia}. En circunstanciLo normales, no puedes aprender más de un talento de Magia arcana (Saber). Además, cuando tienes el Talento Magia arcana, no puedes aprender los Talentos @UUID[Compendium.wfrp4e-core.items.Item.QyjWtSdnVMT04l5Y]{Bendecir} ni @UUID[Compendium.wfrp4e-core.items.Item.voV0C2ar1bKpcpnH]{Invocar}. Puedes borrar de la memoria este Talento por 100 PX, pero si lo haces perderás de inmediato todos tus hechizos.</p>"
 		},
 		{
@@ -12621,6 +12943,11 @@
 			"description": "<p>Por accidente o por diseño has perdido una parte de tu alma a manos de uno de los Dioses Oscuros, y ahora puedes practicar la sucia magia del Caos. Tu pernicioso patrón te concede acceso de inmediato a un solo hechizo del Saber elegido (los más comunes son los Saberes de Nurgle, Slaanesh o Tzeentch) y te anotas 1 punto de Corrupción cuando el hechizo (que nunca olvidarás) se infiltra en tu mente.</p>\n<p>Cada vez que adquieres este Talento, que siempre cuesta 100 PX por vez en lugar del coste normal, aprendes un nuevo hechizo de tu Saber elegido y te anotas 1 punto de Corrupción.</p>"
 		},
 		{
+			"id": "Chaos Magic (Tzeentch)",
+			"name": "Magia del Caos (Tzeentch)",
+			"description": "<p>Por accidente o por diseño has perdido una parte de tu alma a manos de uno de los Dioses Oscuros, y ahora puedes practicar la sucia magia del Caos. Tu pernicioso patrón te concede acceso de inmediato a un solo hechizo del Saber elegido (los más comunes son los Saberes de Nurgle, Slaanesh o Tzeentch) y te anotas 1 punto de Corrupción cuando el hechizo (que nunca olvidarás) se infiltra en tu mente.</p>\n<p>Cada vez que adquieres este Talento, que siempre cuesta 100 PX por vez en lugar del coste normal, aprendes un nuevo hechizo de tu Saber elegido y te anotas 1 punto de Corrupción.</p>"
+		},
+		{
 			"id": "Combat Aware",
 			"name": "Percepción de combate",
 			"description": "<p>Estás acostumbrado a escrutar el campo de batalla a fin de tomar decisiones rápidas, de acuerdo con las cambiantes corrientes de la guerra. Puedes llevar a cabo un Chequeo <strong>Desafiante (+0) de Percepción</strong> para ignorar la Sorpresa, modificado por las circunstancias de la forma habitual.</p>",
@@ -12715,6 +13042,20 @@
 				}]
 		},
 		{
+			"id": "Craftsman (Goldsmith)",
+			"name": "Artesano (Orfebre)",
+			"description": "<p>Tienes un auténtico talento creativo. Suma la Habilidad de Oficio asociada a cualquier Carrera en la que entras. Si dicha Habilidad de Oficio ya está en tu Carrera, en lugar de ello puedes comprarla a razón de 5 PX menos por Avance.</p>",
+			"tests": "Oficio (Orfebre)",
+			"effects": [{
+				"name":"Artesano",
+				"scriptData": [
+					{},
+					{"label":"Elegir Habilidad de Oficio","script":"if (this.item.name.includes(\"(\"))\n{\n\tlet trade = this.item.parenthesesText;\n\treturn this.item.updateSource({\"system.tests.value\" : this.item.system.tests.value.replace(\"cualquiera\", trade)})\n}\n\nlet index = game.packs\n.filter(i => i.metadata.type == \"Item\")\n.reduce((acc, pack) => acc.concat(pack.index.contents), [])\n.filter(i => i.type == \"skill\" && i.name.includes(game.i18n.localize(\"NAME.Trade\")))\n.map(i => {\n\ti.id = i._id\n\treturn i\n})\n\nlet choice = await ItemDialog.create(index, 1, {text : \"Escoge una Habilidad de Oficio, o no selecciones ninguna para escribirla manualmente\", title : this.effect.name})\nlet text;\nif (!choice[0])\n{\n    let custom = await Dialog.wait({\n        title : \"Oficio Personalizado\",\n        content : \"<input type='text'>\",\n        buttons : {\n            confirm : {\n                label : game.i18n.localize(\"Confirm\"),\n                callback : (dlg) => {\n                    return dlg.find(\"input\")[0].value\n                }\n            }\n        },\n        default : \"confirm\",\n        close : () => {\n            return \"\"\n        }\n    })   \n    text = custom || \"\"\n}\nelse \n{\n    text = warhammer.utility.extractParenthesesText(choice[0].name)\n}\n\nawait this.item.updateSource({name : this.item.name + ` (${text})`, \"system.tests.value\" : this.item.system.tests.value.replace(\"cualquiera\", text)})"},
+					{"label":"Añadir Habilidad de Oficio"}
+					]
+				}]
+		},
+		{
 			"id": "Criminal",
 			"name": "Delincuente",
 			"description": "<p>Eres un delincuente activo que obtiene dinero de fuentes ilícitas, y que no siempre actúa de forma discreta. A efectos de conseguir dinero, o bien en forma de Ganar dinero durante el juego o bien llevando a cabo una Empresa de Salario , consulta la tabla siguiente:</p>\n<p>&nbsp;</p>\n<div>\n<table title=\"\" border=\"1\" summary=\"\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td>\n<p>Nivel de Carrera</p>\n</td>\n<td>\n<p>Dinero adicional por vez que se adquiere el Talento</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>1</p>\n</td>\n<td>\n<p>+2d10 peniques de bronce</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>2</p>\n</td>\n<td>\n<p>+1d10 chelines de plata</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>3&nbsp;</p>\n</td>\n<td>\n<p>+2d10 chelines de plata</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>4</p>\n</td>\n<td>\n<p>+1 corona de oro</p>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<p>&nbsp;</p>\n<p>A causa de tu naturaleza obviamente delictiva, los demás te consideran de un Estatus inferior al suyo, a menos que también dispongan del Talento Delincuente , en cuyo caso el Estatus se compara de la forma habitual; quizá llevas tatuajes de bandas, tienes un aspecto huidizo o un aspecto tosco, a elección tuya. Debido a ello, las fuerzas de la ley locales siempre sospechan de ti y de tus motivaciones, lo que no hace más que empeorar cuantas más veces has adquirido este Talento, con las implicaciones exactas determinadas por el DJ. Los delincuentes que carecen del Talento ganan significativamente menos, pero no es obvio que sean del tipo que acostumbra a infringir la ley, por lo que mantienen su Estatus. Con el consentimiento del DJ, puedes gastar PX para eliminar niveles del Talento Delincuente por el mismo coste en PX que te costó comprarlos.</p>",
@@ -12773,8 +13114,8 @@
 		{
 			"id": "Dirty Fighting",
 			"name": "Pelea callejera",
-			"description": "<p>Te han enseñado todos los trucos sucios del combate sin armas. Puedes causar +1 Daño adicional por cada nivel en Pelea callejera con cualquier impacto en Cuerpo a cuerpo (pelea).</p>\n<p>Nota: utilizar este Talento se considera hacer trampas en cualquier combate formal.</p>",
-			"tests": "Cuerpo a cuerpo (pelea)",
+			"description": "<p>Te han enseñado todos los trucos sucios del combate sin armas. Puedes causar +1 Daño adicional por cada nivel en Pelea callejera con cualquier impacto en Cuerpo a cuerpo (Pelea).</p>\n<p>Nota: utilizar este Talento se considera hacer trampas en cualquier combate formal.</p>",
+			"tests": "Cuerpo a cuerpo (Pelea)",
 			"effects": [{
 				"name":"Pelea callejera",
 				"scriptData": [
@@ -12868,10 +13209,36 @@
 				}]
 		},
 		{
+			"id": "Etiquette (Guilder, Scholar)",
+			"name": "Etiqueta (Gremio, Erudito)",
+			"description": "<p>Podrás mezclarte socialmente con el grupo elegido mientras vayas vestido de la forma adecuada y actúes con propiedad. Los grupos sociales de ejemplo para este Talento son: delincuentes, sectarios, agremiados, nobles, eruditos, sirvientes y soldados. Si no tienes el Talento, quienes sí lo tienen notarán tu incomodidad en un entorno poco familiar. Esto afecta principalmente a la interpretación del personaje, pero si el DJ lo decide puede suponer una bonificación a los Chequeos de Empatía.</p>",
+			"tests": "Carisma y Cotilleo (Gremio, Erudito)",
+			"effects": [{
+				"name":"Etiqueta",
+				"scriptData": [
+					{},
+					{"label":"Grupo","script":"if (this.item.system.tests.value.includes(\"(grupo social)\"))\r\n{\r\n    let tests = this.item.system.tests.value\r\n    let name = this.item.name\r\n\r\n    // If name already specifies, make sure tests value reflects that\r\n    if (name.includes(\"(\") && !name.toLowerCase().includes(\"(cualquiera)\"))\r\n    {\r\n        let group = name.split(\"(\")[1].split(\")\")[0]\r\n        tests = `${tests.split(\"(\")[0].trim()} (${group})`\r\n    }\r\n    else\r\n    {\r\n        let value = await ValueDialog.create({text : \"Escribe grupo de Etiqueta\", title : this.effect.name});\r\n        if (value)\r\n        {\r\n            name = `${name.split(\"(\")[0].trim()} (${value})`\r\n            tests = this.item.system.tests.value.replace(\"grupo social\", value);\r\n        }\r\n    }\r\n    this.item.updateSource({name, \"system.tests.value\" : tests})\r\n}"}
+					]
+				}]
+		},
+		{
+			"id": "Etiquette (Nobles, Servants, Soldiers)",
+			"name": "Etiqueta (Nobles, Sirvientes, Soldados)",
+			"description": "<p>Podrás mezclarte socialmente con el grupo elegido mientras vayas vestido de la forma adecuada y actúes con propiedad. Los grupos sociales de ejemplo para este Talento son: delincuentes, sectarios, agremiados, nobles, eruditos, sirvientes y soldados. Si no tienes el Talento, quienes sí lo tienen notarán tu incomodidad en un entorno poco familiar. Esto afecta principalmente a la interpretación del personaje, pero si el DJ lo decide puede suponer una bonificación a los Chequeos de Empatía.</p>",
+			"tests": "Carisma y Cotilleo (Nobles, Sirvientes, Soldados)",
+			"effects": [{
+				"name":"Etiqueta",
+				"scriptData": [
+					{},
+					{"label":"Grupo","script":"if (this.item.system.tests.value.includes(\"(grupo social)\"))\r\n{\r\n    let tests = this.item.system.tests.value\r\n    let name = this.item.name\r\n\r\n    // If name already specifies, make sure tests value reflects that\r\n    if (name.includes(\"(\") && !name.toLowerCase().includes(\"(cualquiera)\"))\r\n    {\r\n        let group = name.split(\"(\")[1].split(\")\")[0]\r\n        tests = `${tests.split(\"(\")[0].trim()} (${group})`\r\n    }\r\n    else\r\n    {\r\n        let value = await ValueDialog.create({text : \"Escribe grupo de Etiqueta\", title : this.effect.name});\r\n        if (value)\r\n        {\r\n            name = `${name.split(\"(\")[0].trim()} (${value})`\r\n            tests = this.item.system.tests.value.replace(\"grupo social\", value);\r\n        }\r\n    }\r\n    this.item.updateSource({name, \"system.tests.value\" : tests})\r\n}"}
+					]
+				}]
+		},
+		{
 			"id": "Fast Hands",
 			"name": "Manos rápidas",
-			"description": "<p>Puedes mover las manos con sorprendente destreza. Los presentes no tienen derecho a Chequeos de Percepción pasivos para darse cuenta de tu uso de la Habilidad Prestidigitación, y en su lugar tan sólo pueden enfrentarse a tus Chequeos de Prestidigitación si sospechan de forma activa y están vigilando tus movimientos. Además, todo intento de utilizar Cuerpo a cuerpo (pelea) para simplemente tocar a un oponente te da un bonificador +10 x tu nivel en Manos rápidas.</p>",
-			"tests": "Prestidigitación, Cuerpo a cuerpo (pelea) para tocar a un oponente",
+			"description": "<p>Puedes mover las manos con sorprendente destreza. Los presentes no tienen derecho a Chequeos de Percepción pasivos para darse cuenta de tu uso de la Habilidad Prestidigitación, y en su lugar tan sólo pueden enfrentarse a tus Chequeos de Prestidigitación si sospechan de forma activa y están vigilando tus movimientos. Además, todo intento de utilizar Cuerpo a cuerpo (Pelea) para simplemente tocar a un oponente te da un bonificador +10 x tu nivel en Manos rápidas.</p>",
+			"tests": "Prestidigitación, Cuerpo a cuerpo (Pelea) para tocar a un oponente",
 			"effects": [{
 				"name":"Manos rápidas",
 				"scriptData": []
@@ -12890,6 +13257,19 @@
 		{
 			"id": "Fearless",
 			"name": "Intrépido",
+			"description": "<p>Eres, o bien lo suficientemente valiente o lo suficientemente insensato como para que el miedo a ciertos enemigos se haya convertido en un recuerdo lejano. Mediante un único Chequeo <strong>Normal (+20%)</strong> de <strong>Frialdad</strong>, puedes ignorar cualquier efecto de Intimidar, Miedo o Terror por parte del enemigo especificado cuando te encuentras con él. Los enemigos típicos incluyen hombres bestia, pieles verdes, forajidos, vampiros, vigilantes y brujas.</p>",
+			"tests": "Frialdad para oponerse al Intimidar, Miedo y Terror de tu Enemigo",
+			"effects": [{
+				"name":"Intrépido",
+				"scriptData": [
+					{},
+					{"label":"Activar Intrépido"}
+					]
+				}]
+		},
+		{
+			"id": "Fearless (Size Large or Smaller)",
+			"name": "Intrépido (Tamaño Grande o más pequeño)",
 			"description": "<p>Eres, o bien lo suficientemente valiente o lo suficientemente insensato como para que el miedo a ciertos enemigos se haya convertido en un recuerdo lejano. Mediante un único Chequeo <strong>Normal (+20%)</strong> de <strong>Frialdad</strong>, puedes ignorar cualquier efecto de Intimidar, Miedo o Terror por parte del enemigo especificado cuando te encuentras con él. Los enemigos típicos incluyen hombres bestia, pieles verdes, forajidos, vampiros, vigilantes y brujas.</p>",
 			"tests": "Frialdad para oponerse al Intimidar, Miedo y Terror de tu Enemigo",
 			"effects": [{
@@ -13116,8 +13496,8 @@
 		{
 			"id": "Instinctive Diction",
 			"name": "Dicción instintiva",
-			"description": "<p>Comprendes de forma instintiva el idioma de la Magia, y eres capaz de articular rápidamente las frases más complejas sin equivocarte. No sufres una Disfunción mágica si sacas un doble en un Chequeo con éxito de Hablar idioma (magia).</p>",
-			"tests": "Hablar idioma (magia) al lanzar un hechizo",
+			"description": "<p>Comprendes de forma instintiva el idioma de la Magia, y eres capaz de articular rápidamente las frases más complejas sin equivocarte. No sufres una Disfunción mágica si sacas un doble en un Chequeo con éxito de Hablar idioma (Lengua de la magia).</p>",
+			"tests": "Hablar idioma (Lengua de la magia) al lanzar un hechizo",
 			"effects": [{
 				"name":"Dicción instintiva",
 				"scriptData": [
@@ -13179,8 +13559,8 @@
 		{
 			"id": "Linguistics",
 			"name": "Lingüística",
-			"description": "<p>Tienes una afinidad natural por los idiomas. Tras una exposición de un mes a cualquier idioma, cuentas la Habilidad de Hablar idioma asociada como una Habilidad básica si llevas a cabo un Chequeo con éxito de Inteligencia (que se puede intentar una vez al mes). <strong>Nota</strong>: la Lingüística sólo funciona con idiomas utilizados para comunicarse frecuentemente con los demás, por lo que no funciona con Hablar idioma (magia).</p>",
-			"tests": "Hablar idioma (todos)",
+			"description": "<p>Tienes una afinidad natural por los idiomas. Tras una exposición de un mes a cualquier idioma, cuentas la Habilidad de Hablar idioma asociada como una Habilidad básica si llevas a cabo un Chequeo con éxito de Inteligencia (que se puede intentar una vez al mes). <strong>Nota</strong>: la Lingüística sólo funciona con idiomas utilizados para comunicarse frecuentemente con los demás, por lo que no funciona con Hablar idioma (Lengua de la magia).</p>",
+			"tests": "Hablar idioma (Todos)",
 			"effects": [{
 				"name":"Lingüística",
 				"scriptData": []
@@ -13374,7 +13754,7 @@
 			"id": "Perfect Pitch",
 			"name": "Tono perfecto",
 			"description": "<p>Tienes un tono perfecto, y eres capaz de reproducir las notas perfectamente e identificarlas sin ni siquiera llevar a cabo un Chequeo. Además, añade Animar (cantar) a cualquier Carrera en la que entras; si ya está en la misma, en vez de eso puedes comprar la Habilidad a razón de 5 PX menos por Avance.</p>",
-			"tests": "Animar (Cantar), Hablar idioma (idiomas tonales, como el eltharin, el catayano y el de la magia)",
+			"tests": "Animar (Cantar), Hablar idioma (Idiomas tonales, como el eltharin, el catayano y el de la magia)",
 			"effects": [{
 				"name":"Tono perfecto",
 				"scriptData": [
@@ -13476,6 +13856,19 @@
 				}]
 		},
 		{
+			"id": "Resistance (Poison)",
+			"name": "Resistencia (Veneno)",
+			"description": "<p>Tu recia constitución te permite sobrevivir con más facilidad a una amenaza específica. Puedes tener éxito automáticamente en el primer Chequeo para resistir la amenaza específica, como por ejemplo Magia, Veneno, Enfermedad o Mutación en cada sesión de juego. Si el NE es importante, utiliza tu Bonificador por Resistencia como NE para el Chequeo.</p>",
+			"tests": "Todos los utilizados para resistirse a la Amenaza asociada",
+			"effects": [{
+				"name":"Resistencia",
+				"scriptData": [
+					{},
+					{"label":"Escoger Resistencia","script":"let resistance\nif (this.item.name.includes(\"(\") && !this.item.name.toLowerCase().includes(\"(cualquiera)\"))\n{\n\tresistance = this.item.parenthesesText\n}\nelse \n{\n    resistance = await ValueDialog.create({text : \"Escribe la resistencia\", title : \"Resistencia\"}) \n    \n    if (resistance)\n    {\n        this.item.updateSource({name : `${this.item.name.split(\"(\")[0].trim()} (${resistance})`})\n        this.effect.updateSource({name : this.effect.name + ` (${resistance})`})\n    }\n}    \nthis.item.updateSource({\"system.tests.value\" : this.item.system.tests.value.replace(\"la Amenaza asociada\", resistance)})\n\nif (resistance && !this.effect.name.includes(\"(\"))\n{\n    this.effect.updateSource({name : this.effect.name += ` (${resistance})`})\n}"}
+					]
+				}]
+		},
+		{
 			"id": "Resolute",
 			"name": "Resuelto",
 			"description": "<p>Te lanzas a atacar con sobria determinación. Sumas tu nivel de Resuelto a tu Bonificador por Fuerza cuando cargas.</p>",
@@ -13553,6 +13946,19 @@
 		{
 			"id": "Savant",
 			"name": "Sabio",
+			"description": "<p>Eres excepcionalmente docto, y tienes un grado significativo de conocimiento especializado en un único campo de estudio. Automáticamente conoces tantos fragmentos de información correcta como tu nivel de Sabio (Saber) acerca de un tema relevante sin tener que chequear tu Habilidad de Sabiduría académica. Un Chequeo, como siempre, proporcionará más información de la forma habitual, según determine el DJ.</p>",
+			"tests": "Sabiduría académica (Saber elegido)",
+			"effects": [{
+				"name":"Sabio",
+				"scriptData": [
+					{},
+					{"label":"Elegir Sabiduría académica","script":"if (this.item.name.includes(\"(\"))\n{\n\treturn;\n}\n\nlet index = game.packs\n.filter(i => i.metadata.type == \"Item\")\n.reduce((acc, pack) => acc.concat(pack.index.contents), [])\n.filter(i => i.type == \"skill\" && i.name.includes(game.i18n.localize(\"NAME.Lore\")))\n.map(i => {\n\ti.id = i._id\n\treturn i\n})\n\nlet choice = await ItemDialog.create(index, 1, \"Escoge una Sabiduría académica\")\nlet text;\nif (!choice[0])\n{\n    let custom = await ValueDialog.create({text : \"Escribir Saber\", title : this.effect.name});\n    text = custom || \"\";\n}\nelse \n{\n    text = warhammer.utility.extractParenthesesText(choice[0].name)\n}\n\nawait this.item.updateSource({name : this.item.name + ` (${text})`, \"system.tests.value\" : this.item.system.tests.value.replace(\"Saber elegido\", text)})\nawait this.effect.updateSource({name : this.effect.name + ` (${text})`})"}
+					]
+				}]
+		},
+		{
+			"id": "Savant (Tzeentch)",
+			"name": "Sabio (Tzeentch)",
 			"description": "<p>Eres excepcionalmente docto, y tienes un grado significativo de conocimiento especializado en un único campo de estudio. Automáticamente conoces tantos fragmentos de información correcta como tu nivel de Sabio (Saber) acerca de un tema relevante sin tener que chequear tu Habilidad de Sabiduría académica. Un Chequeo, como siempre, proporcionará más información de la forma habitual, según determine el DJ.</p>",
 			"tests": "Sabiduría académica (Saber elegido)",
 			"effects": [{
@@ -14061,7 +14467,7 @@
 		{
 			"id": "Witch!",
 			"name": "¡Brujo!",
-			"description": "<p>Has aprendido magia mediante prueba y error. Añade Hablar idioma (magia) a cualquier Carrera en la que entras; si la Habilidad ya está en dicha Carrera, puedes comprarla a razón de 5 PX menos por Avance. Además, puedes gastar 1 punto de Resiliencia para lanzar de inmediato cualquier hechizo como si fuera uno de tus hechizos de Saber arcano; también memorizas instantáneamente el hechizo como uno de tus hechizos de Saber arcano al coste de 0 PX. Puedes hacerlo tantas veces como tu nivel en este Talento.</p>",
+			"description": "<p>Has aprendido magia mediante prueba y error. Añade Hablar idioma (Lengua de la magia) a cualquier Carrera en la que entras; si la Habilidad ya está en dicha Carrera, puedes comprarla a razón de 5 PX menos por Avance. Además, puedes gastar 1 punto de Resiliencia para lanzar de inmediato cualquier hechizo como si fuera uno de tus hechizos de Saber arcano; también memorizas instantáneamente el hechizo como uno de tus hechizos de Saber arcano al coste de 0 PX. Puedes hacerlo tantas veces como tu nivel en este Talento.</p>",
 			"effects": [{
 				"name":"¡Brujo!",
 				"scriptData": [

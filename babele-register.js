@@ -22,14 +22,49 @@ game.babele.registerConverters({
         if ( value == "You" ) return "Tú";
         if ( value == "Self" ) return "Uno mismo";
         if ( value == "Instant" ) return "Instantáneo";
+        if ( value == "Instante" ) return "Instantáneo";
         if ( value == "Line of Sight" ) return "Línea de Visión";
         if ( value == "Special" ) return "Especial";
+        if ( value == "special" ) return "Especial";
+        if ( value == "Varies" ) return "Varía";
+        if ( value == "AoE (Special)" ) return "AdE (Especial)";
+        if ( value == "1 with AoE (Willpower Bonus yards)" ) return "1 con AdE (Bonificador por Voluntad yardas)";
+        if ( value == "4 Willpower Bonus yards (AoE)" ) return "4 * AdE (Bonificador por Voluntad yardas)";
         if ( value == "See text" ) return "Ver texto";
         if ( value == "Any ally" ) return "Cualquier aliado";
         if ( value == "a single location" ) return "Un solo lugar";
         if ( value == "see description" ) return "Ver descripción";
         if ( value == "Until sunrise" ) return "Hasta el amanecer";
         if ( value == "Until the next sunrise" ) return "Hasta el siguiente amanecer";
+        if ( value == "The spell affects either one of the casters" ) return "El hechizo afecta a cualquiera de los lanzadores";
+        if ( value == "One of your Constructs or Familiars" ) return "Uno de tus constructos o familiares";
+        if ( value == "1 object" ) return "1 objeto";
+        if ( value == "1 object of 1 Encumbrance" ) return "1 objeto (1 Imp.)";
+        if ( value == "1 weapon" ) return "1 arma";
+        if ( value == "1 fire" ) return "1 fuego";
+        if ( value == "1 Forge" ) return "1 forja";
+        if ( value == "1 compass" ) return "1 brújula";
+        if ( value == "1 pot, jug or flask" ) return "1 olla, jarra o frasco";
+        if ( value == "1 (maximum)" ) return "1 (máximo)";
+        if ( value == "1 Fenbeast" ) return "1 bestia del cieno";
+        if ( value == "Any 1 Fenbeast" ) return "Cualquier bestia del cieno (sólo 1)";
+        if ( value == "Any 1 Construct" ) return "A cualquier constructo (sólo 1)";
+        if ( value == "Any item" ) return "Cualquier objeto";
+        if ( value == "Random Vortex" ) return "Vórtice aleatorio";
+        if ( value == "Willpower Bonus" ) return "Bonificador por Voluntad Asaltos (utilizar la puntuación mayor de Voluntad de los dos participantes).";
+        if ( value == "Willpower Bonus hours, days, weeks, or months" ) return "Bonificador por Voluntad horas, días, semanas o meses";
+        if ( value == "Target’s Intelligence Bonus rounds" ) return "Bonificador por Inteligencia del objetico asaltos";
+        if ( value == "2 * Willpower Bonus rounds" ) return "2 * Bonificador por Voluntad asaltos";
+        if ( value == "2 * Willpower Bonus yards" ) return "2 * Bonificador por Voluntad yardas";
+        if ( value == "2 * Fellowship Bonus yards" ) return "2 * Bonificador por Empatía yardas";
+        if ( value == "2 * Initiative Bonus or Initiative Bonus" ) return "2 * Bonificador por Iniciativa o Bonificador por Iniciativa";
+        if ( value == "Willpower / 2 yards" ) return "Voluntad / 2 yardas";
+        if ( value == "Half Willpower yards" ) return "Voluntad / 2 yardas";
+        if ( value == "Half Initiative yards" ) return "Iniciativa / 2 yardas";
+        if ( value == "Half Intelligence yards or Touch" ) return "Inteligencia / 2 yardas o Toque";
+        if ( value == "Line of sight" ) return "Línea de visión";
+        if ( value == "You or Touch" ) return "Tú o Toque";
+        if ( value == "You or 1 (maximum)" ) return "Tú o 1 (máximo)";
 	    if ( value == "As weapon" ) return "Según arma";
 	    if ( value == "Half weapon" ) return "Mitad del arma";
 	    if ( value == "Third weapon" ) return "Tercio del arma";
@@ -70,7 +105,7 @@ game.babele.registerConverters({
         }  
         if ( charac == "Weapon Skill") charac = "Habilidad de Armas";
         if ( charac == "Ballistic Skill") charac = "Habilidad de Proyectiles";
-        if ( charac == "Strenght") charac = "Fuerza";
+        if ( charac == "Strength") charac = "Fuerza";
         if ( charac == "Toughness") charac = "Resistencia";
         if ( charac == "Initiative") charac = "Iniciativa";
         if ( charac == "Agility") charac = "Agilidad";
@@ -82,9 +117,10 @@ game.babele.registerConverters({
 
         if ( characbonus == "Weapon Skill") charac = "Bonificador por Habilidad de Armas";
         if ( characbonus == "Ballistic Skill") charac = "Bonificador por Habilidad de Proyectiles";
-        if ( characbonus == "Strenght") charac = "Bonificador por Fuerza";
+        if ( characbonus == "Strength") charac = "Bonificador por Fuerza";
         if ( characbonus == "Toughness") charac = "Bonificador por Resistencia";
         if ( characbonus == "Initiative") charac = "Bonificador por Iniciativa";
+        if ( characbonus == "Intiative") charac = "Bonificador por Iniciativa";
         if ( characbonus == "Agility") charac = "Bonificador por Agilidad";
         if ( characbonus == "Dexterity") charac = "Bonificador por Destreza";
         if ( characbonus == "Intelligence") charac = "Bonificador por Inteligencia";
@@ -103,18 +139,20 @@ game.babele.registerConverters({
         if ( unit == "hours") unit = "horas";
         if ( unit == "Hour") unit = "Hora";
         if ( unit == "Hours") unit = "Horas";
-        if ( unit == "days") unit = "días";            
-        if ( unit == "Days") unit = "Días";            
-        if ( unit == "yard") unit = "yarda";            
+        if ( unit == "day") unit = "día";
+        if ( unit == "days") unit = "días";
+        if ( unit == "Days") unit = "Días";
+        if ( unit == "years") unit = "años";
+        if ( unit == "yard") unit = "yarda";
         if ( unit == "yards") unit = "yardas";
-        if ( unit == "Yard") unit = "Yarda";            
-        if ( unit == "Yards") unit = "Yardas";         
-        if ( unit == "mile") unit = "milla";            
-        if ( unit == "miles") unit = "millas";     
-        if ( unit == "Mile") unit = "Milla";            
-        if ( unit == "Miles") unit = "Millas";     
-        if ( unit == "allies") unit = "aliados";     
-        if ( unit == "Allies") unit = "Aliados";    
+        if ( unit == "Yard") unit = "Yarda";
+        if ( unit == "Yards") unit = "Yardas";
+        if ( unit == "mile") unit = "milla";
+        if ( unit == "miles") unit = "millas";
+        if ( unit == "Mile") unit = "Milla";
+        if ( unit == "Miles") unit = "Millas";
+        if ( unit == "allies") unit = "aliados";
+        if ( unit == "Allies") unit = "Aliados";
         if ( unit == "sailing") unit = "barco";
         if ( unit == "Sailing") unit = "Barco";
         translw += charac + " " + unit;
@@ -231,6 +269,20 @@ game.babele.registerConverters({
         if ( value == "Pikeman" ) return "Piquero";
         if ( value == "Priest of Myrmidia" ) return "Sacerdote de Myrmidia";
         if ( value == "Siege Specialist" ) return "Especialista en asedios";
+        if ( value == "Beadle" ) return "Bedel";
+        if ( value == "Mundane Alchemist" ) return "Alquimista mundano";
+        if ( value == "Magister Vigilant" ) return "Magister vigilante";
+        if ( value == "Scryer" ) return "Visionario";
+        if ( value == "Hierophant" ) return "Hierofante";
+        if ( value == "Alchemist" ) return "Alquimista";
+        if ( value == "Druid" ) return "Druida";
+        if ( value == "Astromancer" ) return "Astromante";
+        if ( value == "Shadowmancer" ) return "Umbramante";
+        if ( value == "Spiriter" ) return "Espiritista";
+        if ( value == "Pyromancer" ) return "Piromante";
+        if ( value == "Shaman" ) return "Chamán";		
+        if ( value == "Combat Familiar" ) return "Familiar de Combate";
+        if ( value == "Spell Familiar" ) return "Familiar de Hechizo";
 	},
 	
 	"talents_specification": (value) => {  // Especificación de talentos, valor
@@ -264,7 +316,7 @@ game.babele.registerConverters({
 	     if ( value == "Monstrous" ) return "Monstruoso";
          if ( value == "Corruption Strength" ) return "Fuerza de la Corrupción";
 	     if ( value == "Minor" ) return "Menor";
-	     if ( value == "Moderate" ) return "Moderado";
+	     if ( value == "Moderate" ) return "Moderada";
 	     if ( value == "Major" ) return "Mayor";
          if ( value == "Difficulty" ) return "Dificultad";
 	     if ( value == "Very Easy" ) return "Muy Fácil";
@@ -289,7 +341,11 @@ game.babele.registerConverters({
 	     if ( value == "Daemonology" ) return "Demonología";
 	     if ( value == "Chaos" ) return "Caos";
 	     if ( value == "Any Chaos" ) return "Cualquiera del Caos";
-	     if ( value == "Any Lore" ) return "Cualquier saber";
+	     if ( value == "Any Lore" ) return "Cualquier Saber";
+	     if ( value == "Any Lore of the Eight Winds" ) return "Cualquier Saber de los ocho Vientos de la Magia";
+	     if ( value == "Any Dark Lore" ) return "Cualquiera de los Saberes Oscuros";
+	     if ( value == "Death, Life, Shadows, Hedgecraft, Witchcraft" ) return "Muerte, Vida, Sombras, Adivinación, Brujería";
+	     if ( value == "Mòna's Marsh Magic" ) return "Magia del pantano de Mòna";
 	     if ( value == "Poison" ) return "Veneno";
      	 if ( value == "Venom" ) return "Veneno";
 	     if ( value == "Broken" ) return "Domado";
@@ -318,6 +374,10 @@ game.babele.registerConverters({
 	     if ( value == "Dwarfs" ) return "Enanos";
 	     if ( value == "Elves" ) return "Elfos";
 	     if ( value == "Thin People" ) return "Gente delgada";
+	     if ( value == "Snakes" ) return "Serpientes";
+	     if ( value == "All Fire" ) return "Todo fuego";
+	     if ( value == "Lore of Fire" ) return "Saber del Fuego";
+	     if ( value == "Extra arm - +1 Attack" ) return "Brazo adicional, +1 ataque";
 	},
 
 	"criticals_wounds": (value) => {  // Daño extra de críticos

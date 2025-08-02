@@ -19,6 +19,19 @@ Hooks.on("renderCompendiumDirectory", async () => {
 		await game.folders.getName("Hireling").update({"name":  "Asalariado"  })
 		await game.folders.getName("Job").update({"name":  "Trabajo"  })
 	}
+	if (game.folders.getName("Winds of Magic")) {
+		await game.folders.getName("Winds of Magic").update({"name":  "Vientos de la Magia"  })
+		await game.folders.getName("Winds of Magic").update({"name":  "Vientos de la Magia"  })
+		await game.folders.getName("Familiar Personality").update({"name":  "Personalidad del Familiar"  })
+		await game.folders.getName("Grimoire").update({"name":  "Grimorio"  })
+		await game.folders.getName("Marks").update({"name":  "Marcas"  })
+		await game.folders.getName("Miscast").update({"name":  "Disfunción"  })
+		await game.folders.getName("Other").update({"name":  "Otras"  })
+		await game.folders.getName("Potion Spoilage").update({"name":  "Deterioro en pociones"  })
+		await game.folders.getName("Scroll").update({"name":  "Pergamino"  })
+		await game.folders.getName("Symbol").update({"name":  "Símbolo"  })
+		await game.folders.getName("Vortex").update({"name":  "Vórtice"  })
+	}
 
 	if (game.folders.getName("Toolboxes")) {
 		await game.folders.getName("Toolboxes").update({"name":  "Cajas de herramientas"  })

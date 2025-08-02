@@ -2479,4 +2479,23 @@ if (game.modules.get("wfrp4e-up-in-arms") && game.modules.get("wfrp4e-up-in-arms
         }
     })
   }
+
+if (game.modules.get("wfrp4e-wom") && game.modules.get("wfrp4e-wom").active) {
+    game.wfrp4e.utility.mergeCareerReplacements({
+        human : {
+            "Boticario" : ["Alquimista mundano"],
+            "Wizard" : ["Hierofante", "Alquimista", "Druida", "Astromante", "Umbramante", "Espiritista", "Piromante", "Chamán", "Magíster vigilante"],
+            "Místico" : ["Visionario"],
+            "Guardia" : ["Bedel"],
+        },
+        dwarf : {
+            "Boticario": ["Alquimista mundano"],
+            "Guardia": ["Bedel"]
+        },
+        halfling : {
+            "Boticario": ["Alquimista mundano"],
+            "Guardia": ["Bedel"]
+        }
+    })
+  }
 })
