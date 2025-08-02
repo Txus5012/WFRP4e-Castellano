@@ -4,7 +4,7 @@ Traducción al castellano del sistema [Warhammer Fantasy Roleplay 4th Edition](h
 
 Han sido traducidas fichas, tarjetas de chat, menús, notificaciones, etc.
 
-La traducción incluye el sistema, el módulo básico y ¡A las Armas!. Ningún otro módulo está incluido.
+La traducción incluye el [sistema](https://foundryvtt.com/packages/wfrp4e), el [módulo básico](https://foundryvtt.com/packages/wfrp4e-core), [¡A las Armas!](https://foundryvtt.com/packages/wfrp4e-up-in-arms) y [Vientos de la Magia](https://foundryvtt.com/packages/wfrp4e-wom). Ningún otro módulo está incluido.
 
 Traduce también los módulos [GM Toolkit (WFRP 4e)](https://github.com/Jagusti/fvtt-wfrp4e-gmtoolkit),  [[WFRP4] NPC generator](https://gitlab.com/greenskin-foundryvtt/wfrp4e-npc-generator), [Token Action HUD WFRP4e](https://github.com/Foundry-Workshop/token-action-hud-wfrp4e) y [Chat Commander](https://gitlab.com/woodentavern/foundryvtt-chat-command-lib) (junto a su módulo para [WFRP4e](https://github.com/Foundry-Workshop/chat-commander-wfrp4e)).
 
