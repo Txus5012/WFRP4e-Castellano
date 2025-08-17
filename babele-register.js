@@ -65,16 +65,16 @@ game.babele.registerConverters({
         if ( value == "Line of sight" ) return "Línea de visión";
         if ( value == "You or Touch" ) return "Tú o Toque";
         if ( value == "You or 1 (maximum)" ) return "Tú o 1 (máximo)";
-	    if ( value == "As weapon" ) return "Según arma";
-	    if ( value == "Half weapon" ) return "Mitad del arma";
-	    if ( value == "Third weapon" ) return "Tercio del arma";
-	    if ( value == "Quarter weapon" ) return "Cuarto del arma";
-	    if ( value == "Twice weapon" ) return "Doble del arma";
-	    if ( value == "As Weapon" ) return "Según arma";
-	    if ( value == "Half Weapon" ) return "Mitad del arma";
-	    if ( value == "Third Weapon" ) return "Tercio del arma";
-	    if ( value == "Quarter Weapon" ) return "Cuarto del arma";
-	    if ( value == "Twice Weapon" ) return "Doble del arma";
+        if ( value == "As weapon" ) return "Según arma";
+        if ( value == "Half weapon" ) return "Mitad del arma";
+        if ( value == "Third weapon" ) return "Tercio del arma";
+        if ( value == "Quarter weapon" ) return "Cuarto del arma";
+        if ( value == "Twice weapon" ) return "Doble del arma";
+        if ( value == "As Weapon" ) return "Según arma";
+        if ( value == "Half Weapon" ) return "Mitad del arma";
+        if ( value == "Third Weapon" ) return "Tercio del arma";
+        if ( value == "Quarter Weapon" ) return "Cuarto del arma";
+        if ( value == "Twice Weapon" ) return "Doble del arma";
         var translw = value;
         var re  = /(.*) Bonus (\w*)/i;
         var res = re.exec( value );
@@ -296,16 +296,16 @@ game.babele.registerConverters({
 	},
       
 	"traits_specification": (value) => {  // Especificación de rasgos, valor
-	     if ( value == "Any" ) return "Cualquiera";
+         if ( value == "Any" ) return "Cualquiera";
          if ( value == "Rating" ) return "Valor";
          if ( value == "Target" ) return "Objetivo";
-	     if ( value == "Damage" ) return "Daño";
+         if ( value == "Damage" ) return "Daño";
          if ( value == "Deity" ) return "Deidad";
          if ( value == "Diety" ) return "Deidad";
          if ( value == "Trained Skills" ) return "Habilidades Entrenadas";
          if ( value == "# (Type)" ) return "# (Tipo)";
-	     if ( value == "Target #" ) return "# Objetivo";
-	     if ( value == "Type" ) return "Tipo";
+         if ( value == "Target #" ) return "# Objetivo";
+         if ( value == "Type" ) return "Tipo";
          if ( value == "Size" ) return "Tamaño";
          if ( value == "Tiny" ) return "Diminuto";
          if ( value == "Little" ) return "Muy pequeño";
@@ -313,71 +313,71 @@ game.babele.registerConverters({
      	 if ( value == "Average" ) return "Normal";
      	 if ( value == "Large" ) return "Grande";
      	 if ( value == "Enormous" ) return "Enorme";
-	     if ( value == "Monstrous" ) return "Monstruoso";
+         if ( value == "Monstrous" ) return "Monstruoso";
          if ( value == "Corruption Strength" ) return "Fuerza de la Corrupción";
-	     if ( value == "Minor" ) return "Menor";
-	     if ( value == "Moderate" ) return "Moderada";
-	     if ( value == "Major" ) return "Mayor";
+         if ( value == "Minor" ) return "Menor";
+         if ( value == "Moderate" ) return "Moderada";
+         if ( value == "Major" ) return "Mayor";
          if ( value == "Difficulty" ) return "Dificultad";
-	     if ( value == "Very Easy" ) return "Muy Fácil";
-	     if ( value == "Easy" ) return "Fácil";
-	     if ( value == "Average" ) return "Normal";
-	     if ( value == "Challenging" ) return "Desafiante";
-	     if ( value == "Difficult" ) return "Complicado";
-	     if ( value == "Hard" ) return "Difícil";
-	     if ( value == "Very Hard" ) return "Muy Difícil";
+         if ( value == "Very Easy" ) return "Muy Fácil";
+         if ( value == "Easy" ) return "Fácil";
+         if ( value == "Average" ) return "Normal";
+         if ( value == "Challenging" ) return "Desafiante";
+         if ( value == "Difficult" ) return "Complicado";
+         if ( value == "Hard" ) return "Difícil";
+         if ( value == "Very Hard" ) return "Muy Difícil";
          if ( value == "Lore" ) return "Saber";
-	     if ( value == "Petty" ) return "Menor";
-	     if ( value == "Beasts" ) return "Bestias";
-	     if ( value == "Death" ) return "Muerte";
-	     if ( value == "Fire" ) return "Fuego";
-	     if ( value == "Heavens" ) return "Cielos";
-	     if ( value == "Life" ) return "Vida";
-	     if ( value == "Light" ) return "Luz";
-	     if ( value == "Shadow" ) return "Sombras";
-	     if ( value == "Hedgecraft" ) return "Adivinación";
-	     if ( value == "Witchcraft" ) return "Brujería";
-	     if ( value == "Necromancy" ) return "Nigromancia";
-	     if ( value == "Daemonology" ) return "Demonología";
-	     if ( value == "Chaos" ) return "Caos";
-	     if ( value == "Any Chaos" ) return "Cualquiera del Caos";
-	     if ( value == "Any Lore" ) return "Cualquier Saber";
-	     if ( value == "Any Lore of the Eight Winds" ) return "Cualquier Saber de los ocho Vientos de la Magia";
-	     if ( value == "Any Dark Lore" ) return "Cualquiera de los Saberes Oscuros";
-	     if ( value == "Death, Life, Shadows, Hedgecraft, Witchcraft" ) return "Muerte, Vida, Sombras, Adivinación, Brujería";
-	     if ( value == "Mòna's Marsh Magic" ) return "Magia del pantano de Mòna";
-	     if ( value == "Poison" ) return "Veneno";
-     	 if ( value == "Venom" ) return "Veneno";
-	     if ( value == "Broken" ) return "Domado";
-     	 if ( value == "Drive" ) return "Tirar";
-	     if ( value == "Entertain" ) return "Entretener";
-	     if ( value == "Fetch" ) return "Trae";
-	     if ( value == "Guard" ) return "Protege";
-     	 if ( value == "Home" ) return "Casa";
-	     if ( value == "Magic" ) return "Magia";
-	     if ( value == "Mount" ) return "Montura";
-	     if ( value == "War" ) return "Guerra";
-	     if ( value == "Broken, Mount, Shock Cavalry, War" ) return "Domado, Montura, Caballería de choque, Guerra";
-	     if ( value == "Sigmarites" ) return "Sigmaritas";
-	     if ( value == "Witch" ) return "Brujo";
-	     if ( value == "the Rich, Beastmen" ) return "Los ricos, los hombres bestia";
-	     if ( value == "Bailiffs, Lawyers" ) return "Alguaciles, abogados";
-	     if ( value == "Itching Pox" ) return "Plaga picante";
-	     if ( value == "Packer's Pox" ) return "Plaga del empaquetador";
-	     if ( value == "Ratte Fever" ) return "Fiebre ratonil";
-	     if ( value == "The Black Plague" ) return "Peste negra";
-	     if ( value == "Various" ) return "Varios";
-	     if ( value == "Choose one" ) return "Elige una";
-	     if ( value == "Choose two" ) return "Elige dos";
-	     if ( value == "Everything" ) return "Todo";
-	     if ( value == "Greenskins" ) return "Pieles verdes";
-	     if ( value == "Dwarfs" ) return "Enanos";
-	     if ( value == "Elves" ) return "Elfos";
-	     if ( value == "Thin People" ) return "Gente delgada";
-	     if ( value == "Snakes" ) return "Serpientes";
-	     if ( value == "All Fire" ) return "Todo fuego";
-	     if ( value == "Lore of Fire" ) return "Saber del Fuego";
-	     if ( value == "Extra arm - +1 Attack" ) return "Brazo adicional, +1 ataque";
+         if ( value == "Petty" ) return "Menor";
+         if ( value == "Beasts" ) return "Bestias";
+         if ( value == "Death" ) return "Muerte";
+         if ( value == "Fire" ) return "Fuego";
+         if ( value == "Heavens" ) return "Cielos";
+         if ( value == "Life" ) return "Vida";
+         if ( value == "Light" ) return "Luz";
+         if ( value == "Shadow" ) return "Sombras";
+         if ( value == "Hedgecraft" ) return "Adivinación";
+         if ( value == "Witchcraft" ) return "Brujería";
+         if ( value == "Necromancy" ) return "Nigromancia";
+         if ( value == "Daemonology" ) return "Demonología";
+         if ( value == "Chaos" ) return "Caos";
+         if ( value == "Any Chaos" ) return "Cualquiera del Caos";
+         if ( value == "Any Lore" ) return "Cualquier Saber";
+         if ( value == "Any Lore of the Eight Winds" ) return "Cualquier Saber de los ocho Vientos de la Magia";
+         if ( value == "Any Dark Lore" ) return "Cualquiera de los Saberes Oscuros";
+         if ( value == "Death, Life, Shadows, Hedgecraft, Witchcraft" ) return "Muerte, Vida, Sombras, Adivinación, Brujería";
+         if ( value == "Mòna's Marsh Magic" ) return "Magia del pantano de Mòna";
+         if ( value == "Poison" ) return "Veneno";
+         if ( value == "Venom" ) return "Veneno";
+         if ( value == "Broken" ) return "Domado";
+         if ( value == "Drive" ) return "Tirar";
+         if ( value == "Entertain" ) return "Entretener";
+         if ( value == "Fetch" ) return "Trae";
+         if ( value == "Guard" ) return "Protege";
+         if ( value == "Home" ) return "Casa";
+         if ( value == "Magic" ) return "Magia";
+         if ( value == "Mount" ) return "Montura";
+         if ( value == "War" ) return "Guerra";
+         if ( value == "Broken, Mount, Shock Cavalry, War" ) return "Domado, Montura, Caballería de choque, Guerra";
+         if ( value == "Sigmarites" ) return "Sigmaritas";
+         if ( value == "Witch" ) return "Brujo";
+         if ( value == "the Rich, Beastmen" ) return "Los ricos, los hombres bestia";
+         if ( value == "Bailiffs, Lawyers" ) return "Alguaciles, abogados";
+         if ( value == "Itching Pox" ) return "Plaga picante";
+         if ( value == "Packer's Pox" ) return "Plaga del empaquetador";
+         if ( value == "Ratte Fever" ) return "Fiebre ratonil";
+         if ( value == "The Black Plague" ) return "Peste negra";
+         if ( value == "Various" ) return "Varios";
+         if ( value == "Choose one" ) return "Elige una";
+         if ( value == "Choose two" ) return "Elige dos";
+         if ( value == "Everything" ) return "Todo";
+         if ( value == "Greenskins" ) return "Pieles verdes";
+         if ( value == "Dwarfs" ) return "Enanos";
+         if ( value == "Elves" ) return "Elfos";
+         if ( value == "Thin People" ) return "Gente delgada";
+         if ( value == "Snakes" ) return "Serpientes";
+         if ( value == "All Fire" ) return "Todo fuego";
+         if ( value == "Lore of Fire" ) return "Saber del Fuego";
+         if ( value == "Extra arm - +1 Attack" ) return "Brazo adicional, +1 ataque";
 	},
 
 	"criticals_wounds": (value) => {  // Daño extra de críticos
@@ -387,48 +387,48 @@ game.babele.registerConverters({
 	"criticals_location": (value) => {  // Localización de críticos
          if ( value == "Head" ) return "Cabeza";
          if ( value == "Arm" ) return "Brazo";
-	     if ( value == "Leg" ) return "Pierna";
+         if ( value == "Leg" ) return "Pierna";
          if ( value == "Body" ) return "Cuerpo";
 	},
 	
 	"trappings_penalty": (value) => {  // Penalizador de accesorios
          if ( value == "-10 Perception" ) return "-10 Percepción";
-	     if ( value == "-20 Perception" ) return "-20 Percepción";
-	     if ( value == "-10 Stealth" ) return "–10 al Movimiento silencioso";
+         if ( value == "-20 Perception" ) return "-20 Percepción";
+         if ( value == "-10 Stealth" ) return "–10 al Movimiento silencioso";
 	},
 	
 	"injuries_location": (value) => {  // Heridas, Localización
-	     if ( value == "Head" ) return "Cabeza";
-	     if ( value == "Ear" ) return "Oreja";
-	     if ( value == "Nose" ) return "Nariz";
-	     if ( value == "Eye" ) return "Ojo";
-	     if ( value == "Teeth" ) return "Dientes";
-	     if ( value == "Tongue" ) return "Lengua";
-	     if ( value == "Body" ) return "Cuerpo";
-	     if ( value == "Arm" ) return "Brazo";
-	     if ( value == "Hand" ) return "Mano";
-	     if ( value == "Leg" ) return "Pierna";
-	     if ( value == "Foot" ) return "Pie";
-	     if ( value == "Toe" ) return "Dedo del pie";
+         if ( value == "Head" ) return "Cabeza";
+         if ( value == "Ear" ) return "Oreja";
+         if ( value == "Nose" ) return "Nariz";
+         if ( value == "Eye" ) return "Ojo";
+         if ( value == "Teeth" ) return "Dientes";
+         if ( value == "Tongue" ) return "Lengua";
+         if ( value == "Body" ) return "Cuerpo";
+         if ( value == "Arm" ) return "Brazo";
+         if ( value == "Hand" ) return "Mano";
+         if ( value == "Leg" ) return "Pierna";
+         if ( value == "Foot" ) return "Pie";
+         if ( value == "Toe" ) return "Dedo del pie";
 	},
 	"injuries_duration": (value) => {  // Heridas, Duración
-	     if ( value == "30 - TB" ) return "30 - BR";
-	     if ( value == "30 - TB days" ) return "30 - BR";
+         if ( value == "30 - TB" ) return "30 - BR";
+         if ( value == "30 - TB days" ) return "30 - BR";
 	},
 
 	"disease_units": (value) => {  // Enfermedades, Unidades
-	     if ( value == "days" ) return "días";
-	     if ( value == "hours" ) return "horas";
-	     if ( value == "minutes" ) return "minutos";
+         if ( value == "days" ) return "días";
+         if ( value == "hours" ) return "horas";
+         if ( value == "minutes" ) return "minutos";
 	},
 	
 	"effects": effects,
 
 	"bestiary_gender": (value) => {  // Bestiario, género
-	     if ( value == "Male" ) return "Varón";
-	     if ( value == "Female" ) return "Mujer";
-	     if ( value == "???" ) return "¿¿??";
-	     if ( value == "Varies" ) return "Varía";
+         if ( value == "Male" ) return "Varón";
+         if ( value == "Female" ) return "Mujer";
+         if ( value == "???" ) return "¿¿??";
+         if ( value == "Varies" ) return "Varía";
 	},
 
 	"templatesskills": templatesskills,

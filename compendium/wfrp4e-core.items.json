@@ -2561,7 +2561,7 @@
 		{
 			"id": "Disguise Kit",
 			"name": "Material de disfraz",
-			"description": "<p>Contiene suficientes accesorios para hasta 4 disfraces (p.ej. pelucas y maquillaje) y también materiales para cambiar de apariencia utilizados por quienes disponen de la Habilidad Animar (actuar) (p.ej. cera, falsa sangre y prótesis).</p>"
+			"description": "<p>Contiene suficientes accesorios para hasta 4 disfraces (p.ej. pelucas y maquillaje) y también materiales para cambiar de apariencia utilizados por quienes disponen de la Habilidad Animar (Actuar) (p.ej. cera, falsa sangre y prótesis).</p>"
 		},
 		{
 			"id": "Dog collar and lead",
@@ -12753,7 +12753,7 @@
 			"effects": [{
 				"name":"Discutidor",
 				"scriptData": [
-					{"label":"Discutidor","script":"if (args.test.options.useOnesArgumentative && (args.test.result.roll <= game.settings.get(\"wfrp4e\", \"automaticSuccess\") || args.test.result.roll <= args.test.target))\n{\n\nlet SL = Math.floor(args.test.target / 10) - Math.floor(args.test.result.roll / 10)\nlet ones = Number(args.test.result.roll.toString().split(\"\").pop())\nif (ones == 0)\n{\n   ones = 10;\n}\n\nif (ones > SL)\n\targs.test.data.result.SL = \"+\" + (ones + args.test.successBonus + args.test.slBonus)\n   args.test.result.other.push(`<b>${this.effect.name}</b>: Usado dado de unidades como NE.`)\n}"}
+					{"label":"Discutidor","script":"if (args.test.options.useOnesArgumentative && (args.test.result.roll <= game.settings.get(\"wfrp4e\", \"automaticSuccess\") || args.test.result.roll <= args.test.target)) {\n\n   let SL = Math.floor(args.test.target / 10) - Math.floor(args.test.result.roll / 10)\n   let ones = Number(args.test.result.roll.toString().split(\"\").pop())\n\n   if (ones == 0) {\n      ones = 10;\n   }\n\n\n   if (ones > SL) {\n      args.test.data.result.SL = \"+\" + (ones + args.test.successBonus + args.test.slBonus)\n      args.test.result.other.push(`<b>${this.effect.name}</b>: Usado dado de unidades como NE.`)\n   }\n}"}
 					]
 				}]
 		},
@@ -12775,7 +12775,7 @@
 			"effects": [{
 				"name":"Atractivo",
 				"scriptData": [
-					{"label":"Atractivo","script":"if (args.test.options.useOnesAttractive && (args.test.result.roll <= game.settings.get(\"wfrp4e\", \"automaticSuccess\") || args.test.result.roll <= args.test.target))\n{\n\nlet SL = Math.floor(args.test.target / 10) - Math.floor(args.test.result.roll / 10)\nlet ones = Number(args.test.result.roll.toString().split(\"\").pop())\nif (ones == 0)\n{\n   ones = 10;\n}\nif (ones > SL)\n\targs.test.data.result.SL = \"+\" + (ones + args.test.successBonus + args.test.slBonus)\n   args.test.result.other.push(`<b>${this.effect.name}</b>: Usado dado de unidades como NE`)\n}"}
+					{"label":"Atractivo","script":"if (args.test.options.useOnesAttractive && (args.test.result.roll <= game.settings.get(\"wfrp4e\", \"automaticSuccess\") || args.test.result.roll <= args.test.target)) {\n\n   let SL = Math.floor(args.test.target / 10) - Math.floor(args.test.result.roll / 10)\n   let ones = Number(args.test.result.roll.toString().split(\"\").pop())\n\n   if (ones == 0) {\n      ones = 10;\n   }\n\n   if (ones > SL) {\n      args.test.data.result.SL = \"+\" + (ones + args.test.successBonus + args.test.slBonus)\n      args.test.result.other.push(`<b>${this.effect.name}</b>: Usado dado de unidades como NE.`)\n   }\n}"}
 					]
 				}]
 		},
@@ -13643,7 +13643,7 @@
 			"id": "Master of Disguise",
 			"name": "Disfraz",
 			"description": "<p>Eres un experto en adoptar la apariencia y los manierismos de otros. Con tan sólo cambios de postura, de expresión facial y un uso cuidadoso de las ropas apropiadas, ya no pareces ser tú mismo sin necesidad de utilizar material de disfraz.</p>",
-			"tests": "Animar (actuar) cuando aparentas ser otra persona",
+			"tests": "Animar (Actuar) cuando aparentas ser otra persona",
 			"effects": [{
 				"name":"Disfraz",
 				"scriptData": []
@@ -13665,7 +13665,7 @@
 			"id": "Mimic",
 			"name": "Imitador",
 			"description": "<p>Tienes buen oído para los acentos y los dialectos, y los puedes reproducir de forma precisa. Puedes reproducir cualquier acento con el que has estado en contacto por lo menos un día mediante un Chequeo de Iniciativa; este Chequeo se puede intentar una vez al día. Una vez lo consigues, siempre puedes limitar el acento y los lugareños creen que eres uno de ellos.</p>",
-			"tests": "Chequeos de Animar (actuar) donde los acentos son importantes.",
+			"tests": "Chequeos de Animar (Actuar) donde los acentos son importantes.",
 			"effects": [{
 				"name":"Imitador",
 				"scriptData": []
@@ -13753,7 +13753,7 @@
 		{
 			"id": "Perfect Pitch",
 			"name": "Tono perfecto",
-			"description": "<p>Tienes un tono perfecto, y eres capaz de reproducir las notas perfectamente e identificarlas sin ni siquiera llevar a cabo un Chequeo. Además, añade Animar (cantar) a cualquier Carrera en la que entras; si ya está en la misma, en vez de eso puedes comprar la Habilidad a razón de 5 PX menos por Avance.</p>",
+			"description": "<p>Tienes un tono perfecto, y eres capaz de reproducir las notas perfectamente e identificarlas sin ni siquiera llevar a cabo un Chequeo. Además, añade Animar (Cantar) a cualquier Carrera en la que entras; si ya está en la misma, en vez de eso puedes comprar la Habilidad a razón de 5 PX menos por Avance.</p>",
 			"tests": "Animar (Cantar), Hablar idioma (Idiomas tonales, como el eltharin, el catayano y el de la magia)",
 			"effects": [{
 				"name":"Tono perfecto",
@@ -14033,8 +14033,8 @@
 		{
 			"id": "Secret Identity",
 			"name": "Identidad secreta",
-			"description": "<p>Mantienes una identidad secreta que te permite parecer más rico (o quizás más pobre) de lo que realmente eres. Con permiso del DJ, elige cualquier Carrera. Mientras vayas adecuadamente vestido, podrás utilizar el Estatus social de la Carrera elegida de la que te disfraces como si fuera tuyo a efectos de modificar los Chequeos de Empatía, pudiendo incluso ignorar el Talento Delincuente. Sin embargo, mantener dicha identidad requiere Chequeos de Animar (actuar) cuando te encuentras con quienes son capaces de reconocer tu falsedad. Puedes crear una nueva Identidad secreta por cada nivel que tienes en este Talento.</p>",
-			"tests": "Chequeos de Animar (actuar) para apoyar tus identidades secretas",
+			"description": "<p>Mantienes una identidad secreta que te permite parecer más rico (o quizás más pobre) de lo que realmente eres. Con permiso del DJ, elige cualquier Carrera. Mientras vayas adecuadamente vestido, podrás utilizar el Estatus social de la Carrera elegida de la que te disfraces como si fuera tuyo a efectos de modificar los Chequeos de Empatía, pudiendo incluso ignorar el Talento Delincuente. Sin embargo, mantener dicha identidad requiere Chequeos de Animar (Actuar) cuando te encuentras con quienes son capaces de reconocer tu falsedad. Puedes crear una nueva Identidad secreta por cada nivel que tienes en este Talento.</p>",
+			"tests": "Chequeos de Animar (Actuar) para apoyar tus identidades secretas",
 			"effects": [{
 				"name":"Identidad secreta",
 				"scriptData": []
@@ -14308,7 +14308,7 @@
 			"effects": [{
 				"name":"Alentador",
 				"scriptData": [
-					{"label":"Alentador","script":"if (args.test.options.useOnesSupportive && (args.test.result.roll <= game.settings.get(\"wfrp4e\", \"automaticSuccess\") || args.test.result.roll <= args.test.target))\n{\n\nlet SL = Math.floor(args.test.target / 10) - Math.floor(args.test.result.roll / 10)\nlet ones = Number(args.test.result.roll.toString().split(\"\").pop())\n\nif (ones > SL)\n\targs.test.data.result.SL = \"+\" + (ones + args.test.successBonus + args.test.slBonus)\n   args.test.result.other.push(`<b>${this.effect.name}</b>: Usado dado de unidades como NE.`)\n}"},
+					{"label":"Alentador","script":"if (args.test.options.useOnesSupportive && (args.test.result.roll <= game.settings.get(\"wfrp4e\", \"automaticSuccess\") || args.test.result.roll <= args.test.target)) {\n\n   let SL = Math.floor(args.test.target / 10) - Math.floor(args.test.result.roll / 10)\n   let ones = Number(args.test.result.roll.toString().split(\"\").pop())\n\n   if (ones > SL) {\n      args.test.data.result.SL = \"+\" + (ones + args.test.successBonus + args.test.slBonus)\n      args.test.result.other.push(`<b>${this.effect.name}</b>: Usado dado de unidades como NE.`)\n   }\n}"},
 					{}
 					]
 				}]

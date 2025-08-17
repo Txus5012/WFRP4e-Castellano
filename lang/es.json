@@ -370,11 +370,7 @@
         },
         "ZoneConfig" : "Configuración de Zona",
         "ZoneEffect" : "Efecto de zona",
-        "ZoneEffects" : "Aplicados Efectos de Zona"
-	},
-    "WORLD": {
-        "GameSystem": "Sistema de juego"
-    },
+        "ZoneEffects" : "Aplicados Efectos de Zona",
 
         "Models" : {
 
@@ -431,9 +427,13 @@
             },
 
             "vehicle" : {
-                "FILEDS" : {
+                "FIELDS" : {
                     "vehicleType" : {
                         "label" : "Tipo de Vehículo"
+                    },
+                    "details.hitLocationTable.value" : {
+                        "label" : "Tabla de Ubicación de Impactos",
+                        "hint" : "Define una tabla de ubicación de impactos personalizada para cuando este Actor sea atacado."
                     },
                     "status.morale.transferEffects" : {
                         "label" : "Transferir Efectos de Moral",
@@ -953,7 +953,11 @@
                     }
                 }
             }
-        },
+        }
+	},
+    "WORLD": {
+        "GameSystem": "Sistema de juego"
+    },
 
     "Options" : "Opciones",
 
@@ -1329,7 +1333,7 @@
     "ITEM.CountOwnerEnc" : "¿Contar para la Impedimenta del propietario?",
     "ITEM.ArmourType" : "Tipo de Armadura",
     "ITEM.AmmunitionType" : "Tipo de Munición",
-	"Weapon Modifiers" : "Modificadores al arma",
+    "Weapon Modifiers" : "Modificadores al arma",
     "ITEM.AmmunitionGroup" : "Grupo de Munición",
     "ITEM.ConsumesAmmo" : "Consume Munición",
     "ITEM.ConsumeAmmoTT" : "Si se marca y el Grupo de Munición es 'Ninguno', la cualidad del objeto se consumirá.",
@@ -1394,9 +1398,9 @@
     "Reach" : "Longitud",
     "Contraction" : "Origen",
     "Incubation" : "Incubación",
-	"IncubationPlaceholder" : "Texto relacionado con la incubación de la enfermedad",
+    "IncubationPlaceholder" : "Texto relacionado con la incubación de la enfermedad",
     "Duration" : "Duración",
-	"DurationPlaceholder" : "Texto relacionado con la duración de la enfermedad",
+    "DurationPlaceholder" : "Texto relacionado con la duración de la enfermedad",
     "Diagnosed" : "Diagnosticado",
     "DiagnosedTT" : "Cambia entre si la Enfermedad es visible para los Jugadores o no",
     "Symptoms" : "Síntomas",
@@ -1758,7 +1762,7 @@
     "CHARGEN.ERROR.Create" : "Error al Crear el Actor: {error}",
     "CHARGEN.ERROR.CareerItem" : "No se puede encontrar el Nivel 1 de este Objeto de Carrera: {career}",
     "CHARGEN.ERROR.CareerItems" : "No se pudieron encontrar {num} Objetos de carrera (de {careers})",
-    "CHARGEN.ERROR.SpeciesTable" : "No se pudo encontrar la Tabla de Especies",
+    "CHARGEN.ERROR.SpeciesTable" : "No se pudo encontrar una Tabla de Especies importada, comprueba los <strong>Ajustes de Tabla</strong> en los ajustes de sistema para asegurarte de que la tabla registrada es la correcta. Si no hay ninguna tabla registrada, crea una manualmente o importa una. Usar <a href='https://moo-man.github.io/WFRP4e-FoundryVTT/pages/premium.html#initializiation'>Inicialización</a> la importará por ti.",
     "CHARGEN.ERROR.TalentsTableNotFound" : "No se pudo encontrar la Tabla de Talentos Aleatorios '{key}' para {species} ({subspecies})",
     
     "DIALOG.CastOrChannel" : "Lanzar o Canalizar",
@@ -2478,7 +2482,7 @@
     "SPEC.Rural" : "Rural",
     "SPEC.Underground" : "Subterráneo",
     "SPEC.Sing" : "Cantar",
-    "SPEC.Singing" : "Cantando",
+    "SPEC.Singing" : "Cantar",
     "SPEC.Eltharin" : "Eltharin",
     "SPEC.Cathayan" : "Catayano",
     "SPEC.Lute" : "Laúd",
@@ -2785,10 +2789,10 @@
     "Add Encumbrance for Actors" : "Añadir Impedimenta por Actores",
     "Submit" : "Enviar",
     "Confirm" : "Confirmar",
-	"Edit" : "Editar",
+    "Edit" : "Editar",
     "Remove" : "Eliminar",
-	"Post to Chat" : "Enviar al Chat",
-	"Duplicate" : "Duplicar",
+    "Post to Chat" : "Enviar al Chat",
+    "Duplicate" : "Duplicar",
     "Split" : "Dividir",
 
     "Actor Settings": "Ajustes de Actor",
