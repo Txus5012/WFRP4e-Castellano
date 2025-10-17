@@ -514,7 +514,7 @@
 			"effects": [{
 				"name":"Malla de valor robado",
 				"scriptData": [
-					{"label":"Comprobación de Daño","script":"let blows = this.item.getFlag(\"wfrp4e\", \"blows\") || 0\nlet difficulties = Object.keys(game.wfrp4e.config.difficultyLabels)\n\nblows = Math.clamped(blows, 0, difficulties.length - 1)\nif (this.item.system.protects[args.opposedTest.result.hitloc.value])\n{\n    let difficulty = difficulties[blows];\n    this.actor.setupSkill(game.i18n.localize(\"NAME.Cool\"), {fields: {difficulty}, skipTargets: true, appendTitle :  ` - ${this.effect.name}`}).then(async test => {\n        await test.roll();\n        if (test.failed)\n        {\n            this.script.message(`${this.actor.name} debe retirarse del combate y huir hasta superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Voluntad</strong>.`);\n            this.item.setFlag(\"wfrp4e\", \"failedCool\", true);\n        }\n    })\n}"}
+					{"label":"Comprobación de Daño","script":"let blows = this.item.getFlag(\"wfrp4e\", \"blows\") || 0\nlet difficulties = Object.keys(game.wfrp4e.config.difficultyLabels)\n\nblows = Math.clamp(blows, 0, difficulties.length - 1)\nif (this.item.system.protects[args.opposedTest.result.hitloc.value])\n{\n    let difficulty = difficulties[blows];\n    this.actor.setupSkill(game.i18n.localize(\"NAME.Cool\"), {fields: {difficulty}, skipTargets: true, appendTitle :  ` - ${this.effect.name}`}).then(async test => {\n        await test.roll();\n        if (test.failed)\n        {\n            this.script.message(`${this.actor.name} debe retirarse del combate y huir hasta superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Voluntad</strong>.`);\n            this.item.setFlag(\"wfrp4e\", \"failedCool\", true);\n        }\n    })\n}"}
 					]
 				},
 				{
@@ -1579,7 +1579,7 @@
 			"effects": [{
 				"name":"Guadaña de Shyish",
 				"scriptData": [
-					{"label":"Guadaña de Shyish","script":"let scythe = (await fromUuid(\"Compendium.wfrp4e-core.items.CXg7XOFJwu4LZ9LM\")).toObject();\n    scythe.name = \"Guadaña de Shyish\";\n    scythe.system.damage.value = \"WPB + 3\"\n    scythe.system.equipped = true;\n    scythe.img = this.effect.icon;\n    scythe.system.qualities.value.push({name : \"magical\"})\n    this.actor.createEmbeddedDocuments(\"Item\", [scythe], {fromEffect : this.effect.id})"}
+					{"label":"Guadaña de Shyish","script":"let scythe = (await fromUuid(\"Compendium.wfrp4e-core.items.CXg7XOFJwu4LZ9LM\")).toObject();\n    scythe.name = \"Guadaña de Shyish\";\n    scythe.system.damage.value = \"WPB + 3\"\n    scythe.system.equipped = true;\n    scythe.img = this.effect.img;\n    scythe.system.qualities.value.push({name : \"magical\"})\n    this.actor.createEmbeddedDocuments(\"Item\", [scythe], {fromEffect : this.effect.id})"}
 					]
 				}]
 		},

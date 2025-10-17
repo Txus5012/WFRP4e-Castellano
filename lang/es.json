@@ -25,26 +25,42 @@
             "Wiki" : "WIKI"
         },
         "BugReporter": {
-            "AlertHint": "Este informe o no fue reproducible o necesita más información. Haz click en el título para ver más detalles.",
-            "APIReached": "Has alcanzado el límite de uso de la API de GitHub. Necesitas esperar una hora antes de enviar o enviarlo manualmente en la página web de Github.",
-            "BugReportFormError": "Por favor rellene el formulario",
-            "BugReportNameError": "Por favor incluya su etiqueta de Discord o email en la sección Nombre.",
-            "Contact": "Info. de contacto",
-            "ContactPlaceholder": "Etiqueta de Discord o Email.",
-            "DescriptionPlaceholder": "Qué ocurrió, cómo reproducirlo, etc. N. del T.: Escriba su agravio en inglés.",
-            "GeneralBugReportError": "Algo fue mal",
+            "Title" : "Enviar un Agravio",
+            "Report": "Informar",
+            "SubmittedIssues": "Problemas enviados",
+            "APILimitReached" : "Has alcanzado el límite de uso de la API de GitHub. Necesitas esperar una hora antes de enviar o enviarlo manualmente en la página web de Github.",
             "LoadingIssues": "Cargando asuntos",
-            "ManyModules": "Tienes módulos no de Warhammer activados, ¿quizá uno de ellos está interfiriendo? N. del T.: Pruebe también a poner el mundo en inglés y desactivar el módulo de la traducción. Si el fallo desaparece en el idioma original, entonces la causa es el módulo de la traducción. En ese caso puede enviar su Agravio a https://github.com/Txus5012/WFRP4e-Castellano/issues",
-            "MatchingIssues": "¿Su agravio ha sido ya enviado?",
-            "NeedsAttention": "NECESITA ATENCIÓN",
-            "NotUpdated": "<p>Los siguientes paquetes de Warhammer no están actualizados</p>",
-            "PostError": "Error enviando el informe. Por favor vea la consola para más detalles.",
-            "PostSuccess": "¡Informe de fallo enviado! Mire la consola para encontrar el enlace.",
-            "Resolved": "RESUELTO",
-            "Title": "Reportador de fallos",
-            "Troubleshooting": "Antes de enviar un informe, por favor consulte la página <a href='{url}'>Troubleshooting</a>.",
-            "Updated": "<p>¡Todos los paquetes de Warhammer están actualizados!</p>",
-            "Warning": "<b>Cuidado</b>: Esta información es enviada a la página de problemas de GitHub, la cual es pública, así que una etiqueta de Discord es preferible. O bien, contacte conmigo (<a href='mailto:russellt@cubicle7games.com'>Moo Man</a>) directamente."
+
+            "Form" : {
+                "Title" : "Título del informe",
+                "Module" : "Módulo",
+                "Type" : "Tipo",
+                "Contact" : "Contacto",
+                "Description" : "Descripción",
+                "PAT" : "TAP",
+
+                "MatchingIssues": "¿Su informe ha sido ya reportado?"
+
+            },
+            "Error" : {
+                "Incomplete" : "Por favor, complete su formulario con un título, tipo, el módulo relevante y descripción",
+
+                "Generic": "Algo fue mal",
+                "Report": "Error enviando el informe de error. Por favor, mire la consola para más detalles.",
+
+                "APIReached": "Has alcanzado el límite de uso de la API de GitHub. Necesitas esperar una hora antes de enviar o enviarlo manualmente en la página web de Github."
+
+            },
+
+            "Warning" : {
+                "Email": "<b>Cuidado</b>: Esta información es enviada a la página de problemas de GitHub, la cual es pública, así que una etiqueta de Discord es preferible. O bien, contacte conmigo (<a href='mailto:russellt@cubicle7games.com'>Moo Man</a>) directamente.",
+                "NeedHelp": "No use el reportador si necesita asistencia inmediata o quiere hacer preguntas generales. Por favor, vea <a href='{url}'>Troubleshooting</a>",
+                "PAT": "El TAP se considera informatción sensible y se guarda en los ajustes del mundo para informes futuros. Esto puede ser encontrado por otros usuarios en este mundo si saben dónde buscar."
+            },
+            "Closed": "Cerrado",
+            "AlertHint": "Este informe o no fue reproducible o necesita más información. Haz click en el título para ver más detalles.",
+
+            "ReportSuccess": "¡Informe de fallo enviado! Mire la consola para encontrar el enlace."
         },
         "CannotDeleteItemEffect" : "Este efecto es de un Objeto en este Actor. Elimina el propio Objeto o el efecto de la hoja del Objeto.",
         "Chat": {
@@ -162,7 +178,12 @@
             "NoTargetedActors" : "¡No se ha hecho objetivo a ningún Actor!",
             "NoTargets" : "¡No se ha hecho objetivo a ningún Actor!",
             "NotValidChoiceType" : "No es una elección válida",
-            "NoDrawingsToConvert" : "No hay Dibujos que convertir!"
+            "NoDrawingsToConvert" : "No hay Dibujos que convertir!",
+            "NoTargetedActors": "¡No se ha hecho objetivo a ningún Actor!",
+            "NoTargets": "¡No se ha hecho objetivo a ningún Actor!",
+            "NotValidChoiceType": "No es una elección válida",
+            "WrongChoiceOptionType": "No se permite este tipo de Objeto. Tipos permitidos: {types}",
+            "AppliedEffectNoItems" : "¡Ningún Objeto ha pasado el filtro de Efectos Activos!"
         },
         "ErrorNoZones": "No hay zonas para seleccionar. Añade Regiones a la Escena para crear Zonas.",
         "ErrorUnableToFindEffect": "No se ha encontrado efecto que aplicar.",
@@ -1828,6 +1849,7 @@
     "DIALOG.ErrorMustSelectItem" : "Debes seleccionar al menos 1 Objeto",
     "LOG.CareerChange": "Cambio de carrera: {career}",
     "DIALOG.ChoosePassenger" : "Escoge pasajero",
+    "DIALOG.ChooseArmour" : "Escoge Armadura para dañar",
 
     "CHAT.Quickcasting" : "Lanzamiento Rápido",
     "CHAT.CareerChoose" : "Escoge tu Carrera",
@@ -1837,6 +1859,8 @@
     "CHAT.DamageApplied" : "Daño aplicado",
     "CHAT.ApplyDamageBasic" : "@DAMAGE de daño aplicado a <b>{name}</b>",
     "CHAT.ApplyHack" : "Aplicar Traspasante",
+    "CHAT.CriticalDeflection" : "Desvío crítico",
+	"CHAT.DamageToArmour" : "1 de Daño aplicado a {item} ({type})",
     "CHAT.DamageShield" : "Escudo",
     "CHAT.CriticalsNullified" : "Críticos Anulados",
     "CHAT.DamageAP" : "Daño de 1 PA en",
@@ -1967,7 +1991,7 @@
     "CHAT.CommandLine.Help.NameGeneration.Usage.Note" : "Genera un nombre en el chat (Accesible también al hacer click en la etiqueta 'Nombre' de una ficha de PNJ o criatura).<br><b>Nota del traductor</b>: Las especies se escriben dwarf (enano), halfling, helf (alto elfo), human (humano) y welf (elfo silvano). Los géneros se pueden escribir también en inglés: <em>female</em> (femenino) y <em>male</em> (masculino).",
     "CHAT.CommandLine.Help.AvailabilityTest.Title" : "Chequeo de Disponibilidad",
     "CHAT.CommandLine.Help.AvailabilityTest.Usage.Command" : "/avail",
-    "CHAT.CommandLine.Help.AvailabilityTest.Usage.Example" : "<br>/avail pueblo común<br>/avail ciudad exótico",
+    "CHAT.CommandLine.Help.AvailabilityTest.Usage.Example" : "<br>/avail común size=pueblo<br>/avail exótico size=ciudad",
     "CHAT.CommandLine.Help.AvailabilityTest.Usage.Note" : "Tira un chequeo de disponibilidad para determinar la disponibilidad y existencias de un producto.",
     "CHAT.CommandLine.Help.Pay.Title" : "Pagar",
     "CHAT.CommandLine.Help.Pay.Usage.Command" : "/pay",
@@ -2002,7 +2026,7 @@
     "ErrorNotLoaded" : "No Cargada - Recargando",
     "ErrorLimitedWeapons" : "No puedes equipar más armas.",
     "ErrorDamagePermission" : "No tienes permiso para aplicar daño a este actor.",
-    "ErrorHackPermission" : "No tienes permiso para aplicar Traspasante a este actor.",
+    "ErrorArmourDamagePermission" : "No tienes permiso para aplicar Daño a la Armadura de este actor.",
     "ErrorNoArmourToDamage" : "Sin Objetos de Armadura que dañar",
     "ErrorTokenMount" : "Las fichas de montura requiere ver la escena con la montura.",
     "ErrorMountNotFound" : "Error recuperando montura. Intenta eliminar la montura.",
@@ -2076,8 +2100,8 @@
     "MARKET.Town" : "Pueblo",
     "MARKET.City" : "Ciudad",
     "MARKET.AvailabilityTest" : "Chequeo de Disponibilidad",
-    "MARKET.AvailWrongCommand": "Parámetros incorrectos. Parámetros esperados: Rareza [Común,Escaso,Raro,Exótico]<br><br>Tamaño de Asentamiento [Aldea,Pueblo,Ciudad]<br>(opt.) Modificador de Tirada",
-    "MARKET.AvailCommandExample": "Ejemplo: /avail Aldea Raro 10",
+    "MARKET.AvailWrongCommand": "Parámetros incorrectos. Parámetros esperados: Rareza [Común,Escaso,Raro,Exótico]<br>Tamaño de Asentamiento [Aldea,Pueblo,Ciudad]<br>(opcional) Modificador de Tirada",
+    "MARKET.AvailCommandExample": "Ejemplo: /avail raro size=aldea modifier=10",
     "MARKET.SettlementSize" : "Tipo de Asentamiento:",
     "MARKET.Rarity" : "Rareza:",
     "MARKET.InStock": "Disponible:",

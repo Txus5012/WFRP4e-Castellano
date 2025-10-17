@@ -1,0 +1,46 @@
+{
+	"label": "Objetos (Archivos Vol. II)",
+	"mapping": {
+	    "skills": "system.skills",
+	    "talents": "system.talents",
+	    "class": {
+		      "path": "system.class.value",
+		      "converter": "career_class"
+		    },
+	    "trappings": "system.trappings"
+	},
+	"entries": [
+		{
+			"id": "Fresh Meat",
+			"name": "Carne fresca",
+			"skills": ["Atletismo","Consumir alcohol","Frialdad","Esquivar","Aguante","Jugar","Intimidar","Hablar idioma (Lengua de Batalla)","Cuerpo a cuerpo (Básica)","Supervivencia"],
+			"talents": ["Amenazador","Buenas espaldas","Fornido","Pelea callejera"],
+			"trappings" : ["Daga","Espíritu viajero","Trozo de carne"],
+			"description": "<p>@UUID[Compendium.wfrp4e-archives2.journals.S7vMviNshIrqOuRq.JournalEntryPage.kxcmiebXRV7PPs8Y]{Comehombres}</p>"
+		},
+		{
+			"id": "Rhinox Rustler",
+			"name": "Cuatrero de rinobueyes",
+			"skills": ["Atletismo","Sobornar","Consumir alcohol","Esquivar","Aguante","Cuerpo a cuerpo (Básica)","Percepción","A distancia (Enmarañante)","Poner trampas","Movimiento silencioso (Rural)"],
+			"talents": ["¡A correr!","Errante","Puntería","Zancadas (Montañas)"],
+			"trappings": ["Arma de mano","Chaqueta de cuero","Lazo","Mochila"],
+			"description": "<p>@UUID[Compendium.wfrp4e-archives2.journals.S7vMviNshIrqOuRq.JournalEntryPage.VG6hzml2D3Oe7PYX]{Pastor de rinobueyes}</p>"
+		},
+		{
+			"id": "Slopscooper",
+			"name": "Rebañador de bazofia",
+			"skills": ["Escalar","Consumir alcohol","Aguante","Cotilleo","Intimidar","Hablar idioma (Lengua de la magia)","Cuerpo a cuerpo (Básica)","Supervivencia","Rezar","Oficio (Carnicero)"],
+			"talents": ["Buenas espaldas","Implacable","Magia menor","Sexto sentido"],
+			"trappings": ["Arma de mano (Cuchilla o mazo)","Delantal de carnicero"],
+			"description": "<p>@UUID[Compendium.wfrp4e-archives2.journals.S7vMviNshIrqOuRq.JournalEntryPage.oHnxmjA1CtIhumiz]{Ogro Carnicero}</p>"
+		},
+		{
+			"id": "Vice",
+			"name": "Vicio"
+		},
+		{
+			"id": "Large",
+			"name": "Grande"
+		}
+	]
+}

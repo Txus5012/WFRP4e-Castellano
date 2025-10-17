@@ -1,0 +1,88 @@
+{
+  "label": "Tablas (Archivos Vol. II)",
+  "mapping": {
+	"tablenames": {
+		"path": "results",
+		"converter": "tablenames"
+		}
+  },
+  "entries": {
+    "Species (Archives of the Empire Vol. II)": {
+      "name": "Especies (Archivos del Imperio Vol. II)",
+      "results": {
+        "1-89": "<p>@UUID[Compendium.wfrp4e-core.journals.JournalEntry.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#humanos-(reiklandeses)]{Humano}</p>",
+        "90-93": "<p>@UUID[Compendium.wfrp4e-core.journals.JournalEntry.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#halflings]{Halfling}</p>",
+        "94-97": "<p>@UUID[Compendium.wfrp4e-core.journals.JournalEntry.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#enanos]{Enano}</p>",
+        "98-98": "<p>@UUID[Compendium.wfrp4e-archives2.journals.JournalEntry.S7vMviNshIrqOuRq.JournalEntryPage.PTBOAPVIfELtQOgE]{Ogro}</p>",
+        "99-99": "<p>@UUID[Compendium.wfrp4e-core.journals.JournalEntry.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#altos-elfos]{Alto Elfo}</p>",
+        "100-100": "<p>@UUID[Compendium.wfrp4e-core.journals.JournalEntry.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#elfos-silvanos]{Elfo Silvano}</p>"
+      },
+	  "tablenames": [
+		{"name": "Humano"},
+		{"name": "Halfling"},
+		{"name": "Enano"},
+		{"name": "Ogro"},
+		{"name": "Alto Elfo"},
+		{"name": "Elfo Silvano"}
+		]
+    },
+    "Career - Ogre": {
+      "name": "Carrera - Ogro",
+      "results": {
+        "1-1": "@UUID[Compendium.wfrp4e-archives2.journals.S7vMviNshIrqOuRq.JournalEntryPage.oHnxmjA1CtIhumiz]{Ogre Butcher}",
+        "2-2": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.GWrZq3xoRSsDnQe0]{Artesano}",
+        "3-5": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.1l2m7D1LHIz2q9qv]{Mendigo}",
+        "6-6": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.mKvUxzJyQmhgjDE0]{Cazarratas}",
+        "7-12": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.N02cjJdNWPdc4PUS]{Vigilante}",
+        "13-13": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.iYnopOFkz5L6hljq]{Sirviente}",
+        "14-14": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.UhdhIWaofKgwFKEr]{Alguacil}",
+        "15-21": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.T6c9MttfG0Fj4nDm]{Cazador}",
+        "22-23": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.Nu2diwbUfo786wYt]{Minero}",
+        "24-26": "@UUID[Compendium.wfrp4e-archives2.journals.S7vMviNshIrqOuRq.JournalEntryPage.VG6hzml2D3Oe7PYX]{Rhinox Herder}",
+        "27-29": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.orZTfdJCm6OnUktl]{Cazarrecompensas}",
+        "30-32": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.5nIDu8oyFVShLqne]{Animador}",
+        "33-39": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.FdlybSv02jjXG1qW]{Vendedor ambulante}",
+        "40-40": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.XyM54Ue5w1WuCaBD]{Marino}",
+        "41-43": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.KslqDlYmY4trmf6S]{Estibador}",
+        "44-47": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.bDoNOzzUiMdKqpps]{Ladrón de tumbas}",
+        "48-56": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.SrqxyWytyki4WYgC]{Forajido}",
+        "57-61": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.Z5QPZbUR3h422ozo]{Raquero}",
+        "62-68": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.HndWncfaHb0nzNUq]{Guardia}",
+        "69-79": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.EELJsJuoDVxiRu9e]{Guerrero de foso}",
+        "80-84": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.cXOl6phkTrPcUmwC]{Protagonista}",
+        "85-91": "@UUID[Compendium.wfrp4e-archives2.journals.S7vMviNshIrqOuRq.JournalEntryPage.kxcmiebXRV7PPs8Y]{Maneater}",
+        "92-100": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.1OTZ386bMWJ6wfzX]{Soldado}"
+      }
+    },
+    "Hair Colour - Ogre": {
+      "name": "Color del Cabello - Ogro",
+      "results": {
+        "2-2": "Castaño",
+        "3-3": "Castaño rojizo",
+        "4-4": "Terracotta",
+        "5-7": "Siena",
+        "8-11": "Borgoña",
+        "12-14": "Castaño oscuro",
+        "15-17": "Negro",
+        "18-18": "Carbón",
+        "19-19": "Negro azabache",
+        "20-20": "Negro azulado"
+      }
+    },
+    "Eye Colour - Ogre": {
+      "name": "Color de Ojos - Ogro",
+      "results": {
+        "2-2": "Gris",
+        "3-3": "Verde",
+        "4-4": "Ámbar",
+        "5-7": "Avellana",
+        "8-11": "Marrón",
+        "12-14": "Marrón oscuro",
+        "15-17": "Siena",
+        "18-18": "Negro",
+        "19-19": "Negro púrpura",
+        "20-20": "Negro azulado"
+      }
+    }
+  }
+}

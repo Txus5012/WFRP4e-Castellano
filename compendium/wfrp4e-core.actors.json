@@ -7,272 +7,94 @@
 			"converter": "bestiary_gender"
 			},
 		"hit": "system.details.hitLocationTable.value",
-		"wounds": "flags.autoCalcWounds",
-		"gmnotes": "system.details.gmnotes.value",
-		"effects": {
-			"path": "effects",
-			"converter": "effects"
-			}
+		"gmnotes": "system.details.gmnotes.value"
 		},
 	"entries": [
 		{
 			"id": "Basilisk",
 			"name": "Basilisco",
 			"species": "Basilisco",
-			"effects": {
-				"Armour": {
-					"name":"Armadura"
-					},
-				"Infected": {
-					"flags.wfrp4e.script":"if (args.totalWoundLoss > 0)\n     ChatMessage.create({ content: `<b>Infectado: ${args.actor.name}</b> debe superar un Chequeo <b>Fácil (+40)</b> de <b>Aguante</b> o contraer una @UUID[Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb]{Herida supurante}`, whisper: ChatMessage.getWhisperRecipients(\"GM\") })",
-					"name":"Infectado"
-					},
-				"Stride": {
-					"name":"Zancada"
-					},
-				"Tail Attack": {
-					"flags.wfrp4e.script":"let actorSize = game.wfrp4e.config.actorSizeNums[args.actor.details.size.value]\nlet attackerSize = game.wfrp4e.config.actorSizeNums[args.attacker.details.size.value]\n\nif (attackerSize > actorSize)\n{\n   args.actor.addCondition(\"prone\")\n   ChatMessage.create({content: `<b>Coletazo</b>: ${args.actor.prototypeToken.name} está ahora @Condition[Tumbado]`, speaker : {alias: args.attacker.prototypeToken.name}})\n}",
-					"name":"Coletazo"
-					},
-				"Venom": {
-					"name":"Veneno"
-					},
-				"Cold Blooded": {
-					"name":"De sangre fría"
-					}
-				},
 			"description": "<p>Estas criaturas reptilianas de ocho patas son solitarias y esquivas. Supuestamente de las criaturas más antiguas del Caos, se dice que están tan llenos de despecho y de veneno que la propia tierra sobre la que caminan está envenenada. Su mordisco también es venenoso, pero lo que la mayoría teme es su mirada petrificante. Encontrados raramente en estos días, los basiliscos son un enemigo de lo más peligroso. Sus glándulas y órganos van muy buscados por los hechiceros y los alquimistas, por lo que los cazadores oportunistas a menudo persiguen rumores acerca de basiliscos en los lugares salvajes de @UUID[JournalEntry.ozE2DMCMK64eE5pD.JournalEntryPage.0Cmr0LZ3boLbNt6p]{Vorbergland}, aunque pocos regresan.</p>"
 		},
 		{
 			"id": "Bear",
 			"name": "Oso",
 			"species": "Oso",
-			"effects": {
-				"Armour": {
-					"name":"Armadura"
-					},
-				"Stride": {
-					"name":"Zancada"
-					},
-				"Infected": {
-					"flags.wfrp4e..script":"if (args.totalWoundLoss > 0)\n     ChatMessage.create({ content: `<b>Infectado: ${args.actor.name}</b> debe superar un Chequeo <b>Fácil (+40)</b> de <b>Aguante</b> o contraer una @UUID[Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb]{Herida supurante}`, whisper: ChatMessage.getWhisperRecipients(\"GM\") })",
-					"name":"Infectado"
-					},
-				"Infestation": {
-					"name":"Infestado"
-					}
-				},
 			"description": "<p>Merodeando por los lugares salvajes de Reikland, los osos son solitarios y usualmente tímidos, y sólo se vuelven agresivos cuando los intrusos amenazan a sus crías o están heridos. Cuando escasea la comida, se acercan a los asentamientos no protegidos y a los viajeros, especialmente a quienes no tienen cuidado con sus provisiones.</p>"
 		},
 		{
 			"id": "Black Bella",
 			"name": "Bella la Negra",
 			"species": "Humana",
-			"effects": {
-				"Arboreal": {
-					"name":"Arbóreo"
-					},
-				"Armour": {
-					"name":"Armadura"
-					},
-				"Brute": {
-					"name":"Bruto"
-					},
-				"Hardy": {
-					"name":"Resistente"
-					}
-				},
 			"description": "<p>El marido de Bethilda murió a manos de unos hombres bestia que atacaron el poblado de Reikherz. Cuatro meses más tarde, la desahuciaron por no pagar el alquiler. Desesperada, Bethilda fue a ver a su primo Alwin, un forajido buscado por la justicia. Después de una breve persuasión, Bethilda se unió a la banda de forajidos que hostigaban la ruta Karstadt-Siedlung y le sorprendió lo divertido que resultaba ser salteadora de caminos. Ahora se hace llamar Bella la Negra y se ha ganado una reputación de brutal implacabilidad que preocupa profundamente a su primo.</p>"
 		},
 		{
 			"id": "Bloodletter of Khorne",
 			"name": "Desangrador de Khorne",
 			"species": "Demonio",
-			"effects": {
-				"Armour": {
-					"name":"Armadura"
-					},
-				"Fear": {
-					"name":"Miedo"
-					},
-				"Frenzy": {
-					"name":"Furia"
-					}
-				},
 			"description": "<p>Elegidos de Khorne, los desangradores recorren los campos de batalla del Viejo Mundo, llevándose calaveras y vidas en honor al Dios de la Sangre. Unos dientes afilados como agujas sobresalen de unos rostros monstruosos y astados. Su piel color rojo sangre es dura como el bronce, forjada en el yunque de una guerra interminable. Cada desangrador empuña una espada infernal, una hoja tremendamente afilada y bañada en sangre, que maneja con imprudente abandono, entregándose a la dulce sensación de la masacre sin sentido.</p>"
 		},
 		{
 			"id": "Boar",
 			"name": "Jabalí",
 			"species": "Jabalí",
-			"effects": {
-				"Frenzy": {
-					"name":"Furia"
-					},
-				"Armour": {
-					"name":"Armadura"
-					},
-				"Stride": {
-					"name":"Zancada"
-					},
-				"Infected": {
-					"flags.wfrp4e.script":"if (args.totalWoundLoss > 0)\n     ChatMessage.create({ content: `<b>Infectado: ${args.actor.name}</b> debe superar un Chequeo <b>Fácil (+40)</b> de <b>Aguante</b> o contraer una @UUID[Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb]{Herida supurante}`, whisper: ChatMessage.getWhisperRecipients(\"GM\") })",
-					"name":"Infectado"
-					},
-				"Infestation": {
-					"name":"Infestado"
-					}
-				},
 			"description": "<p>Forrajeando por el bosque, los jabalíes son criaturas hurañas, pero cuando se ven acorralados luchan utilizando sus afilados colmillos con una tenacidad que sorprende a los poco preparados. Aunque la mayoría mide entre 5 y 6 pies de longitud, algunos crecen hasta proporciones notables, siendo los mayores de ellos muy apreciados por los @UUID[Compendium.wfrp4e-core.actors.E7BiDqsB55BrOQut]{orcos}, que los utilizan como feroces monturas de guerra.</p>"
 		},
 		{
 			"id": "Bog Octopus",
 			"name": "Pulpo de los lodazales",
 			"species": "Pulpo de los lodazales",
-			"effects": {
-				"Stealthy": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" &&  args.item.name.includes(\"Movimiento silencioso\"))\n{\n   let sl = this.actor.characteristics.ag.bonus\n   args.prefillModifiers.slBonus += sl;\n}",
-					"name":"Sigiloso"
-					},
-				"Amphibious": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" && args.item.name == \"Nadar\")\n    args.prefillModifiers.slBonus += this.actor.characteristics.ag.bonus",
-					"name":"Anfibio"
-					}
-				},
 			"description": "<p>Los pulpos de los lodazales acechan en las aguas poco profundas, por lo general en los marjales y las tierras pantanosas. Esperan a sus presas completamente inmóviles, siendo capaces de detectar las vibraciones de las criaturas que se acercan, para después emerger del agua fangosa, buscando apresar y ahogar con sus fuertes tentáculos. Por lo general moteados en verde y marrón, los pulpos de los lodazales están perfectamente camuflados en los entornos pantanosos, y sus enormes y límpidos ojos son a menudo la única pista que traiciona su presencia. La mayoría tiene tentáculos que miden 20 pies o más de longitud y un cuerpo de unos 6 pies de longitud, pero hay relatos que afirman que crecen hasta muchas veces dicho tamaño, especialmente con una dieta regular de carne.</p>"
 		},
 		{
 			"id": "Bray-Shaman",
 			"name": "Chamán del rebaño",
 			"species": "Chamán del rebaño",
-			"effects": {
-				"Arboreal": {
-					"name":"Arbóreo"
-					},
-				"Infected": {
-					"flags.wfrp4e.script":"if (args.totalWoundLoss > 0)\n     ChatMessage.create({ content: `<b>Infectado: ${args.actor.name}</b> debe superar un Chequeo <b>Fácil (+40)</b> de <b>Aguante</b> o contraer una @UUID[Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb]{Herida supurante}`, whisper: ChatMessage.getWhisperRecipients(\"GM\") })",
-					"name":"Infectado"
-					},
-				"Infestation": {
-					"name":"Infestado"
-					}
-				},
 			"description": "<p>Los chamanes del rebaño nacen con la aptitud instintiva de empuñar los poderes del Caos, que despliegan con terrorífica capacidad. De forma única entre los hombres bestia, nunca necesitan defenderse de los demás miembros de su rebaño, puesto que nadie se atrevería a dañar a un chamán, puesto que se cree que son los portavoces de la voluntad de los propios Dioses Oscuros..</p>"
 		},
 		{
 			"id": "Cairn Wraith",
 			"name": "Espectro",
 			"species": "Muerto viviente",
-			"effects": {
-				"Terror": {}
-				},
 			"description": "<p>Los espectros son espíritus especialmente potentes, restos espectrales de aspirantes a nigromante que buscaron prolongar su existencia a través de la magia oscura. En vida eran tercos; en la muerte, su maligna voluntad les conduce a cobrarse una terrible venganza sobre las almas ardientes de los vivos. Muchos de estos espectros acechan los túmulos rodeados de niebla que salpican los paisajes del Imperio, como por ejemplo los lúgubres @UUID[JournalEntry.ozE2DMCMK64eE5pD.JournalEntryPage.mdjl1WxjZLeuSWAN]{Hägercrybs}.</p>"
 		},
 		{
 			"id": "Cave Squig",
 			"name": "Garrapato cavernícola",
 			"species": "Garrapato",
-			"effects": {
-				"Bounce": {
-					"name":"Rebotar"
-					},
-				"Infected": {
-					"flags.wfrp4e.script":"if (args.totalWoundLoss > 0)\n     ChatMessage.create({ content: `<b>Infectado: ${args.actor.name}</b> debe superar un Chequeo <b>Fácil (+40)</b> de <b>Aguante</b> o contraer una @UUID[Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb]{Herida supurante}`, whisper: ChatMessage.getWhisperRecipients(\"GM\") })",
-					"name":"Infectado"
-					},
-				"Frenzy": {
-					"name":"Furia"
-					}
-				},
 			"description": "<p>Los garrapatos son criaturas fúngicas grandes y por lo general redondas que viven a gran profundidad bajo tierra en las cuevas más húmedas y oscuras. Tienen unas enormes fauces provistas de dientes grandes y afilados, y a los @UUID[Compendium.wfrp4e-core.actors.zzdOpKqBC28J66Mn]{goblins} les encantan por su carne y su piel, así como para tenerles como guardianes y mascotas.</p>"
 		},
 		{
 			"id": "Chaos Warrior",
 			"name": "Guerrero del Caos",
-			"effects": {
-				"Armour": {
-					"name":"Armadura"
-					},
-				"Distracting": {
-					"name":"Molesto"
-					},
-				"Frenzy": {
-					"name":"Furia"
-					}
-				},
 			"description": "<p>Enormes brutos fuertemente acorazados, engalanados con adornadas púas y dolorosos símbolos de sus dioses, está claro que los guerreros del Caos ya no son humanos. Nada queda de sus vidas previas, sino que existen para servir a su oscuro patrón y nada más. Si bien la mayoría de guerreros del Caos son merodeadores exaltados procedentes de tierras muy al norte, los Dioses Oscuros pueden regalar una Armadura del Caos a unos pocos y selectos sectarios, lo que les confiere un gran poder al coste de nunca poderse quitar la armadura mientras vivan. Como pocos guerreros son mejores que ellos, y ningún caballero va mejor protegido, sus vidas a menudo son muy largas.</p>"
 		},
 		{
 			"id": "Clanrat",
 			"name": "Guerrero de clan",
-			"effects": {
-				"Armour": {
-					"name":"Armadura"
-					},
-				"Infected": {
-					"flags.wfrp4e.script":"if (args.totalWoundLoss > 0)\n     ChatMessage.create({ content: `<b>Infectado: ${args.actor.name}</b> debe superar un Chequeo <b>Fácil (+40)</b> de <b>Aguante</b> o contraer una @UUID[Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb]{Herida supurante}`, whisper: ChatMessage.getWhisperRecipients(\"GM\") })",
-					"name":"Infectado"
-					},
-				"Stealthy": {
-					"name":"Sigiloso"
-					},
-				"Tracker": {
-					"name":"Rastreador"
-					}
-				},
 			"description": "<p>La mayoría de los skaven son guerreros de clan, que pertenecen a uno de los muchos y complejos clanes de skaven que constantemente discuten, politiquean, se traicionan y eventualmente guerrean unos contra otros. Suelen actuar bajo las órdenes de otros skaven de mayor estatus, pero siempre están en busca de la forma de conseguir una posición mejor, muy a menudo mediante la traición. Suelen vestir ropas de cuero mohoso o de tela sucia, con fragmentos de metal oxidado y deslustrado como armadura improvisada. A menudo se envía a los guerreros de clan como exploradores o incursores en busca de mercancías o piedra bruja o a capturar esclavos.</p>"
 		},
 		{
 			"id": "Crypt Ghoul",
 			"name": "Necrófago de la cripta",
 			"species": "Necrófago",
-			"effects": {
-				"Infected": {
-					"flags.wfrp4e.script":"if (args.totalWoundLoss > 0)\n     ChatMessage.create({ content: `<b>Infectado: ${args.actor.name}</b> debe superar un Chequeo <b>Fácil (+40)</b> de <b>Aguante</b> o contraer una @UUID[Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb]{Herida supurante}`, whisper: ChatMessage.getWhisperRecipients(\"GM\") })",
-					"name":"Infectado"
-					},
-				"Venom": {
-					"name":"Veneno"
-					}
-				},
 			"description": "<p>Entre las criaturas más patéticas del Viejo Mundo, los necrófagos de la cripta son criaturas feas y encorvadas, de piel cetrina y sucia, y dientes afilados y amarillentos capaces de arrancar la carne de sus víctimas. Los necrófagos se ven atraídos por las energías mágicas del Shyish y del Dhar, lo que en la práctica significa que gravitan hacia los cementerios y las criptas, y merodean por los campos de batalla.</p>"
 		},
 		{
 			"id": "Cultist",
 			"name": "Sectario",
-			"effects": {
-				"Armour": {
-					"name":"Armadura"
-					}
-				},
 			"description": "<p>Para quienes no están mancillados por la podredumbre del Caos, esto parece terriblemente ajeno, pero para aquellos a quienes afecta, cada paso hacia la condenación y cada idea que les acerca más al Caos, no tan sólo parece lógica, sino inevitable. Algunos seguidores especialmente devotos de cultos proscritos reciben ‘regalos’ de sus dioses; asquerosas mutaciones que aseguran su muerte si los cazadores de brujas desentierran su secreto.</p>"
 		},
 		{
 			"id": "Daemonette of Slaanesh",
 			"name": "Diablilla de Slaanesh",
 			"species": "Demonio",
-			"effects": {
-				"Distracting": {
-					"name":"Molesto"
-					},
-				"Fear": {
-					"name":"Miedo"
-					}
-				},
 			"description": "<p>Como todas las criaturas del Príncipe del Dolor y del Placer, las diablillas de Slaanesh son a la vez bellas y horribles. Poseedoras de una fascinación de otro mundo que desafía todo sentido y racionalidad, hacen que sus enemigos no puedan resistírseles, de lo fascinados que están por la profana sensualidad de sus monstruosas formas. Tienen la piel pálida y cremosa, y los ojos grandes y de color negro azabache. Un cabello salvaje, suelto y de un color antinatural adorna su delicada coronilla. En lugar de manos, sus esbeltos brazos acaban en sinuosas pinzas parecidas a las de los cangrejos.</p>"
 		},
 		{
 			"id": "Demigryph",
 			"name": "Semigrifo",
 			"species": "Semigrifo",
-			"effects": {
-				"Armour": {
-					"name":"Armadura"
-					},
-				"Stride": {
-					"name":"Zancada"
-					}
-				},
 			"description": "<p>Con la cabeza de un águila y el cuerpo de un león, los semigrifos son poderosas criaturas de noble porte. Recorren los bosques y las praderas del Imperio, por lo general lejos de donde habitan los humanos, cazando de forma individual. Las órdenes de caballería más intrépidas del Imperio despliegan semigrifos cautivos como monturas de guerra. A diferencia de las monturas monstruosas más grandes, que por lo general se suelen capturar cuando son jóvenes o se crían en cautividad, la captura de un semigrifo adulto es un rito de paso en algunas de las órdenes.</p>"
 		},
 		{
@@ -285,212 +107,59 @@
 			"id": "Dire Wolf",
 			"name": "Lobo espectral",
 			"species": "Muerto viviente",
-			"effects": {
-				"Armour": {
-					"name":"Armadura"
-					},
-				"Construct": {
-					"name":"Constructo"
-					},
-				"Fear": {
-					"name":"Miedo"
-					},
-				"Stride": {
-					"name":"Zancada"
-					},
-				"Tracker": {
-					"name":"Rastreador"
-					},
-				"Distracting": {
-					"name":"Molesto"
-					},
-				"Infected": {
-					"flags.wfrp4e.script":"if (args.totalWoundLoss > 0)\n     ChatMessage.create({ content: `<b>Infectado: ${args.actor.name}</b> debe superar un Chequeo <b>Fácil (+40)</b> de <b>Aguante</b> o contraer una @UUID[Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb]{Herida supurante}`, whisper: ChatMessage.getWhisperRecipients(\"GM\") })",
-					"name":"Infectado"
-					}
-				},
 			"description": "<p>Cuando la tierra devuelve los muertos, no tan sólo se alzan los seres humanos; parodias macabras de lobos gigantes, con ojos brillantes y jirones de carne colgando de sus cadáveres podridos e infectados, los lobos espectrales merodean de noche por cuenta de sus nigrománticos amos. En Reikland, se dice que recorren los bosques encantados de los @UUID[JournalEntry.ozE2DMCMK64eE5pD.JournalEntryPage.mdjl1WxjZLeuSWAN]{Hägercrybs} cuando Morrslieb está en fase de luna llena, corriendo salvajemente en busca de presas con las que mitigar su hambre insaciable, habiendo sido maldecidos con un apetito voraz por la carne y con un instinto potenciado hacia el olor de la sangre.</p>"
 		},
 		{
 			"id": "Dog",
 			"name": "Perro",
 			"species": "Perro",
-			"effects": {
-				"Armour": {
-					"name":"Armadura"
-					},
-				"Frenzy": {
-					"name":"Furia"
-					},
-				"Infected": {
-					"flags.wfrp4e.script":"if (args.totalWoundLoss > 0)\n     ChatMessage.create({ content: `<b>Infectado: ${args.actor.name}</b> debe superar un Chequeo <b>Fácil (+40)</b> de <b>Aguante</b> o contraer una @UUID[Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb]{Herida supurante}`, whisper: ChatMessage.getWhisperRecipients(\"GM\") })",
-					"name":"Infectado"
-					},
-				"Tracker": {
-					"name":"Rastreador"
-					},
-				"Stride": {
-					"name":"Zancada"
-					}
-				},
 			"description": "<p>Se crían perros para multitud de propósitos por todo el Viejo Mundo. Si bien los consentidos chuchos de los cortesanos de @UUID[JournalEntry.ozE2DMCMK64eE5pD.JournalEntryPage.V6tkgQ9A2skppjyl]{Altdorf} sólo son una amenaza para la dignidad de un aventurero, las razas mayores, incluidas las que se crían para la guerra y para las peleas de perros, pueden representar una amenaza formidable.</p>"
 		},
 		{
 			"id": "Dragon",
 			"name": "Dragón",
 			"species": "Dragón",
-			"effects": {
-				"Armour": {
-					"name":"Armadura"
-					},
-				"Tail Attack": {
-					"flags.wfrp4e.script":"let actorSize = game.wfrp4e.config.actorSizeNums[args.actor.details.size.value]\nlet attackerSize = game.wfrp4e.config.actorSizeNums[args.attacker.details.size.value]\n\nif (attackerSize > actorSize)\n{\n   args.actor.addCondition(\"prone\")\n   ChatMessage.create({content: `<b>Coletazo</b>: ${args.actor.prototypeToken.name} está ahora @Condition[Tumbado]`, speaker : {alias: args.attacker.prototypeToken.name}})\n}",
-					"name":"Coletazo"
-					},
-				"Arboreal": {
-					"name":"Arbóreo"
-					},
-				"Infestation": {
-					"name":"Infestado"
-					},
-				"Venom": {
-					"name":"Veneno"
-					}
-				},
 			"description": "<p>Los dragones gobernaban los cielos mucho antes de que las especies más antiguas recorrieran el Mundo Conocido. Si bien los dragones de hoy son meras sombras de su antigua raza, siguen estando entre las criaturas más poderosas conocidas por el Imperio. Los pocos dragones ancianos que quedan son terriblemente inmensos y raramente despiertan de su sopor. Si un dragón se ofende con un pequeño grupo de aventureros, es el momento de salir corriendo.</p>"
 		},
 		{
 			"id": "Dwarf",
 			"name": "Enano",
 			"species": "Enano",
-			"effects": {
-				"Magic Resistance": {
-					"name":"Resistencia a la magia"
-					}
-				},
 			"description": "<p>@UUID[JournalEntry.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#enanos]{Enanos}</p>"
 		},
 		{
 			"id": "Fenbeast",
 			"name": "Bestia del cieno",
 			"species": "Constructo",
-			"effects": {
-				"Construct": {
-					"name":"Constructo"
-					},
-				"Infected": {
-					"flags.wfrp4e.script":"if (args.totalWoundLoss > 0)\n     ChatMessage.create({ content: `<b>Infectado: ${args.actor.name}</b> debe superar un Chequeo <b>Fácil (+40)</b> de <b>Aguante</b> o contraer una @UUID[Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb]{Herida supurante}`, whisper: ChatMessage.getWhisperRecipients(\"GM\") })",
-					"name":"Infectado"
-					},
-				"Regenerate": {
-					"flags.wfrp4e.script":"let chatData = {content: \"\", whisper: ChatMessage.getWhisperRecipients(\"GM\")}\n\nlet wounds = duplicate(this.actor.status.wounds)\nlet regen = (await new Roll(\"1d10\").roll()).total\n\nif (wounds.value >= wounds.max)\n   return\n\nif (wounds.value > 0)\n{\n   wounds.value += regen\n   if (wounds.value > wounds.max) \n        wounds.value = wounds.max\n   chatData.content += `<b>${this.actor.name}</b> recupera ${regen} Heridas.`\n   \n    if (regen == 10)\n       chatData.content += `<br>Adicionalmente, regenera una Herida Crítica.`\n}\nelse if (regen >= 8)\n{\n    chatData.content += `<b>${this.actor.name}</b> sacó un ${regen} y recupera 1 Herida.`\n    wounds.value += 1\n    if (regen == 10)\n       chatData.content += `<br>Adicionalmente, regenera una Herida Crítica.`\n}\nelse\n{\n    chatData.content += `<b>${this.actor.name}</b> sacó ${regen} para Regenerar - Sin efecto.`\n}\n\nthis.actor.update({\"system.status.wounds\" : wounds})\nChatMessage.create(chatData)",
-					"name":"Regenerar"
-					},
-				"Frenzy": {
-					"name":"Furia"
-					},
-				"Infestation": {
-					"name":"Infestado"
-					}
-				},
 			"description": "<p>Alzadas por hechiceros de la inmundicia de los pantanos y las ciénagas, las bestias del cieno son al parecer autómatas descerebrados que se mantienen unidos por la magia. Vagamente humanoides, están compuestos de fango, huesos, ramas y limo y requieren cantidades significativas de magia para mantener su integridad. De vez en cuando, los crean hechiceros hábiles en la magia de Jade para que actúen como guardaespaldas o para que lleven a cabo una tarea específica que requiere de fuerza bruta o asesinatos sin sentido. A veces se alzan de forma independiente, creados en charcas estancadas y podridas donde el flujo de la magia ha sido corrompido. Se dice que el |Colegio de Jade| en @UUID[JournalEntry.ozE2DMCMK64eE5pD.JournalEntryPage.V6tkgQ9A2skppjyl]{Altdorf} mantiene una veintena de dichas criaturas como bestias de carga, al servicio de los magísteres de más edad, mantenidas por la incesante canalización de docenas de aprendices.</p>"
 		},
 		{
 			"id": "Fimir",
 			"name": "Fimir",
-			"effects": {
-				"Armour": {
-					"name":"Armadura"
-					},
-				"Tail Attack": {
-					"flags.wfrp4e.script":"let actorSize = game.wfrp4e.config.actorSizeNums[args.actor.details.size.value]\nlet attackerSize = game.wfrp4e.config.actorSizeNums[args.attacker.details.size.value]\n\nif (attackerSize > actorSize)\n{\n   args.actor.addCondition(\"prone\")\n   ChatMessage.create({content: `<b>Coletazo</b>: ${args.actor.prototypeToken.name} está ahora @Condition[Tumbado]`, speaker : {alias: args.attacker.prototypeToken.name}})\n}",
-					"name":"Coletazo"
-					}
-				},
 			"description": "<p>Los fimir son criaturas reptilianas reservadas y de un solo ojo, que acechan en los rincones más oscuros de las húmedas ciénagas y zonas pantanosas de la parte occidental de Reikland. Evitan la luz solar, apareciendo por lo general tan sólo al amanecer o al anochecer, o bajo la cobertura de la niebla o la bruma para arrebatar víctimas con propósitos misteriosos y horrendos. Se sabe que algunos brujos humanos lo suficientemente temerarios o desesperados como para inmiscuirse en los asuntos de los demonios han buscado a los fimir para averiguar sus malignos misterios, puesto que se dice que convocan y controlan a semejantes seres. Nadie sabe si el riesgo está en tener algo que ver con los Poderes Ruinosos o en tratar con los fimir. Los fimir tienen una sociedad matriarcal. La líder de cada clan es una poderosa bruja llamada meargh , a la que ayuda un cuadro de hechiceros menores llamados dirach . La mayoría de los miembros del clan son los shearls , de clase baja, protegidos por una casta de guerreros, los fimm, que tienen provistos de púas y nudosidades en la cola, que utilizan para quebrar los huesos de los oponentes incautos.</p>"
 		},
 		{
 			"id": "Fr'hough Mournbreath",
 			"name": "Fr’hough Aliento de muerte",
 			"species": "Príncipe Demonio",
-			"effects": {
-				"Armour": {
-					"name":"Armadura"
-					},
-				"Infected": {
-					"flags.wfrp4e.script":"if (args.totalWoundLoss > 0)\n     ChatMessage.create({ content: `<b>Infectado: ${args.actor.name}</b> debe superar un Chequeo <b>Fácil (+40)</b> de <b>Aguante</b> o contraer una @UUID[Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb]{Herida supurante}`, whisper: ChatMessage.getWhisperRecipients(\"GM\") })",
-					"name":"Infectado"
-					},
-				"Infestation": {
-					"name":"Infestado"
-					},
-				"Terror": {}
-				},
 			"description": ""
 		},
 		{
 			"id": "Ghost",
 			"name": "Fantasma",
 			"species": "Muerto viviente",
-			"effects": {
-				"Fear": {
-					"name":"Miedo"
-					},
-				"Swarm Bonuses": {
-					"name":"Bonos de Plaga"
-					},
-				"Swarm": {
-					"name":"Plaga"
-					}
-				},
 			"description": "<p>Los fantasmas son los espíritus de las almas atormentadas que murieron con asuntos pendientes. En gran medida como los @UUID[Compendium.wfrp4e-core.actors.Mt5JAoOSaEH1PdcP]{esqueletos} y los @UUID[Compendium.wfrp4e-core.actors.T79RqnDOAQLn3I1s]{zombis}, los fantasmas pueden ser convocados por los @UUID[Compendium.wfrp4e-core.actors.T5qAtpoKtB8iwTBd]{vampiros} o los nigromantes, o pueden acechar zonas impregnadas de Dhar. En circunstancias excepcionales, algún espíritu particularmente motivado podría salir del Reino de Morr ayudándose de sus garras, en pos de sus propios asuntos, aunque semejante suceso rápidamente atraería la atención del Culto de Morr o de los magísteres de la Orden Amatista. Cuando se les convoca a través de las artes nigrománticas, los fantasmas se reúnen, formando grandes huestes espectrales que sobrevuelan a sus enemigos y se lanzan en picado sobre ellos, extendiendo el miedo y el desorden a su paso.</p>"
 		},
 		{
 			"id": "Giant",
 			"name": "Gigante",
 			"species": "Gigante",
-			"effects": {
-				"Armour": {
-					"name":"Armadura"
-					},
-				"Stride": {
-					"name":"Zancada"
-					},
-				"Tough": {
-					"name":"Recio"
-					},
-				"Infected": {
-					"flags.wfrp4e.script":"if (args.totalWoundLoss > 0)\n     ChatMessage.create({ content: `<b>Infectado: ${args.actor.name}</b> debe superar un Chequeo <b>Fácil (+40)</b> de <b>Aguante</b> o contraer una @UUID[Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb]{Herida supurante}`, whisper: ChatMessage.getWhisperRecipients(\"GM\") })",
-					"name":"Infectado"
-					},
-				"Infestation": {
-					"name":"Infestado"
-					}
-				},
 			"description": "<p>Los gigantes son criaturas solitarias que suelen evitar la civilización. La mayoría acecha en los lugares remotos y elevados que rodean el Imperio, encerrándose en cavernas y ruinas olvidadas lejos de la gente más pequeña, aunque a veces descienden a las estribaciones de las montañas en busca de comida. Tienen la reputación de ser beligerantes y feroces, debido en partes iguales a su tamaño intimidante, a su afición por comer ganado y a su asociación con los ejércitos merodeadores de pieles verdes que los esclavizan. En realidad, muchos gigantes son almas cándidas, propensos a tener ataques de rabia y ferozmente protectores de su intimidad, pero no necesariamente hostiles para otros. Debido a su larga vida, los rumores sugieren que atesoran saber antiguo, aunque la mayoría parecen menos que lúcidos y ciertamente más interesados en el alcohol que en las discusiones acerca de la historia.</p>"
 		},
 		{
 			"id": "Giant Rat",
 			"name": "Rata gigante",
 			"species": "Rata",
-			"effects": {
-				"Stride": {
-					"name":"Zancada"
-					},
-				"Infected": {
-					"flags.wfrp4e.script":"if (args.totalWoundLoss > 0)\n     ChatMessage.create({ content: `<b>Infectado: ${args.actor.name}</b> debe superar un Chequeo <b>Fácil (+40)</b> de <b>Aguante</b> o contraer una @UUID[Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb]{Herida supurante}`, whisper: ChatMessage.getWhisperRecipients(\"GM\") })",
-					"name":"Infectado"
-					},
-				"Armour": {
-					"name":"Armadura"
-					},
-				"Swarm Bonuses": {
-					"name":"Bonos de Plaga"
-					},
-				"Swarm": {
-					"name":"Plaga"
-					}
-				},
 			"description": "<p>Las ratas están por todas partes y son especialmente prevalentes en los pueblos y ciudades. Cuanto más densamente se apretuja la gente, más densamente se apretujan las ratas con ella, lo que es especialmente malo cuando las criaturas portan enfermedades. Aunque son típicamente pequeñas, pueden crecer hasta proporciones monstruosas, y se informa de que por debajo de Altdorf se han visto ratas del tamaño de un ser humano y aún mayores. Los cazarratas son quienes se ocupan de mantenerlas a raya.</p>"
 		},
 		{
@@ -498,139 +167,45 @@
 			"name": "Araña Gigante",
 			"species": "Araña",
 			"hit": "spider",
-			"effects": {
-				"Armour": {
-					"name":"Armadura"
-					},
-				"Web": {
-					"name":"Telaraña"
-					},
-				"Arboreal": {
-					"name":"Arbóreo"
-					},
-				"Venom": {
-					"name":"Veneno"
-					},
-				"Swarm Bonuses": {
-					"name":"Bonos de Plaga"
-					},
-				"Swarm": {
-					"name":"Plaga"
-					}
-				},
 			"description": "<p>Las arañas gigantes acechan a gran profundidad en los bosques y en las cavernas del Imperio, pero pueden vivir en cualquier parte, incluyendo desvanes polvorientos y sótanos oscuros. La mayoría atrapan a sus presas con recias telarañas antes de inyectarles veneno. Aunque muchas son del tamaño de una rata grande, algunas especies de araña gigante son terroríficamente grandes. Los goblins del bosque a menudo capturan los ejemplares mayores para utilizarlos como montura.</p>"
 		},
 		{
 			"id": "Goblin",
 			"name": "Goblin",
-			"effects": {
-				"Armour": {
-					"name":"Armadura"
-					},
-				"Infected": {
-					"flags.wfrp4e.script":"if (args.totalWoundLoss > 0)\n     ChatMessage.create({ content: `<b>Infectado: ${args.actor.name}</b> debe superar un Chequeo <b>Fácil (+40)</b> de <b>Aguante</b> o contraer una @UUID[Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb]{Herida supurante}`, whisper: ChatMessage.getWhisperRecipients(\"GM\") })",
-					"name":"Infectado"
-					},
-				"Arboreal": {
-					"name":"Arbóreo"
-					},
-				"Venom": {
-					"name":"Veneno"
-					}
-				},
 			"description": "<p>‘Goblins, señor ¡miles de ellos!’</p>\n<p>– Teniente Bromkopf, 24º Regimiento de Infantería de Reikland</p>\n<p>&nbsp;</p>\n<p>Flacuchos, maliciosos, ágiles e inteligentes, el instinto de conservación de los goblins nunca debe ser subestimado. Aunque son cobardes, los goblins se reúnen fácilmente si esto les proporciona una ventaja abrumadora en número. Los goblins se unen frecuentemente a los ejércitos @UUID[Compendium.wfrp4e-core.actors.E7BiDqsB55BrOQut]{orcos} (no siempre por voluntad propia) haciéndose de forma oportunista con los despojos de la guerra mientras los demás están en el fragor de la batalla.</p>"
 		},
 		{
 			"id": "Gor",
 			"name": "Gor",
-			"effects": {
-				"Arboreal": {
-					"name":"Arbóreo"
-					},
-				"Infected": {
-					"flags.wfrp4e.script":"if (args.totalWoundLoss > 0)\n     ChatMessage.create({ content: `<b>Infectado: ${args.actor.name}</b> debe superar un Chequeo <b>Fácil (+40) de Aguante</b> o sufrir una @UUID[Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb]{Herida supurante}`, whisper: ChatMessage.getWhisperRecipients(\"GM\") })",
-					"name":"Infectado"
-					},
-				"Infestation": {
-					"name":"Infestado"
-					},
-				"Armour": {
-					"name":"Armadura"
-					},
-				"Armour": {
-					"name":"Armadura"
-					}
-				},
 			"description": "<p>Los gors, los hombres bestia más comunes, acechan en casi todos los bosques del Viejo Mundo. Su apariencia varía ampliamente, pero todos ellos combinan rasgos humanos y bestiales, a menudo con cabeza y patas de cabra y torso y brazos de humano. El único rasgo que tienen universalmente todos los gors es un gran par de cuernos (cuanto más grandes mejor, puesto que denotan estatus entre los hombres bestia) un rasgo que los distingue de los @UUID[Compendium.wfrp4e-core.actors.vrYs3cbxvXtre6rv]{ungors} y de los cambiapieles. A los gors de mayor tamaño se les conoce como bestigors.</p>"
 		},
 		{
 			"id": "Griffon",
 			"name": "Grifo",
 			"species": "Grifo",
-			"effects": {
-				"Armour": {
-					"name":"Armadura"
-					}
-				},
 			"description": "<p>Con los cuartos delanteros y las alas de un águila y los cuartos traseros de un gran felino, los grifos son bestias elegantes con un porte naturalmente orgulloso y regio. Anidan a gran altura en las montañas que rodean el Imperio y son asesinos rápidos y eficaces, poco dados a la destrucción indiscriminada que practican criaturas como las @UUID[Compendium.wfrp4e-core.actors.XtVkAVgZRIIgrBXb]{mantícoras} o los @UUID[Compendium.wfrp4e-core.actors.RiXpMLex8SZf6gaQ]{hipogrifos}. Quizá debido a esta aparente nobleza, la imagen del grifo es extraordinariamente popular en el Imperio, y se utiliza en la heráldica, en la iconografía religiosa y como símbolo del propio Imperio. Los grifos son también de las bestias más inteligentes. Si se les captura relativamente jóvenes y se les somete al entrenamiento correcto, pueden ser increíblemente leales, capaces de anticipar y obedecer una amplia variedad de órdenes. Van tan buscados que los cazadores mueren de forma regular intentando conseguir huevos de grifo para su venta. Quizá el grifo de más renombre en Reikland es Garra de Muerte. Albergado en el Zoo Imperial de Altdorf, Garra de Muerte es propiedad personal del príncipe heredero de Reikland y se dice que fue incubado por el propio emperador Karl-Franz, un relato que condujo a todo tipo de caricaturas lascivas, impresas en panfletos sediciosos.</p>"
 		},
 		{
 			"id": "Halfling",
 			"name": "Halfling",
-			"effects": {
-				"Stealthy": {
-					"flags.wfrp4e.script":"if (args.type == \"skill\" &&  args.item.name.includes(\"Movimiento silencioso\"))\n{\n   let sl = this.actor.characteristics.ag.bonus\n   args.prefillModifiers.slBonus += sl;\n}",
-					"name":"Sigiloso"
-					}
-				},
 			"description": "<p>@UUID[JournalEntry.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#halflings]{Halflings}</p>"
 		},
 		{
 			"id": "High Elf",
 			"name": "Alto Elfo",
 			"species": "Alto Elfo",
-			"effects": {
-				"Arboreal": {
-					"name":"Arbóreo"
-					},
-				"Magic Resistance": {
-					"name":"Resistencia a la magia"
-					},
-				"Stealthy": {
-					"name":"Sigiloso"
-					},
-				"Tracker": {
-					"name":"Rastreador"
-					}
-				},
 			"description": "<p>@UUID[JournalEntry.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#altos-elfos]{Altos Elfos}</p>"
 		},
 		{
 			"id": "Hippogryph",
 			"name": "Hipogrifo",
 			"species": "Hipogrifo",
-			"effects": {
-				"Stride": {
-					"name":"Zancada"
-					},
-				"Frenzy": {
-					"name":"Furia"
-					}
-				},
 			"description": "<p>Extraordinariamente feroces y territoriales, los hipogrifos suelen tener la cabeza, las alas y los cuartos delanteros de un águila y los cuartos traseros de un caballo. Procedentes en su mayoría de @UUID[JournalEntry.ozE2DMCMK64eE5pD.JournalEntryPage.w0YfGxsBuLoODCgc]{las Montañas Grises}, atacan sin provocación, con una furia casi temeraria, arrancando jirones de piel que devoran después. Tal es su rabia, que un solo hipogrifo puede devastar campos enteros cubiertos de ganado, para después llevarse tan sólo la comida que elige, dejando el resto para las aves carroñeras. Como quiera que su inteligencia es escasa, cuando los hipogrifos cazan tienden a matar todo lo que tienen a la vista, suponiendo que lo que no ven se ha ido para siempre, lo que significa que las pérdidas reales ante los hipogrifos son relativamente bajas, dado que todo lo que se requiere para evitarlos es encontrar un buen escondrijo.</p>"
 		},
 		{
 			"id": "Horse",
 			"name": "Caballo",
 			"species": "Caballo",
-			"effects": {
-				"Stride": {
-					"name":"Zancada"
-					},
-				"Armour": {
-					"name":"Armadura"
-					}
-				},
 			"description": "<p>Se crían caballos para muchos usos, incluyendo rápidas monturas para los mensajeros, recios destreros para los caballeros y poderosos caballos de tiro para los granjeros. Son tan útiles, que el comercio caballar es casi un deporte competitivo en Reikland. Algunos ‘tratantes de caballos’ poco escrupulosos están ansiosos de hacer dinero a expensas de los compradores ignorantes, pintando y limando dientes de caballos de edad, o metiendo trapos nariz arriba para absorber la mucosidad, de forma que el comprador poco avispado debería tener cuidado.</p>"
 		},
 		{
@@ -643,56 +218,12 @@
 			"id": "Hydra",
 			"name": "Hidra",
 			"species": "Hidra",
-			"effects": {
-				"Armour": {
-					"name":"Armadura"
-					},
-				"Terror": {},
-				"Regenerate": {
-					"flags.wfrp4e.script":"let chatData = {content: \"\", whisper: ChatMessage.getWhisperRecipients(\"GM\")}\n\nlet wounds = duplicate(this.actor.status.wounds)\nlet regen = (await new Roll(\"1d10\").roll()).total\n\nif (wounds.value >= wounds.max)\n   return\n\nif (wounds.value > 0)\n{\n   wounds.value += regen\n   if (wounds.value > wounds.max) \n        wounds.value = wounds.max\n   chatData.content += `<b>${this.actor.name}</b> recupera ${regen} Heridas.`\n   \n    if (regen == 10)\n       chatData.content += `<br>Adicionalmente, regenera una Herida Crítica.`\n}\nelse if (regen >= 8)\n{\n    chatData.content += `<b>${this.actor.name}</b> sacó un ${regen} y recupera 1 Herida.`\n    wounds.value += 1\n    if (regen == 10)\n       chatData.content += `<br>Adicionalmente, regenera una Herida Crítica.`\n}\nelse\n{\n    chatData.content += `<b>${this.actor.name}</b> sacó ${regen} para Regenerar - Sin efecto.`\n}\n\nthis.actor.update({\"system.status.wounds\" : wounds})\nChatMessage.create(chatData)",
-					"name":"Regenerar"
-					},
-				"Stealthy": {
-					"name":"Sigiloso"
-					},
-				"Stride": {
-					"name":"Zancada"
-					},
-				"Tracker": {
-					"name":"Rastreador"
-					},
-				"Venom": {
-					"name":"Veneno"
-					}
-				},
 			"description": "<p>La hidra, parecida a un lagarto y de muchas cabezas, tiene un cuerpo enorme que soporta un laberinto de cuellos y cabezas que respiran fuego humeante y muerden con ferocidad. Criaturas sorprendentemente tenaces y sigilosas, las hidras pueden acechar a su presa muchas millas; sin embargo, con demasiada frecuencia pierden la paciencia y cargan, con las cabezas rugiendo.</p>"
 		},
 		{
 			"id": "Jabberslythe",
 			"name": "Escuerzo alado",
 			"species": "Escuerzo alado",
-			"effects": {
-				"Armour": {
-					"name":"Armadura"
-					},
-				"Bounce": {
-					"name":"Rebotar"
-					},
-				"Distracting": {
-					"name":"Molesto"
-					},
-				"Infected": {
-					"flags.wfrp4e.script":"if (args.totalWoundLoss > 0)\n     ChatMessage.create({ content: `<b>Infectado: ${args.actor.name}</b> debe superar un Chequeo <b>Fácil (+40)</b> de <b>Aguante</b> o contraer una @UUID[Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb]{Herida supurante}`, whisper: ChatMessage.getWhisperRecipients(\"GM\") })",
-					"name":"Infectado"
-					},
-				"Tail Attack": {
-					"flags.wfrp4e.script":"let actorSize = game.wfrp4e.config.actorSizeNums[args.actor.details.size.value]\nlet attackerSize = game.wfrp4e.config.actorSizeNums[args.attacker.details.size.value]\n\nif (attackerSize > actorSize)\n{\n   args.actor.addCondition(\"prone\")\n   ChatMessage.create({content: `<b>Coletazo</b>: ${args.actor.prototypeToken.name} está ahora @Condition[Tumbado]`, speaker : {alias: args.attacker.prototypeToken.name}})\n}",
-					"name":"Coletazo"
-					},
-				"Venom": {
-					"name":"Veneno"
-					}
-				},
 			"description": "<p>El escuerzo alado es una antigua criatura del Caos que acecha bajo el sombrío dosel de los bosques más profundos y oscuros. Una criatura enloquecedora, el escuerzo alado es una repugnante mezcla de sapo, draco del lodo e insecto, todo ello relleno de una sangre negra y corrosiva que brota a la menor herida. Y lo que es peor, todos los que contemplan este horror parecen perder la razón, balbuceando y haciendo rimas, arañándose los ojos y gritando con una risa histérica, lo que les convierte en presa fácil para el escuerzo alado. Además, tiene una lengua pegajosa que puede extender y atraer a su siguiente comida hacia sus enormes fauces. Como corresponde a su apariencia, la criatura se mueve de una forma extraña y desgarbada, e incluso tiene alas, aunque son demasiado pequeñas como para elevar adecuadamente su abotargado torso.</p>"
 		},
 		{
@@ -705,36 +236,12 @@
 			"id": "Manticore",
 			"name": "Mantícora",
 			"species": "Mantícora",
-			"effects": {
-				"Armour": {
-					"name":"Armadura"
-					},
-				"Tail Attack": {
-					"flags.wfrp4e.script":"let actorSize = game.wfrp4e.config.actorSizeNums[args.actor.details.size.value]\nlet attackerSize = game.wfrp4e.config.actorSizeNums[args.attacker.details.size.value]\n\nif (attackerSize > actorSize)\n{\n   args.actor.addCondition(\"prone\")\n   ChatMessage.create({content: `<b>Coletazo</b>: ${args.actor.prototypeToken.name} está ahora @Condition[Tumbado]`, speaker : {alias: args.attacker.prototypeToken.name}})\n}",
-					"name":"Coletazo"
-					},
-				"Venom": {
-					"name":"Veneno"
-					}
-				},
 			"description": "<p><em>'Cuando viajaba con los elfos hacia Ulthuan, vi muchas cosas que sorprenderían a la mayoría de gente aquí en casa. Una vez vi una mantícora, ¡pero en el centro de su cabeza de león tenía el rostro de un gran elfo! Supongo que en lugar de una mantícora era una elftícora’</em></p>\n<p>– Adhemar Fitztancred, Guardián Gris, narrador y mentiroso</p>\n<p>Afortunadamente raras, las mantícoras son implacablemente feroces, y propensas a limpiar su territorio de depredadores rivales con extraordinaria brutalidad. Esto significa que sueles saber cuándo entras en el territorio de una mantícora debido a que hay cadáveres de otros monstruos en todas las partes elevadas. La criatura tiene la cabeza y el cuerpo de un gran felino deforme (aunque a veces su rostro parece casi demasiado humano), las alas de murciélago y una cola retorcida, potente y llena de púas.</p>"
 		},
 		{
 			"id": "Minotaur",
 			"name": "Minotauro",
 			"species": "Minotauro",
-			"effects": {
-				"Arboreal": {
-					"name":"Arbóreo"
-					},
-				"Infected": {
-					"flags.wfrp4e.script":"if (args.totalWoundLoss > 0)\n     ChatMessage.create({ content: `<b>Infectado: ${args.actor.name}</b> debe superar un Chequeo <b>Fácil (+40)</b> de <b>Aguante</b> o contraer una @UUID[Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb]{Herida supurante}`, whisper: ChatMessage.getWhisperRecipients(\"GM\") })",
-					"name":"Infectado"
-					},
-				"Infestation": {
-					"name":"Infestado"
-					}
-				},
 			"description": "<p>Enormes y recios, los minotauros (que tienen forma de toro) son aún más altos que los bestigors más grandes. Se considera que los rebaños con un gran contingente de minotauros han sido especialmente bendecidos por los Dioses Oscuros. Los rebaños de hombres bestia se congregan alrededor de los minotauros puesto que su imponente presencia proporciona arrojo a las bestias menores.</p>"
 		},
 		{
@@ -746,44 +253,18 @@
 			"id": "Ogre",
 			"name": "Ogro",
 			"species": "Ogro",
-			"effects": {
-				"Armour": {
-					"name":"Armadura"
-					},
-				"Infected": {
-					"flags.wfrp4e.script":"if (args.totalWoundLoss > 0)\n     ChatMessage.create({ content: `<b>Infectado: ${args.actor.name}</b> debe superar un Chequeo <b>Fácil (+40)</b> de <b>Aguante</b> o contraer una @UUID[Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb]{Herida supurante}`, whisper: ChatMessage.getWhisperRecipients(\"GM\") })",
-					"name":"Infectado"
-					},
-				"Tracker": {
-					"name":"Rastreador"
-					}
-				},
 			"description": "<p><em><span class=\"fontstyle0\"><span class=\"fontstyle0\">‘Sí, los he llamado yo porque necesitaba refuerzos. Sí, ya sé que se están comiendo tu ganado de primera. Y, sí, ya sé que los ogros tienen mucho apetito. He puesto un aviso en el puesto de guardia local ofreciendo un modesto pago para cualquiera que tenga los recursos necesarios para hacer que se vayan. Eso debería ser más que suficiente’ </span></span></em></p>\n<p><span class=\"fontstyle0\"><span class=\"fontstyle0\" style=\"font-size: 10pt;\">– Augustus von Raushvel, barón del valle de Raush</span> &nbsp;<br style=\"font-variant-numeric: normal; font-variant-east-asian: normal; line-height: normal; text-align: -webkit-auto; text-size-adjust: auto;\"></span></p>\n<p>&nbsp;</p>\n<p><span class=\"fontstyle0\">Grandes, ruidosos, brutales y extremadamente violentos, los ogros se ven impulsados por la necesidad de llenar sus enormes y musculosas barrigas. Les faltan la astucia o la inteligencia para hacerlo de forma ingeniosa, por lo que en la mayoría de ocasiones aplican la filosofía de la fuerza. Procedentes de tierras muy hacia el este, los ogros son una visión común en el Viejo Mundo, puesto que les encanta vagabundear, siempre en busca de nuevas carnes más allá del horizonte. Conforme soportan excursiones alimenticias de décadas de duración, trabajan duro para integrarse, vistiendo ropas locales y siguiendo las costumbres locales que son capaces de entender, puesto que eso es más probable que atraiga hasta ellos la siguiente comida.</span></p>\n<p><span class=\"fontstyle0\"><br>En el interior, sirven frecuentemente en los ejércitos estatales, y son una visión diaria en las poblaciones mayores, contratados como músculo de alquiler. El Gremio de Capataces Halfling (contratistas de la construcción) tiene acaparado el mercado de la mano de obra barata de los ogros en muchas poblaciones y ciudades del Imperio, lo que es una fuente de gran irritación para sus rivales.</span></p>\n<p>&nbsp;</p>\n<h3>Los Halflings y los Ogros</h3>\n<p><span class=\"fontstyle0\">Nadie se explica por qué, pero los halflings y los ogros simplemente se llevan bien. La mayoría de los ancianos de los clanes halflings tienen uno o dos guardaespaldas ogros, y se dice que el Anciano de la Asamblea raramente viaja sin su viejo amigo Zorarth Muerdepiernas, un ogro canoso que lleva más de un siglo viviendo en el Imperio. A cambio, muchas bandas de ogros mercenarios emplean cocineros halflings. Sin embargo, esta relación no siempre se ha de dar por sentada, como por ejemplo el caso de Golgfag Comehombres, capitán mercenario de los imaginativamente llamados Comehombres de Golgfag, que era famoso por emplear un pequeño clan de halflings para cocinar para él y para su regimiento después de una gran victoria. La cosa fue bien hasta que Golgfag se dio cuenta de que los cocineros eran más apetitosos que la comida que preparaban…</span></p>"
 		},
 		{
 			"id": "Orc",
 			"name": "Orco",
 			"species": "Orco",
-			"effects": {
-				"Armour": {
-					"name":"Armadura"
-					},
-				"Infected": {
-					"flags.wfrp4e.script":"if (args.totalWoundLoss > 0)\n     ChatMessage.create({ content: `<b>Infectado: ${args.actor.name}</b> debe superar un Chequeo <b>Fácil (+40)</b> de <b>Aguante</b> o contraer una @UUID[Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb]{Herida supurante}`, whisper: ChatMessage.getWhisperRecipients(\"GM\") })",
-					"name":"Infectado"
-					}
-				},
 			"description": "<p>‘Zomoz loz mejorez. No zomos como loz debiluchoz de loz goblinz o loz eztúpidos de loz trolez, ¡zomoz mu duroz! Y zi alguien dize que no lo zomoz, ¡le pizamos la cabeza!’</p>\n<p>– Gurl Arrancacráneoz, kaudillo orco</p>\n<p>&nbsp;</p>\n<p>Los orcos son ruines, brutales, beligerantes y casi inmunes al dolor. Tienen el cuerpo musculoso y recio, hombros anchos y potentes y no dejan que una fruslería como perder un brazo les impida participar en una buena pelea. Fueron creados para luchar y sólo les gusta eso. Cuando no tienen enemigos con los que luchar, la toman con grupos de pieles verdes rivales. Si no hay grupo rival, luchan entre sí. Aunque no son tan numerosos como los @UUID[Compendium.wfrp4e-core.actors.zzdOpKqBC28J66Mn]{goblins}, son más grandes y más duros, y se lo hacen saber a la menor oportunidad. Los orcos pueden crecer hasta un tamaño prodigioso, con los orcos mayores siendo más fuertes, más recios y más agresivos y por lo tanto obteniendo mayor prestigio: porque el poder genera derecho en su belicosa sociedad. Algunos orcos montan enormes jabalíes en batalla, una visión que raramente deja de aterrar.</p>"
 		},
 		{
 			"id": "Pegasus",
 			"name": "Pegaso",
 			"species": "Pegaso",
-			"effects": {
-				"Stride": {
-					"name":"Zancada"
-					}
-				},
 			"description": "<p><em><span class=\"fontstyle0\"><span class=\"fontstyle0\">‘Sí, los campos son fértiles por aquí, ya ves. Son los pegasos. No hace falta comprar estiércol para fertilizar, cae del cielo como un regalo de los dioses. Eso sí, mejor que no estés mucho rato debajo de una de sus manadas cuando te sobrevuelan. Sucia. La cosa es bastante sucia.’ </span></span></em></p>\n<p><span class=\"fontstyle0\"><span class=\"fontstyle0\" style=\"font-size: 10pt;\">– Berthold Bruner, campesino y contemplador de pegasos.</span> &nbsp;<br style=\"font-variant-numeric: normal; font-variant-east-asian: normal; line-height: normal; text-align: -webkit-auto; text-size-adjust: auto;\"></span></p>\n<p>&nbsp;</p>\n<p><span class=\"fontstyle0\">Los pegasos son hermosos caballos blancos con grandes alas parecidas a las de los cisnes. Son bestias voladoras obstinadas e inagotables que vuelan en grandes manadas por las altas montañas, al parecer deleitándose al girar y lanzarse en picado por entre las corrientes termales en espiral. Son candidatos obvios para montura y muchos guerreros o exploradores han intentado capturar a un pegaso. Son muy inteligentes y algunos creen que sólo permiten ser capturados si ellos quieren, lo que ha llevado a todo tipo de leyendas románticas fantasiosas insistiendo en que sólo aquellos dignos o suficientemente virtuosos pueden ser elegidos.</p>"
 		},
 		{
@@ -796,358 +277,99 @@
 			"id": "Pol Dankels",
 			"name": "Pol Dankels",
 			"species": "Humano",
-			"effects": {
-				"Cunning": {
-					"name":"Astuto"
-					},
-				"Clever": {
-					"name":"Listo"
-					},
-				"Tough": {
-					"name":"Recio"
-					}
-				},
 			"description": "<p>Pol pensaba que seguiría los pasos de sus padres, dirigiendo la Panadería del Bendito Bertram en Tahme, pero los dioses tenían otros planes para él. En su vigesimotercer aniversario, el día en que su mujer descubrió que se había estado acostando con su hermana e intentó llevarse a sus tres hijos, algo cambió. Los testigos afirman que sus ojos brillaron con un color amarillo y que llamas color naranja surgieron de sus manos. Por lo que a Pol concierne, el mundo se volvió rojo al arder la panadería. Eso fue hace siete meses. Pol lleva por los caminos con sus tres hijos desde entonces, huyendo desesperadamente de los cazadores de brujas y de los agentes de su mujer. No le atraparán. Sus hijos le necesitan.</p>"
 		},
 		{
 			"id": "Rat Ogre",
 			"name": "Rata Ogro",
-			"effects": {
-				"Armour": {
-					"name":"Armadura"
-					},
-				"Infected": {
-					"flags.wfrp4e.script":"if (args.totalWoundLoss > 0)\n     ChatMessage.create({ content: `<b>Infectado: ${args.actor.name}</b> debe superar un Chequeo <b>Fácil (+40)</b> de <b>Aguante</b> o contraer una @UUID[Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb]{Herida supurante}`, whisper: ChatMessage.getWhisperRecipients(\"GM\") })",
-					"name":"Infectado"
-					},
-				"Infestation": {
-					"name":"Infestado"
-					},
-				"Tail Attack": {
-					"flags.wfrp4e.script":"let actorSize = game.wfrp4e.config.actorSizeNums[args.actor.details.size.value]\nlet attackerSize = game.wfrp4e.config.actorSizeNums[args.attacker.details.size.value]\n\nif (attackerSize > actorSize)\n{\n   args.actor.addCondition(\"prone\")\n   ChatMessage.create({content: `<b>Coletazo</b>: ${args.actor.prototypeToken.name} está ahora @Condition[Tumbado]`, speaker : {alias: args.attacker.prototypeToken.name}})\n}",
-					"name":"Coletazo"
-					},
-				"Tracker": {
-					"name":"Rastreador"
-					}
-				},
 			"description": "<p>Las ratas ogro son enormes brutos, criados en las oscuras cavernas del Imperio subterráneo gracias a los dementes cuidados de los señores de las bestias del Clan Moulder. Su inteligencia es mínima, pero cuando les empujan sus amos skaven son intrépidos e implacables en combate. Raramente encontrados solos, tienden a acompañar a los videntes grises u otros skaven de alto rango, como guardaespaldas.</p>"
 		},
 		{
 			"id": "Skeleton",
 			"name": "Esqueleto",
 			"species": "Muerto viviente",
-			"effects": {
-				"Armour": {
-					"name":"Armadura"
-					},
-				"Construct": {
-					"name":"Constructo"
-					},
-				"Fear": {
-					"name":"Miedo"
-					},
-				"Infected": {
-					"flags.wfrp4e.script":"if (args.totalWoundLoss > 0)\n     ChatMessage.create({ content: `<b>Infectado: ${args.actor.name}</b> debe superar un Chequeo <b>Fácil (+40)</b> de <b>Aguante</b> o contraer una @UUID[Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb]{Herida supurante}`, whisper: ChatMessage.getWhisperRecipients(\"GM\") })",
-					"name":"Infectado"
-					}
-				},
 			"description": "<p><em><span class=\"fontstyle0\"><span class=\"fontstyle0\">‘Alcé la pesada tapa esperando encontrarme con la gloriosa máscara funeraria de oro de Khetanken. Pero nos habían informado mal. Una mano huesuda se alargó y me agarró del cuello. Sorprendido, dejé caer la tapa y tanto la mano como el brazo fueron seccionados, atrapando a la criatura muerta viviente en el interior del sarcófago. Pero siguió fuertemente aferrada, ¡apretando mi cuello con tal fuerza que apenas podía respirar! Pensé que iba a morir. Pero la hermana Celestine arrojó agua bendita sobre la cosa, que volvió a quedar inerte. Ahora la uso para rascarme la espalda’ </span></span></em></p>\n<p><span class=\"fontstyle0\"><span class=\"fontstyle0\" style=\"font-size: 10pt;\">– Hubert Karter, ladrón de tumbas.</span> &nbsp;<br style=\"font-variant-numeric: normal; font-variant-east-asian: normal; line-height: normal; text-align: -webkit-auto; text-size-adjust: auto;\"></span></p>\n<p>&nbsp;</p>\n<p><span class=\"fontstyle0\">Los esqueletos son los huesos sin carne de los que llevan mucho tiempo muertos, reanimados por magia oscura para recorrer la tierra como burla de los vivos. Quienes murieron y no recibieron el descanso según los rituales de @UUID[JournalEntry.NcH9OhleJFfaUdon.JournalEntryPage.HfmrIexylrgxIz2x]{Morr, el Dios de la Muerte}, pueden ser resucitados de esta forma por un nigromante lo suficientemente poderoso. Completamente descerebrados, los esqueletos luchan hasta que sus huesos son hechos pedazos. No tienen valor porque no tienen miedo. No se les puede matar porque no están vivos.&nbsp;</p>\n<h3>Opciones: Los Huesos</h3>\n<p>Para reflejar la naturaleza ósea de los esqueletos, puedes imponer un penalizador -1 al Daño a las Heridas infligidas por armas que no tienen la cualidad Contundente.</p>"
 		},
 		{
 			"id": "Slenderthigh Whiptongue",
 			"name": "Muslofino Lengua de látigo",
-			"species": "Príncipe Demonio",
-			"effects": {
-				"Armour": {
-					"name":"Armadura"
-					},
-				"Distracting": {
-					"name":"Molesto"
-					},
-				"Terror": {}
-				},
-			"description": ""
+			"species": "Príncipe Demonio"
 		},
 		{
 			"id": "Snake",
 			"name": "Serpiente",
 			"species": "Serpiente",
 			"hit": "snake",
-			"effects": {
-				"Armour": {
-					"name":"Armadura"
-					},
-				"Fast": {
-					"name":"Rápido"
-					},
-				"Venom": {
-					"name":"Veneno"
-					},
-				"Swarm Bonuses": {
-					"name":"Bonos de Plaga"
-					},
-				"Swarm": {
-					"name":"Plaga"
-					}
-				},
 			"description": "<p>Hay serpientes por todo el Imperio, especialmente en las profundidades de los bosques. La mayor parte son inofensivas, pero algunas tienen un veneno mortal o constriñen a sus víctimas hasta que mueren de asfixia. Como muchas criaturas del Viejo Mundo, pueden crecer hasta proporciones gigantescas, como el enorme gusano del pantano, que es un peligro incluso para el más fuerte de los mercenarios.</p>"
 		},
 		{
 			"id": "Snotling",
 			"name": "Snotling",
 			"species": "Piel verde",
-			"effects": {
-				"Infected": {
-					"flags.wfrp4e.script":"if (args.totalWoundLoss > 0)\n     ChatMessage.create({ content: `<b>Infectado: ${args.actor.name}</b> debe superar un Chequeo <b>Fácil (+40)</b> de <b>Aguante</b> o contraer una @UUID[Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb]{Herida supurante}`, whisper: ChatMessage.getWhisperRecipients(\"GM\") })",
-					"name":"Infectado"
-					},
-				"Venom": {
-					"name":"Veneno"
-					},
-				"Swarm Bonuses": {
-					"name":"Bonos de Plaga"
-					},
-				"Swarm": {
-					"name":"Plaga"
-					}
-				},
 			"description": "<p>Criaturas con el cerebro de un guisante, equivalentes a unos cachorros entusiastas e incontrolados, los snotlings son carroñeros e imitadores naturales, recogiendo huesos y objetos brillantes por dondequiera que van, o copiando las acciones de cualquiera al que ven.</p>\n<p>Si los @UUID[Compendium.wfrp4e-core.actors.zzdOpKqBC28J66Mn]{goblins} o los @UUID[Compendium.wfrp4e-core.actors.E7BiDqsB55BrOQut]{orcos} les empujan al conflicto, luchan en oleadas apestosas, intentando abrumar a sus enemigos mediante el peso de los números. Para hacer esto, buscan todo tipo de sustancias asquerosas y nocivas, como hongos venenosos y excreciones corporales, para lanzar contra sus enemigos.</p>"
 		},
 		{
 			"id": "Stellemar",
 			"name": "Stellemar",
 			"species": "Humano",
-			"wounds": "true",
-			"effects": {
-				"Hardy": {
-					"name":"Recio"
-					},
-				"Accurate Shot": {
-					"name":"Disparo infalible"
-					}
-				},
 			"gmnotes": "<p>Los rumores locales afirman que Stellemar fue una vez un soldado que, hace mucho tiempo, sufrió una tremenda herida en la cabeza durante una batalla mientras luchaba por el Imperio. A pesar de su terrible herida, de alguna manera se las arregló para sobrevivir y eventualmente encontrar el camino a casa. Stellemar no recuerda cómo, pero la verdad es que hoy en día Stellemar no recuerda muchas cosas. Sin embargo, está seguro de una verdad indiscutible: es un perro. Stellemar está absolutamente convencido de que es un sabueso y ninguna prueba de lo contrario puede persuadirle de lo contrario. Cuando se le señala su apariencia dice que 'no todos los perros son iguales'. Cuando se le pregunta por qué puede hablar, observa alegremente que muchos perros inteligentes pueden ser enseñados a hablar.</p>\n<p>La gente tolera los delirios de Stellemar, en parte debido a la lástima que sienten por el viejo soldado, pero sobre todo porque ha demostrado ser útil. Hace recados a cambio de chuches (le gusta ir a por cosas), no le importa vigilar rebaños (le gusta cuidar ovejas) y regala el carbón que quema (le encanta ir a buscar palos). El dinero no le interesa demasiado, pero la 'buena comida' sí. Sólo de vez en cuando necesita monedas para reemplazar su espada, 'Colmillo', con una nueva, a la que rápidamente bautiza con el mismo nombre.</p>\n<h4>Todos los perros tienen su día</h4>\n<p>Muchos descartan a Stellemar como un 'viejo loco' al que le gusta aullar a la luna y le prestan poca atención, aparte de poner los ojos en blanco de vez en cuando o menear la cabeza, lo que es un error en juicio. Stellemar es feliz con su suerte y su convicción le da una nobleza grande y extraña. A pesar de las apariencias, es un sabueso leal y verdadero, no tiene miedo cuando protege a los que ama. Si los Personajes lo trataran bien, Stellemar podría algún día estar a su lado cuando todos los demás huyeran atemorizados.</p>\n<p>Un horrible asesinato bajo la luna llena, en el que la víctima fue atacada salvajemente 'como si lo hubiera hecho una bestia' hace que las sospechas se centren en Stellemar. Como quiera que se le ve el pelo en las noches en que Mannslieb está llena, pronto se le acusa de licantropía. ¿Ayudarán los Personajes al viejo sabueso a salir del atolladero encontrando al verdadero culpable, que podría ser más lobo que hombre?</p>"
 		},
 		{
 			"id": "Stormvermin",
 			"name": "Alimaña",
-			"effects": {
-				"Armour": {
-					"name":"Armadura"
-					},
-				"Infected": {
-					"flags.wfrp4e.script":"if (args.totalWoundLoss > 0)\n     ChatMessage.create({ content: `<b>Infectado: ${args.actor.name}</b> debe superar un Chequeo <b>Fácil (+40)</b> de <b>Aguante</b> o contraer una @UUID[Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb]{Herida supurante}`, whisper: ChatMessage.getWhisperRecipients(\"GM\") })",
-					"name":"Infectado"
-					},
-				"Tracker": {
-					"name":"Rastreador"
-					}
-				},
 			"description": "<p>Los luchadores de élite de los skaven son las alimañas: más grandes, más fuertes, más resistentes y más disciplinados que los @UUID[Compendium.wfrp4e-core.actors.F1vAZZcmVKkRw8xn]{guerreros de clan}. Son el núcleo de cualquier asalto principal y acostumbran a trabajar como guardaespaldas de los skaven importantes. Las alimañas suelen ir bien armadas y acorazadas, luciendo combinaciones de armas populares en su clan.</p>"
 		},
 		{
 			"id": "Tomb Banshee",
 			"name": "Doncella espectral",
 			"species": "Muerto viviente",
-			"effects": {
-				"Terror": {}
-				},
 			"description": "<p>Las doncellas espectrales son los restos de poderosas brujas de antaño cuyo espíritu está impregnado de la fétida energía del Dhar . Su inquieta otra vida se ve atormentada por la pérdida y la amargura, un profundo vacío en su alma que les impele a emitir aullidos terroríficos y desgarradores, lo suficientemente poderosos como para volver locos a quienes los escuchan, o incluso a pararles el corazón.</p>"
 		},
 		{
 			"id": "Troll",
 			"name": "Trol",
 			"species": "Trol",
-			"effects": {
-				"Tough": {
-					"name":"Recio"
-					},
-				"Armour": {
-					"name":"Armadura"
-					},
-				"Infected": {
-					"flags.wfrp4e.script":"if (args.totalWoundLoss > 0)\n     ChatMessage.create({ content: `<b>Infectado: ${args.actor.name}</b> debe superar un Chequeo <b>Fácil (+40)</b> de <b>Aguante</b> o sufrir una @UUID[Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb]{Herida supurante}`, whisper: ChatMessage.getWhisperRecipients(\"GM\") })",
-					"name":"Infectado"
-					},
-				"Regenerate": {
-					"flags.wfrp4e.script":"let chatData = {content: \"\", whisper: ChatMessage.getWhisperRecipients(\"GM\")}\n\nlet wounds = duplicate(this.actor.status.wounds)\nlet regen = (await new Roll(\"1d10\").roll()).total\n\nif (wounds.value >= wounds.max)\n   return\n\nif (wounds.value > 0)\n{\n   wounds.value += regen\n   if (wounds.value > wounds.max) \n        wounds.value = wounds.max\n   chatData.content += `<b>${this.actor.name}</b> recupera ${regen} Heridas.`\n   \n    if (regen == 10)\n       chatData.content += `<br>Adicionalmente, regenera una Herida Crítica.`\n}\nelse if (regen >= 8)\n{\n    chatData.content += `<b>${this.actor.name}</b> sacó un ${regen} y recupera 1 Herida.`\n    wounds.value += 1\n    if (regen == 10)\n       chatData.content += `<br>Adicionalmente, regenera una Herida Crítica.`\n}\nelse\n{\n    chatData.content += `<b>${this.actor.name}</b> sacó ${regen} para Regenerar - Sin efecto.`\n}\n\nthis.actor.update({\"system.status.wounds\" : wounds})\nChatMessage.create(chatData)",
-					"name":"Regenerar"
-					},
-				"Frenzy": {
-					"name":"Furia"
-					},
-				"Infestation": {
-					"name":"Infestado"
-					},
-				"Stealthy": {
-					"name":"Sigiloso"
-					},
-				"Vomit": {
-					"name":"Vómito"
-					},
-				"Amphibious": {
-					"name":"Anfibio"
-					}
-				},
 			"description": "<p>Los troles son criaturas sucias y asquerosas que infestan todos los rincones del Viejo Mundo. Rápidos en adaptarse a su entorno, hay una gran variedad de tipos, pero todos ellos son enormes e imponentes. Son muy lerdos y les guía tan sólo su instinto por buscar comida, pero les encanta acaparar y en sus guaridas se pueden encontrar montones de tesoros útiles y valiosos… así como los macabros restos de sus comidas. Aunque hay muchas especies de troles, todos comparten algunos rasgos comunes: suelen ser extremadamente bobos, lo que significa que cualquier enemigo mínimamente ingenioso puede engañarles; se pueden regenerar, lo que hace que sean muy difíciles de matar; y son capaces de vomitar a voluntad su última comida, lanzando bilis acre a una distancia impresionante, aunque no les gusta hacerlo porque les deja extremadamente hambrientos.</p>"
 		},
 		{
 			"id": "Ungor",
 			"name": "Ungor",
-			"effects": {
-				"Arboreal": {
-					"name":"Arbóreo"
-					},
-				"Armour": {
-					"name":"Armadura"
-					},
-				"Infected": {
-					"flags.wfrp4e.script":"if (args.totalWoundLoss > 0)\n     ChatMessage.create({ content: `<b>Infectado: ${args.actor.name}</b> debe superar un Chequeo <b>Fácil (+40)</b> de <b>Aguante</b> o contraer una @UUID[Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb]{Herida supurante}`, whisper: ChatMessage.getWhisperRecipients(\"GM\") })",
-					"name":"Infectado"
-					},
-				"Infestation": {
-					"name":"Infestado"
-					}
-				},
 			"description": "<p>Los ungors tienen cuernos vestigiales o muy cortos y por lo tanto el resto del rebaño apenas les considera ‘gors’. Algunos tienen incluso rostros parecidos a los humanos, lo que les convierte en infiltradores efectivos, pero también les convierte en blanco del ridículo. De hecho, los ungors son maltratados por los @UUID[Compendium.wfrp4e-core.actors.R37OtN5gmPWCYOP3]{gors}, y a menudo están atrofiados o desnutridos en comparación con sus congéneres de cuernos más largos, lo que les convierte en criaturas amargas, siempre dispuestas a ventilar su odio sobre los demás.</p>"
 		},
 		{
 			"id": "Vampire",
 			"name": "Vampiro",
 			"species": "Muerto viviente",
-			"effects": {
-				"Distracting": {
-					"name":"Molesto"
-					},
-				"Fear": {
-					"name":"Miedo"
-					},
-				"Frenzy": {
-					"name":"Furia"
-					},
-				"Regenerate": {
-					"flags.wfrp4e.script":"let chatData = {content: \"\", whisper: ChatMessage.getWhisperRecipients(\"GM\")}\n\nlet wounds = duplicate(this.actor.status.wounds)\nlet regen = (await new Roll(\"1d10\").roll()).total\n\nif (wounds.value >= wounds.max)\n   return\n\nif (wounds.value > 0)\n{\n   wounds.value += regen\n   if (wounds.value > wounds.max) \n        wounds.value = wounds.max\n   chatData.content += `<b>${this.actor.name}</b> recupera ${regen} Heridas.`\n   \n    if (regen == 10)\n       chatData.content += `<br>Adicionalmente, regenera una Herida Crítica.`\n}\nelse if (regen >= 8)\n{\n    chatData.content += `<b>${this.actor.name}</b> sacó un ${regen} y recupera 1 Herida.`\n    wounds.value += 1\n    if (regen == 10)\n       chatData.content += `<br>Adicionalmente, regenera una Herida Crítica.`\n}\nelse\n{\n    chatData.content += `<b>${this.actor.name}</b> sacó ${regen} para Regenerar - Sin efecto.`\n}\n\nthis.actor.update({\"system.status.wounds\" : wounds})\nChatMessage.create(chatData)",
-					"name":"Regenerar"
-					},
-				"Tracker": {
-					"name":"Rastreador"
-					}
-				},
 			"description": "<p>Los vampiros se ven a sí mismos como los gobernantes de la noche. Muchos pueden pasar por humanos, algunos incluso pudiendo funcionar entre los vivos durante largos períodos. A pesar de su apariencia exteriormente humana, su corazón no late bajo su pálida piel y en lugar de apetitos mortales tienen una pertinaz sed de sangre. Todos los vampiros del Viejo Mundo descienden de antiguos linajes que se originaron hace miles de años en el lejano sur. Muchos están ferozmente orgullosos de su herencia y de los rasgos y tradiciones que les separan de los demás. Los vampiros de linajes diferentes son a menudo amargos rivales, pero son lo bastante astutos como para cooperar cuando es necesario para enfrentarse a enemigos mayores.</p>"
 		},
 		{
 			"id": "Varghulf",
 			"name": "Varghulf",
 			"species": "Muerto viviente",
-			"effects": {
-				"Terror": {},
-				"Armour": {
-					"name":"Armadura"
-					},
-				"Fear": {
-					"name":"Miedo"
-					},
-				"Regenerate": {
-					"flags.wfrp4e.script":"let chatData = {content: \"\", whisper: ChatMessage.getWhisperRecipients(\"GM\")}\n\nlet wounds = duplicate(this.actor.status.wounds)\nlet regen = (await new Roll(\"1d10\").roll()).total\n\nif (wounds.value >= wounds.max)\n   return\n\nif (wounds.value > 0)\n{\n   wounds.value += regen\n   if (wounds.value > wounds.max) \n        wounds.value = wounds.max\n   chatData.content += `<b>${this.actor.name}</b> recupera ${regen} Heridas.`\n   \n    if (regen == 10)\n       chatData.content += `<br>Adicionalmente, regenera una Herida Crítica.`\n}\nelse if (regen >= 8)\n{\n    chatData.content += `<b>${this.actor.name}</b> sacó un ${regen} y recupera 1 Herida.`\n    wounds.value += 1\n    if (regen == 10)\n       chatData.content += `<br>Adicionalmente, regenera una Herida Crítica.`\n}\nelse\n{\n    chatData.content += `<b>${this.actor.name}</b> sacó ${regen} para Regenerar - Sin efecto.`\n}\n\nthis.actor.update({\"system.status.wounds\" : wounds})\nChatMessage.create(chatData)",
-					"name":"Regenerar"
-					},
-				"Frenzy": {
-					"name":"Furia"
-					},
-				"Tracker": {
-					"name":"Rastreador"
-					}
-				},
 			"description": "<p>La mayor parte de los vampiros equilibran su necesidad de sangre como muertos vivientes con una pátina de cortesía y decoro, creyéndose la aristocracia de los muertos vivientes. Sin embargo, algunos abandonan su máscara humana, abrazando su bestia interior. Estos varghulfs son salvajes y agrestes, criaturas desprovistas de toda sofisticación, y abandonadas por completo a la propia gratificación animalista. Se manifiestan como bestias enormes y abotargadas parecidas a los murciélagos, que disfrutan de su vulgar necesidad de sangre.</p>"
 		},
 		{
 			"id": "Wolf",
 			"name": "Lobo",
 			"species": "Lobo",
-			"effects": {
-				"Armour": {
-					"name":"Armadura"
-					},
-				"Frenzy": {
-					"name":"Furia"
-					},
-				"Infected": {
-					"flags.wfrp4e.script":"if (args.totalWoundLoss > 0)\n     ChatMessage.create({ content: `<b>Infectado: ${args.actor.name}</b> debe superar un Chequeo <b>Fácil (+40)</b> de <b>Aguante</b> o contraer una @UUID[Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb]{Herida supurante}`, whisper: ChatMessage.getWhisperRecipients(\"GM\") })",
-					"name":"Infectado"
-					},
-				"Tracker": {
-					"name":"Rastreador"
-					},
-				"Stride": {
-					"name":"Zancada"
-					}
-				},
 			"description": "<p>Los lobos suelen cazar en manada y tienen la reputación de ser unos cazadores muy tenaces, persiguiendo a su presa a lo largo de docenas de millas sin descanso ni respiro. Hay diversas especies que merodean por Reikland, incluyendo los feroces lobos gigantes, que son capturados y criados por los @UUID[Compendium.wfrp4e-core.actors.zzdOpKqBC28J66Mn]{goblins}, quienes los utilizan como guardas y como monturas.</p>"
 		},
 		{
 			"id": "Wood Elf",
 			"name": "Elfo Silvano",
 			"species": "Elfo Silvano",
-			"effects": {
-				"Arboreal": {
-					"name":"Arbóreo"
-					},
-				"Magic Resistance": {
-					"name":"Resistencia a la magia"
-					},
-				"Stealthy": {
-					"name":"Sigiloso"
-					},
-				"Tracker": {
-					"name":"Rastreador"
-					}
-				},
 			"description": "<p>@UUID[JournalEntry.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#elfos-silvanos]{Elfos Silvanos}</p>"
 		},
 		{
 			"id": "Wyvern",
 			"name": "Serpiente alada",
 			"species": "Serpiente alada",
-			"effects": {
-				"Armour": {
-					"name":"Armadura"
-					},
-				"Venom": {
-					"name":"Veneno"
-					},
-				"Tail Attack": {
-					"flags.wfrp4e.script":"let actorSize = game.wfrp4e.config.actorSizeNums[args.actor.details.size.value]\nlet attackerSize = game.wfrp4e.config.actorSizeNums[args.attacker.details.size.value]\n\nif (attackerSize > actorSize)\n{\n   args.actor.addCondition(\"prone\")\n   ChatMessage.create({content: `<b>Coletazo</b>: ${args.actor.prototypeToken.name} está ahora @Condition[Tumbado]`, speaker : {alias: args.attacker.prototypeToken.name}})\n}",
-					"name":"Coletazo"
-					}
-				},
 			"description": "<p>Aunque los no educados a menudo las confunden con los @UUID[Compendium.wfrp4e-core.actors.LZttdCIxmFr1sGsS]{dragones}, más allá de sus similaridades superficiales, las malolientes serpientes aladas no se parecen en nada a tan dignas criaturas. Carroñeras cobardes de vista débil, tienden a saciar sus rapaces apetitos tomando como presa a criaturas indefensas (en su mayoría ovejas y cabras), evitando el combate directo siempre que les es posible. A diferencia de los monstruos de las montañas, las serpientes aladas no son especialmente territoriales y tienden a alejarse cuando sus terrenos de caza son invadidos.</p>"
 		},
 		{
 			"id": "Zombie",
 			"name": "Zombi",
 			"species": "Muerto viviente",
-			"effects": {
-				"Construct": {
-					"name":"Constructo"
-					},
-				"Fear": {
-					"name":"Miedo"
-					},
-				"Armour": {
-					"name":"Armadura"
-					},
-				"Distracting": {
-					"name":"Molesto"
-					},
-				"Infected": {
-					"flags.wfrp4e.script":"if (args.totalWoundLoss > 0)\n     ChatMessage.create({ content: `<b>Infectado: ${args.actor.name}</b> debe superar un Chequeo <b>Fácil (+40)</b> de <b>Aguante</b> o contraer una @UUID[Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb]{Herida supurante}`, whisper: ChatMessage.getWhisperRecipients(\"GM\") })",
-					"name":"Infectado"
-					},
-				"Infestation": {
-					"name":"Infestado"
-					}
-				},
 			"description": "<p>Como los @UUID[Compendium.wfrp4e-core.actors.Mt5JAoOSaEH1PdcP]{esqueletos}, los zombis son criaturas muertas vivientes reanimadas y unidas mediante magia repugnante. A diferencia de los esqueletos, hace tan poco que han muerto que gran parte de su masa corporal aún existe, con la carne podrida y enfermiza apenas cubriendo sus órganos hinchados y llenos de gusanos. Cuando luchan, la carne y los órganos se les desprenden de los huesos, liberando un hedor nocivo y nauseabundo, lo suficientemente potente como para revolver el estómago a todo el mundo, excepto a los soldados más endurecidos.</p>"
 		}
 	]

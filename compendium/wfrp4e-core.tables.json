@@ -1335,7 +1335,8 @@
 		},
 		{
 			"id": "Mental Corruption",
-			"name": "Corrupción Mental"
+			"name": "Corrupción Mental",
+			"description": "<p>Utiliza las descripciones que hay a continuación para crear una versión única de tu mutación. Tomate tu tiempo para describir cómo se manifiesta, añadiendo tantos detalles macabros como te atrevas. En todos los casos, si tu mutación es obvia, no tan solo sufres penalizadores significativos a los Chequeos de Empatía según determinan las circunstancias, sino que lo más probable es que la gente huya de tu presencia, se llame a la guardia, aparezcan los cazadores de brujas y la vida se te vuelva de repente muy difícil.</p>"
 		},
 		{
 			"id": "Minor Miscast Table",
@@ -1405,6 +1406,7 @@
 		{
 			"id": "Physical Mutation",
 			"name": "Mutación Física",
+			"description": "<p>Una mente corrompida puede ser menos obvia que un tentáculo protuberante, pero puede ser igual de devastadora para tu vida. Utiliza la descripción que obtengas en la tirada para construir una mutación mental única que encaje con tu personaje, tomándote un poco de tiempo para crear un esquema mental nuevo y creíble. Esto te da pie para retratar a tu personaje de una forma nueva y potencialmente horrible, por lo que también podrías usar tu mutación mental como oportunidad para cambiar tu Motivación.</p>",
 			"results": {
 				"96-100": "<b>A elegir por el DJ</b>: El DJ elige una mutación o un Rasgo de criatura."
 				}
@@ -1425,11 +1427,11 @@
 			"id": "Species",
 			"name": "Especies",
 			"results": {
-				"1-90": "<p>@UUID[Compendium.wfrp4e-core.journals.JournalEntry.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#humans-(reiklander)]{Humano}</p>",
+				"1-90": "<p>@UUID[Compendium.wfrp4e-core.journals.JournalEntry.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#humanos-(reiklandeses)]{Humano}</p>",
 				"91-94": "<p>@UUID[Compendium.wfrp4e-core.journals.JournalEntry.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#halflings]{Halfling}</p>",
-				"95-98": "<p>@UUID[Compendium.wfrp4e-core.journals.JournalEntry.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#dwarfs]{Enano}</p>",
-				"99-99": "<p>@UUID[Compendium.wfrp4e-core.journals.JournalEntry.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#high-elves]{Alto Elfo}</p>",
-				"100-100": "<p>@UUID[Compendium.wfrp4e-core.journals.JournalEntry.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#wood-elves]{Elfo Silvano}</p>"
+				"95-98": "<p>@UUID[Compendium.wfrp4e-core.journals.JournalEntry.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#enanos]{Enano}</p>",
+				"99-99": "<p>@UUID[Compendium.wfrp4e-core.journals.JournalEntry.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#altos-elfos]{Alto Elfo}</p>",
+				"100-100": "<p>@UUID[Compendium.wfrp4e-core.journals.JournalEntry.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#elfos-silvanos]{Elfo Silvano}</p>"
 				},
 			"tablenames": [
 				{"name": "Humano"},

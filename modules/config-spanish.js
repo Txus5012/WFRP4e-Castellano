@@ -1311,6 +1311,12 @@ game.wfrp4e.config.PrepareSystemItems = function() {
             img: "icons/svg/invisible.svg",
             statuses: ["invisible"],
             system: {}
+        },
+        "blind" : {
+            name: "Ciego",
+            img: "icons/svg/blind.svg",
+            statuses: ["blind"],
+            system: {}
         }
     })
 
@@ -1812,6 +1818,31 @@ game.wfrp4e.config.statusEffects = [
             }
         },
         blackpowder: {
+            img : "systems/wfrp4e/icons/blank.png",
+            name: game.i18n.localize("EFFECT.BlackpowderShock"),
+            system: {
+                transferData : {
+                    type : "target",
+                    documentType : "Actor"
+                },
+                scriptData: [
+                    {
+                        label: "@effect.name",
+                        trigger: "immediate",
+                        script: `
+                            test = await this.actor.setupSkill(game.i18n.localize("NAME.Cool"), {appendTitle : " - " + this.effect.name, skipTargets: true, fields : {difficulty : "average"}});
+                            await test.roll();
+                            if (test.failed)
+                            {
+                                this.actor.addCondition("broken");
+                            }
+                            return false;
+                        `
+                    }
+                ]
+            }
+        },
+        engineering: {
             img : "systems/wfrp4e/icons/blank.png",
             name: game.i18n.localize("EFFECT.BlackpowderShock"),
             system: {
@@ -2340,6 +2371,64 @@ game.wfrp4e.config.vehicleTypes = {
     "land" : "Terrestre",
     "air" : "Aéreo"
     }
+
+if (game.modules.get("wfrp4e-rnhd") && game.modules.get("wfrp4e-rnhd").active) {
+    game.wfrp4e.config.species["gnome"] = "Gnomo"
+
+    game.wfrp4e.config.speciesSkills["gnome"] = [
+        "Animar (Cualquiera)",
+        "Canalización (Ulgu)",
+        "Carisma",
+        "Consumir alcohol",
+        "Cotilleo",
+        "Esquivar",
+        "Hablar idioma (Ghassally)",
+        "Hablar idioma (Lengua de la magia)",
+        "Hablar idioma (Tierras Desoladas)",
+        "Movimiento silencioso (Cualquiera)",
+        "Regatear",
+        "Supervivencia"
+    ]
+
+    game.wfrp4e.config.speciesTalents["gnome"] = [
+        "Clarividencia, Sexto sentido",
+        "Pequeño",
+        "Pescador, Leer y escribir",
+        "Sin importancia, Bañar en Ulgu",
+        "Suerte, Imitador",
+        "Visión nocturna",
+        0
+    ]
+}
+
+if (game.modules.get("wfrp4e-archives2") && game.modules.get("wfrp4e-archives2").active) {
+    game.wfrp4e.config.species["ogre"] = "Ogro"
+
+    game.wfrp4e.config.speciesSkills["ogre"] = [
+        "Aguante",
+        "Animar (Relatar)",
+        "Atletismo",
+        "Consumir alcohol",
+        "Cuerpo a cuerpo (Básica)",
+        "Cuerpo a cuerpo (Pelea)",
+        "Hablar idioma (Grumbarth)",
+        "Intimidar",
+        "Orientación",
+        "Seguir rastros",
+        "Sabiduría académica (Ogros)",
+        "Supervivencia"
+    ]
+
+    game.wfrp4e.config.speciesTalents["ogre"] = [
+        "Pelea callejera",
+        "Grande",
+        "Muy resistente, Muy fuerte",
+        "Resistencia (Caos)",
+        "Resistencia (Veneno [Ingerido])",
+        "Vicio (Comida)",
+        0
+    ]
+}
 
 if (game.modules.get("wfrp4e-up-in-arms") && game.modules.get("wfrp4e-up-in-arms").active) {
 

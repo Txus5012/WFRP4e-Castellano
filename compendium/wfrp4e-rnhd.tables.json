@@ -1,0 +1,114 @@
+{
+  "label": "Tablas (Noches Agitadas y Días Difíciles)",
+  "folders": {
+    "Career - Gnome": "Carrera - Gnomo",
+    "Eye Colour - Gnome": "Color de Ojos - Gnomo",
+    "Species (Rough Nights & Hard Days)": "Especies (Noches Agitadas y Días Difíciles)",
+    "Hair Coulour - Gnome": "Color del Cabello - Gnomo"
+  },
+  "mapping": {
+	"tablenames": {
+		"path": "results",
+		"converter": "tablenames"
+		}
+  },
+  "entries": {
+    "Career - Gnome": {
+      "name": "Carrera - Gnomo",
+      "results": {
+        "1-1": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.86gkaanqt19xYCRa]{Boticario}",
+        "2-2": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.uIKbkjQpNUCGIQRv]{Abogado}",
+        "3-4": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.Mn7w0SSGfN7cu7gQ]{Físico}",
+        "5-5": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.h1l9jvaIxsb92wtM]{Sacerdote}",
+        "6-7": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.CmiCNv8YlslFqRqy]{Erudito}",
+        "8-14": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.PKm1L6yjZ4PH0JJG]{Hechicero}",
+        "15-15": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.X6OBFMR8ywipAPOo]{Alborotador}",
+        "16-17": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.GWrZq3xoRSsDnQe0]{Artesano}",
+        "18-18": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.1l2m7D1LHIz2q9qv]{Mendigo}",
+        "19-19": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.zLWmjUbUdAOfiV3F]{Investigador}",
+        "20-21": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.h7GdfctKdjWL0Ejp]{Mercader}",
+        "22-22": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.mKvUxzJyQmhgjDE0]{Cazarratas}",
+        "23-28": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.XHYgf5oEwIeCEVNM]{Ciudadano}",
+        "29-29": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.N02cjJdNWPdc4PUS]{Vigilante}",
+        "30-30": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.pwth0cd20Vdp0B9G]{Asesor}",
+        "31-31": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.u9sso2ox8BNznmy4]{Artista}",
+        "32-32": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.0t9wtjQIoOofh8nO]{Emisario}",
+        "33-33": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.t41abSTLeMAdLiWS]{Noble}",
+        "34-35": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.iYnopOFkz5L6hljq]{Sirviente}",
+        "36-40": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.ssJHG82vEHHRoAUF]{Espía}",
+        "41-42": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.wbqpqbFoSnvoZ53j]{Guarda}",
+        "43-43": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.UhdhIWaofKgwFKEr]{Alguacil}",
+        "44-44": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.fTqkgehpmxk7kVT6]{Herbolario}",
+        "45-46": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.T6c9MttfG0Fj4nDm]{Cazador}",
+        "47-54": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.Nu2diwbUfo786wYt]{Minero}",
+        "55-58": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.HSoeyY2cbQAndBFk]{Explorador}",
+        "59-62": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.EYkvtokq0FXlFaPa]{Aldeano}",
+        "63-63": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.orZTfdJCm6OnUktl]{Cazarrecompensas}",
+        "64-68": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.5nIDu8oyFVShLqne]{Animador}",
+        "69-69": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.9XoJinyH6CsOcJ1h]{Mensajero}",
+        "70-75": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.FdlybSv02jjXG1qW]{Vendedor ambulante}",
+        "76-76": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.Rk1V9EvtZ0p5Qhwr]{Barquero}",
+        "77-80": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.ADHp81MC8050ngjm]{Guardián del río}",
+        "81-83": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.FqhOxcvai4ROvhXB]{Contrabandista}",
+        "84-85": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.WmXiUhsOHIJia8OM]{Chalán}",
+        "86-90": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.Eg5D2UI3U4SAHnuU]{Charlatán}",
+        "91-91": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.VzMDRJtha7epNzuX]{Perista}",
+        "92-92": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.SrqxyWytyki4WYgC]{Forajido}",
+        "93-94": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.Z5QPZbUR3h422ozo]{Pandillero}",
+        "95-97": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.mBtIPoWNpXwAS5Yl]{Ladrón}",
+        "98-98": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.HndWncfaHb0nzNUq]{Guardia}",
+        "99-99": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.1OTZ386bMWJ6wfzX]{Soldado}",
+        "100-100": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.iYVpqJ6bz8fokdmf]{Sacerdote guerrero}"
+      }
+    },
+    "Eye Colour - Gnome": {
+      "name": "Color de Ojos - Gnomo",
+      "results": {
+        "2-2": "Azul claro",
+        "3-3": "Azul",
+        "4-4": "Azul oscuro",
+        "5-7": "Azul turquesa",
+        "8-11": "Verde claro",
+        "12-14": "Avellana",
+        "15-17": "Castaño claro",
+        "18-18": "Castaño",
+        "19-19": "Castaño oscuro",
+        "20-20": "Violeta"
+      }
+    },
+    "Species (Rough Nights & Hard Days)": {
+      "name": "Especies (Noches Agitadas y Días Difíciles)",
+      "results": {
+        "1-89": "<p>@UUID[Compendium.wfrp4e-core.journals.JournalEntry.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#humanos-(reiklandeses)]{Humano}</p>",
+        "90-93": "<p>@UUID[Compendium.wfrp4e-core.journals.JournalEntry.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#halflings]{Halfling}</p>",
+        "94-97": "<p>@UUID[Compendium.wfrp4e-core.journals.JournalEntry.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#enanos]{Enano}</p>",
+        "98-98": "<p>@UUID[Compendium.wfrp4e-rnhd.journals.JournalEntry.Hd6J761opHoj2QRG.JournalEntryPage.i06rwUkQyvRIB7f6]{Gnomo}</p>",
+        "99-99": "<p>@UUID[Compendium.wfrp4e-core.journals.JournalEntry.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#altos-elfos]{Alto Elfo}</p>",
+        "100-100": "<p>@UUID[Compendium.wfrp4e-core.journals.JournalEntry.IQ0PgoJihQltCBUU.JournalEntryPage.l0f11ypRjH9sR48Q#elfos-silvanos]{Elfo Silvano}</p>"
+      },
+	  "tablenames": [
+		{"name": "Humano"},
+		{"name": "Halfling"},
+		{"name": "Enano"},
+		{"name": "Gnomo"},
+		{"name": "Alto Elfo"},
+		{"name": "Elfo Silvano"}
+		]
+    },
+    "Hair Colour - Gnome": {
+      "name": "Color del Cabello - Gnomo",
+      "results": {
+        "2-2": "Negro",
+        "3-3": "Castaño oscuro",
+        "4-4": "Caoba",
+        "5-7": "Castaño",
+        "8-11": "Castaño",
+        "12-14": "Bermejo",
+        "15-17": "Rubio rojizo",
+        "18-18": "Rubio dorado",
+        "19-19": "Rubio blanquecino",
+        "20-20": "Blanco"
+      }
+    }
+  }
+}
