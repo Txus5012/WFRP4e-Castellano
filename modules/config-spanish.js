@@ -2148,6 +2148,7 @@ game.wfrp4e.config.scriptTriggers = {
     "preUpdate" : "Pre-Actualizar",
     "update" : "Al Actualizar",
     "equipToggle" : "Cambiar Equipado",
+    "targeted" : "Hecho Objetivo",
     "prePrepareData" : "Pre-Preparar Datos",
     "prePrepareItems" : "Pre-Preparar Objetos del Actor",
     "prepareData" : "Preparar Datos",

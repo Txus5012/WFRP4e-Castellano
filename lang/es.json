@@ -258,6 +258,8 @@
         "Resist": "Resistir",
         "RichEditor": "Editor de texto enriquecido",
         "RollMode": "Modo de tirada",
+        "RunIfDisabled" : "Ejecutar estando desactivado",
+        "RunIfDisabledHint" : "Ejecuta este script incluso cuando el efecto está desactivado",
         "Script": "Script",
         "ScriptConfig": "Configurar script",
         "ScriptEditor": "Editor de script",
@@ -266,6 +268,8 @@
         "ScriptTrigger" : "Disparador",
         "Scripts": "Scripts",
         "SendingSocketRequest" : "Enviando solicitud de socket",
+        "ShowDuplicates" : "Mostrar duplicados",
+        "ShowDuplicatesHint" : "Marca para mostrar el botón de este script incluso si hay otros scripts manuales con el mismo nombre",
         "SubmissionScript" : "Script de envío",
         "SubmitChoices": "Enviar elecciones",
         "Target": "Objetivo",
@@ -662,8 +666,14 @@
                     "tests.value" : {
                         "label" : "Chequeos"
                     },
-                    "max.value" : {
-                        "label" : "Máx"
+                    "max" : {
+                        "value" : {
+                            "label" : "Máx."
+                        },
+                        "formula" : {
+                            "label" : "Fórmula",
+                            "hint" : "p.ej. @characteristics.int.bonus + @characteristics.wp.bonus"
+                        }
                     },
                     "advances.force" : {
                         "label" : "Forzar indicador de Avance",
@@ -1239,6 +1249,7 @@
     "SHEET.NestedWarning" : "No se puede añadir contenedor más allá del 4º contenedor encadenado.",
     "SHEET.LocationWarning" : "Vacía el contenedor antes de cambiar su localización",
     "SHEET.SkillMissingWarning" : "La Habilidad usada para Salario no se encontró en este Actor",
+    "SHEET.RequiredTrappingsError" : "¡No se puede tirar Salario sin tener todos los Accesorios Requeridos en esta carrera!",
     "SHEET.NonCurrentCareer" : "Ésta no es tu carrera actual.",
     "SHEET.AddSkillTitle" : "Añade Habilidad de Carrera",
     "SHEET.AddSkillPrompt" : "¿Quieres añadir esta habilidad?",
@@ -1362,7 +1373,8 @@
     "ITEM.SkillModifier" : "¿Modificador de Habilidad?",
     "ITEM.SkillModifierTT" : "Mostrar el modificador en la caja de 'penalizador' de la Habilidad",
     "ITEM.PrayerType" : "Tipo de Plegaria",
-    "ITEM.TalentMax" : "Máx de Talento",
+    "ITEM.TalentMax" : "Máx. de Talento",
+    "ITEM.Custom" : "Personalizado",
     "ITEM.TalentTests" : "Chequeos de Talento",
     "ITEM.IsGrouped" : "Es de Grupo",
     "ITEM.CostModifier" : "Modificador al Coste de PX",
@@ -1407,7 +1419,7 @@
     "Penalty" : "Penalizador",
     "Penalties" : "Penalizadores",
     "PenaltyHint" : "Separado por comas si hay varios (-20 Movimiento silencioso, -10 Percepción)",
-    "Max" : "Máx",
+    "Max" : "Máx.",
     "Tests" : "Chequeos",
     "Specification" : "Especificación",
     "Price" : "Precio",
@@ -1564,6 +1576,7 @@
     "Career Class" : "Clase de Carrera",
     "Career Tier" : "Nivel de Carrera",
     "Earning Skill" : "Habilidad de Ganar Dinero",
+    "Required Trappings" : "Accesorios Requeridos",
     "Age" : "Edad",
     "CharacterHeight" : "Altura",
     "Weight" : "Peso",
@@ -1670,7 +1683,6 @@
     "ExtendedTest.Remove" : "Eliminar",
     "Completed": "Completado",
     "ExtendedError1": "Por favor escriba un número entero positivo como Objetivo del Chequeo Prolongado",
-    "ExtendedError2": "No se pudo encontrar atributo o habilidad que coincida: {name}",
 
     "XP": "PX",
     "EXP": "EXP",
@@ -1941,8 +1953,8 @@
     "CHAT.DissolutionTitle" : "Disolución del Cuerpo y de la Mente",
     "CHAT.Dissolution" : "Mientras la corrupción asola tu alma, el aliento deformante del Caos susurra en tu interior, o bien haciendo cambiar tu forma a una forma nueva, o fracturando tu mente con un conocimiento exquisito que jamás serás capaz de olvidar.",
     "CHAT.CorruptionLoses" : "<b>{name}</b> pierde {number} de Corrupción.",
+    "CHAT.DissolutionTable" : "Tira en la Tabla de Disolución del Cuerpo y de la Mente para tu Especie:<br>@Table[corruption]",
     "CHAT.CorruptionReroll" : "<b>{name}</b> repitió la tirada de corrupción, con el nuevo resultado su corrupción cambia en {number}.",
-    "CHAT.MutateTable" : "Tira en una Tabla de Corrupción:",
     "CHAT.MutateSuccess" : "Te las has apañado para mantener a ralla tu corrupción. Por ahora.",
     "CHAT.TestModifiers.WeaponLength" : "Penalización de -10 a <b>{attacker}</b> por tener el arma más corta.",
     "CHAT.TestModifiers.FastWeapon" : "Penalización por defenderse contra un arma Rápida.",

@@ -52,7 +52,32 @@
         "80-84": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.cXOl6phkTrPcUmwC]{Protagonista}",
         "85-91": "@UUID[Compendium.wfrp4e-archives2.journals.S7vMviNshIrqOuRq.JournalEntryPage.kxcmiebXRV7PPs8Y]{Maneater}",
         "92-100": "@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.1OTZ386bMWJ6wfzX]{Soldado}"
-      }
+      },
+	  "tablenames": [
+		{"name": "Ogre Butcher"},
+		{"name": "Artesano"},
+		{"name": "Mendigo"},
+		{"name": "Cazarratas"},
+		{"name": "Vigilante"},
+		{"name": "Sirviente"},
+		{"name": "Alguacil"},
+		{"name": "Cazador"},
+		{"name": "Minero"},
+		{"name": "Rhinox Herder"},
+		{"name": "Cazarrecompensas"},
+		{"name": "Animador"},
+		{"name": "Vendedor ambulante"},
+		{"name": "Marino"},
+		{"name": "Estibador"},
+		{"name": "Ladrón de tumbas"},
+		{"name": "Forajido"},
+		{"name": "Raquero"},
+		{"name": "Guardia"},
+		{"name": "Guerrero de foso"},
+		{"name": "Protagonista"},
+		{"name": "Maneater"},
+		{"name": "Soldado"}
+		]
     },
     "Hair Colour - Ogre": {
       "name": "Color del Cabello - Ogro",

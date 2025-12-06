@@ -417,7 +417,7 @@
 			"id": "8BFuW6timifRDI3u",
 			"name": "Novato",
 			"skills": ["Atletismo","Criar animales","Carisma animal","Sanar","Hablar idioma (Viejomundano clásico)","Sabiduría académica (Heráldica)","Sabiduría académica (Cualquiera)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (De Caballería)","Montar (Caballo)"],
-			"talents": ["Guerrero nato","Leer y escribir","Robusto","Sangre noble"],
+			"talents": ["Guerrero nato","Leer y escribir","Fornido","Sangre noble"],
 			"trappings" : ["Caballo","Silla de montar y arreos","Camisote de malla","Chaqueta de cuero","Escudo","Herramientas de un Oficio (Herrador)","Símbolo religioso (Myrmidia)"],
 			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.Ub8PlkaAIWPxX2AH.JournalEntryPage.azFTHnCxn5nb4c7m]{Caballero del Sol Llameante}</p>"
 		},
@@ -425,7 +425,7 @@
 			"id": "TFBXbxzcvuPcPCY7",
 			"name": "Novicio",
 			"skills": ["Atletismo","Criar animales","Carisma animal","Sanar","Sabiduría académica (Heráldica)","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (De Caballería)","Supervivencia","Montar (Caballo)","Oficio (Herrador)"],
-			"talents": ["Guerrero nato","Jinete experto","Recio","Resistente"],
+			"talents": ["Guerrero nato","Jinete experto","Fornido","Resistente"],
 			"trappings" : ["Caballo","Silla de montar y arreos","Camisote de malla","Chaqueta de cuero","Herramientas de un Oficio (Herrador)","Martillo de caballería","Símbolo religioso (Ulric)"],
 			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.Ub8PlkaAIWPxX2AH.JournalEntryPage.pVLlBMBG95DVUGGj]{Caballero del Lobo Blanco}</p>"
 		},
@@ -521,7 +521,7 @@
 			"id": "TLx7hxFsMrlI5cUs",
 			"name": "Escudero",
 			"skills": ["Atletismo","Criar animales","Carisma animal","Consumir alcohol","Sanar","Cotilleo","Cuerpo a cuerpo (De Caballería)","Supervivencia","Montar (Caballo)","Oficio (Herrador)"],
-			"talents": ["Guerrero nato","Jinete experto","Percepción de combate","Robusto"],
+			"talents": ["Guerrero nato","Jinete experto","Percepción de combate","Fornido"],
 			"trappings" : ["Caballo de monta","Silla de montar y arreos","Camisote de malla","Chaqueta de cuero","Escudo","Herramientas de un Oficio (Herrador)"],
 			"description": "<p>@UUID[Compendium.wfrp4e-up-in-arms.journals.JournalEntry.Ub8PlkaAIWPxX2AH.JournalEntryPage.TpwhRuvLbZT8gpQr]{Caballero de fortuna}</p>"
 		},
