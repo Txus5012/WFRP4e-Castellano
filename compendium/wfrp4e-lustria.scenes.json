@@ -1,0 +1,75 @@
+{
+	"label": "Escenas (Lustria)",
+	"mapping": {
+		"image": "background.src"
+	},
+	"entries": [
+		{
+			"id": "Human Settlements on the Isthmus of Lustria",
+			"name": "Asentamientos humanos en el Istmo de Lustria",
+			"image": "modules/wfrp4e-castellano/Images/Lustria/human-settlements.webp"
+		},
+		{
+			"id": "Islands Around the Eastern Seabord of Lustria",
+			"name": "Islas en torno al litoral Este de Lustria",
+			"image": "modules/wfrp4e-castellano/Images/Lustria/lustria-islands.webp"
+		},
+		{
+			"id": "Lustria Map",
+			"name":"Mapa de Lustria"
+		},
+		{
+			"id": "Temple Cities",
+			"name": "Ciudades Templo",
+			"image": "modules/wfrp4e-castellano/Images/Lustria/lustria-temple-cities1.webp"
+		},
+		{
+			"id": "The Findings of Jacob Stackeldhorf",
+			"name": "Los hallazgos de Jacob Stackeldhorf",
+			"image": "modules/wfrp4e-castellano/Images/Lustria/volcanic-isles.webp"
+		},
+		{
+			"id": "The Land of Lustria",
+			"name": "La tierra de Lustria",
+			"image": "modules/wfrp4e-castellano/Images/Lustria/lustia-regions.webp"
+		},
+		{
+			"id": "The Temple-City of Tlaxtlan",
+			"name": "La ciudad templo de Tlaxtlan",
+			"notes": {
+				"Barrios of the Worker": "Barrios de los Obreros",
+				"Blessed Pyramid of Tzunki": "Pirámide Sagrada de Tzunki",
+				"Blood Shrines of Sotek": "Santuarios de sangre de Sotek",
+				"Dome of Huanchi": "Cúpula de Huanchi",
+				"Floating Gardens of Lost Xholankha": "Jardines Flotantes de Xholankha el Perdido",
+				"Gateway or Tlaxtlan": "Puerta de Tlaxtlan",
+				"Great Statue of Tlazcotl": "Gran Estatua de Tlazcotl",
+				"Great Temple of Tlazcotl": "Gran Templo de Tlazcotl",
+				"Mortuary Shrines of the Holy": "Templos Mortuorios de los Sagrados",
+				"Shrines of Tepok": "Santuarios de Tepok",
+				"Spawn-Pools of the Guide": "Pozos de Desove de los Guías",
+				"Spawn-Pools of the Labourer": "Pozos de Desove de los Trabajadores",
+				"Spawn-Pools of the Worker": "Pozos de Desove de los Obreros",
+				"Sun Temple of Chotec": "Templo del Sol de Chotec",
+				"Temple of Itzl and Corral-Arena": "Templo de Itzl y Corral/Arena",
+				"The Guardians": "Los Guardianes",
+				"Ziggurat of Quetli": "Zigurat de Quetli"
+				}
+		},
+		{
+			"id": "Turtle Islands",
+			"name": "Islas Tortuga",
+			"image": "modules/wfrp4e-castellano/Images/Lustria/turtle-isles.webp"
+		},
+		{
+			"id": "Volcanic Islands",
+			"name": "Islas Volcánicas",
+			"image": "modules/wfrp4e-castellano/Images/Lustria/volcanic-isles.webp"
+		},
+		{
+			"id": "High Elf World Map",
+			"name": "Mapa Mundi Alto Elfo",
+			"image": "modules/wfrp4e-castellano/Images/Lustria/high-elf-world-map.webp"
+		}
+	]
+}

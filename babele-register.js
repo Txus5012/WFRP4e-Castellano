@@ -24,6 +24,7 @@ game.babele.registerConverters({
         if ( value == "Instant" ) return "Instantáneo";
         if ( value == "Instante" ) return "Instantáneo";
         if ( value == "Line of Sight" ) return "Línea de Visión";
+        if ( value == "See Text" ) return "Ver texto";
         if ( value == "Special" ) return "Especial";
         if ( value == "special" ) return "Especial";
         if ( value == "Varies" ) return "Varía";
@@ -50,6 +51,8 @@ game.babele.registerConverters({
         if ( value == "Any 1 Fenbeast" ) return "Cualquier bestia del cieno (sólo 1)";
         if ( value == "Any 1 Construct" ) return "A cualquier constructo (sólo 1)";
         if ( value == "Any item" ) return "Cualquier objeto";
+        if ( value == "1 building" ) return "1 edificio";
+        if ( value == "1 boat or ship" ) return "1 barco o embarcación";
         if ( value == "Random Vortex" ) return "Vórtice aleatorio";
         if ( value == "Willpower Bonus" ) return "Bonificador por Voluntad Asaltos (utilizar la puntuación mayor de Voluntad de los dos participantes).";
         if ( value == "Willpower Bonus hours, days, weeks, or months" ) return "Bonificador por Voluntad horas, días, semanas o meses";
@@ -283,6 +286,10 @@ game.babele.registerConverters({
         if ( value == "Shaman" ) return "Chamán";		
         if ( value == "Combat Familiar" ) return "Familiar de Combate";
         if ( value == "Spell Familiar" ) return "Familiar de Hechizo";
+        if ( value == "Interpreter" ) return "Intérprete";
+        if ( value == "Oracle" ) return "Oráculo";		
+        if ( value == "Survivalist" ) return "Superviviente";
+        if ( value == "Trailblazer" ) return "Vanguardista";
 	},
 	
 	"talents_specification": (value) => {  // Especificación de talentos, valor
@@ -326,7 +333,6 @@ game.babele.registerConverters({
          if ( value == "Difficult" ) return "Complicado";
          if ( value == "Hard" ) return "Difícil";
          if ( value == "Very Hard" ) return "Muy Difícil";
-         if ( value == "Lore" ) return "Saber";
          if ( value == "Petty" ) return "Menor";
          if ( value == "Beasts" ) return "Bestias";
          if ( value == "Death" ) return "Muerte";
@@ -346,6 +352,10 @@ game.babele.registerConverters({
          if ( value == "Any Dark Lore" ) return "Cualquiera de los Saberes Oscuros";
          if ( value == "Death, Life, Shadows, Hedgecraft, Witchcraft" ) return "Muerte, Vida, Sombras, Adivinación, Brujería";
          if ( value == "Mòna's Marsh Magic" ) return "Magia del pantano de Mòna";
+         if ( value == "WAAAGH!" ) return "¡WAAAGH!";
+         if ( value == "High Magic" ) return "Magia suprema";
+         if ( value == "Slann High Magic" ) return "Magia suprema de los Slann";
+         if ( value == "Plague" ) return "Plaga";
          if ( value == "Poison" ) return "Veneno";
          if ( value == "Venom" ) return "Veneno";
          if ( value == "Broken" ) return "Domado";
@@ -358,6 +368,8 @@ game.babele.registerConverters({
          if ( value == "Mount" ) return "Montura";
          if ( value == "War" ) return "Guerra";
          if ( value == "Broken, Mount, Shock Cavalry, War" ) return "Domado, Montura, Caballería de choque, Guerra";
+         if ( value == "Guard, Mount, War" ) return "Protege, Montura, Guerra";
+         if ( value == "Mount, War" ) return "Montura, Guerra";
          if ( value == "Sigmarites" ) return "Sigmaritas";
          if ( value == "Witch" ) return "Brujo";
          if ( value == "the Rich, Beastmen" ) return "Los ricos, los hombres bestia";
@@ -366,6 +378,11 @@ game.babele.registerConverters({
          if ( value == "Packer's Pox" ) return "Plaga del empaquetador";
          if ( value == "Ratte Fever" ) return "Fiebre ratonil";
          if ( value == "The Black Plague" ) return "Peste negra";
+         if ( value == "Fungal Takeover" ) return "Dominio Fúngico";
+         if ( value == "Blindwyrm Fits" ) return "Mordedura de Gusano Ciego";
+         if ( value == "Cataleptic Ague" ) return "Fiebre Cataléptica";
+         if ( value == "Yellow Skull Fever" ) return "Fiebre de la Calavera Amarilla";
+         if ( value == "Bloody Flux" ) return "La disentería";
          if ( value == "Various" ) return "Varios";
          if ( value == "Choose one" ) return "Elige una";
          if ( value == "Choose two" ) return "Elige dos";
@@ -373,9 +390,13 @@ game.babele.registerConverters({
          if ( value == "Greenskins" ) return "Pieles verdes";
          if ( value == "Dwarfs" ) return "Enanos";
          if ( value == "Elves" ) return "Elfos";
+         if ( value == "Dark Elves" ) return "Elfos oscuros";
+         if ( value == "High Elves" ) return "Altos elfos";
          if ( value == "Thin People" ) return "Gente delgada";
          if ( value == "Snakes" ) return "Serpientes";
+         if ( value == "Blot Toads" ) return "Sapos rechonchos";
          if ( value == "All Fire" ) return "Todo fuego";
+         if ( value == "Lore" ) return "Saber";
          if ( value == "Lore of Fire" ) return "Saber del Fuego";
          if ( value == "Extra arm - +1 Attack" ) return "Brazo adicional, +1 ataque";
 	},
@@ -414,12 +435,6 @@ game.babele.registerConverters({
 	"injuries_duration": (value) => {  // Heridas, Duración
          if ( value == "30 - TB" ) return "30 - BR";
          if ( value == "30 - TB days" ) return "30 - BR";
-	},
-
-	"disease_units": (value) => {  // Enfermedades, Unidades
-         if ( value == "days" ) return "días";
-         if ( value == "hours" ) return "horas";
-         if ( value == "minutes" ) return "minutos";
 	},
 	
 	"effects": effects,

@@ -77,15 +77,7 @@
 		"duration": "system.duration.value",
 		"contraction": "system.contraction.value",
 		"incubation": "system.incubation.value",
-		"incubation_duration": {
-			"path": "system.incubation.unit",
-			"converter": "disease_units"
-			},
 		"incubation_text": "system.incubation.text",
-		"diseases_duration": {
-			"path": "system.duration.unit",
-			"converter": "disease_units"
-			},
 		"symptoms": "system.symptoms.value",
 		"permanent": "system.permanent.value",
 		"spell_duration": {
@@ -102,7 +94,7 @@
 		},
 		"lore": {
 			"path": "system.lore.value",
-			"converter": "lore"
+			"converter": "traits_specification"
 		},
 		"overcast": "system.overcast.label",
 		"overcastvaluevalue": "system.overcast.valuePerOvercast.additional",
@@ -694,7 +686,7 @@
 			"description": "<p>@UUID[Compendium.wfrp4e-core.journals.wczCPcuHT4VQDLpL.JournalEntryPage.L3YNSsFKnqrqcmTn]{Caballero}</p>"
 		},
 		{
-			"id": "Flagellant",
+			"id": "j3PetZr6vZXRutml",
 			"name": "Flagelante",
 			"skills": ["Esquivar","Aguante","Sanar","Intimidar","Intuición","Sabiduría académica (Sigmar)","Cuerpo a cuerpo (Mayal)","Supervivencia","Arte (Iconos)","Atletismo","Frialdad","Hablar idioma (Viejomundano clásico)","Sabiduría académica (El Imperio)","A distancia (Honda)"],
 			"talents": ["Flagelante","Implacable","Odio visceral (Herejes)","Recio"],
@@ -3670,7 +3662,7 @@
 				{
 				"name":"Da\u00F1o arterial",
 				"scriptData": [
-					{"label":"Da\u00F1o arterial","script":"if (args.opposedTest.result.hitloc.value == \"body\" && args.totalWoundLoss > 0)\n{\n    args.actor.addCondition(\"bleeding\", 2)\n    this.script.message(\"Ganados 2 Estados de Sangrando\")\n}"}
+					{"label":"Da\u00F1o arterial","script":"if (args.loc == \"body\" && args.totalWoundLoss > 0)\n{\n    args.actor.addCondition(\"bleeding\", 2)\n    this.script.message(\"Ganados 2 Estados de Sangrando\")\n}"}
 					]
 				}]
 		},
@@ -4058,7 +4050,7 @@
 				{
 				"name":"Arteria dañada",
 				"scriptData": [
-					{"label":"Arteria dañada","script": "if (args.opposedTest.result.hitloc.value == this.item.system.location.key && args.totalWoundLoss > 0)\n{\n    args.actor.addCondition(\"bleeding\", 2);\n    this.script.notification(\"Añadido Sangrando\")\n}"}
+					{"label":"Arteria dañada","script": "if (args.loc == this.item.system.location.key && args.totalWoundLoss > 0)\n{\n    args.actor.addCondition(\"bleeding\", 2);\n    this.script.notification(\"Añadido Sangrando\")\n}"}
 					]
 				}]
 		},
@@ -4254,7 +4246,7 @@
 				{
 				"name":"Herida abierta en el brazo",
 				"scriptData": [
-					{"label":"Herida abierta en el brazo","script":"if (args.opposedTest.result.hitloc.value == this.item.system.location.key)\n{\n    args.actor.addCondition(\"bleeding\", 1);\n    this.script.notification(\"Añadido Sangrando\")\n}"}
+					{"label":"Herida abierta en el brazo","script":"if (args.loc == this.item.system.location.key)\n{\n    args.actor.addCondition(\"bleeding\", 1);\n    this.script.notification(\"Añadido Sangrando\")\n}"}
 					]
 				}]
 		},
@@ -4271,7 +4263,7 @@
 				{
 				"name":"Herida abierta en el pecho",
 				"scriptData": [
-					{"label":"Herida abierta en el pecho","script":"if (args.opposedTest.result.hitloc.value == \"body\" && args.totalWoundLoss > 0)\n{\n    args.actor.addCondition(\"bleeding\", 1);\n    this.script.notification(\"Añadido Sangrando\")\n}"}
+					{"label":"Herida abierta en el pecho","script":"if (args.loc == \"body\" && args.totalWoundLoss > 0)\n{\n    args.actor.addCondition(\"bleeding\", 1);\n    this.script.notification(\"Añadido Sangrando\")\n}"}
 					]
 				}]
 		},
@@ -4395,7 +4387,7 @@
 				{
 				"name":"Herida grave en el pecho",
 				"scriptData": [
-					{"label":"Herida grave en el pecho","script":"if (args.opposedTest.result.hitloc.value == \"body\" && args.totalWoundLoss > 0) \n{\n    args.actor.addCondition(\"bleeding\", 2)\n    this.script.notification(\"Añadido Sangrando\")\n}"}
+					{"label":"Herida grave en el pecho","script":"if (args.loc == \"body\" && args.totalWoundLoss > 0) \n{\n    args.actor.addCondition(\"bleeding\", 2)\n    this.script.notification(\"Añadido Sangrando\")\n}"}
 					]
 				}]
 		},
@@ -4892,7 +4884,7 @@
 				{
 				"name":"Muslo desgarrado",
 				"scriptData": [
-					{"label":"Muslo desgarrado","script":"if (args.opposedTest.result.hitloc.value == this.item.system.location.key && args.totalWoundLoss > 0)\n{\n    args.actor.addCondition(\"bleeding\", 1);\n    this.script.notification(\"Añadido Sangrando\")\n}"},
+					{"label":"Muslo desgarrado","script":"if (args.loc == this.item.system.location.key && args.totalWoundLoss > 0)\n{\n    args.actor.addCondition(\"bleeding\", 1);\n    this.script.notification(\"Añadido Sangrando\")\n}"},
 					{"label":"Tumbado"}
 					]
 				}]
@@ -5131,7 +5123,7 @@
 			"effects": [{
 				"name":"Convulsiones",
 				"scriptData": [
-					{"label":"Convulsiones","script":"\n                        let modifier = 0\n                        if (this.effect.name.includes(\"Moderado\"))\n                            modifier = -20\n                        else\n                            modifier = -10\n                        \n                        let applicableCharacteristics = [\"ws\", \"bs\", \"s\", \"ag\", \"t\", \"dex\"]\n                        if (args.type == \"weapon\")\n                            args.prefillModifiers.modifier += modifier\n                        else if (args.type == \"characteristic\")\n                        {\n                            if (applicableCharacteristics.includes(args.item))\n                                args.prefillModifiers.modifier += modifier\n                        }\n                        else if (args.type == \"skill\")\n                        {\n                            if (applicableCharacteristics.includes(args.item.characteristic.key))\n                                args.prefillModifiers.modifier += modifier\n                        }"}
+					{"label":"Convulsiones","script":"\n                        let modifier = 0\n                        if (this.effect.name.includes(\"Moderado\"))\n                            modifier = -20\n                        else\n                            modifier = -10\n                        \n                        let applicableCharacteristics = [\"ws\", \"bs\", \"s\", \"ag\", \"t\", \"dex\"]\n                        if (args.type == \"weapon\")\n                            args.fields.modifier += modifier\n                        else if (args.type == \"characteristic\")\n                        {\n                            if (applicableCharacteristics.includes(args.item))\n                                args.fields.modifier += modifier\n                        }\n                        else if (args.type == \"skill\")\n                        {\n                            if (applicableCharacteristics.includes(args.item.characteristic.key))\n                                args.fields.modifier += modifier\n                        }"}
 					]
 				},
 				{
@@ -5281,6 +5273,11 @@
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.vbOc3JVfG2nfK1P0 caption=false]{Adiestrar animal}"
 		},
 		{
+			"id": "Animal Training (Reptile)",
+			"name": "Adiestrar animal (Reptil)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.vbOc3JVfG2nfK1P0 caption=false]{Adiestrar animal}"
+		},
+		{
 			"id": "Art",
 			"name": "Arte",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y caption=false]{Arte}"
@@ -5403,6 +5400,16 @@
 		{
 			"id": "Channelling (Mòna’s Marsh Magic)",
 			"name": "Canalización (Magia del pantano de Mòna)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tXu8Hrd4desq1Rja caption=false]{Canalización}"
+		},
+		{
+			"id": "Channelling (Petty)",
+			"name": "Canalización (Magia menor)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tXu8Hrd4desq1Rja caption=false]{Canalización}"
+		},
+		{
+			"id": "Channelling (WAAAGH!)",
+			"name": "Canalización (¡WAAAGH!)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tXu8Hrd4desq1Rja caption=false]{Canalización}"
 		},
 		{
@@ -5530,6 +5537,11 @@
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
 		},
 		{
+			"id": "Language (Any)",
+			"name": "Hablar idioma (Cualquiera)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
+		},
+		{
 			"id": "Language (Albion)",
 			"name": "Hablar idioma (Albionés)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
@@ -5547,6 +5559,11 @@
 		{
 			"id": "Language (Bretonnian)",
 			"name": "Hablar idioma (Bretoniano)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
+		},
+		{
+			"id": "Language (Cathayan)",
+			"name": "Hablar idioma (Catayano)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
 		},
 		{
@@ -5790,6 +5807,11 @@
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
 		},
 		{
+			"id": "Lore (Astrology)",
+			"name": "Sabiduría académica (Astrología)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		{
 			"id": "Lore (Astronomy)",
 			"name": "Sabiduría académica (Astronomía)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
@@ -5817,6 +5839,41 @@
 		{
 			"id": "Lore (Undead)",
 			"name": "Sabiduría académica (Muertos vivientes)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		{
+			"id": "Lore (Chaos)",
+			"name": "Sabiduría académica (Caos)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		{
+			"id": "Lore (Lustria)",
+			"name": "Sabiduría académica (Lustria)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		{
+			"id": "Lore (Oceans)",
+			"name": "Sabiduría académica (Océanos)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		{
+			"id": "Lore (Old Ones)",
+			"name": "Sabiduría académica (Ancestrales)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		{
+			"id": "Lore (Skeggi)",
+			"name": "Sabiduría académica (Skeggi)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		{
+			"id": "Lore (Sotek)",
+			"name": "Sabiduría académica (Sotek)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		{
+			"id": "Lore (Vampire Coast)",
+			"name": "Sabiduría académica (Costa del Vampiro)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
 		},
 		{
@@ -5950,6 +6007,11 @@
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.N63wZOWw6ZLYnePN caption=false]{Tocar}"
 		},
 		{
+			"id": "Play (Fife)",
+			"name": "Tocar (Flautín)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.N63wZOWw6ZLYnePN caption=false]{Tocar}"
+		},
+		{
 			"id": "Play (Harpsichord)",
 			"name": "Tocar (Clavicémbalo)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.N63wZOWw6ZLYnePN caption=false]{Tocar}"
@@ -5982,6 +6044,16 @@
 		{
 			"id": "Ranged (Blackpowder)",
 			"name": "A distancia (De Pólvora Negra)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jJYOiSQNgC9v7cM5 caption=false]{A distancia}"
+		},
+		{
+			"id": "Ranged (Blowpipe)",
+			"name": "A distancia (Cerbatana)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jJYOiSQNgC9v7cM5 caption=false]{A distancia}"
+		},
+		{
+			"id": "Ranged (Blowpipe, Javelin or Shortbow)",
+			"name": "A distancia (Cerbatana, jabalina o arco corto)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jJYOiSQNgC9v7cM5 caption=false]{A distancia}"
 		},
 		{
@@ -6080,13 +6152,28 @@
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.DLrOPZtVMLgSyxaj caption=false]{Navegar}"
 		},
 		{
+			"id": "Sail (Black Ark)",
+			"name": "Navegar (Arca negra)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.DLrOPZtVMLgSyxaj caption=false]{Navegar}"
+		},
+		{
 			"id": "Sail (Caravel)",
 			"name": "Navegar (Carabela)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.DLrOPZtVMLgSyxaj caption=false]{Navegar}"
 		},
 		{
+			"id": "Sail (Carrack)",
+			"name": "Navegar (Carraca)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.DLrOPZtVMLgSyxaj caption=false]{Navegar}"
+		},
+		{
 			"id": "Sail (Cog)",
 			"name": "Navegar (Coca)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.DLrOPZtVMLgSyxaj caption=false]{Navegar}"
+		},
+		{
+			"id": "Sail (Dragonship)",
+			"name": "Navegar (Buque Dragón)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.DLrOPZtVMLgSyxaj caption=false]{Navegar}"
 		},
 		{
@@ -6099,7 +6186,11 @@
 			"name": "Navegar (Navío lobo)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.DLrOPZtVMLgSyxaj caption=false]{Navegar}"
 		},
-
+		{
+			"id": "Sail (Longship)",
+			"name": "Navegar (Drakkar)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.DLrOPZtVMLgSyxaj caption=false]{Navegar}"
+		},
 		{
 			"id": "Secret Signs",
 			"name": "Lengua secreta",
@@ -6196,6 +6287,11 @@
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
 		},
 		{
+			"id": "Trade (Any)",
+			"name": "Oficio (Cualquiera)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
+		},
+		{
 			"id": "Trade (Apothecary)",
 			"name": "Oficio (Boticario)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
@@ -6228,6 +6324,11 @@
 		{
 			"id": "Trade (Embalmer)",
 			"name": "Oficio (Embalsamador)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
+		},
+		{
+			"id": "Trade (Poisoner)",
+			"name": "Oficio (Envenenador)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
 		},
 		{
@@ -6994,6 +7095,11 @@
 			"description": "<p>Llevas a cabo de inmediato un ataque de Aliento, como si hubieras gastado 2 Ventajas en activar el Rasgo de criatura @Compendium[wfrp4e-core.items.uqGxFOEqeurwkAO3]{Aliento}. Aliento es un proyectil mágico con un Daño igual a tu Bonificador por Resistencia. El DJ decide qué tipo de ataque de Aliento encaja mejor con tu Talento Magia arcana.</p>"
 		},
 		{
+			"id": "Breath (Necromancy) (rotted fish and seaweed)",
+			"name": "Aliento (Nigromancia) (Pescado podrido y algas)",
+			"description": "<p>Llevas a cabo de inmediato un ataque de Aliento, como si hubieras gastado 2 Ventajas en activar el Rasgo de criatura @Compendium[wfrp4e-core.items.uqGxFOEqeurwkAO3]{Aliento}. Aliento es un proyectil mágico con un Daño igual a tu Bonificador por Resistencia. El DJ decide qué tipo de ataque de Aliento encaja mejor con tu Talento Magia arcana.</p>"
+		},
+		{
 			"id": "Breath (Shadow)",
 			"name": "Aliento (Sombras)",
 			"description": "<p>Llevas a cabo de inmediato un ataque de Aliento, como si hubieras gastado 2 Ventajas en activar el Rasgo de criatura @Compendium[wfrp4e-core.items.uqGxFOEqeurwkAO3]{Aliento}. Aliento es un proyectil mágico con un Daño igual a tu Bonificador por Resistencia. El DJ decide qué tipo de ataque de Aliento encaja mejor con tu Talento Magia arcana.</p><p>\n\n <b>Saber:</b> Todos los hechizos lanzados del Saber de las Sombras que infligen Daño ignoran todos los puntos de Armadura no mágicos.</p>"
@@ -7104,7 +7210,7 @@
 				"name":"Escudo cerúleo",
 				"scriptData": [
 					{"label":"Escudo cerúleo"},
-					{"label":"Daño cerúleo","script":"if ((args.opposedTest.attackerTest.item && args.opposedTest.attackerTest.item.isMelee) || (args.opposedTest.attackerTest.item && !args.opposedTest.attackerTest.item.name.includes(\"A distancia\")))\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({window : {title : this.effect.name}, content : `<p>¿Aplicar daño con <strong>${this.effect.name}</strong> al atacante?`})\n    if (choice)\n    {\n        this.script.message(await args.attacker.applyBasicDamage(this.actor.system.characteristics.wp.bonus, {damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_AP, suppressMsg : true}));\n    }\n}"}
+					{"label":"Daño cerúleo","script":"if ((args.sourceItem && args.sourceItem.isMelee) || (args.sourceItem && !args.sourceItem.name.includes(\"A distancia\")))\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({window : {title : this.effect.name}, content : `<p>¿Aplicar daño con <strong>${this.effect.name}</strong> al atacante?`})\n    if (choice)\n    {\n        this.script.message(await args.attacker.applyBasicDamage(this.actor.system.characteristics.wp.bonus, {damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_AP, suppressMsg : true}));\n    }\n}"}
 					]
 				}]
 		},
@@ -7577,7 +7683,7 @@
 			"effects": [{
 				"name":"Bonificador a característica",
 				"scriptData": [
-					{"label":"Bonificador a característica","script":"let key = await ItemDialog.create(ItemDialog.objectToArray(game.wfrp4e.config.characteristics, this.effect.img), 1, \"Escoge característica\");\n\nthis.effect.updateSource({changes : [{key : `system.characteristics.${key[0].id}.modifier`, mode : 2, value : 10}]})"}
+					{"label":"Bonificador a característica","script":"let key = await ItemDialog.create(ItemDialog.objectToArray(game.wfrp4e.config.characteristics, this.effect.img), 1, {text: \"Escoge característica\", title: this.effect.name});\n\nthis.effect.updateSource({changes : [{key : `system.characteristics.${key[0].id}.modifier`, mode : 2, value : 10}]})"}
 					]
 				},
 				{
@@ -7742,7 +7848,7 @@
 			"effects": [{
 				"name":"Cúpula",
 				"scriptData": [
-					{"label":"Cúpula","script":"if (!args.opposedTest.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
+					{"label":"Cúpula","script":"if (!args.sourceItem?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -7753,7 +7859,7 @@
 			"effects": [{
 				"name":"Cúpula (Bestias)",
 				"scriptData": [
-					{"label":"Cúpula","script":"if (!args.opposedTest.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
+					{"label":"Cúpula","script":"if (!args.sourceItem?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -7764,7 +7870,7 @@
 			"effects": [{
 				"name":"Cúpula (Demonología)",
 				"scriptData": [
-					{"label":"Cúpula","script":"if (!args.opposedTest.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
+					{"label":"Cúpula","script":"if (!args.sourceItem?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -7775,7 +7881,7 @@
 			"effects": [{
 				"name":"Cúpula (Muerte)",
 				"scriptData": [
-					{"label":"Cúpula","script":"if (!args.opposedTest.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
+					{"label":"Cúpula","script":"if (!args.sourceItem?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -7786,7 +7892,7 @@
 			"effects": [{
 				"name":"Cúpula (Fuego)",
 				"scriptData": [
-					{"label":"Cúpula","script":"if (!args.opposedTest.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
+					{"label":"Cúpula","script":"if (!args.sourceItem?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -7797,7 +7903,7 @@
 			"effects": [{
 				"name":"Cúpula (Cielos)",
 				"scriptData": [
-					{"label":"Cúpula","script":"if (!args.opposedTest.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
+					{"label":"Cúpula","script":"if (!args.sourceItem?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -7808,7 +7914,7 @@
 			"effects": [{
 				"name":"Cúpula (Adivinación)",
 				"scriptData": [
-					{"label":"Cúpula","script":"if (!args.opposedTest.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
+					{"label":"Cúpula","script":"if (!args.sourceItem?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -7819,7 +7925,7 @@
 			"effects": [{
 				"name":"Cúpula (Vida)",
 				"scriptData": [
-					{"label":"Cúpula","script":"if (!args.opposedTest.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
+					{"label":"Cúpula","script":"if (!args.sourceItem?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -7830,7 +7936,7 @@
 			"effects": [{
 				"name":"Cúpula (Luz)",
 				"scriptData": [
-					{"label":"Cúpula","script":"if (!args.opposedTest.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
+					{"label":"Cúpula","script":"if (!args.sourceItem?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -7841,7 +7947,7 @@
 			"effects": [{
 				"name":"Cúpula (Metal)",
 				"scriptData": [
-					{"label":"Cúpula","script":"if (!args.opposedTest.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
+					{"label":"Cúpula","script":"if (!args.sourceItem?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -7852,7 +7958,7 @@
 			"effects": [{
 				"name":"Cúpula (Nigromancia)",
 				"scriptData": [
-					{"label":"Cúpula","script":"if (!args.opposedTest.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
+					{"label":"Cúpula","script":"if (!args.sourceItem?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -7863,7 +7969,7 @@
 			"effects": [{
 				"name":"Cúpula (Sombras)",
 				"scriptData": [
-					{"label":"Cúpula","script":"if (!args.opposedTest.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
+					{"label":"Cúpula","script":"if (!args.sourceItem?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -7874,7 +7980,7 @@
 			"effects": [{
 				"name":"Cúpula (Brujería)",
 				"scriptData": [
-					{"label":"Cúpula","script":"if (!args.opposedTest.attackerTest.item?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
+					{"label":"Cúpula","script":"if (!args.sourceItem?.system?.isMelee)\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({ window: { title: this.effect.name }, content: `<p><strong>${this.effect.name}</strong>: ¿Es éste un ataque a distancia o mágico con origen fuera de la Cúpula?</p>` })\n\n    if (choice)\n    {\n        args.ward = 6;\n    }\n}"}
 					]
 				}]
 		},
@@ -11610,6 +11716,17 @@
 				}]
 		},
 		{
+			"id": "Hatred (Skaven)",
+			"name": "Odio (Skaven)",
+			"description": "<p>Te ves consumido por el Odio hacia el Objetivo , que normalmente suele ser un grupo de personas o de criaturas, como por ejemplo, ‘hochlandeses’, ‘pulpos de las ciénagas’ o ‘esclavistas’. Jamás interaccionarás socialmente con algo o alguien a quien odies de esta forma. Al encontrarte con el objeto de tu Odio , deberás intentar un Chequeo de Psicología. Si fallas, te ves sujeto al Odio.</p><p>Al final de cada asalto subsiguiente, puedes intentar un nuevo Chequeo de Psicología para acabar con el Odio. Si no lo consigues, los efectos del Odio acaban por sí solos de forma natural cuando todos los miembros del grupo especificado han muerto o se han ido, o pasas al Estado @Condition[Inconsciente].</p>\n<p>Mientras te ves sujeto al Odio , debes intentar destruir de inmediato al grupo odiado por el método más rápido y letal posible. Obtienes un bonificador de +1 NE a todos los Chequeos de combate contra el grupo especificado, y eres inmune al @Compendium[wfrp4e-core.items.Ib2YQYChktDFN93y]{Miedo} y al @Compendium[wfrp4e-core.items.I0yPc4PH5erWJLmu]{Intimidar} (pero no al @Compendium[wfrp4e-core.items.meMkLEwdJIDLxM0B]{Terror}) causados por tu odiado enemigo.</p>",
+			"effects": [{
+				"name":"Odio",
+				"scriptData": [
+					{"label":"Chequeos de combate contra @item.parenthesesText"}
+					]
+				}]
+		},
+		{
 			"id": "Love",
 			"name": "Amor",
 			"description": "<p>Los poetas escriben sin cesar acerca del amor, y todos y cada uno de los juglares del Imperio conocen docenas de canciones que ensalzan el poder el amor. Si tu personaje tiene el rasgo Amor hacia uno o más individuos, esto refleja una conexión emocional profunda y duradera. Se puede tratar del inmenso amor romántico hacia una esposa, marido o amante, un intenso amor familiar hacia un hermano, padre o hijo, o una amistad especialmente fuerte.</p>\n<p>Debes ir en ayuda de aquél a quien amas si se ve amenazado física o socialmente. Eres inmune al Miedo y a la Intimidación mientras defiendes a tus seres queridos, y obtienes un bonificador de +1 NE a todos los Chequeos relacionados con ello.</p>\n<p><strong>Ejemplo:</strong> <em>Rilla es una mujer del río que viaja por el Reik con su estrechamente unida familia. Tiene Amor (hijo), Amor (hermano) y Amor (padres). ¡Si te metes con la familia de Rilla, te metes también con Rilla!</em></p>",
@@ -11750,6 +11867,18 @@
 		{
 			"id": "Armour (Hide)",
 			"name": "Armadura (Piel)",
+			"description": "<p>La criatura está protegida por armadura o por una piel gruesa. Dispone de tantos puntos de Armadura como la cifra entre paréntesis en todas las Ubicaciones de impacto.</p>",
+			"effects": [{
+				"name":"Armadura",
+				"scriptData": [
+					{"label":"Armadura"},
+					{"label":"Establecer valor","script":"if (isNaN(parseInt(this.item.system.specification.value)))\n{\n    let value = this.item.specifier;\n    if (!value)\n    {\n        value = await ValueDialog.create({text : \"Escribe el valor de Armadura\", title : this.effect.name});\n    }\n    if (value)\n    {\n        this.item.updateSource({\"system.specification.value\" : value, name : this.item.baseName});\n    }\n}"}
+					]
+				}]
+		},
+		{
+			"id": "Armour (Scales)",
+			"name": "Armadura (Escamas)",
 			"description": "<p>La criatura está protegida por armadura o por una piel gruesa. Dispone de tantos puntos de Armadura como la cifra entre paréntesis en todas las Ubicaciones de impacto.</p>",
 			"effects": [{
 				"name":"Armadura",
@@ -12007,7 +12136,7 @@
 			"effects": [{
 				"name":"Etéreo",
 				"scriptData": [
-					{"label":"Etéreo","script":"if (!args.opposedTest.attackerTest.item?.system?.isMagical)\n\targs.abort = `<strong>${this.effect.name}</strong>: Ignorado`"}
+					{"label":"Etéreo","script":"if (!args.sourceItem?.system?.isMagical)\n\targs.abort = `<strong>${this.effect.name}</strong>: Ignorado`"}
 					]
 				}]
 		},
@@ -12249,8 +12378,18 @@
 			"description": "<p>La criatura dispone de un arma a distancia. El arma hace tanto Daño como la potencia indicada y tiene el rango en yardas indicado entre paréntesis.</p>"
 		},
 		{
+			"id": "Ranged (20)",
+			"name": "A distancia (20)",
+			"description": "<p>La criatura dispone de un arma a distancia. El arma hace tanto Daño como la potencia indicada y tiene el rango en yardas indicado entre paréntesis.</p>"
+		},
+		{
 			"id": "Ranged (25)",
 			"name": "A distancia (25)",
+			"description": "<p>La criatura dispone de un arma a distancia. El arma hace tanto Daño como la potencia indicada y tiene el rango en yardas indicado entre paréntesis.</p>"
+		},
+		{
+			"id": "Ranged (30)",
+			"name": "A distancia (30)",
 			"description": "<p>La criatura dispone de un arma a distancia. El arma hace tanto Daño como la potencia indicada y tiene el rango en yardas indicado entre paréntesis.</p>"
 		},
 		{
@@ -12423,6 +12562,18 @@
 				}]
 		},
 		{
+			"id": "Tongue Attack (3)",
+			"name": "Ataque de lengua (3)",
+			"description": "<p>La lengua prensil de la criatura se puede enroscar alrededor de su presa, arrastrándola a un macabro final. En su turno, puede llevar a cabo un Ataque gratuito gastando 1 Ventaja. Se trata de un ataque A distancia que hace tanto Daño como la fuerza indicada (el rango es la cifra entre paréntesis). Si el ataque impacta, el objetivo sufre 1 Estado de @Condition[Enmarañado] y, si es de un Tamaño menor, se ve arrastrado hacia la criatura y queda Trabado en combate cuerpo a cuerpo. Entonces, la criatura puede elegir entre liberar al objetivo, llevar acabo un Ataque gratuito utilizando su Rasgo Arma, o mantener el objetivo envuelto en su lengua, iniciando una Presa.</p>",
+			"effects": [{
+				"name":"Ataque de lengua (Rango)",
+				"scriptData": [
+					{"label":"Ataque de lengua (Rango)"},
+					{"label":"Lengua (Ataque gratuito)","script":"if (this.actor.system.status.advantage.value > 0)\n{\n    await this.actor.modifyAdvantage(-1);\n    this.script.notification(\"Ventaja sustraída\")\n}\nelse \n{\n    return this.script.notification(\"¡No hay suficiente Ventaja!\", \"error\")\n}\n\nlet test = await this.actor.setupTrait(this.item)\nawait test.roll();"}
+					]
+				}]
+		},
+		{
 			"id": "Tough",
 			"name": "Recio",
 			"description": "<p>La criatura resiste mucho más daño de lo normal y es poco probable que se eche para atrás. Obtiene un +10 a la Resistencia y a la Voluntad. \r\r</p>",
@@ -12479,7 +12630,7 @@
 			"effects": [{
 				"name":"Vampírico",
 				"scriptData": [
-					{"label":"Vampírico","script":"if (args.opposedTest.attackerTest.item?.name.includes(\"Mordisco\"))\n{\n    let woundsGained = args.totalWoundLoss;\n    this.script.message(`Gana ${woundsGained} Heridas.`, { whisper: ChatMessage.getWhisperRecipients(\"GM\") })\n    this.actor.modifyWounds(woundsGained)\n}"}
+					{"label":"Vampírico","script":"if (args.sourceItem?.name.includes(\"Mordisco\"))\n{\n    let woundsGained = args.totalWoundLoss;\n    this.script.message(`Gana ${woundsGained} Heridas.`, { whisper: ChatMessage.getWhisperRecipients(\"GM\") })\n    this.actor.modifyWounds(woundsGained)\n}"}
 					]
 				}]
 		},
@@ -12547,6 +12698,21 @@
 			"description": "<p>La criatura lleva un arma cuerpo a cuerpo, o bien utiliza dientes, zarpas o cosas similares en combate.\n El arma causa tanto daño como la cifra entre paréntesis, que ya incluye el Bonificador por Fuerza de la criatura. Típicamente será 4 + Bonificador por Fuerza (lo que representa un Arma de mano).</p>"
 		},
 		{
+			"id": "Weapon (Fangs)",
+			"name": "Arma (Colmillos)",
+			"description": "<p>La criatura lleva un arma cuerpo a cuerpo, o bien utiliza dientes, zarpas o cosas similares en combate.\n El arma causa tanto daño como la cifra entre paréntesis, que ya incluye el Bonificador por Fuerza de la criatura. Típicamente será 4 + Bonificador por Fuerza (lo que representa un Arma de mano).</p>"
+		},
+		{
+			"id": "Weapon (Ghostly Blade)",
+			"name": "Arma (Cuchilla fantasmal)",
+			"description": "<p>La criatura lleva un arma cuerpo a cuerpo, o bien utiliza dientes, zarpas o cosas similares en combate.\n El arma causa tanto daño como la cifra entre paréntesis, que ya incluye el Bonificador por Fuerza de la criatura. Típicamente será 4 + Bonificador por Fuerza (lo que representa un Arma de mano).</p>"
+		},
+		{
+			"id": "Weapon (Horns)",
+			"name": "Arma (Cuernos)",
+			"description": "<p>La criatura lleva un arma cuerpo a cuerpo, o bien utiliza dientes, zarpas o cosas similares en combate.\n El arma causa tanto daño como la cifra entre paréntesis, que ya incluye el Bonificador por Fuerza de la criatura. Típicamente será 4 + Bonificador por Fuerza (lo que representa un Arma de mano).</p>"
+		},
+		{
 			"id": "Weapon (Huge Glaive)",
 			"name": "Arma (Archa enorme)",
 			"description": "<p>La criatura lleva un arma cuerpo a cuerpo, o bien utiliza dientes, zarpas o cosas similares en combate.\n El arma causa tanto daño como la cifra entre paréntesis, que ya incluye el Bonificador por Fuerza de la criatura. Típicamente será 4 + Bonificador por Fuerza (lo que representa un Arma de mano).</p>"
@@ -12557,8 +12723,43 @@
 			"description": "<p>La criatura lleva un arma cuerpo a cuerpo, o bien utiliza dientes, zarpas o cosas similares en combate.\n El arma causa tanto daño como la cifra entre paréntesis, que ya incluye el Bonificador por Fuerza de la criatura. Típicamente será 4 + Bonificador por Fuerza (lo que representa un Arma de mano).</p>"
 		},
 		{
+			"id": "Weapon (Shoulder Spikes)",
+			"name": "Arma (Picos de los hombros)",
+			"description": "<p>La criatura lleva un arma cuerpo a cuerpo, o bien utiliza dientes, zarpas o cosas similares en combate.\n El arma causa tanto daño como la cifra entre paréntesis, que ya incluye el Bonificador por Fuerza de la criatura. Típicamente será 4 + Bonificador por Fuerza (lo que representa un Arma de mano).</p>"
+		},
+		{
+			"id": "Weapon (Spines)",
+			"name": "Arma (Espinas)",
+			"description": "<p>La criatura lleva un arma cuerpo a cuerpo, o bien utiliza dientes, zarpas o cosas similares en combate.\n El arma causa tanto daño como la cifra entre paréntesis, que ya incluye el Bonificador por Fuerza de la criatura. Típicamente será 4 + Bonificador por Fuerza (lo que representa un Arma de mano).</p>"
+		},
+		{
+			"id": "Weapon (Staff)",
+			"name": "Arma (Bastón)",
+			"description": "<p>La criatura lleva un arma cuerpo a cuerpo, o bien utiliza dientes, zarpas o cosas similares en combate.\n El arma causa tanto daño como la cifra entre paréntesis, que ya incluye el Bonificador por Fuerza de la criatura. Típicamente será 4 + Bonificador por Fuerza (lo que representa un Arma de mano).</p>"
+		},
+		{
+			"id": "Weapon (Stone Axe)",
+			"name": "Arma (Hacha de piedra)",
+			"description": "<p>La criatura lleva un arma cuerpo a cuerpo, o bien utiliza dientes, zarpas o cosas similares en combate.\n El arma causa tanto daño como la cifra entre paréntesis, que ya incluye el Bonificador por Fuerza de la criatura. Típicamente será 4 + Bonificador por Fuerza (lo que representa un Arma de mano).</p>"
+		},
+		{
+			"id": "Weapon (Teeth)",
+			"name": "Arma (Dientes)",
+			"description": "<p>La criatura lleva un arma cuerpo a cuerpo, o bien utiliza dientes, zarpas o cosas similares en combate.\n El arma causa tanto daño como la cifra entre paréntesis, que ya incluye el Bonificador por Fuerza de la criatura. Típicamente será 4 + Bonificador por Fuerza (lo que representa un Arma de mano).</p>"
+		},
+		{
 			"id": "Weapon (Teeth and Horns)",
 			"name": "Arma (Dientes y cuernos)",
+			"description": "<p>La criatura lleva un arma cuerpo a cuerpo, o bien utiliza dientes, zarpas o cosas similares en combate.\n El arma causa tanto daño como la cifra entre paréntesis, que ya incluye el Bonificador por Fuerza de la criatura. Típicamente será 4 + Bonificador por Fuerza (lo que representa un Arma de mano).</p>"
+		},
+		{
+			"id": "Weapon (Trampling Feet)",
+			"name": "Arma (Pisotón)",
+			"description": "<p>La criatura lleva un arma cuerpo a cuerpo, o bien utiliza dientes, zarpas o cosas similares en combate.\n El arma causa tanto daño como la cifra entre paréntesis, que ya incluye el Bonificador por Fuerza de la criatura. Típicamente será 4 + Bonificador por Fuerza (lo que representa un Arma de mano).</p>"
+		},
+		{
+			"id": "Weapon (Vines)",
+			"name": "Arma (Enredadera)",
 			"description": "<p>La criatura lleva un arma cuerpo a cuerpo, o bien utiliza dientes, zarpas o cosas similares en combate.\n El arma causa tanto daño como la cifra entre paréntesis, que ya incluye el Bonificador por Fuerza de la criatura. Típicamente será 4 + Bonificador por Fuerza (lo que representa un Arma de mano).</p>"
 		},
 		{
@@ -12754,6 +12955,16 @@
 			"description": "<p>Puedes, o bien estudiar uno de los ocho Saberes arcanos de la Magia (Bestias, Cielos, Fuego, Luz, Metal, Muerte, Sombra y Vida) o practicar un Saber menos conocido como Adivinación o Nigromancia. Ahora puedes memorizar hechizos de tu Saber elegido al siguiente coste en PX.</p>\n<div>\n<table title=\"\" border=\"1\" summary=\"\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td>\n<p>Nº de hechizos actualmente conocidos</p>\n</td>\n<td>\n<p>Coste en PX de un nuevo hechizo</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 1&nbsp;</p>\n</td>\n<td>\n<p>100 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 2</p>\n</td>\n<td>\n<p>200 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 3</p>\n</td>\n<td>\n<p>300 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 4</p>\n</td>\n<td>\n<p>400 PX</p>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<p>...y así sucesivamente.</p>\n<p>Por lo tanto, si tu Bonificador por Inteligencia es 4, el primer hechizo y los siguientes 4 te costarán 100 PX, los segundos 4 te costarán 200 PX, etc. Las reglas completas para aprender nuevos hechizos se proporcionan en @UUID[Compendium.wfrp4e-core.journals.JournalEntry.YBVrpUHEjohB1H4f]{Magia}. En circunstanciLo normales, no puedes aprender más de un talento de Magia arcana (Saber). Además, cuando tienes el Talento Magia arcana, no puedes aprender los Talentos @UUID[Compendium.wfrp4e-core.items.Item.QyjWtSdnVMT04l5Y]{Bendecir} ni @UUID[Compendium.wfrp4e-core.items.Item.voV0C2ar1bKpcpnH]{Invocar}. Puedes borrar de la memoria este Talento por 100 PX, pero si lo haces perderás de inmediato todos tus hechizos.</p>"
 		},
 		{
+			"id": "Arcane Magic (Witchcraft)",
+			"name": "Magia arcana (Brujería)",
+			"description": "<p>Puedes, o bien estudiar uno de los ocho Saberes arcanos de la Magia (Bestias, Cielos, Fuego, Luz, Metal, Muerte, Sombra y Vida) o practicar un Saber menos conocido como Adivinación o Nigromancia. Ahora puedes memorizar hechizos de tu Saber elegido al siguiente coste en PX.</p>\n<div>\n<table title=\"\" border=\"1\" summary=\"\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td>\n<p>Nº de hechizos actualmente conocidos</p>\n</td>\n<td>\n<p>Coste en PX de un nuevo hechizo</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 1&nbsp;</p>\n</td>\n<td>\n<p>100 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 2</p>\n</td>\n<td>\n<p>200 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 3</p>\n</td>\n<td>\n<p>300 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 4</p>\n</td>\n<td>\n<p>400 PX</p>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<p>...y así sucesivamente.</p>\n<p>Por lo tanto, si tu Bonificador por Inteligencia es 4, el primer hechizo y los siguientes 4 te costarán 100 PX, los segundos 4 te costarán 200 PX, etc. Las reglas completas para aprender nuevos hechizos se proporcionan en @UUID[Compendium.wfrp4e-core.journals.JournalEntry.YBVrpUHEjohB1H4f]{Magia}. En circunstanciLo normales, no puedes aprender más de un talento de Magia arcana (Saber). Además, cuando tienes el Talento Magia arcana, no puedes aprender los Talentos @UUID[Compendium.wfrp4e-core.items.Item.QyjWtSdnVMT04l5Y]{Bendecir} ni @UUID[Compendium.wfrp4e-core.items.Item.voV0C2ar1bKpcpnH]{Invocar}. Puedes borrar de la memoria este Talento por 100 PX, pero si lo haces perderás de inmediato todos tus hechizos.</p>"
+		},
+		{
+			"id": "Arcane Magic (Necromancy)",
+			"name": "Magia arcana (Nigromancia)",
+			"description": "<p>Puedes, o bien estudiar uno de los ocho Saberes arcanos de la Magia (Bestias, Cielos, Fuego, Luz, Metal, Muerte, Sombra y Vida) o practicar un Saber menos conocido como Adivinación o Nigromancia. Ahora puedes memorizar hechizos de tu Saber elegido al siguiente coste en PX.</p>\n<div>\n<table title=\"\" border=\"1\" summary=\"\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td>\n<p>Nº de hechizos actualmente conocidos</p>\n</td>\n<td>\n<p>Coste en PX de un nuevo hechizo</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 1&nbsp;</p>\n</td>\n<td>\n<p>100 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 2</p>\n</td>\n<td>\n<p>200 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 3</p>\n</td>\n<td>\n<p>300 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 4</p>\n</td>\n<td>\n<p>400 PX</p>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<p>...y así sucesivamente.</p>\n<p>Por lo tanto, si tu Bonificador por Inteligencia es 4, el primer hechizo y los siguientes 4 te costarán 100 PX, los segundos 4 te costarán 200 PX, etc. Las reglas completas para aprender nuevos hechizos se proporcionan en @UUID[Compendium.wfrp4e-core.journals.JournalEntry.YBVrpUHEjohB1H4f]{Magia}. En circunstanciLo normales, no puedes aprender más de un talento de Magia arcana (Saber). Además, cuando tienes el Talento Magia arcana, no puedes aprender los Talentos @UUID[Compendium.wfrp4e-core.items.Item.QyjWtSdnVMT04l5Y]{Bendecir} ni @UUID[Compendium.wfrp4e-core.items.Item.voV0C2ar1bKpcpnH]{Invocar}. Puedes borrar de la memoria este Talento por 100 PX, pero si lo haces perderás de inmediato todos tus hechizos.</p>"
+		},
+		{
 			"id": "Arcane Magic (Daemonology, Lore of Light)",
 			"name": "Magia arcana (Demonología, Saber de la Luz)",
 			"description": "<p>Puedes, o bien estudiar uno de los ocho Saberes arcanos de la Magia (Bestias, Cielos, Fuego, Luz, Metal, Muerte, Sombra y Vida) o practicar un Saber menos conocido como Adivinación o Nigromancia. Ahora puedes memorizar hechizos de tu Saber elegido al siguiente coste en PX.</p>\n<div>\n<table title=\"\" border=\"1\" summary=\"\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td>\n<p>Nº de hechizos actualmente conocidos</p>\n</td>\n<td>\n<p>Coste en PX de un nuevo hechizo</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 1&nbsp;</p>\n</td>\n<td>\n<p>100 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 2</p>\n</td>\n<td>\n<p>200 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 3</p>\n</td>\n<td>\n<p>300 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 4</p>\n</td>\n<td>\n<p>400 PX</p>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<p>...y así sucesivamente.</p>\n<p>Por lo tanto, si tu Bonificador por Inteligencia es 4, el primer hechizo y los siguientes 4 te costarán 100 PX, los segundos 4 te costarán 200 PX, etc. Las reglas completas para aprender nuevos hechizos se proporcionan en @UUID[Compendium.wfrp4e-core.journals.JournalEntry.YBVrpUHEjohB1H4f]{Magia}. En circunstanciLo normales, no puedes aprender más de un talento de Magia arcana (Saber). Además, cuando tienes el Talento Magia arcana, no puedes aprender los Talentos @UUID[Compendium.wfrp4e-core.items.Item.QyjWtSdnVMT04l5Y]{Bendecir} ni @UUID[Compendium.wfrp4e-core.items.Item.voV0C2ar1bKpcpnH]{Invocar}. Puedes borrar de la memoria este Talento por 100 PX, pero si lo haces perderás de inmediato todos tus hechizos.</p>"
@@ -12761,6 +12972,21 @@
 		{
 			"id": "Arcane Magic (Mòna’s Marsh Magic)",
 			"name": "Magia arcana (Magia del pantano de Mòna)",
+			"description": "<p>Puedes, o bien estudiar uno de los ocho Saberes arcanos de la Magia (Bestias, Cielos, Fuego, Luz, Metal, Muerte, Sombra y Vida) o practicar un Saber menos conocido como Adivinación o Nigromancia. Ahora puedes memorizar hechizos de tu Saber elegido al siguiente coste en PX.</p>\n<div>\n<table title=\"\" border=\"1\" summary=\"\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td>\n<p>Nº de hechizos actualmente conocidos</p>\n</td>\n<td>\n<p>Coste en PX de un nuevo hechizo</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 1&nbsp;</p>\n</td>\n<td>\n<p>100 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 2</p>\n</td>\n<td>\n<p>200 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 3</p>\n</td>\n<td>\n<p>300 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 4</p>\n</td>\n<td>\n<p>400 PX</p>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<p>...y así sucesivamente.</p>\n<p>Por lo tanto, si tu Bonificador por Inteligencia es 4, el primer hechizo y los siguientes 4 te costarán 100 PX, los segundos 4 te costarán 200 PX, etc. Las reglas completas para aprender nuevos hechizos se proporcionan en @UUID[Compendium.wfrp4e-core.journals.JournalEntry.YBVrpUHEjohB1H4f]{Magia}. En circunstanciLo normales, no puedes aprender más de un talento de Magia arcana (Saber). Además, cuando tienes el Talento Magia arcana, no puedes aprender los Talentos @UUID[Compendium.wfrp4e-core.items.Item.QyjWtSdnVMT04l5Y]{Bendecir} ni @UUID[Compendium.wfrp4e-core.items.Item.voV0C2ar1bKpcpnH]{Invocar}. Puedes borrar de la memoria este Talento por 100 PX, pero si lo haces perderás de inmediato todos tus hechizos.</p>"
+		},
+		{
+			"id": "Arcane Magic (WAAAGH)",
+			"name": "Magia arcana (¡WAAAGH!)",
+			"description": "<p>Puedes, o bien estudiar uno de los ocho Saberes arcanos de la Magia (Bestias, Cielos, Fuego, Luz, Metal, Muerte, Sombra y Vida) o practicar un Saber menos conocido como Adivinación o Nigromancia. Ahora puedes memorizar hechizos de tu Saber elegido al siguiente coste en PX.</p>\n<div>\n<table title=\"\" border=\"1\" summary=\"\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td>\n<p>Nº de hechizos actualmente conocidos</p>\n</td>\n<td>\n<p>Coste en PX de un nuevo hechizo</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 1&nbsp;</p>\n</td>\n<td>\n<p>100 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 2</p>\n</td>\n<td>\n<p>200 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 3</p>\n</td>\n<td>\n<p>300 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 4</p>\n</td>\n<td>\n<p>400 PX</p>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<p>...y así sucesivamente.</p>\n<p>Por lo tanto, si tu Bonificador por Inteligencia es 4, el primer hechizo y los siguientes 4 te costarán 100 PX, los segundos 4 te costarán 200 PX, etc. Las reglas completas para aprender nuevos hechizos se proporcionan en @UUID[Compendium.wfrp4e-core.journals.JournalEntry.YBVrpUHEjohB1H4f]{Magia}. En circunstanciLo normales, no puedes aprender más de un talento de Magia arcana (Saber). Además, cuando tienes el Talento Magia arcana, no puedes aprender los Talentos @UUID[Compendium.wfrp4e-core.items.Item.QyjWtSdnVMT04l5Y]{Bendecir} ni @UUID[Compendium.wfrp4e-core.items.Item.voV0C2ar1bKpcpnH]{Invocar}. Puedes borrar de la memoria este Talento por 100 PX, pero si lo haces perderás de inmediato todos tus hechizos.</p>"
+		},
+		{
+			"id": "Arcane Magic (Nurgle)",
+			"name": "Magia arcana (Nurgle)",
+			"description": "<p>Puedes, o bien estudiar uno de los ocho Saberes arcanos de la Magia (Bestias, Cielos, Fuego, Luz, Metal, Muerte, Sombra y Vida) o practicar un Saber menos conocido como Adivinación o Nigromancia. Ahora puedes memorizar hechizos de tu Saber elegido al siguiente coste en PX.</p>\n<div>\n<table title=\"\" border=\"1\" summary=\"\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td>\n<p>Nº de hechizos actualmente conocidos</p>\n</td>\n<td>\n<p>Coste en PX de un nuevo hechizo</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 1&nbsp;</p>\n</td>\n<td>\n<p>100 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 2</p>\n</td>\n<td>\n<p>200 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 3</p>\n</td>\n<td>\n<p>300 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 4</p>\n</td>\n<td>\n<p>400 PX</p>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<p>...y así sucesivamente.</p>\n<p>Por lo tanto, si tu Bonificador por Inteligencia es 4, el primer hechizo y los siguientes 4 te costarán 100 PX, los segundos 4 te costarán 200 PX, etc. Las reglas completas para aprender nuevos hechizos se proporcionan en @UUID[Compendium.wfrp4e-core.journals.JournalEntry.YBVrpUHEjohB1H4f]{Magia}. En circunstanciLo normales, no puedes aprender más de un talento de Magia arcana (Saber). Además, cuando tienes el Talento Magia arcana, no puedes aprender los Talentos @UUID[Compendium.wfrp4e-core.items.Item.QyjWtSdnVMT04l5Y]{Bendecir} ni @UUID[Compendium.wfrp4e-core.items.Item.voV0C2ar1bKpcpnH]{Invocar}. Puedes borrar de la memoria este Talento por 100 PX, pero si lo haces perderás de inmediato todos tus hechizos.</p>"
+		},
+		{
+			"id": "Arcane Magic (Tzeentch)",
+			"name": "Magia arcana (Tzeentch)",
 			"description": "<p>Puedes, o bien estudiar uno de los ocho Saberes arcanos de la Magia (Bestias, Cielos, Fuego, Luz, Metal, Muerte, Sombra y Vida) o practicar un Saber menos conocido como Adivinación o Nigromancia. Ahora puedes memorizar hechizos de tu Saber elegido al siguiente coste en PX.</p>\n<div>\n<table title=\"\" border=\"1\" summary=\"\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td>\n<p>Nº de hechizos actualmente conocidos</p>\n</td>\n<td>\n<p>Coste en PX de un nuevo hechizo</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 1&nbsp;</p>\n</td>\n<td>\n<p>100 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 2</p>\n</td>\n<td>\n<p>200 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 3</p>\n</td>\n<td>\n<p>300 PX</p>\n</td>\n</tr>\n<tr>\n<td>\n<p>Hasta tu Bonificador por Inteligencia × 4</p>\n</td>\n<td>\n<p>400 PX</p>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<p>...y así sucesivamente.</p>\n<p>Por lo tanto, si tu Bonificador por Inteligencia es 4, el primer hechizo y los siguientes 4 te costarán 100 PX, los segundos 4 te costarán 200 PX, etc. Las reglas completas para aprender nuevos hechizos se proporcionan en @UUID[Compendium.wfrp4e-core.journals.JournalEntry.YBVrpUHEjohB1H4f]{Magia}. En circunstanciLo normales, no puedes aprender más de un talento de Magia arcana (Saber). Además, cuando tienes el Talento Magia arcana, no puedes aprender los Talentos @UUID[Compendium.wfrp4e-core.items.Item.QyjWtSdnVMT04l5Y]{Bendecir} ni @UUID[Compendium.wfrp4e-core.items.Item.voV0C2ar1bKpcpnH]{Invocar}. Puedes borrar de la memoria este Talento por 100 PX, pero si lo haces perderás de inmediato todos tus hechizos.</p>"
 		},
 		{
@@ -13060,6 +13286,20 @@
 				}]
 		},
 		{
+			"id": "Craftsman (Any)",
+			"name": "Artesano (Cualquiera)",
+			"description": "<p>Tienes un auténtico talento creativo. Suma la Habilidad de Oficio asociada a cualquier Carrera en la que entras. Si dicha Habilidad de Oficio ya está en tu Carrera, en lugar de ello puedes comprarla a razón de 5 PX menos por Avance.</p>",
+			"tests": "Oficio (Cualquiera)",
+			"effects": [{
+				"name":"Artesano",
+				"scriptData": [
+					{},
+					{"label":"Elegir Habilidad de Oficio","script":"if (this.item.name.includes(\"(\"))\n{\n\tlet trade = this.item.parenthesesText;\n\tif (trade?.toLowerCase() != \"cualquiera\")\n\t    return this.item.updateSource({\"system.tests.value\" : this.item.system.tests.value.replace(\"Cualquiera\", trade)})\n}\n\nlet index = game.packs\n.filter(i => i.metadata.type == \"Item\")\n.reduce((acc, pack) => acc.concat(pack.index.contents), [])\n.filter(i => i.type == \"skill\" && i.name.includes(game.i18n.localize(\"NAME.Trade\")))\n.map(i => {\n\ti.id = i._id\n\treturn i\n})\n\nlet choice = await ItemDialog.create(index, 1, {text : \"Escoge una Habilidad de Oficio, o no selecciones ninguna para escribirla manualmente.\", title : this.effect.name})\nlet text;\nif (!choice[0])\n{\n    let custom = await ValueDialog.create({text : \"Escribe Habilidad de Oficio personalizada\", title : \"Oficio personalizado\"});  \n    text = custom || \"\"\n}\nelse \n{\n    text = game.wfrp4e.utility.extractParenthesesText(choice[0].name)\n}\n\nawait this.item.updateSource({name : this.item.name.replace(\"(Cualquiera)\", \"\").replace(\"(cualquiera)\", \"\").trim() + ` (${text})`, \"system.tests.value\" : this.item.system.tests.value.replace(\"Cualquiera\", text)});"},
+					{"label":"Añadir Habilidad de Oficio"}
+					]
+				}]
+		},
+		{
 			"id": "Craftsman (Goldsmith)",
 			"name": "Artesano (Orfebre)",
 			"description": "<p>Tienes un auténtico talento creativo. Suma la Habilidad de Oficio asociada a cualquier Carrera en la que entras. Si dicha Habilidad de Oficio ya está en tu Carrera, en lugar de ello puedes comprarla a razón de 5 PX menos por Avance.</p>",
@@ -13227,6 +13467,19 @@
 				}]
 		},
 		{
+			"id": "Etiquette (Crew)",
+			"name": "Etiqueta (Tripulación)",
+			"description": "<p>Podrás mezclarte socialmente con el grupo elegido mientras vayas vestido de la forma adecuada y actúes con propiedad. Los grupos sociales de ejemplo para este Talento son: delincuentes, sectarios, agremiados, nobles, eruditos, sirvientes y soldados. Si no tienes el Talento, quienes sí lo tienen notarán tu incomodidad en un entorno poco familiar. Esto afecta principalmente a la interpretación del personaje, pero si el DJ lo decide puede suponer una bonificación a los Chequeos de Empatía.</p>",
+			"tests": "Carisma y Cotilleo (Tripulación)",
+			"effects": [{
+				"name":"Etiqueta",
+				"scriptData": [
+					{},
+					{"label":"Grupo","script":"if (this.item.system.tests.value.includes(\"(grupo social)\"))\r\n{\r\n    let tests = this.item.system.tests.value\r\n    let name = this.item.name\r\n\r\n    // If name already specifies, make sure tests value reflects that\r\n    if (name.includes(\"(\") && !name.toLowerCase().includes(\"(cualquiera)\"))\r\n    {\r\n        let group = name.split(\"(\")[1].split(\")\")[0]\r\n        tests = `${tests.split(\"(\")[0].trim()} (${group})`\r\n    }\r\n    else\r\n    {\r\n        let value = await ValueDialog.create({text : \"Escribe grupo de Etiqueta\", title : this.effect.name});\r\n        if (value)\r\n        {\r\n            name = `${name.split(\"(\")[0].trim()} (${value})`\r\n            tests = this.item.system.tests.value.replace(\"grupo social\", value);\r\n        }\r\n    }\r\n    this.item.updateSource({name, \"system.tests.value\" : tests})\r\n}"}
+					]
+				}]
+		},
+		{
 			"id": "Etiquette (Guilder, Scholar)",
 			"name": "Etiqueta (Gremio, Erudito)",
 			"description": "<p>Podrás mezclarte socialmente con el grupo elegido mientras vayas vestido de la forma adecuada y actúes con propiedad. Los grupos sociales de ejemplo para este Talento son: delincuentes, sectarios, agremiados, nobles, eruditos, sirvientes y soldados. Si no tienes el Talento, quienes sí lo tienen notarán tu incomodidad en un entorno poco familiar. Esto afecta principalmente a la interpretación del personaje, pero si el DJ lo decide puede suponer una bonificación a los Chequeos de Empatía.</p>",
@@ -13244,6 +13497,32 @@
 			"name": "Etiqueta (Nobles, Sirvientes, Soldados)",
 			"description": "<p>Podrás mezclarte socialmente con el grupo elegido mientras vayas vestido de la forma adecuada y actúes con propiedad. Los grupos sociales de ejemplo para este Talento son: delincuentes, sectarios, agremiados, nobles, eruditos, sirvientes y soldados. Si no tienes el Talento, quienes sí lo tienen notarán tu incomodidad en un entorno poco familiar. Esto afecta principalmente a la interpretación del personaje, pero si el DJ lo decide puede suponer una bonificación a los Chequeos de Empatía.</p>",
 			"tests": "Carisma y Cotilleo (Nobles, Sirvientes, Soldados)",
+			"effects": [{
+				"name":"Etiqueta",
+				"scriptData": [
+					{},
+					{"label":"Grupo","script":"if (this.item.system.tests.value.includes(\"(grupo social)\"))\r\n{\r\n    let tests = this.item.system.tests.value\r\n    let name = this.item.name\r\n\r\n    // If name already specifies, make sure tests value reflects that\r\n    if (name.includes(\"(\") && !name.toLowerCase().includes(\"(cualquiera)\"))\r\n    {\r\n        let group = name.split(\"(\")[1].split(\")\")[0]\r\n        tests = `${tests.split(\"(\")[0].trim()} (${group})`\r\n    }\r\n    else\r\n    {\r\n        let value = await ValueDialog.create({text : \"Escribe grupo de Etiqueta\", title : this.effect.name});\r\n        if (value)\r\n        {\r\n            name = `${name.split(\"(\")[0].trim()} (${value})`\r\n            tests = this.item.system.tests.value.replace(\"grupo social\", value);\r\n        }\r\n    }\r\n    this.item.updateSource({name, \"system.tests.value\" : tests})\r\n}"}
+					]
+				}]
+		},
+		{
+			"id": "Etiquette (Soldiers)",
+			"name": "Etiqueta (Soldados)",
+			"description": "<p>Podrás mezclarte socialmente con el grupo elegido mientras vayas vestido de la forma adecuada y actúes con propiedad. Los grupos sociales de ejemplo para este Talento son: delincuentes, sectarios, agremiados, nobles, eruditos, sirvientes y soldados. Si no tienes el Talento, quienes sí lo tienen notarán tu incomodidad en un entorno poco familiar. Esto afecta principalmente a la interpretación del personaje, pero si el DJ lo decide puede suponer una bonificación a los Chequeos de Empatía.</p>",
+			"tests": "Carisma y Cotilleo (Soldados)",
+			"effects": [{
+				"name":"Etiqueta",
+				"scriptData": [
+					{},
+					{"label":"Grupo","script":"if (this.item.system.tests.value.includes(\"(grupo social)\"))\r\n{\r\n    let tests = this.item.system.tests.value\r\n    let name = this.item.name\r\n\r\n    // If name already specifies, make sure tests value reflects that\r\n    if (name.includes(\"(\") && !name.toLowerCase().includes(\"(cualquiera)\"))\r\n    {\r\n        let group = name.split(\"(\")[1].split(\")\")[0]\r\n        tests = `${tests.split(\"(\")[0].trim()} (${group})`\r\n    }\r\n    else\r\n    {\r\n        let value = await ValueDialog.create({text : \"Escribe grupo de Etiqueta\", title : this.effect.name});\r\n        if (value)\r\n        {\r\n            name = `${name.split(\"(\")[0].trim()} (${value})`\r\n            tests = this.item.system.tests.value.replace(\"grupo social\", value);\r\n        }\r\n    }\r\n    this.item.updateSource({name, \"system.tests.value\" : tests})\r\n}"}
+					]
+				}]
+		},
+		{
+			"id": "Etiquette (Undead)",
+			"name": "Etiqueta (Muertos vivientes)",
+			"description": "<p>Podrás mezclarte socialmente con el grupo elegido mientras vayas vestido de la forma adecuada y actúes con propiedad. Los grupos sociales de ejemplo para este Talento son: delincuentes, sectarios, agremiados, nobles, eruditos, sirvientes y soldados. Si no tienes el Talento, quienes sí lo tienen notarán tu incomodidad en un entorno poco familiar. Esto afecta principalmente a la interpretación del personaje, pero si el DJ lo decide puede suponer una bonificación a los Chequeos de Empatía.</p>",
+			"tests": "Carisma y Cotilleo (Muertos vivientes)",
 			"effects": [{
 				"name":"Etiqueta",
 				"scriptData": [
@@ -13288,6 +13567,19 @@
 		{
 			"id": "Fearless (Size Large or Smaller)",
 			"name": "Intrépido (Tamaño Grande o más pequeño)",
+			"description": "<p>Eres, o bien lo suficientemente valiente o lo suficientemente insensato como para que el miedo a ciertos enemigos se haya convertido en un recuerdo lejano. Mediante un único Chequeo <strong>Normal (+20%)</strong> de <strong>Frialdad</strong>, puedes ignorar cualquier efecto de Intimidar, Miedo o Terror por parte del enemigo especificado cuando te encuentras con él. Los enemigos típicos incluyen hombres bestia, pieles verdes, forajidos, vampiros, vigilantes y brujas.</p>",
+			"tests": "Frialdad para oponerse al Intimidar, Miedo y Terror de tu Enemigo",
+			"effects": [{
+				"name":"Intrépido",
+				"scriptData": [
+					{},
+					{"label":"Activar Intrépido"}
+					]
+				}]
+		},
+		{
+			"id": "Fearless (Undead)",
+			"name": "Intrépido (Muertos vivientes)",
 			"description": "<p>Eres, o bien lo suficientemente valiente o lo suficientemente insensato como para que el miedo a ciertos enemigos se haya convertido en un recuerdo lejano. Mediante un único Chequeo <strong>Normal (+20%)</strong> de <strong>Frialdad</strong>, puedes ignorar cualquier efecto de Intimidar, Miedo o Terror por parte del enemigo especificado cuando te encuentras con él. Los enemigos típicos incluyen hombres bestia, pieles verdes, forajidos, vampiros, vigilantes y brujas.</p>",
 			"tests": "Frialdad para oponerse al Intimidar, Miedo y Terror de tu Enemigo",
 			"effects": [{
@@ -13438,6 +13730,19 @@
 			"name": "Odio visceral",
 			"description": "<p>Te consume el odio contra algo del Viejo Mundo, tal y como se describe en @UUID[JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.5w5YLPNd6AaU4f85]{Psicología}. Cada vez que adquieres este Talento desarrollas un nuevo odio hacia un nuevo grupo. Ejemplos de lo que podrías elegir incluyen: hombres bestia, pieles verdes, monstruos, forajidos, sigmaritas, muertos vivientes o brujos.</p>",
 			"tests": "Voluntad (resistir grupo)",
+			"effects": [{
+				"name":"Odio visceral",
+				"scriptData": [
+					{"label":"Escoger grupo","script":"let group\nlet item = await fromUuid(\"Compendium.wfrp4e-core.items.Item.5hH73j2NgPdsLCZN\");\nlet data = item.toObject();\n\nif (this.item.name.includes(\"(\"))\n{\n\tgroup = this.item.parenthesesText\n}\n\nelse \n{\n\tgroup = await ValueDialog.create({text : \"Escribir el grupo odiado\", title : \"Grupo odiado\"})\n\n\tthis.item.updateSource({name : this.item.name + ` (${group})`, \"system.tests.value\" : this.item.system.tests.value.replace(\"grupo\", group)})\n\tthis.effect.updateSource({name : this.effect.name + ` (${group})`})\n}\n\n\ndata.name = data.name.replace(\"Objetivo\", group);\nawait this.actor.createEmbeddedDocuments(\"Item\", [data], {fromEffect: this.effect.id});"},
+					{}
+					]
+				}]
+		},
+		{
+			"id": "GXynn6A0yAWoaKUj",
+			"name": "Odio visceral (Skaven)",
+			"description": "<p>Te consume el odio contra algo del Viejo Mundo, tal y como se describe en @UUID[JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.5w5YLPNd6AaU4f85]{Psicología}. Cada vez que adquieres este Talento desarrollas un nuevo odio hacia un nuevo grupo. Ejemplos de lo que podrías elegir incluyen: hombres bestia, pieles verdes, monstruos, forajidos, sigmaritas, muertos vivientes o brujos.</p>",
+			"tests": "Voluntad (resistir Skaven)",
 			"effects": [{
 				"name":"Odio visceral",
 				"scriptData": [
@@ -13856,6 +14161,11 @@
 			"description": "<p>Eres uno de los raros individuos del Viejo Mundo que sabe leer y escribir. Se supone que eres capaz de leer y escribir (si existe forma escrita) todos los idiomas que puedes hablar.</p>"
 		},
 		{
+			"id": "Read/Write (Saurian)",
+			"name": "Leer y escribir (Sauriano)",
+			"description": "<p>Eres uno de los raros individuos del Viejo Mundo que sabe leer y escribir. Se supone que eres capaz de leer y escribir (si existe forma escrita) todos los idiomas que puedes hablar.</p>"
+		},
+		{
 			"id": "Relentless",
 			"name": "Incansable",
 			"description": "<p>Cuando has fijado tu mente en un objetivo, no hay nada que nadie pueda hacer para impedirte llegar al mismo. Si usas Ventaja al Destrabarte, puedes guardar un número de Ventajas igual a tu nivel de Incansable. Además, puedes utilizar Ventaja para Destrabarte, incluso si tu Ventaja es menor que la de los oponentes.</p>"
@@ -13874,10 +14184,23 @@
 				}]
 		},
 		{
+			"id": "Resistance (Chaos)",
+			"name": "Resistencia (Caos)",
+			"description": "<p>Tu recia constitución te permite sobrevivir con más facilidad a una amenaza específica. Puedes tener éxito automáticamente en el primer Chequeo para resistir la amenaza específica, como por ejemplo Magia, Veneno, Enfermedad o Mutación en cada sesión de juego. Si el NE es importante, utiliza tu Bonificador por Resistencia como NE para el Chequeo.</p>",
+			"tests": "Todos los utilizados para resistirse al Caos",
+			"effects": [{
+				"name":"Resistencia",
+				"scriptData": [
+					{},
+					{"label":"Escoger Resistencia","script":"let resistance\nif (this.item.name.includes(\"(\") && !this.item.name.toLowerCase().includes(\"(cualquiera)\"))\n{\n\tresistance = this.item.parenthesesText\n}\nelse \n{\n    resistance = await ValueDialog.create({text : \"Escribe la resistencia\", title : \"Resistencia\"}) \n    \n    if (resistance)\n    {\n        this.item.updateSource({name : `${this.item.name.split(\"(\")[0].trim()} (${resistance})`})\n        this.effect.updateSource({name : this.effect.name + ` (${resistance})`})\n    }\n}    \nthis.item.updateSource({\"system.tests.value\" : this.item.system.tests.value.replace(\"la Amenaza asociada\", resistance)})\n\nif (resistance && !this.effect.name.includes(\"(\"))\n{\n    this.effect.updateSource({name : this.effect.name += ` (${resistance})`})\n}"}
+					]
+				}]
+		},
+		{
 			"id": "Resistance (Poison)",
 			"name": "Resistencia (Veneno)",
 			"description": "<p>Tu recia constitución te permite sobrevivir con más facilidad a una amenaza específica. Puedes tener éxito automáticamente en el primer Chequeo para resistir la amenaza específica, como por ejemplo Magia, Veneno, Enfermedad o Mutación en cada sesión de juego. Si el NE es importante, utiliza tu Bonificador por Resistencia como NE para el Chequeo.</p>",
-			"tests": "Todos los utilizados para resistirse a la Amenaza asociada",
+			"tests": "Todos los utilizados para resistirse al Veneno",
 			"effects": [{
 				"name":"Resistencia",
 				"scriptData": [
@@ -13978,7 +14301,46 @@
 			"id": "Savant (Tzeentch)",
 			"name": "Sabio (Tzeentch)",
 			"description": "<p>Eres excepcionalmente docto, y tienes un grado significativo de conocimiento especializado en un único campo de estudio. Automáticamente conoces tantos fragmentos de información correcta como tu nivel de Sabio (Saber) acerca de un tema relevante sin tener que chequear tu Habilidad de Sabiduría académica. Un Chequeo, como siempre, proporcionará más información de la forma habitual, según determine el DJ.</p>",
-			"tests": "Sabiduría académica (Saber elegido)",
+			"tests": "Sabiduría académica (Tzeentch)",
+			"effects": [{
+				"name":"Sabio",
+				"scriptData": [
+					{},
+					{"label":"Elegir Sabiduría académica","script":"if (this.item.name.includes(\"(\"))\n{\n\treturn;\n}\n\nlet index = game.packs\n.filter(i => i.metadata.type == \"Item\")\n.reduce((acc, pack) => acc.concat(pack.index.contents), [])\n.filter(i => i.type == \"skill\" && i.name.includes(game.i18n.localize(\"NAME.Lore\")))\n.map(i => {\n\ti.id = i._id\n\treturn i\n})\n\nlet choice = await ItemDialog.create(index, 1, \"Escoge una Sabiduría académica\")\nlet text;\nif (!choice[0])\n{\n    let custom = await ValueDialog.create({text : \"Escribir Saber\", title : this.effect.name});\n    text = custom || \"\";\n}\nelse \n{\n    text = game.wfrp4e.utility.extractParenthesesText(choice[0].name)\n}\n\nawait this.item.updateSource({name : this.item.name + ` (${text})`, \"system.tests.value\" : this.item.system.tests.value.replace(\"Saber elegido\", text)})\nawait this.effect.updateSource({name : this.effect.name + ` (${text})`})"}
+					]
+				}]
+		},
+		{
+			"id": "Savant (Chaos)",
+			"name": "Sabio (Caos)",
+			"description": "<p>Eres excepcionalmente docto, y tienes un grado significativo de conocimiento especializado en un único campo de estudio. Automáticamente conoces tantos fragmentos de información correcta como tu nivel de Sabio (Saber) acerca de un tema relevante sin tener que chequear tu Habilidad de Sabiduría académica. Un Chequeo, como siempre, proporcionará más información de la forma habitual, según determine el DJ.</p>",
+			"tests": "Sabiduría académica (Caos)",
+			"effects": [{
+				"name":"Sabio",
+				"scriptData": [
+					{},
+					{"label":"Elegir Sabiduría académica","script":"if (this.item.name.includes(\"(\"))\n{\n\treturn;\n}\n\nlet index = game.packs\n.filter(i => i.metadata.type == \"Item\")\n.reduce((acc, pack) => acc.concat(pack.index.contents), [])\n.filter(i => i.type == \"skill\" && i.name.includes(game.i18n.localize(\"NAME.Lore\")))\n.map(i => {\n\ti.id = i._id\n\treturn i\n})\n\nlet choice = await ItemDialog.create(index, 1, \"Escoge una Sabiduría académica\")\nlet text;\nif (!choice[0])\n{\n    let custom = await ValueDialog.create({text : \"Escribir Saber\", title : this.effect.name});\n    text = custom || \"\";\n}\nelse \n{\n    text = game.wfrp4e.utility.extractParenthesesText(choice[0].name)\n}\n\nawait this.item.updateSource({name : this.item.name + ` (${text})`, \"system.tests.value\" : this.item.system.tests.value.replace(\"Saber elegido\", text)})\nawait this.effect.updateSource({name : this.effect.name + ` (${text})`})"}
+					]
+				}]
+		},
+		{
+			"id": "Savant (History)",
+			"name": "Sabio (Historia)",
+			"description": "<p>Eres excepcionalmente docto, y tienes un grado significativo de conocimiento especializado en un único campo de estudio. Automáticamente conoces tantos fragmentos de información correcta como tu nivel de Sabio (Saber) acerca de un tema relevante sin tener que chequear tu Habilidad de Sabiduría académica. Un Chequeo, como siempre, proporcionará más información de la forma habitual, según determine el DJ.</p>",
+			"tests": "Sabiduría académica (Historia)",
+			"effects": [{
+				"name":"Sabio",
+				"scriptData": [
+					{},
+					{"label":"Elegir Sabiduría académica","script":"if (this.item.name.includes(\"(\"))\n{\n\treturn;\n}\n\nlet index = game.packs\n.filter(i => i.metadata.type == \"Item\")\n.reduce((acc, pack) => acc.concat(pack.index.contents), [])\n.filter(i => i.type == \"skill\" && i.name.includes(game.i18n.localize(\"NAME.Lore\")))\n.map(i => {\n\ti.id = i._id\n\treturn i\n})\n\nlet choice = await ItemDialog.create(index, 1, \"Escoge una Sabiduría académica\")\nlet text;\nif (!choice[0])\n{\n    let custom = await ValueDialog.create({text : \"Escribir Saber\", title : this.effect.name});\n    text = custom || \"\";\n}\nelse \n{\n    text = game.wfrp4e.utility.extractParenthesesText(choice[0].name)\n}\n\nawait this.item.updateSource({name : this.item.name + ` (${text})`, \"system.tests.value\" : this.item.system.tests.value.replace(\"Saber elegido\", text)})\nawait this.effect.updateSource({name : this.effect.name + ` (${text})`})"}
+					]
+				}]
+		},
+		{
+			"id": "Savant (Magick)",
+			"name": "Sabio (Magia)",
+			"description": "<p>Eres excepcionalmente docto, y tienes un grado significativo de conocimiento especializado en un único campo de estudio. Automáticamente conoces tantos fragmentos de información correcta como tu nivel de Sabio (Saber) acerca de un tema relevante sin tener que chequear tu Habilidad de Sabiduría académica. Un Chequeo, como siempre, proporcionará más información de la forma habitual, según determine el DJ.</p>",
+			"tests": "Sabiduría académica (Magia)",
 			"effects": [{
 				"name":"Sabio",
 				"scriptData": [
@@ -14096,7 +14458,7 @@
 			"effects": [{
 				"name":"Escudero",
 				"scriptData": [
-					{"label":"Escudero","script":"if (args.opposedTest.result.winner == \"attacker\") {\n  if (args.opposedTest.defenderTest.weapon && args.opposedTest.defenderTest.item.properties.qualities.shield) {\n    ui.notifications.notify(`<b>${this.effect.name}</b>: Ganada ${this.item.Advances} de Ventaja`)\n    this.actor.setAdvantage(this.item.Advances)\n  }\n}"},
+					{"label":"Escudero","script":"if (args.opposedTest?.result.winner == \"attacker\") {\n  if (args.opposedTest?.defenderTest.weapon && args.opposedTest?.defenderTest.item.properties.qualities.shield) {\n    ui.notifications.notify(`<b>${this.effect.name}</b>: Ganada ${this.item.Advances} de Ventaja`)\n    this.actor.setAdvantage(this.item.Advances)\n  }\n}"},
 					{}
 					]
 				}]

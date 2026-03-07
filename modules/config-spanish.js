@@ -677,6 +677,102 @@ game.wfrp4e.config.symptomEffects = {
             }
         }
     }
+
+if (game.modules.get("wfrp4e-lustria") && game.modules.get("wfrp4e-lustria").active) {
+	game.wfrp4e.config.species["skink"] = "Eslizón"
+	game.wfrp4e.config.speciesSkills["skink"] = ["Atletismo", "Escalar", "Esquivar", "Cuerpo a Cuerpo (Básico)", "Supervivencia", "Percepción", "A Distancia (Arco, Cerbatana o Arrojadiza)", "Movimiento silencioso (Rural)"]
+	game.wfrp4e.config.speciesTalents["skink"] = ["Disparo infalible", "Sangre fría", "Reflejos rápidos", "Dedos ágiles", "Espabilado", "Guerrero nato"]
+	game.wfrp4e.config.speciesTraits["skink"] = ["Anfibio", "Arbóreo", "Armadura (1, Piel escamosa)", "De sangre fría", "Tamaño (Pequeño)", "Visión nocturna"],
+
+	game.wfrp4e.config.species["chameleonskink"] = "Eslizón camaleón"
+	game.wfrp4e.config.speciesSkills["chameleonskink"] = ["Atletismo", "Escalar", "Esquivar", "Cuerpo a Cuerpo (Básico)", "Supervivencia", "Percepción", "A Distancia (Arco, Cerbatana o Arrojadiza)", "Movimiento silencioso (Rural)"]
+	game.wfrp4e.config.speciesTalents["chameleonskink"] = ["Disparo infalible", "Sangre fría", "Reflejos rápidos", "Dedos ágiles", "Espabilado"]
+	game.wfrp4e.config.speciesTraits["chameleonskink"] = ["Anfibio", "Arbóreo", "Armadura (1, Piel escamosa)", "Camaleónico", "De sangre fría", "Sentidos desarrollados (Vista)", "Sigiloso", "Tamaño (Pequeño)", "Visión nocturna"]
+	
+  // Disorientation section
+	game.wfrp4e.config.symptoms["disorientation"] = "Desorientación"
+	game.wfrp4e.config.symptomDescriptions["disorientation"] = "Sufres una enfermedad que afecta a tu equilibrio, lo que dificulta mantenerte en pie, así como afecta a tu concentración. Todos los Chequeos que se basan en Agilidad, Destreza o Inteligencia sufren un penalizador de -1NE mientras sufres de Desorientación."
+	game.wfrp4e.config.symptomTreatment["disorientation"] = "No hay tratamiento, el síntoma simplemente termina cuando lo hace la enfermedad que la causa."
+
+	game.wfrp4e.config.symptomEffects["disorientation"] = {
+     name: "Desorientación",
+     img: "modules/wfrp4e-core/icons/diseases/disease.png",
+     flags: {
+        wfrp4e: {
+            symptom: true,
+        }
+     },
+     system: {
+        transferData: {
+            type: "document"
+        },
+        scriptData: [
+          {
+            label: "Desorientación",
+            trigger: "prefillDialog",
+            script: 'let applicableCharacteristics = ["ag", "dex", "int"]\n if (args.type == "characteristic") { \n if (applicableCharacteristics.includes(args.item)) \n args.prefillModifiers.slBonus -= 1\n } else if (args.type == "skill") { \n if (applicableCharacteristics.includes(args.item.characteristic.value)) \n args.prefillModifiers.slBonus -= 1\n } \n '
+          }
+        ]
+     }
+	}
+
+  // Organ Failure section
+	game.wfrp4e.config.symptoms["organfailure"] = "Fallo orgánico"
+	game.wfrp4e.config.symptomDescriptions["organfailure"] = '<p>Parte de tu cuerpo está gravemente afectado por la enfermedad. Consulta la tabla siguiente para determinar los efectos, dependiendo de la parte del cuerpo afectada.</p> <blockquote class="sidebar"> <h4 style="text-transform:uppercase" class="no-toc sidebar-title"><em>Parte del cuerpo afectada</em></h4> <table style="width:100%;height:272px" border="1"> <tbody><tr style="height:17px"> <td style="height:17px;text-align:center" data-colwidth="96"> <p> <em><strong>Parte del cuerpo</strong></em></p> </td> <td style="height:17px;text-align:center"> <p><em><strong>Efectos</strong></em></p> </td> </tr><tr> <td data-colwidth="96"> <p style="text-align: center;"><em>Ojos</em></p> </td> <td> <p><em>Los Chequeos de Percepción que dependen de la vista sufren un penalizador de -3 NE.</em></p> </td> </tr><tr> <td data-colwidth="96"> <p style="text-align: center;"><em>Nariz</em></p> </td> <td> <p><em>Los Chequeos de Percepción que dependen del olfato sufren un penalizador de -3 NE.</em></p> </td> </tr><tr> <td data-colwidth="96"> <p style="text-align: center;"><em>Orejas</em></p> </td> <td> <p><em>Los Chequeos de Percepción que dependen del oído sufren un penalizador de -3 NE.</em></p> </td> </tr><tr> <td data-colwidth="96"> <p style="text-align: center;"><em>Boca</em></p> </td> <td> <p><em>Los Chequeos de Hablar idioma sufren un penalizador de -3 NE.</em></p> </td> </tr></tbody> </table> </blockquote>'
+	game.wfrp4e.config.symptomTreatment["organfailure"] = "Se pueden adquirir ungüentos calmantes en cualquier boticario de calidad, diez dosis por un chelín. La aplicación de la dosis alivia el síntoma durante [[/r 1d10]] horas."
+
+	game.wfrp4e.config.symptomEffects["organfailure"] = {
+     name: "Fallo orgánico",
+     img: "modules/wfrp4e-core/icons/diseases/disease.png",
+     system: {
+        transferData: {
+            type: "document"
+        },
+        scriptData: [
+          {
+            trigger: "dialog",
+            script: "args.fields.modifier -= 20;",
+            options: {
+                activateScript: "return true;"
+            }
+          },
+          {
+            trigger: "rollTest",
+            label: "Chequeo fallado",
+            script: `if (args.test.failed)
+                        {
+                          let SL = Number(args.test.result.SL)
+                          if (SL <= -2 && SL > -4)
+                            this.actor.addCondition("stunned")
+                          else if (SL <= -4 && SL > -6)
+                            this.script.scriptMessage(this.actor.prototypeToken.name + " must make a <b>Willpower</b> Test or fall @Condition[Prone].")
+                          else if (SL <= -6)
+                            this.actor.addCondition("unconscious")
+                        }`
+          }
+        ]
+    }
+  }
+
+  // Parasitization section
+	game.wfrp4e.config.symptoms["parasitization"] = "Parasitación"
+	game.wfrp4e.config.symptomDescriptions["parasitization"] = '<p>La parasitación es más una enfermedad subyacente que un síntoma. Los efectos de la parasitación son en realidad los otros síntomas que aparecen junto a él. Éstos son causados por el hecho de que el PJ que padece la enfermedad sea huésped de un organismo que vive en su interior.</p><p>Las enfermedades que implican parasitación pueden ser especialmente largas y pesadas, pero mientras otros síntomas pueden tratarse individualmente, seguirá siendo un peligro hasta que la parasitación sea eliminada.</p>'
+	game.wfrp4e.config.symptomTreatment["parasitization"] = "La única forma fiable de tratar la parasitación es hacer que el cuerpo del huésped se vuelva hostil para el parásito que lo habita. Esto implica que el huésped debe sufrir 1 o + Estados de Envenenado durante un número de Asaltos igual al Bonificador por Resistencia de la criatura que causó la enfermedad. Después de ese número hayan pasado ese número de Asaltos, la criatura parásita debe superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Aguante</strong> y, si se fracasa, el parásito muere. Siempre que sobreviva al Chequeo, el PJ se recupera de la enfermedad al día siguiente."
+
+	game.wfrp4e.config.symptomEffects["parasitization"] = {
+     name: "Parasitación",
+     img: "modules/wfrp4e-core/icons/diseases/disease.png",  
+     transfer: true,
+     flags: {
+      wfrp4e: {
+      }
+    }
+  }
+
+	game.wfrp4e.config.weaponQualities["volley"] = "Andanada"
+	game.wfrp4e.config.propertyHasValue["volley"] = true;
+	game.wfrp4e.config.qualityDescriptions["volley"] = "El arma puede realizar varios disparos a la vez, indicados por el nivel de esta cualidad. Cada disparo impacta por separado. El índice de daño se reduce en 4 cuando se dispara en modo Andanada."
+  }
 })
 
 Hooks.once("init", async function () {
@@ -793,6 +889,18 @@ game.wfrp4e.config.PrepareSystemItems = function() {
                                         this.item.updateSource({name : this.item.name + " (" + name + ")" })
                                     }
                                     `
+                                },
+                                {
+                                    trigger: "endRound",
+                                    label: "Tirada para quitar Miedo",
+                                    script: `
+                                        const test = await this.actor.setupExtendedTest(this.effect.item, {
+                                            fields: {difficulty: "challenging"}, 
+                                            skipTargets: true, 
+                                            appendTitle :  \` - \${this.effect.name}\`, 
+                                        });
+                                        await test.roll();
+                                    `,
                                 }
                             ]
                         }
@@ -2145,7 +2253,7 @@ game.wfrp4e.config.scriptTriggers = {
     "immediate" : "Inmediato",
     "dialog" : "Diálogo",
     "addItems" : "Añadir Objetos",
-    "preUpdate" : "Pre-Actualizar",
+    "preUpdateDocument" : "Pre-Actualizar Documento",
     "update" : "Al Actualizar",
     "equipToggle" : "Cambiar Equipado",
     "targeted" : "Hecho Objetivo",
@@ -2183,6 +2291,7 @@ game.wfrp4e.config.scriptTriggers = {
     "rollChannellingTest" : "Tirar Chequeo de Canalización",
     "rollPrayerTest" : "Tirar Chequeo de Plegaria",
     "rollTraitTest" : "Tirar Chequeo de Rasgo",
+    "castSpellPrayer" : "Lanzar Hechizo o Plegaria",
     "preOpposedAttacker" : "Pre-Enfrentado Atacante",
     "preOpposedDefender" : "Pre-Enfrentado Defensor",
     "opposedAttacker" : "Enfrentado Atacante",

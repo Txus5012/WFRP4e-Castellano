@@ -1,0 +1,1389 @@
+{
+	"label": "Objetos (Lustria)",
+    "folders": {
+        "Careers": "Carreras",
+		"Interpreter": "Intérprete",
+		"Oracle": "Oráculo",
+		"Survivalist": "Superviviente",
+		"Trailblazer": "Vanguardista",
+		"Jungle Maladies": "Enfermedades de la jungla",
+		"Miracles": "Milagros",
+		"Spells": "Hechizos",
+		"High Magic": "Magia suprema",
+		"Lore of Shadows": "Saber de las Sombras",
+		"Slann High Magic": "Magia suprema de los Slann",
+		"WAAAGH! Magic": "Magia ¡WAAAGH!",
+		"Talents": "Talentos",
+		"Traits": "Rasgos",
+		"Slann Special Rules": "Reglas especiales de los Slann",
+		"Trappings": "Accesorios",
+		"Weapons": "Armas",
+		"Vehicles Modifiers": "Modificaciones de vehículos"
+    },
+	"mapping": {
+		"gmdescription": "system.gmdescription.value",
+	    "skills": "system.skills",
+	    "talents": "system.talents",
+	    "class": {
+		      "path": "system.class.value",
+		      "converter": "career_class"
+		    },
+	    "careergroup": {
+		      "path": "system.careergroup.value",
+		      "converter": "career_careergroup"
+		    },
+	    "trappings": "system.trappings",
+		"range": {
+			"path": "system.range.value",
+			"converter": "spells_duration_range_target"
+			},
+		"special": "system.special.value",
+		"effects": {
+			"path": "effects",
+			"converter": "effects"
+			},
+		"duration_text": "system.duration.text",
+		"contraction": "system.contraction.value",
+		"incubation": "system.incubation.value",
+		"symptoms": "system.symptoms.value",
+		"spell_duration": {
+			"path": "system.duration.value",
+			"converter": "spells_duration_range_target"
+		},
+		"target": {
+			"path": "system.target.value",
+			"converter": "spells_duration_range_target"
+		},    
+		"damage": {
+			"path": "system.damage.value",
+			"converter": "spells_damage"
+		},
+		"lore": {
+			"path": "system.lore.value",
+			"converter": "traits_specification"
+		},
+		"modifier": "system.modifier.value",
+		"roll": "system.rollable.skill",
+		"specification": {
+			"path": "system.specification.value",
+			"converter": "traits_specification"
+			},
+		"tests": "system.tests.value"
+	},
+	"entries": [
+		{
+			"id": "Translator",
+			"name": "Traductor",
+			"skills": ["Sobornar", "Carisma", "Esquivar", "Cotilleo", "Regatear", "Hablar idioma (Cualquiera)", "Cuerpo a cuerpo (Básica)", "Percepción", "Investigar", "Lengua secreta (Cualquiera)"],
+			"talents": ["Lector rápido", "Leer labios", "Leer y escribir", "Lingüística"],
+			"trappings" : ["Libro de frases", "Lupa"],
+			"description": "<p>@UUID[Compendium.wfrp4e-lustria.journals.JournalEntry.3YmIgQceF2pVhr4U.JournalEntryPage.ULhjCDrcZ2Avwe74]{Intérprete}</p>"
+		},
+		{
+			"id": "Interpreter",
+			"name": "Intérprete",
+			"skills": ["Sobornar", "Carisma", "Esquivar", "Cotilleo", "Regatear", "Hablar idioma (Cualquiera)", "Cuerpo a cuerpo (Básica)", "Percepción", "Investigar", "Lengua secreta (Cualquiera)", "Carisma animal", "Consumir alcohol", "Frialdad", "Hablar idioma (Cualquiera)", "Orientación", "Tasar"],
+			"talents": ["Alentador", "Etiqueta (Cualquiera)", "Negociador", "Sobornador"],
+			"trappings" : ["Amuleto", "Baraja de cartas", "Ropa (De estilo local)"],
+			"description": "<p>@UUID[Compendium.wfrp4e-lustria.journals.JournalEntry.3YmIgQceF2pVhr4U.JournalEntryPage.ULhjCDrcZ2Avwe74]{Intérprete}</p>"
+		},
+		{
+			"id": "Polyglot",
+			"name": "Políglota",
+			"skills": ["Sobornar", "Carisma", "Esquivar", "Cotilleo", "Regatear", "Hablar idioma (Cualquiera)", "Cuerpo a cuerpo (Básica)", "Percepción", "Investigar", "Lengua secreta (Cualquiera)", "Carisma animal", "Consumir alcohol", "Frialdad", "Hablar idioma (Cualquiera)", "Orientación", "Tasar", "Arte (Cualquiera)", "Hablar idioma (Cualquiera)", "Intimidar", "Supervivencia"],
+			"talents": ["Alentador", "Etiqueta (Cualquiera)", "Negociador", "Sobornador"],
+			"trappings" : ["Imitador", "Intelectual", "Parloteo", "Sentidos desarrollados (Oído))"],
+			"description": "<p>@UUID[Compendium.wfrp4e-lustria.journals.JournalEntry.3YmIgQceF2pVhr4U.JournalEntryPage.ULhjCDrcZ2Avwe74]{Intérprete}</p>"
+		},
+		{
+			"id": "Polymath",
+			"name": "Polímata",
+			"skills": ["Sobornar", "Carisma", "Esquivar", "Cotilleo", "Regatear", "Hablar idioma (Cualquiera)", "Cuerpo a cuerpo (Básica)", "Percepción", "Investigar", "Lengua secreta (Cualquiera)", "Carisma animal", "Consumir alcohol", "Frialdad", "Hablar idioma (Cualquiera)", "Orientación", "Tasar", "Arte (Cualquiera)", "Hablar idioma (Cualquiera)", "Intimidar", "Supervivencia", "Hablar idioma (Cualquiera)", "Sabiduría académica (Cualquiera)"],
+			"talents": ["Celo ferviente", "Memoria visual", "Numismático", "Tono perfecto"],
+			"trappings" : ["Sorprendente biblioteca personal"],
+			"description": "<p>@UUID[Compendium.wfrp4e-lustria.journals.JournalEntry.3YmIgQceF2pVhr4U.JournalEntryPage.ULhjCDrcZ2Avwe74]{Intérprete}</p>"
+		},
+		{
+			"id": "Visionary",
+			"name": "Visionario",
+			"skills": ["Carisma animal", "Esquivar", "Intuición", "Orientación", "Supervivencia", "Percepción", "A distancia (Arrojadiza)", "Montar (Cualquiera)", "Lengua secreta (Hombres lagarto)", "Seguir rastros"],
+			"talents": ["Clarividencia", "Detectar artefacto", "Sangre fría", "Sexto sentido"],
+			"trappings": ["Bastón"],
+			"description": "<p>@UUID[Compendium.wfrp4e-lustria.journals.JournalEntry.3YmIgQceF2pVhr4U.JournalEntryPage.9PE6ELDbJipLrEQx]{Oráculo}</p>"
+		},
+		{
+			"id": "Oracle",
+			"name": "Oráculo",
+			"skills": ["Carisma animal", "Esquivar", "Intuición", "Orientación", "Supervivencia", "Percepción", "A distancia (Arrojadiza)", "Montar (Cualquiera)", "Lengua secreta (Hombres lagarto)", "Seguir rastros", "Adiestrar animales", "Criar animales", "Cuerpo a cuerpo (Arma de asta)", "Frialdad", "Intimidar", "Tasar"],
+			"talents": ["Disparo seguro", "Jinete experto", "Orientarse", "Sentir magia"],
+			"trappings": ["Jabalina", "Máscara de los Ancestrales", "Vara de zahorí"],
+			"description": "<p>@UUID[Compendium.wfrp4e-lustria.journals.JournalEntry.3YmIgQceF2pVhr4U.JournalEntryPage.9PE6ELDbJipLrEQx]{Oráculo}</p>"
+		},
+		{
+			"id": "Priest of the Old Ones",
+			"name": "Sacerdote de los Ancestrales",
+			"skills": ["Carisma animal", "Esquivar", "Intuición", "Orientación", "Supervivencia", "Percepción", "A distancia (Arrojadiza)", "Montar (Cualquiera)", "Lengua secreta (Hombres lagarto)", "Seguir rastros", "Adiestrar animales", "Criar animales", "Cuerpo a cuerpo (Arma de asta)", "Frialdad", "Intimidar", "Tasar", "Hablar idioma (Lengua de la magia)", "Mando", "Sabiduría académica (Magia)", "Sanar"],
+			"talents": ["Magia arcana (Bestias o Cielos)", "Magia menor", "Leer y escribir", "Suerte"],
+			"trappings": ["Colección de plumas y amuletos"],
+			"description": "<p>@UUID[Compendium.wfrp4e-lustria.journals.JournalEntry.3YmIgQceF2pVhr4U.JournalEntryPage.9PE6ELDbJipLrEQx]{Oráculo}</p>"
+		},
+		{
+			"id": "Speaker of Truth",
+			"name": "Orador de la verdad",
+			"skills": ["Carisma animal", "Esquivar", "Intuición", "Orientación", "Supervivencia", "Percepción", "A distancia (Arrojadiza)", "Montar (Cualquiera)", "Lengua secreta (Hombres lagarto)", "Seguir rastros", "Adiestrar animales", "Criar animales", "Cuerpo a cuerpo (Arma de asta)", "Frialdad", "Intimidar", "Tasar", "Hablar idioma (Lengua de la magia)", "Mando", "Sabiduría académica (Magia)", "Sanar", "Canalización (Azyr o Ghur)", "Sabiduría académica (Ancestrales)"],
+			"talents": ["Afinidad con el Aethyr", "Alma pura", "Dicción instintiva", "Hechicero de guerra"],
+			"trappings": ["Objeto mágico recuperado"],
+			"description": "<p>@UUID[Compendium.wfrp4e-lustria.journals.JournalEntry.3YmIgQceF2pVhr4U.JournalEntryPage.9PE6ELDbJipLrEQx]{Oráculo}</p>"
+		},
+		{
+			"id": "Subsister",
+			"name": "Subsistente",
+			"skills": ["Frialdad", "Esquivar", "Aguante", "Sanar", "Intuición", "Cuerpo a cuerpo (Básica)", "Supervivencia", "Percepción", "Movimiento silencioso (Rural)", "Nadar"],
+			"talents": ["Ayunador", "Recio", "Sexto sentido", "Tenaz"],
+			"trappings": ["Arma de mano"],
+			"description": "<p>@UUID[Compendium.wfrp4e-lustria.journals.JournalEntry.3YmIgQceF2pVhr4U.JournalEntryPage.KRNrcQm9kBXqzXmO]{Superviviente}"
+		},
+		{
+			"id": "Survivalist",
+			"name": "Superviviente",
+			"skills": ["Frialdad", "Esquivar", "Aguante", "Sanar", "Intuición", "Cuerpo a cuerpo (Básica)", "Supervivencia", "Percepción", "Movimiento silencioso (Rural)", "Nadar", "A distancia (Cualquiera)", "Consumir alcohol", "Intimidar", "Orientación", "Poner trampas", "Sabiduría académica (Local)"],
+			"talents": ["Implacable", "Primeros auxilios", "Quijada de hierro", "Resistencia (Cualquiera)"],
+			"trappings": ["Botas resistentes", "Cuerda", "Honda", "Bala de piedra", "Odre", "Saco de dormir"],
+			"description": "<p>@UUID[Compendium.wfrp4e-lustria.journals.JournalEntry.3YmIgQceF2pVhr4U.JournalEntryPage.KRNrcQm9kBXqzXmO]{Superviviente}"
+		},
+		{
+			"id": "Wild Whisperer",
+			"name": "Encantador de lo salvaje",
+			"skills": ["Frialdad", "Esquivar", "Aguante", "Sanar", "Intuición", "Cuerpo a cuerpo (Básica)", "Supervivencia", "Percepción", "Movimiento silencioso (Rural)", "Nadar", "A distancia (Cualquiera)", "Consumir alcohol", "Intimidar", "Orientación", "Poner trampas", "Sabiduría académica (Local)", "Atletismo", "Carisma animal", "Lengua secreta (Rurales)", "Seguir rastros"],
+			"talents": ["Amenazador", "Experto en trampas", "Orientarse", "Vista excelente"],
+			"trappings": ["Trampas para animales", "Repertorio de reclamos para pájaros"],
+			"description": "<p>@UUID[Compendium.wfrp4e-lustria.journals.JournalEntry.3YmIgQceF2pVhr4U.JournalEntryPage.KRNrcQm9kBXqzXmO]{Superviviente}"
+		},
+		{
+			"id": "Wilderness Instructor",
+			"name": "Instructor de la Naturaleza",
+			"skills": ["Frialdad", "Esquivar", "Aguante", "Sanar", "Intuición", "Cuerpo a cuerpo (Básica)", "Supervivencia", "Percepción", "Movimiento silencioso (Rural)", "Nadar", "A distancia (Cualquiera)", "Consumir alcohol", "Intimidar", "Orientación", "Poner trampas", "Sabiduría académica (Local)", "Atletismo", "Carisma animal", "Lengua secreta (Rurales)", "Seguir rastros", "Criar animales", "Mando"],
+			"talents": ["Bien equipado", "Golpe cuidadoso", "Sentidos desarrollados (Oído)", "Voluntad de hierro"],
+			"trappings": ["Kit de antídotos", "Mapa", "Raciones para un día más", "Vendas"],
+			"description": "<p>@UUID[Compendium.wfrp4e-lustria.journals.JournalEntry.3YmIgQceF2pVhr4U.JournalEntryPage.KRNrcQm9kBXqzXmO]{Superviviente}"
+		},
+		{
+			"id": "Pioneer",
+			"name": "Pionero",
+			"skills": ["Escalar", "Frialdad", "Aguante", "Cuerpo a cuerpo (Básica)", "Orientación", "Supervivencia", "Percepción", "Remar", "Navegar (Cualquiera)", "Nadar"],
+			"talents": ["Orientarse", "Pies ligeros", "Tenaz", "Zancada (Cualquiera)"],
+			"trappings": ["Palo para caminar", "Botas resistentes", "Machete", "Odre", "Olla"],
+			"description": "<p>@UUID[Compendium.wfrp4e-lustria.journals.JournalEntry.3YmIgQceF2pVhr4U.JournalEntryPage.qMKkq1yC6z5upnrE]{Vanguardista}</p>"
+		},
+		{
+			"id": "Trailblazer",
+			"name": "Vanguardista",
+			"skills": ["Escalar", "Frialdad", "Aguante", "Cuerpo a cuerpo (Básica)", "Orientación", "Supervivencia", "Percepción", "Remar", "Navegar (Cualquiera)", "Nadar", "A distancia (De Pólvora Negra)", "Atletismo", "Cotilleo", "Montar (Caballo)", "Movimiento silencioso (Rural)", "Oficio (Calígrafo)"],
+			"talents": ["Errante", "Escalador", "Levantarse de un salto", "Sentidos desarrollados (Vista)"],
+			"trappings": ["Mapa", "Pistola", "10 Disparos", "Telescopio", "Tiza"],
+			"description": "<p>@UUID[Compendium.wfrp4e-lustria.journals.JournalEntry.3YmIgQceF2pVhr4U.JournalEntryPage.qMKkq1yC6z5upnrE]{Vanguardista}</p>"
+		},
+		{
+			"id": "Pacesetter",
+			"name": "Marcasendas",
+			"skills": ["Escalar", "Frialdad", "Aguante", "Cuerpo a cuerpo (Básica)", "Orientación", "Supervivencia", "Percepción", "Remar", "Navegar (Cualquiera)", "Nadar", "A distancia (De Pólvora Negra)", "Atletismo", "Cotilleo", "Montar (Caballo)", "Movimiento silencioso (Rural)", "Oficio (Calígrafo)", "Conducir", "Esquivar", "Investigar", "Sobornar"],
+			"talents": ["¡A correr!", "Corredor", "Recio", "Viajero curtido"],
+			"trappings": ["Gancho de agarre", "Herramientas de un Oficio (Brújula)", "Saco de dormir"],
+			"description": "<p>@UUID[Compendium.wfrp4e-lustria.journals.JournalEntry.3YmIgQceF2pVhr4U.JournalEntryPage.qMKkq1yC6z5upnrE]{Vanguardista}</p>"
+		},
+		{
+			"id": "Expedition Leader",
+			"name": "Líder de expedición",
+			"skills": ["Escalar", "Frialdad", "Aguante", "Cuerpo a cuerpo (Básica)", "Orientación", "Supervivencia", "Percepción", "Remar", "Navegar (Cualquiera)", "Nadar", "A distancia (De Pólvora Negra)", "Atletismo", "Cotilleo", "Montar (Caballo)", "Movimiento silencioso (Rural)", "Oficio (Calígrafo)", "Conducir", "Esquivar", "Investigar", "Sobornar", "Mando", "Tasar"],
+			"talents": ["Etiqueta (Soldados)", "Inspirador", "Leer y escribir", "Negociador"],
+			"trappings": ["Caballo con silla de montar y arreos", "Cayado", "Compañía de exploradores", "Tienda"],
+			"description": "<p>@UUID[Compendium.wfrp4e-lustria.journals.JournalEntry.3YmIgQceF2pVhr4U.JournalEntryPage.qMKkq1yC6z5upnrE]{Vanguardista}</p>"
+		},
+		{
+			"id": "Blowpipe",
+			"name": "Cerbatana"
+		},
+		{
+			"id": "Blowpipe Dart",
+			"name": "Dardo de cerbatana"
+		},
+		{
+			"id": "Eagle Claw",
+			"name": "Garra de Águila",
+			"description": "<p>Esta elegante balista, fabricada en forma de ave rapaz, acelera mágicamente los virotes a velocidades aterradoras. Uno de estos puede lanzar un solo virote del tamaño de una jabalina o una batería de varios virotes de menor tamaño. Los virotes hechizados con una potencia devastadora se utilizan en situaciones excepcionales.</p>"
+		},
+		{
+			"id": "Eagle Eye",
+			"name": "Ojo de Águila",
+			"description": "<p>El Ojo de Águila es una versión más pequeña del Garra de Águila, pero sin capacidad de salvas. Es el favorito de los equipos de los Escoltas Celestes por su diseño compacto y su capacidad para asestar un golpe potente.</p>"
+		},
+		{
+			"id": "Engine of the Gods’ Burning Alignment",
+			"name": "Artilugio de los dioses Convergencia de llamas",
+			"description": "<p>Además de infligir Daño, estas armas hacen que el objetivo sufra 1+NE de Estados de @Condition[Ardiendo].</p>",
+			"effects": [{
+				"name":"Artilugio de los dioses Convergencia de llamas",
+				"scriptData": [
+					{"label":"Artilugio de los dioses Convergencia de llamas"}
+					]
+				}]
+		},
+		{
+			"id": "Engine of the Gods’ Power of the Ancients",
+			"name": "Artilugio de los dioses El poder de los Ancestrales",
+			"description": "<p>Además de infligir Daño, estas armas hacen que el objetivo sufra 1+NE de Estados de @Condition[Ardiendo].</p>",
+			"effects": [{
+				"name":"Artilugio de los dioses El poder de los Ancestrales",
+				"scriptData": [
+					{"label":"Artilugio de los dioses El poder de los Ancestrales"}
+					]
+				}]
+		},
+		{
+			"id": "Giant Blowpipe",
+			"name": "Cerbatana gigante"
+		},
+		{
+			"id": "Giant Bow",
+			"name": "Arco gigante"
+		},
+		{
+			"id": "Obsinite Club",
+			"name": "Garrote de obsinita"
+		},
+		{
+			"id": "Obsinite Spiked Maul",
+			"name": "Mayal con pinchos de obsinita"
+		},
+		{
+			"id": "Solar Engine’s Beam of Chotec",
+			"name": "Artilugio del Sol Rayo de Chotec",
+			"description": "<p>Además de infligir Daño, estas armas hacen que el objetivo sufra 1+NE de Estados de @Condition[Ardiendo].</p>",
+			"effects": [{
+				"name":"Artilugio del Sol Rayo de Chotec",
+				"scriptData": [
+					{"label":"Artilugio del Sol Rayo de Chotec"}
+					]
+				}]
+		},
+		{
+			"id": "Bilious Ague",
+			"name": "Fiebre Biliosa",
+			"description": "<p>La fiebre biliosa es una infección común en Lustria, especialmente alrededor de las ruinas de la ciudad templo de @UUID[JournalEntry.K1hbyeVEZOxFcWT2]{Quetza}. La enfermedad no es terriblemente peligrosa y es probablemente un vestigio de una cepa fallida de una enfermedad desarrollada por el Clan Pestilens. Se anuncia con una aparición repentina de náuseas que provocan vómitos de grandes cantidades de líquido amarillento, seguidos de una fiebre que cede en un día y luego un periodo más largo de fatiga y malestar.</p><blockquote class=\"foundry-note\"><p>La progresión de los Síntomas debe manejarse manualmente. Puedes añadir Síntomas individuales a un Actor a través de la pestaña <strong>Efectos</strong>.</p></blockquote>",
+			"contraction": "Al fracasar en un Chequeo Fácil (+40) de Aguante tras el contacto con una persona infectada.",
+			"symptoms": "Náuseas, después Fiebre y después Malestar"
+		},
+		{
+			"id": "Blackwater Fever",
+			"name": "Fiebre de Aguasnegras",
+			"description": "<p>Las víctimas de esta insidiosa enfermedad experimentan días de fiebre intermitente, pústulas escamosas y una orina oscura que duele al miccionar.</p>",
+			"contraction": "Al fracasar en un Chequeo Fácil (+40) de Aguante tras beber agua infectada.",
+			"symptoms": "Fiebre, Malestar, Plaga",
+			"effects": [{
+				"name":"Fiebre",
+				"scriptData": [
+					{"label":"Fiebre"}
+					]
+				},
+				{
+				"name":"Malestar",
+				"scriptData": [
+					{"label":"Malestar","script":"\n                    if (game.user.isUniqueGM)\n                    {\n                        let fatigued = args.actor.hasCondition(\"fatigued\")\n                        if (!fatigued)\n                        {\n                            args.actor.addCondition(\"fatigued\")\n                            ui.notifications.notify(\"Fatiga añadida a \" + args.actor.name + \" que no puede ser quitada hasta que el síntoma Malestar se haya ido.\")\n                        }\n                    }\n                    "}
+					]
+				},
+				{
+				"name":"Plaga",
+				"scriptData": [
+					{"label":"Plaga"}
+					]
+				}]
+		},
+		{
+			"id": "Bleeding Eyerot",
+			"name": "Peste Sangraojos",
+			"description": "<p>Esta infección provoca una secreción espumosa de color amarillo verdoso que sale por los ojos, oscureciendo la visión del enfermo. El enfermo llora un torrente constante de lágrimas ensangrentadas y cada vez le cuesta más ver con claridad. Aunque la enfermedad rara vez es mortal, deja a sus víctimas debilitadas e incapacitadas.</p>",
+			"contraction": "Al fracasar en un Chequeo Normal (+20) de Aguante después de beber agua infectada.",
+			"symptoms": "Persistente (Desafiante), Fallo orgánico (Ojos)",
+			"effects": [{
+				"name":"Persistente (Desafiante)",
+				"scriptData": [
+					{"label":"Persistente (Desafiante)"}
+					]
+				},
+				{
+				"name":"Fallo orgánico (Ojos)",
+				"scriptData": [
+					{"label":"Fallo orgánico (Ojos)"}
+					]
+				}]
+		},
+		{
+			"id": "Blindwyrm Fits",
+			"name": "Mordedura de Gusano Ciego",
+			"description": "<p>Las molestias abdominales breves son los primeros signos de esta infección. A medida que los diminutos parásitos se dan un festín con el contenido de los intestinos de la víctima y se hacen más grandes, el malestar se convierte en un dolor agudo y punzante cuando el cuerpo intenta expulsar los gusanos lo antes posible con un episodio tras otro de flujo explosivo y sangriento.</p>",
+			"contraction": "Puede contraerse al ser mordido por un gusano ciego pálido.",
+			"duration_text": "Hasta que termine el síntoma Parasitación.",
+			"symptoms": "Disentería, Náuseas, Parasitación",
+			"effects": [{
+				"name":"Diarrea (Fuerte)",
+				"scriptData": [
+					{"label":"Diarrea (Fuerte)"}
+					]
+				},
+				{
+				"name":"Náuseas",
+				"scriptData": [
+					{"label":"Náuseas"}
+					]
+				},
+				{
+				"name":"Parasitación",
+				"scriptData": [
+					{"label":"Parasitación"}
+					]
+				}]
+		},
+		{
+			"id": "IsNQH867Y58pZgq6",
+			"name": "Podredumbre Cerebral",
+			"description": "<p>Se trata de una temible enfermedad causada por el @UUID[Compendium.wfrp4e-lustria.actors.Actor.7hzNlFlmBPhtzc3R]{gusano cerebral}, un gusano parásito acuático. En su estado larvario, puede entrar en una víctima mientras está en el agua, a través de cualquier orificio. El gusano cerebral se abre paso hasta el cerebro, donde se alimenta de sangre mientras incuba.</p>",
+			"contraction": "Si la víctima sufre un golpe crítico en la cabeza al ser atacado por un gusano cerebral.",
+			"duration_text": "La enfermedad dura hasta que termine el síntoma de Parasitación",
+			"symptoms": "Convulsiones, Desorientación, Fallo orgánico (Ojos y nariz), Parasitación",
+			"effects": [{
+				"name":"Convulsiones",
+				"scriptData": [
+					{"label":"Convulsiones","script":"\n                        let modifier = 0\n                        if (this.effect.name.includes(\"Moderado\"))\n                            modifier = -20\n                        else\n                            modifier = -10\n                        \n                        let applicableCharacteristics = [\"ws\", \"bs\", \"s\", \"ag\", \"t\", \"dex\"]\n                        if (args.type == \"weapon\")\n                            args.fields.modifier += modifier\n                        else if (args.type == \"characteristic\")\n                        {\n                            if (applicableCharacteristics.includes(args.item))\n                                args.fields.modifier += modifier\n                        }\n                        else if (args.type == \"skill\")\n                        {\n                            if (applicableCharacteristics.includes(args.item.characteristic.key))\n                                args.fields.modifier += modifier\n                        }"}
+					]
+				},
+				{
+				"name":"Desorientación",
+				"scriptData": [
+					{"label":"Desorientación"}
+					]
+				},
+				{
+				"name":"Fallo orgánico (Ojos y nariz)",
+				"scriptData": [
+					{"label":"Fallo orgánico (Ojos y nariz)"}
+					]
+				},
+				{
+				"name":"Parasitación",
+				"scriptData": [
+					{"label":"Parasitación"}
+					]
+				}]
+		},
+		{
+			"id": "Cataleptic Ague",
+			"name": "Fiebre Cataléptica",
+			"description": "<p>Una breve pero temible plaga consistente en fiebres severas causando una intensa rigidez muscular y un riesgo real de muerte. La fiebre cataléptica se propaga a través de la picadura de animales infectados, entre los que destaca el @UUID[Compendium.wfrp4e-lustria.actors.Actor.ma5zsZvsnmBaNaLH]{murciélago hematófago}.</p>",
+			"contraction": "Al fracasar un Chequeo Desafiante (+0) de Aguante tras ser mordido por un murciélago hematófago.",
+			"symptoms": "Plaga, Convulsiones, Fiebre",
+			"effects": [{
+				"name":"Plaga",
+				"scriptData": [
+					{"label":"Plaga"}
+					]
+				},
+				{
+				"name":"Convulsiones",
+				"scriptData": [
+					{"label":"Convulsiones","script":"\n                        let modifier = 0\n                        if (this.effect.name.includes(\"Moderado\"))\n                            modifier = -20\n                        else\n                            modifier = -10\n                        \n                        let applicableCharacteristics = [\"ws\", \"bs\", \"s\", \"ag\", \"t\", \"dex\"]\n                        if (args.type == \"weapon\")\n                            args.fields.modifier += modifier\n                        else if (args.type == \"characteristic\")\n                        {\n                            if (applicableCharacteristics.includes(args.item))\n                                args.fields.modifier += modifier\n                        }\n                        else if (args.type == \"skill\")\n                        {\n                            if (applicableCharacteristics.includes(args.item.characteristic.key))\n                                args.fields.modifier += modifier\n                        }"}
+					]
+				},
+				{
+				"name":"Fiebre",
+				"scriptData": [
+					{"label":"Fiebre"}
+					]
+				}]
+		},
+		{
+			"id": "Choking Lungblight",
+			"name": "Plaga Pulmonar Asfixiante",
+			"description": "<p>La combinación de la humedad extrema, las esporas del moho y los gases fétidos que se filtran de pantanos y estanques de Lustria pueden provocar una afección que afecte a los pulmones. La plaga pulmonar asfixiante estrecha las vías respiratorias y provoca una tos espasmódica seguida de un estridente grito durante la inhalación.</p>",
+			"contraction": "Cada día que un PJ pase en las partes más húmedas de la jungla o la zona más miasmática de los pantanos de Lustria, deberá superar un Chequeo Normal (+20) de Aguante. Si fracasa, contraerá la plaga pulmonar asfixiante.",
+			"symptoms": "Tos y estornudos, Fiebre, Persistente, Malestar",
+			"effects": [{
+				"name":"Tos y estornudos",
+				"scriptData": [
+					{"label":"Tos y estornudos"}
+					]
+				},
+				{
+				"name":"Fiebre",
+				"scriptData": [
+					{"label":"Fiebre"}
+					]
+				},
+				{
+				"name":"Persistente",
+				"scriptData": [
+					{"label":"Persistente"}
+					]
+				},
+				{
+				"name":"Malestar",
+				"scriptData": [
+					{"label":"Malestar","script":"\n                    if (game.user.isUniqueGM)\n                    {\n                        let fatigued = args.actor.hasCondition(\"fatigued\")\n                        if (!fatigued)\n                        {\n                            args.actor.addCondition(\"fatigued\")\n                            ui.notifications.notify(\"Fatiga añadida a \" + args.actor.name + \" que no puede ser quitada hasta que el síntoma Malestar se haya ido.\")\n                        }\n                    }\n                    "}
+					]
+				},
+				{
+				"name":"Plaga",
+				"scriptData": [
+					{"label":"Plaga"}
+					]
+				},
+				{
+				"name":"Herido",
+				"scriptData": [
+					{"label":"Herido"}
+					]
+				}]
+		},
+		{
+			"id": "Fungal Takeover",
+			"name": "Dominio Fúngico",
+			"description": "<p>Esta horrenda enfermedad puede ser el resultado de atravesar una @UUID[Compendium.wfrp4e-lustria.actors.Actor.8cdze56kcU2BbnxT]{nube de esporas hematófagas}. No sólo las esporas se abren camino en la carne de los sangre caliente, sino que una vez dentro del torrente sanguíneo pueden arraigar en el sistema nervioso del cuerpo y crecen hasta que el enfermo queda reducido a un horrible híbrido, con crecimientos fúngicos brotando de su carne viva.</p>",
+			"contraction": "Una criatura de sangre caliente que sufre 1 Estado de Sangrando, provocado por una nube de esporas hematófagas, debe superar un Chequeo Normal (+20) de Aguante. Si fracasa, sufrirá dominio fúngico.",
+			"duration_text": "Como el síntoma de Parasitación",
+			"symptoms": "Desorientación, Gangrena, Malestar, Parasitación, Herido",
+			"effects": [{
+				"name":"Desorientación",
+				"scriptData": [
+					{"label":"Desorientación"}
+					]
+				},
+				{
+				"name":"Gangrena",
+				"scriptData": [
+					{"label":"Gangrena"}
+					]
+				},
+				{
+				"name":"Malestar",
+				"scriptData": [
+					{"label":"Malestar","script":"\n                    if (game.user.isUniqueGM)\n                    {\n                        let fatigued = args.actor.hasCondition(\"fatigued\")\n                        if (!fatigued)\n                        {\n                            args.actor.addCondition(\"fatigued\")\n                            ui.notifications.notify(\"Fatiga añadida a \" + args.actor.name + \" que no puede ser quitada hasta que el síntoma Malestar se haya ido.\")\n                        }\n                    }\n                    "}
+					]
+				},
+				{
+				"name":"Parasitación",
+				"scriptData": [
+					{"label":"Parasitación"}
+					]
+				},
+				{
+				"name":"Herido",
+				"scriptData": [
+					{"label":"Herido"}
+					]
+				}]
+		},
+		{
+			"id": "Necrotic Foot Rot",
+			"name": "Putrefacción Necrótica de los Pies",
+			"description": "<p>El fecundo suelo de la jungla alberga crecimientos fúngicos y diminutos organismos hambrientos de sangre. A menos que un explorador se tome su tiempo para limpiarse las botas regularmente y asegurarse de que sus pies se mantienen limpios y secos, éstos comienzan a desarrollar llagas, que conducen a la pérdida del pie.</p>",
+			"contraction": "Si un PJ de sangre caliente pasa una semana vagando por los pantanos y junglas de Lustria deben superar un Chequeo Desafiante (+0) de Supervivencia. Si fracasa contraerá la putrefacción necrótica de los pies.",
+			"symptoms": "Bubas, Gangrena (Que afecta a las piernas), Malestar, Herido",
+			"effects": [{
+				"name":"Bubas",
+				"scriptData": [
+					{"label":"Bubas"}
+					]
+				},
+				{
+				"name":"Gangrena (Que afecta a las piernas)",
+				"scriptData": [
+					{"label":"Gangrena (Que afecta a las piernas)"}
+					]
+				},
+				{
+				"name":"Malestar",
+				"scriptData": [
+					{"label":"Malestar","script":"\n                    if (game.user.isUniqueGM)\n                    {\n                        let fatigued = args.actor.hasCondition(\"fatigued\")\n                        if (!fatigued)\n                        {\n                            args.actor.addCondition(\"fatigued\")\n                            ui.notifications.notify(\"Fatiga añadida a \" + args.actor.name + \" que no puede ser quitada hasta que el síntoma Malestar se haya ido.\")\n                        }\n                    }\n                    "}
+					]
+				},
+				{
+				"name":"Herido",
+				"scriptData": [
+					{"label":"Herido"}
+					]
+				}]
+		},
+		{
+			"id": "Thought Fog",
+			"name": "Niebla de Pensamiento",
+			"description": "<p>Por obra de los @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.2ySnssbzviW8Fx0T]{Ancestrales}, hubo una vez unas poderosas protecciones mágicas que cubrían Lustria, desorientando a los invasores. En sus momentos de máxima potencia, estas protecciones guardaban la tierra de Lustria de toda intrusión, pero hoy en día, se han debilitado y los viajeros pueden llegar al continente sin desconcertarse. No obstante, aún pueden sentirse y provocan que algunos visitantes experimenten mareos y cambios de humor.</p>",
+			"contraction": "La niebla del pensamiento afecta a las personas de sangre caliente que visitan Lustria. No todo el mundo la sufre, ya que todavía no se sabe por qué a veces funciona en algunos individuos y a veces no. Todo PJ que llega a Lustria debe superar un Chequeo cuando vislumbra el continente por primera vez. Tira en @UUID[RollTable.t8Jh9ZgH5nNznLvG]{esta tabla} para ver si sucumbe.",
+			"incubation": "Instantánea",
+			"duration_text": "La niebla del pensamiento puede volverse crónica, pero la mayoría de visitantes de Lustria se acostumbran a ello. Cada semana que un PJ pase en Lustria, deben superar el Chequeo para evitarla de nuevo, si lo consiguen se libran de ella a menos que pasen un tiempo lejos de Lustria y luego regresen.",
+			"symptoms": "Desorientación",
+			"effects": [{
+				"name":"Desorientación",
+				"scriptData": [
+					{"label":"Desorientación"}
+					]
+				}]
+		},
+		{
+			"id": "Yellow Skull Fever",
+			"name": "Fiebre de la Calavera Amarilla",
+			"description": "<p>La fiebre de calavera amarilla es una enfermedad inventada por el Clan Pestilens en su guerra contra los hombres lagarto. Afecta al sistema nervioso, causando sacudidas intermitentes e involuntarios movimientos de las extremidades. Con poca frecuencia, estos espasmos se convierten en convulsiones corporales.</p>",
+			"contraction": "Al fracasar un Chequeo Fácil (+40) de Aguante tras el contacto con una persona infectada. Esta enfermedad sólo afecta a las criaturas de sangre fría.",
+			"symptoms": "Convulsiones, Fiebre, Persistente",
+			"effects": [{
+				"name":"Convulsiones",
+				"scriptData": [
+					{"label":"Convulsiones","script":"\n                        let modifier = 0\n                        if (this.effect.name.includes(\"Moderado\"))\n                            modifier = -20\n                        else\n                            modifier = -10\n                        \n                        let applicableCharacteristics = [\"ws\", \"bs\", \"s\", \"ag\", \"t\", \"dex\"]\n                        if (args.type == \"weapon\")\n                            args.fields.modifier += modifier\n                        else if (args.type == \"characteristic\")\n                        {\n                            if (applicableCharacteristics.includes(args.item))\n                                args.fields.modifier += modifier\n                        }\n                        else if (args.type == \"skill\")\n                        {\n                            if (applicableCharacteristics.includes(args.item.characteristic.key))\n                                args.fields.modifier += modifier\n                        }"}
+					]
+				},
+				{
+				"name":"Fiebre",
+				"scriptData": [
+					{"label":"Fiebre"}
+					]
+				},
+				{
+				"name":"Persistente",
+				"scriptData": [
+					{"label":"Persistente"}
+					]
+				}]
+		},
+		{
+			"id": "‘Eadbutt!",
+			"name": "¡Kabezazo!",
+			"description": "<p>El chamán empuja su cabeza hacia delante, proyectando una energía verde maligna que asalta aquellos que son sensibles a la magia. ¡Kabezazo! es un proyectil mágico que siempre golpea a su objetivo en la cabeza con un Daño de +1. Si el objetivo tiene los Talentos de @UUID[Compendium.wfrp4e-core.items.Item.1IZWRr7BYOIcqPlQ]{Afinidad con el Aethyr} o @UUID[Compendium.wfrp4e-core.items.Item.OEjUvJKi0xmBwbS2]{Clarividencia}, el hechizo golpea con un Daño de +6.</p>",
+			"effects": [{
+				"name":"¡Kabezazo!",
+				"scriptData": [
+					{"label":"¡Kabezazo!","script":"if ( args.actor.has(game.i18n.localize(\"NAME.AA\"), \"talent\") ||\nargs.actor.has(game.i18n.localize(\"NAME.SecondSight\"), \"talent\") ) {\n\targs.modifiers.other.push({label : this.effect.name, value : 5, details : \"El objetivo tiene Afinidad con el Aethyr o Clarividencia\"});\n}"}
+					]
+				}]
+		},
+		{
+			"id": "Bash'Em Lads!",
+			"name": "¡A por elloz, chikoz!",
+			"description": "<p>Los alentadores gritos del chamán llenan a sus aliados de fervor. Por cada 1+NE obtenido en la tirada de lanzamiento, el chamán puede conceder un punto de Ventaja a un orco o goblin aliado dentro del alcance. Se pueden conceder varios puntos de Ventaja a un único objetivo o repartirse entre varios.</p>",
+			"effects": [{
+				"name":"Añadir Ventaja",
+				"scriptData": [
+					{"label":"Añadir Ventaja"}
+					]
+				}]
+		},
+		{
+			"id": "Fists of Gork",
+			"name": "Puñoz de Gorko",
+			"description": "<p>En un arrebato de furia, los nudosos puños del chamán se agrandan y se endurecen como el hierro. El chamán debe soltar cualquier objeto que tenga en sus manos y sólo puede atacar con los puños, pero cuenta como si tuviera la Habilidad Cuerpo a cuerpo (pelea) 55 y Arma (puños) +9 mientras dure el hechizo.</p>",
+			"effects": [{
+				"name":"Puñoz de Gorko",
+				"scriptData": [
+					{"label":"Puñoz de Gorko","script":"// Brawling management\nlet base = this.actor.characteristics.ws.value;\nlet melee = this.actor.has(\"Cuerpo a cuerpo (Pelea)\", \"skill\");\nif (!melee) {\n  melee = await fromUuid(\"Compendium.wfrp4e-core.items.Item.jLyoyqwmBVPjRjhM\");\n  melee = melee.toObject();\n  melee.system.modifier.value = 55 - base;\n  await this.actor.createEmbeddedDocuments(\"Item\", [melee], {fromEffect : this.effect.id});\n} else {\n  //this.actor.updateEmbeddedDocuments(\"Item\", { _id: melee.id, 'system.modifier.value': 55-base});\n  await this.effect.update({\"flags.wfrp4e.fistsOfGork\" : 55 - base})\n}\n\n// Weapon management\nbase = this.actor.characteristics.s.bonus;\nweapon = await fromUuid(\"Compendium.wfrp4e-core.items.Item.AtpAudHA4ybXVlWM\");\nweapon = weapon.toObject();\nweapon.name = \"Puñoz de Gorko\";\nweapon.img = this.effect.img;\nweapon.system.rollable.skill = \"Cuerpo a cuerpo (Pelea)\";\nweapon.system.specification.value = 9 - base;\nawait this.actor.createEmbeddedDocuments(\"Item\", [weapon], {fromEffect : this.effect.id});\n\n//this.script.scriptMessage(`${this.actor.name} now has Melee (Brawling) 55 and Weapon (Fists) +9`);"},
+					{"label":"Pelea","script":"if (this.effect.getFlag(\"wfrp4e\", \"fistsOfGork\") && args.item.type == \"skill\" && args.item.name == \"Cuerpo a cuerpo (Pelea)\") {\n\targs.item.system.modifier.value += this.effect.getFlag(\"wfrp4e\", \"fistsOfGork\")\n}"}
+					]
+				}]
+		},
+		{
+			"id": "Mork Save Us!",
+			"name": "¡Morko, zálvanoz!",
+			"description": "<p>El chamán suplica a Morko para que proteja a sus aliados. Por cada NE en la tirada de lanzamiento, el chamán puede imbuir a un orco o goblin aliado dentro del alcance con el Rasgo de criatura de @UUID[Compendium.wfrp4e-core.items.Item.Bvd2aZ0gQUXHfCTh]{Custodiado 10}. Si el objetivo ya tiene este Rasgo, su valor mejora en 1, por lo que se convertiría en Custodiado 9 o más. Este Rasgo no puede reducirse por debajo de 7 o más utilizando este proceso.</p>",
+			"effects": [{
+				"name":"¡Morko, zálvanoz!",
+				"scriptData": [
+					{"label":"¡Morko, zálvanoz!"}
+					]
+				}]
+		},
+		{
+			"id": "Apotheosis",
+			"name": "Apoteosis",
+			"description": "<p>Infundes magia pura en el objetivo para curar e infundir miedo. El objetivo recupera tantas Heridas como tu Bonificador por Voluntad y obtiene el Rasgo de criatura @UUID[Compendium.wfrp4e-core.items.Item.Ib2YQYChktDFN93y]{Miedo} 1.</p><p><strong>Prolongación</strong>:</p><ul><li><p>Cada +3 NE puede aumentar el número de Heridas sanadas igual a tu Bonificador por Voluntad.</p></li><li><p>Con +6 NE el objetivo puede sanarse una Herida crítica.</p></li><li><p><strong>Slann</strong>: Cada +2 NE puede aumentar el @UUID[Compendium.wfrp4e-core.items.Item.Ib2YQYChktDFN93y]{Miedo} del objetivo en 1.</p></li></ul>",
+			"effects": [{
+				"name":"Apoteosis",
+				"scriptData": [
+					{"label":"Apoteosis"},
+					{"label":"Sanar","script":"let wounds = this.effect.sourceActor.system.characteristics.wp.bonus;\nthis.actor.modifyWounds(wounds);\nthis.script.message(`Sanadas ${wounds} Heridas`);"}
+					]
+				}]
+		},
+		{
+			"id": "Arcane Unforging",
+			"name": "Desforjamiento arcano",
+			"description": "<p>Invocas poderes destructores para herir a los enemigos blindados y romper sus objetos mágicos. El objetivo sufre 1 Daño al cuerpo por cada 2 Puntos de Armadura.</p><p><em><strong>Ejemplo</strong>: Un objetivo con 3 Puntos de Armadura en las seis Ubicaciones de impacto tendría un total de 18 y, por lo tanto, sufriría 9 puntos de Daño.</em>.</p><p>El Bonificador por Resistencia se resta normalmente, pero se ignoran los Puntos de Armadura. Además, uno de los objetos mágicos del objetivo (determinado al azar) queda destruido si superas un Chequeo <strong>Desafiante (+0)</strong> de <strong>Voluntad</strong>.</p><p><strong>Prolongación</strong>:</p><ul><li><p>Cada +1 NE puede destruir 1 Punto de Armadura de una armadura de metal o cuero.</p></li><li><p>Con +8 NE el daño del hechizo se puede aumentar a 1 de Daño por Punto de Armadura.</p></li><li><p><strong>Slann</strong>: Cada +5 NE permite otra tirada de intento de destrucción contra un objeto mágico aleatorio.</p></li></ul>",
+			"effects": [{
+				"name":"Desforjamiento arcano",
+				"scriptData": [
+					{"label":"Desforjamiento arcano"}
+					]
+				}]
+		},
+		{
+			"id": "Drain Magic",
+			"name": "Disipación de magia",
+			"description": "<p>Expulsas la magia del mundo conjurando un vórtice de Aethyr. Todos los hechizos persistentes dentro del AdE quedan inmediatamente disipados sin un Chequeo Prolongado. Los objetos mágicos y las auras mágicas innatas no se ven afectados.</p><p><strong>Prolongación</strong>:</p><ul><li><p>Con +5 NE el AdE puede aumentarse a tantas yardas como tu Voluntad.</p></li><li><p>Con +7 NE las Bendiciones Divinas y Milagros persistentes son disipados.</p></li><li><p><strong>Slann</strong>: cada +4 NE permite al lanzador drenar un poco de magia ambiental dentro del AdE (<strong>Vientos de la Magia</strong>). Cada incremento puede liberar la saturación de un nexo de línea ley o reducir la saturación ambiental en 1 nivel.</p></li></ul>",
+			"effects": [{
+				"name":"Disipación de magia",
+				"scriptData": []
+				}]
+		},
+		{
+			"id": "Uproot the Mountains",
+			"name": "Arrancar montañas",
+			"description": "<p>Haces que una colina o montaña tiemble y se estremezca. Los objetivos que estén en ese terreno deben superar un Chequeo <strong>Muy difícil (-30)</strong> de <strong>Atletismo</strong> al empezar su Asalto, de lo contrario, no podrán realizar acciones ni movimientos, y sufrirán 1 Estado de @Condition[Tumbado].</p><p><strong>Prolongación</strong>:</p><ul><li><p>Por cada Asalto en el que se Prolongue la Duración del hechizo, la colina o montaña se puede mover tantas yardas como tu Bonificador por Fuerza. Los objetivos en la trayectoria de este desplazamiento deben superar un Chequeo <strong>Normal (+20)</strong> de <strong>Atletismo</strong> o sufrir 10 de Daño en una Ubicación de impacto aleatoria.</p></li><li><p>Con +5 NE este hechizo puede desencadenar un corrimiento de tierra. Los objetivos que estén en medio del desprendimiento de rocas deben superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Esquivar</strong> o sufrir 15 de Daño en una zona del cuerpo aleatoria.</p></li></ul>",
+			"effects": [{
+				"name":"Arrancar montañas",
+				"scriptData": [
+					{"label":"Arrancar montañas","script":"let test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Athletics\"), {fields : {difficulty : \"vhard\"}, appendTitle : ` - ${this.effect.name}`})\nawait test.roll();\nif (test.failed) \n{\n\tthis.actor.addCondition(\"prone\");\n    this.script.scriptMessage(\"No puedes mover ni actuar este Asalto\");\n}"}
+					]
+				}]
+		},
+		{
+			"id": "Walk Between Worlds",
+			"name": "Caminar entre Dos Mundos",
+			"description": "<p>Abres los caminos entre los mundos para tus aliados. Los objetivos seleccionados obtienen el Rasgo de criatura @UUID[Compendium.wfrp4e-core.items.Item.tNWrJUOArwfWXsPw]{Etéreo} y se duplican sus puntuaciones de Movimiento.</p><p><strong>Prolongación</strong>: </p><ul><li><p><strong>Slann</strong>: con +4 NE los objetivos en un nexo geomántico apropiado pueden atravesar los Caminos de los Ancestrales para llegar a otro nexo. Tú decides a qué nexo viajan. No hay límite de distancia.</p></li><li><p><strong>Altos elfos</strong>: con +8 NE los objetivos pueden atravesar los Caminos de los Ancestrales, tal y como se describe arriba.</p></li><li><p><strong>Elfos silvanos</strong>: con +6 NE los objetivos en un bosque mágico pueden atravesar las Raíces del Mundo para llegar a otro Tapiz. Los objetivos pueden decidir qué caminos seguir, pero pueden perderse sin la ayuda de un guía.</p></li></ul>",
+			"effects": [{
+				"name":"Caminar entre Dos Mundos",
+				"scriptData": [
+					{"label":"Caminar entre Dos Mundos"}
+					]
+				}]
+		},
+		{
+			"id": "Earth Line",
+			"name": "Línea terrestre",
+			"description": "<p>El slann hace que las energías de la tierra surjan a través de una línea ley geomántica. Cualquiera que se encuentre en esa línea ley debe superar un Chequeo <strong>Difícil (-20)</strong> de <strong>Aguante</strong> o sufrir 15 de Daño en el cuerpo (modificado por el Bonificador por Resistencia, pero no por los Puntos de Armadura). La oleada de energía puede enviarse en cualquier dirección que el slann elija y continúa hasta que alcance el siguiente nexo geomántico.</p><p><strong>Prolongación</strong>:</p><ul><li><p>Con +4 NE se puede crear una apertura en un cuerpo de agua de cualquier profundidad. El agua se divide, o bien emerge un pedazo de tierra de 8 yardas de ancho, y puede ser de cualquier longitud, siempre que siga la línea ley. El puente (o la apertura) dura tantas horas como tu Bonificador por Voluntad y no puede disiparse.</p></li><li><p>Con +6 NE se puede abrir un camino a través de junglas y bosques. Los árboles son derribados, creando un camino de 8 yardas de ancho a lo largo de la línea de la ley.</p></li></ul>",
+			"effects": [{
+				"name":"Línea terrestre",
+				"scriptData": [
+					{"label":"Línea terrestre"}
+					]
+				}]
+		},
+		{
+			"id": "Mental Blast",
+			"name": "Estallido mental",
+			"description": "<p>El slann dirige una ráfaga de energía mental contra sus enemigos. Los enemigos sufren Daño igual al Bonificador por Inteligencia + 6. Las criaturas con los Rasgos de criatura @UUID[Compendium.wfrp4e-core.items.Item.v3uzEthcq0JRar0J]{Demoníaco} o @UUID[Compendium.wfrp4e-core.items.Item.PFTD9gDvRWW9uh5g]{Muerto viviente} sufren 6 puntos de Daños adicionales. Se le resta el Bonificador por Resistencia, pero no los Puntos de Armadura. Además, los objetivos deben superar un Chequeo <strong>Normal (+20)</strong> de <strong>Inteligencia</strong> o sufrir 1 Estado de @Condition[Aturdido].</p><p><strong>Prolongación</strong>: </p><ul><li><p>Con +6 NE este hechizo puede ser lanzado como ‘La Liberación de Itza’. Aumenta el diámetro del objetivo al AdE (la mitad de tantas yardas como tu Voluntad) pero debe estar centrado en el lanzador. El AdE puede aumentarse normalmente con la Prolongación.</p></li><li><p>Con +9 NE este hechizo puede ser lanzado como ‘El Gran Nivelador’. El slann sacrifica su propia vida para cambiar las tornas de una batalla perdida. Todos los enemigos que os superen en número dentro de la línea de visión, mueren automáticamente, reduciendo sus números para igualar a los aliados del slann. Las primeras bajas son las criaturas con puntuaciones de Inteligencia más bajas. Sólo un Punto de Destino evita la muerte instantánea de un PJ en semejantes circunstancias.</p></li></ul>",
+			"effects": [{
+				"name":"Estallido mental",
+				"scriptData": [
+					{"label":"Estallido mental"}
+					]
+				}]
+		},
+		{
+			"id": "Ruination of Cities",
+			"name": "Desmoronar ciudades",
+			"description": "<p>El slann hace colapsar un edificio, muro o puente no fortificado. El objetivo queda reducido a escombros, contando como Terreno difícil. Todo aquel que estuviera en el interior del edificio mientras se derrumba, debe superar un Chequeo <strong>Difícil (-20)</strong> de <strong>Esquivar</strong> o es aplastado, sufriendo 20 de Daño en el cuerpo y quedando sepultado bajo los escombros. Las víctimas sepultadas sufren de @UUID[Compendium.wfrp4e-core.journals.JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#ahogamiento-y-asfixia]{Asfixia}.</p><p>Prolongación:</p><ul><li><p>Los objetivos adicionales añadidos con la Prolongación deben ser los más cercanos al objetivo principal. El suelo entre los objetivos se abre en una grieta de 2 yardas de ancho por 4 yardas de profundidad. Cualquiera en la grieta debe superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Esquivar</strong> o sufrir Daños por caída. Los fracasos marginales permiten que las víctimas se puedan agarrar a algún borde.</p></li><li><p>Con +6 NE el objetivo puede ser una estructura fortificada como una muralla o la torre de un castillo.</p></li></ul>",
+			"effects": [{
+				"name":"Desmoronar ciudades",
+				"scriptData": [
+					{"label":"Desmoronar ciudades","script":"let test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Dodge\"), {fields : {difficulty : \"hard\"}, appendTitle : ` - ${this.effect.name}`})\nawait test.roll();\n\nif (test.failed) {\n  \tthis.script.scriptMessage(await this.actor.applyBasicDamage(20, {suppressMsg: true}));\n        this.script.scriptMessage(`${this.actor.name} sufre @UUID[Compendium.wfrp4e-core.journals.JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#ahogamiento-y-asfixia]{Asfixia}`);\n}"}
+					]
+				}]
+		},
+		{
+			"id": "Shroud of Fog",
+			"name": "Velo de niebla",
+			"description": "<p>Invocas una espesa niebla que cubre la región. La visibilidad se reduce a 10 yardas. La niebla no es mágica y no puede ser Disipada.</p>"
+		},
+		{
+			"id": "Cloak of Mathlann",
+			"name": "Manto de Mathlann",
+			"description": "<p>Hace que un barco se vuelva invisible, junto con su tripulación. El interior del barco permanece visible para todos a bordo. Los miembros de la tripulación se hacen visibles al abandonar la nave. Los barcos invisibles dejan una estela tras de sí y crean remolinos en la niebla, algo que puede percibirse si se supera un Chequeo <strong>Desafiante (+0)</strong> de <strong>Percepción</strong>. Los buques con más de un mástil requieren +2 NE por cada mástil adicional para camuflarse. Las arcas negras y los monstruos marinos no pueden camuflarse. Si el navío es hostil contra otros (embiste, dispara con arcos, dispara con lanzadores de virotes de garra de águila, etc.), o si sufre daño, vuelve a ser visible.</p>"
+		},
+		{
+			"id": "Waterlungs",
+			"name": "Pulmones acuáticos",
+			"description": "<p>Los objetivos pueden respirar bajo el agua, pero fuera de ella están sujetos a las reglas de @UUID[Compendium.wfrp4e-core.journals.JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#ahogamiento-y-asfixia]{Ahogamiento y Asfixia}. Los objetivos afectados se sienten atraídos por el agua y sólo necesitan un cubo lleno para poder respirar. Los objetivos no dispuestos pueden intentar oponerse a los efectos del Milagro si superan un Chequeo <strong>Normal (+20)</strong> de <strong>Frialdad</strong>. Puedes afectar a un objetivo adicional por cada +2 NE.</p>"
+		},
+		{
+			"id": "Auger and Scryer",
+			"name": "Profecías y Visiones del futuro",
+			"description": "<p>Aquellos DJs con acceso a @UUID[Compendium.wfrp4e-altdorf.journals.JournalEntry.rSRadYoaNXkEq8gs]{Altdorf: La Corona del Imperio} o @UUID[Compendium.wfrp4e-wom.journals.JournalEntry.BBMts94CJGZ3wRMi]{Vientos de la Magia} pueden hacer uso de las Reglas de @UUID[Compendium.wfrp4e-altdorf.items.Item.9RDceZkxCmcsAnmy]{Psicometría} y @UUID[Compendium.wfrp4e-wom.items.Item.GlcVY8MTqHTS1JWX]{Augurio} para con los slann. También son capaces de utilizar la Habilidad Psicometría como si fuera una Habilidad básica e ignorar la prohibición habitual de ser Hechicero y Visionario.</p>"
+		},
+		{
+			"id": "Contemplation",
+			"name": "Contemplación",
+			"description": "<p>Los @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.0kKMz2vVMhxpjgRe]{slann} suelen parecer distantes y desapegados. No carecen de conciencia, pero sus contemplaciones sobre acontecimientos lejanos o probabilidades futuras a menudo tienen prioridad sobre su apreciación del aquí y el ahora.</p><p>Cuando no se interactúa con un @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.0kKMz2vVMhxpjgRe]{slann}, es probable que éste se pierda en la contemplación. Si las circunstancias avecinan un cambio para el slann, éste debe superar Chequeo <strong>Complicado (-10)</strong> de <strong>Percepción</strong> para ver si se da cuenta de lo que está pasando.</p><blockquote class=\"sidebar\"><h3 class=\"sidebar-title no-toc\" style=\"text-align:center;text-transform:uppercase\"><em>Tabla de contemplación</em></h3><table style=\"width:100%;height:272px\" border=\"1\"><tbody><tr style=\"height:17px\"><td style=\"height:17px;text-align:center\" data-colwidth=\"184\"><p> <em><strong>NE</strong></em></p></td><td style=\"height:17px;text-align:center\"><p><em><strong>Resultado</strong></em></p></td></tr><tr><td data-colwidth=\"184\"><p style=\"text-align: center\"><em>+2 o más</em></p></td><td><p><em><strong>Atento</strong>. El slann está alerta y puede reaccionar a lo que ocurre en su entorno sin penalizador.</em></p></td></tr><tr><td data-colwidth=\"184\"><p style=\"text-align: center\"><em>0 a +1</em></p></td><td><p><em><strong>Separado</strong>. El slann está distraído, pero tiene cierta apreciación de lo que ocurre en sus inmediaciones. Sufre el Rasgo de criatura @UUID[Compendium.wfrp4e-core.items.Item.9GNpAqgsKzxZKJpp]{Bobo} durante el resto del encuentro y luego se queda en alerta o vuelve a la meditación, dependiendo de las circunstancias.</em></p></td></tr><tr><td data-colwidth=\"184\"><p style=\"text-align: center\"><em>-0 a -3</em></p></td><td><p><em><strong>Pensamiento nublado</strong>. El slann es débilmente consciente de lo que ocurre a su alrededor. Sufre 2 Estados de @Condition[Fatigado]. En su turno puede Moverse o realizar una Acción, pero no ambas cosas.</em></p></td></tr><tr><td data-colwidth=\"184\"><p style=\"text-align: center\"><em>-4 o menos</em></p></td><td><p><em><strong>Perdido en sus pensamientos</strong>. El slann no tiene conciencia de lo que ocurre a su alrededor y no reacciona a las acciones de los personajes cercanos.</em></p></td></tr></tbody></table></blockquote><p>Un @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.0kKMz2vVMhxpjgRe]{slann} que no responde puede verse obligado a realizar su Chequeo de Percepción de nuevo. Si se emiten ruidos fuertes, luces brillantes u otros estímulos para alertar al slann, éste puede volver a realizar el Chequeo <strong>Desafiante (+0)</strong> de <strong>Percepción</strong> para ver si está atentos a lo que ocurre. Si se ataca al slann con armas o magia, se convierte en un Chequeo <strong>Fácil (+40)</strong> de <strong>Percepción</strong>. Ten en cuenta que, debido a su regla de @UUID[Compendium.wfrp4e-wom.items.Item.foZedAFB3TQpU0SJ]{Telepatía}, un slann que haya sido alertado de los peligros por otro slann o un eslizón capaz de utilizar la magia, pasará a estar Atento.</p>"
+		},
+		{
+			"id": "Emergency Teleportation",
+			"name": "Teletransporte de emergencia",
+			"description": "<p>Es habitual que los @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.0kKMz2vVMhxpjgRe]{slann} dispongan de amuletos protectores que los transportan lejos de las fuentes de daño si se enfrentan al riesgo de lesiones y muerte. Siempre que un slann queda reducido a 10 Heridas o menos, o sufre una Herida crítica con resultado de huesos rotos, músculos desgarrados, o peor, puede realizar inmediatamente una acción gratuita para lanzar el Hechizo arcano @UUID[Compendium.wfrp4e-core.items.Item.CVam8L1cNsnxZHRR]{Teletransporte}. Si tiene éxito, el slann se transporta inmediatamente a la Cámara Estelar en el interior de la pirámide templo de la ciudad templo más cercana (o una ciudad templo vecina si esa Cámara Estelar en particular no es segura).</p><p>Es plausible que un hechicero de otra especie pudiera adaptarse a esos amuletos para su propio uso, pero las vastas energías de la @UUID[JournalEntry.TpWz1AcCsU2PRUzY.JournalEntryPage.5byPsiyjLzoxftsN#alrededor-de-–10000-ci]{Red Geomántica} están involucradas en este teletransporte y sólo se conoce que los slann puedan usarlos y sobrevivir a la experiencia.</p>"
+		},
+		{
+			"id": "Knack for Total Power",
+			"name": "Facilidad innata para la magia",
+			"description": "<p>Estos antiguos @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.0kKMz2vVMhxpjgRe]{slann} son hechiceros consumados que pueden convocar abrumadoras energías donde los hechiceros menores podrían tener dificultades. Tales slann cuentan con un Crítico en su éxito en el Lanzamiento de hechizos al sacar un doble o cuando su tirada incluye un ‘0’ en el dado de las unidades. Mientras estén en Lustria, pueden repetir cualquier Chequeo para percibir los Vientos Mágicos.</p>"
+		},
+		{
+			"id": "Master of Magical Mishaps",
+			"name": "Maestro de los Contratiempos mágicos",
+			"description": "<p>Es muy raro que un slann experimentado cometa errores al lanzar hechizos. Si un slann sufre una @UUID[Compendium.wfrp4e-core.tables.RollTable.we8Vo5GC3ZsDI7aA]{Disfunción mágica mayor}, pasa a ser una @UUID[Compendium.wfrp4e-core.tables.RollTable.iPVwX0ul6lHVbKSX]{Disfunción mágica menor}. Esta regla no se aplica si el slann está lanzando un hechizo a través de otro hechicero mediante la regla de @UUID[Compendium.wfrp4e-wom.items.Item.foZedAFB3TQpU0SJ]{Telepatía}.</p>",
+			"effects": [{
+				"name":"Maestro de los Contratiempos mágicos",
+				"scriptData": [
+					{"label":"Reducir Disfunción"}
+					]
+				}]
+		},
+		{
+			"id": "Palanquin",
+			"name": "Palanquín",
+			"description": "<p>En aquellas ocasiones en las que los @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.0kKMz2vVMhxpjgRe]{slann} viajan fuera de sus dominios o acompañan a las huestes de hombres lagarto, se sientan encima de palanquines de piedra que flotan gracias a antiguos artefactos cuyo diseño hace tiempo que ha sido olvidado. Estos palanquines otorgan al slann los siguientes Rasgos de criatura: @UUID[Compendium.wfrp4e-core.items.Item.EO05HX7jql0g605A]{Vuelo 16}, @UUID[Compendium.wfrp4e-core.items.Item.Bvd2aZ0gQUXHfCTh]{Custodiado 8+} .</p><p>Además, el palanquín le otorga una cobertura resistente al fuego de proyectiles que vengan desde atrás o por los costados, pero sólo cuenta como una cobertura ligera si los proyectiles vienen de frente.</p>",
+			"effects": [{
+				"name":"Palanquín",
+				"scriptData": [
+					{"label":"Palanquín"}
+					]
+				}]
+		},
+		{
+			"id": "Relic Priest",
+			"name": "Sacerdote reliquia",
+			"description": "<p>Los sacerdotes reliquia son los restos momificados de un @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.0kKMz2vVMhxpjgRe]{slann}. verdaderamente antiguo. El perfil dado es para la forma espiritual de dichos sacerdotes, que deben permanecer dentro de tantas yardas como su Bonificador por Voluntad de sus cuerpos. Los cuerpos tienen el mismo número de Heridas que los espíritus. Destruir el cuerpo destruirá al espíritu. El daño al cuerpo o al espíritu puede activar el @UUID[Compendium.wfrp4e-lustria.items.Item.9YQYKpl6VdiO1l3f]{Teletransporte de emergencia}. El espíritu puede poseer su cuerpo y utilizarlo para dirigir un palanquín, pero aparte de esto, el propio cuerpo no puede moverse o realizar acciones.</p><p>El espíritu puede lanzar un hechizo en cualquiera de sus acciones, es decir, puede lanzar hasta dos hechizos por turno si no se mueve o toma otras medidas.</p><p>El cuerpo del sacerdote reliquia cuenta como si sufriera 1 Estado de @Condition[Tumbado] permanentemente. El espíritu puede tener alguna capacidad de luchar cuerpo a cuerpo, aunque esto es sólo a efectos de determinar la defensa contra los ataques; no puede infligir daño.</p>"
+		},
+		{
+			"id": "Telepathy",
+			"name": "Telépata",
+			"description": "<p>La criatura puede comunicarse sin palabras, utilizando el poder de su mente para transmitir y leer pensamientos. Si el sujeto quiere resistirse a que lean sus pensamientos, debe superar un Chequeo <strong>Normal (+20)</strong> de <strong>Frialdad</strong>.</p>"
+		},
+		{
+			"id": "Telepathy (Slann)",
+			"name": "Telepatía (Slann)",
+			"description": "<p>Los @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.0kKMz2vVMhxpjgRe]{slann} están en contacto permanente entre sí y con sus sirvientes a través de la telepatía. Un slann puede compartir sus pensamientos con otros de su red, que se define como aquellos slann y sacerdotes eslizones dentro de tantas yardas como su Voluntad y, siempre que el slann esté a tantas yardas como su Voluntad de un flujo de energía de la Red Geomántica, cualquier otro slann a tantas yardas como su Voluntad tendrá un flujo de energía similar.</p><p>Como Acción o Movimiento, un slann puede concentrarse en la comunicación telepática si supera un Chequeo <strong>Desafiante (+0)</strong> de <strong>Inteligencia</strong>. Si tiene éxito, puede realizar una de las siguientes Acciones.</p><ul><li><p><strong>Compartir inteligencia</strong>: el slann puede hacer preguntas y proporcionar respuestas a otro slann dentro de su red. No se trata de un proceso exacto, ya que los slann son alienígenas en su pensamiento y dados a cavilar en ideas tangenciales incluso cuando se les presiona. Sin embargo, en un solo turno, podrían tener el equivalente a una conversación de cinco minutos.</p></li><li><p><strong>Lanzar un hechizo</strong>: el slann puede apoderarse de la conciencia de un sacerdote eslizón en su red con el propósito de lanzar un hechizo. El slann puede usar sus propios Atributos, Habilidades y Talentos al lanzar el hechizo. Cualquier Disfunción mágica es sufrida por el desafortunado cuerpo del sacerdote eslizón.</p></li></ul>"
+		},
+		{
+			"id": "Chameleon",
+			"name": "Camaleónico",
+			"description": "<p>La criatura puede cambiar de color para mimetizarse con su entorno, lo que dificulta mucho poder verla. Los Chequeos de <strong>Percepción</strong> para detectar a la criatura sufren un penalizador de –4 NE, reducido a –2 si la criatura se está moviendo. Se sufre un penalizador de –2 NE en el Chequeo de <strong>A distancia</strong> al intentar disparar a la criatura.</p>",
+			"effects": [{
+				"name":"Camaleónico",
+				"scriptData": [
+					{"label":"Penalizador a ataque a distancia"}
+					]
+				}]
+		},
+		{
+			"id": "Flammable",
+			"name": "Inflamable",
+			"description": "<p>Muchas plantas y algunos animales son especialmente susceptibles a los daños causados por el calor y las llamas. Cualquier criatura que haga un Chequeo para evitar sufrir un Estado de @Condition[Ardiendo], sufre un penalizador de -20. Además, las criaturas con el Rasgo de @UUID[Compendium.wfrp4e-owb2.items.Item.HBdh3DIzt4GhonZ3]{Inflamable} sufren el doble de Heridas por parte del Estado de @Condition[Ardiendo].</p>",
+			"effects": [{
+				"name":"Inflamable",
+				"scriptData": [
+					{"label":"Doble daño de Ardiendo"}
+					]
+				}]
+		},
+		{
+			"id": "Grim",
+			"name": "Sombrío",
+			"description": "<p>Si, al principio de su turno, esta criatura no tiene al menos su valor en Sombrío como Ventaja, su fondo de Ventajas aumenta inmediatamente a su valor en Sombrío. Si la criatura sufre de algún Estado de @Condition[Enmarañado], @Condition[Sorprendido] o @Condition[Inconsciente], no obtiene esta Ventaja.</p><p>Si usas las reglas de Ventajas de Grupo de <strong>¡A las armas!</strong>, la criatura genera su valor de Sombrío en Ventaja por el Fondo de Ventajas del Adversario.</p>",
+			"effects": [{
+				"name":"Sombrío",
+				"scriptData": [
+					{"label":"Sombrío"},
+					{"label":"Establecer valor","script":"if (isNaN(parseInt(this.item.system.specification.value)))\n{\n    let value = await ValueDialog.create({tetx : \"Escribe el valor de Sombrío\", title : this.effect.name});\n    if (value)\n    {\n     this.item.updateSource({\"system.specification.value\" : value});\n    }\n}"}
+					]
+				}]
+		},
+		{
+			"id": "Grim (Rating)",
+			"name": "Sombrío",
+			"description": "<p>Si, al principio de su turno, esta criatura no tiene al menos su valor en Sombrío como Ventaja, su fondo de Ventajas aumenta inmediatamente a su valor en Sombrío. Si la criatura sufre de algún Estado de @Condition[Enmarañado], @Condition[Sorprendido] o @Condition[Inconsciente], no obtiene esta Ventaja.</p><p>Si usas las reglas de Ventajas de Grupo de <strong>¡A las armas!</strong>, la criatura genera su valor de Sombrío en Ventaja por el Fondo de Ventajas del Adversario.</p>",
+			"effects": [{
+				"name":"Sombrío",
+				"scriptData": [
+					{"label":"Sombrío"},
+					{"label":"Establecer valor","script":"if (isNaN(parseInt(this.item.system.specification.value)))\n{\n    let value = await ValueDialog.create({tetx : \"Escribe el valor de Sombrío\", title : this.effect.name});\n    if (value)\n    {\n     this.item.updateSource({\"system.specification.value\" : value});\n    }\n}"}
+					]
+				}]
+		},
+		{
+			"id": "Mark of the Old Ones",
+			"name": "Marca de los Ancestrales",
+			"description": "<p>Los hombres lagarto raros son marcados por los @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.2ySnssbzviW8Fx0T]{Ancestrales}, elegidos para un gran destino. Estos desoves pueden ser representados por los siguientes cambios en los perfiles de los @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.DikyZGNIMw2cUpig]{eslizones}, @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.lL1pZi775l5XBz4g]{saurios} o @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.57xqZAEa8kUw4MFD]{króxigors}. Para los eslizones, estos cambios se acumulan con cualquier mejora de su casta.</p><p>Es posible (aunque extremadamente raro) que el desove de un individuo, o cohorte de hombres lagarto, porte la marca de más de un Ancestral. En ese caso, combina los bonificadores.</p><p><strong>Marca sagrada</strong>: Marca de los Ancestrales (sólo eslizones y saurios)</p><p><strong>Marca</strong>: Blanco</p><p><strong>Portento</strong>: Destinado a la grandeza</p>",
+			"effects": [{
+				"name":"Marca de los Ancestrales",
+				"scriptData": [
+					{"label":"Marca de los Ancestrales"}
+					]
+				}]
+		},
+		{
+			"id": "Mark of the Old Ones (Chotec)",
+			"name": "Marca de los Ancestrales (Chotec)",
+			"description": "<p>Los hombres lagarto raros son marcados por los @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.2ySnssbzviW8Fx0T]{Ancestrales}, elegidos para un gran destino. Estos desoves pueden ser representados por los siguientes cambios en los perfiles de los @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.DikyZGNIMw2cUpig]{eslizones}, @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.lL1pZi775l5XBz4g]{saurios} o @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.57xqZAEa8kUw4MFD]{króxigors}. Para los eslizones, estos cambios se acumulan con cualquier mejora de su casta.</p><p>Es posible (aunque extremadamente raro) que el desove de un individuo, o cohorte de hombres lagarto, porte la marca de más de un Ancestral. En ese caso, combina los bonificadores.</p><p><strong>Marca sagrada</strong>: Chotec</p><p><strong>Marca</strong>: Bermellón o naranja</p><p><strong>Portento</strong>: Inspirado por el Dios Sol</p>",
+			"effects": [{
+				"name":"Marca de los Ancestrales (Chotec)",
+				"scriptData": [
+					{"label":"Marca de los Ancestrales (Chotec)"}
+					]
+				}]
+		},
+		{
+			"id": "Mark of the Old Ones (Huanchi)",
+			"name": "Marca de los Ancestrales (Huanchi)",
+			"description": "<p>Los hombres lagarto raros son marcados por los @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.2ySnssbzviW8Fx0T]{Ancestrales}, elegidos para un gran destino. Estos desoves pueden ser representados por los siguientes cambios en los perfiles de los @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.DikyZGNIMw2cUpig]{eslizones}, @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.lL1pZi775l5XBz4g]{saurios} o @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.57xqZAEa8kUw4MFD]{króxigors}. Para los eslizones, estos cambios se acumulan con cualquier mejora de su casta.</p><p>Es posible (aunque extremadamente raro) que el desove de un individuo, o cohorte de hombres lagarto, porte la marca de más de un Ancestral. En ese caso, combina los bonificadores.</p><p><strong>Marca sagrada</strong>: Huanchi (sólo eslizones y saurios)</p><p><strong>Marca</strong>: Negro</p><p><strong>Portento</strong>: Sigilo excepcional</p>",
+			"effects": [{
+				"name":"Marca de los Ancestrales (Huanchi)",
+				"scriptData": [
+					{"label":"Marca de los Ancestrales (Huanchi)"}
+					]
+				}]
+		},
+		{
+			"id": "Mark of the Old Ones (Itzl)",
+			"name": "Marca de los Ancestrales (Itzl)",
+			"description": "<p>Los hombres lagarto raros son marcados por los @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.2ySnssbzviW8Fx0T]{Ancestrales}, elegidos para un gran destino. Estos desoves pueden ser representados por los siguientes cambios en los perfiles de los @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.DikyZGNIMw2cUpig]{eslizones}, @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.lL1pZi775l5XBz4g]{saurios} o @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.57xqZAEa8kUw4MFD]{króxigors}. Para los eslizones, estos cambios se acumulan con cualquier mejora de su casta.</p><p>Es posible (aunque extremadamente raro) que el desove de un individuo, o cohorte de hombres lagarto, porte la marca de más de un Ancestral. En ese caso, combina los bonificadores.</p><p><strong>Marca sagrada</strong>: Itzl (sólo eslizones y saurios)</p><p><strong>Marca</strong>: Gran cresta</p><p><strong>Portento</strong>: Mando sobre las bestias</p>",
+			"effects": [{
+				"name":"Marca de los Ancestrales (Itzl)",
+				"scriptData": [
+					{"label":"Marca de los Ancestrales (Itzl)"}
+					]
+				}]
+		},
+		{
+			"id": "Mark of the Old Ones (Quetzl)",
+			"name": "Marca de los Ancestrales (Quetzl)",
+			"description": "<p>Los hombres lagarto raros son marcados por los @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.2ySnssbzviW8Fx0T]{Ancestrales}, elegidos para un gran destino. Estos desoves pueden ser representados por los siguientes cambios en los perfiles de los @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.DikyZGNIMw2cUpig]{eslizones}, @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.lL1pZi775l5XBz4g]{saurios} o @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.57xqZAEa8kUw4MFD]{króxigors}. Para los eslizones, estos cambios se acumulan con cualquier mejora de su casta.</p><p>Es posible (aunque extremadamente raro) que el desove de un individuo, o cohorte de hombres lagarto, porte la marca de más de un Ancestral. En ese caso, combina los bonificadores.</p><p><strong>Marca sagrada</strong>: Quetzl</p><p><strong>Marca</strong>: Protuberancias óseas y piel gruesa</p><p><strong>Portento</strong>: Resistencia protectora R+5</p>",
+			"effects": [{
+				"name":"Marca de los Ancestrales (Quetzl)",
+				"scriptData": [
+					{"label":"Marca de los Ancestrales (Quetzl)"}
+					]
+				}]
+		},
+		{
+			"id": "Mark of the Old Ones (Sotek)",
+			"name": "Marca de los Ancestrales (Sotek)",
+			"description": "<p>Los hombres lagarto raros son marcados por los @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.2ySnssbzviW8Fx0T]{Ancestrales}, elegidos para un gran destino. Estos desoves pueden ser representados por los siguientes cambios en los perfiles de los @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.DikyZGNIMw2cUpig]{eslizones}, @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.lL1pZi775l5XBz4g]{saurios} o @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.57xqZAEa8kUw4MFD]{króxigors}. Para los eslizones, estos cambios se acumulan con cualquier mejora de su casta.</p><p>Es posible (aunque extremadamente raro) que el desove de un individuo, o cohorte de hombres lagarto, porte la marca de más de un Ancestral. En ese caso, combina los bonificadores.</p><p><strong>Marca sagrada</strong>: Sotek</p><p><strong>Marca</strong>: Rojo sangre</p><p><strong>Portento</strong>: Ferocidad implacable</p>",
+			"effects": [{
+				"name":"Marca de los Ancestrales (Sotek)",
+				"scriptData": [
+					{"label":"Marca de los Ancestrales (Sotek)"}
+					]
+				}]
+		},
+		{
+			"id": "Mark of the Old Ones (Tepok)",
+			"name": "Marca de los Ancestrales (Tepok)",
+			"description": "<p>Los hombres lagarto raros son marcados por los @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.2ySnssbzviW8Fx0T]{Ancestrales}, elegidos para un gran destino. Estos desoves pueden ser representados por los siguientes cambios en los perfiles de los @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.DikyZGNIMw2cUpig]{eslizones}, @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.lL1pZi775l5XBz4g]{saurios} o @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.57xqZAEa8kUw4MFD]{króxigors}. Para los eslizones, estos cambios se acumulan con cualquier mejora de su casta.</p><p>Es posible (aunque extremadamente raro) que el desove de un individuo, o cohorte de hombres lagarto, porte la marca de más de un Ancestral. En ese caso, combina los bonificadores.</p><p><strong>Marca sagrada</strong>: Tepok (sólo eslizones y saurios)</p><p><strong>Marca</strong>: Púrpura</p><p><strong>Portento</strong>: Entendimiento profundo</p>",
+			"effects": [{
+				"name":"Marca de los Ancestrales (Tepok)",
+				"scriptData": [
+					{"label":"Marca de los Ancestrales (Tepok)"}
+					]
+				}]
+		},
+		{
+			"id": "Mark of the Old Ones (Tlazcotl)",
+			"name": "Marca de los Ancestrales (Tlazcotl)",
+			"description": "<p>Los hombres lagarto raros son marcados por los @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.2ySnssbzviW8Fx0T]{Ancestrales}, elegidos para un gran destino. Estos desoves pueden ser representados por los siguientes cambios en los perfiles de los @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.DikyZGNIMw2cUpig]{eslizones}, @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.lL1pZi775l5XBz4g]{saurios} o @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.57xqZAEa8kUw4MFD]{króxigors}. Para los eslizones, estos cambios se acumulan con cualquier mejora de su casta.</p><p>Es posible (aunque extremadamente raro) que el desove de un individuo, o cohorte de hombres lagarto, porte la marca de más de un Ancestral. En ese caso, combina los bonificadores.</p><p><strong>Marca sagrada</strong>: Tlazcotl</p><p><strong>Marca</strong>: Amarillo</p><p><strong>Portento</strong>: Determinación impasible</p>",
+			"effects": [{
+				"name":"Marca de los Ancestrales (Tlazcotl)",
+				"scriptData": [
+					{"label":"Marca de los Ancestrales (Tlazcotl)"}
+					]
+				}]
+		},
+		{
+			"id": "Mark of the Old Ones (Tzunki)",
+			"name": "Marca de los Ancestrales (Tzunki)",
+			"description": "<p>Los hombres lagarto raros son marcados por los @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.2ySnssbzviW8Fx0T]{Ancestrales}, elegidos para un gran destino. Estos desoves pueden ser representados por los siguientes cambios en los perfiles de los @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.DikyZGNIMw2cUpig]{eslizones}, @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.lL1pZi775l5XBz4g]{saurios} o @UUID[JournalEntry.opTXU9nkktrOyUB0.JournalEntryPage.57xqZAEa8kUw4MFD]{króxigors}. Para los eslizones, estos cambios se acumulan con cualquier mejora de su casta.</p><p>Es posible (aunque extremadamente raro) que el desove de un individuo, o cohorte de hombres lagarto, porte la marca de más de un Ancestral. En ese caso, combina los bonificadores.</p><p><strong>Marca sagrada</strong>: Tzunki</p><p><strong>Marca</strong>: Verde mar</p><p><strong>Portento</strong>: Agilidad y vista desarrollada</p>",
+			"effects": [{
+				"name":"Marca de los Ancestrales (Tzunki)",
+				"scriptData": [
+					{"label":"Marca de los Ancestrales (Tzunki)"}
+					]
+				}]
+		},
+		{
+			"id": "Stationary Attacker",
+			"name": "Atacante inmóvil",
+			"description": "<p>Muchas plantas e invertebrados simples no son completamente móviles ni están activos de la misma forma que los oponentes habituales en partidas de <strong>WJdR</strong>. En su lugar, se comportan más como trampas o peligros ambientales que como criaturas. Las plantas como la @UUID[Compendium.wfrp4e-lustria.actors.Actor.BKxDSHGT8YvIS2rW]{zarza picuda empaladora} o las criaturas inmóviles como los @UUID[Compendium.wfrp4e-lustria.actors.Actor.nMAiirIxIaRvpNnT]{gusanos ciegos pálidos} son ejemplos de atacantes estáticos.</p><p>Las criaturas con el Rasgo de Atacante inmóvil tienen el Rasgo de @UUID[Compendium.wfrp4e-core.items.Item.IAWyzDfC286a9MPz]{Inmunidad a la Psicología}. Ocupan una ubicación y, aunque son hostiles hacia las presas que irrumpen en ese lugar, no son capaces de perseguirlas o maniobrar a su alrededor. No pueden realizar Acciones de Carga, Huida, Salto, Carrera o Escalada ni cualquier otra acción asociada a sus ataques y Rasgos.</p><p>Sin embargo, si un objetivo desprevenido se pone al alcance de una criatura con este Rasgo, esa criatura cuenta como Trabada con él y puede lanzar un ataque, infligiendo 1 Estado de @Condition[Sorprendido] al objetivo al hacerlo así. El alcance de un Atacante inmóvil depende de su Tamaño.</p><blockquote class=\"sidebar\"><h4 style=\"text-transform:uppercase\" class=\"no-toc sidebar-title\"><em>Alcance del atacante inmóvil</em></h4><table style=\"width:100%;height:289px\" border=\"1\"><tbody><tr style=\"\"><td style=\"\" data-colwidth=\"240\"><p><em><strong>Tamaño de la criatura</strong></em></p></td><td style=\"\" colspan=\"\"><p><em><strong>Alcance</strong></em></p></td></tr><tr><td data-colwidth=\"240\"><p><em>Diminuto o Pequeño</em></p></td><td><p><em>Muy corto</em></p></td></tr><tr><td data-colwidth=\"240\"><p><em>Pequeño</em></p></td><td><p><em>Corto</em></p></td></tr><tr><td data-colwidth=\"240\"><p><em>Normal</em></p></td><td><p><em>Medio</em></p></td></tr><tr><td data-colwidth=\"240\"><p><em>Grande</em></p></td><td><p><em>Largo</em></p></td></tr><tr><td data-colwidth=\"240\"><p><em>Enorme</em></p></td><td><p><em>Muy largo</em></p></td></tr><tr><td data-colwidth=\"240\"><p><em>Monstruoso</em></p></td><td><p><em>Masivo</em></p></td></tr></tbody></table></blockquote><p>Por lo general, los Atacantes inmóviles se mezclan con el sotobosque, aparentando discreción hasta que hacen sus ataques. Para que un PJ reconozca la amenaza, debe superar primero un Chequeo <strong>Desafiante (+0)</strong> de <strong>Percepción</strong> para notar la presencia del Atacante inmóvil, seguido de un Chequeo de Sabiduría académica adecuado para identificarlo. Si se falla cualquiera de los dos Chequeos, el PJ no logra reconocer la amenaza.</p>",
+			"effects": [{
+				"name":"Atacante inmóvil",
+				"scriptData": [
+					{"label":"Atacante inmóvil"}
+					]
+				}]
+		},
+		{
+			"id": "Blessed by Isha",
+			"name": "Bendecido por Isha",
+			"description": "<p>Los elfos son los únicos en poseer este Talento. Has servido como novicio de Isha y has recibido la bendición de la Reina Eterna en Ulthuan (si eres de los asur) o la bendición de Ariel en Athel Loren (si eres de los asrai). Ahora puedes elegir el Talento de @UUID[Compendium.wfrp4e-lustria.items.Item.dMeH8aoL6lT87azp]{Magia Suprema}.</p>"
+		},
+		{
+			"id": "High Magic",
+			"name": "Magia Suprema",
+			"description": "<p>Sólo los slann y los elfos con el Talento de @UUID[Compendium.wfrp4e-lustria.items.Item.AObNju2Dr2VTCD2q]{Bendecido por Isha} pueden tener este Talento. Cuando obtienes este Talento por primera vez, te beneficias de la posibilidad de acceder a múltiples Vientos de la Magia. Aunque no tengas acceso a una fuente de un Viento en particular al lanzar un hechizo de cualquiera de los ocho Saberes, puedes lanzarlo igualmente. Además, también puedes aprender un único hechizo de Magia Suprema. Las siguientes veces que obtengas este Talento, es posible que aprendas un hechizo adicional de Magia Suprema. Si tienes éxito en el lanzamiento de un hechizo, tu nivel de Magia Suprema se suma al NE de Prolongación de lanzamiento con el objetivo de aplicar Bonificadores a los hechizos de Magia Suprema. El Talento de Magia Suprema anula la Habilidad de Múltiples saberes arcanos.</p>",
+			"tests": "Chequeos de Lanzamiento"
+		},
+		{
+			"id": "Experimental",
+			"name": "Experimental",
+			"description": "<p>Por cada hora de uso, se requiere superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Oficio (Ingeniería)</strong>. Cada vez que se saque un doble en un fracaso, algo se rompe. Esto puede ocurrir un número de veces igual al valor del Rasgo antes de que el planeador deje de funcionar.</p>"
+		},
+		{
+			"id": "Odour Attack",
+			"name": "Ataque pestilente",
+			"description": "<p>Cuando son acosadas, estas repulsivas criaturas emiten un olor nocivo que se propaga alrededor suyo a una distancia de [[/r 1d10]] yardas. Cualquier criatura de sangre fría atrapada en el área debe hacer un Chequeo <strong>Desafiante (+0)</strong> de <strong>Aguante</strong>. Las que fracasen sufren del Síntoma de Náuseas durante [[/r 1d10]] horas. Las criaturas de sangre caliente notan un mal olor, pero no sufren el síntoma.</p>",
+			"effects": [{
+				"name":"Ataque pestilente",
+				"preApplyScript":"let roll = await new Roll(\"1d10\").roll();\nargs.effectData.system.transferData.area.radius = roll.total;\nroll.toMessage({speaker : {alias : this.effect.name}, flavor : \"Radio\"});\nreturn true;",
+				"scriptData": [
+					{"label":"Ataque pestilente","script":"if (this.actor.uuid == this.effect.sourceActor.uuid)\n{\n\treturn;\n}\n\nif (this.actor.has(\"De sangre fría\") && !this.actor.hasSystemEffect(\"nausea\")) { \n  let test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {appendTitle : `- ${this.effect.name}`})\nawait test.roll();\nif (test.failed)\n{\n\n  let myRoll = await new Roll(\"1d10\").roll({allowInteractive : false});\n  let duration = myRoll.total\n  this.actor.addSystemEffect(\"nausea\");\n  this.script.scriptMessage(`Añadido síntoma Náuseas, duración : ${duration} horas`);\n}\n}\nreturn false;"}
+					]
+				}]
+		},
+		{
+			"id": "Boring Attack",
+			"name": "Ataque perforador",
+			"description": "<p>Los ataques de las serpientes perforadoras cuentan con las Cualidades de <em>Dañina</em> y <em>Empalante</em>.</p>",
+			"effects": [{
+				"name":"Ataque perforador",
+				"scriptData": [
+					{"label":"Ataque perforador"}
+					]
+				}]
+		},
+		{
+			"id": "Venom*",
+			"name": "Veneno*",
+			"description": "<p>Los ataques de la criatura están envenenados. Cuando causan Heridas, el oponente sufre 1 Estado de @Condition[Envenenado]. Si no se indica Dificultad alguna para resistir el Veneno, se supone que es Desafiante.</p>",
+			"effects": [{
+				"name":"Veneno",
+				"scriptData": [
+					{"label":"Veneno"}
+					]
+				}]
+		},
+		{
+			"id": "Blood Frenzy",
+			"name": "Frenesí sangriento",
+			"description": "<p>Una vez que un carnosaurio causa una Herida en combate, se vuelve @UUID[Compendium.wfrp4e-core.items.Item.DrNUTPeodEgpWTnT]{Frenético} hasta que hayan muerto todos los enemigos al alcance de sus sentidos.</p>",
+			"effects": [{
+				"name":"Frenesí sangriento",
+				"scriptData": [
+					{"label":"Frenesí sangriento","script":"if (args.totalWoundLoss > 0) {\n  let frenzy = await fromUuid(\"Compendium.wfrp4e-core.items.Item.DrNUTPeodEgpWTnT\");\n  frenzy = frenzy.toObject(); \n  frenzy.effects[0].disabled = false;\n  this.actor.createEmbeddedDocuments(\"Item\", [frenzy], {fromEffect : this.effect.id}); \n  this.script.scriptMessage(\"Carnosaurio gana Furia\");\n}"}
+					]
+				}]
+		},
+		{
+			"id": "Fearsome Roar",
+			"name": "Rugido temible",
+			"description": "<p>El rugido de un saurio del terror requiere que otros depredadores de tamaño Enorme o Monstruoso superen un Chequeo <strong>Complicado (-10)</strong> de <strong>Frialdad</strong>. Si fracasan, las criaturas afectadas sufren de @UUID[Compendium.wfrp4e-core.items.Item.pTorrE0l3VybAbtn]{Miedo} y deben abandonar la zona inmediatamente. Las presas u otras criaturas más pequeñas deben superar el mismo Chequeo, esta vez <strong>Difícil (-20)</strong>, para evitar huir despavoridas por el Miedo.</p>",
+			"effects": [{
+				"name":"Rugido temible",
+				"scriptData": [
+					{"label":"Rugido temible"}
+					]
+				}]
+		},
+		{
+			"id": "Toxic Bile",
+			"name": "Bilis tóxica",
+			"description": "<p>Los troglodones pueden proyectar bilis ácida hasta 15 yardas como un ataque a distancia. Las heridas causadas por la bilis producen un sonido fuerte y chisporroteante al quemarse, provocando 1 Estado de @Condition[Ardiendo] en cualquier PJ golpeado.</p>",
+			"effects": [{
+				"name":"Bilis tóxica",
+				"scriptData": [
+					{"label":"Bilis tóxica"}
+					]
+				}]
+		},
+		{
+			"id": "Blood Hungry Spore Cloud",
+			"name": "Nube de esporas hematófagas",
+			"description": "<p>Cuando es perturbada por el movimiento de criaturas de sangre caliente de tamaño humano o mayor dentro de una yarda, el hinchado políporo rosa emite una nube de esporas pálidas que cubren un área con un radio de 5 yardas y 3 yardas de altura. La nube persiste durante [[/r 2d10]] Asalto. Cualquier criatura de sangre caliente atrapada en esta nube debe superar un Chequeo <strong>Complicado (-10)</strong> de <strong>Aguante</strong> o sufrir 1 Estado de @Condition[Sangrando].</p>",
+			"effects": [{
+				"name":"Nube de esporas hematófagas",
+				"scriptData": [
+					{"label":"Nube de esporas hematófagas"}
+					]
+				}]
+		},
+		{
+			"id": "Entangled Attack",
+			"name": "Ataque enmarañador",
+			"description": "<p>La enredadera trepadora sólo ataca a criaturas de sangre caliente. No puede usar su arma contra objetivos hasta que haya infligido 1 Estado de @Condition[Enmarañado] sobre ellos. Una vez que la enredadera haya sometido a su presa, la golpea una vez por turno con su ataque de arma hasta que se libere o muera.</p>",
+			"effects": [{
+				"name":"Ataque enmarañador",
+				"scriptData": [
+					{"label":"Ataque enmarañador","script":"this.script.scriptNotification(\"No puede atacar a objeticos que no estén Trabados\")\nargs.abort = true;"}
+					]
+				}]
+		},
+		{
+			"id": "Impale Attack",
+			"name": "Ataque de empalamiento",
+			"description": "<p>Sus ataques apuntan siempre a las piernas de su oponente, sin sufrir el penalizador habitual de -20 por tiradas. Ignoran la armadura de cuero y poseen la Cualidad de Arma <em>Empalante</em>.</p>",
+			"effects": [{
+				"name":"Ataque de empalamiento",
+				"scriptData": [
+					{"label":"Ataque de empalamiento","hideScript":"return !args.item?.name?.includes(\"Arma\")","activateScript":"return args.item.name.includes(\"Arma\")"},
+					{"label":"Empalante"}
+					]
+				}]
+		},
+		{
+			"id": "Excruciating Sting",
+			"name": "Picadura insoportable",
+			"description": "<p>La picadura de una avispa hematófaga es especialmente dolorosa. Mientras la víctima de una picadura de avispa hematófaga sufre algún Estado de @Condition[Envenenado], se debe luchar para ignorar la terrible agonía de la picadura, para ello debe superar un Chequeo <strong>Complicado (-10)</strong> de <strong>Frialdad</strong> al comienzo de su turno. Si fracasan, sufren 1 Estado de @Condition[Aturdido].</p>",
+			"effects": [{
+				"name":"Picadura insoportable",
+				"filter":"return this.effect.sourceItem?.actor.uuid == this.actor.uuid && this.actor.has(\"De sangre fría\")",
+				"scriptData": [
+					{"label":"Picadura insoportable"},
+					{"label":"Picadura insoportable"}
+					]
+				},
+				{
+				"name":"Picadura insoportable",
+				"scriptData": [
+					{"label":"Daño"}
+					]
+				}]
+		},
+		{
+			"id": "Brain Rot",
+			"name": "Podredumbre cerebral",
+			"description": "<p>Si un gusano cerebral inflige un crítico al golpear en la cabeza de un oponente de sangre caliente, entonces, además de cualquier Daño que inflija, el gusano se aloja en el cráneo de la víctima y ésta contrae la enfermedad de @UUID[Compendium.wfrp4e-lustria.items.Item.IsNQH867Y58pZgq6]{Podredumbre cerebral}.</p>",
+			"effects": [{
+				"name":"Podredumbre cerebral",
+				"scriptData": [
+					{"label":"Podredumbre cerebral","script":"if (args.totalWoundLoss > 0 && args.opposedTest?.attackerTest.result.critical && args.loc == \"head\") {\n    let brainRot = await fromUuid(\"Compendium.wfrp4e-lustria.items.Item.IsNQH867Y58pZgq6\");\n    args.test.targets[0].createEmbeddedDocuments(\"Item\", [brainRot], {fromEffect : this.effect.id});\n    this.script.scriptMessage(`${args.test.targets[0].name} ha contraído la Podedumbre cerebral`);\n}"}
+					]
+				}]
+		},
+		{
+			"id": "Aquatic",
+			"name": "Acuático",
+			"description": "<p>La riatura puede respirar bajo el agua y se mueve a su velocidad completa de Movimiento en el agua. No puede moverse en tierra.</p>"
+		},
+		{
+			"id": "Posterior Flame",
+			"name": "Llama trasera",
+			"description": "<p>Esta criatura recurrirá a lanzar llamas si se somete a tensiones tales como ser bruscamente manipulada o perturbada repentinamente por un animal de sangre caliente. La sanguijuela de fuego producirá un chorro de llamas que persiste durante [[/r 1d10]] Asaltos. Durante este tiempo, cualquier PJ o elemento inflamable que esté en contacto con ella, sufre 1 Estado de @Condition[Ardiendo].</p>",
+			"effects": [{
+				"name":"Llama trasera",
+				"filter":"return this.effect.sourceItem?.actor.uuid == this.actor.uuid && this.actor.has(\"De sangre fría\")",
+				"scriptData": [
+					{"label":"Llama trasera","script":"this.actor.addCondition(\"ablaze\");\nthis.script.scriptMessage(`${this.actor.name} ha recibido un Estado de @Condition[Ardiendo]`)"}
+					]
+				}]
+		},
+		{
+			"id": "Magical Snack",
+			"name": "Aperitivo mágico",
+			"description": "<p>Las larvas de Itxi son comestibles (aunque son un sabor adquirido). Un hechicero que consuma una, se beneficia de +1 NE a todos los lanzamientos y Chequeos de Canalización para los siguientes [[/r 3d10]] Asaltos. Este efecto no es acumulativo.</p>",
+			"effects": [{
+				"name":"Aperitivo mágico",
+				"scriptData": [
+					{"label":"Aperitivo mágico"}
+					]
+				}]
+		},
+		{
+			"id": "Ramming Attack",
+			"name": "Embestida",
+			"description": "<p>Se sabe que los pliodones hunden barcos fluviales (que perciben como una especie de depredador rival) embistiéndolos repetidamente. Los pliodones sanos comienzan con un Índice de Colisión de 14 al determinar los resultados de este ataque.</p>"
+		},
+		{
+			"id": "Unstoppable Charge",
+			"name": "Carga imparable",
+			"description": "<p>Un estegadón obtiene +3 de Ventaja cuando cargan hacia un objetivo.</p>",
+			"effects": [{
+				"name":"Carga imparable",
+				"scriptData": [
+					{"label":"Más Ventaja al cargar"}
+					]
+				}]
+		},
+		{
+			"id": "Collection of Decorated Skulls",
+			"name": "Colección de cráneos decorados"
+		},
+		{
+			"id": "Golden Snake Helm",
+			"name": "Yelmo dorado de Serpiente"
+		},
+		{
+			"id": "Retinue of Skink Followers including two Chameleon Skinks and a Kroxigor",
+			"name": "Comitiva de seguidores eslizones incluyendo dos eslizones camaleón y un króxigor"
+		},
+		{
+			"id": "Serpent Swarm",
+			"name": "Enjambre de serpientes"
+		},
+		{
+			"id": "Starmetal Helm",
+			"name": "Yelmo de metal estelar"
+		},
+		{
+			"id": "Beaten Gold Armour",
+			"name": "Armadura de oro batido"
+		},
+		{
+			"id": "Skavenpelt Cloak",
+			"name": "Capa de pelaje skaven"
+		},
+		{
+			"id": "Pummel",
+			"name": "Perforante"
+		},
+		{
+			"id": "Golden Mask",
+			"name": "Máscara dorada"
+		},
+		{
+			"id": "Magical Sword of Warping",
+			"name": "Espada mágica de disformidad",
+			"description": "<p>Ignora Armadura incluida la piel con escamas.</p>",
+			"effects": [{
+				"name":"Espada mágica de disformidad",
+				"scriptData": [
+					{"label":"Ignorar PA"}
+					]
+				}]
+		},
+		{
+			"id": "Assorted Armour",
+			"name": "Armadura de retales"
+		},
+		{
+			"id": "Cleaver",
+			"name": "Machete"
+		},
+		{
+			"id": "Five-Zombie Honour Guard",
+			"name": "Guardia pretoriana de cinco zombis"
+		},
+		{
+			"id": "Tattered Robes and Chain of Office",
+			"name": "Túnicas andrajosas y un collar de librea"
+		},
+		{
+			"id": "The Red Blades",
+			"name": "Las Espadas Rojas",
+			"description": "Estas hojas gemelas fueron forjadas con acero de sangre de Ind, tras fundir una estatua durante el saqueo del Templo de Gilgadresh. Después de un Chequeo de Cuerpo a cuerpo (básico), los dados porcentuales pueden invertirse para efectos del cálculo del daño. Los ataques también son mágicos."
+		},
+		{
+			"id": "Plate Armour",
+			"name": "Armadura completa"
+		},
+		{
+			"id": "Sea Dragon Cloak",
+			"name": "Capa de dragón marino",
+			"effects": [{
+				"name":"Capa de dragón marino - Desenvualta",
+				"scriptData": [
+					{"label":"Desenvolver"}
+					]
+				},
+				{
+				"name":"Capa de dragón marino - Envuelta",
+				"scriptData": [
+					{"label":"Envolver"}
+					]
+				}]
+		},
+		{
+			"id": "Helm of the Kraken",
+			"name": "Yelmo del Kraken",
+			"description": "<p>Este inquietante casco dorado hace honor a su nombre y es más antiguo que la civilización élfica. Lokhir lo recuperó de las ruinas hundidas de Chupayotl. Tiene la forma de una terrorífica bestia marina. El portador obtiene 2 Puntos de Armadura adicionales en cada ubicación de impacto, junto con los Rasgos de criatura @UUID[Compendium.wfrp4e-core.items.Item.SfUUdOGjdYpr3KSR]{Regeneración} y @UUID[Compendium.wfrp4e-core.items.Item.meMkLEwdJIDLxM0B]{Terror 2}.</p>",
+			"effects": [{
+				"name":"Yelmo del Kraken",
+				"scriptData": [
+					{"label":"Yelmo del Kraken"}
+					]
+				}]
+		},
+		{
+			"id": "Dragon Blade",
+			"name": "Hoja de Dragón",
+			"description": "<p>Un arma mágica que otorga el Rasgo de criatura <em>Campeón</em>.</p>",
+			"effects": [{
+				"name":"Hoja de Dragón",
+				"scriptData": [
+					{"label":"Hoja de Dragón"}
+					]
+				}]
+		},
+		{
+			"id": "Full Plate Armour",
+			"name": "Armadura completa"
+		},
+		{
+			"id": "Dragonship Exelceron",
+			"name": "Buque Dragón ‘Exelceron’"
+		},
+		{
+			"id": "Elven Steed with Ithilmar Barding",
+			"name": "Corcel élfico con barda de Ithilmar"
+		},
+		{
+			"id": "Horn",
+			"name": "Cuerno"
+		},
+		{
+			"id": "Maps and Sea Charts",
+			"name": "Mapas y cartas marinas"
+		},
+		{
+			"id": "Villa on Culchan Plains",
+			"name": "Villa en las Llanuras de Culchán"
+		},
+		{
+			"id": "Filthy Robes",
+			"name": "Túnicas sucias"
+		},
+		{
+			"id": "Liber Bubonicus",
+			"name": "Liber Bubonicus",
+			"description": "<p>Se trata de un infame grimorio que contiene los secretos de enfermedades inculcadas mágicamente. El grimorio contiene todos los hechizos del Saber de la Plaga skaven y el Saber de Nurgle. El libro cuenta como una @Corruption[Mayor]{Exposición a la Corrupción Mayor} para cualquiera que lo lleve encima.</p>",
+			"effects": [{
+				"name":"Liber Bubonicus",
+				"scriptData": [
+					{"label":"Influencia corruptora"}
+					]
+				}]
+		},
+		{
+			"id": "Rod of Corruption",
+			"name": "Vara de la Corrupción",
+			"description": "<p>El arma elegida por el Señor de la Guerra Skrolk es un mayal de madera de araña tallado con muchas runas en queekish, del que cuelgan múltiples incensarios de los que emanan fétidas y apestosas pestilencias. Sus púas de hierro han sido empapadas en tantas plagas que cada herida acaba supurando. Pocos sobreviven lo suficiente para ver cómo se pudren las heridas, sin embargo, aquellos dañados por la Vara de Corrupción deben superar un Chequeo <strong>Normal (+20)</strong> de <strong>Aguante</strong> o sufrir los efectos inmediatos de la gangrena.</p><p>Cualquier criatura que se acerque a menos de 3 yardas de un PJ que porte la Vara de Corrupción, entra en un área llena con miasma pestilente. Las criaturas que eligen quedarse dentro de esta área durante más de 3 Asaltos deben superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Aguante</strong> o contraer una enfermedad al azar (haz una tirada en el @UUID[RollTable.GL7rKOEThauPUK0E]{Caldero de las Mil Plagas}).</p><p>La Vara de Corrupción cuenta como una @Corruption[Mayor]{Exposición a la Corrupción Mayor} para cualquiera que la lleve. Puede blandirse en combate como un bastón.</p>",
+			"effects": [{
+				"name":"Vara de la Corrupción",
+				"scriptData": [
+					{"label":"Vara de la Corrupción"},
+					{"label":"Corrupción"}
+					]
+				},
+				{
+				"name":"Miasma pestilente",
+				"scriptData": [
+					{"label":"Miasma pestilente"}
+					]
+				}]
+		},
+		{
+			"id": "Suit of Plate Armour",
+			"name": "Armadura de placas"
+		},
+		{
+			"id": "Dashing but Threadbare Commodore",
+			"name": "Uniforme de comodoro elegante pero hecho trizas"
+		},
+		{
+			"id": "Doll named 'Anna'",
+			"name": "Una muñeca llamada ‘Anna’"
+		},
+		{
+			"id": "Access to an arsenal of melee weapons but typically either fights with a Rapier or Zweihander depending on his mood",
+			"name": "Acceso a un amplio arsenal de armas cuerpo a cuerpo, pero normalmente lucha con un estoque o una zweihänder"
+		},
+		{
+			"id": "Vampiric Gaze",
+			"name": "Mirada del vampiro",
+			"description": "<p>la criatura puede intentar romper la voluntad de un objetivo mirándole a los ojos. En combate, esta Acción del vampiro ocupa su Asalto. Si el vampiro supera un Chequeo <strong>Enfrentado</strong> de <strong>Voluntad/Frialdad</strong>, el objetivo queda bajo su control, obedeciendo todas sus órdenes. El efecto dura una hora más por cada NE conseguido en el Chequeo Enfrentado. Los PJs controlados pueden intentar liberarse si superan un Chequeo <strong>Normal (+20)</strong> de <strong>Frialdad</strong> si se le ordena algo que normalmente sería inmoral para ellos o físicamente repugnante. También pueden gastar un Punto de Resolución para deshacerse de dicho control.</p>",
+			"effects": [{
+				"name":"Mirada del vampiro",
+				"avoidTestSkill":"Frialdad",
+				"scriptData": [
+					{"label":"Tirada"}
+					]
+				}]
+		},
+		{
+			"id": "Multiple Personalities",
+			"name": "Múltiples personalidades",
+			"description": "<p>Luthor suele disociarse cuando está estresado, aburrido o confuso. Cuando os encontréis con él por primera vez, haz una tirada en la tabla de la derecha. Cuando haya otra personalidad que no sea Harkon, debes hacer un Chequeo <strong>Desafiante (+0)</strong> de <strong>Frialdad</strong> cada [[/r d10]] horas. Fracasar implica un cambio de personalidad. Si esta nueva personalidad es Luthor Harkon, no hay necesidad de volver a hacer el Chequeo a menos que surja una circunstancia en la que Harkon sufre algún Estado, o es el objetivo de un hechizo, con lo que se genera inmediatamente una nueva personalidad.</p>",
+			"effects": [{
+				"name":"Múltiples personalidades",
+				"scriptData": [
+					{"label":"Tirada","script":"let table = await fromUuid(\"RollTable.uATmVS40DQLC1woJ\");\n\nif (table)\n{\n    table.draw();\n}\nelse \n{\n    this.script.notification(\"Tabla de personalidad no encontrada\", \"error\");\n}"}
+					]
+				}]
+		},
+		{
+			"id": "Sack Full of Gifts (contains ingredients for Soren’s spells and assorted treasures worth a total of 40 GC)",
+			"name": "Saco lleno de regalos (contiene ingredientes para los hechizos de Soren y diversos tesoros por un valor total de 40 co)"
+		},
+		{
+			"id": "Chariots of the Asur",
+			"name": "Carros de los asur",
+			"description":"<p>Los rocs Plumaveloz son los únicos capaces de tirar de un carro de Escoltas Celestes, y hacen falta los reflejos de un elfo para pilotar uno con seguridad y eficacia.</p>"
+		},
+		{
+			"id": "Cauldron",
+			"name": "Caldero"
+		},
+		{
+			"id": "Cave Lair on a rocky island off Cape Ruin",
+			"name": "Cueva guarida en una isla rocosa frente a Cabo Ruina"
+		},
+		{
+			"id": "Dozens of Mirrors including a Mirror of Scrying (allows access to the Psychometry Skill to the Character wielding it and a minor source of Corruption)",
+			"name": "Docenas de espejos, incluido un espejo de adivinación (permite acceder a la habilidad Psicometría para el PJ que lo lleve, además de ser una fuente de Corrupción menor)"
+		},
+		{
+			"id": "Horde of Treasure from wrecked ships",
+			"name": "Montaña de tesoros de los barcos naufragados"
+		},
+		{
+			"id": "Undead Servants",
+			"name": "Sirvientes muertos vivientes"
+		},
+		{
+			"id": "Brine Wife’s Call",
+			"name": "Llamada de la Esposa de Salmuera",
+			"description": "<p>Como acción, la doncella de los mares puede cantar su canción. Los PJs dentro de un número de yardas igual a la Iniciativa de la doncella, deben superar un Chequeo <strong>Difícil (-20)</strong> de <strong>Frialdad</strong> o caerán en su llamada y serán incapaces de realizar cualquier acción excepto moverse hacia ella, obviamente, sufriendo 1 Estado de @Condition[Inconsciente].</p>",
+			"effects": [{
+				"name":"Llamada de la Esposa de Salmuera",
+				"scriptData": [
+					{"label":"Llamada de la Esposa de Salmuera"}
+					]
+				}]
+		},
+		{
+			"id": "Papyrus copies of the Plaques of Tlaxtlan",
+			"name": "Copias en papiro de las Placas de Tlaxtlan"
+		},
+		{
+			"id": "Silver necklace and bands of office",
+			"name": "Collar de plata y bandas de alto cargo"
+		},
+		{
+			"id": "Wax slate and Stylus",
+			"name": "Placa de cera y estilete"
+		},
+		{
+			"id": "Plaguesword",
+			"name": "Espada de Plaga",
+			"description": "<p>Las corroídas espadas blandidas por los demonios de Nurgle como Uthl’kritchnaak, están embadurnadas en toda clase de suciedad infecta. Cada vez que un PJ es herido por una Espada de Plaga, debe superar un Chequeo <strong>Complicado (-10)</strong> de <strong>Aguante</strong> o sufrir 1 Estado de @Condition[Envenenado]. La espada también cuenta como Mágica.</p>",
+			"effects": [{
+				"name":"Espada de Plaga",
+				"scriptData": [
+					{"label":"Añadir Envenenado"}
+					]
+				}]
+		},
+		{
+			"id": "Horn of Desecration",
+			"name": "Cuerno de la Profanación",
+			"description": "<p>El arma preferida de Uthl’kritchnaak es su propio cuerno, roto en batalla hace mucho tiempo durante su primer intento para conquistar Quetza. Después, se retiró por un tiempo para reorganizarse, regenerarse y talló runas del Caos en la base del cuerno, infundiéndole mortales enfermedades y poderosos males. Una vez por Asalto, en lugar de otras acciones, Uthl’kritchnaak puede empuñar el cuerno para desatar una ola de alimañas. Estas alimañas pululan entre 1d10 enemigos más cercanos, obligándoles a gastar el siguiente Asalto para sacudirse las alimañas de sus cuerpos (sufriendo un -20 a todos los Chequeos) o ignorar a las alimañas y arriesgarse a contraer la peste negra si se fracasa un Chequeo <strong>Complicado (-10)</strong> de <strong>Aguante</strong>.</p>",
+			"effects": [{
+				"name":"Cuerno de la Profanación",
+				"scriptData": [
+					{"label":"Cuerno de la Profanación"},
+					{"label":"Fin del Turno"},
+					{"label":"Ignorar alimañas"}
+					]
+				}]
+		}
+	]
+}

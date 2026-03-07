@@ -664,7 +664,7 @@
 				"name":"Cuchillo de doble filo",
 				"scriptData": [
 					{"label":"Añadir Precisa y Empalante"},
-					{"label":"Cuchillo de doble filo - Empalante","script":"if (args.opposedTest.attackerTest.options.ballockKnife)\n{\n    args.weaponProperties.impale = true;\n    args.extraMessages.push(`<strong>${this.item.name}</strong>: Añadido Empalante`)\n}"}
+					{"label":"Cuchillo de doble filo - Empalante","script":"if (args.opposedTest?.attackerTest.options.ballockKnife)\n{\n    args.weaponProperties.impale = true;\n    args.extraMessages.push(`<strong>${this.item.name}</strong>: Añadido Empalante`)\n}"}
 					]
 				}]
 		},

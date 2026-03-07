@@ -32,6 +32,10 @@ Hooks.on("renderCompendiumDirectory", async () => {
 		await game.folders.getName("Symbol").update({"name":  "Símbolo"  })
 		await game.folders.getName("Vortex").update({"name":  "Vórtice"  })
 	}
+	if (game.folders.getName("Lustria") && (game.folders.getName("Character Creation") || game.folders.getName("Wandering Creature Encounters"))) {
+		await game.folders.getName("Character Creation").update({"name":  "Creación de Personaje"  })
+		await game.folders.getName("Wandering Creature Encounters").update({"name":  "Encuentros con criaturas ambulantes"  })
+	}
 
 	if (game.folders.getName("Toolboxes")) {
 		await game.folders.getName("Toolboxes").update({"name":  "Cajas de herramientas"  })
