@@ -12,7 +12,7 @@ Traduce también los módulos [GM Toolkit (WFRP 4e)](https://github.com/Jagusti/
 Copia el siguiente enlace y pégalo en Add-On Modules => Install Module => Manifest URL
 
 https://github.com/Txus5012/WFRP4e-Castellano/releases/latest/download/module.json
-![Installation](https://user-images.githubusercontent.com/87753744/217327313-8a8f35db-e75c-4780-99dc-03b85a130f7d.jpg)
+![Installation](https://github.com/user-attachments/assets/98d1949d-1d9d-46f3-8998-f5ddbd7b13fa)
 
 ## Inicialización
 
