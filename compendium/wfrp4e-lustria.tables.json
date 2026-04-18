@@ -4,12 +4,6 @@
 		"Character Creation": "Creación de Personaje",
 		"Wandering Creature Encounters": "Encuentros con criaturas ambulantes"
     },
-	"mapping": {
-		"tablenames": {
-			"path": "results",
-			"converter": "tablenames"
-		}
-	},
 	"entries": [
 
 		{

@@ -1,8 +1,5 @@
 {
 	"label": "Diarios (¡A las Armas!)",
-	"mapping": {
-		"image": "img"
-	},
 	"entries": {
 		"An Alternate Approach to Injury": {
 			"name" : "Un enfoque alternativo de las Heridas",

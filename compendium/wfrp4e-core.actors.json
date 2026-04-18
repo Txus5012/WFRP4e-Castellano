@@ -1,14 +1,5 @@
 {
 	"label": "Bestiario (Básico)",
-	"mapping": {
-		"species": "system.details.species.value",
-		"gender": {
-			"path": "system.details.gender.value",
-			"converter": "bestiary_gender"
-			},
-		"hit": "system.details.hitLocationTable.value",
-		"gmnotes": "system.details.gmnotes.value"
-		},
 	"entries": [
 		{
 			"id": "Basilisk",

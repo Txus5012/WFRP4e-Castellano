@@ -1,8 +1,5 @@
 {
 	"label": "Diarios (Básico)",
-	"mapping": {
-		"image": "img"
-	},
 	"entries": {
 		"Bestiary": {
 			"name" : "Bestiario",

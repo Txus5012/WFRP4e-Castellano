@@ -117,3 +117,24 @@ export const tablenames = (results, translations) => {
 
   return results;
 };
+
+export const levels = (results, translations) => {
+  if (results.length === 0) {
+    return results;
+  }
+
+  if (!translations) {
+    return results;
+  }
+
+  results.forEach((currenttlevels, index, _scriptDataArray) => {
+    const tlevels = translations[index];
+    if (!tlevels) {
+      return;
+    }
+
+    if (tlevels.background) currenttlevels.background.src = tlevels.background;
+  })
+
+  return results;
+};

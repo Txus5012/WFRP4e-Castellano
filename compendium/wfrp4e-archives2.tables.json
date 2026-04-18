@@ -1,11 +1,5 @@
 {
   "label": "Tablas (Archivos Vol. II)",
-  "mapping": {
-	"tablenames": {
-		"path": "results",
-		"converter": "tablenames"
-		}
-  },
   "entries": {
     "Species (Archives of the Empire Vol. II)": {
       "name": "Especies (Archivos del Imperio Vol. II)",

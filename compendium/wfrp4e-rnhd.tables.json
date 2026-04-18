@@ -6,12 +6,6 @@
     "Species (Rough Nights & Hard Days)": "Especies (Noches Agitadas y Días Difíciles)",
     "Hair Coulour - Gnome": "Color del Cabello - Gnomo"
   },
-  "mapping": {
-	"tablenames": {
-		"path": "results",
-		"converter": "tablenames"
-		}
-  },
   "entries": {
     "Career - Gnome": {
       "name": "Carrera - Gnomo",

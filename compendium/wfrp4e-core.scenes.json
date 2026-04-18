@@ -1,22 +1,28 @@
 {
 	"label": "Escenas (Básico)",
-	"mapping": {
-		"image": "background.src"
-	},
 	"entries": [
 		{
 			"id": "Barony of Böhrn",
 			"name": "Baronía de Böhrn",
-			"image": "modules/wfrp4e-castellano/Images/baronia.webp"
+			"image": "modules/wfrp4e-castellano/Images/baronia.webp",
+			"levels": [
+				{"background": "modules/wfrp4e-castellano/Images/baronia.webp"}
+				]
 		},
 		{
 			"id": "GM Screen",
 			"name": "Pantalla del DJ",
-			"image": "modules/wfrp4e-castellano/Images/pantalla.webp"
+			"image": "modules/wfrp4e-castellano/Images/pantalla.webp",
+			"levels": [
+				{"background": "modules/wfrp4e-castellano/Images/pantalla.webp"}
+				]
 		},
 		{
 			"id": "Reikland",
 			"image": "modules/wfrp4e-castellano/Images/Reikland.webp",
+			"levels": [
+				{"background": "modules/wfrp4e-castellano/Images/Reikland.webp"}
+				],
 			"notes": {
 				"Th Schïlder": "El Schïlder",
 				"The Mos": "El Mos",

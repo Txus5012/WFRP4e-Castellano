@@ -10,12 +10,6 @@
 		"Hit Location": "Ubicación de Impacto",
 		"Moo's Homebrew": "Reglas caseras de Moo"
     },
-	"mapping": {
-		"tablenames": {
-			"path": "results",
-			"converter": "tablenames"
-		}
-	},
 	"entries": [
 		{
 			"id": "Career - Dwarf",

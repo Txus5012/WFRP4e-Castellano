@@ -11,12 +11,6 @@
 		"Symbol": "Símbolo",
 		"Vortex": "Vórtice"
     },
-	"mapping": {
-		"tablenames": {
-			"path": "results",
-			"converter": "tablenames"
-		}
-	},
 	"entries": [
 		{
 			"id": "Potion Spoilage Effects - Extreme",

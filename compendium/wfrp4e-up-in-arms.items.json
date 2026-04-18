@@ -10,64 +10,6 @@
 		"Ammunition": "Munición",
 		"Weapons": "Armas"
     },
-	"mapping": {
-	    "skills": "system.skills",
-	    "talents": "system.talents",
-	    "class": {
-		      "path": "system.class.value",
-		      "converter": "career_class"
-		    },
-	    "careergroup": {
-		      "path": "system.careergroup.value",
-		      "converter": "career_careergroup"
-		    },
-	    "trappings": "system.trappings",
-		"range": {
-			"path": "system.range.value",
-			"converter": "spells_duration_range_target"
-			},
-		"effects": {
-			"path": "effects",
-			"converter": "effects"
-			},
-		"wounds": {
-			"path": "system.wounds.value",
-			"converter": "criticals_wounds"
-			},	
-		"location": {
-			"path": "system.location.value",
-			"converter": "criticals_location"
-			},
-		"spell_duration": {
-			"path": "system.duration.value",
-			"converter": "spells_duration_range_target"
-		},
-		"target": {
-			"path": "system.target.value",
-			"converter": "spells_duration_range_target"
-		},    
-		"damage": {
-			"path": "system.damage.value",
-			"converter": "spells_damage"
-		},
-		"specification": {
-			"path": "system.specification.value",
-			"converter": "traits_specification"
-			},
-		"tests": "system.tests.value",
-		"templatesskills": {
-			"path": "system.skills.list",
-			"converter": "templatesskills"
-			},
-		"templatestalents": {
-			"path": "system.talents.list",
-			"converter": "templatestalents"
-			},
-		"templatestrappings": {
-			"path": "system.trappings.options",
-			"converter": "templatestrappings"
-			}
-	},
 	"entries": [
 		{
 			"id": "Apprentice Artillerist",
@@ -622,7 +564,7 @@
 			"effects": [{
 				"name":"Cadáver de animal",
 				"scriptData": [
-					{"label":"Cadáver de animal","script":"let test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {skipTargets: true, appendTitle :  ` - ${this.effect.name}`, fields : {difficulty: \"veasy\"}})\nawait test.roll();\nif (test.failed)\n{\n      this.script.notification(\"Desarrollas una <strong>Herida supurante</strong>\")\n      let item = await fromUuid(\"Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb\")\n      this.actor.createEmbeddedDocuments(\"Item\", [item.toObject()])\n}\nelse\n{\n    this.script.notification(\"Evitada una <strong>Herida supurante</strong>\")\n}\n"}
+					{"label":"Cadáver de animal"}
 					]
 				}]
 		},
@@ -664,7 +606,7 @@
 				"name":"Cuchillo de doble filo",
 				"scriptData": [
 					{"label":"Añadir Precisa y Empalante"},
-					{"label":"Cuchillo de doble filo - Empalante","script":"if (args.opposedTest?.attackerTest.options.ballockKnife)\n{\n    args.weaponProperties.impale = true;\n    args.extraMessages.push(`<strong>${this.item.name}</strong>: Añadido Empalante`)\n}"}
+					{"label":"Cuchillo de doble filo - Empalante"}
 					]
 				}]
 		},
@@ -1131,7 +1073,7 @@
 			"effects": [{
 				"name":"Infectada",
 				"scriptData": [
-					{"label":"Infectada","script":"if (args.totalWoundLoss > 0)\n     this.script.message(`<b>Infectada ${args.actor.name}</b> debe superar un Chequeo <b>Fácil (+40)</b> de <b>Aguante</b> o sufrir una @UUID[Compendium.wfrp4e-core.items.kKccDTGzWzSXCBOb]{Herida supurante}`, {whisper: ChatMessage.getWhisperRecipients(\"GM\") })"}
+					{"label":"Infectada"}
 					]
 				}]
 		},
@@ -1256,8 +1198,8 @@
 			"effects": [{
 				"name":"Contusión en el brazo",
 				"scriptData": [
-					{"label":"Contusión en el brazo","script":"let location = this.item.system.location.key;\n\nif (location)\n{\n    let dropped = this.item.system.weaponsAtLocation;\n\n    if (dropped.length)\n    {\n        this.script.notification(`Soltado ${dropped.map(i => i.name).join(\", \")}!`)\n        for(let weapon of dropped)\n        {\n            await weapon.system.toggleEquip();\n        }\n    }\n}\n\nlet roll = await new Roll(\"max(1, 1d10 - @system.characteristics.t.bonus)\", this.actor).roll()\n\nroll.toMessage(this.script.getChatData({flavor : `${this.effect.name} (Duration)`}));\n\nthis.effect.updateSource({\"duration.rounds\" : roll.total})"},
-					{"label":"Prevenir uso del brazo","script":"args.abort = true;\nthis.script.notification(`¡No puedes usar el  ${this.item.system.location.value}!`, \"error\")"}
+					{"label":"Contusión en el brazo"},
+					{"label":"Prevenir uso del brazo"}
 					]
 				}]
 		},
@@ -1268,7 +1210,7 @@
 			"effects": [{
 				"name":"Muñeca torcida",
 				"scriptData": [
-					{"label":"Muñeca torcida","script":"let location = this.item.system.location.key;\n\nif (location)\n{\n    let dropped = this.item.system.weaponsAtLocation;\n\n    if (dropped.length)\n    {\n        this.script.notification(`Soltado ${dropped.map(i => i.name).join(\", \")}!`)\n        for(let weapon of dropped)\n        {\n            await weapon.system.toggleEquip();\n        }\n    }\n\n}"}
+					{"label":"Muñeca torcida"}
 					]
 				}]
 		},
@@ -1369,7 +1311,7 @@
 			"effects": [{
 				"name":"Ante el campo de muerte",
 				"scriptData": [
-					{"label":"Ante el campo de muerte","script":"if (this.actor.hasCondition(\"broken\"))\n{\n    this.actor.removeCondition(\"broken\")\n    this.script.notification(`No puede tener Quebrantado`);\n}"}
+					{"label":"Ante el campo de muerte"}
 					]
 				}]
 		},
@@ -1391,7 +1333,7 @@
 			"effects": [{
 				"name":"Devoción de la doncella escudera",
 				"scriptData": [
-					{"label":"Devoción de la doncella escudera","script":"let item = await fromUuid(\"Compendium.wfrp4e-core.items.Item.8pVzgPkgWpTJvfhG\");\nlet data = item.toObject();\n\ndata.name += \" (Enemigo)\";\n\nthis.actor.createEmbeddedDocuments(\"Item\", [data], {fromEffect: this.effect.id})"}
+					{"label":"Devoción de la doncella escudera"}
 					]
 				}]
 		},
@@ -1489,19 +1431,6 @@
 			"description": "<p>Cuando tienes la mente puesta en un objetivo, nadie puede hacer nada para impedir que lo alcances. El coste de la acción @UUID[JournalEntry.JSMqi4MYrqsPBDUL.JournalEntryPage.njjUtJFlaiYB2ZMr#beneficios-de-la-ventaja]{Huye del daño} se reduce a 1.</p>"
 		},
 		{
-			"id": "Resistance (Disease)",
-			"name": "Resistencia (Enfermedad)",
-			"description": "<p>Tu recia constitución te permite sobrevivir con más facilidad a una amenaza específica. Puedes tener éxito automáticamente en el primer Chequeo para resistir la amenaza específica, como por ejemplo Magia, Veneno, Enfermedad o Mutación en cada sesión de juego. Si el NE es importante, utiliza tu Bonificador por Resistencia como NE para el Chequeo.</p>",
-			"tests": "Todos los utilizados para resistirse a la Enfermedad",
-			"effects": [{
-				"name":"Resistencia",
-				"scriptData": [
-					{},
-					{"label":"Escoger Resistencia","script":"let resistance\nif (this.item.name.includes(\"(\") && !this.item.name.toLowerCase().includes(\"(cualquiera)\"))\n{\n\tresistance = this.item.parenthesesText\n}\nelse \n{\n    resistance = await Dialog.wait({\n        title : \"Escribe grupo\",\n                content : \"<input type='text'>\",\n        buttons : {\n                    confirm : {\n                label : game.i18n.localize(\"Confirm\"),\n                        callback : (dlg) => {\n                    return dlg.find(\"input\")[0].value\n        }\n                    }\n                },\n\tdefault : \"confirm\",\n                close : () => {\n            return \"\"\n                }\n            })\n    \n    if (resistance)\n    {\n        this.item.updateSource({name :  `${this.item.name.split(\"(\")[0].trim()} (${resistance})`})\n        this.effect.updateSource({name : this.effect.name + ` (${resistance})`})\n    }\n}    \nthis.item.updateSource({\"system.tests.value\" : this.item.system.tests.value.replace(\"la Amenaza asociada\", resistance)})\n\nif (resistance && !this.effect.name.includes(\"(\"))\n{\n    this.effect.updateSource({name : this.effect.name += ` (${resistance})`})\n}"}
-					]
-				}]
-		},
-		{
 			"id": "Reversal",
 			"name": "Giro",
 			"description": "<p>Estás acostumbrado a los combates desesperados, siendo capaz de sobreponerte a circunstancias adversas. Si tienes éxito en un Chequeo Enfrentado de Cuerpo a cuerpo, en lugar de obtener +1 de Ventaja, puedes extraer 1 Ventaja del Fondo de Ventajas del adversario y añadirla a la tuya propia. Si haces esto, no causas ningún Daño, aunque sea tu Turno en el Asalto.</p>",
@@ -1589,7 +1518,7 @@
 			"effects": [{
 				"name":"Asalariado",
 				"scriptData": [
-					{"label":"Asalariado","script":"        const templateMap = {\n            'P2e7Yx98bK3u110a' : \"\",\n            'iuMp3KLaMT2WCmie' : \"4s01nHFKVKTEZd3B\", \n            'RBuYcT5tppwcmnC5' : \"h3yuJDWnixliXeBG\", \n            'vcGpNwNbhvfzVveQ' : \"7QrsbofccMOE1YsF\", \n            'jmhKZy0w9TzkEK9c' : \"scVTPVyDDbli4WZL\", \n            '9Byj6k7SmdTYis2V' : \"4Cd7Dknee2WjReOo\", \n            'laJwc2l9tzJPgaaJ' : \"2hJ2a5YjbwZWWYrd\",\n        }\n        let template = (await game.wfrp4e.tables.rollTable(\"hireling-templates\")).object;\n        let physicalQuirk = (await game.wfrp4e.tables.rollTable(\"physical-quirks\")).text;\n        let workEthic = (await game.wfrp4e.tables.rollTable(\"work-ethic\")).text;\n        let personalityQuirk = (await game.wfrp4e.tables.rollTable(\"personality-quirks\")).text;\n\n\n        let templateItem = await warhammer.utility.findItemId(templateMap[template._id]);\n\n        let bio = \n        `\n        <p><strong>Plantilla</strong>: ${template.text}</p>\n        <p><strong>Rareza física</strong>: ${physicalQuirk}</p>\n        <p><strong>Ética laboral</strong>: ${workEthic}</p>\n        <p><strong>Rareza de la personalidad</strong>: ${personalityQuirk}</p>\n        `\n\n        await this.actor.update({\"system.details.gmnotes.value\" : bio})\n\n        if (templateItem)\n        {\n            this.actor.createEmbeddedDocuments(\"Item\", [templateItem.toObject()])\n        }"}
+					{"label":"Asalariado"}
 					]
 				}]
 		},

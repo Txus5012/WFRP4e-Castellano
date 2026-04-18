@@ -1,8 +1,5 @@
 {
 	"label": "Diarios (Lustria)",
-	"mapping": {
-		"image": "img"
-	},
 	"entries": {
 		"A Lustrian Bestiary": {
 			"name" : "Bestiario de Lustria",

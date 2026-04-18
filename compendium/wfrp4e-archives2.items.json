@@ -1,14 +1,5 @@
 {
 	"label": "Objetos (Archivos Vol. II)",
-	"mapping": {
-	    "skills": "system.skills",
-	    "talents": "system.talents",
-	    "class": {
-		      "path": "system.class.value",
-		      "converter": "career_class"
-		    },
-	    "trappings": "system.trappings"
-	},
 	"entries": [
 		{
 			"id": "Fresh Meat",

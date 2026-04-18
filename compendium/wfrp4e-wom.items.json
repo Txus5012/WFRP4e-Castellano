@@ -22,50 +22,6 @@
 		"Armour": "Armadura",
 		"Weapons": "Armas"
     },
-	"mapping": {
-	    "gmdescription": "system.gmdescription.value",
-	    "skills": "system.skills",
-	    "talents": "system.talents",
-	    "class": {
-		      "path": "system.class.value",
-		      "converter": "career_class"
-		    },
-	    "careergroup": {
-		      "path": "system.careergroup.value",
-		      "converter": "career_careergroup"
-		    },
-	    "trappings": "system.trappings",
-		"range": {
-			"path": "system.range.value",
-			"converter": "spells_duration_range_target"
-			},
-		"effects": {
-			"path": "effects",
-			"converter": "effects"
-			},
-		"spell_duration": {
-			"path": "system.duration.value",
-			"converter": "spells_duration_range_target"
-		},
-		"target": {
-			"path": "system.target.value",
-			"converter": "spells_duration_range_target"
-		},    
-		"damage": {
-			"path": "system.damage.value",
-			"converter": "spells_damage"
-		},
-		"lore": {
-			"path": "system.lore.value",
-			"converter": "traits_specification"
-		},
-		"overcast": "system.overcast.label",
-		"specification": {
-			"path": "system.specification.value",
-			"converter": "traits_specification"
-			},
-		"tests": "system.tests.value"
-	},
 	"entries": [
 		{
 			"id": "Acolyte of the Light Order",
@@ -514,7 +470,7 @@
 			"effects": [{
 				"name":"Malla de valor robado",
 				"scriptData": [
-					{"label":"Comprobación de Daño","script":"let blows = this.item.getFlag(\"wfrp4e\", \"blows\") || 0\nlet difficulties = Object.keys(game.wfrp4e.config.difficultyLabels)\n\nblows = Math.clamp(blows, 0, difficulties.length - 1)\nif (this.item.system.protects[args.loc])\n{\n    let difficulty = difficulties[blows];\n    this.actor.setupSkill(game.i18n.localize(\"NAME.Cool\"), {fields: {difficulty}, skipTargets: true, appendTitle :  ` - ${this.effect.name}`}).then(async test => {\n        await test.roll();\n        if (test.failed)\n        {\n            this.script.message(`${this.actor.name} debe retirarse del combate y huir hasta superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Voluntad</strong>.`);\n            this.item.setFlag(\"wfrp4e\", \"failedCool\", true);\n        }\n    })\n}"}
+					{"label":"Comprobación de Daño"}
 					]
 				},
 				{
@@ -566,7 +522,7 @@
 				{
 				"name":"Chequeo enfrentado",
 				"scriptData": [
-					{"label":"Chequeo enfrentado","script":"if (args.opposedTest?.result.differenceSL >= 0 && args.opposedTest?.result.differenceSL <= 2 && args.opposedTest?.result.winner == \"attacker\")\n{ \n   this.actor.update({\"system.status.fortune.value\" : Math.max(0, (this.actor.system.status.fortune?.value - 1) || 0)})\n    this.script.message(`Punto de Fortuna robado de <strong>${this.actor.name}</strong>`, {blind : true, whisper : ChatMessage.getWhisperRecipients(\"GM\")})\n\n}"}
+					{"label":"Chequeo enfrentado"}
 					]
 				}]
 		},
@@ -583,7 +539,7 @@
 				{
 				"name":"Establecer Saber",
 				"scriptData": [
-					{"label":"Establecer Saber","script":"// This script needs to be separate because equipTransfer is off on the other effect, and thus won't execute when added to an actor\n\nlet mainEffect = this.item.effects.contents[0];\nif (mainEffect.name.includes(\"<Saber>\"))\n{\n    let choice = await ItemDialog.create(ItemDialog.objectToArray(game.wfrp4e.config.magicLores, this.item.img).sort(WFRP_Utility.nameSorter), 1, \"Escoge Saber\");\n    if (choice.length)\n    {\n        mainEffect.update({name : mainEffect.name.replace(\"<Saber>\", choice[0].name)})\n        this.item.update({name : this.item.name += ` (${choice[0].name})`})\n    }\n}\n\nthis.effect.delete();"}
+					{"label":"Establecer Saber"}
 					]
 				}]
 		},
@@ -609,7 +565,7 @@
 				{
 				"name":"Chequeo enfrentado",
 				"scriptData": [
-					{"label":"Chequeo enfrentado","script":"if (args.opposedTest?.result.differenceSL >= 0 && args.opposedTest?.result.differenceSL <= 3 && args.opposedTest?.result.winner == \"attacker\")\n{ \n    this.script.message(`Todo el mundo a 20 pies pierde 1 Herida y debe realizar un Chequeo <strong>Complicado (-10)</strong> de <strong>Aguante</strong> o sufrir un Estado de @Condition[Deafened]`, {blind : true,  whisper : ChatMessage.getWhisperRecipients(\"GM\")})\n}"}
+					{"label":"Chequeo enfrentado"}
 					]
 				}]
 		},
@@ -631,7 +587,7 @@
 			"effects": [{
 				"name":"Nudilleras de la ignominia",
 				"scriptData": [
-					{"label":"Nudilleras de la ignominia","script":"if (args.test.result.critical && args.test.result.roll % 10 == 0) \n{\n    game.wfrp4e.tables.findTable(\"knuckleduster-diseases\").roll().then(roll => {\n      let results = roll.results[0]\n\n      this.script.message(`<strong>${this.actor.name}</strong> contrae @UUID[Compendium.${results.documentCollection}.${results.documentId}]{${results.description}}`, {blind : true, whisper: ChatMessage.getWhisperRecipients(\"GM\") })\n    })\n\n  }"}
+					{"label":"Nudilleras de la ignominia"}
 					]
 				}]
 		},
@@ -642,7 +598,7 @@
 			"effects": [{
 				"name":"Chequeo enfrentado",
 				"scriptData": [
-					{"label":"Chequeo enfrentado","script":"if (args.opposedTest?.result.differenceSL >= 0 && args.opposedTest?.result.differenceSL <= 2 && args.opposedTest?.result.winner == \"attacker\")\n{ \n    this.script.message(`Emite una nube de pólvora maloliente. Activa el Efecto Activo <strong>Penaliazador a Empatía</strong> en @UUID[${this.actor.uuid}].`, {blind : true, whisper : ChatMessage.getWhisperRecipients(\"GM\")})\n}"}
+					{"label":"Chequeo enfrentado"}
 					]
 				},
 				{
@@ -662,7 +618,7 @@
 				{
 				"name":"Chequeo enfrentado",
 				"scriptData": [
-					{"label":"Chequeo enfrentado","script":"if (args.opposedTest?.result.differenceSL >= 0 && args.opposedTest?.result.differenceSL <= 2 && args.opposedTest?.result.winner == \"attacker\")\n{ \n    this.script.message(`Se queda incrustada en la armadura o piel del oponente. Ver @UUID[${this.item.uuid}]{${this.item.name}}.`, speaker : {alias : this.item.name}, {blind: true, whisper : ChatMessage.getWhisperRecipients(\"GM\")})\n}"}
+					{"label":"Chequeo enfrentado"}
 					]
 				}]
 		},
@@ -684,7 +640,7 @@
 			"effects": [{
 				"name":"Botas de remordimiento repentino",
 				"scriptData": [
-					{"label":"Botas de remordimiento repentino","script":"if (args.test.item?.type == \"skill\" && args.test.item.name.includes(game.i18n.localize(\"NAME.Stealth\")))\n{ \n     args.test.result.description = \"Astounding Failure\";\n     args.test.result.outcome = \"failure\";\n       ChatMessage.create({content : \"<em>CHILLIDO</em>\", speaker : ChatMessage.getSpeaker({token: this.actor.getActiveTokens()[0]?.document, actor: this.actor})}, {chatBubble : true})\n        AudioHelper.play({ src: `${game.settings.get(\"wfrp4e\", \"soundPath\")}squeek.wav` }, true);\n}"}
+					{"label":"Botas de remordimiento repentino"}
 					]
 				}]
 		},
@@ -695,7 +651,7 @@
 			"effects": [{
 				"name":"Broche de atracción no deseada",
 				"scriptData": [
-					{"label":"Broche de atracción no deseada","script":"if(args.opposedTest?.result.winner == \"defender\")\n{\n    let roll = Math.ceil(CONFIG.Dice.randomUniform() * 10)\n    let msg = `Sacado ${roll}.`\n    if (roll >= 7)\n    {\n          msg = `El ataque impacta con ${roll - 6} NE.`\n    }\n    this.script.message(msg, {blind: true,  whisper : ChatMessage.getWhisperRecipients(\"GM\")})\n}"}
+					{"label":"Broche de atracción no deseada"}
 					]
 				}]
 		},
@@ -728,9 +684,7 @@
 				},
 				{
 				"name":"Aplicar Almizcle de jabalí",
-				"scriptData": [
-					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n\tactor.applyEffect({effectData : [this.item.effects.contents[0].convertToApplied()]})\n}\nelse\n{\n\tthis.script.notification(\"¡No quedan!\", \"error\")\n}"}
-					]
+				"scriptData": []
 				}]
 		},
 		{
@@ -745,9 +699,7 @@
 				},
 				{
 				"name":"Aplicar Poción canalizadora",
-				"scriptData": [
-					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n\tactor.applyEffect({effectData : [this.item.effects.contents[0].convertToApplied()]})\n}\nelse\n{\n\tthis.script.notification(\"¡No quedan!\", \"error\")\n}"}
-					]
+				"scriptData": []
 				}]
 		},
 		{
@@ -759,9 +711,7 @@
 				},
 				{
 				"name":"Aplicar Amigo de Debauch",
-				"scriptData": [
-					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n\tactor.applyEffect({effectData : [this.item.effects.contents[0].convertToApplied()]})\n}\nelse\n{\n\tthis.script.notification(\"¡No quedan!\", \"error\")\n}"}
-					]
+				"scriptData": []
 				}]
 		},
 		{
@@ -776,9 +726,7 @@
 				},
 				{
 				"name":"Aplicar Poción de poder",
-				"scriptData": [
-					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n\tactor.applyEffect({effectData : [this.item.effects.contents[0].convertToApplied()]})\n}\nelse\n{\n\tthis.script.notification(\"¡No quedan!\", \"error\")\n}"}
-					]
+				"scriptData": []
 				}]
 		},
 		{
@@ -793,9 +741,7 @@
 				},
 				{
 				"name":"Aplicar Tónico capilar",
-				"scriptData": [
-					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n\tactor.applyEffect({effectData : [this.item.effects.contents[0].convertToApplied()]})\n}\nelse\n{\n\tthis.script.notification(\"¡No quedan!\", \"error\")\n}"}
-					]
+				"scriptData": []
 				}]
 		},
 		{
@@ -812,9 +758,7 @@
 				},
 				{
 				"name":"Aplicar Tónico de lucidez",
-				"scriptData": [
-					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n\tactor.applyEffect({effectData : [this.item.effects.contents[0].convertToApplied()]})\n}\nelse\n{\n\tthis.script.notification(\"¡No quedan!\", \"error\")\n}"}
-					]
+				"scriptData": []
 				}]
 		},
 		{
@@ -829,9 +773,7 @@
 				},
 				{
 				"name":"Aplicar Néctar de belleza",
-				"scriptData": [
-					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n\tactor.applyEffect({effectData : [this.item.effects.contents[0].convertToApplied()]})\n}\nelse\n{\n\tthis.script.notification(\"¡No quedan!\", \"error\")\n}"}
-					]
+				"scriptData": []
 				}]
 		},
 		{
@@ -851,9 +793,7 @@
 				},
 				{
 				"name":"Aplicar Néctar de vitalidad",
-				"scriptData": [
-					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n\tactor.applyEffect({effectData : [this.item.effects.contents[0].convertToApplied()]})\n}\nelse\n{\n\tthis.script.notification(\"¡No quedan!\", \"error\")\n}"}
-					]
+				"scriptData": []
 				}]
 		},
 		{
@@ -863,14 +803,12 @@
 			"effects": [{
 				"name":"Panacea universalis",
 				"scriptData": [
-					{"label":"Panacea universalis","script":"await this.actor.modifyWounds(this.actor.system.characteristics.t.bonus * 3)\nthis.script.message(`Sana ${this.actor.system.characteristics.t.bonus * 3} Heridas`)\n\nthis.actor.hasCondition(\"bleeding\")?.delete()\nthis.actor.hasCondition(\"fatigued\")?.delete()\n"}
+					{"label":"Panacea universalis"}
 					]
 				},
 				{
 				"name":"Aplicar Panacea universalis",
-				"scriptData": [
-					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n\tactor.applyEffect({effectData : [this.item.effects.contents[0].convertToApplied()]})\n}\nelse\n{\n\tthis.script.notification(\"¡No quedan!\", \"error\")\n}"}
-					]
+				"scriptData": []
 				}]
 		},
 		{
@@ -880,14 +818,12 @@
 			"effects": [{
 				"name":"Panacea universalis",
 				"scriptData": [
-					{"label":"Panacea universalis","script":"await this.actor.modifyWounds(this.actor.system.characteristics.t.bonus * 3)\nthis.script.message(`Sana ${this.actor.system.characteristics.t.bonus * 3} Heridas`)\n\nthis.actor.hasCondition(\"bleeding\")?.delete()\nthis.actor.hasCondition(\"fatigued\")?.delete()\n"}
+					{"label":"Panacea universalis"}
 					]
 				},
 				{
 				"name":"Aplicar Panacea universalis",
-				"scriptData": [
-					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n\tactor.applyEffect({effectData : [this.item.effects.contents[0].convertToApplied()]})\n}\nelse\n{\n\tthis.script.notification(\"¡No quedan!\", \"error\")\n}"}
-					]
+				"scriptData": []
 				}]
 		},
 		{
@@ -902,9 +838,7 @@
 				},
 				{
 				"name":"Aplicar Poción de potencia",
-				"scriptData": [
-					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n\tactor.applyEffect({effectData : [this.item.effects.contents[0].convertToApplied()]})\n}\nelse\n{\n\tthis.script.notification(\"¡No quedan!\", \"error\")\n}"}
-					]
+				"scriptData": []
 				}]
 		},
 		{
@@ -919,9 +853,7 @@
 				},
 				{
 				"name":"Aplicar Poción de vuelo",
-				"scriptData": [
-					{"script":"if (this.item.system.quantity.value)\n{\n\tthis.item.system.reduceQuantity();\n\tlet actor = Array.from(game.user.targets)[0]?.actor || this.actor;\n\tactor.applyEffect({effectData : [this.item.effects.contents[0].convertToApplied()]})\n}\nelse\n{\n\tthis.script.notification(\"¡No quedan!\", \"error\")\n}"}
-					]
+				"scriptData": []
 				}]
 		},
 		{
@@ -940,14 +872,12 @@
 			"description": "<p>Estas prendas son pesadas y poco prácticas y a menudo incorporan accesorios voluminosos y montones de tela tejida con hilo infundido mágicamente. Cualquiera que lleve estas túnicas será reconocido al instante como un hechicero.</p><p>@UUID[JournalEntry.x6OdswRIafU9qGYs.JournalEntryPage.xxTcTs5H1bmevH2B#tunicas-de-hechicero]{Túnicas de hechicero}</p>",
 			"effects": [{
 				"name":"Túnicas elaboradas (Saber)",
-				"scriptData": [
-					{"script":"let lore = this.effect.name.split(\"(\")[1].split(\")\")[0].toLowerCase();\nif (lore == \"bestias\") lore = \"beasts\"\nelse if (lore == \"muerte\") lore = \"death\"\nelse if (lore == \"fuego\") lore = \"fire\"\nelse if (lore == \"cielos\") lore = \"heavens\"\nelse if (lore == \"vida\") lore = \"life\"\nelse if (lore == \"luz\") lore = \"light\"\nelse if (lore == \"sombras\") lore = \"shadow\"\nelse if (lore == \"adivinación\") lore = \"hedgecraft\"\nelse if (lore == \"brujería\") lore = \"witchcraft\"\nelse if (lore == \"nigromancia\") lore = \"necromancy\"\nelse if (lore == \"demonología\") lore = \"daemonology\"\nelse if (lore == \"sin dividir\") lore = \"undivided\"\n// If channelling corresponding lore\nif (args.type == \"channelling\" && args.spell.system.lore.value == lore)\n    args.fields.slBonus  += 3\n// If channelling or casting different lore\nelse if (args.spell.system.lore.value != lore && args.spell.system.lore.value != \"petty\")\n    args.fields.slBonus  -= 1","hideScript":"let lore = this.effect.name.split(\"(\")[1].split(\")\")[0].toLowerCase();\nif (lore == \"bestias\") lore = \"beasts\"\nelse if (lore == \"muerte\") lore = \"death\"\nelse if (lore == \"fuego\") lore = \"fire\"\nelse if (lore == \"cielos\") lore = \"heavens\"\nelse if (lore == \"vida\") lore = \"life\"\nelse if (lore == \"luz\") lore = \"light\"\nelse if (lore == \"sombras\") lore = \"shadow\"\nelse if (lore == \"adivinación\") lore = \"hedgecraft\"\nelse if (lore == \"brujería\") lore = \"witchcraft\"\nelse if (lore == \"nigromancia\") lore = \"necromancy\"\nelse if (lore == \"demonología\") lore = \"daemonology\"\nelse if (lore == \"sin dividir\") lore = \"undivided\"\nreturn !args.spell || (args.type == \"cast\" && [\"petty\", lore].includes(args.spell.system.lore.value));"}
-					]
+				"scriptData": []
 				},
 				{
 				"name":"Establecer Saber",
 				"scriptData": [
-					{"label":"Establecer Saber","script":"// This script needs to be separate because equipTransfer is off on the other effect, and thus won't execute when added to an actor\n\nlet mainEffect = this.item.effects.contents[0];\nif (mainEffect.name.includes(\"(Saber)\"))\n{\n    let choice = await ItemDialog.create(ItemDialog.objectToArray(game.wfrp4e.config.magicLores, this.item.img).sort(WFRP_Utility.nameSorter), 1, \"Escoge Saber\");\n    if (choice.length)\n    {\n        mainEffect.update({name : mainEffect.name.replace(\"Saber\", choice[0].name)})\n        this.item.update({name : this.item.name += ` (${choice[0].name})`})\n    }\n}\n\nthis.effect.delete();"}
+					{"label":"Establecer Saber"}
 					]
 				}]
 		},
@@ -957,14 +887,12 @@
 			"description": "<p>Estas prendas de ropa son económicas, cómodas y relativamente sencillas. Un hechicero que vista túnicas prácticas puede pasar desapercibido en muchas situaciones.</p><p>@UUID[JournalEntry.x6OdswRIafU9qGYs.JournalEntryPage.xxTcTs5H1bmevH2B#tunicas-de-hechicero]{Túnicas de hechicero}</p>",
 			"effects": [{
 				"name":"Túnicas elaboradas (Saber)",
-				"scriptData": [
-					{"script":"let lore = this.effect.name.split(\"(\")[1].split(\")\")[0].toLowerCase();\nif (lore == \"bestias\") lore = \"beasts\"\nelse if (lore == \"muerte\") lore = \"death\"\nelse if (lore == \"fuego\") lore = \"fire\"\nelse if (lore == \"cielos\") lore = \"heavens\"\nelse if (lore == \"vida\") lore = \"life\"\nelse if (lore == \"luz\") lore = \"light\"\nelse if (lore == \"sombras\") lore = \"shadow\"\nelse if (lore == \"adivinación\") lore = \"hedgecraft\"\nelse if (lore == \"brujería\") lore = \"witchcraft\"\nelse if (lore == \"nigromancia\") lore = \"necromancy\"\nelse if (lore == \"demonología\") lore = \"daemonology\"\nelse if (lore == \"sin dividir\") lore = \"undivided\"\n// If channelling corresponding lore\nif (args.type == \"channelling\" && args.spell.system.lore.value == lore)\n    args.fields.slBonus  += 1\n// If channelling or casting different lore\nelse if (args.spell.system.lore.value != lore && args.spell.system.lore.value != \"petty\")\n    args.fields.slBonus  -= 1","hideScript":"let lore = this.effect.name.split(\"(\")[1].split(\")\")[0].toLowerCase();\nif (lore == \"bestias\") lore = \"beasts\"\nelse if (lore == \"muerte\") lore = \"death\"\nelse if (lore == \"fuego\") lore = \"fire\"\nelse if (lore == \"cielos\") lore = \"heavens\"\nelse if (lore == \"vida\") lore = \"life\"\nelse if (lore == \"luz\") lore = \"light\"\nelse if (lore == \"sombras\") lore = \"shadow\"\nelse if (lore == \"adivinación\") lore = \"hedgecraft\"\nelse if (lore == \"brujería\") lore = \"witchcraft\"\nelse if (lore == \"nigromancia\") lore = \"necromancy\"\nelse if (lore == \"demonología\") lore = \"daemonology\"\nelse if (lore == \"sin dividir\") lore = \"undivided\"\nreturn !args.spell || (args.type == \"cast\" && [\"petty\", lore].includes(args.spell.system.lore.value));"}
-					]
+				"scriptData": []
 				},
 				{
 				"name":"Establecer Saber",
 				"scriptData": [
-					{"label":"Establecer Saber","script":"// This script needs to be separate because equipTransfer is off on the other effect, and thus won't execute when added to an actor\n\nlet mainEffect = this.item.effects.contents[0];\nif (mainEffect.name.includes(\"(Saber)\"))\n{\n    let choice = await ItemDialog.create(ItemDialog.objectToArray(game.wfrp4e.config.magicLores, this.item.img).sort(WFRP_Utility.nameSorter), 1, \"Escoge Saber\");\n    if (choice.length)\n    {\n        mainEffect.update({name : mainEffect.name.replace(\"Saber\", choice[0].name)})\n        this.item.update({name : this.item.name += ` (${choice[0].name})`})\n    }\n}\n\nthis.effect.delete();"}
+					{"label":"Establecer Saber"}
 					]
 				}]
 		},
@@ -974,14 +902,12 @@
 			"description": "<p>Estas prendas son más complejas y suelen incluir abrigos pesados o capas y tocados peculiares.</p><p>@UUID[JournalEntry.x6OdswRIafU9qGYs.JournalEntryPage.xxTcTs5H1bmevH2B#tunicas-de-hechicero]{Túnicas de hechicero}</p>",
 			"effects": [{
 				"name":"Túnicas elaboradas (Saber)",
-				"scriptData": [
-					{"script":"let lore = this.effect.name.split(\"(\")[1].split(\")\")[0].toLowerCase();\nif (lore == \"bestias\") lore = \"beasts\"\nelse if (lore == \"muerte\") lore = \"death\"\nelse if (lore == \"fuego\") lore = \"fire\"\nelse if (lore == \"cielos\") lore = \"heavens\"\nelse if (lore == \"vida\") lore = \"life\"\nelse if (lore == \"luz\") lore = \"light\"\nelse if (lore == \"sombras\") lore = \"shadow\"\nelse if (lore == \"adivinación\") lore = \"hedgecraft\"\nelse if (lore == \"brujería\") lore = \"witchcraft\"\nelse if (lore == \"nigromancia\") lore = \"necromancy\"\nelse if (lore == \"demonología\") lore = \"daemonology\"\nelse if (lore == \"sin dividir\") lore = \"undivided\"\n// If channelling corresponding lore\nif (args.type == \"channelling\" && args.spell.system.lore.value == lore)\n    args.fields.slBonus  += 2\n// If channelling or casting different lore\nelse if (args.spell.system.lore.value != lore && args.spell.system.lore.value != \"petty\")\n    args.fields.slBonus  -= 1","hideScript":"let lore = this.effect.name.split(\"(\")[1].split(\")\")[0].toLowerCase();\nif (lore == \"bestias\") lore = \"beasts\"\nelse if (lore == \"muerte\") lore = \"death\"\nelse if (lore == \"fuego\") lore = \"fire\"\nelse if (lore == \"cielos\") lore = \"heavens\"\nelse if (lore == \"vida\") lore = \"life\"\nelse if (lore == \"luz\") lore = \"light\"\nelse if (lore == \"sombras\") lore = \"shadow\"\nelse if (lore == \"adivinación\") lore = \"hedgecraft\"\nelse if (lore == \"brujería\") lore = \"witchcraft\"\nelse if (lore == \"nigromancia\") lore = \"necromancy\"\nelse if (lore == \"demonología\") lore = \"daemonology\"\nelse if (lore == \"sin dividir\") lore = \"undivided\"\nreturn !args.spell || (args.type == \"cast\" && [\"petty\", lore].includes(args.spell.system.lore.value));"}
-					]
+				"scriptData": []
 				},
 				{
 				"name":"Establecer Saber",
 				"scriptData": [
-					{"label":"Establecer Saber","script":"// This script needs to be separate because equipTransfer is off on the other effect, and thus won't execute when added to an actor\n\nlet mainEffect = this.item.effects.contents[0];\nif (mainEffect.name.includes(\"(Saber)\"))\n{\n    let choice = await ItemDialog.create(ItemDialog.objectToArray(game.wfrp4e.config.magicLores, this.item.img).sort(WFRP_Utility.nameSorter), 1, \"Escoge Saber\");\n    if (choice.length)\n    {\n        mainEffect.update({name : mainEffect.name.replace(\"Saber\", choice[0].name)})\n        this.item.update({name : this.item.name += ` (${choice[0].name})`})\n    }\n}\n\nthis.effect.delete();"}
+					{"label":"Establecer Saber"}
 					]
 				}]
 		},
@@ -991,14 +917,12 @@
 			"description": "<p>Estas prendas de ropa son económicas, cómodas y relativamente sencillas. Un hechicero que vista túnicas prácticas puede pasar desapercibido en muchas situaciones.</p><p>@UUID[JournalEntry.x6OdswRIafU9qGYs.JournalEntryPage.xxTcTs5H1bmevH2B#tunicas-de-hechicero]{Túnicas de hechicero}</p>",
 			"effects": [{
 				"name":"Túnicas elaboradas (Saber)",
-				"scriptData": [
-					{"script":"let lore = this.effect.name.split(\"(\")[1].split(\")\")[0].toLowerCase();\nif (lore == \"bestias\") lore = \"beasts\"\nelse if (lore == \"muerte\") lore = \"death\"\nelse if (lore == \"fuego\") lore = \"fire\"\nelse if (lore == \"cielos\") lore = \"heavens\"\nelse if (lore == \"vida\") lore = \"life\"\nelse if (lore == \"luz\") lore = \"light\"\nelse if (lore == \"sombras\") lore = \"shadow\"\nelse if (lore == \"adivinación\") lore = \"hedgecraft\"\nelse if (lore == \"brujería\") lore = \"witchcraft\"\nelse if (lore == \"nigromancia\") lore = \"necromancy\"\nelse if (lore == \"demonología\") lore = \"daemonology\"\nelse if (lore == \"sin dividir\") lore = \"undivided\"\n// If channelling corresponding lore\nif (args.type == \"channelling\" && args.spell.system.lore.value == lore)\n    args.fields.slBonus  += 1\n// If channelling or casting different lore\nelse if (args.spell.system.lore.value != lore && args.spell.system.lore.value != \"petty\")\n    args.fields.slBonus  -= 1","hideScript":"let lore = this.effect.name.split(\"(\")[1].split(\")\")[0].toLowerCase();\nif (lore == \"bestias\") lore = \"beasts\"\nelse if (lore == \"muerte\") lore = \"death\"\nelse if (lore == \"fuego\") lore = \"fire\"\nelse if (lore == \"cielos\") lore = \"heavens\"\nelse if (lore == \"vida\") lore = \"life\"\nelse if (lore == \"luz\") lore = \"light\"\nelse if (lore == \"sombras\") lore = \"shadow\"\nelse if (lore == \"adivinación\") lore = \"hedgecraft\"\nelse if (lore == \"brujería\") lore = \"witchcraft\"\nelse if (lore == \"nigromancia\") lore = \"necromancy\"\nelse if (lore == \"demonología\") lore = \"daemonology\"\nelse if (lore == \"sin dividir\") lore = \"undivided\"\nreturn !args.spell || (args.type == \"cast\" && [\"petty\", lore].includes(args.spell.system.lore.value));"}
-					]
+				"scriptData": []
 				},
 				{
 				"name":"Establecer Saber",
 				"scriptData": [
-					{"label":"Establecer Saber","script":"// This script needs to be separate because equipTransfer is off on the other effect, and thus won't execute when added to an actor\n\nlet mainEffect = this.item.effects.contents[0];\nif (mainEffect.name.includes(\"(Saber)\"))\n{\n    let choice = await ItemDialog.create(ItemDialog.objectToArray(game.wfrp4e.config.magicLores, this.item.img).sort(WFRP_Utility.nameSorter), 1, \"Escoge Saber\");\n    if (choice.length)\n    {\n        mainEffect.update({name : mainEffect.name.replace(\"Saber\", choice[0].name)})\n        this.item.update({name : this.item.name += ` (${choice[0].name})`})\n    }\n}\n\nthis.effect.delete();"}
+					{"label":"Establecer Saber"}
 					]
 				}]
 		},
@@ -1057,7 +981,7 @@
 			"effects": [{
 				"name":"Sacrificio",
 				"scriptData": [
-					{"label":"Sacrificio","script":"this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {skipTargets: true, appendTitle :  ` - ${this.effect.name}`, fields: {difficulty : \"average\"}}).then(async test =>\n{\n     await test.roll()\n     if (test.failed)\n     {\n         let char = Math.ceil(CONFIG.Dice.randomUniform() * 2) == 2 ? \"s\" : \"t\";\n         this.script.message(`<strong>${this.actor.name}</strong> pierde 1 punto de ${game.wfrp4e.config.characteristics[char]}`)\n         this.actor.update({[`system.characteristics.${char}.initial`] : this.actor.system.characteristics[char].initial - 1})\n     }\n})"}
+					{"label":"Sacrificio"}
 					]
 				}]
 		},
@@ -1099,7 +1023,7 @@
 			"effects": [{
 				"name":"Sacrificio",
 				"scriptData": [
-					{"label":"Sacrificio","script":"this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {skipTargets: true, appendTitle :  ` - ${this.effect.name}`, fields: {difficulty : \"average\"}}).then(async test =>\n{\n     await test.roll()\n     if (test.failed)\n     {\n         let char = Math.ceil(CONFIG.Dice.randomUniform() * 2) == 2 ? \"s\" : \"t\";\n         this.script.message(`<strong>${this.actor.name}</strong> pierde 1 punto de ${game.wfrp4e.config.characteristics[char]}`)\n         this.actor.update({[`system.characteristics.${char}.initial`] : this.actor.system.characteristics[char].initial - 1})\n     }\n})"}
+					{"label":"Sacrificio"}
 					]
 				}]
 		},
@@ -1110,7 +1034,7 @@
 			"effects": [{
 				"name":"Sacrificio",
 				"scriptData": [
-					{"label":"Sacrificio","script":"this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {skipTargets: true, appendTitle :  ` - ${this.effect.name}`, fields: {difficulty : \"average\"}}).then(async test =>\n{\n     await test.roll()\n     if (test.failed)\n     {\n         let char = Math.ceil(CONFIG.Dice.randomUniform() * 2) == 2 ? \"s\" : \"t\";\n         this.script.message(`<strong>${this.actor.name}</strong> pierde 1 punto de ${game.wfrp4e.config.characteristics[char]}`)\n         this.actor.update({[`system.characteristics.${char}.initial`] : this.actor.system.characteristics[char].initial - 1})\n     }\n})"}
+					{"label":"Sacrificio"}
 					]
 				}]
 		},
@@ -1121,7 +1045,7 @@
 			"effects": [{
 				"name":"Sacrificio",
 				"scriptData": [
-					{"label":"Sacrificio","script":"this.actor.setupSkill(game.i18n.localize(\"NAME.Cool\"), {skipTargets: true, appendTitle :  ` - ${this.effect.name}`, fields: {difficulty : \"average\"}}).then(async test =>\n{\n     await test.roll()\n     if (test.failed)\n     {\n         this.actor.corruptionDialog(\"moderada\")    \n     }\n})"}
+					{"label":"Sacrificio"}
 					]
 				}]
 		},
@@ -1222,7 +1146,7 @@
 			"effects": [{
 				"name":"Destierro",
 				"scriptData": [
-					{"label":"Destierro","script":"let caster = this.effect.sourceActor\nif (caster && (this.actor.has(game.i18n.localize(\"NAME.Undead\")) || this.actor.has(game.i18n.localize(\"NAME.Daemonic\")))) {\n    let wp = caster.system.characteristics.wp.value\n    if (wp > this.actor.system.characteristics.t.value) {\n        if (this.actor.has(game.i18n.localize(\"NAME.Unstable\"))) {\n            this.actor.update({ \"system.status.wounds.value\": 0 })\n            this.actor.addCondition(\"dead\")\n        }\n        else {\n            fromUuid(\"Compendium.wfrp4e-core.items.D0ImWEIMSDgElsnl\").then(item => {\n                this.actor.createEmbeddedDocuments(\"Item\", [item.toObject()], { fromEffect: this.effect.id })\n                ChatMessage.create({ content: `Añadido Inestable a ${this.actor.prototypeToken.name}`, speaker: { alias: caster.name } })\n            })\n        }\n    }\n}"}
+					{"label":"Destierro"}
 					]
 				}]
 		},
@@ -1285,7 +1209,7 @@
 			"effects": [{
 				"name":"Brillo deslumbrante",
 				"scriptData": [
-					{"label":"Brillo deslumbrante","script":"let talent = this.actor.has(\"Magia arcana (Luz)\", \"talent\")\nlet demon = this.actor.has(game.i18n.localize(\"NAME.Daemonic\"))\n\nif (!talent)\n{\n   await this.actor.addCondition(\"blinded\")\n}\n\nif (demon)\n{\n    await this.actor.addCondition(\"stunned\")\n}"}
+					{"label":"Brillo deslumbrante"}
 					]
 				}]
 		},
@@ -1333,7 +1257,7 @@
 			"effects": [{
 				"name":"Luz curativa",
 				"scriptData": [
-					{"label":"Luz curativa","script":"let caster = this.effect.sourceActor;\nif (caster)\n{\n    let healed= caster.system.characteristics.wp.bonus + caster.system.characteristics.int.bonus\n    await this.actor.modifyWounds(healed);\n    this.script.message(`<strong>${this.actor.prototypeToken.name}</strong> recupera ${healed} Heridas`)\n}\n \n let test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {fields : {difficulty : \"vhard\"}, context : {success : \"1 punto de Corrupción ganado en la última hora es eliminado.\", failure: \"No ocurre nada\"}})\n await test.roll();"}
+					{"label":"Luz curativa"}
 					]
 				}]
 		},
@@ -1349,7 +1273,7 @@
 			"effects": [{
 				"name":"Luz de pureza",
 				"scriptData": [
-					{"label":"Luz de pureza","script":"let item = await fromUuid(\"Compendium.wfrp4e-core.items.Item.vMYEkrWj0ip6ZOdv\");\nlet data = item.toObject();\ndata.name += ` (Enfermedad)`;\nthis.actor.createEmbeddedDocuments(\"Item\", [data], {fromEffect: this.effect.id})"}
+					{"label":"Luz de pureza"}
 					]
 				}]
 		},
@@ -1386,7 +1310,7 @@
 			"effects": [{
 				"name":"Protección de Phâ",
 				"scriptData": [
-					{"label":"Protección de Phâ","script":"this.script.notification(`¡No puedes entrar en ${this.effect.name}!`); this.actor.addCondition(\"broken\")"}
+					{"label":"Protección de Phâ"}
 					]
 				}]
 		},
@@ -1402,7 +1326,7 @@
 			"effects": [{
 				"name":"Capa resplandeciente",
 				"scriptData": [
-					{"label":"Capa resplandeciente","script":"let item = args.sourceItem;\nif (!item.isMagical && (item.type == \"weapon\" || item.type == \"trait\"))\n{\n    args.modifiers.other.push({label : this.effect.name, details : \"Quitado valor de Daño\", value : -1 * (args.totalWoundLoss - args.opposedTest?.result.differenceSL)})\n}\n"}
+					{"label":"Capa resplandeciente"}
 					]
 				}]
 		},
@@ -1427,12 +1351,12 @@
 			"effects": [{
 				"name":"Aceptar el destino - Aliados",
 				"scriptData": [
-					{"label":"Inmune al Miedo","hideScript":"if (args.extendedTest?.getFlag(\"wfrp4e\", \"fear\"))\n{\n\tthis.script.notification(\"Inmune al Miedo\");\n\targs.extendedTest.delete();\n\targs.abort = true;\n}"}
+					{"label":"Inmune al Miedo"}
 					]
 				},{
 				"name":"Aceptar el destino - Enemigos",
 				"scriptData": [
-					{"label":"Chequeo","script":"this.actor.setupSkill(game.i18n.localize(\"NAME.Cool\"), {appendTitle: ` - ${this.effect.name}`, context: { failure : \"No puede huir del combate\"}}).then(test => test.roll())"}
+					{"label":"Chequeo"}
 					]
 				}]
 		},
@@ -1444,7 +1368,7 @@
 			"effects": [{
 				"name":"Amaranto",
 				"scriptData": [
-					{"label":"Amaranto","script":"let item = await fromUuid(\"Compendium.wfrp4e-core.items.vMYEkrWj0ip6ZOdv\");\nlet data = item.toObject();\ndata.name += \" (Veneno, Enfermedad y Caos)\"\nthis.actor.createEmbeddedDocuments(\"Item\", Array(this.effect.sourceTest.result.overcast.usage.other.current).fill(data), {fromEffect: this.effect.id})"}
+					{"label":"Amaranto"}
 					]
 				}]
 		},
@@ -1472,7 +1396,7 @@
 			"effects": [{
 				"name":"Caricia de Laniph",
 				"scriptData": [
-					{"label":"Caricia de Laniph","script":"let woundsGained = Math.min(args.totalWoundLoss, args.actor.status.wounds.value)\n\nwoundsGained = Math.floor(woundsGained / 2)\n\nargs.attacker.update({ \"system.status.wounds.value\": args.attacker.status.wounds.value + woundsGained })\n\nthis.script.message(`Ganadas ${woundsGained} Heridas`)"},
+					{"label":"Caricia de Laniph"},
 					{"label":"Ignorar PA y BR"}
 					]
 				}]
@@ -1544,7 +1468,7 @@
 			"effects": [{
 				"name":"Marchitar extremidad",
 				"scriptData": [
-					{"label":"Marchitar extremidad","script":"let arm = await fromUuid(\"Compendium.wfrp4e-core.items.MnMZv7ZXoRqoH9dS\");\nlet leg = await fromUuid(\"Compendium.wfrp4e-core.items.k00PimCWkff11IA0\");\n\nlet choice = await ItemDialog.create([arm, leg], 1, \"Elige extremidad\")\n\nthis.actor.createEmbeddedDocuments(\"Item\", choice, {fromEffect: this.effect.id})"}
+					{"label":"Marchitar extremidad"}
 					]
 				}]
 		},
@@ -1568,7 +1492,7 @@
 			"effects": [{
 				"name":"Santificar",
 				"scriptData": [
-					{"label":"Santificar","script":"this.script.notification(`¡No puedes entrar en ${this.effect.name}!`);"}
+					{"label":"Santificar"}
 					]
 				}]
 		},
@@ -1579,7 +1503,7 @@
 			"effects": [{
 				"name":"Guadaña de Shyish",
 				"scriptData": [
-					{"label":"Guadaña de Shyish","script":"let scythe = (await fromUuid(\"Compendium.wfrp4e-core.items.CXg7XOFJwu4LZ9LM\")).toObject();\n    scythe.name = \"Guadaña de Shyish\";\n    scythe.system.damage.value = \"WPB + 3\"\n    scythe.system.equipped = true;\n    scythe.img = this.effect.img;\n    scythe.system.qualities.value.push({name : \"magical\"})\n    this.actor.createEmbeddedDocuments(\"Item\", [scythe], {fromEffect : this.effect.id})"}
+					{"label":"Guadaña de Shyish"}
 					]
 				}]
 		},
@@ -1612,7 +1536,7 @@
 			"effects": [{
 				"name":"Robar vida",
 				"scriptData": [
-					{"label":"Robar vida","script":"let woundsGained = Math.min(args.actor.status.wounds.value, args.totalWoundLoss)\nwoundsGained = Math.ceil(woundsGained / 2)\n\nargs.attacker.update({\"system.status.wounds.value\" : args.attacker.system.status.wounds.value + woundsGained})\n\nargs.actor.addCondition(\"fatigued\")\nargs.attacker.hasCondition(\"fatigued\")?.delete();\n\nthis.script.message(`<b>${args.attacker.prototypeToken.name}</b> gana ${woundsGained} Heridas`);"},
+					{"label":"Robar vida"},
 					{"label":"Ignorar PA"}
 					]
 				}]
@@ -1629,12 +1553,12 @@
 			"effects": [{
 				"name":"El sabor de la muerte",
 				"scriptData": [
-					{"label":"El sabor de la muerte","script":"if (this.actor.type == \"character\")  \n  this.actor.corruptionDialog(\"menor\")\n\nlet test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Cool\"), {skipTargets: true, appendTitle :  \" - \" + this.effect.name})\nawait test.roll();\nif(test.failed)\n{\n    await this.actor.addCondition(\"unconscious\");\n    let secondTest = await this.actor.setupSkill(game.i18n.localize(\"NAME.Cool\"), {fields : {difficulty : \"easy\"}, skipTargets: true, appendTitle :  \" - Desesperación\"})\n    await secondTest.roll();\n    if(secondTest.failed)\n    {\n         await this.actor.addCondition(\"fatigued\");\n    }\n}"}
+					{"label":"El sabor de la muerte"}
 					]
 				},{
 				"name":"El sabor de la muerte (Objetivos secundarios)",
 				"scriptData": [
-					{"label":"Objetivos secundarios","script":"let test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Cool\"), {fields : {difficulty: \"average\"}, skipTargets: true, appendTitle :  \" - \" + this.effect.name})\nawait test.roll();\nif(test.failed)\n{\n    await this.actor.addCondition(\"stunned\");\n    let secondTest = await this.actor.setupSkill(game.i18n.localize(\"NAME.Cool\"), {fields : {difficulty: \"easy\"}, skipTargets: true, appendTitle :  \" - Desesperación\"})\n    await secondTest.roll();\n    if(secondTest.failed)\n    {\n        this.effect.updateSource({name : \"El sabor de la muerte\"})\n         await this.actor.addCondition(\"fatigued\");\n    }\n    else \n    {\n        return false;\n    }\n}"}
+					{"label":"Objetivos secundarios"}
 					]
 				}]
 		},
@@ -1650,7 +1574,7 @@
 			"effects": [{
 				"name":"Sacrificio",
 				"scriptData": [
-					{"label":"Sacrificio","script":"this.actor.setupSkill(game.i18n.localize(\"NAME.Cool\"), {appendTitle: ` - ${this.effect.name}`, fields: { difficulty: \"average\" } }).then(async test => {\n    await test.roll()\n    if (test.failed) {\n        this.actor.modifyWounds(-1);\n        this.script.message(\"Recibe 1 de Daño\")\n    }\n})"}
+					{"label":"Sacrificio"}
 					]
 				}]
 		},
@@ -1662,12 +1586,12 @@
 			"effects": [{
 				"name":"Marea de años (Objetivo vivo)",
 				"scriptData": [
-					{"label":"Marea de años (Objetivo vivo)","script":"let strLoss = Math.ceil(CONFIG.Dice.randomUniform() * 10)\nlet tghLoss = Math.ceil(CONFIG.Dice.randomUniform() * 10)\n\nif (!this.actor.has(\"Undead\") && !this.actor.has(\"Daemonic\")) \n{\n    this.actor.setupSkill(game.i18n.localize(\"NAME.Cool\"), { appendTitle: \" - \" + this.effect.name, fields: { difficulty: \"average\" }, context: { failure: `Pierde ${strLoss} de Fuerza y ${tghLoss} de Resistencia` } }).then(async test => {\n        await test.roll();\n        if (test.failed) {\n            this.actor.update({ \"system.characteristics.s.initial\": this.actor.system.characteristics.s.initial - strLoss, \"system.characteristics.t.initial\": this.actor.system.characteristics.t.initial - tghLoss })\n        }\n    })\n\n}\nelse {\n    this.script.notification(`<strong>${this.actor.name}</strong> es inmune a ${this.effect.name}`)\n}\n"}
+					{"label":"Marea de años (Objetivo vivo)"}
 					]
 				},{
 				"name":"Marea de años (Objetivo objeto)",
 				"scriptData": [
-					{"label":"Marea de años","script":"let items = this.effect.itemTargets;\nlet msg = \"\";\nfor(let item of items)\n{\n    if (item.system.properties.qualities.durable)\n    {\n        await item.update({\"system.qualities.value\" : []});\n        msg += `<p>${item.name} pierde todas sus Cualidades</p>`\n    }\n    else \n    {\n        msg += `¡<p>${item.name} se convierte en polvo!</p>` \n        await item.update({name : item.name + \" (Polvo)\"})\n    }\n}\nif(msg)\n{\n    this.script.message(msg);\n}"}
+					{"label":"Marea de años"}
 					]
 				}]
 		},
@@ -1708,7 +1632,7 @@
 			"effects": [{
 				"name":"Sangre terrenal",
 				"scriptData": [
-					{"label":"Sangre terrenal","script":"let caster = this.effect.sourceActor\n\nif (caster)\n{\n    let bonus = caster.system.characteristics.wp.bonus\n    this.actor.modifyWounds(bonus)\n\n    this.script.message(`<strong>${this.actor.prototypeToken.name}</strong> recupera ${bonus} Heridas`)\n}"}
+					{"label":"Sangre terrenal"}
 					]
 				}]
 		},
@@ -1786,7 +1710,7 @@
 			"effects": [{
 				"name":"Canto vigorizante",
 				"scriptData": [
-					{"label":"Canto vigorizante (Sanar)","script":"let healed = parseInt(this.effect.sourceTest.result.SL)\nthis.actor.modifyWounds(healed)\nthis.script.message(`Sanadas ${healed} Heridas`)"},
+					{"label":"Canto vigorizante (Sanar)"},
 					{"label":"Canto vigorizante"}
 					]
 				}]
@@ -1805,7 +1729,7 @@
 				"scriptData": [
 					{"label":"Contorsionista"},
 					{"label":"Penalizador a ataque a distancia"},
-					{"label":"Reducción del daño","script":"let blunt = await foundry.applications.api.DialogV2.confirm({window: {title : this.effect.name}, content :`<p>¿Aplicar reducción del daño contundente? (-3)</p>`})\n\nif (blunt)\n{\n    args.modifiers.other.push({label : this.effect.name, details : \"Reducción del daño contundente\", value : -3})\n}"}
+					{"label":"Reducción del daño"}
 					]
 				}]
 		},
@@ -1842,7 +1766,7 @@
 			"effects": [{
 				"name":"Camino de Paranoth",
 				"scriptData": [
-					{"label":"Camino de Paranoth","script":"let item = await fromUuid(\"Compendium.wfrp4e-core.items.1dUizIgLBgn4jICC\");\nlet data = item.toObject();\ndata.name += \" (Boscoso)\";\nthis.actor.createEmbeddedDocuments(\"Item\", Array(this.effect.sourceTest.result.overcast.usage.other.current).fill(data), {fromEffect : this.effect.id})"}
+					{"label":"Camino de Paranoth"}
 					]
 				}]
 		},
@@ -1877,7 +1801,7 @@
 				"name":"Alardeo de la metamorfosis de Colchis",
 				"scriptData": [
 					{"label":"Alardeo de la metamorfosis de Colchis"},
-					{"label":"Prevenir Ardiendo","script":"if (this.actor.hasCondition(\"ablaze\"))\n{\n    this.script.notification(\"Inmune a Ardiendo\")\n    await this.actor.hasCondition(\"ablaze\")?.delete()\n}"}
+					{"label":"Prevenir Ardiendo"}
 					]
 				}]
 		},
@@ -1888,7 +1812,7 @@
 			"effects": [{
 				"name":"Apoteosis verde",
 				"scriptData": [
-					{"label":"Apoteosis verde","script":"if (args.test.result.castOutcome == \"success\")\n{\n    CorruptionMessageModel.createCorruptionMessage(\"moderada\", this.script.getChatData())\n}\n"}
+					{"label":"Apoteosis verde"}
 					]
 				}]
 		},
@@ -1910,7 +1834,7 @@
 			"effects": [{
 				"name":"Garras de ámbar",
 				"scriptData": [
-					{"label":"Garras de ámbar","script":"let amberTalons = foundry.utils.deepClone(game.wfrp4e.config.systemItems.unarmed);\n    amberTalons.name = \"Garras de ámbar\";\n    amberTalons.img = this.effect.img;\n    amberTalons.system.damage.value = \"SB + WPB\"\n    amberTalons.system.equipped = true;\n    amberTalons.system.qualities.value.push({name : \"magical\"})\n    amberTalons.effects.push({\n        label : \"Garras de ámbar\",\n        transfer: false,\n        icon : \"modules/wfrp4e-core/icons/spells/amber-talons.png\" ,\n        system: {\n          transferData : {\n                  documentType : \"Item\"\n              },\n              scriptData : [{\n                  trigger : \"applyDamage\",\n                  script : \"if (args.totalWoundLoss >= 1)\\n{ \\n    args.actor.addCondition(\\\"bleeding\\\")\\n}\"\n              }]\n          }\n      })\n    this.actor.createEmbeddedDocuments(\"Item\", [amberTalons], {fromEffect: this.effect.id})"}
+					{"label":"Garras de ámbar"}
 					]
 				}]
 		},
@@ -2039,7 +1963,7 @@
 			"effects": [{
 				"name":"Piel del cazador",
 				"scriptData": [
-					{"label":"Piel del cazador","script":"let darkvision = await fromUuid(\"Compendium.wfrp4e-core.items.Item.JQa5DLnTs2SEzRrc\")\nlet fear = await fromUuid(\"Compendium.wfrp4e-core.items.Item.pTorrE0l3VybAbtn\")\nlet acutesense = await fromUuid(\"Compendium.wfrp4e-core.items.Item.9h82z72XGo9tfgQS\")\nfear = fear.toObject();\nfear.system.specification.value = 1;\nacutesense = acutesense.toObject();\nacutesense.name += \" (Olfato)\";\nthis.actor.createEmbeddedDocuments(\"Item\", [darkvision, fear, acutesense], {fromEffect : this.effect.id})"}
+					{"label":"Piel del cazador"}
 					]
 				}]
 		},
@@ -2106,7 +2030,7 @@
 				"name":"El buey resiste",
 				"scriptData": [
 					{"label":"El buey resiste"},
-					{"label":"Miedo y Terror","hideScript":"if (args.context.terror || args.extendedTest?.getFlag(\"wfrp4e\", \"fear\"))\n{\n\targs.abort = true;\n\tthis.script.notification(\"No necesita hacer Chequeos de Miedo o Terror\");\n}"}
+					{"label":"Miedo y Terror"}
 					]
 				}]
 		},
@@ -2122,7 +2046,7 @@
 			"effects": [{
 				"name":"Capucha vengativa",
 				"scriptData": [
-					{"label":"Capucha vengativa","script":"let test = await args.actor.setupSkill(game.i18n.localize(\"NAME.Cool\"), {skipTargets: true, appendTitle :  \" - \" + this.effect.name})\nawait test.roll();\n\nif (test.succeeded)\n{\n    if (args.totalWoundLoss <= parseInt(test.result.SL))\n    {\n        args.abort = `<strong>${this.effect.name}</strong>: Ataque desviado o reflejado`\n    }\n    args.modifiers.other.push({label : this.effect.name, value : -1 * parseInt(test.result.SL)})\n}"}
+					{"label":"Capucha vengativa"}
 					]
 				}]
 		},
@@ -2164,7 +2088,7 @@
 			"effects": [{
 				"name":"Desconcertar",
 				"scriptData": [
-					{"label":"Desconcertar","script":"let test = await this.actor.setupCharacteristic(\"wp\", {skipTargets: true, appendTitle :  ` - ${this.effect.name}`, context : {failure : `<strong>Desconcertado</strong>: Determina el comportamiento con la tabla @Table[bewilder].`}})\nawait test.roll();\nreturn test.failed"}
+					{"label":"Desconcertar"}
 					]
 				}]
 		},
@@ -2203,7 +2127,7 @@
 			"effects": [{
 				"name":"Danza de la Desesperación",
 				"scriptData": [
-					{"label":"Danza de la Desesperación","script":"if (this.actor.uuid != this.effect.sourceActor.uuid)\n{\n    this.actor.setupSkill(game.i18n.localize(\"NAME.Athletics\"), {skipTargets: true, appendTitle :  ` - ${this.effect.name}`, fields : {difficulty: \"hard\"}, context : {failure : `<strong>${this.effect.name}</strong>: no puede mover o realizar acciones.`}}).then(test => {\n       test.roll();\n    })\n}"}
+					{"label":"Danza de la Desesperación"}
 					]
 				}]
 		},
@@ -2358,7 +2282,7 @@
 				{
 				"name":"Espadas celestes",
 				"scriptData": [
-					{"label":"Aplicar Espadas celestes","script":"let actor = Array.from(game.user.targets)[0]?.actor;\n\nif (actor)\n{\n    actor.applyEffect({effectUuids : this.effect.sourceItem.effects.contents[0].uuid})\n}\nelse\n{\n    this.script.notification(\"¡Sin objetivo!\", \"error\")\n}"}
+					{"label":"Aplicar Espadas celestes"}
 					]
 				}]
 		},
@@ -2370,7 +2294,7 @@
 				"name":"Escudo cerúleo",
 				"scriptData": [
 					{"label":"Escudo cerúleo"},
-					{"label":"Daño cerúleo","script":"if ((args.sourceItem && args.sourceItem.isMelee) || (args.sourceItem && !args.sourceItem.name.includes(\"A distancia\")))\n{\n    let choice = await foundry.applications.api.DialogV2.confirm({window : {title : this.effect.name}, content : `<p>¿Aplicar daño con <strong>${this.effect.name}</strong> al atacante?`})\n    if (choice)\n    {\n        this.script.message(await args.attacker.applyBasicDamage(this.actor.system.characteristics.wp.bonus, {damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_AP, suppressMsg : true}));\n    }\n}"}
+					{"label":"Daño cerúleo"}
 					]
 				}]
 		},
@@ -2408,7 +2332,7 @@
 			"effects": [{
 				"name":"Enemigo previsto",
 				"scriptData": [
-					{"label":"Enemigo previsto","script":"if (this.actor.hasCondition(\"surprised\"))\n{\n    this.actor.removeCondition(\"surprised\")\n    this.script.message(`No puede ser Sorprendido`);\n}"}
+					{"label":"Enemigo previsto"}
 					]
 				}]
 		},
@@ -2518,7 +2442,7 @@
 			"effects": [{
 				"name":"Primer portento de Amul",
 				"scriptData": [
-					{"label":"Primer portento de Amul","script":"let fortunePoints = this.effect.sourceTest.result.overcast.usage.other.current\nlet current = this.actor.status.fortune.value\n\nthis.actor.update({\"system.status.fortune.value\" : fortunePoints + current})\n\nthis.script.message(`Los puntos de Fortuna de <b>${this.actor.prototypeToken.name}</b> aumentan de ${current} a ${fortunePoints + current}`)"}
+					{"label":"Primer portento de Amul"}
 					]
 				}]
 		},
@@ -2530,7 +2454,7 @@
 			"effects": [{
 				"name":"Segundo portento de Amul",
 				"scriptData": [
-					{"label":"Segundo portento de Amul","script":"let fortunePoints = this.effect.sourceTest.result.overcast.usage.other.current\nlet current = this.actor.status.fortune.value\n\nthis.actor.update({\"system.status.fortune.value\" : fortunePoints + current})\n\nthis.script.message(`Los puntos de Fortuna de <b>${this.actor.prototypeToken.name}</b> aumentan de ${current} a ${fortunePoints + current}`)"}
+					{"label":"Segundo portento de Amul"}
 					]
 				}]
 		},
@@ -2541,7 +2465,7 @@
 			"effects": [{
 				"name":"Tercer portento de Amul",
 				"scriptData": [
-					{"label":"Tercer portento de Amul","script":"let current = this.actor.status.fate.value\n\nthis.actor.update({\"system.status.fate.value\" : current + 1})\n\nthis.script.message(`<b>Los puntos de Destino de ${this.actor.prototypeToken.name}</b> aumentan de ${current} a ${current + 1}`)"}
+					{"label":"Tercer portento de Amul"}
 					]
 				}]
 		},
@@ -2557,8 +2481,8 @@
 			"effects": [{
 				"name":"Égida de Aqshy",
 				"scriptData": [
-					{"label":"Custodiado","script":"let useWard = await foundry.applications.api.DialogV2.confirm({\n\tcontent : `<p>¿Usar Custodiado provisto por <strong>${this.effect.name}</strong>?`,\n\twindow : {\n\t\ttitle : this.effect.name,\t}\n})\n\nif (useWard)\n\targs.ward = 9;"},
-					{"label":"Ignorar Ardiendo","script":"let ablaze = this.actor.hasCondition(\"ablaze\");\nif (ablaze)\n{\n\tablaze?.delete();\n\tthis.script.notification(\"Ignorar Ardiendo\");\n}\n"}
+					{"label":"Custodiado"},
+					{"label":"Ignorar Ardiendo"}
 					]
 				}]
 		},
@@ -2621,7 +2545,7 @@
 			"effects": [{
 				"name":"Cauterizar",
 				"scriptData": [
-					{"label":"Cauterizar","script":"let roll = (await new Roll(\"1d10\").roll())\nroll.toMessage({flavor: \"Heridas curadas\", speaker : {alias : this.actor.name}})\n\nthis.actor.modifyWounds(roll.total)\n\nthis.actor.hasCondition(\"bleeding\")?.delete();"}
+					{"label":"Cauterizar"}
 					]
 				}]
 		},
@@ -2697,7 +2621,7 @@
 				"scriptData": [
 					{"label":"Espada ígnea de Rhuin"},
 					{"label":"Ardiendo"},
-					{"label":"Ardiendo (A sí mismo)","script":"if (args.test.result.fumble && !this.actor.itemTypes.talent.find(i => i.name == \"Magia arcana (Fuego)\"))\n{\n    this.actor.addCondition(\"ablaze\");\n}"},
+					{"label":"Ardiendo (A sí mismo)"},
 					{"label":"Daño"}
 					]
 				}]
@@ -2726,7 +2650,7 @@
 				{
 				"name":"AdE Inicial",
 				"scriptData": [
-					{"label":"Grandes fuegos de U’Zhul","script":"let aoeDamage = this.effect.sourceTest.result.damage - 5 // Easily handle magic missile damage by just subtracting 5 from the item's (which has +10 base)\n\nthis.script.message(await this.actor.applyBasicDamage(aoeDamage, {damageType : game.wfrp4e.config.DAMAGE_TYPE.IGNORE_AP, suppressMsg : true}))\n\nlet test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Dodge\"), {skipTargets: true, appendTitle : ` - Ardiendo`})\n\nawait test.roll();\n\nif (!test.succeeded)\n{\n    this.actor.addCondition(\"ablaze\");\n}"}
+					{"label":"Grandes fuegos de U’Zhul"}
 					]
 				},
 				{
@@ -2903,7 +2827,7 @@
 			"effects": [{
 				"name":"Forja de Chamon",
 				"scriptData": [
-					{"label":"Forja de Chamon","script":"let caster = this.effect.sourceActor\nlet targetedItem = this.effect.system.itemTargets[0];\n\nlet qualities = foundry.utils.deepClone(game.wfrp4e.config.itemQualities);\nlet flaws = foundry.utils.deepClone(game.wfrp4e.config.itemFlaws);\n\nif (targetedItem.type == \"weapon\")\n{\n    foundry.utils.mergeObject(qualities, game.wfrp4e.config.weaponQualities)\n    foundry.utils.mergeObject(flaws, game.wfrp4e.config.weaponFlaws)\n}\nelse if (targetedItem.type == \"armour\")\n{\n    foundry.utils.mergeObject(qualities, game.wfrp4e.config.armorQualities)\n    foundry.utils.mergeObject(flaws, game.wfrp4e.config.armorFlaws)\n}\n\nfor(let q in qualities)\n{\n    // If the weapon already has a flaw, don't put it in the dialog\n    if (targetedItem.system.properties.qualities[q])\n    {\n        delete qualities[q]\n    }\n}\nfor(let f in flaws)\n{\n    // If a weapon doesn't have a flaw, don't put it in the dialog\n    if (!targetedItem.system.properties.flaws[f])\n    {\n        delete flaws[f]\n    }\n}\n            \nlet added = await ItemDialog.create(ItemDialog.objectToArray(qualities), \"unlimited\", \"Escoge Cualidades para añadir\");\nlet removed = []\nif (!foundry.utils.isEmpty(flaws))\n{\n    removed = await ItemDialog.create(ItemDialog.objectToArray(flaws), \"unlimited\", \"Escoge Defectos para eliminar\");\n}\n\nthis.effect.updateSource({\"flags.wfrp4e.propertiesChanged\" : {added : added.map(i => i.id), removed : removed.map(i => i.id)}})\n"},
+					{"label":"Forja de Chamon"},
 					{"label":"Añadir propiedades"}
 					]
 				}]
@@ -2935,7 +2859,7 @@
 				"name":"Capa brillante",
 				"scriptData": [
 					{"label":"Custodiado inicial"},
-					{"label":"Aplicar Custodiado","script":"if (!args.ward)\n{\n\targs.ward = (this.effect.getFlag(\"wfrp4e\", \"ward\") || 0);\n\tif (args.wardRoll >= args.ward && args.ward > 3)\n    {\n        let newWard = Math.max(3, args.ward - 1)\n        this.script.message(\"<strong>Custodiado</strong> mejorado a \" + newWard)\n        this.effect.setFlag(\"wfrp4e\", \"ward\", newWard)\n    }\n\n}"}
+					{"label":"Aplicar Custodiado"}
 					]
 				}]
 		},
@@ -3107,7 +3031,7 @@
 			"effects": [{
 				"name":"Sedimento de la flor de la vida",
 				"scriptData": [
-					{"label":"Sedimento de la flor de la vida","script":"let regenerate = this.actor.items.getName('Regenerae')\n\nif (regenerate)\n{\n    let effect = regenerate.effects.contents[0]\n    let scriptData = effect.system.scriptData;\n    \n    scriptData[0].script = scriptData[0].script.replace(\"1d10\", \"1d10 * 2\")\n}"}
+					{"label":"Sedimento de la flor de la vida"}
 					]
 				}]
 		},
@@ -3290,7 +3214,7 @@
 			"effects": [{
 				"name":"Visión inquietante",
 				"scriptData": [
-					{"label":"Visión inquietante","script":"if (args.test.characteristicKey == \"wp\" && args.test.failed && args.test.result.SL <= -3)\n{\n    this.script.notification(\"Añadiendo Tumbado\");\n    this.actor.addCondition(\"prone\")\n}"}
+					{"label":"Visión inquietante"}
 					]
 				}]
 		},
@@ -3379,7 +3303,7 @@
 			"effects": [{
 				"name":"Afinidad metálica",
 				"scriptData": [
-					{"label":"Afinidad metálica","script":"fromUuid(\"Compendium.wfrp4e-core.items.5QcrpLQWWrsbKR79\").then(item => {\n     let data = item.toObject();\n     data.system.tests.value = data.system.tests.value.replace(\"unas monedas\", \"unos objetos de metal\");\n     data.system.description.value += \"<p>Este Talento sólo se aplica a objetos de metal a cause de la <strong>Afinidad metálica</strong></p>\"\n     this.actor.createEmbeddedDocuments(\"Item\", [data], {fromEffect : this.effect.id})\n})"}
+					{"label":"Afinidad metálica"}
 					]
 				}]
 		},
@@ -3407,7 +3331,7 @@
 			"effects": [{
 				"name":"¡Ladrones!",
 				"scriptData": [
-					{"label":"¡Ladrones!","script":"let item = await fromUuid(\"Compendium.wfrp4e-core.items.klCJX0mNpXYH5AIx\")\nlet data = item.toObject();   \ndata.name = data.name.replace(\"Objetivo\", \"Desconocidos\");\nthis.actor.createEmbeddedDocuments(\"Item\", [data], {fromEffect : this.effect.id});"}
+					{"label":"¡Ladrones!"}
 					]
 				}]
 		},
@@ -3840,7 +3764,7 @@
 			"effects": [{
 				"name":"Fantasmal",
 				"scriptData": [
-					{"label":"Fantasmal","script":"    if (!args.test.context.phantasmal && \n      (this.actor.isOpposing || args.test.context.defending) && \n      args.test.result.roll % 11 == 0 && \n      args.test.succeeded && \n      [\"Hablar idioma (Lengua de la magia)\", \"Esquivar\"].includes(args.test.item?.name))\n    {\n         args.test.context.phantasmal = true; // Flag so items aren't readded if test is edited\n         let text = `<strong>${this.effect.name}</strong>: Añadiendo Custodiado e Inestable`\n         args.test.result.other.push(text)  \n        this.script.notification(text);\n     \n        let ward = await fromUuid(\"Compendium.wfrp4e-core.items.Bvd2aZ0gQUXHfCTh\")\n        let wardData = ward.toObject();\n        wardData.system.specification.value = 9;\n        \n        let unstable = await fromUuid(\"Compendium.wfrp4e-core.items.D0ImWEIMSDgElsnl\")\n        let unstableData = unstable.toObject();\n        this.actor.createEmbeddedDocuments(\"Item\", [wardData, unstableData], {fromEffect: this.effect.id})\n    }\n"}
+					{"label":"Fantasmal"}
 					]
 				}]
 		},
@@ -4105,9 +4029,7 @@
 			"tests": "Oficio (Boticario) y Oficio (Alquimista)",
 			"effects": [{
 				"name":"Elaborar",
-				"scriptData": [
-					{"activateScript":"return args.skill?.name == \"Oficio (Boticario)\" || args.skill?.name == \"Oficio (Alquimista)\""}
-					]
+				"scriptData": []
 				}]
 		},
 		{
@@ -4122,7 +4044,7 @@
 			"effects": [{
 				"name":"Lanzador aleatorio",
 				"scriptData": [
-					{"label":"Lanzador aleatorio","script":"let spells = await warhammer.utility.findAllItems(\"spell\", \"Cargando Hechizos\", true, [\"system.lore.value\"])\n\nlet lore = (await game.wfrp4e.tables.rollTable(\"random-caster\", {hideDSN: true})).text\nthis.script.notification(lore)\nif (lore == \"A elección del DJ\") {\n   return\n}\n\nelse if (lore == \"Magia arcana\") {\n    lore = \"Arcano\"\n}\n\nelse if (lore == \"Magia menor\") {\n    lore = \"petty\"\n}\n\nelse {\n    lore = lore.toLowerCase();\n}\n\nlet spellsWithLore = []\nif (lore == \"Arcano\") {\n    spellsWithLore = spells.filter(i => !i.system.lore.value)\n}\nelse {\n    spellsWithLore = spells.filter(i => i.system.lore.value == lore)\n}\n\nlet selectedSpell = spellsWithLore[Math.floor(CONFIG.Dice.randomUniform() * spellsWithLore.length)]\nItem.implementation.create(selectedSpell.toObject(), { parent: this.actor}).then(item => {\n    this.actor.setupCast(item).then(test => test.roll());\n})"}
+					{"label":"Lanzador aleatorio"}
 					]
 				}]
 		},
@@ -4138,7 +4060,7 @@
 			"effects": [{
 				"name":"Bañar en (Viento)",
 				"scriptData": [
-					{"label":"Bañar en (Viento)","script":"let items = await Promise.all([\"Compendium.wfrp4e-wom.items.Item.EjGYZ4CgX2jZW7Ot\",\n\"Compendium.wfrp4e-wom.items.Item.O2v9RQiFf0obskP5\",\n\"Compendium.wfrp4e-wom.items.Item.2cv6hhZ57iV6z5Il\",\n\"Compendium.wfrp4e-wom.items.Item.YgDEUO0G0XcqQJqg\",\n\"Compendium.wfrp4e-wom.items.Item.J6K5TPxI8qIGQKKH\",\n\"Compendium.wfrp4e-wom.items.Item.K9FPtiDLwTkC7FuO\",\n\"Compendium.wfrp4e-wom.items.Item.CkMYRYCLrkMnyVm5\",\n\"Compendium.wfrp4e-wom.items.Item.0Xdm4r7l2EwC4fcg\"].map(fromUuid));\n\nlet choice = await ItemDialog.create(items, 1, {title : this.effect.name, text: \"Selecciona Viento\"})\n//this.actor.createEmbeddedDocuments(\"Item\", items);\n\nthis.item.update(choice[0]?.toObject(), {diff: false, recursive : false});\n\n//this.actor.items.getName(this.effect.item.name).delete() // For some reason this.effect.item.delete() throws an error\n\n"}
+					{"label":"Bañar en (Viento)"}
 					]
 				}]
 		},
@@ -4484,7 +4406,7 @@
 				"name":"Fuego azul de Tzeentch",
 				"scriptData": [
 					{"label":"Fuego azul de Tzeentch"},
-					{"label":"Chequeo con 0 Heridas","script":"if (args.totalWoundLoss >= 1)\n{\n    let roll = await new Roll(\"1d10\").roll({allowInteractive : false});\n    await roll.toMessage(this.script.getChatData());\n    if (roll.total == 9)\n    {\n        this.script.message(`Dos @UUID[Compendium.wfrp4e-eis.actors.cLOGeMqUty61nYB9]{horrores azules de Tzeentch} se abren paso por la carne de ${this.actor.name} (que no para de aullar) y lo matan en el proceso.`, {whisper : ChatMessage.getWhisperRecipients(\"GM\")})\n    }\n}"},
+					{"label":"Chequeo con 0 Heridas"},
 					{"label":"Comprobar Ardiendo"}
 					]
 				}]
@@ -4496,7 +4418,7 @@
 			"effects": [{
 				"name":"Rayo de cambio",
 				"scriptData": [
-					{"label":"Rayo de cambio","script":"let test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {skipTargets: true, appendTitle :  ` - ${this.effect.name}`, context: { failure: \"Sufre 1 Punto de Corrupción\" } })\nawait test.roll();\n\nif (test.failed && args.actor.type == \"character\") \n{\n    let msg = \"\"\n    msg += `<p><b>${this.actor.prototypeToken.name}</b> sufre 1 Punto de Corrupción</p>`\n    if (test.result.roll % 11 == 0 || test.result.roll == 100)\n    {\n        msg +=  `<b>${args.actor.prototypeToken.name}</b> sufre una mutación (@Table[expandedmutatephys]{Física} o @Table[expandedmutatemental]{Mental}) y obtiene @UUID[Compendium.wfrp4e-core.items.hiU7vhBOVpVI8c7C]{Magia del Caos (Tzeentch)}`\n    }\n    this.script.message(msg, {whisper : ChatMessage.getWhisperRecipients(\"GM\")})\n    await this.actor.update({ \"system.status.corruption.value\": parseInt(args.actor.status.corruption.value) + 1 })\n}"}
+					{"label":"Rayo de cambio"}
 					]
 				}]
 		},
@@ -4507,8 +4429,8 @@
 			"effects": [{
 				"name":"Bendición de Tzeentch",
 				"scriptData": [
-					{"label":"Añadir Hechizo","script":"let spells = await warhammer.utility.findAllItems(\"spell\", \"Cargando Hechizos\", true).sort(WFRP_Utility.nameSorter);\n\nlet choice = await ItemDialog.create(spells, 1);\n\nif (choice[0])\n{\n    this.script.message(`Elige @UUID[${choice[0].uuid}]{${choice[0].name}}`)\n    let spell = (await fromUuid(choice[0].uuid)).toObject(); // Might be an index so retrieve item object for sure\n    foundry.utils.setProperty(spell, \"flags.wfrp4e.boonOfTzeentch\", true);\n    spell.system.wind.value = \"Canalización (Dhar)\";\n    spell.system.memorized.value = true;\n    this.actor.createEmbeddedDocuments(\"Item\", [spell], {fromEffect: this.effect.id})\n}"},
-					{"label":"Lanzamiento/Canalización","script":"if (args.test.spell?.getFlag(\"wfrp4e\", \"boonOfTzeentch\"))\n{\n    if (args.test.result.minormis || args.test.result.majormis || args.test.result.catastrophicmis)\n    {\n        this.script.message(`¡<strong>${this.effect.name}</strong> se marcha indignado de tu cabeza y también se borra del grimorio!`)\n        this.effect.sourceItem.delete();\n    }\n}"}
+					{"label":"Añadir Hechizo"},
+					{"label":"Lanzamiento/Canalización"}
 					]
 				}]
 		},
@@ -4519,7 +4441,7 @@
 			"effects": [{
 				"name":"Maldición de Tzeentch",
 				"scriptData": [
-					{"label":"Maldición de Tzeentch","script":"let test = await this.actor.setupCharacteristic(\"wp\", {skipTargets: true, appendTitle :  ` - ${this.effect.name}`})\nawait test.roll();\n\n\nlet opposedResult = test.opposedMessages[0]?.system.opposedHandler?.resultMessage?.system.opposedTest?.result\n\nif (opposedResult?.winner == \"attacker\")\n{\n    let spells = this.actor.itemTypes.spell;\n    if (spells.length)\n    {\n        let chosen = spells[Math.floor(CONFIG.Dice.randomUniform() * spells.length)]\n        this.script.message(`Pierde el acceso a <strong>${chosen.name}</strong>`)\n        chosen.update({name : chosen.name += \" (PERDIDO)\"})\n    }\n}"}
+					{"label":"Maldición de Tzeentch"}
 					]
 				}]
 		},
@@ -4531,7 +4453,7 @@
 			"effects": [{
 				"name":"Fuego mental",
 				"scriptData": [
-					{"label":"Fuego mental","script":"let test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Cool\"), {skipTargets: true, appendTitle :  ` - ${this.effect.name}`, context : {failure: \"1 Punto de Corrupción Sufrido\"}})\nawait test.roll();\nif (test.failed && this.actor.type == \"character\")\n{\n    this.actor.update({\"system.status.corruption.value\" : parseInt(this.actor.status.corruption.value) + 1})\n    this.script.message(\"Sufrido un Punto de Corrupción\", {whisper : ChatMessage.getWhisperRecipients(\"GM\")})\n}"}
+					{"label":"Fuego mental"}
 					]
 				}]
 		},
@@ -4543,7 +4465,7 @@
 				"name":"Fuego rosa de Tzeentch",
 				"scriptData": [
 					{"label":"Fuego rosa de Tzeentch"},
-					{"label":"Chequeo con 0 Heridas","script":"if (args.totalWoundLoss >= 1)\n{\n    let roll = await new Roll(\"1d10\").roll({allowInteractive : false});\n    await roll.toMessage(this.script.getChatData());\n    if (roll.total == 9)\n    {\n        this.script.message(`Un @UUID[Compendium.wfrp4e-eis.actors.iDy8SDTwJSlCzZMl]{horror rosa de Tzeentch} se abren paso por la carne de ${this.actor.name} (que no para de aullar) y lo matan en el proceso.`, {whisper : ChatMessage.getWhisperRecipients(\"GM\")})\n    }\n}"},
+					{"label":"Chequeo con 0 Heridas"},
 					{"label":"Comprobar Ardiendo"}
 					]
 				}]
@@ -4571,7 +4493,7 @@
 				"name":"Tormenta de fuego de Tzeentch",
 				"scriptData": [
 					{"label":"Fuego rosa de Tzeentch"},
-					{"label":"Chequeo con 0 Heridas","script":"if (args.totalWoundLoss >= 1)\n{\n    let roll = await new Roll(\"1d10\").roll({allowInteractive : false});\n    await roll.toMessage(this.script.getChatData());\n    if (roll.total == 9)\n    {\n        this.script.message(`Un @UUID[Compendium.wfrp4e-eis.actors.iDy8SDTwJSlCzZMl]{horror rosa de Tzeentch} se abren paso por la carne de ${this.actor.name} (que no para de aullar) y lo matan en el proceso.`, {whisper : ChatMessage.getWhisperRecipients(\"GM\")})\n    }\n}"},
+					{"label":"Chequeo con 0 Heridas"},
 					{"label":"Comprobar Ardiendo"}
 					]
 				}]
@@ -4594,9 +4516,9 @@
 			"effects": [{
 				"name":"Palabra de Tzeentch",
 				"scriptData": [
-					{"label":"Palabra de Tzeentch","script":"let test = await this.actor.setupCharacteristic(\"int\", {skipTargets: true, appendTitle :  ` - ${this.effect.name}`})\nawait test.roll();\n\nlet opposedResult = test.opposedMessages[0]?.system.opposedHandler?.resultMessage?.system.opposedTest?.result\n\nif (opposedResult?.winner == \"attacker\")\n{\n    if (test.failed && (test.result.roll % 11 == 0 || test.result.roll == 100))\n    {\n        this.actor.addCondition(\"unconscious\")\n        await this.actor.update({\"system.status.corruption.value\" : parseInt(this.actor.status.corruption.value) + 1})\n        this.script.message(\"Sufrido un Punto de Corrupción\", {whisper : ChatMessage.getWhisperRecipients(\"GM\")})\n    }\n    else \n    {\n        await this.actor.addCondition(\"stunned\", 1 + opposedResult.differenceSL);\n    }\n}\nelse \n{\n    return false;\n}"},
+					{"label":"Palabra de Tzeentch"},
 					{"label":"Comprobar Estados"},
-					{"label":"Eliminación","script":"let test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {skipTargets: true, appendTitle :  ` - ${this.effect.name}`})\nawait test.roll();\n\nif (test.failed)\n{\n    this.actor.update({\"system.status.corruption.value\" : parseInt(this.actor.status.corruption.value) + 1})\n    this.script.message(\"Sufre un Punto de Corrupción\", {whisper : ChatMessage.getWhisperRecipients(\"GM\")})\n    if (test.result.roll % 11 == 0 || test.result.roll == 100)\n    {\n        this.script.message(`<strong>Pifia</strong>: sufre inmediatamente 1 @Table[mutatemental]{Mutación Mental} y no pueden tener una Ambición a corto plazo durante [[1d10]] semanas.`, {whisper : ChatMessage.getWhisperRecipients(\"GM\")})\n    }\n}"}
+					{"label":"Eliminación"}
 					]
 				}]
 		}

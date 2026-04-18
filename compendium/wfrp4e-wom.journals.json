@@ -1,8 +1,5 @@
 {
 	"label": "Diarios (Vientos de la Magia)",
-	"mapping": {
-		"image": "img"
-	},
 	"entries": {
 		"Aqshy": {
 			"name" : "Aqshy",

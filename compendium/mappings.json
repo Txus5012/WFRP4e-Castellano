@@ -1,0 +1,115 @@
+{
+	"Item": {
+		"gmdescription": "system.gmdescription.value",
+	    "skills": "system.skills",
+	    "talents": "system.talents",
+	    "class": {
+		      "path": "system.class.value",
+		      "converter": "career_class"
+		    },
+	    "careergroup": {
+		      "path": "system.careergroup.value",
+		      "converter": "career_careergroup"
+		    },
+	    "trappings": "system.trappings",
+		"penalties": {
+			"path": "system.penalty.value",
+			"converter": "trappings_penalty"
+			},
+		"range": {
+			"path": "system.range.value",
+			"converter": "spells_duration_range_target"
+			},
+		"special": "system.special.value",
+		"effects": {
+			"path": "effects",
+			"converter": "effects"
+			},
+		"wounds": {
+			"path": "system.wounds.value",
+			"converter": "criticals_wounds"
+			},	
+		"location": {
+			"path": "system.location.value",
+			"converter": "criticals_location"
+			},
+		"duration": "system.duration.value",
+		"duration_text": "system.duration.text",
+		"contraction": "system.contraction.value",
+		"incubation": "system.incubation.value",
+		"incubation_text": "system.incubation.text",
+		"symptoms": "system.symptoms.value",
+		"permanent": "system.permanent.value",
+		"spell_duration": {
+			"path": "system.duration.value",
+			"converter": "spells_duration_range_target"
+		},
+		"target": {
+			"path": "system.target.value",
+			"converter": "spells_duration_range_target"
+		},    
+		"damage": {
+			"path": "system.damage.value",
+			"converter": "spells_damage"
+		},
+		"lore": {
+			"path": "system.lore.value",
+			"converter": "traits_specification"
+		},
+		"overcast": "system.overcast.label",
+		"overcastvaluevalue": "system.overcast.valuePerOvercast.additional",
+		"overcastinitialvalue": "system.overcast.initial.additional",
+		"injury_location": {
+			"path": "system.location.value",
+			"converter": "injuries_location"
+			},
+		"penalty": "system.penalty.value",
+		"injury_duration": {
+			"path": "system.duration.value",
+			"converter": "injuries_duration"
+			},
+		"modifier": "system.modifier.value",
+		"roll": "system.rollable.skill",
+		"specification": {
+			"path": "system.specification.value",
+			"converter": "traits_specification"
+			},
+		"tests": "system.tests.value",
+		"templatesskills": {
+			"path": "system.skills.list",
+			"converter": "templatesskills"
+			},
+		"templatestalents": {
+			"path": "system.talents.list",
+			"converter": "templatestalents"
+			},
+		"templatestrappings": {
+			"path": "system.trappings.options",
+			"converter": "templatestrappings"
+			}
+		},
+	"Actor": {
+		"species": "system.details.species.value",
+		"gender": {
+			"path": "system.details.gender.value",
+			"converter": "bestiary_gender"
+			},
+		"status": "system.details.status.value",
+		"hit": "system.details.hitLocationTable.value",
+		"notes": "system.details.biography.value",
+		"gmnotes": "system.details.gmnotes.value"
+		},
+	"Scene": {
+		"image": "background.src",
+		"levels": {
+			"path": "levels",
+			"converter": "levels"
+			}
+		},
+	"RollTable": {
+		"tablenames": {
+			"path": "results",
+			"converter": "tablenames"
+			}
+		}
+}

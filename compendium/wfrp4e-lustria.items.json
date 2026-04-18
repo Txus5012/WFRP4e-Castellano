@@ -20,56 +20,6 @@
 		"Weapons": "Armas",
 		"Vehicles Modifiers": "Modificaciones de vehículos"
     },
-	"mapping": {
-		"gmdescription": "system.gmdescription.value",
-	    "skills": "system.skills",
-	    "talents": "system.talents",
-	    "class": {
-		      "path": "system.class.value",
-		      "converter": "career_class"
-		    },
-	    "careergroup": {
-		      "path": "system.careergroup.value",
-		      "converter": "career_careergroup"
-		    },
-	    "trappings": "system.trappings",
-		"range": {
-			"path": "system.range.value",
-			"converter": "spells_duration_range_target"
-			},
-		"special": "system.special.value",
-		"effects": {
-			"path": "effects",
-			"converter": "effects"
-			},
-		"duration_text": "system.duration.text",
-		"contraction": "system.contraction.value",
-		"incubation": "system.incubation.value",
-		"symptoms": "system.symptoms.value",
-		"spell_duration": {
-			"path": "system.duration.value",
-			"converter": "spells_duration_range_target"
-		},
-		"target": {
-			"path": "system.target.value",
-			"converter": "spells_duration_range_target"
-		},    
-		"damage": {
-			"path": "system.damage.value",
-			"converter": "spells_damage"
-		},
-		"lore": {
-			"path": "system.lore.value",
-			"converter": "traits_specification"
-		},
-		"modifier": "system.modifier.value",
-		"roll": "system.rollable.skill",
-		"specification": {
-			"path": "system.specification.value",
-			"converter": "traits_specification"
-			},
-		"tests": "system.tests.value"
-	},
 	"entries": [
 		{
 			"id": "Translator",
@@ -288,7 +238,7 @@
 				{
 				"name":"Malestar",
 				"scriptData": [
-					{"label":"Malestar","script":"\n                    if (game.user.isUniqueGM)\n                    {\n                        let fatigued = args.actor.hasCondition(\"fatigued\")\n                        if (!fatigued)\n                        {\n                            args.actor.addCondition(\"fatigued\")\n                            ui.notifications.notify(\"Fatiga añadida a \" + args.actor.name + \" que no puede ser quitada hasta que el síntoma Malestar se haya ido.\")\n                        }\n                    }\n                    "}
+					{"label":"Malestar"}
 					]
 				},
 				{
@@ -353,7 +303,7 @@
 			"effects": [{
 				"name":"Convulsiones",
 				"scriptData": [
-					{"label":"Convulsiones","script":"\n                        let modifier = 0\n                        if (this.effect.name.includes(\"Moderado\"))\n                            modifier = -20\n                        else\n                            modifier = -10\n                        \n                        let applicableCharacteristics = [\"ws\", \"bs\", \"s\", \"ag\", \"t\", \"dex\"]\n                        if (args.type == \"weapon\")\n                            args.fields.modifier += modifier\n                        else if (args.type == \"characteristic\")\n                        {\n                            if (applicableCharacteristics.includes(args.item))\n                                args.fields.modifier += modifier\n                        }\n                        else if (args.type == \"skill\")\n                        {\n                            if (applicableCharacteristics.includes(args.item.characteristic.key))\n                                args.fields.modifier += modifier\n                        }"}
+					{"label":"Convulsiones"}
 					]
 				},
 				{
@@ -390,7 +340,7 @@
 				{
 				"name":"Convulsiones",
 				"scriptData": [
-					{"label":"Convulsiones","script":"\n                        let modifier = 0\n                        if (this.effect.name.includes(\"Moderado\"))\n                            modifier = -20\n                        else\n                            modifier = -10\n                        \n                        let applicableCharacteristics = [\"ws\", \"bs\", \"s\", \"ag\", \"t\", \"dex\"]\n                        if (args.type == \"weapon\")\n                            args.fields.modifier += modifier\n                        else if (args.type == \"characteristic\")\n                        {\n                            if (applicableCharacteristics.includes(args.item))\n                                args.fields.modifier += modifier\n                        }\n                        else if (args.type == \"skill\")\n                        {\n                            if (applicableCharacteristics.includes(args.item.characteristic.key))\n                                args.fields.modifier += modifier\n                        }"}
+					{"label":"Convulsiones"}
 					]
 				},
 				{
@@ -427,7 +377,7 @@
 				{
 				"name":"Malestar",
 				"scriptData": [
-					{"label":"Malestar","script":"\n                    if (game.user.isUniqueGM)\n                    {\n                        let fatigued = args.actor.hasCondition(\"fatigued\")\n                        if (!fatigued)\n                        {\n                            args.actor.addCondition(\"fatigued\")\n                            ui.notifications.notify(\"Fatiga añadida a \" + args.actor.name + \" que no puede ser quitada hasta que el síntoma Malestar se haya ido.\")\n                        }\n                    }\n                    "}
+					{"label":"Malestar"}
 					]
 				},
 				{
@@ -465,7 +415,7 @@
 				{
 				"name":"Malestar",
 				"scriptData": [
-					{"label":"Malestar","script":"\n                    if (game.user.isUniqueGM)\n                    {\n                        let fatigued = args.actor.hasCondition(\"fatigued\")\n                        if (!fatigued)\n                        {\n                            args.actor.addCondition(\"fatigued\")\n                            ui.notifications.notify(\"Fatiga añadida a \" + args.actor.name + \" que no puede ser quitada hasta que el síntoma Malestar se haya ido.\")\n                        }\n                    }\n                    "}
+					{"label":"Malestar"}
 					]
 				},
 				{
@@ -502,7 +452,7 @@
 				{
 				"name":"Malestar",
 				"scriptData": [
-					{"label":"Malestar","script":"\n                    if (game.user.isUniqueGM)\n                    {\n                        let fatigued = args.actor.hasCondition(\"fatigued\")\n                        if (!fatigued)\n                        {\n                            args.actor.addCondition(\"fatigued\")\n                            ui.notifications.notify(\"Fatiga añadida a \" + args.actor.name + \" que no puede ser quitada hasta que el síntoma Malestar se haya ido.\")\n                        }\n                    }\n                    "}
+					{"label":"Malestar"}
 					]
 				},
 				{
@@ -536,7 +486,7 @@
 			"effects": [{
 				"name":"Convulsiones",
 				"scriptData": [
-					{"label":"Convulsiones","script":"\n                        let modifier = 0\n                        if (this.effect.name.includes(\"Moderado\"))\n                            modifier = -20\n                        else\n                            modifier = -10\n                        \n                        let applicableCharacteristics = [\"ws\", \"bs\", \"s\", \"ag\", \"t\", \"dex\"]\n                        if (args.type == \"weapon\")\n                            args.fields.modifier += modifier\n                        else if (args.type == \"characteristic\")\n                        {\n                            if (applicableCharacteristics.includes(args.item))\n                                args.fields.modifier += modifier\n                        }\n                        else if (args.type == \"skill\")\n                        {\n                            if (applicableCharacteristics.includes(args.item.characteristic.key))\n                                args.fields.modifier += modifier\n                        }"}
+					{"label":"Convulsiones"}
 					]
 				},
 				{
@@ -559,7 +509,7 @@
 			"effects": [{
 				"name":"¡Kabezazo!",
 				"scriptData": [
-					{"label":"¡Kabezazo!","script":"if ( args.actor.has(game.i18n.localize(\"NAME.AA\"), \"talent\") ||\nargs.actor.has(game.i18n.localize(\"NAME.SecondSight\"), \"talent\") ) {\n\targs.modifiers.other.push({label : this.effect.name, value : 5, details : \"El objetivo tiene Afinidad con el Aethyr o Clarividencia\"});\n}"}
+					{"label":"¡Kabezazo!"}
 					]
 				}]
 		},
@@ -581,8 +531,8 @@
 			"effects": [{
 				"name":"Puñoz de Gorko",
 				"scriptData": [
-					{"label":"Puñoz de Gorko","script":"// Brawling management\nlet base = this.actor.characteristics.ws.value;\nlet melee = this.actor.has(\"Cuerpo a cuerpo (Pelea)\", \"skill\");\nif (!melee) {\n  melee = await fromUuid(\"Compendium.wfrp4e-core.items.Item.jLyoyqwmBVPjRjhM\");\n  melee = melee.toObject();\n  melee.system.modifier.value = 55 - base;\n  await this.actor.createEmbeddedDocuments(\"Item\", [melee], {fromEffect : this.effect.id});\n} else {\n  //this.actor.updateEmbeddedDocuments(\"Item\", { _id: melee.id, 'system.modifier.value': 55-base});\n  await this.effect.update({\"flags.wfrp4e.fistsOfGork\" : 55 - base})\n}\n\n// Weapon management\nbase = this.actor.characteristics.s.bonus;\nweapon = await fromUuid(\"Compendium.wfrp4e-core.items.Item.AtpAudHA4ybXVlWM\");\nweapon = weapon.toObject();\nweapon.name = \"Puñoz de Gorko\";\nweapon.img = this.effect.img;\nweapon.system.rollable.skill = \"Cuerpo a cuerpo (Pelea)\";\nweapon.system.specification.value = 9 - base;\nawait this.actor.createEmbeddedDocuments(\"Item\", [weapon], {fromEffect : this.effect.id});\n\n//this.script.scriptMessage(`${this.actor.name} now has Melee (Brawling) 55 and Weapon (Fists) +9`);"},
-					{"label":"Pelea","script":"if (this.effect.getFlag(\"wfrp4e\", \"fistsOfGork\") && args.item.type == \"skill\" && args.item.name == \"Cuerpo a cuerpo (Pelea)\") {\n\targs.item.system.modifier.value += this.effect.getFlag(\"wfrp4e\", \"fistsOfGork\")\n}"}
+					{"label":"Puñoz de Gorko"},
+					{"label":"Pelea"}
 					]
 				}]
 		},
@@ -605,7 +555,7 @@
 				"name":"Apoteosis",
 				"scriptData": [
 					{"label":"Apoteosis"},
-					{"label":"Sanar","script":"let wounds = this.effect.sourceActor.system.characteristics.wp.bonus;\nthis.actor.modifyWounds(wounds);\nthis.script.message(`Sanadas ${wounds} Heridas`);"}
+					{"label":"Sanar"}
 					]
 				}]
 		},
@@ -636,7 +586,7 @@
 			"effects": [{
 				"name":"Arrancar montañas",
 				"scriptData": [
-					{"label":"Arrancar montañas","script":"let test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Athletics\"), {fields : {difficulty : \"vhard\"}, appendTitle : ` - ${this.effect.name}`})\nawait test.roll();\nif (test.failed) \n{\n\tthis.actor.addCondition(\"prone\");\n    this.script.scriptMessage(\"No puedes mover ni actuar este Asalto\");\n}"}
+					{"label":"Arrancar montañas"}
 					]
 				}]
 		},
@@ -680,7 +630,7 @@
 			"effects": [{
 				"name":"Desmoronar ciudades",
 				"scriptData": [
-					{"label":"Desmoronar ciudades","script":"let test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Dodge\"), {fields : {difficulty : \"hard\"}, appendTitle : ` - ${this.effect.name}`})\nawait test.roll();\n\nif (test.failed) {\n  \tthis.script.scriptMessage(await this.actor.applyBasicDamage(20, {suppressMsg: true}));\n        this.script.scriptMessage(`${this.actor.name} sufre @UUID[Compendium.wfrp4e-core.journals.JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#ahogamiento-y-asfixia]{Asfixia}`);\n}"}
+					{"label":"Desmoronar ciudades"}
 					]
 				}]
 		},
@@ -786,7 +736,7 @@
 				"name":"Sombrío",
 				"scriptData": [
 					{"label":"Sombrío"},
-					{"label":"Establecer valor","script":"if (isNaN(parseInt(this.item.system.specification.value)))\n{\n    let value = await ValueDialog.create({tetx : \"Escribe el valor de Sombrío\", title : this.effect.name});\n    if (value)\n    {\n     this.item.updateSource({\"system.specification.value\" : value});\n    }\n}"}
+					{"label":"Establecer valor"}
 					]
 				}]
 		},
@@ -798,7 +748,7 @@
 				"name":"Sombrío",
 				"scriptData": [
 					{"label":"Sombrío"},
-					{"label":"Establecer valor","script":"if (isNaN(parseInt(this.item.system.specification.value)))\n{\n    let value = await ValueDialog.create({tetx : \"Escribe el valor de Sombrío\", title : this.effect.name});\n    if (value)\n    {\n     this.item.updateSource({\"system.specification.value\" : value});\n    }\n}"}
+					{"label":"Establecer valor"}
 					]
 				}]
 		},
@@ -936,7 +886,7 @@
 				"name":"Ataque pestilente",
 				"preApplyScript":"let roll = await new Roll(\"1d10\").roll();\nargs.effectData.system.transferData.area.radius = roll.total;\nroll.toMessage({speaker : {alias : this.effect.name}, flavor : \"Radio\"});\nreturn true;",
 				"scriptData": [
-					{"label":"Ataque pestilente","script":"if (this.actor.uuid == this.effect.sourceActor.uuid)\n{\n\treturn;\n}\n\nif (this.actor.has(\"De sangre fría\") && !this.actor.hasSystemEffect(\"nausea\")) { \n  let test = await this.actor.setupSkill(game.i18n.localize(\"NAME.Endurance\"), {appendTitle : `- ${this.effect.name}`})\nawait test.roll();\nif (test.failed)\n{\n\n  let myRoll = await new Roll(\"1d10\").roll({allowInteractive : false});\n  let duration = myRoll.total\n  this.actor.addSystemEffect(\"nausea\");\n  this.script.scriptMessage(`Añadido síntoma Náuseas, duración : ${duration} horas`);\n}\n}\nreturn false;"}
+					{"label":"Ataque pestilente"}
 					]
 				}]
 		},
@@ -969,7 +919,7 @@
 			"effects": [{
 				"name":"Frenesí sangriento",
 				"scriptData": [
-					{"label":"Frenesí sangriento","script":"if (args.totalWoundLoss > 0) {\n  let frenzy = await fromUuid(\"Compendium.wfrp4e-core.items.Item.DrNUTPeodEgpWTnT\");\n  frenzy = frenzy.toObject(); \n  frenzy.effects[0].disabled = false;\n  this.actor.createEmbeddedDocuments(\"Item\", [frenzy], {fromEffect : this.effect.id}); \n  this.script.scriptMessage(\"Carnosaurio gana Furia\");\n}"}
+					{"label":"Frenesí sangriento"}
 					]
 				}]
 		},
@@ -1013,7 +963,7 @@
 			"effects": [{
 				"name":"Ataque enmarañador",
 				"scriptData": [
-					{"label":"Ataque enmarañador","script":"this.script.scriptNotification(\"No puede atacar a objeticos que no estén Trabados\")\nargs.abort = true;"}
+					{"label":"Ataque enmarañador"}
 					]
 				}]
 		},
@@ -1024,7 +974,7 @@
 			"effects": [{
 				"name":"Ataque de empalamiento",
 				"scriptData": [
-					{"label":"Ataque de empalamiento","hideScript":"return !args.item?.name?.includes(\"Arma\")","activateScript":"return args.item.name.includes(\"Arma\")"},
+					{"label":"Ataque de empalamiento"},
 					{"label":"Empalante"}
 					]
 				}]
@@ -1055,7 +1005,7 @@
 			"effects": [{
 				"name":"Podredumbre cerebral",
 				"scriptData": [
-					{"label":"Podredumbre cerebral","script":"if (args.totalWoundLoss > 0 && args.opposedTest?.attackerTest.result.critical && args.loc == \"head\") {\n    let brainRot = await fromUuid(\"Compendium.wfrp4e-lustria.items.Item.IsNQH867Y58pZgq6\");\n    args.test.targets[0].createEmbeddedDocuments(\"Item\", [brainRot], {fromEffect : this.effect.id});\n    this.script.scriptMessage(`${args.test.targets[0].name} ha contraído la Podedumbre cerebral`);\n}"}
+					{"label":"Podredumbre cerebral"}
 					]
 				}]
 		},
@@ -1072,7 +1022,7 @@
 				"name":"Llama trasera",
 				"filter":"return this.effect.sourceItem?.actor.uuid == this.actor.uuid && this.actor.has(\"De sangre fría\")",
 				"scriptData": [
-					{"label":"Llama trasera","script":"this.actor.addCondition(\"ablaze\");\nthis.script.scriptMessage(`${this.actor.name} ha recibido un Estado de @Condition[Ardiendo]`)"}
+					{"label":"Llama trasera"}
 					]
 				}]
 		},
@@ -1305,7 +1255,7 @@
 			"effects": [{
 				"name":"Múltiples personalidades",
 				"scriptData": [
-					{"label":"Tirada","script":"let table = await fromUuid(\"RollTable.uATmVS40DQLC1woJ\");\n\nif (table)\n{\n    table.draw();\n}\nelse \n{\n    this.script.notification(\"Tabla de personalidad no encontrada\", \"error\");\n}"}
+					{"label":"Tirada"}
 					]
 				}]
 		},

@@ -4,6 +4,7 @@ import { templatesskills } from "./modules/converters.js";
 import { templatestalents } from "./modules/converters.js";
 import { templatestrappings } from "./modules/converters.js";
 import { tablenames } from "./modules/converters.js";
+import { levels } from "./modules/converters.js";
 
 Hooks.on('init', () => {
 
@@ -444,12 +445,13 @@ game.babele.registerConverters({
          if ( value == "Female" ) return "Mujer";
          if ( value == "???" ) return "¿¿??";
          if ( value == "Varies" ) return "Varía";
-	},
+    },
 
-	"templatesskills": templatesskills,
-	"templatestalents": templatestalents,
-	"templatestrappings": templatestrappings,
-	"tablenames": tablenames,
+    "templatesskills": templatesskills,
+    "templatestalents": templatestalents,
+    "templatestrappings": templatestrappings,
+    "tablenames": tablenames,
+    "levels": levels,
   });
  }
     

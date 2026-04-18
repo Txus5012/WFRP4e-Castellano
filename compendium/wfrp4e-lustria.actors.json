@@ -16,16 +16,6 @@
 		"Skink": "Eslizón",
 		"Vehicles": "Vehículos"
     },
-	"mapping": {
-		"species": "system.details.species.value",
-		"gender": {
-			"path": "system.details.gender.value",
-			"converter": "bestiary_gender"
-			},
-		"status": "system.details.status.value",
-		"notes": "system.details.biography.value",
-		"gmnotes": "system.details.gmnotes.value"
-		},
 	"entries": [
 		{
 			"id": "Barge",
