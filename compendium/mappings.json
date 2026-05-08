@@ -1,98 +1,422 @@
 {
 	"Item": {
 		"gmdescription": "system.gmdescription.value",
-	    "skills": "system.skills",
-	    "talents": "system.talents",
-	    "class": {
-		      "path": "system.class.value",
-		      "converter": "career_class"
-		    },
-	    "careergroup": {
-		      "path": "system.careergroup.value",
-		      "converter": "career_careergroup"
-		    },
-	    "trappings": "system.trappings",
-		"penalties": {
-			"path": "system.penalty.value",
-			"converter": "trappings_penalty"
+		"effects": {
+			"path": "effects",
+			"converter": "structured",
+			"cardinality": "many",
+			"mapping": {
+				"name": "name",
+				"avoidTestSkill": "system.transferData.avoidTest.skill",
+				"preApplyScript": "system.transferData.preApplyScript",
+				"filter": "system.transferData.filter",
+				"scriptData": {
+					"path": "system.scriptData",
+					"converter": "structured",
+					"cardinality": "many",
+					"mapping": {
+						"label": "label",
+						"script": "script",
+						"hideScript": "options.hideScript",
+						"activateScript": "options.activateScript",
+						"submissionScript": "options.submissionScript"
+						}
+					}
+				}
 			},
 		"range": {
 			"path": "system.range.value",
-			"converter": "spells_duration_range_target"
+			"converter": "duration_range_target"
 			},
 		"special": "system.special.value",
-		"effects": {
-			"path": "effects",
-			"converter": "effects"
-			},
-		"wounds": {
-			"path": "system.wounds.value",
-			"converter": "criticals_wounds"
-			},	
-		"location": {
-			"path": "system.location.value",
-			"converter": "criticals_location"
-			},
-		"duration": "system.duration.value",
-		"duration_text": "system.duration.text",
-		"contraction": "system.contraction.value",
-		"incubation": "system.incubation.value",
-		"incubation_text": "system.incubation.text",
-		"symptoms": "system.symptoms.value",
-		"permanent": "system.permanent.value",
 		"spell_duration": {
 			"path": "system.duration.value",
-			"converter": "spells_duration_range_target"
+			"converter": "duration_range_target"
 		},
 		"target": {
 			"path": "system.target.value",
-			"converter": "spells_duration_range_target"
-		},    
-		"damage": {
-			"path": "system.damage.value",
-			"converter": "spells_damage"
-		},
-		"lore": {
-			"path": "system.lore.value",
-			"converter": "traits_specification"
+			"converter": "duration_range_target"
 		},
 		"overcast": "system.overcast.label",
 		"overcastvaluevalue": "system.overcast.valuePerOvercast.additional",
 		"overcastinitialvalue": "system.overcast.initial.additional",
-		"injury_location": {
-			"path": "system.location.value",
-			"converter": "injuries_location"
-			},
-		"penalty": "system.penalty.value",
-		"injury_duration": {
-			"path": "system.duration.value",
-			"converter": "injuries_duration"
-			},
+		"damage": {
+			"path": "system.damage.value",
+			"converter": "lookup",
+			"normalize": "trim-lowercase",
+			"values": {
+				"weapon skill bonus": "Bonificador por Habilidad de Armas",
+				"ballistic skill bonus": "Bonificador por Habilidad de Proyectiles",
+				"strenght bonus": "Bonificador por Fuerza",
+				"toughness bonus": "Bonificador por Resistencia",
+				"initiative bonus": "Bonificador por Iniciativa",
+				"agility bonus": "Bonificador por Agilidad",
+				"dexterity bonus": "Bonificador por Destreza",
+				"intelligence bonus": "Bonificador por Inteligencia",
+				"willpower bonus": "Bonificador por Voluntad",
+				"fellowship bonus": "Bonificador por Empatía"
+				}
+		},
 		"modifier": "system.modifier.value",
 		"roll": "system.rollable.skill",
 		"specification": {
 			"path": "system.specification.value",
-			"converter": "traits_specification"
+			"converter": "lookup",
+			"normalize": "trim-lowercase",
+			"values": {
+				"any": "Cualquiera",
+				"rating": "Valor",
+				"target": "Objetivo",
+				"damage": "Daño",
+				"deity": "Deidad",
+				"diety": "Deidad",
+				"type": "Tipo",
+				"# (type)": "# (Tipo)",
+				"target #": "# Objetivo",
+				"size": "Tamaño",
+				"tiny": "Diminuto",
+				"little": "Muy pequeño",
+				"small": "Pequeño",
+				"average": "Normal",
+				"large": "Grande",
+				"enormous": "Enorme",
+				"monstrous": "Monstruoso",
+				"corruption Strength": "Fuerza de la Corrupción",
+				"minor": "Menor",
+				"moderate": "Moderada",
+				"major": "Mayor",
+				"difficulty": "Dificultad",
+				"very easy": "Muy Fácil",
+				"easy": "Fácil",
+				"challenging": "Desafiante",
+				"difficult": "Complicado",
+				"hard": "Difícil",
+				"very hard": "Muy Difícil",
+				"lore": "Saber",
+				"petty": "Menor",
+				"beasts": "Bestias",
+				"death": "Muerte",
+				"fire": "Fuego",
+				"lore of fire": "Saber del Fuego",
+				"heavens": "Cielos",
+				"life": "Vida",
+				"light": "Luz",
+				"shadow": "Sombras",
+				"hedgecraft": "Adivinación",
+				"witchcraft": "Brujería",
+				"necromancy": "Nigromancia",
+				"daemonology": "Demonología",
+				"chaos": "Caos",
+				"any chaos": "Cualquiera del Caos",
+				"any lore": "Cualquier Saber",
+				"any lore of the eight winds": "Cualquier Saber de los ocho Vientos de la Magia",
+				"any dark lore": "Cualquiera de los Saberes Oscuros",
+				"death, life, shadows, hedgecraft, witchcraft": "Muerte, Vida, Sombras, Adivinación, Brujería",
+				"mòna's marsh magic": "Magia del pantano de Mòna",
+				"waaagh!": "¡WAAAGH!",
+				"high magic": "Magia suprema",
+				"slann high magic": "Magia suprema de los Slann",
+				"plague": "Plaga",
+				"poison": "Veneno",
+				"venom": "Veneno",
+				"trained skills": "Habilidades Entrenadas",
+				"broken": "Domado",
+				"drive": "Tirar",
+				"entertain": "Entretener",
+				"fetch": "Trae",
+				"guard": "Protege",
+				"home": "Casa",
+				"magic": "Magia",
+				"mount": "Montura",
+				"war": "Guerra",
+				"broken, mount, shock cavalry, war": "Domado, Montura, Caballería de choque, Guerra",
+				"guard, mount, war": "Protege, Montura, guerra",
+				"mount, war": "Montura, Guerra",
+				"sigmarites": "Sigmaritas",
+				"witch": "Brujo",
+				"the rich, beastmen": "Los ricos, los hombres bestia",
+				"bailiffs, lawyers": "Alguaciles, abogados",
+				"itching pox": "Plaga picante",
+				"packer's pox": "Plaga del empaquetador",
+				"ratte fever": "Fiebre ratonil",
+				"the black plague": "Peste negra",
+				"fungal takeover": "Dominio Fúngico",
+				"blindwyrm fits": "Mordedura de Gusano Ciego",
+				"cataleptic ague": "Fiebre Cataléptica",
+				"yellow skull fever": "Fiebre de la Calavera Amarilla",
+				"bloody flux": "La disentería",
+				"various": "Varios",
+				"choose one": "Elige una",
+				"choose two": "Elige dos",
+				"everything": "Todo",
+				"greenskins": "Pieles verdes",
+				"dwarfs": "Enanos",
+				"elves": "Elfos",
+				"dark elves": "Elfos oscuros",
+				"high elves": "Altos elfos",
+				"thin people": "Gente delgada",
+				"snakes": "Serpientes",
+				"blot toads": "Sapos rechonchos",
+				"predators": "Depredadores",
+				"living": "Vivos",
+				"all fire": "Todo fuego",
+				"extra arm - +1 attack": "Brazo adicional, +1 ataque"
+				}
 			},
-		"tests": "system.tests.value",
-		"templatesskills": {
-			"path": "system.skills.list",
-			"converter": "templatesskills"
-			},
-		"templatestalents": {
-			"path": "system.talents.list",
-			"converter": "templatestalents"
-			},
-		"templatestrappings": {
-			"path": "system.trappings.options",
-			"converter": "templatestrappings"
-			}
+		"_variants": [
+			{"_when": {"path": "type", "equals": "career"},
+				"skills": { 
+					"path": "system.skills",
+					"converter": "array"
+					},
+				"talents": { 
+					"path": "system.talents",
+					"converter": "array"
+					},
+				"class": {
+					"path": "system.class.value",
+					"converter": "lookup",
+					"normalize": "trim-lowercase",
+					"values": {
+						"academics": "Académicos",
+						"academic": "Académico",
+						"burghers": "Burgueses",
+						"burgher": "Burgués",
+						"courtiers": "Cortesanos",
+						"courtier": "Cortesano",
+						"peasants": "Campesinos",
+						"peasant": "Campesino",
+						"rangers": "Rurales",
+						"ranger": "Rural",
+						"riverfolk": "Ribereños",
+						"rogues": "Pícaros",
+						"rogue": "Pícaro",
+						"warriors": "Guerreros",
+						"warrior": "Guerrero"
+						}
+					},
+				"careergroup": {
+					"path": "system.careergroup.value",
+					"converter": "lookup",
+					"normalize": "trim-lowercase",
+					"values": {
+						"apothecary": "Boticario",
+						"engineer": "Ingeniero",
+						"lawyer": "Abogado",
+						"nun": "Monja",
+						"physician": "Físico",
+						"priest": "Sacerdote",
+						"scholar": "Erudito",
+						"wizard": "Hechicero",
+						"agitator": "Alborotador",
+						"artisan": "Artesano",
+						"beggar": "Mendigo",
+						"investigator": "Investigador",
+						"merchant": "Mercader",
+						"rat catcher": "Cazarratas",
+						"townsman": "Ciudadano",
+						"watchman": "Vigilante",
+						"advisor": "Asesor",
+						"artist": "Artista",
+						"duellist": "Duelista",
+						"envoy": "Emisario",
+						"servant": "Sirviente",
+						"spy": "Espía",
+						"warden": "Guarda",
+						"bailiff": "Alguacil",
+						"hedge witch": "Adivino",
+						"herbalist": "Herbolario",
+						"hunter": "Cazador",
+						"miner": "Minero",
+						"mystic": "Místico",
+						"scout": "Explorador",
+						"villager": "Aldeano",
+						"bounty hunter": "Cazarrecompensas",
+						"coachman": "Cochero",
+						"entertainer": "Animador",
+						"flagellant": "Flagelante",
+						"messenger": "Mensajero",
+						"pedlar": "Vendedor ambulante",
+						"road warden": "Guarda de caminos",
+						"witch hunter": "Cazador de brujas",
+						"boatman": "Barquero",
+						"huffer": "Práctico",
+						"riverwarden": "Guardián del río",
+						"riverwoman": "Mujer del río",
+						"seaman": "Marino",
+						"smuggler": "Contrabandista",
+						"stevedore": "Estibador",
+						"wrecker": "Raquero",
+						"bawd": "Chalán",
+						"charlatan": "Charlatán",
+						"fence": "Perista",
+						"grave robber": "Ladrón de tumbas",
+						"outlaw": "Forajido",
+						"racketeer": "Pandillero",
+						"thief": "Ladrón",
+						"witch": "Brujo",
+						"cavalryman": "Reitre",
+						"guard": "Guardia",
+						"knight": "Caballero",
+						"pit Fighter": "Guerrero de foso",
+						"protagonist": "Protagonista",
+						"soldier": "Soldado",
+						"slayer": "Matador",
+						"warrior Priest": "Sacerdote guerrero",
+						"archer": "Arquero",
+						"artillerist": "Artillero",
+						"camp Follower": "Seguidor de campamento",
+						"cartographer": "Cartógrafo",
+						"freelance": "Caballero de fortuna",
+						"greatsword": "Gran espadero",
+						"halberdier": "Alabardero",
+						"handgunner": "Fusilero",
+						"knight of the blazing sun": "Caballero del Sol Llameante",
+						"knight of the white wolf": "Caballero del Lobo Blanco",
+						"knight panther": "Caballero Pantera",
+						"light cavalry": "Caballería ligera",
+						"pikeman": "Piquero",
+						"priest of myrmidia": "Sacerdote de Myrmidia",
+						"siege specialist": "Especialista en asedios",
+						"beadle": "Bedel",
+						"mundane alchemist": "Alquimista mundano",
+						"magister vigilant": "Magister vigilante",
+						"scryer": "Visionario",
+						"hierophant": "Hierofante",
+						"alchemist": "Alquimista",
+						"druid": "Druida",
+						"astromancer": "Astromante",
+						"shadowmancer": "Umbramante",
+						"spiriter": "Espiritista",
+						"pyromancer": "Piromante",
+						"shaman": "Chamán",
+						"combat familiar": "Familiar de Combate",
+						"spell familiar": "Familiar de Hechizo",
+						"interpreter": "Intérprete",
+						"oracle": "Oráculo",
+						"survivalist": "Superviviente",
+						"trailblazer": "Vanguardista"
+						}
+					},
+				"trappings": { 
+					"path": "system.trappings",
+					"converter": "array"
+					}
+				},
+			{"_when": {"path": "type", "equals": "critical"},
+				"wounds": {
+					"path": "system.wounds.value",
+					"converter": "lookup",
+					"normalize": "trim-lowercase",
+					"values": {
+						"death": "Muerte"
+						}
+					},	
+				"location": {
+					"path": "system.location.value",
+					"converter": "lookup",
+					"normalize": "trim-lowercase",
+					"values": {
+						"head": "Cabeza",
+						"arm": "Brazo",
+						"leg": "Pierna",
+						"body": "Cuerpo"
+						}
+					}
+				},
+			{"_when": {"path": "type", "equals": "disease"},
+				"duration": "system.duration.value",
+				"duration_text": "system.duration.text",
+				"contraction": "system.contraction.value",
+				"incubation": "system.incubation.value",
+				"incubation_text": "system.incubation.text",
+				"symptoms": "system.symptoms.value",
+				"permanent": "system.permanent.value"
+				},
+			{"_when": {"path": "type", "equals": "injury"},
+				"injury_location": {
+					"path": "system.location.value",
+					"converter": "lookup",
+					"normalize": "trim-lowercase",
+					"values": {
+						"head": "Cabeza",
+						"ear": "Oreja",
+						"nose": "Nariz",
+						"eye": "Ojo",
+						"teeth": "Dientes",
+						"tongue": "Lengua",
+						"body": "Cuerpo",
+						"arm": "Brazo",
+						"hand": "Mano",
+						"leg": "Pierna",
+						"foot": "Pie",
+						"toe": "Dedo del pie"
+						}
+					}
+				},
+			{"_when": {"path": "type", "equals": "talent"},
+				"tests": "system.tests.value"
+				},
+			{"_when": {"path": "type", "equals": "template"},
+				"templatesskills": {
+					"path": "system.skills.list",
+					"converter": "structured",
+					"cardinality": "many",
+					"mapping": {
+						"name": "name"
+						}
+					},
+				"templatestalents": {
+					"path": "system.talents.list",
+					"converter": "structured",
+					"cardinality": "many",
+					"mapping": {
+						"name": "name"
+						}
+					},
+				"templatestraits": {
+					"path": "system.traits.list",
+					"converter": "structured",
+					"cardinality": "many",
+					"mapping": {
+						"name": "name"
+						}
+					},
+				"templatestalents": {
+					"path": "system.talents.list",
+					"converter": "structured",
+					"cardinality": "many",
+					"mapping": {
+						"name": "name"
+						}
+					},
+				"templatestrappings": {
+					"path": "system.trappings.options",
+					"converter": "structured",
+					"cardinality": "many",
+					"mapping": {
+						"name": "name"
+						}
+					}
+				},
+			{"_when": {"path": "type", "equals": "vehicleTest"},
+				"roles": "system.roles.value",
+				"vital": "system.roles.vital"
+				}
+			]
 		},
 	"Actor": {
 		"species": "system.details.species.value",
 		"gender": {
 			"path": "system.details.gender.value",
-			"converter": "bestiary_gender"
+			"converter": "lookup",
+			"normalize": "trim-lowercase",
+			"values": {
+				"male": "Varón",
+				"female": "Mujer",
+				"???": "¿¿??",
+				"varies": "Varía"
+				}
 			},
 		"status": "system.details.status.value",
 		"hit": "system.details.hitLocationTable.value",
@@ -103,13 +427,11 @@
 		"image": "background.src",
 		"levels": {
 			"path": "levels",
-			"converter": "levels"
-			}
-		},
-	"RollTable": {
-		"tablenames": {
-			"path": "results",
-			"converter": "tablenames"
+			"converter": "structured",
+			"cardinality": "many",
+			"mapping": {
+				"background": "background.src"
+				}
 			}
 		}
 }

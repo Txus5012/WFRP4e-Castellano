@@ -1,22 +1,21 @@
 {
 	"label": "GM Toolkit",
-	"entries": [
-		{
-			"id": "Dark Whispers",
+	"entries": {
+		"Dark Whispers": {
 			"name": "Susurros Oscuros",
 			"description": "Susurros Oscuros genéricos para usar como ejemplos de referencia para la macro Enviar susurros oscuros.",
 			"results": {
-				"1-1": "Deja marchar a tu presa.",
-				"2-2": "Golpea 'accidentalmente' a un aliado.",
-				"3-3": "Quédate dormido durante la guardia.",
-				"4-4": "Arrodíllate ante el Magister. Muéstrale tu lealtad.",
-				"5-5": "Nadie es tan bueno ni tiene tanta suerte. Sin importar lo poderoso o popular que sea. ¡Llámale tramposo!",
-				"6-6": "No estás tan preparado como pensabas.",
-				"7-7": "Ejerce tu autoridad. Usa de ejemplo a los más débiles o vulnerables.",
-				"8-8": "Ese gran indestructible de ahí te está mirando raro. No lo aguantes. Defiende tu honor. Públicamente y solo.",
-				"9-9": "No has recorrido todo este camino para hacer amigos. A veces acabas haciendo enemigos. Ésta es una de esas oportunidades.",
-				"10-10": "Los secretos son una carga. Sé generoso y compártelos."
+				"1-1": {"description": "Deja marchar a tu presa."},
+				"2-2": {"description": "Golpea 'accidentalmente' a un aliado."},
+				"3-3": {"description": "Quédate dormido durante la guardia."},
+				"4-4": {"description": "Arrodíllate ante el Magister. Muéstrale tu lealtad."},
+				"5-5": {"description": "Nadie es tan bueno ni tiene tanta suerte. Sin importar lo poderoso o popular que sea. ¡Llámale tramposo!"},
+				"6-6": {"description": "No estás tan preparado como pensabas."},
+				"7-7": {"description": "Ejerce tu autoridad. Usa de ejemplo a los más débiles o vulnerables."},
+				"8-8": {"description": "Ese gran indestructible de ahí te está mirando raro. No lo aguantes. Defiende tu honor. Públicamente y solo."},
+				"9-9": {"description": "No has recorrido todo este camino para hacer amigos. A veces acabas haciendo enemigos. Ésta es una de esas oportunidades."},
+				"10-10": {"description": "Los secretos son una carga. Sé generoso y compártelos."}
 				}
 		}
-	]
+	}
 }

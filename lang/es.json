@@ -25,6 +25,7 @@
             "Wiki" : "WIKI"
         },
         "BugReporter": {
+            "Button" : "Enviar Agravio",
             "Title" : "Enviar un Agravio",
             "Report": "Informar",
             "SubmittedIssues": "Problemas enviados",
@@ -89,6 +90,7 @@
             "Options" : "Opciones",
             "Placeholder" : "Indicador",
             "Structure" : "Estructura",
+            "Script": "Script",
             "SubmitChoices": "Enviar elecciones"
         },
         "CompendiumBrowser": {
@@ -190,7 +192,8 @@
             "NoTargets": "¡No se ha hecho objetivo a ningún Actor!",
             "NotValidChoiceType": "No es una elección válida",
             "WrongChoiceOptionType": "No se permite este tipo de Objeto. Tipos permitidos: {types}",
-            "AppliedEffectNoItems" : "¡Ningún Objeto ha pasado el filtro de Efectos Activos!"
+            "AppliedEffectNoItems" : "¡Ningún Objeto ha pasado el filtro de Efectos Activos!",
+            "NoTargetDrop" : "Los efectos deben ser aplicados a una Ficha"
         },
         "ErrorNoZones": "No hay zonas para seleccionar. Añade Regiones a la Escena para crear Zonas.",
         "ErrorUnableToFindEffect": "No se ha encontrado efecto que aplicar.",
@@ -1470,6 +1473,7 @@
     "Income" : "Salario",
     "Wounds" : "Heridas",
     "RestRecover" : "Descansar y Recuperar Heridas",
+    "RestRecoverHealed" : "<strong>{actor}</strong> se ha curado {amount} Heridas.",
     "Modifier" : "Modificador",
     "Modifiers" : "Modificadores",
     "Range" : "Alcance",
@@ -1878,6 +1882,7 @@
     "CHAT.DamageApplied" : "Daño aplicado",
     "CHAT.ApplyDamageBasic" : "@DAMAGE de daño aplicado a <b>{name}</b>",
     "CHAT.ApplyHack" : "Aplicar Traspasante",
+	"CHAT.ApplyHealing" : "Aplicar sanación",
     "CHAT.CriticalDeflection" : "Desvío crítico",
 	"CHAT.DamageToArmour" : "1 de Daño aplicado a {item} ({type})",
     "CHAT.DamageShield" : "Escudo",

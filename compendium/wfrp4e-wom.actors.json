@@ -1,102 +1,354 @@
 {
 	"label": "Actores (Vientos de la Magia)",
-	"entries": [
-		{
-			"id": "Ashamira Dib",
+	"entries": {
+		"Ashamira Dib": {
 			"status": "Plata 3",
-			"gmnotes": "<p>@UUID[Compendium.wfrp4e-wom.journals.4hwftTG3PqNnmUfK.JournalEntryPage.aYLoTGlJDjlTCm2U]{Ashamira Dib}</p><p><strong>Motivación</strong>: vagar por donde pueda.</p><p><strong>Ambición a corto plazo</strong>: llegar al @UUID[Compendium.wfrp4e-altdorf.journals.EmhvOkkzAir6pzCB.JournalEntryPage.DZjpSLYGD7mTKNmP]{Colegio de la Luz de Altdorf}.</p><p><strong>Ambición a largo plazo</strong>: dominar su arte al máximo.</p><p>Ashamira Dib creció en un pequeño pueblo al pie de las montañas Atalan, que separan el Gran Desierto de las tierras más asentadas a lo largo de la costa. Nunca se sintió a gusto en la sociedad árabe, ya que podía ver cosas que otros no veían. Cuando hablaba de nubes de luz, otros no entendían de lo que hablaba y la tomaban por loca. Pero no lo estaba, tenía ‘la Videncia’. Tal vez fue un talento que había heredado de su tatarabuelo, Immanuel Rauenscheid, que se convertiría en patriarca de la Orden de la Luz y que, debido a sus viajes a través de Arabia, es hoy su antepasado. Pero cualquiera que fuera la fuente del regalo, la hizo sentirse separada de la sociedad, no deseada, una inadaptada.</p>"
+			"gmnotes": "<p>@UUID[Compendium.wfrp4e-wom.journals.4hwftTG3PqNnmUfK.JournalEntryPage.aYLoTGlJDjlTCm2U]{Ashamira Dib}</p><p><strong>Motivación</strong>: vagar por donde pueda.</p><p><strong>Ambición a corto plazo</strong>: llegar al @UUID[Compendium.wfrp4e-altdorf.journals.EmhvOkkzAir6pzCB.JournalEntryPage.DZjpSLYGD7mTKNmP]{Colegio de la Luz de Altdorf}.</p><p><strong>Ambición a largo plazo</strong>: dominar su arte al máximo.</p><p>Ashamira Dib creció en un pequeño pueblo al pie de las montañas Atalan, que separan el Gran Desierto de las tierras más asentadas a lo largo de la costa. Nunca se sintió a gusto en la sociedad árabe, ya que podía ver cosas que otros no veían. Cuando hablaba de nubes de luz, otros no entendían de lo que hablaba y la tomaban por loca. Pero no lo estaba, tenía ‘la Videncia’. Tal vez fue un talento que había heredado de su tatarabuelo, Immanuel Rauenscheid, que se convertiría en patriarca de la Orden de la Luz y que, debido a sus viajes a través de Arabia, es hoy su antepasado. Pero cualquiera que fuera la fuente del regalo, la hizo sentirse separada de la sociedad, no deseada, una inadaptada.</p>",
+			"items": {
+				"Practical Robes of the Light Order": {
+					"name": "Túnicas prácticas de la Orden de la Luz",
+					"description": "<p>Estas prendas de ropa son económicas, cómodas y relativamente sencillas. Un hechicero que vista túnicas prácticas puede pasar desapercibido en muchas situaciones.</p><p>@UUID[JournalEntry.x6OdswRIafU9qGYs.JournalEntryPage.xxTcTs5H1bmevH2B#tunicas-de-hechicero]{Túnicas de hechicero}</p>",
+					"effects": [{
+						"name":"Túnicas elaboradas (Saber)"
+						},
+						{
+						"name":"Establecer Saber",
+						"scriptData": [
+							{"label":"Establecer Saber"}
+							]
+						}]
+				}
+			}
 		},
-		{
-			"id": "Balthasar Gelt",
+		"Balthasar Gelt": {
 			"status": "Oro 4",
-			"gmnotes": "<p>@UUID[Compendium.wfrp4e-wom.journals.kLTWtoz5d7Yt2zAJ.JournalEntryPage.FtKYmBEuLSrtLtRG]{Balthasar Gelt}</p><p><strong>Nota</strong>: la biblioteca de Balthasar guarda grimorios que contienen todos los hechizos de Magia arcana y Saber que no ha memorizado.</p><p><strong>Motivación</strong>: convertirse en el hechicero más poderoso de todos.</p><p><strong>Ambición a corto plazo</strong>: deponer a Thyrus Gormann como Patriarca Supremo.</p><p><strong>Ambición a largo plazo</strong>: perfeccionar las técnicas mágicas exactas para suprimir la próxima incursión del Caos.</p><h3><em>Patriarca de la Orden de Oro</em></h3><blockquote>    <p>¿Quién es ese enmascarado?</p>    <p style=\"text-align: right\"><em>— Aprendiz de Oro haciendo un chiste que la gente ya ha oído antes.</em></p>    <p>‘Sus ojos detrás de esa máscara siempre me dan escalofríos. ¿Es siquiera humano?’</p>    <p style=\"text-align: right\"><em>— Adepto de Oro Kadmus Kaldtwell, en voz baja.</em></p></blockquote><p>Según su biografía oficial, el magíster Patriarca Balthasar Gelt nació como hijo de un maestro boticario y físico en la corte de un príncipe de los Reinos Fronterizos. De joven, mostró un talento excepcional para componer medicamentos y un conocimiento de las propiedades de los minerales y las hierbas que superaba las habilidades de los hombres con muchas décadas de experiencia.</p>"
+			"gmnotes": "<p>@UUID[Compendium.wfrp4e-wom.journals.kLTWtoz5d7Yt2zAJ.JournalEntryPage.FtKYmBEuLSrtLtRG]{Balthasar Gelt}</p><p><strong>Nota</strong>: la biblioteca de Balthasar guarda grimorios que contienen todos los hechizos de Magia arcana y Saber que no ha memorizado.</p><p><strong>Motivación</strong>: convertirse en el hechicero más poderoso de todos.</p><p><strong>Ambición a corto plazo</strong>: deponer a Thyrus Gormann como Patriarca Supremo.</p><p><strong>Ambición a largo plazo</strong>: perfeccionar las técnicas mágicas exactas para suprimir la próxima incursión del Caos.</p><h3><em>Patriarca de la Orden de Oro</em></h3><blockquote>    <p>¿Quién es ese enmascarado?</p>    <p style=\"text-align: right\"><em>— Aprendiz de Oro haciendo un chiste que la gente ya ha oído antes.</em></p>    <p>‘Sus ojos detrás de esa máscara siempre me dan escalofríos. ¿Es siquiera humano?’</p>    <p style=\"text-align: right\"><em>— Adepto de Oro Kadmus Kaldtwell, en voz baja.</em></p></blockquote><p>Según su biografía oficial, el magíster Patriarca Balthasar Gelt nació como hijo de un maestro boticario y físico en la corte de un príncipe de los Reinos Fronterizos. De joven, mostró un talento excepcional para componer medicamentos y un conocimiento de las propiedades de los minerales y las hierbas que superaba las habilidades de los hombres con muchas décadas de experiencia.</p>",
+			"items": {
+				"Amulet of Sea Gold": {
+					"name": "Amuleto de oro marino",
+					"description": "<p>Una antigua reliquia élfica que Balthasar encontró en las ruinas de una colonia élfica en la costa de Estalia. Este extraño amuleto proporciona un bonificador de +2 NE a cualquier intento para disipar un hechizo.</p>",
+					"effects": [{
+						"name":"Amuleto de oro marino",
+						"scriptData": [
+							{"label":"Disipar"}
+							]
+						}]
+				},
+				"The Gleaming Robe": {
+					"name": "La Capa Resplandeciente",
+					"description": "<p>Cuando el usuario se mueve, La Capa Resplandeciente lanza unos reflejos iridiscentes. Si el usuario se ha movido durante un Asalto, cualquier proyectil que le apunte a él o a su montura, sufre -2 NE.</p>",
+					"effects": [{
+						"name":"La Capa Resplandeciente",
+						"scriptData": [
+							{"label":"La Capa Resplandeciente"}
+							]
+						}]
+				},
+				"Quicksilver (Pegasus housed at the Imperial Zoo)": {
+					"name": "Mercurio (Pegaso alojado en el zoo Imperial)"
+				},
+				"Private Library and Workshop at the Gold College": {
+					"name": "Biblioteca privada y taller en el Colegio de Oro"
+				},
+				"Gold Coins as and when he needs them": {
+					"name": "Tantas monedas de oro como y cuando las necesite",
+					"description": "A día de hoy, seguramente sean auténticas."
+				}
+			}
 		},
-		{
-			"id": "Combat Familiar",
+		"Combat Familiar": {
 			"name": "Familiar de Combate",
 			"description": "@UUID[Compendium.wfrp4e-wom.journals.PFnvyXX7in5YvVbk.JournalEntryPage.q6buibTm8J7mvxAS]{Familiar de Combate}"
 		},
-		{
-			"id": "Construct",
+		"Construct": {
 			"name": "Constructo"
 		},
-		{
-			"id": "Elspeth von Draken",
-			"status": "Oro 2",
-			"gmnotes": "<p>@UUID[Compendium.wfrp4e-wom.journals.hFQtvGpxh0D8Xfcl.JournalEntryPage.KHdKVGnogfOfcGcA]{Elspeth von Draken}</p><p><strong>Motivación</strong>: ser la mejor, en sus propios términos.</p><p><strong>Ambición a corto plazo</strong>: mantener alianzas con los gobernantes de Nuln y el Culto de Morr.</p><p><strong>Ambición a largo plazo</strong>: llegar a tales alturas de poder que ella misma no requiera licencia para sus actividades.</p><p>La sombría torre de la magisterix Elspeth von Draken se ha alzado sobre el Jardín de Morr, en las afueras de Nuln, durante más de un siglo. Las madres amenazan a sus hijos más rebeldes con cuentos de la ‘Rosa del Cementerio’, diciendo que, si no llegan a casa antes del anochecer, caerá sobre ellos y se los llevará. A pesar de estos temores, pocos se plantean lo que la presencia de von Draken realmente significa, mucho menos atisbar el alcance de su poder.</p>"
+		"Egrimm van Horstmann": {
+			"items": {
+				"Chaos Runeblade": {
+					"name": "Hoja rúnica del Caos"
+				},
+				"Chaos Armour": {
+					"name": "Armadura del Caos",
+					"description": "No se puede quitar."
+				},
+				"Talisman of Tzeentch": {
+					"name": "Talisman de Tzeentch"
+				},
+				"Cloak of Golden Glamour": {
+					"name": "Capa de encanto dorado",
+					"description": "<p>Según las leyendas transmitidas por los nórdicos Vikti, el más entrometido e imprevisible de los sirvientes de Tchar es el demonio conocido como el Cambiante. Se trata de un retorcido y malicioso cambiaformas, del cual se dice que ha humillado a los mismísimos dioses del Caos con sus bromas y sátiras.</p><p>Una leyenda en particular cuenta que una vez el Cambiante se coló en el Palacio del Placer que se encuentra en el centro de los dominios de Slaanesh. Esquivó los numerosos guardianes y senescales demonios, entró en las cámaras privadas de Slaanesh y sorprendió al dios durmiendo. Mientras el Príncipe Oscuro dormía, le arrancó cabello de la cabeza y tejió una tela fina y brillante, que obedientemente regaló a su amo, Tzeentch.</p><p>Sea cual sea la verdad que se esconda tras esta historia, uno de los muchos artefactos mágicos que llegaron a manos de Egrimm tras su pacto con Tzeentch fue un manto de seda dorada, imbuido de poderosas propiedades mágicas.</p><p>El portador de la capa obtiene los Rasgos de criatura de @UUID[Compendium.wfrp4e-core.items.MVI0lXcg6vvtooAF]{Molesto} y @UUID[Compendium.wfrp4e-core.items.Bvd2aZ0gQUXHfCTh]{Custodiado (9+)}. Los adoradores y demonios de Slaanesh están sujetos al <em>Odio</em> hacia el portador, pero también son respetuosos con la capa y tienen sumo cuidado de no dañarla. Éstos no realizarán ataques a distancia contra el portador, incluidos <em>proyectiles mágicos</em>. Al realizar ataques cuerpo a cuerpo contra el portador, siempre deben contener @UUID[Compendium.wfrp4e-core.journals.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#contener-los-golpes]{contener los golpes}.</p>",
+					"effects": [{
+						"name":"Capa de encanto dorado",
+						"scriptData": [
+							{"label":"Capa de encanto dorado"}
+							]
+						},
+						{
+						"name":"Chequeo de Frialdad",
+						"scriptData": [
+							{"label":"Chequeo de Frialdad"}
+							]
+						}]
+				},
+				"Grimoire of Dark Magicks": {
+					"name": "Grimorio de magias oscuras"
+				},
+				"The Skull of Katam": {
+					"name": "El cráneo de Katam",
+					"description": "<p>@UUID[Compendium.wfrp4e-wom.actors.OtBqhr035Qdf3XNo]{Egrimm van Horstmann} robó el cráneo de Katam de las bóvedas del Colegio de la Luz. Es un cráneo humano, encapsulado en plata, tallado con sigilos y tachonado de joyas. Es un receptáculo de conocimiento y, si está dispuesto, hablará con el portador con una voz ronca y sobrenatural.</p><p>El hechicero Katam fue un poderoso demonólogo que vivió en la antigua Mourkain, mucho antes de que esa ciudad maldita cayera. Aprendió a hablar con los dioses del Caos e hizo un trato con Tzeentch: su alma a cambio de la vida eterna. El Gran Conspirador no especificó cómo viviría eternamente y ahora sólo queda su cráneo, consciente y ligeramente agraviado. Tras su muerte, el cráneo de Katam fue grabado con la sangre corrosiva del dragón del Caos Baudros. Estos sellos pretenden contener a Katam, a pesar de que no son del todo efectivas.</p><p>Si está dispuesto, Katam podrá proporcionar +2 NE a cualquier Chequeo de Canalización que un hechicero haga. Debe superar un Chequeo <strong>Difícil (-20)</strong> de <strong>Frialdad</strong> o sufrir 1 Estado de @Condition[Fatigado] y 1 Punto de Corrupción mientras Katam le susurra secretos que se retuercen en su mente.</p>",
+					"effects": [{
+						"name":"El cráneo de Katam",
+						"scriptData": [
+							{"label":"Los susurros de Katam"}
+							]
+						},
+						{
+						"name":"Chequeo de Frialdad",
+						"scriptData": [
+							{"label":"Chequeo de Frialdad"}
+							]
+						}]
+				}				
+			}
 		},
-		{
-			"id": "Fenbeast",
+		"Elspeth von Draken": {
+			"status": "Oro 2",
+			"gmnotes": "<p>@UUID[Compendium.wfrp4e-wom.journals.hFQtvGpxh0D8Xfcl.JournalEntryPage.KHdKVGnogfOfcGcA]{Elspeth von Draken}</p><p><strong>Motivación</strong>: ser la mejor, en sus propios términos.</p><p><strong>Ambición a corto plazo</strong>: mantener alianzas con los gobernantes de Nuln y el Culto de Morr.</p><p><strong>Ambición a largo plazo</strong>: llegar a tales alturas de poder que ella misma no requiera licencia para sus actividades.</p><p>La sombría torre de la magisterix Elspeth von Draken se ha alzado sobre el Jardín de Morr, en las afueras de Nuln, durante más de un siglo. Las madres amenazan a sus hijos más rebeldes con cuentos de la ‘Rosa del Cementerio’, diciendo que, si no llegan a casa antes del anochecer, caerá sobre ellos y se los llevará. A pesar de estos temores, pocos se plantean lo que la presencia de von Draken realmente significa, mucho menos atisbar el alcance de su poder.</p>",
+			"items": {
+				"Telepathy": {
+					"name": "Telepatía",
+					"description": "<p>Usando el plano espiritual, envías un mensaje telepático a otro hechicero amatista. El hechizo @UUID[Compendium.wfrp4e-wom.items.Item.2cgQjV35pmKCxz6s]{Enjaular alma} elimina las limitaciones de alcance. Los intentos de comunicación con otros personajes son realmente complicados. Los personajes que reciben un mensaje telepático deben superar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Intuición</strong> para comprender el mensaje.</p>"
+				},
+				"Pale Scythe": {
+					"name": "La guadaña Pálida",
+					"description": "<p>Esta arma mágica es una guadaña tan afilada que parece cortar hasta el propio aire. Parece estar hecha más de sombra que de sustancia y se dice que la hizo la propia Elspeth y que está en sintonía con el poder del <em>Shyish</em>.</p>"
+				},
+				"High Quality Elaborate Robes": {
+					"name": "Túnicas elaboradas de altísima calidad",
+					"description": "<p>Estas prendas son pesadas y poco prácticas y a menudo incorporan accesorios voluminosos y montones de tela tejida con hilo infundido mágicamente. Cualquiera que lleve estas túnicas será reconocido al instante como un hechicero.</p><p>@UUID[JournalEntry.x6OdswRIafU9qGYs.JournalEntryPage.xxTcTs5H1bmevH2B#tunicas-de-hechicero]{Túnicas de hechicero}</p><blockquote class=\"foundry-note\">    <p>Antes de añadir este Objeto a un Actor, renonmbra el Efecto Activo y reemplaza <strong>Saber</strong> con el valor correspondiente.</p>    <p><strong>p.ej. </strong><em>Para crear unas túnicas usadas por un Hechicero Brillante, el Efecto Activo debería llamarse <strong>Túnicas elaboradas (Fuego)</strong></em></p></blockquote>",
+					"effects": [{
+						"name":"Túnicas elaboradas (Muerte)",
+						"scriptData": [
+							{"label":"Túnicas elaboradas (Muerte)"}
+							]
+						}]
+				},
+				"Magical Licence": {
+					"name": "Licencia mágica"
+				},
+				"Death’s Timekeeper": {
+					"name": "Cronometrador de la Muerte",
+					"description": "<p>Este antiguo reloj de arena es un potente artefacto mágico y se dice que contiene el polvo de un dios muerto. Elspeth pasó gran parte de su larga vida estudiando sus misterios. Mientras lleve el Cronometrador de la Muerte, siempre tendrá 1 Punto de Fortuna, aunque haya gastado los tres puntos de su Talento @Compendium[wfrp4e-core.items.Item.u0CFf3xwiyidD9T5]{Suerte}. El Cronometrador de la Muerte es un objeto mágico deseable y los Jugadores, o bien otros grupos, puede que deseen adquirirlo. Sin embargo, no es un artículo fácil de poseer o usar. No es sólo que Elspeth (y su dragón) lo guarden celosamente, sino que aprender a utilizarlo requiere superar una Empresa de @UUID[Compendium.wfrp4e-altdorf.journals.6TQJhPM0O7GgIPw9.JournalEntryPage.LdCC0S0HTG8I5D6t]{Probar objeto mágico}. No descubrir sus secretos tiene un alto precio, así que, si la Empresa no tiene éxito, el PJ que la realiza sufre una lesión crítica en una ubicación aleatoria, además de otros penalizadores.</p>",
+					"effects": [{
+						"name":"Cronometrador de la Muerte",
+						"scriptData": [
+							{"label":"Cronometrador de la Muerte"}
+							]
+						}]
+				}
+			}
+		},
+		"Fenbeast": {
 			"name": "Bestia del cieno",
 			"species": "Constructo",
-			"description": "<section class=\"secret\" id=\"secret-UotH6C0fP5xmn37q\">    <p>Alzadas por hechiceros de la inmundicia de los pantanos y las ciénagas, las bestias del cieno son al parecer autómatas descerebrados que se mantienen unidos por la magia. Vagamente humanoides, están compuestos de fango, huesos, ramas y limo y requieren cantidades significativas de magia para mantener su integridad. De vez en cuando, los crean hechiceros hábiles en la magia de Jade para que actúen como guardaespaldas o para que lleven a cabo una tarea específica que requiere de fuerza bruta o asesinatos sin sentido. A veces se alzan de forma independiente, creados en charcas estancadas y podridas donde el flujo de la magia ha sido corrompido. Se dice que el @UUID[JournalEntry.Q9sQhbDN8NUHXYdA.JournalEntryPage.MVwOuM2YKhUvA1E1#el-colegio-de-jade]{Colegio de Jade} en @UUID[JournalEntry.ozE2DMCMK64eE5pD.JournalEntryPage.V6tkgQ9A2skppjyl]{Altdorf} mantiene una veintena de dichas criaturas como bestias de carga, al servicio de los magísteres de más edad, mantenidas por la incesante canalización de docenas de aprendices.</p></section>"
+			"description": "<section class=\"secret\" id=\"secret-UotH6C0fP5xmn37q\">    <p>Alzadas por hechiceros de la inmundicia de los pantanos y las ciénagas, las bestias del cieno son al parecer autómatas descerebrados que se mantienen unidos por la magia. Vagamente humanoides, están compuestos de fango, huesos, ramas y limo y requieren cantidades significativas de magia para mantener su integridad. De vez en cuando, los crean hechiceros hábiles en la magia de Jade para que actúen como guardaespaldas o para que lleven a cabo una tarea específica que requiere de fuerza bruta o asesinatos sin sentido. A veces se alzan de forma independiente, creados en charcas estancadas y podridas donde el flujo de la magia ha sido corrompido. Se dice que el @UUID[JournalEntry.Q9sQhbDN8NUHXYdA.JournalEntryPage.MVwOuM2YKhUvA1E1#el-colegio-de-jade]{Colegio de Jade} en @UUID[JournalEntry.ozE2DMCMK64eE5pD.JournalEntryPage.V6tkgQ9A2skppjyl]{Altdorf} mantiene una veintena de dichas criaturas como bestias de carga, al servicio de los magísteres de más edad, mantenidas por la incesante canalización de docenas de aprendices.</p></section>",
+			"items": {
+				"Regenerate": {
+					"name": "Regenerar",
+					"description": "<p>La criatura es capaz de curarse a un ritmo extraordinario, incluso haciendo crecer de nuevo partes cercenadas. Al inicio de cada asalto, si tiene más de 0 Heridas, regenera automáticamente 1d10 Heridas. Si le quedan 0 Heridas, regenera 1 sola Herida si consigue sacar 8 o más en 1d10. Si saca un 10 para regenerar, regenera también por completo una Herida crítica, perdiendo todos los penalizadores y Estados asociados a la misma. Ninguna Herida crítica o Herida causada por el fuego se puede regenerar y debería anotarse aparte. \r\r</p>",
+					"effects": [{
+						"name":"Regenerar",
+						"scriptData": [
+							{"label":"Regenerar"}
+							]
+						}]
+					}
+				}
 		},
-		{
-			"id": "Gregor Martak",
+		"Gregor Martak": {
 			"status": "Oro 2",
-			"gmnotes": "<p>@UUID[Compendium.wfrp4e-wom.journals.DND7iNuVrCXgTXki.JournalEntryPage.fWox4v7eQmND1Qit]{Gregor Martak}</p><p><strong>Motivación</strong>: vagar por donde pueda.</p><p><strong>Ambición a corto plazo</strong>: encontrar un equilibrio entre su vagabundeo y la preparación para el cataclismo que teme que se avecina.</p><p><strong>Ambición a largo plazo</strong>: hacer lo que pueda para mitigar sus proféticas visiones.</p><p>Vagando por el desierto, sobre todo por el norte y el este de Altdorf, Gregor Martak tiene toda la pinta de ser el típico hechicero ámbar. Lleva el cabello largo y desaliñado, la barba descuidada, las uñas afiladas y la piel de un color moreno rubicundo, testimonio de una toda una vida expuesta a los elementos. Va vestido con pieles de animales y empuña un bastón de madera rematado con el cráneo de un águila, su animal tótem.</p><p>Al crecer en la campiña de Middenland, Martak siempre se sintió atraído por los lugares salvajes y, aunque tiene poco tiempo para visitar los pueblos y aldeas que recorre en sus viajes, se siente feliz cuando conoce a otros vagabundos y a aquellos que sobreviven en el desierto. Aunque tiene fama de seco e introvertido, Martak puede ser alegre y hablador cuando está en su elemento, además posee una carcajada bramante y profunda.</p>"
+			"gmnotes": "<p>@UUID[Compendium.wfrp4e-wom.journals.DND7iNuVrCXgTXki.JournalEntryPage.fWox4v7eQmND1Qit]{Gregor Martak}</p><p><strong>Motivación</strong>: vagar por donde pueda.</p><p><strong>Ambición a corto plazo</strong>: encontrar un equilibrio entre su vagabundeo y la preparación para el cataclismo que teme que se avecina.</p><p><strong>Ambición a largo plazo</strong>: hacer lo que pueda para mitigar sus proféticas visiones.</p><p>Vagando por el desierto, sobre todo por el norte y el este de Altdorf, Gregor Martak tiene toda la pinta de ser el típico hechicero ámbar. Lleva el cabello largo y desaliñado, la barba descuidada, las uñas afiladas y la piel de un color moreno rubicundo, testimonio de una toda una vida expuesta a los elementos. Va vestido con pieles de animales y empuña un bastón de madera rematado con el cráneo de un águila, su animal tótem.</p><p>Al crecer en la campiña de Middenland, Martak siempre se sintió atraído por los lugares salvajes y, aunque tiene poco tiempo para visitar los pueblos y aldeas que recorre en sus viajes, se siente feliz cuando conoce a otros vagabundos y a aquellos que sobreviven en el desierto. Aunque tiene fama de seco e introvertido, Martak puede ser alegre y hablador cuando está en su elemento, además posee una carcajada bramante y profunda.</p>",
+			"items": {
+				"Eagle Totem": {
+					"name": "Tótem del águila"
+				}
+			}
 		},
-		{
-			"id": "Immanuel-Ferrand Holswig-Schliestein",
+		"Immanuel-Ferrand Holswig-Schliestein": {
 			"status": "Oro 4",
-			"gmnotes": "<p>@UUID[Compendium.wfrp4e-wom.journals.7xFrgrOyYX4SVrBL.JournalEntryPage.x7CnGtdKM9pTxuT6]{Immanuel-Ferrand Holswig-Schliestein}</p><p><strong>Motivación</strong>: hacer realidad su visión de un Imperio controlado centralmente.</p><p><strong>Ambición a corto plazo</strong>: recuperar el favor que perdió por su torpeza.</p><p><strong>Ambición a largo plazo</strong>: debilitar la influencia de las embajadas extranjeras y las Primeras Haciendas de Altdorf.</p><p>Immanuel-Ferrand es un hombre poderoso, tío del Emperador y miembro de la alta sociedad. Como personaje de la realeza puede ser admitido en el Consejo Privado del Emperador si lo solicita. Un activo político y miembro del Consejo de Estado, ostenta el cargo de Gran Canciller del Imperio. La mayoría de la gente sabe que este grandioso título es un eufemismo de ‘jefe de espías’, ya que dirige los Graukappen, un departamento del servicio secreto de Altdorf, encargado de recopilar información y actuar contra las fuerzas hostiles fuera de Altdorf.</p>"
+			"gmnotes": "<p>@UUID[Compendium.wfrp4e-wom.journals.7xFrgrOyYX4SVrBL.JournalEntryPage.x7CnGtdKM9pTxuT6]{Immanuel-Ferrand Holswig-Schliestein}</p><p><strong>Motivación</strong>: hacer realidad su visión de un Imperio controlado centralmente.</p><p><strong>Ambición a corto plazo</strong>: recuperar el favor que perdió por su torpeza.</p><p><strong>Ambición a largo plazo</strong>: debilitar la influencia de las embajadas extranjeras y las Primeras Haciendas de Altdorf.</p><p>Immanuel-Ferrand es un hombre poderoso, tío del Emperador y miembro de la alta sociedad. Como personaje de la realeza puede ser admitido en el Consejo Privado del Emperador si lo solicita. Un activo político y miembro del Consejo de Estado, ostenta el cargo de Gran Canciller del Imperio. La mayoría de la gente sabe que este grandioso título es un eufemismo de ‘jefe de espías’, ya que dirige los Graukappen, un departamento del servicio secreto de Altdorf, encargado de recopilar información y actuar contra las fuerzas hostiles fuera de Altdorf.</p>",
+			"items": {
+				"Fine Set of Grey Clothing decorated with Holswig-Schliestein Family Crest": {
+					"name": "Conjunto de ropas grises de calidad decoradas con el blasón de la familia Holswig-Schliestein",
+					"description": "<p>La ropa de los nobles luce adornos del tipo puños y cuellos de encaje, tela de calidad excesiva y zapatos puntiagudos. Los sirvientes también visten atuendos cortesanos en los banquetes y las ceremonias, aunque sus sobrevestas y sus corsés son menos ostentosos que los de los nobles y por lo tanto se pueden adquirir a mitad de precio.</p>"
+				},
+				"Hooded Green Velvet Cloak": {
+					"name": "Capa verde de terciopelo con capucha",
+					"description": "<p>Protege de los elementos a quien la lleva.</p>"
+				},
+				"Sheet of Parchment": {
+					"name": "Hoja de pergamino"
+				},
+				"Quill and Ink": {
+					"name": "Pluma y tinta"
+				}
+			}
 		},
-		{
-			"id": "Incarnate Elemental of Beasts",
+		"Incarnate Elemental of Beasts": {
 			"name": "Elemental encarnado de las bestias",
-			"description": "<section class=\"secret\" id=\"secret-UotH6C0fP5xmn37q\">    <p>Los elementales encarnados de las bestias son convocados al mundo a través de poderosos y complicados rituales llevados a cabo por los practicantes de la magia ámbar. Para dichos rituales se utiliza un gran tótem formado de cráneos de fieras y pieles recién desolladas, lo que lleva a los hechiceros ámbar a referirse a la criatura como elemental encarnado de las Bestias. También se le conoce como ‘<em>el hombre con cuernos</em>’ y ‘<em>el cazador sin rostro</em>’.</p><p>El elemental es una gigantesca figura humanoide hinchada con poderosos músculos y entrecruzados de tendones como cordones de látigo. Su cabeza es un cráneo armado con dientes de sable y majestuosas astas. Sus patas delanteras son garras de águila y se alza sobre los cuartos traseros de un león.</p><p>El elemental contiene en su interior el espíritu de innumerables depredadores, todos ellos salvajes y crueles, desenfrenados y sedientos de sangre. Persigue a todo aquel que entra su territorio, lo mutila hasta que cesa su lucha y luego devora su cuerpo y su sangre. Los aullidos de este elemental llenan de terror a quienes los oyen, despertando un recuerdo ancestral de los depredadores primitivos.</p></section>"
+			"description": "<section class=\"secret\" id=\"secret-UotH6C0fP5xmn37q\">    <p>Los elementales encarnados de las bestias son convocados al mundo a través de poderosos y complicados rituales llevados a cabo por los practicantes de la magia ámbar. Para dichos rituales se utiliza un gran tótem formado de cráneos de fieras y pieles recién desolladas, lo que lleva a los hechiceros ámbar a referirse a la criatura como elemental encarnado de las Bestias. También se le conoce como ‘<em>el hombre con cuernos</em>’ y ‘<em>el cazador sin rostro</em>’.</p><p>El elemental es una gigantesca figura humanoide hinchada con poderosos músculos y entrecruzados de tendones como cordones de látigo. Su cabeza es un cráneo armado con dientes de sable y majestuosas astas. Sus patas delanteras son garras de águila y se alza sobre los cuartos traseros de un león.</p><p>El elemental contiene en su interior el espíritu de innumerables depredadores, todos ellos salvajes y crueles, desenfrenados y sedientos de sangre. Persigue a todo aquel que entra su territorio, lo mutila hasta que cesa su lucha y luego devora su cuerpo y su sangre. Los aullidos de este elemental llenan de terror a quienes los oyen, despertando un recuerdo ancestral de los depredadores primitivos.</p></section>",
+			"items": {
+				"Howl of the Great Beast": {
+					"name": "Aullido de la Gran Bestia",
+					"description": "<p>El aullido del elemental encarnado de las Bestias infunde miedo a todos los que lo escuchan. En su turno, puede gastar 1 Ventaja para aullar a sus enemigos como si fuera un ataque gratuito. Todos los objetivos vivos dentro de un número de yardas igual a la Iniciativa de la criatura (45), sufren 3 Estados de @Condition[Ensordecido] de forma inmediata y deben superar un Chequeo <strong>Complicado (-10)</strong> de <strong>Frialdad</strong> o sufrir 3 Estados de Quebrantado. El PJ que supera un Chequeo de este tipo una vez no necesita volver a superarlo para el resto del encuentro.</p>",
+					"effects": [{
+						"name":"Aullido de la Gran Bestia",
+						"scriptData": [
+							{"label":"Aullido de la Gran Bestia"}
+							]
+						}]
+				}
+			}
 		},
-		{
-			"id": "Incarnate Elemental of Death",
+		"Incarnate Elemental of Death": {
 			"name": "Elemental encarnado de la muerte",
-			"description": "<section class=\"secret\" id=\"secret-UotH6C0fP5xmn37q\">    <p>Quienes pretenden invocar a un elemental encarnado de la muerte se arriesgan a su propia destrucción, pues conjurar a este tipo de ser es atraer a la propia Muerte al mundo. El elemental encarnado de la muerte es una aparición aterradora, con dos cabezas de dragones flacos y hambrientos a ambos extremos de un macizo y retorcido cuerpo de serpiente.</p><p>Aunque es monstruoso, no emite sonido alguno, salvo un suave siseo, y el inquietante susurro de la tumba sigue su estela. A diferencia de otros elementales encarnados, a este no se le conoce por otros nombres, pues rara vez es invocado y los que saben hacerlo (los espiritistas de la @UUID[JournalEntry.hFQtvGpxh0D8Xfcl.JournalEntryPage.daD4ol3xeaOgeizW]{Orden Amatista}) son demasiado respetuosos como para referirse a él como otra cosa que lo que es.</p><p>El elemental encarnado de la muerte está ligado al reino mortal por el poder contenido en un extraño horólogo de <em>Shyish</em>, un reloj de arena encantado que contiene el polvo de los huesos de un monarca. Sirve como un poderoso foco arcano y este artefacto por sí solo puede contener el poder de vincular a un ser sobrenatural.</p><p>Los versados en el Saber del <em>Shyish</em> afirman que cualquiera que se encuentra con la mirada de un elemental encarnado de la muerte es testigo de su propia destrucción, pero los que se ponen tan cerca seguramente ya están perdidos. Alzándose sobre sus sinuosas formas, golpea con una velocidad a la que pocos pueden escapar, aplastando a sus enemigos bajo las espirales de su cuerpo retorcido o desgarrándolos con sus monstruosas mandíbulas.</p></section>"
+			"description": "<section class=\"secret\" id=\"secret-UotH6C0fP5xmn37q\">    <p>Quienes pretenden invocar a un elemental encarnado de la muerte se arriesgan a su propia destrucción, pues conjurar a este tipo de ser es atraer a la propia Muerte al mundo. El elemental encarnado de la muerte es una aparición aterradora, con dos cabezas de dragones flacos y hambrientos a ambos extremos de un macizo y retorcido cuerpo de serpiente.</p><p>Aunque es monstruoso, no emite sonido alguno, salvo un suave siseo, y el inquietante susurro de la tumba sigue su estela. A diferencia de otros elementales encarnados, a este no se le conoce por otros nombres, pues rara vez es invocado y los que saben hacerlo (los espiritistas de la @UUID[JournalEntry.hFQtvGpxh0D8Xfcl.JournalEntryPage.daD4ol3xeaOgeizW]{Orden Amatista}) son demasiado respetuosos como para referirse a él como otra cosa que lo que es.</p><p>El elemental encarnado de la muerte está ligado al reino mortal por el poder contenido en un extraño horólogo de <em>Shyish</em>, un reloj de arena encantado que contiene el polvo de los huesos de un monarca. Sirve como un poderoso foco arcano y este artefacto por sí solo puede contener el poder de vincular a un ser sobrenatural.</p><p>Los versados en el Saber del <em>Shyish</em> afirman que cualquiera que se encuentra con la mirada de un elemental encarnado de la muerte es testigo de su propia destrucción, pero los que se ponen tan cerca seguramente ya están perdidos. Alzándose sobre sus sinuosas formas, golpea con una velocidad a la que pocos pueden escapar, aplastando a sus enemigos bajo las espirales de su cuerpo retorcido o desgarrándolos con sus monstruosas mandíbulas.</p></section>",
+			"items": {
+				"Amethyst Fog": {
+					"name": "Niebla amatista",
+					"description": "<p>En lugar de realizar un ataque normal, el elemental puede expulsar malolientes vapores que apestan a muerte. Cualquiera que participe en un combate cuerpo a cuerpo con este ser deberá hacer un Chequeo <strong>Difícil (-20)</strong> de <strong>Aguante</strong>, sufriendo 1 Estado de @Condition[Envenenado] por cada -NE. Este ataque es mágico y daña a criaturas normalmente inmunes al veneno mundano.</p>",
+					"effects": [{
+						"name":"Niebla amatista",
+						"scriptData": [
+							{"label":"Niebla amatista"}
+							]
+						}]
+				},
+				"Consume Life": {
+					"name": "Consumir vida",
+					"description": "<p>Cada vez que el elemental encarnado de la muerte mata a un oponente, absorbe sus Heridas. Por cada 10 Heridas que poseía la criatura fallecida, el elemental obtiene [[/r d10]] Heridas. Esto puede llevarlo más allá de su propio máximo de Heridas.</p>"
+				},
+				"Hourglass of Shyish": {
+					"name": "Reloj de Arena de Shyish",
+					"description": "<p>A su pesar o por desesperación, el elemental puede hacer añicos el reloj de arena utilizado en su invocación. Esto desata la energía del Shyish. En lugar de realizar un ataque normal, el elemental puede hacer añicos el reloj de arena, aumentando el radio de su Niebla amatista a 30 yardas.</p><p>Después de terminar con la Niebla amatista, el elemental sufre [[/r 6d10]] Heridas. Este daño se reduce por el Bonificador por Resistencia, pero no puede ser impedido por el Rasgo Custodiado.</p>"
+				},
+				"Soundless": {
+					"name": "Sin sonido",
+					"description": "<p>No hace ruido, por lo que se beneficia de +2 NE a cualquier Chequeo de Movimiento silencioso.</p>",
+					"effects": [{
+						"name":"Sin sonido",
+						"scriptData": [
+							{"label":"Sin sonido"}
+							]
+						}]
+				}
+			}
 		},
-		{
-			"id": "Incarnate Elemental of Fire",
+		"Incarnate Elemental of Fire": {
 			"name": "Elemental encarnado del fuego",
 			"description": "<section class=\"secret\" id=\"secret-UotH6C0fP5xmn37q\">    <p>El <em>Aqshy</em> es el más destructivo de todos los Vientos, devorador e insaciablemente hambriento. Se dice que los elementales encarnados de fuego nacen de aquellos que albergan una terrible ira y furia, sólo igualada por los demonios.</p><p>Son conocidos en la tradición mágica como ‘los carbonizados’, ‘los cosechadores abrasados’ o ‘Jack de las Cenizas’, siendo el elemental encarnado que más domina el campo de batalla. Posee una forma delgada y terrible, oscura como la ceniza, de la que irradia un calor abrasador. Pocos pueden resistir la ira del elemental, que puede desatar una tormenta de fuego que convierte el blindaje en metal fundido y hace que la artillería explote, proyectando fragmentos de metal al rojo vivo que atraviesan el aire y la carne de los que están cerca.</p><p>Los elementales encarnados de fuego son tan destructivos y difíciles de controlar que se les ve más bien poco. Incluso los más imprudentes magísteres del @UUID[JournalEntry.wjJ2wq1bzzON74vV.JournalEntryPage.QHqglxxZ0Ii2mPRy]{Colegio Brillante}, una organización que no escatima en profesionales temerarios, son reacios a convocar a uno incluso en las peores circunstancias. A pesar de su reputación, estos imponentes monstruos disfrutan del curioso afecto de muchos campesinos que viven en el lado bretoniano de las @UUID[Compendium.wfrp4e-core.journals.ozE2DMCMK64eE5pD.JournalEntryPage.w0YfGxsBuLoODCgc]{Montañas Grises}.</p><p>Colocan efigies de madera quemada fuera de sus chozas en agradecimiento a un misterioso hechicero que una vez invocó a una veintena de cosechadores abrasados para derrotar a una horda de muertos vivientes. Los barones locales derriban las efigies si las encuentran. Afirman que los cuentos son mentiras sediciosas, pero las fortalezas calcinadas y ennegrecidas que salpican la región aportan pruebas de lo contrario.</p></section>"
 		},
-		{
-			"id": "Library Disc of Tzeentch",
+		"Mòna Mimn": {
+			"items": {
+				"Mouldy Robes": {
+					"name": "Túnicas enmohecidas"
+				},
+				"Fenbeast Attendants": {
+					"name": "Bestias del cieno"
+				},
+				"Bale Eye": {
+					"name": "Ojo brujo",
+					"description": "<p>El ojo ciclópeo de las hechiceras fimir puede percibir los flujos y reflujos de los Vientos de la Magia tan fácilmente como el ojo humano percibe la luz y las sombras. Este mayor conocimiento de los Vientos de la Magia les permite hacer mejor uso de cualquier poder mágico disponible.</p><p>El Ojo brujo proporciona el Talento @UUID[Compendium.wfrp4e-core.items.OEjUvJKi0xmBwbS2]{Clarividencia}. Además, cualquier Chequeo que utilice dicho Talento para Rastrear, Orientarse, Percepción y otras habilidades, se beneficiará de +2 NE.</p><p>Al hacer un Chequeo de Hablar idioma (Lengua de la magia) o Canalización, el Ojo brujo proporciona +1 NE. Si un PJ con Ojo brujo sufre una Disfunción mágica puede hacer un Chequeo <strong>Complicado (-10)</strong> de <strong>Percepción</strong>. Si lo supera, observa las energías mágicas que no funcionan. Pueden detener el hechizo en este punto, lo que significa que fracasa, pero no se produce una disfunción.</p>",
+					"effects": [{
+						"name":"Ojo brujo",
+						"scriptData": [
+							{"label":"Ojo brujo"}
+							]
+						}]
+				}
+			}
+		},
+		"Library Disc of Tzeentch": {
 			"name": "Disco de la biblioteca de Tzeentch",
 			"description": "<p>@UUID[Compendium.wfrp4e-wom.journals.QHdHDll8yI5CSNQl.JournalEntryPage.Jo04mUcvCEvHyiVf]{Los Escribas azules de Tzeentch}</p><p><strong>Accesorios</strong>: el disco está repleto de todo tipo de grimorios y pergaminos. Si un PJ adquiere uno de los textos del disco, tira en la @UUID[Compendium.wfrp4e-wom.macros.GO3IdVTlWAbTEtAp]{tabla de Grimorio aleatorio}.</p>",
 			"species": "¿¿??"
 		},
-		{
-			"id": "P’tarix – The One Who Writes",
+		"P’tarix – The One Who Writes": {
 			"name": "P’tarix – El que escribe",
 			"description": "<p>@UUID[Compendium.wfrp4e-wom.journals.QHdHDll8yI5CSNQl.JournalEntryPage.Jo04mUcvCEvHyiVf]{Los Escribas azules de Tzeentch}</p>",
-			"species": "Demonio"
+			"species": "Demonio",
+			"items": {
+				"Write (not Read)": {
+					"name": "Escribir (no Leer)"
+				},
+				"Quills": {
+					"name": "Plumas"
+				},
+				"Vast array of Ink Pots": {
+					"name": "Gran variedad de tinteros"
+				},
+				"Sand for blotting": {
+					"name": "Arena para secar"
+				}
+			}
 		},
-		{
-			"id": "Power Familiar",
+		"Power Familiar": {
 			"name": "Familiar de Energía"
 		},
-		{
-			"id": "Raphael Julevno",
+		"Raphael Julevno": {
 			"status": "Oro 1",
-			"gmnotes": "<p>@UUID[Compendium.wfrp4e-wom.journals.j72t0e5BVIgeOMB4.JournalEntryPage.qry4tzxt30ROrH2V]{Raphael Julevno}</p><p><strong>Motivación</strong>: disminuir el faccionalismo dentro del Colegio Celestial.</p><p><strong>Ambición a corto plazo</strong>: convertirse en indispensable para Lord Glazend.</p><p><strong>Ambición a largo plazo</strong>: delegar tareas que le impidan realizar sus prioridades a un grupo de personas de confianza y talento.</p><p>Julevno es un prodigio en ascenso en el @UUID[JournalEntry.j72t0e5BVIgeOMB4.JournalEntryPage.N8s4rKsTaQ8rRUU3#el-colegio-celestial]{Colegio Celestial}, aparentemente destinado a convertirse en Sumo Celestial. Sin embargo, no es ambicioso y prefiere dedicar su tiempo a investigar sus propios talentos que las intrigas para ir ascendiendo en la orden. Julevno parece más joven a pesar de sus cuarenta y siete años, bien afeitado y ataviado con las fastuosas túnicas típicas del colegio. Goza de una buena reputación en la orden. Fue el magíster más joven en toda la historia en ser aceptado y su dominio del <em>Azyr</em> es instintivo y natural. Julevno nació con una habilidad innata para ver el Viento Azul y experimentar breves insinuaciones de posibles futuros.</p>"
+			"gmnotes": "<p>@UUID[Compendium.wfrp4e-wom.journals.j72t0e5BVIgeOMB4.JournalEntryPage.qry4tzxt30ROrH2V]{Raphael Julevno}</p><p><strong>Motivación</strong>: disminuir el faccionalismo dentro del Colegio Celestial.</p><p><strong>Ambición a corto plazo</strong>: convertirse en indispensable para Lord Glazend.</p><p><strong>Ambición a largo plazo</strong>: delegar tareas que le impidan realizar sus prioridades a un grupo de personas de confianza y talento.</p><p>Julevno es un prodigio en ascenso en el @UUID[JournalEntry.j72t0e5BVIgeOMB4.JournalEntryPage.N8s4rKsTaQ8rRUU3#el-colegio-celestial]{Colegio Celestial}, aparentemente destinado a convertirse en Sumo Celestial. Sin embargo, no es ambicioso y prefiere dedicar su tiempo a investigar sus propios talentos que las intrigas para ir ascendiendo en la orden. Julevno parece más joven a pesar de sus cuarenta y siete años, bien afeitado y ataviado con las fastuosas túnicas típicas del colegio. Goza de una buena reputación en la orden. Fue el magíster más joven en toda la historia en ser aceptado y su dominio del <em>Azyr</em> es instintivo y natural. Julevno nació con una habilidad innata para ver el Viento Azul y experimentar breves insinuaciones de posibles futuros.</p>",
+			"items": {
+				"Staff topped with Telescope": {
+					"name": "Bastón rematado con un telescopio",
+					"description": "<p>@UUID[JournalEntry.x6OdswRIafU9qGYs.JournalEntryPage.xxTcTs5H1bmevH2B#baculo-enantado]{Báculo encantado}</p>"
+				},
+				"Library of Prophetic Texts": {
+					"name": "Biblioteca de textos proféticos"
+				},
+				"Collection of Lustrian Gold Plaques": {
+					"name": "Colección de placas de oro de Lustria"
+				}
+			}
 		},
-		{
-			"id": "Sergov Pfeiffer",
+		"Sergov Pfeiffer": {
 			"status": "Plata 3",
-			"gmnotes": "<p>@UUID[Compendium.wfrp4e-wom.journals.wjJ2wq1bzzON74vV.JournalEntryPage.JnSAUMukQSp1hEbd]{Sergov Pfeiffer}</p><p><strong>Motivación</strong>: convertirse en un renombrado innovador de la magia militar.</p><p><strong>Ambición a corto plazo</strong>: investigar los fundamentos del Colegio Brillante sin dejar de divertirse.</p><p><strong>Ambición a largo plazo</strong>: crear el hechizo para el campo de batalla más destructivo que el Imperio haya conocido jamás.</p><p>Sergov Pfeiffer es un alborotador y fogoso hechicero pelirrojo del Colegio Brillante. Su indudable talento natural se oculta bajo un celemín de frivolidad y juerga. No hay nada que le guste más que salir a hurtadillas del colegio por la noche, vestirse de forma cómoda (sin traicionar a su vocación) y dirigirse a la calle de las Cien Tabernas.</p>"
+			"gmnotes": "<p>@UUID[Compendium.wfrp4e-wom.journals.wjJ2wq1bzzON74vV.JournalEntryPage.JnSAUMukQSp1hEbd]{Sergov Pfeiffer}</p><p><strong>Motivación</strong>: convertirse en un renombrado innovador de la magia militar.</p><p><strong>Ambición a corto plazo</strong>: investigar los fundamentos del Colegio Brillante sin dejar de divertirse.</p><p><strong>Ambición a largo plazo</strong>: crear el hechizo para el campo de batalla más destructivo que el Imperio haya conocido jamás.</p><p>Sergov Pfeiffer es un alborotador y fogoso hechicero pelirrojo del Colegio Brillante. Su indudable talento natural se oculta bajo un celemín de frivolidad y juerga. No hay nada que le guste más que salir a hurtadillas del colegio por la noche, vestirse de forma cómoda (sin traicionar a su vocación) y dirigirse a la calle de las Cien Tabernas.</p>",
+			"items": {
+				"Wizard's Robes": {
+					"name": "Túnicas de hechicero"
+				}
+			}
 		},
-		{
-			"id": "Spell Familiar",
+		"Spell Familiar": {
 			"name": "Familiar de Hechizo",
 			"description": "<p>@UUID[Compendium.wfrp4e-wom.journals.PFnvyXX7in5YvVbk.JournalEntryPage.Xsikkjo2hxid0eWR]{Familiar de Hechizo}</p><p><strong>Hechizos</strong>: un familiar de hechizo conoce hasta cuatro hechizos, en función del nivel de carrera de su amo. El hechicero enseña estos hechizos a su familiar, por lo que el hechicero ya debe conocerlos. Un familiar puede aprender un nuevo hechizo cada vez que su amo sube de Nivel en su Carrera.</p>"
 		},
-		{
-			"id": "Tochter Grunfeld",
+		"Tochter Grunfeld": {
 			"status": "Oro 2",
-			"gmnotes": "<p>@UUID[Compendium.wfrp4e-wom.journals.Q9sQhbDN8NUHXYdA.JournalEntryPage.vc000lXgYSy5ZLgg]{Tochter Grunfeld}</p><p><strong>Motivación</strong>: utilizar sus poderes para mantener a salvo el Imperio.</p><p><strong>Ambición a corto plazo</strong>: reunir información sobre los vampiros con influencia en Sylvania.</p><p><strong>Ambición a largo plazo</strong>: destruir a los vampiros de Sylvania.</p><p>Tochter Grunfeld es una fuerza de la Naturaleza sin edad, cuya apariencia cambia con su estado de ánimo. A veces da la impresión de ser un espíritu árbol de piel verde, duro e implacable, mientras otras veces parece una mujer joven con el pelo blanco entrelazado con la hiedra, e incluso en ocasiones como una figura regordeta y anciana. Nadie sabe, o podría incluso adivinar, su edad, pero era bien conocida en el este de Stirland hace más de cincuenta años. Allí trabajaba contra las plagas invasoras y la depredación de los vampiros. Sin embargo, últimamente siente cierta atracción por Altdorf. Aunque no le gustan las maniobras políticas, ha surgido como una figura de alto rango en la @UUID[JournalEntry.Q9sQhbDN8NUHXYdA.JournalEntryPage.ncaIbmNtJrNfVfZh]{Orden de Jade} y muchos creen que sería una buena matriarca si el magíster Arburg dejara su puesto mientras ella sigue viva.</p>"
+			"gmnotes": "<p>@UUID[Compendium.wfrp4e-wom.journals.Q9sQhbDN8NUHXYdA.JournalEntryPage.vc000lXgYSy5ZLgg]{Tochter Grunfeld}</p><p><strong>Motivación</strong>: utilizar sus poderes para mantener a salvo el Imperio.</p><p><strong>Ambición a corto plazo</strong>: reunir información sobre los vampiros con influencia en Sylvania.</p><p><strong>Ambición a largo plazo</strong>: destruir a los vampiros de Sylvania.</p><p>Tochter Grunfeld es una fuerza de la Naturaleza sin edad, cuya apariencia cambia con su estado de ánimo. A veces da la impresión de ser un espíritu árbol de piel verde, duro e implacable, mientras otras veces parece una mujer joven con el pelo blanco entrelazado con la hiedra, e incluso en ocasiones como una figura regordeta y anciana. Nadie sabe, o podría incluso adivinar, su edad, pero era bien conocida en el este de Stirland hace más de cincuenta años. Allí trabajaba contra las plagas invasoras y la depredación de los vampiros. Sin embargo, últimamente siente cierta atracción por Altdorf. Aunque no le gustan las maniobras políticas, ha surgido como una figura de alto rango en la @UUID[JournalEntry.Q9sQhbDN8NUHXYdA.JournalEntryPage.ncaIbmNtJrNfVfZh]{Orden de Jade} y muchos creen que sería una buena matriarca si el magíster Arburg dejara su puesto mientras ella sigue viva.</p>",
+			"items": {
+				"Golden Sickle": {
+					"name": "Hoz de oro"
+				},
+				"College Library": {
+					"name": "Biblioteca del Colegio"
+				},
+				"Workshop at College": {
+					"name": "Taller en el Colegio"
+				}
+			}
 		},
-		{
-			"id": "Xirat’p – The One Who Reads",
+		"Xirat’p – The One Who Reads": {
 			"name": "Xirat’p – El que lee",
 			"description": "<p>@UUID[Compendium.wfrp4e-wom.journals.QHdHDll8yI5CSNQl.JournalEntryPage.Jo04mUcvCEvHyiVf]{Los Escribas azules de Tzeentch}</p>",
-			"species": "Demonio"
+			"species": "Demonio",
+			"items": {
+				"Read (not Write)": {
+					"name": "Leer (no Escribir)"
+				}
+			}
 		}
-	]
+	}
 }

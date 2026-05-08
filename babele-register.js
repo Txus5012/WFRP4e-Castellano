@@ -1,15 +1,5 @@
-import {TranslatedCompendium} from "../babele/script/translated-compendium.js"
-import { effects } from "./modules/converters.js";
-import { templatesskills } from "./modules/converters.js";
-import { templatestalents } from "./modules/converters.js";
-import { templatestrappings } from "./modules/converters.js";
-import { tablenames } from "./modules/converters.js";
-import { levels } from "./modules/converters.js";
-
-Hooks.on('init', () => {
-
-    if(typeof Babele !== 'undefined') {
-        game.babele.register({
+Hooks.once("babele.init", (babele) => {
+        babele.register({
             module: 'wfrp4e-castellano',
             lang: 'es',
             dir: 'compendium'
@@ -17,8 +7,14 @@ Hooks.on('init', () => {
 
 game.babele.registerConverters({
 
-       "spells_duration_range_target": (value) => {  // Hechizos y Plegarias, Rango de munición
-        if ( value == "" ) return "";
+    "array": (list, translations) => {
+        if (list.length === 0 || !translations) { return list }
+
+        list = translations;
+        return list;
+    },
+
+    "duration_range_target": (value) => {  // Hechizos y Plegarias, Rango de munición
         if ( value == "Touch" ) return "Toque";
         if ( value == "You" ) return "Tú";
         if ( value == "Self" ) return "Uno mismo";
@@ -162,300 +158,58 @@ game.babele.registerConverters({
         translw += charac + " " + unit;
         return translw; 
 	},
-
-       "spells_damage": (value) => {  // Daño de Hechizos y Plegarias
-        if ( value == "Weapon Skill Bonus") return "Bonificador por Habilidad de Armas";
-        if ( value == "Ballistic Skill Bonus") return "Bonificador por Habilidad de Proyectiles";
-        if ( value == "Strenght Bonus") return "Bonificador por Fuerza";
-        if ( value == "Toughness Bonus") return "Bonificador por Resistencia";
-        if ( value == "Initiative Bonus") return "Bonificador por Iniciativa";
-        if ( value == "Agility Bonus") return "Bonificador por Agilidad";
-        if ( value == "Dexterity Bonus") return "Bonificador por Destreza";
-        if ( value == "Intelligence Bonus") return "Bonificador por Inteligencia";
-        if ( value == "Willpower Bonus") return "Bonificador por Voluntad";
-        if ( value == "Fellowship Bonus") return "Bonificador por Empatía";
-	},
-
-      "career_class": (value) => { // Clases
-        if ( value == "Academics" ) return "Académicos";
-        if ( value == "Academic" ) return "Académico";
-        if ( value == "Burghers" ) return "Burgueses";
-        if ( value == "Burgher" ) return "Burgués";
-        if ( value == "Courtiers" ) return "Cortesanos";
-        if ( value == "Courtier" ) return "Cortesano";
-        if ( value == "Peasants" ) return "Campesinos";
-        if ( value == "Peasant" ) return "Campesino";
-        if ( value == "Rangers" ) return "Rurales";
-        if ( value == "Ranger" ) return "Rural";
-        if ( value == "Riverfolk" ) return "Ribereños";
-        if ( value == "Rogues" ) return "Pícaros";
-        if ( value == "Rogue" ) return "Pícaro";
-        if ( value == "Warriors" ) return "Guerreros";
-        if ( value == "Warrior" ) return "Guerrero";
-	},
-
-      "career_careergroup": (value) => { // Grupo de carrera
-        if ( value == "Apothecary" ) return "Boticario";
-        if ( value == "Engineer" ) return "Ingeniero";
-        if ( value == "Lawyer" ) return "Abogado";
-        if ( value == "Nun" ) return "Monja";
-        if ( value == "Physician" ) return "Físico";
-        if ( value == "Priest" ) return "Sacerdote";
-        if ( value == "Scholar" ) return "Erudito";
-        if ( value == "Wizard" ) return "Hechicero";
-        if ( value == "Agitator" ) return "Alborotador";
-        if ( value == "Artisan" ) return "Artesano";
-        if ( value == "Beggar" ) return "Mendigo";
-        if ( value == "Investigator" ) return "Investigador";
-        if ( value == "Merchant" ) return "Mercader";
-        if ( value == "Rat Catcher" ) return "Cazarratas";
-        if ( value == "Townsman" ) return "Ciudadano";
-        if ( value == "Watchman" ) return "Vigilante";
-        if ( value == "Advisor" ) return "Asesor";
-        if ( value == "Artist" ) return "Artista";
-        if ( value == "Duellist" ) return "Duelista";
-        if ( value == "Envoy" ) return "Emisario";
-        if ( value == "Servant" ) return "Sirviente";
-        if ( value == "Spy" ) return "Espía";
-        if ( value == "Warden" ) return "Guarda";
-        if ( value == "Bailiff" ) return "Alguacil";
-        if ( value == "Hedge Witch" ) return "Adivino";
-        if ( value == "Herbalist" ) return "Herbolario";
-        if ( value == "Hunter" ) return "Cazador";
-        if ( value == "Miner" ) return "Minero";
-        if ( value == "Mystic" ) return "Místico";
-        if ( value == "Scout" ) return "Explorador";
-        if ( value == "Villager" ) return "Aldeano";
-        if ( value == "Bounty Hunter" ) return "Cazarrecompensas";
-        if ( value == "Coachman" ) return "Cochero";
-        if ( value == "Entertainer" ) return "Animador";
-        if ( value == "Flagellant" ) return "Flagelante";
-        if ( value == "Messenger" ) return "Mensajero";
-        if ( value == "Pedlar" ) return "Vendedor ambulante";
-        if ( value == "Road warden" ) return "Guarda de caminos";
-        if ( value == "Witch Hunter" ) return "Cazador de brujas";
-        if ( value == "Boatman" ) return "Barquero";
-        if ( value == "Huffer" ) return "Práctico";
-        if ( value == "Riverwarden" ) return "Guardián del río";
-        if ( value == "Riverwoman" ) return "Mujer del río";
-        if ( value == "Seaman" ) return "Marino";
-        if ( value == "Smuggler" ) return "Contrabandista";
-        if ( value == "Stevedore" ) return "Estibador";
-        if ( value == "Wrecker" ) return "Raquero";
-        if ( value == "Bawd" ) return "Chalán";
-        if ( value == "Charlatan" ) return "Charlatán";
-        if ( value == "Fence" ) return "Perista";
-        if ( value == "Grave Robber" ) return "Ladrón de tumbas";
-        if ( value == "Outlaw" ) return "Forajido";
-        if ( value == "Racketeer" ) return "Pandillero";
-        if ( value == "Thief" ) return "Ladrón";
-        if ( value == "Witch" ) return "Brujo";
-        if ( value == "Cavalryman" ) return "Reitre";
-        if ( value == "Guard" ) return "Guardia";
-        if ( value == "Knight" ) return "Caballero";
-        if ( value == "Pit Fighter" ) return "Guerrero de foso";
-        if ( value == "Protagonist" ) return "Protagonista";
-        if ( value == "Soldier" ) return "Soldado";
-        if ( value == "Slayer" ) return "Matador";
-        if ( value == "Warrior Priest" ) return "Sacerdote guerrero";
-        if ( value == "Archer" ) return "Arquero";
-        if ( value == "Artillerist" ) return "Artillero";
-        if ( value == "Camp Follower" ) return "Seguidor de campamento";
-        if ( value == "Cartographer" ) return "Cartógrafo";
-        if ( value == "Freelance" ) return "Caballero de fortuna";
-        if ( value == "Greatsword" ) return "Gran espadero";
-        if ( value == "Halberdier" ) return "Alabardero";
-        if ( value == "Handgunner" ) return "Fusilero";
-        if ( value == "Knight of the Blazing Sun" ) return "Caballero del Sol Llameante";
-        if ( value == "Knight of the White Wolf" ) return "Caballero del Lobo Blanco";
-        if ( value == "Knight Panther" ) return "Caballero Pantera";
-        if ( value == "Light Cavalry" ) return "Caballería ligera";
-        if ( value == "Pikeman" ) return "Piquero";
-        if ( value == "Priest of Myrmidia" ) return "Sacerdote de Myrmidia";
-        if ( value == "Siege Specialist" ) return "Especialista en asedios";
-        if ( value == "Beadle" ) return "Bedel";
-        if ( value == "Mundane Alchemist" ) return "Alquimista mundano";
-        if ( value == "Magister Vigilant" ) return "Magister vigilante";
-        if ( value == "Scryer" ) return "Visionario";
-        if ( value == "Hierophant" ) return "Hierofante";
-        if ( value == "Alchemist" ) return "Alquimista";
-        if ( value == "Druid" ) return "Druida";
-        if ( value == "Astromancer" ) return "Astromante";
-        if ( value == "Shadowmancer" ) return "Umbramante";
-        if ( value == "Spiriter" ) return "Espiritista";
-        if ( value == "Pyromancer" ) return "Piromante";
-        if ( value == "Shaman" ) return "Chamán";		
-        if ( value == "Combat Familiar" ) return "Familiar de Combate";
-        if ( value == "Spell Familiar" ) return "Familiar de Hechizo";
-        if ( value == "Interpreter" ) return "Intérprete";
-        if ( value == "Oracle" ) return "Oráculo";		
-        if ( value == "Survivalist" ) return "Superviviente";
-        if ( value == "Trailblazer" ) return "Vanguardista";
-	},
 	
-	"talents_specification": (value) => {  // Especificación de talentos, valor
-	     if ( value == "Target" ) return "Objetivo";
-	     if ( value == "Everything" ) return "Todo";
-         if ( value == "Greenskins" ) return "Pieles verdes";
-     	 if ( value == "Dwarfs" ) return "Enanos";
-	     if ( value == "Elves" ) return "Elfos";
-	     if ( value == "Predators" ) return "Depredadores";
-	     if ( value == "Living" ) return "Vivos";
-	},
-      
-	"traits_specification": (value) => {  // Especificación de rasgos, valor
-         if ( value == "Any" ) return "Cualquiera";
-         if ( value == "Rating" ) return "Valor";
-         if ( value == "Target" ) return "Objetivo";
-         if ( value == "Damage" ) return "Daño";
-         if ( value == "Deity" ) return "Deidad";
-         if ( value == "Diety" ) return "Deidad";
-         if ( value == "Trained Skills" ) return "Habilidades Entrenadas";
-         if ( value == "# (Type)" ) return "# (Tipo)";
-         if ( value == "Target #" ) return "# Objetivo";
-         if ( value == "Type" ) return "Tipo";
-         if ( value == "Size" ) return "Tamaño";
-         if ( value == "Tiny" ) return "Diminuto";
-         if ( value == "Little" ) return "Muy pequeño";
-       	 if ( value == "Small" ) return "Pequeño";
-     	 if ( value == "Average" ) return "Normal";
-     	 if ( value == "Large" ) return "Grande";
-     	 if ( value == "Enormous" ) return "Enorme";
-         if ( value == "Monstrous" ) return "Monstruoso";
-         if ( value == "Corruption Strength" ) return "Fuerza de la Corrupción";
-         if ( value == "Minor" ) return "Menor";
-         if ( value == "Moderate" ) return "Moderada";
-         if ( value == "Major" ) return "Mayor";
-         if ( value == "Difficulty" ) return "Dificultad";
-         if ( value == "Very Easy" ) return "Muy Fácil";
-         if ( value == "Easy" ) return "Fácil";
-         if ( value == "Average" ) return "Normal";
-         if ( value == "Challenging" ) return "Desafiante";
-         if ( value == "Difficult" ) return "Complicado";
-         if ( value == "Hard" ) return "Difícil";
-         if ( value == "Very Hard" ) return "Muy Difícil";
-         if ( value == "Petty" ) return "Menor";
-         if ( value == "Beasts" ) return "Bestias";
-         if ( value == "Death" ) return "Muerte";
-         if ( value == "Fire" ) return "Fuego";
-         if ( value == "Heavens" ) return "Cielos";
-         if ( value == "Life" ) return "Vida";
-         if ( value == "Light" ) return "Luz";
-         if ( value == "Shadow" ) return "Sombras";
-         if ( value == "Hedgecraft" ) return "Adivinación";
-         if ( value == "Witchcraft" ) return "Brujería";
-         if ( value == "Necromancy" ) return "Nigromancia";
-         if ( value == "Daemonology" ) return "Demonología";
-         if ( value == "Chaos" ) return "Caos";
-         if ( value == "Any Chaos" ) return "Cualquiera del Caos";
-         if ( value == "Any Lore" ) return "Cualquier Saber";
-         if ( value == "Any Lore of the Eight Winds" ) return "Cualquier Saber de los ocho Vientos de la Magia";
-         if ( value == "Any Dark Lore" ) return "Cualquiera de los Saberes Oscuros";
-         if ( value == "Death, Life, Shadows, Hedgecraft, Witchcraft" ) return "Muerte, Vida, Sombras, Adivinación, Brujería";
-         if ( value == "Mòna's Marsh Magic" ) return "Magia del pantano de Mòna";
-         if ( value == "WAAAGH!" ) return "¡WAAAGH!";
-         if ( value == "High Magic" ) return "Magia suprema";
-         if ( value == "Slann High Magic" ) return "Magia suprema de los Slann";
-         if ( value == "Plague" ) return "Plaga";
-         if ( value == "Poison" ) return "Veneno";
-         if ( value == "Venom" ) return "Veneno";
-         if ( value == "Broken" ) return "Domado";
-         if ( value == "Drive" ) return "Tirar";
-         if ( value == "Entertain" ) return "Entretener";
-         if ( value == "Fetch" ) return "Trae";
-         if ( value == "Guard" ) return "Protege";
-         if ( value == "Home" ) return "Casa";
-         if ( value == "Magic" ) return "Magia";
-         if ( value == "Mount" ) return "Montura";
-         if ( value == "War" ) return "Guerra";
-         if ( value == "Broken, Mount, Shock Cavalry, War" ) return "Domado, Montura, Caballería de choque, Guerra";
-         if ( value == "Guard, Mount, War" ) return "Protege, Montura, Guerra";
-         if ( value == "Mount, War" ) return "Montura, Guerra";
-         if ( value == "Sigmarites" ) return "Sigmaritas";
-         if ( value == "Witch" ) return "Brujo";
-         if ( value == "the Rich, Beastmen" ) return "Los ricos, los hombres bestia";
-         if ( value == "Bailiffs, Lawyers" ) return "Alguaciles, abogados";
-         if ( value == "Itching Pox" ) return "Plaga picante";
-         if ( value == "Packer's Pox" ) return "Plaga del empaquetador";
-         if ( value == "Ratte Fever" ) return "Fiebre ratonil";
-         if ( value == "The Black Plague" ) return "Peste negra";
-         if ( value == "Fungal Takeover" ) return "Dominio Fúngico";
-         if ( value == "Blindwyrm Fits" ) return "Mordedura de Gusano Ciego";
-         if ( value == "Cataleptic Ague" ) return "Fiebre Cataléptica";
-         if ( value == "Yellow Skull Fever" ) return "Fiebre de la Calavera Amarilla";
-         if ( value == "Bloody Flux" ) return "La disentería";
-         if ( value == "Various" ) return "Varios";
-         if ( value == "Choose one" ) return "Elige una";
-         if ( value == "Choose two" ) return "Elige dos";
-         if ( value == "Everything" ) return "Todo";
-         if ( value == "Greenskins" ) return "Pieles verdes";
-         if ( value == "Dwarfs" ) return "Enanos";
-         if ( value == "Elves" ) return "Elfos";
-         if ( value == "Dark Elves" ) return "Elfos oscuros";
-         if ( value == "High Elves" ) return "Altos elfos";
-         if ( value == "Thin People" ) return "Gente delgada";
-         if ( value == "Snakes" ) return "Serpientes";
-         if ( value == "Blot Toads" ) return "Sapos rechonchos";
-         if ( value == "All Fire" ) return "Todo fuego";
-         if ( value == "Lore" ) return "Saber";
-         if ( value == "Lore of Fire" ) return "Saber del Fuego";
-         if ( value == "Extra arm - +1 Attack" ) return "Brazo adicional, +1 ataque";
-	},
-
-	"criticals_wounds": (value) => {  // Daño extra de críticos
-         if ( value == "Death" ) return "Muerte";
-	},
-
-	"criticals_location": (value) => {  // Localización de críticos
-         if ( value == "Head" ) return "Cabeza";
-         if ( value == "Arm" ) return "Brazo";
-         if ( value == "Leg" ) return "Pierna";
-         if ( value == "Body" ) return "Cuerpo";
-	},
-	
-	"trappings_penalty": (value) => {  // Penalizador de accesorios
-         if ( value == "-10 Perception" ) return "-10 Percepción";
-         if ( value == "-20 Perception" ) return "-20 Percepción";
-         if ( value == "-10 Stealth" ) return "–10 al Movimiento silencioso";
-	},
-	
-	"injuries_location": (value) => {  // Heridas, Localización
-         if ( value == "Head" ) return "Cabeza";
-         if ( value == "Ear" ) return "Oreja";
-         if ( value == "Nose" ) return "Nariz";
-         if ( value == "Eye" ) return "Ojo";
-         if ( value == "Teeth" ) return "Dientes";
-         if ( value == "Tongue" ) return "Lengua";
-         if ( value == "Body" ) return "Cuerpo";
-         if ( value == "Arm" ) return "Brazo";
-         if ( value == "Hand" ) return "Mano";
-         if ( value == "Leg" ) return "Pierna";
-         if ( value == "Foot" ) return "Pie";
-         if ( value == "Toe" ) return "Dedo del pie";
-	},
-	"injuries_duration": (value) => {  // Heridas, Duración
-         if ( value == "30 - TB" ) return "30 - BR";
-         if ( value == "30 - TB days" ) return "30 - BR";
-	},
-	
-	"effects": effects,
-
-	"bestiary_gender": (value) => {  // Bestiario, género
-         if ( value == "Male" ) return "Varón";
-         if ( value == "Female" ) return "Mujer";
-         if ( value == "???" ) return "¿¿??";
-         if ( value == "Varies" ) return "Varía";
-    },
-
-    "templatesskills": templatesskills,
-    "templatestalents": templatestalents,
-    "templatestrappings": templatestrappings,
-    "tablenames": tablenames,
-    "levels": levels,
   });
- }
-    
-});
+ })
+
+Hooks.on("setup", () => {
+	if (game.folders.getName("Moo's Homebrew")) {
+	  game.folders.getName("Core Rulebook").name = "Libro Básico"
+	  game.folders.getName("Core Rulebook").name = "Libro Básico"
+ 	  game.folders.getName("Core Rulebook").name = "Libro Básico"
+ 	  game.folders.getName("Core Rulebook").name = "Libro Básico"
+ 	  game.folders.getName("Moo's Homebrew").name = "Reglas caseras de Moo"
+ 	  game.folders.getName("Character Creation").name = "Creación de Personaje"
+ 	  game.folders.getName("Hit Location").name = "Ubicación de Impacto"
+ 	  game.folders.getName("GM Booklet").name = "Libreta del DJ"
+ 	  game.folders.getName("Career Tables").name = "Tablas de Carrera"
+ 	  game.folders.getName("Critical Hit Tables").name = "Tablas de Impactos Críticos"
+ 	  game.folders.getName("Corruption & Mutation Tables").name = "Tablas de Mutación y Corrupción"
+	}
+
+	if (game.folders.getName("Job")) {
+	  game.folders.getName("Up In Arms").name = "¡A las Armas!"
+	  game.folders.getName("Up In Arms").name = "¡A las Armas!"
+	  game.folders.getName("Up In Arms").name = "¡A las Armas!"
+	  game.folders.getName("Criticals").name = "Críticos"
+	  game.folders.getName("Hireling").name = "Asalariado"
+	  game.folders.getName("Job").name = "Trabajo"
+	}
+
+	if (game.folders.getName("Potion Spoilage")) {
+	  game.folders.getName("Winds of Magic").name = "Vientos de la Magia"
+	  game.folders.getName("Winds of Magic").name = "Vientos de la Magia"
+	  game.folders.getName("Winds of Magic").name = "Vientos de la Magia"
+	  game.folders.getName("Familiar Personality").name = "Personalidad del Familiar"
+	  game.folders.getName("Grimoire").name = "Grimorio"
+	  game.folders.getName("Marks").name = "Marcas"
+	  game.folders.getName("Miscast").name = "Disfunción"
+	  game.folders.getName("Other").name = "Otras"
+	  game.folders.getName("Potion Spoilage").name = "Deterioro en pociones"
+	  game.folders.getName("Scroll").name = "Pergamino"
+	  game.folders.getName("Symbol").name = "Símbolo"
+	  game.folders.getName("Vortex").name = "Vórtice"
+	}
+
+	if (game.folders.getName("Wandering Creature Encounters")) { 
+	  game.folders.getName("Character Creation").name = "Creación de Personaje"
+ 	  game.folders.getName("Wandering Creature Encounters").name = "Encuentros con criaturas ambulantes"
+	}
+
+	if (game.folders.getName("Toolboxes")) { 
+	  game.folders.getName("Toolboxes").name = "Cajas de herramientas"
+	}
+})
 
 Hooks.on("aa.getRequiredData",(data)=>{
 const originalName = data.item.flags.babele.originalName

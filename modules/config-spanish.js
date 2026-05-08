@@ -2696,5 +2696,19 @@ if (game.modules.get("wfrp4e-wom") && game.modules.get("wfrp4e-wom").active) {
             "Guardia": ["Bedel"]
         }
     })
+	
+    game.wfrp4e.config.magicLores["Mòna's Marsh Magic"] = "Magia del pantano de Mòna"
+    game.wfrp4e.config.magicWind["Mòna's Marsh Magic"] = "Magia del pantano de Mòna"
   }
+
+if (game.modules.get("wfrp4e-lustria") && game.modules.get("wfrp4e-lustria").active) {
+    game.wfrp4e.config.magicLores["WAAAGH!"] = "¡WAAAGH!"
+    game.wfrp4e.config.magicLores["High Magic"] = "Magia suprema"
+    game.wfrp4e.config.magicLores["Slann High Magic"] = "Magia suprema de los Slann"
+
+    game.wfrp4e.config.magicWind["WAAAGH!"] = "¡WAAAGH!"
+    game.wfrp4e.config.magicWind["High Magic"] = "Magia suprema"
+    game.wfrp4e.config.magicWind["Slann High Magic"] = "Magia suprema de los Slann"
+   }
+
 })

@@ -1,9 +1,8 @@
 {
 	"label": "Objetos (Noches Agitadas y Días Difíciles)",
-	"entries": [
-		{
-			"id": "Suffused with Ulgu",
+	"entries": {
+		"Suffused with Ulgu": {
 			"name": "Bañar en Ulgu"
 		}
-	]
+	}
 }
