@@ -1,0 +1,34 @@
+{
+	"label": "Efectos (Vientos de la Magia)",
+    "folders": {
+        "Miscasts": "Disfunciones"
+    },
+	"entries": {
+		"All Pain, No Gain": {
+			"name":"Sin dolor no hay recompensa",
+			"description": "El hechicero es atormentado por el dolor, sufriendo [[1d10 + 4]] de Daño que ignora los Puntos de Armadura.",
+			"scriptData": [
+				{"label":"Daño"}
+				]
+		},
+		"Freezing Breath": {
+			"name":"Aliento helado",
+			"description": "La temperatura a tu alrededor desciende repentinamente y el aliento de la gente es perfectamente visible. Las personas que se encuentran a tantas yardas como tu Bonificador por Voluntad de ti deben realizar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Aguante</strong> o sufrir -10 en HP, Agilidad y Destreza debido al frío repentino hasta que abandonan la zona. El efecto dura 1 minuto.",
+			"avoidTestSkill": "Aguante"
+		},
+		"Marked by Magic": {
+			"name":"Marcado por la magia",
+			"description": "Encarnas un signo físico del Viento con el que trabajas.</p><p></p><p>@Table[hysh-marks]{Marcas de Hysh}</p><p>@Table[chamon-marks]{Marcas de Chamon}</p><p>@Table[ghyran-marks]{Marcas de Ghyran}</p><p>@Table[azyr-marks]{Marcas de Azyr}</p><p>@Table[ulgu-marks]{Marcas de Ulgu}</p><p>@Table[shyish-marks]{Marcas de Shyish}</p><p>@Table[aqshy-marks]{Marcas de Aqshy}</p><p>@Table[ghur-marks]{Marcas de Ghur}</p><p>Si ninguna Tabla de Marcas Arcanas se adapta a tu tradición mágica, o si obtienes una marca que ya tienes, tira de nuevo en la @Table[majormis]{Tabla de Disfunciones Mayores}.",
+			"scriptData": [
+				{"label":"Escoger tabla"}
+				]
+		},
+		"Seared Into the Mind": {
+			"name":"Grabado en la mente",
+			"description": "La cabeza del hechicero parece que va a explotar, con un intenso dolor al sufrir [[1d10 + 1]] de Daño que ignora los Puntos de Armadura. Sin embargo, el hechicero memoriza inmediatamente el hechizo.",
+			"scriptData": [
+				{"label":"Daño"}
+				]
+		}
+	}
+}

@@ -405,6 +405,21 @@
 				}
 			]
 		},
+	"ActiveEffect": {
+		"avoidTestSkill": "system.transferData.avoidTest.skill",
+		"scriptData": {
+			"path": "system.scriptData",
+			"converter": "structured",
+			"cardinality": "many",
+			"mapping": {
+				"label": "label",
+				"script": "script",
+				"hideScript": "options.hideScript",
+				"activateScript": "options.activateScript",
+				"submissionScript": "options.submissionScript"
+				}
+			}
+	},
 	"Actor": {
 		"species": "system.details.species.value",
 		"gender": {

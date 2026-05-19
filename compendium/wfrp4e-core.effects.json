@@ -1,0 +1,516 @@
+{
+	"label": "Efectos (Básico)",
+    "folders": {
+        "Miscasts": "Disfunciones",
+		"Minor": "Menor",
+		"Major": "Mayor",
+		"Minor (Moo)": "Menor (Moo)",
+		"Major (Moo)": "Mayor (Moo)",
+		"Catastrophic (Moo)": "Catastrófico (Moo)",
+		"Wrath of the Gods": "Ira de los dioses"
+    },
+	"entries": {
+		"Souldrain": {
+			"name":"Drenaje del alma",
+			"description": "Sufres 1 Estado de @Condition[Fatigado], que dura [[/r 1d10]] horas.",
+			"scriptData": [
+				{"label":"Fatigado"}
+				]
+		},
+		"Soulwax": {
+			"name":"Cera del alma",
+			"description": "Tus oídos se taponan instantáneamente con una gruesa cera. Sufres 1 Estado de @Condition[Ensordecido], que no se elimina hasta que alguien te los limpia (mediante un uso con éxito de la Habilidad Sanar).",
+			"scriptData": [
+				{"label":"Añadir Ensordecido"}
+				]
+		},
+		"Witchlight": {
+			"name":"Luz bruja",
+			"description": "Brillas con una luz inquietante relacionada con tu Saber, emitiendo la misma iluminación que una fogata grande, y que dura [[/r 1d10]] Asaltos.",
+			"scriptData": [
+				{"label":"Establecer color"}
+				]
+		},
+		"Soulquake": {
+			"name":"Terremoto anímico",
+			"description": "Pasas al Estado @Condition[Tumbado].",
+			"scriptData": [
+				{"label":"Tumbado"}
+				]
+		},
+		"Curse of Corruption": {
+			"name":"Maldición de la corrupción",
+			"description": "Te anotas 1 punto de Corrupción.",
+			"scriptData": [
+				{"label":"Corrupción"}
+				]
+		},
+		"The Horror!": {
+			"name":"¡El horror!",
+			"description": "Deberás superar un Chequeo <strong>Difícil (-20)</strong> de <strong>Frialdad</strong> o sufrir 1 Estado de @Condition[Quebrantado].",
+			"scriptData": [
+				{"label":"Chequeo de Quebrantado"}
+				]
+		},
+		"Driven to Distraction": {
+			"name":"Llevado a la distracción",
+			"description": "Si estabas en combate, sufres 1 Estado de @Condition[Sorprendido]. De lo contrario, quedas completamente sobresaltado, con el corazón a toda velocidad e incapaz de concentrarte durante unos momentos.",
+			"scriptData": [
+				{"label":"Sorprendido"}
+				]
+		},
+		"Cloying Tongue": {
+			"name":"Lengua empalagosa",
+			"description": "Todos tus Chequeos de Hablar idioma (incluidos los de Lanzar hechizos) sufren un penalizador -10 durante [[1d10]] Asaltos.",
+			"scriptData": [
+				{"label":"Penalizador a todos los Chequeos de Hablar idioma"},
+				{"label":"Establecer duración"}
+				]
+		},
+		"Fell Whispers": {
+			"name":"Susurros maléficos",
+			"description": "Debes superar un Chequeo <strong>Normal (+20)</strong> de <strong>Voluntad</strong> o anotarte 1 punto de Corrupción.",
+			"scriptData": [
+				{"label":"Chequeo de Corrupción"}
+				]
+		},
+		"Unholy Visions": {
+			"name":"Visiones impías",
+			"description": "Visiones fugaces de actos profanos e impíos te hostigan. Sufres 1 Estado de @Condition[Cegado]: deberás superar un Chequeo <strong>Desafiante (+0)</strong> de <strong> Frialdad</strong> o sufrir otro.",
+			"scriptData": [
+				{"label":"Cegado"}
+				]
+		},
+		"Rupture": {
+			"name":"Ruptura",
+			"description": "Te sangran profusamente la nariz, los ojos y los oídos. Sufres [[1d10]] Estados de @Condition[Sangrando].",
+			"scriptData": [
+				{"label":"Sangrando"}
+				]
+		},
+		"Wayward Garb": {
+			"name":"Atuendo descarriado",
+			"description": "Tus ropas parecen moverse con mente propia. Sufres 1 Estado de @Condition[Enmarañado] con una Fuerza de [[1d10x5]] para resistirte.",
+			"scriptData": [
+				{"label":"Enmarañado"}
+				]
+		},
+		"Ghostly Voices": {
+			"name":"Voces fantasmales",
+			"description": "Todo el mundo en un radio igual a tu Voluntad oye susurros de voces oscuramente seductoras que emanan del Reino del Caos. Toda criatura inteligente deberá superar un Chequeo <strong>Normal (+20)</strong> de <strong>Frialdad</strong> o anotarse 1 punto de Corrupción.",
+			"scriptData": [
+				{"label":"Chequeo de Corrupción"}
+				]
+		},
+		"Hexeyes": {
+			"name":"Ojos brujos",
+			"description": "Tus ojos se vuelven de un color antinatural asociado a tu Saber durante [[1d10]] horas. Mientras tus ojos permanecen descoloridos, sufres 1 Estado de @Condition[Cegado] que no se puede resolver por medio alguno.",
+			"scriptData": [
+				{"label":"Cegado"},
+				{"label":"Prevenir eliminación"}
+				]
+		},
+		"Aethyric Shock": {
+			"name":"Choque del Aethyr",
+			"description": "Sufres [[1d10]] Heridas, ignorando tu Bonificador por Resistencia y tus puntos de Armadura. Deberás superar un Chequeo <strong>Normal (+20)</strong> de <strong>Aguante</strong>, o sufrir también 1 Estado de @Condition[Aturdido].",
+			"scriptData": [
+				{"label":"Daño"}
+				]
+		},
+		"Intestinal Rebellion": {
+			"name":"Rebelión intestinal",
+			"description": "Tus tripas se mueven de forma incontrolable, y pierdes el control de los esfínteres. Sufres 1 Estado de @Condition[Fatigado], que no se puede eliminar hasta que te cambias de ropa y te limpias.",
+			"scriptData": [
+				{"label":"Fatigado"},
+				{"label":"Prevenir eliminación"}
+				]
+		},
+		"Soulfire": {
+			"name":"Fuego del alma",
+			"description": "Sufres 1 Estado de @Condition[Ardiendo], cuando te rodean llamas impías de un color asociado a tu Saber.",
+			"scriptData": [
+				{"label":"Ardiendo"}
+				]
+		},
+		"Speak in Tongues": {
+			"name":"Don de lenguas",
+			"description": "Balbuceas de forma ininteligible durante [[1d10]] Asaltos. Durante este tiempo, no puedes comunicarte verbalmente ni llevar a cabo ningún Chequeo de Lanzamiento, aunque por lo demás puedes actuar normalmente.",
+			"scriptData": [
+				{"label":"Duración"},
+				{"label":"Prevenir Chequeos de Lanzamiento"}
+				]
+		},
+		"Ragdoll": {
+			"name":"Muñeco de trapo",
+			"description": "Eres despedido [[1d10]] yardas por el aire en una dirección aleatoria, sufriendo [[1d10]] Heridas al aterrizar (que ignoran los puntos de Armadura) y pasas al Estado @Condition[Tumbado].",
+			"scriptData": [
+				{"label":"Daño"}
+				]
+		},
+		"Regurgitation": {
+			"name":"Regurgitación",
+			"description": "Vomitas de forma incontrolable, arrojando más vómito maloliente del que tu cuerpo podría contener. Sufres 1 Estado de Aturdido, que dura [[1d10]] Asaltos.",
+			"scriptData": [
+				{"label":"Aturdido"}
+				]
+		},
+		"Limb Frozen": {
+			"name":"Miembro congelado",
+			"description": "Un miembro (determinado al azar) se te congela durante [[1d10]] horas. El miembro queda inútil durante ese tiempo, como si hubiera sido @UUID[JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#miembros-amputados]{Amputado}.",
+			"scriptData": [
+				{"label":"Escoge miembro"}
+				]
+		},
+		"Darkling Sight": {
+			"name":"Vista oscurecida",
+			"description": "Pierdes el beneficio del Talento @UUID[Compendium.wfrp4e-core.items.OEjUvJKi0xmBwbS2]{Clarividencia} durante [[1d10]] horas. Los Chequeos de Canalización también sufren un penalizador -20 mientras esto sucede.",
+			"scriptData": [
+				{"label":"Duración"},
+				{"label":"Penalización a Canalizar"}
+				]
+		},
+		"Chaos Quake": {
+			"name":"Terremoto del Caos",
+			"description": "Todas las criaturas en un radio de [[1d100]] yardas deberán superar un Chequeo <strong>Normal (+20)</strong> de <strong>Atletismo</strong> o pasar al Estado @Condition[Tumbado].",
+			"scriptData": [
+				{"label":"Tumbado"}
+				]
+		},
+		"Chaotic Foresight": {
+			"name":"Premonición caótica",
+			"description": "Obtienes una reserva adicional de [[1d10]] puntos de Fortuna (con la que puedes superar tu límite natural). Cada vez que gastas uno de estos puntos, te anotas 1 punto de Corrupción. Todos los puntos que conserves al final de la sesión se perderán.",
+			"scriptData": [
+				{"label":"Añadir puntos de Fortuna"}
+				]
+		},
+		"Foul Enfeeblement": {
+			"name":"Debilitamiento asqueroso",
+			"description": "Te anotas 1 punto de Corrupción, pasas al Estado @Condition[Tumbado] y te anotas 1 Estado de @Condition[Fatigado].",
+			"scriptData": [
+				{"label":"Corrupción"}
+				]
+		},
+		"Hellish Stench": {
+			"name":"Hedor infernal",
+			"description": "¡Ahora sí que hueles realmente mal! Obtienes el Rasgo de criatura @Compendium[wfrp4e-core.items.MVI0lXcg6vvtooAF]{Molesto} y probablemente la enemistad de cualquiera que tenga sentido del olfato. Esto dura [[1d10]] horas.",
+			"scriptData": [
+				{"label":"Duración"},
+				{"label":"Molesto"}
+				]
+		},
+		"Aethyric Feedback": {
+			"name":"Retroalimentación del Aethyr",
+			"description": "Cualquiera que esté en un radio en yardas igual a tu Bonificador por Voluntad (tanto amigos como enemigos) sufrirá [[1d10]] Heridas, ignorando el Bonificador por Resistencia y los puntos de Armadura, y pasará al Estado @Condition[Tumbado]. Si no hay objetivos dentro de dicho radio, la magia no tiene dónde disiparse, por lo que tu cabeza explota, matándote instantáneamente.",
+			"scriptData": [
+				{"label":"Chequeo"}
+				]
+		},
+		"Facebleed": {
+			"name":"Sangrado facial",
+			"description": "Tu nariz, ojos, y orejas sangran profusamente. Ganas 1 Estado de @Condition[Sangrando].",
+			"scriptData": [
+				{"label":"Sangrando"}
+				]
+		},
+		"Aethyric Needle": {
+			"name":"Aguja del Aethyr",
+			"description": "Pierdes 1 Herida: [[1d5]] uñas se ennegrecen y caen, una pequeña herida aparece en la forma de un símbolo herético, te muerdes los labios o la lengua por un shock místico, etc.",
+			"scriptData": [
+				{"label":"Herida"}
+				]
+		},
+		"Creeping Congregation": {
+			"name":"Congregación reptante",
+			"description": "Los insectos llenan el área que te rodea, zumbando y arrastrándose. Si es en combate, realiza un Chequeo <strong>Desafiante (+0)</strong> de <strong>Frialdad</strong> o sufrir la Condición @Condition[Sorprendido].",
+			"scriptData": [
+				{"label":"Sorprendido"}
+				]
+		},
+		"Mindnumb": {
+			"name":"Mente adormecida",
+			"description": "La magia descontrolada quema parcialmente tu habilidad de lanzamiento. Tus avances en Lengua (Lengua de la magia) y Canalización se dividen a la mitad durante las próximas 24 horas.",
+			"scriptData": [
+				{"label":"Añadir modificador"}
+				]
+		},
+		"Aethyric Attack": {
+			"name":"Ataque del Aethyr",
+			"description": "Sufres 1 Herida Crítica en una @Table[hitloc] aleatoria mientras las energías mágicas descontroladas desfigura tu forma.",
+			"scriptData": [
+				{"label":"Tirar crítico"}
+				]
+		},
+		"Voice of Madness": {
+			"name":"Voz de la locura",
+			"description": "Parloteas ininteligiblemente durante [[1d10]] asaltos. Durante este tiempo, no puedes comunicarte verbalmente o relizar chequeos de Lanzamiento.",
+			"scriptData": [
+				{"label":"Duración"},
+				{"label":"Prevenir Chequeos de Lanzamiento"}
+				]
+		},
+		"Chaotic Winds": {
+			"name":"Vientos caóticos",
+			"description": "El Caos fluye a través de tus ingredientes de hechizo. Cualquier hechizo lanzado usándolos sufre de @UUID[JournalEntry.YBVrpUHEjohB1H4f.JournalEntryPage.BU7yhLmMdEyvbfkR#influenias-malignas]{Influencia Maligna}.",
+			"scriptData": [
+				{"label":"Actualizar ingredientes"}
+				]
+		},
+		"Limbfrozen": {
+			"name":"Miembro congelado",
+			"description": "Un miembro determinado al azar se te congela durante [[1d10]] horas. Queda inservible como si hubiera sido @UUID[JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#miembros-amputados]{Amputado}.",
+			"scriptData": [
+				{"label":"Escoger miembro"}
+				]
+		},
+		"Wracked": {
+			"name":"Devastado",
+			"description": "Eres abrumado por el dolor, recibes 1 Estado de @Condition[Aturdido]. Pasa un Chequeo <strong>Muy difícil (-40)</strong> de <strong>Aguante</strong> o pasa a @Condition[Tumbado].",
+			"scriptData": [
+				{"label":"Chequeo"}
+				]
+		},
+		"Power Drain": {
+			"name":"Drenaje de poder",
+			"description": "Tu poder rebosa como una presa rompiéndose, sangrando por completo hacia los Vientos. Pierdes tu habilidad de lanzar magia durante los próximos [[1d10]] minutos. Tu energía perdida causa efectos menores de Brujería mientras viaja.",
+			"scriptData": [
+				{"label":"Duración"},
+				{"label":"Prevenir hechizos"}
+				]
+		},
+		"Aethyric Storm": {
+			"name":"Tormenta de Aethyr",
+			"description": "Todo el mundo en Bono por Voluntad yardas sufre [[1d10]] Heridas ignorando Bono por Resistencia y Armadura y pasa a @Condition[Tumbado]. Si no hay objetivos en el rango, la magia no tiene por dónde disiparse y tu cabeza explota, esparciendo restos sangrientos por [[1d10]] yardas.",
+			"scriptData": [
+				{"label":"Daño"}
+				]
+		},
+		"Aethyric Assault": {
+			"name":"Asalto del Aethyr",
+			"description": "Sufres una Herida Crítico en una @Table[hitloc] aleatoria con un bono de +[[1d10*5]]% en el resultado de la tabla ya que la magia descontrolada te golpea con fuerza arrasadora.",
+			"scriptData": [
+				{"label":"Tirar crítico"}
+				]
+		},
+		"Heretical Vision": {
+			"name":"Visión herética",
+			"description": "Una visión de Caos abruma tus sentidos y causa una horripilante revelación. Ganas [[1d10]] puntos de Corrupción y recibes un Estado de @Condition[Aturdido] que no puede quitarse durante el mismo número de Asaltos.",
+			"scriptData": [
+				{"label":"Corrupción"}
+				]
+		},
+		"Mindeaten": {
+			"name":"Mente devorada",
+			"description": "Tu habilidad para usar magia se agota. Por cada 24 horas completas que pasen, un 5% de tu Lengua (Lengua de la magia) y Canalización perdidas vuelven a ti. No puedes lanzar hechizos hasta que haya regresado el primer 5% de tus habilidades.",
+			"scriptData": [
+				{"label":"Añadir modificador"}
+				]
+		},
+		"Witherlimb": {
+			"name":"Miembro atrofiado",
+			"description": "Una @Table[hitloc] determinada aleatoriamente se atrofia y se vuelve inservible. Si sale tu cabeza, tus ojos y boca se sellan. Tu boca puede ser cortada y abierta, pero tu visión se pierde para siempre.",
+			"scriptData": [
+				{"label":"Escoge miembro"}
+				]
+		},
+		"Mutating Wind": {
+			"name":"Viento mutagénico",
+			"description": "Sufres inmediatamente una Mutación del Caos.",
+			"scriptData": [
+				{"label":"Tirar"}
+				]
+		},
+		"Soulpyre": {
+			"name":"Pira del alma",
+			"description": "La magia contenida en tu sangre se revuelve. Erupcionas en una columna de energía caótica durante [[1d10]] asaltos. Mientras persiste la Pira del alma, tienes un Estado de @Condition[Aturdido] que no puede quitarse, no te puedes mover, y sufres [[2d10]] Heridas que causam todos los efectos de tu Saber cada asalto. Las criaturas que comiencen su turno dentro de tantas yardas como Bono por Voluntad también reciben este daño.",
+			"scriptData": [
+				{"label":"Establecer color"},
+				{"label":"Daño"}
+				]
+		},
+		"Called to the Void": {
+			"name":"Llamado al vacío",
+			"description": "Eres succionado al Reino del Caos y te pierdes para siempre a menos que gastes un Punto de Destino, en cuyo caso sufres 1 de Corrupción y recibes 1 Estado de @Condition[Aturdido] mientras una pesadilla despertada de tu destino evitado por poco te asalta.",
+			"scriptData": [
+				{"label":"Elección"}
+				]
+		},
+		"Castigation": {
+			"name":"Castigo",
+			"description": "Quedas reducido a 0 Heridas (si aún no has quedado) y después pasas al Estado @Condtion[Inconsciente], que no se puede eliminar hasta que recuperas por lo menos 1 Herida.",
+			"scriptData": [
+				{"label":"Heridas"}
+				]
+		},
+		"Cease Your Prattling": {
+			"name":"Deja de parlotear",
+			"description": "No puedes llevar a cabo ningún Chequeo de Rezar durante tantos Asaltos como [[2d10]] + tus puntos de Pecado.",
+			"scriptData": [
+				{"label":"Chequeos de Rezar"},
+				{"label":"Duración"}
+				]
+		},
+		"Divine Wounds": {
+			"name":"Heridas divinas",
+			"description": "Sufres tantos estados de @Condition[Sangrando] como 1 + puntos de Pecado.",
+			"scriptData": [
+				{"label":"Sangrando"}
+				]
+		},
+		"Do Not Use My Name in Vain": {
+			"name":"No uses mi nombre en vano",
+			"description": "Pierdes tus Talentos de <em>Bendecir</em> e <em>Invocar</em>, durante tantos días como [[1d10]] + puntos de Pecado.",
+			"scriptData": [
+				{"label":"No poder usar Plegarias"},
+				{"label":"Duración"}
+				]
+		},
+		"Excommunication": {
+			"name":"Excomunión",
+			"description": "Pierdes tus Talentos de <em>Invocar</em> y de <em>Bendecir</em> hasta que llevas a cabo 2 Penitencias; la primera te devuelve el Talento de <em>Bendecir</em>, y la segunda te devuelve el Talento de <em>Invocar</em>. Todos los seguidores de tu dios se dan cuenta automáticamente de tus circunstancias; todos los Chequeos para interaccionar con ellos se convierten automáticamente en Muy difíciles (-30) y no se pueden modificar positivamente por encima de este valor.",
+			"scriptData": [
+				{"label":"No poder usar Plegarias"}
+				]
+		},
+		"Fear My Wrath": {
+			"name":"Teme mi ira",
+			"description": "Sufres tantos Estados de @Condition[Quebrantado] como 1 + puntos de Pecado.",
+			"scriptData": [
+				{"label":"Quebrantado"}
+				]
+		},
+		"Feel My Wrath": {
+			"name":"Siente mi ira",
+			"description": "Sufres tantas heridas como [[1d10]] + puntos de Pecado. Haz también un Chequeo <strong>Desafiante (+0)</strong> de <strong>Aguante</strong>. Si fallas, sufres 1 Estado de @Condition[Aturdido].",
+			"scriptData": [
+				{"label":"Daño"}
+				]
+		},
+		"Heed My Lessons": {
+			"name":"Haz caso a mis lecciones",
+			"description": "Sufres un penalizador -10 a tu Habilidad de Rezar durante tantos Asaltos como [[1d10]] + tus puntos de Pecado.",
+			"scriptData": [
+				{"label":"Modificador"},
+				{"label":"Duración"}
+				]
+		},
+		"Holy Visions": {
+			"name":"Visiones sagradas",
+			"description": "Visiones de tu dios plagan tus sentidos. Intenta un Chequeo <strong>Normal (+20)</strong> de <strong>Aguante</strong>. Si fallas, sufres 1 Estado de @Condition[Aturdido]. El DJ determina cuáles son las visiones.",
+			"scriptData": [
+				{"label":"Aturdido"}
+				]
+		},
+		"I Cast You Out": {
+			"name":"Quedas desterrado",
+			"description": "Tu dios te abandona. Pierdes de forma permanente los Talentos <em>Bendecir</em> e <em>Invocar</em>, y pierdes todos los Avances de Rezar. Además, todos los seguidores de tu dios se dan cuenta automáticamente de tus circunstancias; todos los Chequeos para interaccionar con ellos se convierten automáticamente en Muy difíciles (-30) y no se pueden modificar positivamente por encima de este valor.",
+			"scriptData": [
+				{"label":"Eliminar Objetos"}
+				]
+		},
+		"I Find Your Lack of Faith Disturbing": {
+			"name":"Encuentro inquietante tu falta de fe",
+			"description": "No puedes llevar a cabo ningún Chequeo de Rezar durante tantos Asaltos como [[1d10]] + tus puntos de Pecado.",
+			"scriptData": [
+				{"label":"Sin chequeos de Rezar"},
+				{"label":"Duración"}
+				]
+		},
+		"I Shall Not Aid You": {
+			"name":"No te voy a ayudar",
+			"description": "Sufres un penalizador -10 a una Habilidad asociada con tu dios (a determinar por el DJ) durante tantos días como [[1d10]] + puntos de Pecado.",
+			"scriptData": [
+				{"label":"Duración"},
+				{"label":"Habilidades penalizadas"}
+				]
+		},
+		"Prove Your Devotion": {
+			"name":"Demuéstrame tu devoción",
+			"description": "Pasas al Estado @Condition[Tumbado]. Dicho estado no se puede eliminar hasta que consigues un éxito en un Chequeo <strong>Normal (+20)</strong> de <strong>Rezar</strong>.",
+			"scriptData": [
+				{"label":"Tumbado"},
+				{"label":"Prevenir eliminación"}
+				]
+		},
+		"Purge the Flesh": {
+			"name":"Hay que purgar tu carne",
+			"description": "Sufres tantas heridas como [[2d10]] + puntos de Pecado, ignorando tu Bonificador por Resistencia y los puntos de Armadura. Haz además un Chequeo <strong>Difícil (-20)</strong> de <strong>Aguante</strong>. Si fallas, sufres 1 Estado de @Condition[Aturdido]. Si fallas con -4 NE o menos, pasas al Estado @Condition[Inconsciente], que dura un mínimo de [[1d10]] Asaltos.",
+			"scriptData": [
+				{"label":"Daño"}
+				]
+		},
+		"Share My Pain": {
+			"name":"Comparte mi dolor",
+			"description": "Sufres tantas heridas como 1 + tus puntos de Pecado, ignorando tu Bonificador por Resistencia y tus puntos de Armadura. Además haz un Chequeo <strong>Normal (+20)</strong> de <strong>Aguante</strong>. Si fallas, sufres 1 Estado de @Condition[Aturdido].",
+			"scriptData": [
+				{"label":"Daño"}
+				]
+		},
+		"Struck Blind": {
+			"name":"Cegado",
+			"description": "Pasas al Estado @Condition[Tumbado]. Sufres tantos estados de @Condition[Cegado] como 1 + puntos de Pecado, que sólo se pueden eliminar mediante un Chequeo <strong>Desafiante (+0)</strong> de <strong>Rezar</strong>, donde un Éxito elimina tantos estados de Cegado como 1 + NE.",
+			"scriptData": [
+				{"label":"Estados"},
+				{"label":"Eliminar cegado"}
+				]
+		},
+		"Suffer As I Suffer": {
+			"name":"Sufre como sufro yo",
+			"description": "Sufres tantos Estados de @Condition[Sangrando] como 1 + puntos de Pecado cada mañana hasta haber llevado a cabo una Penitencia.",
+			"scriptData": [
+				{"label":"Sangrando"}
+				]
+		},
+		"Think Over Your Deeds": {
+			"name":"Medita sobre lo que has hecho",
+			"description": "Ningún Chequeo de Rezar con éxito puede conseguir más de +0 NE durante toda la semana siguiente.",
+			"scriptData": [
+				{"label":"NE Máx."}
+				]
+		},
+		"Thunderbolts and Lightning": {
+			"name":"Truenos y relámpagos",
+			"description": "Tu dios te golpea. Quedas reducido a 0 Heridas (si aún no has quedado) y sufres 1 Estado de @Condition[Ardiendo].",
+			"scriptData": [
+				{"label":"Heridas"}
+				]
+		},
+		"What Will You Sacrifice?": {
+			"name":"¿Qué piensas sacrificarme?",
+			"description": "Sufres tantas heridas como [[1d10]] + puntos de Pecado, ignorando tu Bonificador por Resistencia y los puntos de Armadura. También has de hacer un Chequeo <strong>Complicado (-10)</strong> de <strong>Aguante</strong>. Si fallas, sufres 1 Estado de @Condition[Aturdido].",
+			"scriptData": [
+				{"label":"Daño"}
+				]
+		},
+		"You Abuse My Mercy": {
+			"name":"Abusas de mi misericordia",
+			"description": "Pierdes tus Talentos de <em>Invocar</em> y de <em>Bendecir</em> durante tantos días como [[2d10]] + puntos de Pecado.",
+			"scriptData": [
+				{"label":"No puedes usar Plegarias"},
+				{"label":"Duración"}
+				]
+		},
+		"You Do Not Understand My Intent": {
+			"name":"No entiendes mis intenciones",
+			"description": "Sufres un penalizador -10 a cualquier Habilidad asociada con tu dios (a determinar por el DJ) durante tantas horas como [[1d10]] + tus puntos de Pecado.",
+			"scriptData": [
+				{"label":"Duración y Habilidades"},
+				{"label":"Habilidades penalizadas"}
+				]
+		},
+		"You Have Sinned Against Me": {
+			"name":"Has pecado contra mí",
+			"description": "Tu dios está extremadamente enfadado y, como penitencia, te obliga a llevar a cabo Chequeos de Rezar como Acción durante tantos Asaltos como [[1d10]] + puntos de Pecado.",
+			"scriptData": [
+				{"label":"Duración"}
+				]
+		},
+		"You Try My Patience": {
+			"name":"Estás poniendo a prueba mi paciencia",
+			"description": "No puedes llevar a cabo ningún Chequeo de Rezar durante [[1d10]] Asaltos.",
+			"scriptData": [
+				{"label":"Sin chequeos de Rezar"},
+				{"label":"Duración"}
+				]
+		}
+	}
+}
