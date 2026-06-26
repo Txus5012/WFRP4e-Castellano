@@ -773,6 +773,73 @@ if (game.modules.get("wfrp4e-lustria") && game.modules.get("wfrp4e-lustria").act
 	game.wfrp4e.config.propertyHasValue["volley"] = true;
 	game.wfrp4e.config.qualityDescriptions["volley"] = "El arma puede realizar varios disparos a la vez, indicados por el nivel de esta cualidad. Cada disparo impacta por separado. El índice de daño se reduce en 4 cuando se dispara en modo Andanada."
   }
+
+if (game.modules.get("wfrp4e-eis") && game.modules.get("wfrp4e-eis").active) {
+    game.wfrp4e.config.symptoms["delirium"] = "Delirio"
+    game.wfrp4e.config.symptomDescriptions["delirium"] = "Tu consciencia va y viene, con momentos de claridad que se ven reemplazados de repente por ataques de locura, alucinaciones y terror. Realiza un Chequeo <b>Desafiante (+0)</b> de <b>Voluntad</b> cada hora y consulta la tabla <b>@Table[delirium]</b>."
+    game.wfrp4e.config.symptomTreatment["delirium"] = "Algunas autoridades tratan el delirio como parte de una fiebre y prescriben las mismas medidas. Los remedios cuestan desde unos pocos peniques hasta unos cuantos chelines y el [[/r 1d10]]{10%} de ellos son legítimos.<br><br> Con la medicina adecuada, lograr un Chequeo <b>Desafiante (+0)</b> de <b>Sanar</b> destierra las alucinaciones durante [[/r 1d10]] horas.<br><br> También es común sedar a los pacientes delirantes con una droga tranquilizante, como la flor de luna o incluso la sombra nocturna, para mantener al paciente cómodo hasta que el estado haya pasado, provocándole un sueño intermitente hasta que se recupere o muera."
+    game.wfrp4e.config.symptomEffects["delirium"] = {
+        name: "Delirio",
+        img: "modules/wfrp4e-core/icons/diseases/disease.png",
+        transfer: true,
+        flags: {
+            wfrp4e: {
+                "symptom": true
+            }
+        }
+    }
+
+    game.wfrp4e.config.symptoms["swelling"] = "Hinchazón"
+    game.wfrp4e.config.symptomDescriptions["swelling"] = "Una parte del cuerpo se abotarga hasta alcanzar varias veces el tamaño normal, se vuelve de un color rojo o púrpura apagado y queda casi inmóvil. La parte afectada suele ser donde se encuentran la herida o mordedura que causan la hinchazón o el punto de contacto por donde una enfermedad o infección ha entrado en el cuerpo.<br><br><b>Cabeza</b>: Los ojos y la lengua se hinchan, las mejillas se ponen lívidas, la mandíbula queda abierta a la fuerza. Comer es imposible, pero se pueden sorber líquidos ligeros en pequeñas cantidades. Cualquier Chequeo que requiera hablar es 3 pasos más complicado.<br><b>Brazo</b>:El brazo y la mano se hinchan, las articulaciones del hombro y el codo no se pueden mover y la mano se queda inútil. Mientras tanto, el brazo cuenta como @UUID[Compendium.wfrp4e-core.items.Item.MnMZv7ZXoRqoH9dS]{amputado}.<br><b>Cuerpo</b>: El cuerpo entero se hincha hasta que el enfermo ya no puede usar ropa. Todos los Chequeos que impliquen movimiento se vuelven 3 pasos más complicados.<br><b>Pierna</b>: La pierna se hincha de una manera grotesca y toda ella alcanza la amplitud de la parte más ancha del muslo. El pie es casi indistinguible. Mientras tanto, la pierna cuenta como @UUID[Compendium.wfrp4e-core.items.Item.k00PimCWkff11IA0]{amputada}."
+    game.wfrp4e.config.symptomTreatment["swelling"] = "La mayoría de los tratamientos consisten en sumergir la parte afectada, o a veces todo el cuerpo, en un baño de agua helada para reducir el calor que acompaña a las hinchazones. Un Chequeo <b>Prolongado Difícil (-20)</b> de <b>Sanar</b> que requiere +3 NE reduce la hinchazón durante [[/r 2d10]] horas. Cada Chequeo requiere una hora. El paciente sufre +1 Estado de @Condition[Fatigado] por cada Chequeo que se realice.<br><br>En cambio, algunos físicos sangran al paciente con una cuchilla o con sanguijuelas. Lograr un Chequeo <b>Prolongado</b> de <b>Sanar</b> que requiere +4 NE y Herramientas de oficio (Físico) reduce la hinchazón en ([[/r 1d10]] + el Bonificador por Resistencia del paciente) horas.<br><br>Cada Chequeo tiene una Dificultad base de <b>Imposible (-50)</b> y dura media hora.<br><br>Esta Dificultad se reduce en 1 paso por cada Herida que el paciente sufra antes de que se haga el Chequeo. Así, si un paciente se le sangran 5 Heridas, el Chequeo es <b>Desafiante (+0)</b>.<br><br>Algunos curanderos usan cataplasmas curativas para reducir la hinchazón, sobre todo si hay una herida visible a la que se pueden aplicar ungüentos. Lograr un Chequeo <b>Prolongado Complicado (-10)</b> de <b>Sanar</b>, que requiere <b>+5 NE</b> y una cataplasma curativa por Chequeo, reduce la hinchazón durante ([[/r 2d10]] + el Bonificador por Resistencia del paciente) horas. Cada Chequeo tarda 10 minutos."
+    game.wfrp4e.config.symptomEffects["swelling"] = {
+        name: "Hinchazón",
+        img: "modules/wfrp4e-core/icons/diseases/disease.png",
+        transfer: true,
+        flags: {
+            wfrp4e: {
+                "symptom": true
+            }
+        }
+    }
+
+    game.wfrp4e.config.hitLocationTables["quadruped"] = "Cuadrúpedo"
+	
+    game.wfrp4e.config.difficultyLabels["futile"] = "Fútil (-40)"
+    game.wfrp4e.config.difficultyLabels["impossible"] = "Imposible (-50)"
+	
+    game.wfrp4e.config.loreEffectDescriptions["tzeentch"] = "Los objetivos de los hechizos del Saber de Tzeentch se ven desgarrados por la magia transformadora del Caos. Quienes quedan afectados por un hechizo del Saber de Tzeentch deben hacer un Chequeo <strong>Desafiante (+0)</strong> de <strong>Aguante</strong> o sufrir +1 Punto de Corrupción. Si pasan el Chequeo, obtienen +1 Punto de Fortuna, que pueden usar de forma normal. Así son los caprichos de Tzeentch."
+    game.wfrp4e.config.loreEffects["tzeentch"] = {
+        name: "Saber de Tzeentch",
+        img: "modules/wfrp4e-core/icons/spells/tzeentch.png",
+        system : {
+            transferData : {
+                type : "target"
+            },
+            scriptData : [{
+                trigger : "immediate",
+                label : "Chequeo de Aguante",
+                script : `
+                    this.actor.setupSkill(game.i18n.localize("NAME.Endurance"), {appendTitle : " - " + this.effect.name, context : {failure: "Sufrido 1 punto de Corrupción.", success : "Ganado 1 punto de Fortuna."}}).then(setupData => {
+                        this.actor.basicTest(setupData).then(test => 
+                         {
+                             if (test.succeeded && this.actor.type == "character")
+                             {
+                                 this.actor.update({"system.status.fortune.value" : this.actor.system.status.fortune.value + 1})
+                             }
+                             else if (test.failed && this.actor.type == "character")
+                             {
+                              this.actor.update({"system.status.corruption.value" : this.actor.system.status.corruption.value + 1})
+                             }
+                         })
+                      })
+                      return false;
+                      `
+            }]
+        }
+    }
+  }
+
 })
 
 Hooks.once("init", async function () {
@@ -2710,5 +2777,4 @@ if (game.modules.get("wfrp4e-lustria") && game.modules.get("wfrp4e-lustria").act
     game.wfrp4e.config.magicWind["High Magic"] = "Magia suprema"
     game.wfrp4e.config.magicWind["Slann High Magic"] = "Magia suprema de los Slann"
    }
-
 })

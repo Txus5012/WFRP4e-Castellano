@@ -2307,6 +2307,10 @@
 			"name": "Joyas",
 			"description": "<p>Los precios varían según la calidad de la artesanía, el tipo de metal y el valor de las gemas. Por regla general, los anillos comunes sin piedras preciosas cuestas 10 monedas de su tipo de metal (o sea, oro, plata o cobre) mientras que los collares cuestan 20 monedas del mismo tipo de metal.</p>"
 		},
+		"Jewellry": {
+			"name": "Joyas",
+			"description": "<p>Los precios varían según la calidad de la artesanía, el tipo de metal y el valor de las gemas. Por regla general, los anillos comunes sin piedras preciosas cuestas 10 monedas de su tipo de metal (o sea, oro, plata o cobre) mientras que los collares cuestan 20 monedas del mismo tipo de metal.</p>"
+		},
 		"Jug": {
 			"name": "Jarra",
 			"description": "<p>Capacidad: 1 galón de líquido.</p>"
@@ -2766,8 +2770,32 @@
 		"Tongs, steel": {
 			"name": "Tenazas, acero"
 		},
+		"Trade Tools": {
+			"name": "Herramientas de un Oficio",
+			"description": "<p><strong>Boticario</strong>: Las herramientas incluyen un almirez con su mano, cucharillas, frascos, y una balanza con sus pesos. Los talleres también incluyen mecheros de aceite y estantes llenos de ingredientes.</p>\n<p>&nbsp;</p>\n<p><strong>Artesano</strong>: el abanico potencial de herramientas utilizadas por los Artesanos es enorme. Los grupos de ejemplos incluyen:</p>\n<ul type=\"disc\">\n<li><strong>Carpintero</strong>: martillo y clavos, sierra, vara de medir, tiza y plomadas. Los talleres también incluyen tornos, cepillos de carpintero, sargentos y una buena cantidad de madera.</li>\n</ul>\n<ul type=\"disc\">\n<li><strong>Grabador</strong>: gubias, sacabocados, cera, ácido, martillo y cinceles. Los talleres también incluyen troqueles y prensas.</li>\n</ul>\n<ul type=\"disc\">\n<li><strong>Herrero</strong>: martillo, pinzas, perforadoras, estampadoras, brocas y barrenas. Los talleres también incluyen un yunque, una fragua, un bloque de estampación, martillos pilones y lingotes de metal.</li>\n</ul>\n<p>&nbsp;</p>\n<p><strong>Otros tipos de artesanos</strong>: Albañil, Alfarero, Armero, Calígrafo, Calafate, Cantero, Cartógrafo, Cerero, Cervecero, Cocinero, Curtidor, Embalsamador, Fabricante de arcos, Fabricante de armaduras, Fabricante de armas, Guarnicionero, Joyero, Orfebre, Pintor, Sastre, Soplador de vidrio, Tallador, Tallista, Tejedor, Tonelero, Vinatero y Zapatero.</p>\n<p>&nbsp;</p>\n<p><strong>Artista</strong>: pinceles y pintura, martillo y cinceles, limas y escofinas y espátulas. Los talleres también incluyen caballetes o pedestales y materiales en forma de tela, pergamino, vitela, madera, arcilla o piedra sin tallar.</p>\n<p><strong>Ingeniero</strong>: reloj de arena, vara de medir, mecha, escuadra y cartabón. Los talleres también incluyen poleas, sogas y mesas de dibujo.</p>\n<p><strong>Herbolario</strong>: mortero y mano de mortero, cuchillitos, tijeras de podar y guantes. Los talleres también incluyen tendederos para secar, filtros, embudos, cuencos y frascos.</p>\n<p><strong>Navegante</strong>: cuadrante, astrolabio, cartas de navegación y compases, reloj de arena y escandallo.</p>\n<p><strong>Físico</strong>: agujas y sutura, vendas, escalpelo, vinagre, fórceps y un espéculo. Los talleres también incluyen dibujos de anatomía, accesorios surtidos y una mesa de operaciones.</p>"
+		},
 		"Trade Tools (Type)": {
 			"name": "Herramientas de un Oficio (Tipo)",
+			"description": "<p><strong>Boticario</strong>: Las herramientas incluyen un almirez con su mano, cucharillas, frascos, y una balanza con sus pesos. Los talleres también incluyen mecheros de aceite y estantes llenos de ingredientes.</p>\n<p>&nbsp;</p>\n<p><strong>Artesano</strong>: el abanico potencial de herramientas utilizadas por los Artesanos es enorme. Los grupos de ejemplos incluyen:</p>\n<ul type=\"disc\">\n<li><strong>Carpintero</strong>: martillo y clavos, sierra, vara de medir, tiza y plomadas. Los talleres también incluyen tornos, cepillos de carpintero, sargentos y una buena cantidad de madera.</li>\n</ul>\n<ul type=\"disc\">\n<li><strong>Grabador</strong>: gubias, sacabocados, cera, ácido, martillo y cinceles. Los talleres también incluyen troqueles y prensas.</li>\n</ul>\n<ul type=\"disc\">\n<li><strong>Herrero</strong>: martillo, pinzas, perforadoras, estampadoras, brocas y barrenas. Los talleres también incluyen un yunque, una fragua, un bloque de estampación, martillos pilones y lingotes de metal.</li>\n</ul>\n<p>&nbsp;</p>\n<p><strong>Otros tipos de artesanos</strong>: Albañil, Alfarero, Armero, Calígrafo, Calafate, Cantero, Cartógrafo, Cerero, Cervecero, Cocinero, Curtidor, Embalsamador, Fabricante de arcos, Fabricante de armaduras, Fabricante de armas, Guarnicionero, Joyero, Orfebre, Pintor, Sastre, Soplador de vidrio, Tallador, Tallista, Tejedor, Tonelero, Vinatero y Zapatero.</p>\n<p>&nbsp;</p>\n<p><strong>Artista</strong>: pinceles y pintura, martillo y cinceles, limas y escofinas y espátulas. Los talleres también incluyen caballetes o pedestales y materiales en forma de tela, pergamino, vitela, madera, arcilla o piedra sin tallar.</p>\n<p><strong>Ingeniero</strong>: reloj de arena, vara de medir, mecha, escuadra y cartabón. Los talleres también incluyen poleas, sogas y mesas de dibujo.</p>\n<p><strong>Herbolario</strong>: mortero y mano de mortero, cuchillitos, tijeras de podar y guantes. Los talleres también incluyen tendederos para secar, filtros, embudos, cuencos y frascos.</p>\n<p><strong>Navegante</strong>: cuadrante, astrolabio, cartas de navegación y compases, reloj de arena y escandallo.</p>\n<p><strong>Físico</strong>: agujas y sutura, vendas, escalpelo, vinagre, fórceps y un espéculo. Los talleres también incluyen dibujos de anatomía, accesorios surtidos y una mesa de operaciones.</p>"
+		},
+		"Trade Tools (Apothecary)": {
+			"name": "Herramientas de un Oficio (Boticario)",
+			"description": "<p><strong>Boticario</strong>: Las herramientas incluyen un almirez con su mano, cucharillas, frascos, y una balanza con sus pesos. Los talleres también incluyen mecheros de aceite y estantes llenos de ingredientes.</p>\n<p>&nbsp;</p>\n<p><strong>Artesano</strong>: el abanico potencial de herramientas utilizadas por los Artesanos es enorme. Los grupos de ejemplos incluyen:</p>\n<ul type=\"disc\">\n<li><strong>Carpintero</strong>: martillo y clavos, sierra, vara de medir, tiza y plomadas. Los talleres también incluyen tornos, cepillos de carpintero, sargentos y una buena cantidad de madera.</li>\n</ul>\n<ul type=\"disc\">\n<li><strong>Grabador</strong>: gubias, sacabocados, cera, ácido, martillo y cinceles. Los talleres también incluyen troqueles y prensas.</li>\n</ul>\n<ul type=\"disc\">\n<li><strong>Herrero</strong>: martillo, pinzas, perforadoras, estampadoras, brocas y barrenas. Los talleres también incluyen un yunque, una fragua, un bloque de estampación, martillos pilones y lingotes de metal.</li>\n</ul>\n<p>&nbsp;</p>\n<p><strong>Otros tipos de artesanos</strong>: Albañil, Alfarero, Armero, Calígrafo, Calafate, Cantero, Cartógrafo, Cerero, Cervecero, Cocinero, Curtidor, Embalsamador, Fabricante de arcos, Fabricante de armaduras, Fabricante de armas, Guarnicionero, Joyero, Orfebre, Pintor, Sastre, Soplador de vidrio, Tallador, Tallista, Tejedor, Tonelero, Vinatero y Zapatero.</p>\n<p>&nbsp;</p>\n<p><strong>Artista</strong>: pinceles y pintura, martillo y cinceles, limas y escofinas y espátulas. Los talleres también incluyen caballetes o pedestales y materiales en forma de tela, pergamino, vitela, madera, arcilla o piedra sin tallar.</p>\n<p><strong>Ingeniero</strong>: reloj de arena, vara de medir, mecha, escuadra y cartabón. Los talleres también incluyen poleas, sogas y mesas de dibujo.</p>\n<p><strong>Herbolario</strong>: mortero y mano de mortero, cuchillitos, tijeras de podar y guantes. Los talleres también incluyen tendederos para secar, filtros, embudos, cuencos y frascos.</p>\n<p><strong>Navegante</strong>: cuadrante, astrolabio, cartas de navegación y compases, reloj de arena y escandallo.</p>\n<p><strong>Físico</strong>: agujas y sutura, vendas, escalpelo, vinagre, fórceps y un espéculo. Los talleres también incluyen dibujos de anatomía, accesorios surtidos y una mesa de operaciones.</p>"
+		},
+		"Trade Tools (Cook)": {
+			"name": "Herramientas de un Oficio (Cocinero)",
+			"description": "<p><strong>Boticario</strong>: Las herramientas incluyen un almirez con su mano, cucharillas, frascos, y una balanza con sus pesos. Los talleres también incluyen mecheros de aceite y estantes llenos de ingredientes.</p>\n<p>&nbsp;</p>\n<p><strong>Artesano</strong>: el abanico potencial de herramientas utilizadas por los Artesanos es enorme. Los grupos de ejemplos incluyen:</p>\n<ul type=\"disc\">\n<li><strong>Carpintero</strong>: martillo y clavos, sierra, vara de medir, tiza y plomadas. Los talleres también incluyen tornos, cepillos de carpintero, sargentos y una buena cantidad de madera.</li>\n</ul>\n<ul type=\"disc\">\n<li><strong>Grabador</strong>: gubias, sacabocados, cera, ácido, martillo y cinceles. Los talleres también incluyen troqueles y prensas.</li>\n</ul>\n<ul type=\"disc\">\n<li><strong>Herrero</strong>: martillo, pinzas, perforadoras, estampadoras, brocas y barrenas. Los talleres también incluyen un yunque, una fragua, un bloque de estampación, martillos pilones y lingotes de metal.</li>\n</ul>\n<p>&nbsp;</p>\n<p><strong>Otros tipos de artesanos</strong>: Albañil, Alfarero, Armero, Calígrafo, Calafate, Cantero, Cartógrafo, Cerero, Cervecero, Cocinero, Curtidor, Embalsamador, Fabricante de arcos, Fabricante de armaduras, Fabricante de armas, Guarnicionero, Joyero, Orfebre, Pintor, Sastre, Soplador de vidrio, Tallador, Tallista, Tejedor, Tonelero, Vinatero y Zapatero.</p>\n<p>&nbsp;</p>\n<p><strong>Artista</strong>: pinceles y pintura, martillo y cinceles, limas y escofinas y espátulas. Los talleres también incluyen caballetes o pedestales y materiales en forma de tela, pergamino, vitela, madera, arcilla o piedra sin tallar.</p>\n<p><strong>Ingeniero</strong>: reloj de arena, vara de medir, mecha, escuadra y cartabón. Los talleres también incluyen poleas, sogas y mesas de dibujo.</p>\n<p><strong>Herbolario</strong>: mortero y mano de mortero, cuchillitos, tijeras de podar y guantes. Los talleres también incluyen tendederos para secar, filtros, embudos, cuencos y frascos.</p>\n<p><strong>Navegante</strong>: cuadrante, astrolabio, cartas de navegación y compases, reloj de arena y escandallo.</p>\n<p><strong>Físico</strong>: agujas y sutura, vendas, escalpelo, vinagre, fórceps y un espéculo. Los talleres también incluyen dibujos de anatomía, accesorios surtidos y una mesa de operaciones.</p>"
+		},
+		"Trade Tools (Physician)": {
+			"name": "Herramientas de un Oficio (Físico)",
+			"description": "<p><strong>Boticario</strong>: Las herramientas incluyen un almirez con su mano, cucharillas, frascos, y una balanza con sus pesos. Los talleres también incluyen mecheros de aceite y estantes llenos de ingredientes.</p>\n<p>&nbsp;</p>\n<p><strong>Artesano</strong>: el abanico potencial de herramientas utilizadas por los Artesanos es enorme. Los grupos de ejemplos incluyen:</p>\n<ul type=\"disc\">\n<li><strong>Carpintero</strong>: martillo y clavos, sierra, vara de medir, tiza y plomadas. Los talleres también incluyen tornos, cepillos de carpintero, sargentos y una buena cantidad de madera.</li>\n</ul>\n<ul type=\"disc\">\n<li><strong>Grabador</strong>: gubias, sacabocados, cera, ácido, martillo y cinceles. Los talleres también incluyen troqueles y prensas.</li>\n</ul>\n<ul type=\"disc\">\n<li><strong>Herrero</strong>: martillo, pinzas, perforadoras, estampadoras, brocas y barrenas. Los talleres también incluyen un yunque, una fragua, un bloque de estampación, martillos pilones y lingotes de metal.</li>\n</ul>\n<p>&nbsp;</p>\n<p><strong>Otros tipos de artesanos</strong>: Albañil, Alfarero, Armero, Calígrafo, Calafate, Cantero, Cartógrafo, Cerero, Cervecero, Cocinero, Curtidor, Embalsamador, Fabricante de arcos, Fabricante de armaduras, Fabricante de armas, Guarnicionero, Joyero, Orfebre, Pintor, Sastre, Soplador de vidrio, Tallador, Tallista, Tejedor, Tonelero, Vinatero y Zapatero.</p>\n<p>&nbsp;</p>\n<p><strong>Artista</strong>: pinceles y pintura, martillo y cinceles, limas y escofinas y espátulas. Los talleres también incluyen caballetes o pedestales y materiales en forma de tela, pergamino, vitela, madera, arcilla o piedra sin tallar.</p>\n<p><strong>Ingeniero</strong>: reloj de arena, vara de medir, mecha, escuadra y cartabón. Los talleres también incluyen poleas, sogas y mesas de dibujo.</p>\n<p><strong>Herbolario</strong>: mortero y mano de mortero, cuchillitos, tijeras de podar y guantes. Los talleres también incluyen tendederos para secar, filtros, embudos, cuencos y frascos.</p>\n<p><strong>Navegante</strong>: cuadrante, astrolabio, cartas de navegación y compases, reloj de arena y escandallo.</p>\n<p><strong>Físico</strong>: agujas y sutura, vendas, escalpelo, vinagre, fórceps y un espéculo. Los talleres también incluyen dibujos de anatomía, accesorios surtidos y una mesa de operaciones.</p>"
+		},
+		"Trade Tools (Thief)": {
+			"name": "Herramientas de un Oficio (Ladrón)",
+			"description": "<p><strong>Boticario</strong>: Las herramientas incluyen un almirez con su mano, cucharillas, frascos, y una balanza con sus pesos. Los talleres también incluyen mecheros de aceite y estantes llenos de ingredientes.</p>\n<p>&nbsp;</p>\n<p><strong>Artesano</strong>: el abanico potencial de herramientas utilizadas por los Artesanos es enorme. Los grupos de ejemplos incluyen:</p>\n<ul type=\"disc\">\n<li><strong>Carpintero</strong>: martillo y clavos, sierra, vara de medir, tiza y plomadas. Los talleres también incluyen tornos, cepillos de carpintero, sargentos y una buena cantidad de madera.</li>\n</ul>\n<ul type=\"disc\">\n<li><strong>Grabador</strong>: gubias, sacabocados, cera, ácido, martillo y cinceles. Los talleres también incluyen troqueles y prensas.</li>\n</ul>\n<ul type=\"disc\">\n<li><strong>Herrero</strong>: martillo, pinzas, perforadoras, estampadoras, brocas y barrenas. Los talleres también incluyen un yunque, una fragua, un bloque de estampación, martillos pilones y lingotes de metal.</li>\n</ul>\n<p>&nbsp;</p>\n<p><strong>Otros tipos de artesanos</strong>: Albañil, Alfarero, Armero, Calígrafo, Calafate, Cantero, Cartógrafo, Cerero, Cervecero, Cocinero, Curtidor, Embalsamador, Fabricante de arcos, Fabricante de armaduras, Fabricante de armas, Guarnicionero, Joyero, Orfebre, Pintor, Sastre, Soplador de vidrio, Tallador, Tallista, Tejedor, Tonelero, Vinatero y Zapatero.</p>\n<p>&nbsp;</p>\n<p><strong>Artista</strong>: pinceles y pintura, martillo y cinceles, limas y escofinas y espátulas. Los talleres también incluyen caballetes o pedestales y materiales en forma de tela, pergamino, vitela, madera, arcilla o piedra sin tallar.</p>\n<p><strong>Ingeniero</strong>: reloj de arena, vara de medir, mecha, escuadra y cartabón. Los talleres también incluyen poleas, sogas y mesas de dibujo.</p>\n<p><strong>Herbolario</strong>: mortero y mano de mortero, cuchillitos, tijeras de podar y guantes. Los talleres también incluyen tendederos para secar, filtros, embudos, cuencos y frascos.</p>\n<p><strong>Navegante</strong>: cuadrante, astrolabio, cartas de navegación y compases, reloj de arena y escandallo.</p>\n<p><strong>Físico</strong>: agujas y sutura, vendas, escalpelo, vinagre, fórceps y un espéculo. Los talleres también incluyen dibujos de anatomía, accesorios surtidos y una mesa de operaciones.</p>"
+		},
+		"Trade Tools (Tinker)": {
+			"name": "Herramientas de un Oficio (Manitas)",
 			"description": "<p><strong>Boticario</strong>: Las herramientas incluyen un almirez con su mano, cucharillas, frascos, y una balanza con sus pesos. Los talleres también incluyen mecheros de aceite y estantes llenos de ingredientes.</p>\n<p>&nbsp;</p>\n<p><strong>Artesano</strong>: el abanico potencial de herramientas utilizadas por los Artesanos es enorme. Los grupos de ejemplos incluyen:</p>\n<ul type=\"disc\">\n<li><strong>Carpintero</strong>: martillo y clavos, sierra, vara de medir, tiza y plomadas. Los talleres también incluyen tornos, cepillos de carpintero, sargentos y una buena cantidad de madera.</li>\n</ul>\n<ul type=\"disc\">\n<li><strong>Grabador</strong>: gubias, sacabocados, cera, ácido, martillo y cinceles. Los talleres también incluyen troqueles y prensas.</li>\n</ul>\n<ul type=\"disc\">\n<li><strong>Herrero</strong>: martillo, pinzas, perforadoras, estampadoras, brocas y barrenas. Los talleres también incluyen un yunque, una fragua, un bloque de estampación, martillos pilones y lingotes de metal.</li>\n</ul>\n<p>&nbsp;</p>\n<p><strong>Otros tipos de artesanos</strong>: Albañil, Alfarero, Armero, Calígrafo, Calafate, Cantero, Cartógrafo, Cerero, Cervecero, Cocinero, Curtidor, Embalsamador, Fabricante de arcos, Fabricante de armaduras, Fabricante de armas, Guarnicionero, Joyero, Orfebre, Pintor, Sastre, Soplador de vidrio, Tallador, Tallista, Tejedor, Tonelero, Vinatero y Zapatero.</p>\n<p>&nbsp;</p>\n<p><strong>Artista</strong>: pinceles y pintura, martillo y cinceles, limas y escofinas y espátulas. Los talleres también incluyen caballetes o pedestales y materiales en forma de tela, pergamino, vitela, madera, arcilla o piedra sin tallar.</p>\n<p><strong>Ingeniero</strong>: reloj de arena, vara de medir, mecha, escuadra y cartabón. Los talleres también incluyen poleas, sogas y mesas de dibujo.</p>\n<p><strong>Herbolario</strong>: mortero y mano de mortero, cuchillitos, tijeras de podar y guantes. Los talleres también incluyen tendederos para secar, filtros, embudos, cuencos y frascos.</p>\n<p><strong>Navegante</strong>: cuadrante, astrolabio, cartas de navegación y compases, reloj de arena y escandallo.</p>\n<p><strong>Físico</strong>: agujas y sutura, vendas, escalpelo, vinagre, fórceps y un espéculo. Los talleres también incluyen dibujos de anatomía, accesorios surtidos y una mesa de operaciones.</p>"
 		},
 		"Tweezers": {
@@ -4366,6 +4394,10 @@
 			"name": "Arte (Cartografía)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y caption=false]{Arte}"
 		},
+		"Art (Drama)": {
+			"name": "Arte (Teatro)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y caption=false]{Arte}"
+		},
 		"Art (Engraving)": {
 			"name": "Arte (Grabado)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y caption=false]{Arte}"
@@ -4502,24 +4534,32 @@
 			"name": "Animar ()",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui caption=false]{Animar}"
 		},
+		"Entertain (Acting)": {
+			"name": "Animar (Actuar)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui caption=false]{Animar}"
+		},
 		"Entertain (Comedy)": {
 			"name": "Animar (Comedia)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui caption=false]{Animar}"
+		},
+		"Entertain (Comedian)": {
+			"name": "Animar (Comediante)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui caption=false]{Animar}"
+		},
+		"Entertain (Fortune Telling)": {
+			"name": "Animar (Adivinación)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui caption=false]{Animar}"
 		},
 		"Entertain (Singing)": {
 			"name": "Animar (Cantar)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui caption=false]{Animar}"
 		},
+		"Entertain (Speeches)": {
+			"name": "Animar (Discursos)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui caption=false]{Animar}"
+		},
 		"Entertain (Storytelling)": {
 			"name": "Animar (Relatar)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui caption=false]{Animar}"
-		},
-		"Entertain (Acting)": {
-			"name": "Animar (Actuar)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui caption=false]{Animar}"
-		},
-		"Entertain (Fortune Telling)": {
-			"name": "Animar (Adivinación)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.hrCbYa4b2iKPgBui caption=false]{Animar}"
 		},
 		"Evaluate": {
@@ -4571,6 +4611,14 @@
 			"name": "Hablar idioma (Albionés)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
 		},
+		"Language (Ancient Khazalid)": {
+			"name": "Hablar idioma (Khazalid antiguo)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
+		},
+		"Language (Arabyan)": {
+			"name": "Hablar idioma (Árabe)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
+		},
 		"Language (Battle Tongue)": {
 			"name": "Hablar idioma (Lengua de Batalla)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
@@ -4589,6 +4637,14 @@
 		},
 		"Language (Classical)": {
 			"name": "Hablar idioma (Viejomundano clásico)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
+		},
+		"Language (Dark Tongue)": {
+			"name": "Hablar idioma (Lengua oscura)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
+		},
+		"Language (Eltharin)": {
+			"name": "Hablar idioma (Eltharin)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
 		},
 		"Language (Elthárin)": {
@@ -4623,6 +4679,10 @@
 			"name": "Hablar idioma (Asambleario)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
 		},
+		"Language (Nehekharan)": {
+			"name": "Hablar idioma (Nehekharano)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
+		},
 		"Language (Norse)": {
 			"name": "Hablar idioma (Nórdico)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
@@ -4639,6 +4699,10 @@
 			"name": "Hablar idioma (A elección del DJ)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
 		},
+		"Language (Southlander)": {
+			"name": "Hablar idioma (Sureño)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
+		},
 		"Language (Thieves Tongue)": {
 			"name": "Hablar idioma (Lengua de Ladrones)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
@@ -4649,14 +4713,6 @@
 		},
 		"Language (Wastelander)": {
 			"name": "Hablar idioma (Tierras Desoladas)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
-		},
-		"Language (Nehekharan)": {
-			"name": "Hablar idioma (Nehekharano)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
-		},
-		"Language (Dark Tongue)": {
-			"name": "Hablar idioma (Lengua oscura)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
 		},
 		"Leadership": {
@@ -4671,6 +4727,10 @@
 			"name": "Sabiduría académica (Anatomía)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
 		},
+		"Lore (Beasts)": {
+			"name": "Sabiduría académica (Bestias)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
 		"Lore (Engineering)": {
 			"name": "Sabiduría académica (Ingeniería)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
@@ -4681,6 +4741,10 @@
 		},
 		"Lore (Heraldry)": {
 			"name": "Sabiduría académica (Heráldica)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Herbs)": {
+			"name": "Sabiduría académica (Hierbas)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
 		},
 		"Lore (History)": {
@@ -4707,12 +4771,24 @@
 			"name": "Sabiduría académica (Metalurgia)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
 		},
+		"Lore (Philosophy)": {
+			"name": "Sabiduría académica (Filosofía)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Runes)": {
+			"name": "Sabiduría académica (Runas)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
 		"Lore (Science)": {
 			"name": "Sabiduría académica (Ciencias)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
 		},
 		"Lore (Theology)": {
 			"name": "Sabiduría académica (Teología)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Torture)": {
+			"name": "Sabiduría académica (Tortura)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
 		},
 		"Lore (Araby)": {
@@ -4735,8 +4811,20 @@
 			"name": "Sabiduría académica (Química)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
 		},
+		"Lore (Empire)": {
+			"name": "Sabiduría académica (Imperio)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
 		"Lore (Altdorf)": {
 			"name": "Sabiduría académica (Altdorf)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Bögenhafen)": {
+			"name": "Sabiduría académica (Bögenhafen)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Vorbergland)": {
+			"name": "Sabiduría académica (Vorbergland)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
 		},
 		"Lore (Daemonology)": {
@@ -4813,6 +4901,10 @@
 		},
 		"Lore (Lustria)": {
 			"name": "Sabiduría académica (Lustria)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Rivers)": {
+			"name": "Sabiduría académica (Ríos)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
 		},
 		"Lore (Oceans)": {
@@ -4903,6 +4995,10 @@
 			"name": "Actuar (Payasadas)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.6MQIGorN3WgXWfJB caption=false]{Actuar}"
 		},
+		"Perform (Dancer)": {
+			"name": "Actuar (Baile)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.6MQIGorN3WgXWfJB caption=false]{Actuar}"
+		},
 		"Perform (Dancing)": {
 			"name": "Actuar (Baile)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.6MQIGorN3WgXWfJB caption=false]{Actuar}"
@@ -4943,6 +5039,10 @@
 			"name": "Tocar (Flautín)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.N63wZOWw6ZLYnePN caption=false]{Tocar}"
 		},
+		"Play (Harp)": {
+			"name": "Tocar (Lira)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.N63wZOWw6ZLYnePN caption=false]{Tocar}"
+		},
 		"Play (Harpsichord)": {
 			"name": "Tocar (Clavicémbalo)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.N63wZOWw6ZLYnePN caption=false]{Tocar}"
@@ -4953,6 +5053,14 @@
 		},
 		"Play (Lute)": {
 			"name": "Tocar (Laúd)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.N63wZOWw6ZLYnePN caption=false]{Tocar}"
+		},
+		"Play (Mandolin)": {
+			"name": "Tocar (Mandolina)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.N63wZOWw6ZLYnePN caption=false]{Tocar}"
+		},
+		"Play (Organ)": {
+			"name": "Tocar (Órgano)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.N63wZOWw6ZLYnePN caption=false]{Tocar}"
 		},
 		"Play (Violin)": {
@@ -5047,6 +5155,10 @@
 			"name": "Remar",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.ACCaGYXdz9yKyxgG caption=false]{Remar}"
 		},
+		"Sail": {
+			"name": "Navegar",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.DLrOPZtVMLgSyxaj caption=false]{Navegar}"
+		},
 		"Sail ()": {
 			"name": "Navegar ()",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.DLrOPZtVMLgSyxaj caption=false]{Navegar}"
@@ -5079,12 +5191,12 @@
 			"name": "Navegar (Fragata)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.DLrOPZtVMLgSyxaj caption=false]{Navegar}"
 		},
-		"Sail (Wolfship)": {
-			"name": "Navegar (Navío lobo)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.DLrOPZtVMLgSyxaj caption=false]{Navegar}"
-		},
 		"Sail (Longship)": {
 			"name": "Navegar (Drakkar)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.DLrOPZtVMLgSyxaj caption=false]{Navegar}"
+		},
+		"Sail (Wolfship)": {
+			"name": "Navegar (Navío lobo)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.DLrOPZtVMLgSyxaj caption=false]{Navegar}"
 		},
 		"Secret Signs": {
@@ -5093,6 +5205,18 @@
 		},
 		"Secret Signs ()": {
 			"name": "Lengua secreta ()",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.X2FppoPGuEwJKssM caption=false]{Lengua secreta}"
+		},
+		"Secret Signs (Black Chamber)": {
+			"name": "Lengua secreta (Cámara Negra)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.X2FppoPGuEwJKssM caption=false]{Lengua secreta}"
+		},
+		"Secret Signs (Cult)": {
+			"name": "Lengua secreta (Secta)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.X2FppoPGuEwJKssM caption=false]{Lengua secreta}"
+		},
+		"Secret Signs (Cultist)": {
+			"name": "Lengua secreta (Sectario)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.X2FppoPGuEwJKssM caption=false]{Lengua secreta}"
 		},
 		"Secret Signs (Grey Order)": {
@@ -5111,16 +5235,16 @@
 			"name": "Lengua secreta (Explorador)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.X2FppoPGuEwJKssM caption=false]{Lengua secreta}"
 		},
+		"Secret Signs (Smuggler)": {
+			"name": "Lengua secreta (Contrabandista)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.X2FppoPGuEwJKssM caption=false]{Lengua secreta}"
+		},
 		"Secret Signs (Thief)": {
 			"name": "Lengua secreta (Ladrón)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.X2FppoPGuEwJKssM caption=false]{Lengua secreta}"
 		},
 		"Secret Signs (Vagabond)": {
 			"name": "Lengua secreta (Vagabundo)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.X2FppoPGuEwJKssM caption=false]{Lengua secreta}"
-		},
-		"Secret Signs (Black Chamber)": {
-			"name": "Lengua secreta (Cámara Negra)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.X2FppoPGuEwJKssM caption=false]{Lengua secreta}"
 		},
 		"Set Trap": {
@@ -5167,12 +5291,32 @@
 			"name": "Oficio (Cualquiera)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
 		},
+		"Trade (Alchemist)": {
+			"name": "Oficio (Alquimista)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
+		},
 		"Trade (Apothecary)": {
 			"name": "Oficio (Boticario)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
 		},
 		"Trade (Barber)": {
 			"name": "Oficio (Barbero)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
+		},
+		"Trade (Blacksmith)": {
+			"name": "Oficio (Herrero)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
+		},
+		"Trade (Boatbuilding)": {
+			"name": "Oficio (Carpintero de ribera)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
+		},
+		"Trade (Brewer)": {
+			"name": "Oficio (Cervecero)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
+		},
+		"Trade (Brewing)": {
+			"name": "Oficio (Cervecero)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
 		},
 		"Trade (Calligrapher)": {
@@ -5183,8 +5327,16 @@
 			"name": "Oficio (Carpintero)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
 		},
+		"Trade (Carpentry)": {
+			"name": "Oficio (Carpintero)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
+		},
 		"Trade (Chandler)": {
 			"name": "Oficio (Cerero)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
+		},
+		"Trade (Cheesemonger)": {
+			"name": "Oficio (Quesero)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
 		},
 		"Trade (Cook)": {
@@ -5193,6 +5345,26 @@
 		},
 		"Trade (Embalmer)": {
 			"name": "Oficio (Embalsamador)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
+		},
+		"Trade (Engineer)": {
+			"name": "Oficio (Ingeniero)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
+		},
+		"Trade (Explosives)": {
+			"name": "Oficio (Explosivos)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
+		},
+		"Trade (Farrier)": {
+			"name": "Oficio (Herrador)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
+		},
+		"Trade (Goldsmith)": {
+			"name": "Oficio (Orfebre)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
+		},
+		"Trade (Herbalist)": {
+			"name": "Oficio (Herbolario)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
 		},
 		"Trade (Poisoner)": {
@@ -5207,32 +5379,16 @@
 			"name": "Oficio (Herrero)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
 		},
+		"Trade (Smithing)": {
+			"name": "Oficio (Herrero)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
+		},
 		"Trade (Tanner)": {
 			"name": "Oficio (Curtidor)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
 		},
-		"Trade (Cheesemonger)": {
-			"name": "Oficio (Quesero)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
-		},
-		"Trade (Alchemist)": {
-			"name": "Oficio (Alquimista)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
-		},
-		"Trade (Blacksmith)": {
-			"name": "Oficio (Herrero)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
-		},
-		"Trade (Engineer)": {
-			"name": "Oficio (Ingeniero)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
-		},
-		"Trade (Goldsmith)": {
-			"name": "Oficio (Orfebre)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
-		},
-		"Trade (Farrier)": {
-			"name": "Oficio (Herrador)",
+		"Trade (Tinker)": {
+			"name": "Oficio (Manitas)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
 		},
 		"Acquiescence": {
@@ -10033,9 +10189,29 @@
 					]
 				}]
 		},
+		"2 Tentacles": {
+			"name": "2 Tentáculos",
+			"description": "<p>La criatura dispone de 2 tentáculos.</p>\n            <ul>\n            <li>Obtiene una Acción de Ataque gratuito por tentáculo.</li>\n            <li>El ataque de cada tentáculo hace el daño indicado, que ya incluye su Bonificador por Fuerza.</li>\n            <li>Si causa Daño, también impone a su oponente 1 Estado de Enmarañado , lo que inicia una Presa entre el objetivo y dicho tentáculo.\n            <ul>\n            <li>Si un tentáculo está haciendo una Presa, usa la Acción de Ataque gratuito de dicho tentáculo para resolverla, no la Acción de la criatura. </li>\n            </ul>\n            </li>\n            </ul></p>",
+			"effects": [{
+				"name":"2 Tentáculos",
+				"scriptData": [
+					{"label":"Presa"}
+					]
+				}]
+		},
+		"3+ Tentacles": {
+			"name": "3+ Tentáculos",
+			"description": "<p>La criatura dispone de 3 o más tentáculos.</p>\n            <ul>\n            <li>Obtiene una Acción de Ataque gratuito por tentáculo.</li>\n            <li>El ataque de cada tentáculo hace el daño indicado, que ya incluye su Bonificador por Fuerza.</li>\n            <li>Si causa Daño, también impone a su oponente 1 Estado de Enmarañado , lo que inicia una Presa entre el objetivo y dicho tentáculo.\n            <ul>\n            <li>Si un tentáculo está haciendo una Presa, usa la Acción de Ataque gratuito de dicho tentáculo para resolverla, no la Acción de la criatura. </li>\n            </ul>\n            </li>\n            </ul></p>",
+			"effects": [{
+				"name":"3+ Tentáculos",
+				"scriptData": [
+					{"label":"Presa"}
+					]
+				}]
+		},
 		"8x Tentacles": {
 			"name": "8x Tentáculos",
-			"description": "<p>La criatura dispone 8 tentáculos.</p>\n            <ul>\n            <li>Obtiene una Acción de Ataque gratuito por tentáculo.</li>\n            <li>El ataque de cada tentáculo hace el daño indicado, que ya incluye su Bonificador por Fuerza.</li>\n            <li>Si causa Daño, también impone a su oponente 1 Estado de Enmarañado , lo que inicia una Presa entre el objetivo y dicho tentáculo.\n            <ul>\n            <li>Si un tentáculo está haciendo una Presa, usa la Acción de Ataque gratuito de dicho tentáculo para resolverla, no la Acción de la criatura. </li>\n            </ul>\n            </li>\n            </ul></p>",
+			"description": "<p>La criatura dispone de 8 tentáculos.</p>\n            <ul>\n            <li>Obtiene una Acción de Ataque gratuito por tentáculo.</li>\n            <li>El ataque de cada tentáculo hace el daño indicado, que ya incluye su Bonificador por Fuerza.</li>\n            <li>Si causa Daño, también impone a su oponente 1 Estado de Enmarañado , lo que inicia una Presa entre el objetivo y dicho tentáculo.\n            <ul>\n            <li>Si un tentáculo está haciendo una Presa, usa la Acción de Ataque gratuito de dicho tentáculo para resolverla, no la Acción de la criatura. </li>\n            </ul>\n            </li>\n            </ul></p>",
 			"effects": [{
 				"name":"8x Tentáculos",
 				"scriptData": [
@@ -10525,7 +10701,7 @@
 		},
 		"Mental Corruption": {
 			"name": "Corrupción mental",
-			"description": "<p>La criatura tiene el Caos en la mente. Tira en la Tabla de Corrupción Mental</p>\n<p>@Table[mutatemental]</p>\n<p>@Table[expandedmutatemental] (si el módulo EiS está instalado)</p>",
+			"description": "<p>La criatura tiene el Caos en la mente. Tira en la @Table[mutatemental]{Tabla de Corrupción Mental}.</p>",
 			"effects": [{
 				"name":"Corrupción mental",
 				"scriptData": [
@@ -10539,9 +10715,9 @@
 		},
 		"Mutation": {
 			"name": "Mutación",
-			"description": "<p>La criatura ha sido ‘bendecida’ con una Mutación. Tira en la Tabla de Corrupción física</p>\n<p>@Table[mutatephys]</p>\n<p>@Table[expandedmutatephys] (si el módulo EiS está instalado)</p>",
+			"description": "<p>La criatura ha sido ‘bendecida’ con una Mutación. Tira en la @Table[mutatephys]{Tabla de Corrupción física}.</p>",
 			"effects": [{
-				"name":"Corrupción mental",
+				"name":"Mutación",
 				"scriptData": [
 					{"label":"Añadir mutación"}
 					]
@@ -10573,6 +10749,10 @@
 			"name": "A distancia (Rango)",
 			"description": "<p>La criatura dispone de un arma a distancia. El arma hace tanto Daño como la potencia indicada y tiene el rango en yardas indicado entre paréntesis.</p>"
 		},
+		"Ranged (10)": {
+			"name": "A distancia (10)",
+			"description": "<p>La criatura dispone de un arma a distancia. El arma hace tanto Daño como la potencia indicada y tiene el rango en yardas indicado entre paréntesis.</p>"
+		},
 		"Ranged (20)": {
 			"name": "A distancia (20)",
 			"description": "<p>La criatura dispone de un arma a distancia. El arma hace tanto Daño como la potencia indicada y tiene el rango en yardas indicado entre paréntesis.</p>"
@@ -10587,6 +10767,10 @@
 		},
 		"Ranged (50)": {
 			"name": "A distancia (50)",
+			"description": "<p>La criatura dispone de un arma a distancia. El arma hace tanto Daño como la potencia indicada y tiene el rango en yardas indicado entre paréntesis.</p>"
+		},
+		"Ranged (60)": {
+			"name": "A distancia (60)",
 			"description": "<p>La criatura dispone de un arma a distancia. El arma hace tanto Daño como la potencia indicada y tiene el rango en yardas indicado entre paréntesis.</p>"
 		},
 		"Ranged (150)": {
@@ -10721,17 +10905,6 @@
 					]
 				}]
 		},
-		"Tongue Attack (12)": {
-			"name": "Ataque de lengua (12)",
-			"description": "<p>La lengua prensil de la criatura se puede enroscar alrededor de su presa, arrastrándola a un macabro final. En su turno, puede llevar a cabo un Ataque gratuito gastando 1 Ventaja. Se trata de un ataque A distancia que hace tanto Daño como la fuerza indicada (el rango es la cifra entre paréntesis). Si el ataque impacta, el objetivo sufre 1 Estado de @Condition[Enmarañado] y, si es de un Tamaño menor, se ve arrastrado hacia la criatura y queda Trabado en combate cuerpo a cuerpo. Entonces, la criatura puede elegir entre liberar al objetivo, llevar acabo un Ataque gratuito utilizando su Rasgo Arma, o mantener el objetivo envuelto en su lengua, iniciando una Presa.</p>",
-			"effects": [{
-				"name":"Ataque de lengua",
-				"scriptData": [
-					{"label":"Ataque de lengua (12)"},
-					{"label":"Lengua (Ataque gratuito)"}
-					]
-				}]
-		},
 		"Tongue Attack (3)": {
 			"name": "Ataque de lengua (3)",
 			"description": "<p>La lengua prensil de la criatura se puede enroscar alrededor de su presa, arrastrándola a un macabro final. En su turno, puede llevar a cabo un Ataque gratuito gastando 1 Ventaja. Se trata de un ataque A distancia que hace tanto Daño como la fuerza indicada (el rango es la cifra entre paréntesis). Si el ataque impacta, el objetivo sufre 1 Estado de @Condition[Enmarañado] y, si es de un Tamaño menor, se ve arrastrado hacia la criatura y queda Trabado en combate cuerpo a cuerpo. Entonces, la criatura puede elegir entre liberar al objetivo, llevar acabo un Ataque gratuito utilizando su Rasgo Arma, o mantener el objetivo envuelto en su lengua, iniciando una Presa.</p>",
@@ -10739,6 +10912,28 @@
 				"name":"Ataque de lengua (Rango)",
 				"scriptData": [
 					{"label":"Ataque de lengua (Rango)"},
+					{"label":"Lengua (Ataque gratuito)"}
+					]
+				}]
+		},
+		"Tongue Attack (3 yards)": {
+			"name": "Ataque de lengua (3 yardas)",
+			"description": "<p>La lengua prensil de la criatura se puede enroscar alrededor de su presa, arrastrándola a un macabro final. En su turno, puede llevar a cabo un Ataque gratuito gastando 1 Ventaja. Se trata de un ataque A distancia que hace tanto Daño como la fuerza indicada (el rango es la cifra entre paréntesis). Si el ataque impacta, el objetivo sufre 1 Estado de @Condition[Enmarañado] y, si es de un Tamaño menor, se ve arrastrado hacia la criatura y queda Trabado en combate cuerpo a cuerpo. Entonces, la criatura puede elegir entre liberar al objetivo, llevar acabo un Ataque gratuito utilizando su Rasgo Arma, o mantener el objetivo envuelto en su lengua, iniciando una Presa.</p>",
+			"effects": [{
+				"name":"Ataque de lengua (Rango)",
+				"scriptData": [
+					{"label":"Ataque de lengua (Rango)"},
+					{"label":"Lengua (Ataque gratuito)"}
+					]
+				}]
+		},
+		"Tongue Attack (12)": {
+			"name": "Ataque de lengua (12)",
+			"description": "<p>La lengua prensil de la criatura se puede enroscar alrededor de su presa, arrastrándola a un macabro final. En su turno, puede llevar a cabo un Ataque gratuito gastando 1 Ventaja. Se trata de un ataque A distancia que hace tanto Daño como la fuerza indicada (el rango es la cifra entre paréntesis). Si el ataque impacta, el objetivo sufre 1 Estado de @Condition[Enmarañado] y, si es de un Tamaño menor, se ve arrastrado hacia la criatura y queda Trabado en combate cuerpo a cuerpo. Entonces, la criatura puede elegir entre liberar al objetivo, llevar acabo un Ataque gratuito utilizando su Rasgo Arma, o mantener el objetivo envuelto en su lengua, iniciando una Presa.</p>",
+			"effects": [{
+				"name":"Ataque de lengua",
+				"scriptData": [
+					{"label":"Ataque de lengua (12)"},
 					{"label":"Lengua (Ataque gratuito)"}
 					]
 				}]
@@ -10850,6 +11045,10 @@
 			"name": "Arma (Mordisco)",
 			"description": "<p>La criatura lleva un arma cuerpo a cuerpo, o bien utiliza dientes, zarpas o cosas similares en combate.\n El arma causa tanto daño como la cifra entre paréntesis, que ya incluye el Bonificador por Fuerza de la criatura. Típicamente será 4 + Bonificador por Fuerza (lo que representa un Arma de mano).</p>"
 		},
+		"Weapon (Claw)": {
+			"name": "Arma (Garra)",
+			"description": "<p>La criatura lleva un arma cuerpo a cuerpo, o bien utiliza dientes, zarpas o cosas similares en combate.\n El arma causa tanto daño como la cifra entre paréntesis, que ya incluye el Bonificador por Fuerza de la criatura. Típicamente será 4 + Bonificador por Fuerza (lo que representa un Arma de mano).</p>"
+		},
 		"Weapon (Claws)": {
 			"name": "Arma (Garras)",
 			"description": "<p>La criatura lleva un arma cuerpo a cuerpo, o bien utiliza dientes, zarpas o cosas similares en combate.\n El arma causa tanto daño como la cifra entre paréntesis, que ya incluye el Bonificador por Fuerza de la criatura. Típicamente será 4 + Bonificador por Fuerza (lo que representa un Arma de mano).</p>"
@@ -10906,8 +11105,16 @@
 			"name": "Arma (Pisotón)",
 			"description": "<p>La criatura lleva un arma cuerpo a cuerpo, o bien utiliza dientes, zarpas o cosas similares en combate.\n El arma causa tanto daño como la cifra entre paréntesis, que ya incluye el Bonificador por Fuerza de la criatura. Típicamente será 4 + Bonificador por Fuerza (lo que representa un Arma de mano).</p>"
 		},
+		"Weapon (Varies)": {
+			"name": "Arma (Varias)",
+			"description": "<p>La criatura lleva un arma cuerpo a cuerpo, o bien utiliza dientes, zarpas o cosas similares en combate.\n El arma causa tanto daño como la cifra entre paréntesis, que ya incluye el Bonificador por Fuerza de la criatura. Típicamente será 4 + Bonificador por Fuerza (lo que representa un Arma de mano).</p>"
+		},
 		"Weapon (Vines)": {
 			"name": "Arma (Enredadera)",
+			"description": "<p>La criatura lleva un arma cuerpo a cuerpo, o bien utiliza dientes, zarpas o cosas similares en combate.\n El arma causa tanto daño como la cifra entre paréntesis, que ya incluye el Bonificador por Fuerza de la criatura. Típicamente será 4 + Bonificador por Fuerza (lo que representa un Arma de mano).</p>"
+		},
+		"Teeth and Claws": {
+			"name": "Dientes y garras",
 			"description": "<p>La criatura lleva un arma cuerpo a cuerpo, o bien utiliza dientes, zarpas o cosas similares en combate.\n El arma causa tanto daño como la cifra entre paréntesis, que ya incluye el Bonificador por Fuerza de la criatura. Típicamente será 4 + Bonificador por Fuerza (lo que representa un Arma de mano).</p>"
 		},
 		"Web": {
@@ -10943,6 +11150,18 @@
 					]
 				}]
 		},
+		"Acute Sense (Hearing)": {
+			"name": "Sentidos desarrollados (Oído)",
+			"description": "<p>Uno de tus cinco sentidos principales está muy desarrollado, lo que te permite ver lo que otros no ven. Podrás llevar a cabo Chequeos de Percepción para detectar detalles normalmente imperceptibles con el sentido asociado, tal y como indique el DJ. Esto podría incluir: divisar a un águila más allá del alcance visual de todos los demás, oler un veneno casi inodoro, oír la respiración de un ratón inmóvil en el interior de una pared, reconocer una letra desgastada en un grabado o detectar que dos cervezas de una misma cervecería proceden de barriles diferentes.</p>",
+			"tests": "Percepción (oído)",
+			"effects": [{
+				"name":"Sentido desarrollado",
+				"scriptData": [
+					{},
+					{"label":"Elección"}
+					]
+				}]
+		},
 		"Acute Sense (Sight)": {
 			"name": "Sentidos desarrollados (Vista)",
 			"description": "<p>Uno de tus cinco sentidos principales está muy desarrollado, lo que te permite ver lo que otros no ven. Podrás llevar a cabo Chequeos de Percepción para detectar detalles normalmente imperceptibles con el sentido asociado, tal y como indique el DJ. Esto podría incluir: divisar a un águila más allá del alcance visual de todos los demás, oler un veneno casi inodoro, oír la respiración de un ratón inmóvil en el interior de una pared, reconocer una letra desgastada en un grabado o detectar que dos cervezas de una misma cervecería proceden de barriles diferentes.</p>",
@@ -10955,10 +11174,10 @@
 					]
 				}]
 		},
-		"Acute Sense (Hearing)": {
-			"name": "Sentidos desarrollados (Oído)",
+		"Acute Sense (Smell)": {
+			"name": "Sentidos desarrollados (Olfato)",
 			"description": "<p>Uno de tus cinco sentidos principales está muy desarrollado, lo que te permite ver lo que otros no ven. Podrás llevar a cabo Chequeos de Percepción para detectar detalles normalmente imperceptibles con el sentido asociado, tal y como indique el DJ. Esto podría incluir: divisar a un águila más allá del alcance visual de todos los demás, oler un veneno casi inodoro, oír la respiración de un ratón inmóvil en el interior de una pared, reconocer una letra desgastada en un grabado o detectar que dos cervezas de una misma cervecería proceden de barriles diferentes.</p>",
-			"tests": "Percepción (oído)",
+			"tests": "Percepción (olfato)",
 			"effects": [{
 				"name":"Sentido desarrollado",
 				"scriptData": [
@@ -10979,10 +11198,10 @@
 					]
 				}]
 		},
-		"Acute Sense (Smell)": {
-			"name": "Sentidos desarrollados (Olfato)",
+		"Acute Sense (Touch)": {
+			"name": "Sentidos desarrollados (Tacto)",
 			"description": "<p>Uno de tus cinco sentidos principales está muy desarrollado, lo que te permite ver lo que otros no ven. Podrás llevar a cabo Chequeos de Percepción para detectar detalles normalmente imperceptibles con el sentido asociado, tal y como indique el DJ. Esto podría incluir: divisar a un águila más allá del alcance visual de todos los demás, oler un veneno casi inodoro, oír la respiración de un ratón inmóvil en el interior de una pared, reconocer una letra desgastada en un grabado o detectar que dos cervezas de una misma cervecería proceden de barriles diferentes.</p>",
-			"tests": "Percepción (olfato)",
+			"tests": "Percepción (tacto)",
 			"effects": [{
 				"name":"Sentido desarrollado",
 				"scriptData": [
@@ -11375,10 +11594,49 @@
 					]
 				}]
 		},
+		"Craftsman (Brewer)": {
+			"name": "Artesano (Cervecero)",
+			"description": "<p>Tienes un auténtico talento creativo. Suma la Habilidad de Oficio asociada a cualquier Carrera en la que entras. Si dicha Habilidad de Oficio ya está en tu Carrera, en lugar de ello puedes comprarla a razón de 5 PX menos por Avance.</p>",
+			"tests": "Oficio (Cervecero)",
+			"effects": [{
+				"name":"Artesano",
+				"scriptData": [
+					{},
+					{"label":"Elegir Habilidad de Oficio"},
+					{"label":"Añadir Habilidad de Oficio"}
+					]
+				}]
+		},
+		"Craftsman (Carpentry)": {
+			"name": "Artesano (Carpintero)",
+			"description": "<p>Tienes un auténtico talento creativo. Suma la Habilidad de Oficio asociada a cualquier Carrera en la que entras. Si dicha Habilidad de Oficio ya está en tu Carrera, en lugar de ello puedes comprarla a razón de 5 PX menos por Avance.</p>",
+			"tests": "Oficio (Carpintero)",
+			"effects": [{
+				"name":"Artesano",
+				"scriptData": [
+					{},
+					{"label":"Elegir Habilidad de Oficio"},
+					{"label":"Añadir Habilidad de Oficio"}
+					]
+				}]
+		},
 		"Craftsman (Goldsmith)": {
 			"name": "Artesano (Orfebre)",
 			"description": "<p>Tienes un auténtico talento creativo. Suma la Habilidad de Oficio asociada a cualquier Carrera en la que entras. Si dicha Habilidad de Oficio ya está en tu Carrera, en lugar de ello puedes comprarla a razón de 5 PX menos por Avance.</p>",
 			"tests": "Oficio (Orfebre)",
+			"effects": [{
+				"name":"Artesano",
+				"scriptData": [
+					{},
+					{"label":"Elegir Habilidad de Oficio"},
+					{"label":"Añadir Habilidad de Oficio"}
+					]
+				}]
+		},
+		"Craftsman (Smithing)": {
+			"name": "Artesano (Herrero)",
+			"description": "<p>Tienes un auténtico talento creativo. Suma la Habilidad de Oficio asociada a cualquier Carrera en la que entras. Si dicha Habilidad de Oficio ya está en tu Carrera, en lugar de ello puedes comprarla a razón de 5 PX menos por Avance.</p>",
+			"tests": "Oficio (Herrero)",
 			"effects": [{
 				"name":"Artesano",
 				"scriptData": [
@@ -11420,6 +11678,14 @@
 				}]
 		},
 		"Detect Artefact": {
+			"name": "Detectar artefacto",
+			"description": "<p>Eres capaz de notar cuándo hay magia en un artefacto. Puedes intentar un Chequeo de Intuición por cada artefacto mágico tocado. Si tienes éxito, notas que el objeto es mágico; además, cada NE proporciona también una regla especial específica de las que utiliza el objeto, si las hay. Normalmente, sólo puedes intentar este Chequeo una vez por artefacto tocado.</p>",
+			"tests": "Chequeos de Intuición para detectar artefactos mágicos",
+			"effects": [{
+				"name":"Detectar artefacto"
+				}]
+		},
+		"Detect Artifact": {
 			"name": "Detectar artefacto",
 			"description": "<p>Eres capaz de notar cuándo hay magia en un artefacto. Puedes intentar un Chequeo de Intuición por cada artefacto mágico tocado. Si tienes éxito, notas que el objeto es mágico; además, cada NE proporciona también una regla especial específica de las que utiliza el objeto, si las hay. Normalmente, sólo puedes intentar este Chequeo una vez por artefacto tocado.</p>",
 			"tests": "Chequeos de Intuición para detectar artefactos mágicos",
@@ -11535,6 +11801,30 @@
 					]
 				}]
 		},
+		"Etiquette (Criminals)": {
+			"name": "Etiqueta (Delincuentes)",
+			"description": "<p>Podrás mezclarte socialmente con el grupo elegido mientras vayas vestido de la forma adecuada y actúes con propiedad. Los grupos sociales de ejemplo para este Talento son: delincuentes, sectarios, agremiados, nobles, eruditos, sirvientes y soldados. Si no tienes el Talento, quienes sí lo tienen notarán tu incomodidad en un entorno poco familiar. Esto afecta principalmente a la interpretación del personaje, pero si el DJ lo decide puede suponer una bonificación a los Chequeos de Empatía.</p>",
+			"tests": "Carisma y Cotilleo (Delincuentes)",
+			"effects": [{
+				"name":"Etiqueta",
+				"scriptData": [
+					{},
+					{"label":"Grupo"}
+					]
+				}]
+		},
+		"Etiquette (Guilder)": {
+			"name": "Etiqueta (Gremio)",
+			"description": "<p>Podrás mezclarte socialmente con el grupo elegido mientras vayas vestido de la forma adecuada y actúes con propiedad. Los grupos sociales de ejemplo para este Talento son: delincuentes, sectarios, agremiados, nobles, eruditos, sirvientes y soldados. Si no tienes el Talento, quienes sí lo tienen notarán tu incomodidad en un entorno poco familiar. Esto afecta principalmente a la interpretación del personaje, pero si el DJ lo decide puede suponer una bonificación a los Chequeos de Empatía.</p>",
+			"tests": "Carisma y Cotilleo (Gremio)",
+			"effects": [{
+				"name":"Etiqueta",
+				"scriptData": [
+					{},
+					{"label":"Grupo"}
+					]
+				}]
+		},
 		"Etiquette (Guilder, Scholar)": {
 			"name": "Etiqueta (Gremio, Erudito)",
 			"description": "<p>Podrás mezclarte socialmente con el grupo elegido mientras vayas vestido de la forma adecuada y actúes con propiedad. Los grupos sociales de ejemplo para este Talento son: delincuentes, sectarios, agremiados, nobles, eruditos, sirvientes y soldados. Si no tienes el Talento, quienes sí lo tienen notarán tu incomodidad en un entorno poco familiar. Esto afecta principalmente a la interpretación del personaje, pero si el DJ lo decide puede suponer una bonificación a los Chequeos de Empatía.</p>",
@@ -11547,10 +11837,46 @@
 					]
 				}]
 		},
+		"Etiquette (Labourers)": {
+			"name": "Etiqueta (Trabajadores)",
+			"description": "<p>Podrás mezclarte socialmente con el grupo elegido mientras vayas vestido de la forma adecuada y actúes con propiedad. Los grupos sociales de ejemplo para este Talento son: delincuentes, sectarios, agremiados, nobles, eruditos, sirvientes y soldados. Si no tienes el Talento, quienes sí lo tienen notarán tu incomodidad en un entorno poco familiar. Esto afecta principalmente a la interpretación del personaje, pero si el DJ lo decide puede suponer una bonificación a los Chequeos de Empatía.</p>",
+			"tests": "Carisma y Cotilleo (Trabajadores)",
+			"effects": [{
+				"name":"Etiqueta",
+				"scriptData": [
+					{},
+					{"label":"Grupo"}
+					]
+				}]
+		},
+		"Etiquette (Merchants)": {
+			"name": "Etiqueta (Comerciantes)",
+			"description": "<p>Podrás mezclarte socialmente con el grupo elegido mientras vayas vestido de la forma adecuada y actúes con propiedad. Los grupos sociales de ejemplo para este Talento son: delincuentes, sectarios, agremiados, nobles, eruditos, sirvientes y soldados. Si no tienes el Talento, quienes sí lo tienen notarán tu incomodidad en un entorno poco familiar. Esto afecta principalmente a la interpretación del personaje, pero si el DJ lo decide puede suponer una bonificación a los Chequeos de Empatía.</p>",
+			"tests": "Carisma y Cotilleo (Comerciantes)",
+			"effects": [{
+				"name":"Etiqueta",
+				"scriptData": [
+					{},
+					{"label":"Grupo"}
+					]
+				}]
+		},
 		"Etiquette (Nobles, Servants, Soldiers)": {
 			"name": "Etiqueta (Nobles, Sirvientes, Soldados)",
 			"description": "<p>Podrás mezclarte socialmente con el grupo elegido mientras vayas vestido de la forma adecuada y actúes con propiedad. Los grupos sociales de ejemplo para este Talento son: delincuentes, sectarios, agremiados, nobles, eruditos, sirvientes y soldados. Si no tienes el Talento, quienes sí lo tienen notarán tu incomodidad en un entorno poco familiar. Esto afecta principalmente a la interpretación del personaje, pero si el DJ lo decide puede suponer una bonificación a los Chequeos de Empatía.</p>",
 			"tests": "Carisma y Cotilleo (Nobles, Sirvientes, Soldados)",
+			"effects": [{
+				"name":"Etiqueta",
+				"scriptData": [
+					{},
+					{"label":"Grupo"}
+					]
+				}]
+		},
+		"Etiquette (Servants)": {
+			"name": "Etiqueta (Sirvientes)",
+			"description": "<p>Podrás mezclarte socialmente con el grupo elegido mientras vayas vestido de la forma adecuada y actúes con propiedad. Los grupos sociales de ejemplo para este Talento son: delincuentes, sectarios, agremiados, nobles, eruditos, sirvientes y soldados. Si no tienes el Talento, quienes sí lo tienen notarán tu incomodidad en un entorno poco familiar. Esto afecta principalmente a la interpretación del personaje, pero si el DJ lo decide puede suponer una bonificación a los Chequeos de Empatía.</p>",
+			"tests": "Carisma y Cotilleo (Sirvientes)",
 			"effects": [{
 				"name":"Etiqueta",
 				"scriptData": [
@@ -11601,6 +11927,18 @@
 		},
 		"Fearless": {
 			"name": "Intrépido",
+			"description": "<p>Eres, o bien lo suficientemente valiente o lo suficientemente insensato como para que el miedo a ciertos enemigos se haya convertido en un recuerdo lejano. Mediante un único Chequeo <strong>Normal (+20%)</strong> de <strong>Frialdad</strong>, puedes ignorar cualquier efecto de Intimidar, Miedo o Terror por parte del enemigo especificado cuando te encuentras con él. Los enemigos típicos incluyen hombres bestia, pieles verdes, forajidos, vampiros, vigilantes y brujas.</p>",
+			"tests": "Frialdad para oponerse al Intimidar, Miedo y Terror de tu Enemigo",
+			"effects": [{
+				"name":"Intrépido",
+				"scriptData": [
+					{},
+					{"label":"Activar Intrépido"}
+					]
+				}]
+		},
+		"Fearless (Outlaws)": {
+			"name": "Intrépido (Forajidos)",
 			"description": "<p>Eres, o bien lo suficientemente valiente o lo suficientemente insensato como para que el miedo a ciertos enemigos se haya convertido en un recuerdo lejano. Mediante un único Chequeo <strong>Normal (+20%)</strong> de <strong>Frialdad</strong>, puedes ignorar cualquier efecto de Intimidar, Miedo o Terror por parte del enemigo especificado cuando te encuentras con él. Los enemigos típicos incluyen hombres bestia, pieles verdes, forajidos, vampiros, vigilantes y brujas.</p>",
 			"tests": "Frialdad para oponerse al Intimidar, Miedo y Terror de tu Enemigo",
 			"effects": [{
@@ -11766,7 +12104,7 @@
 					]
 				}]
 		},
-		"GXynn6A0yAWoaKUj": {
+		"Hatred (Skaven)": {
 			"name": "Odio visceral (Skaven)",
 			"description": "<p>Te consume el odio contra algo del Viejo Mundo, tal y como se describe en @UUID[JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.5w5YLPNd6AaU4f85]{Psicología}. Cada vez que adquieres este Talento desarrollas un nuevo odio hacia un nuevo grupo. Ejemplos de lo que podrías elegir incluyen: hombres bestia, pieles verdes, monstruos, forajidos, sigmaritas, muertos vivientes o brujos.</p>",
 			"tests": "Voluntad (resistir Skaven)",
@@ -11954,6 +12292,14 @@
 				"name":"Artesano maestro"
 				}]
 		},
+		"Master Tradesman (Brewer)": {
+			"name": "Artesano maestro (Cervecero)",
+			"description": "<p>Eres excepcionalmente hábil en tu Oficio. Reduces en tantos puntos como tu nivel de Artesano maestro el NE requerido de cualquier Chequeo Prolongado utilizando tu Habilidad de Oficio.</p>",
+			"tests": "Cualquier Chequeo Prolongado de Oficio (Cervecero)",
+			"effects": [{
+				"name":"Artesano maestro"
+				}]
+		},
 		"Master of Disguise": {
 			"name": "Disfraz",
 			"description": "<p>Eres un experto en adoptar la apariencia y los manierismos de otros. Con tan sólo cambios de postura, de expresión facial y un uso cuidadoso de las ropas apropiadas, ya no pareces ser tú mismo sin necesidad de utilizar material de disfraz.</p>",
@@ -11965,6 +12311,17 @@
 		"Menacing": {
 			"name": "Amenazador",
 			"description": "<p>Tienes una presencia imponente. Cuando utilizas la Habilidad Intimidar, obtienes un bonificador al NE igual a tus niveles de Amenazador.</p>",
+			"tests": "Amenazador",
+			"effects": [{
+				"name":"Amenazador",
+				"scriptData": [
+					{"label":"Amenazador"}
+					]
+				}]
+		},
+		"Menacing*": {
+			"name": "Amenazador*",
+			"description": "<p>Tienes una presencia imponente. Cuando utilizas la Habilidad Intimidar, obtienes un bonificador al NE igual a tus niveles de Amenazador.</p><p>*Sólo se aplica cuando @UUID[Actor.x782doqfhFIEgP8V]{Reinhardt} está con @UUID[Actor.U7Y0XEF8Cnat4Y7Q]{Reinholdt}</p>",
 			"tests": "Amenazador",
 			"effects": [{
 				"name":"Amenazador",
@@ -12254,18 +12611,6 @@
 					]
 				}]
 		},
-		"Savant (Tzeentch)": {
-			"name": "Sabio (Tzeentch)",
-			"description": "<p>Eres excepcionalmente docto, y tienes un grado significativo de conocimiento especializado en un único campo de estudio. Automáticamente conoces tantos fragmentos de información correcta como tu nivel de Sabio (Saber) acerca de un tema relevante sin tener que chequear tu Habilidad de Sabiduría académica. Un Chequeo, como siempre, proporcionará más información de la forma habitual, según determine el DJ.</p>",
-			"tests": "Sabiduría académica (Tzeentch)",
-			"effects": [{
-				"name":"Sabio",
-				"scriptData": [
-					{},
-					{"label":"Elegir Sabiduría académica"}
-					]
-				}]
-		},
 		"Savant (Chaos)": {
 			"name": "Sabio (Caos)",
 			"description": "<p>Eres excepcionalmente docto, y tienes un grado significativo de conocimiento especializado en un único campo de estudio. Automáticamente conoces tantos fragmentos de información correcta como tu nivel de Sabio (Saber) acerca de un tema relevante sin tener que chequear tu Habilidad de Sabiduría académica. Un Chequeo, como siempre, proporcionará más información de la forma habitual, según determine el DJ.</p>",
@@ -12290,10 +12635,34 @@
 					]
 				}]
 		},
+		"Savant (Law)": {
+			"name": "Sabio (Derecho)",
+			"description": "<p>Eres excepcionalmente docto, y tienes un grado significativo de conocimiento especializado en un único campo de estudio. Automáticamente conoces tantos fragmentos de información correcta como tu nivel de Sabio (Saber) acerca de un tema relevante sin tener que chequear tu Habilidad de Sabiduría académica. Un Chequeo, como siempre, proporcionará más información de la forma habitual, según determine el DJ.</p>",
+			"tests": "Sabiduría académica (Derecho)",
+			"effects": [{
+				"name":"Sabio",
+				"scriptData": [
+					{},
+					{"label":"Elegir Sabiduría académica"}
+					]
+				}]
+		},
 		"Savant (Magick)": {
 			"name": "Sabio (Magia)",
 			"description": "<p>Eres excepcionalmente docto, y tienes un grado significativo de conocimiento especializado en un único campo de estudio. Automáticamente conoces tantos fragmentos de información correcta como tu nivel de Sabio (Saber) acerca de un tema relevante sin tener que chequear tu Habilidad de Sabiduría académica. Un Chequeo, como siempre, proporcionará más información de la forma habitual, según determine el DJ.</p>",
 			"tests": "Sabiduría académica (Magia)",
+			"effects": [{
+				"name":"Sabio",
+				"scriptData": [
+					{},
+					{"label":"Elegir Sabiduría académica"}
+					]
+				}]
+		},
+		"Savant (Tzeentch)": {
+			"name": "Sabio (Tzeentch)",
+			"description": "<p>Eres excepcionalmente docto, y tienes un grado significativo de conocimiento especializado en un único campo de estudio. Automáticamente conoces tantos fragmentos de información correcta como tu nivel de Sabio (Saber) acerca de un tema relevante sin tener que chequear tu Habilidad de Sabiduría académica. Un Chequeo, como siempre, proporcionará más información de la forma habitual, según determine el DJ.</p>",
+			"tests": "Sabiduría académica (Tzeentch)",
 			"effects": [{
 				"name":"Sabio",
 				"scriptData": [
@@ -12488,6 +12857,30 @@
 			"name": "Zancadas",
 			"description": "<p>Estás versado en atravesar terreno difícil. Ignoras todos los penalizadores al movimiento al atravesar o recorrer un terreno específico. Las especialidades típicas incluyen: costero, desiertos, marismas, rocoso, tundra o bosques.</p>",
 			"tests": "Chequeos de Atletismo para atravesar el Terreno",
+			"effects": [{
+				"name":"Zancadas",
+				"scriptData": [
+					{},
+					{"label":"Escoger terreno"}
+					]
+				}]
+		},
+		"Strider (Coastal)": {
+			"name": "Zancadas (Costa)",
+			"description": "<p>Estás versado en atravesar terreno difícil. Ignoras todos los penalizadores al movimiento al atravesar o recorrer un terreno específico. Las especialidades típicas incluyen: costero, desiertos, marismas, rocoso, tundra o bosques.</p>",
+			"tests": "Chequeos de Atletismo para atravesar terreno costero",
+			"effects": [{
+				"name":"Zancadas",
+				"scriptData": [
+					{},
+					{"label":"Escoger terreno"}
+					]
+				}]
+		},
+		"Strider (Rural)": {
+			"name": "Zancadas (Rural)",
+			"description": "<p>Estás versado en atravesar terreno difícil. Ignoras todos los penalizadores al movimiento al atravesar o recorrer un terreno específico. Las especialidades típicas incluyen: costero, desiertos, marismas, rocoso, tundra o bosques.</p>",
+			"tests": "Chequeos de Atletismo para atravesar terreno rural",
 			"effects": [{
 				"name":"Zancadas",
 				"scriptData": [

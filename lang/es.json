@@ -1474,6 +1474,7 @@
     "Wounds" : "Heridas",
     "RestRecover" : "Descansar y Recuperar Heridas",
     "RestRecoverHealed" : "<strong>{actor}</strong> se ha curado {amount} Heridas.",
+	"Healing": "Sanación",
     "Modifier" : "Modificador",
     "Modifiers" : "Modificadores",
     "Range" : "Alcance",
@@ -2251,7 +2252,7 @@
     "WFRP4E.MagicLores.witchcraft": "Brujería",
     "WFRP4E.MagicLores.daemonology": "Demonología",
     "WFRP4E.MagicLores.necromancy": "Nigromancia",
-    "WFRP4E.MagicLores.undivided" : "Sin dividir",
+    "WFRP4E.MagicLores.undivided" : "Absoluto",
     "WFRP4E.MagicLores.nurgle": "Nurgle",
     "WFRP4E.MagicLores.slaanesh": "Slaanesh",
     "WFRP4E.MagicLores.tzeentch": "Tzeentch",
@@ -2911,6 +2912,7 @@
     "MountError": "Sólo puedes montar criaturas de mayor o igual tamaño.",
 
     "minor": "Menor",
+    "Minor": "Menor",
     "moderate": "Moderada",
     "major": "Mayor",
     "menor": "Menor",
@@ -3231,6 +3233,11 @@
 
     "SETTINGS.TABLE_grimoire-miscast" : "Disfunciones mágicas del grimorio",
     "WFRP4E.LoreDescription.ShadowWoM" : "Cualquier hechizo de protección que lanzas te envuelve en sombras y un humo ondulante que proporciona un +20 a los Chequeos de Movimiento silencioso mientras dura el hechizo. Además, todos los hechizos lanzados desde el Saber de las Sombras que infligen Daño ignoran todos los Puntos de Armadura no mágicos.",
+
+    "EiS.MinorDhar" : "Todos los seres vivos en un radio de tantas yardas como la Voluntad de éste sufren una @Corruption[menor]{Influencia corruptora menor} y una <a class ='table-click fumble-roll' data-table = 'minormis'><i class='fas fa-list'></i> Disfunción menor</a>; se aplica un solo resultado a todos los que están dentro del área afectada.",
+    "EiS.MajorDhar" : "Todos los seres vivos en un radio de tantas yardas como la Voluntad de éste sufren una @Corruption[mayor]{Influencia corruptora mayor} y una <a class ='table-click fumble-roll' data-table = 'majormis'><i class='fas fa-list'></i> Disfunción mayor</a>; se aplica un solo resultado a todos los que están dentro del área afectada.",
+    "EiS.DoubleRolled" : "Cuenta como una @Corruption[minor]{Influencia corruptora menor}.",
+	"Dhar Spellcasting Rules": "Reglas de lanzamiento de Dhar",
 
     "GMTOOLKIT.Message.UnexpectedNoChange" : "Algo inesperado ocurrió. No se han realizado cambios.",
     "GMTOOLKIT.Message.NoChangeMade" : "No se han realizado cambios.",
@@ -3559,6 +3566,10 @@
 
     "GMTOOLKIT.ChatFlavour.Title" : "Editar Mensaje Descriptivo",
     "GMTOOLKIT.ChatFlavour.Placeholder" : "Describe brevemente el contexto del mensaje",
+	
+	"Cancel": "Cancelar",
+	"Update RollTables": "Actualizar tablas",
+	"Update Macros": "Actualizar macros",
 
   "WFRP4NPCGEN.actor.directory.button": "Generar PNJ",
   "WFRP4NPCGEN.compendium.load.title": "Cargando datos",

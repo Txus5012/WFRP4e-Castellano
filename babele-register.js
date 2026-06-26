@@ -114,6 +114,7 @@ game.babele.registerConverters({
         if ( charac == "Willpower") charac = "Voluntad";
         if ( charac == "WIllpower") charac = "Voluntad";
         if ( charac == "Fellowship") charac = "Empatía";
+		if ( charac == "SL") charac = "NE";
 
         if ( characbonus == "Weapon Skill") charac = "Bonificador por Habilidad de Armas";
         if ( characbonus == "Ballistic Skill") charac = "Bonificador por Habilidad de Proyectiles";
@@ -204,6 +205,45 @@ Hooks.on("setup", () => {
 	if (game.folders.getName("Wandering Creature Encounters")) { 
 	  game.folders.getName("Character Creation").name = "Creación de Personaje"
  	  game.folders.getName("Wandering Creature Encounters").name = "Encuentros con criaturas ambulantes"
+	}
+
+	if (game.folders.getName("Road Riffraff")) {
+	  game.folders.getName("Enemy in Shadows").name = "El Enemigo en las Sombras"
+	  game.folders.getName("Enemy in Shadows").name = "El Enemigo en las Sombras"
+	  game.folders.getName("Enemy in Shadows").name = "El Enemigo en las Sombras"
+	  game.folders.getName("Enemy in Shadows").name = "El Enemigo en las Sombras"
+	  game.folders.getName("Enemy in Shadows").name = "El Enemigo en las Sombras"
+	  game.folders.getName("Adventure").name = "Aventura"
+	  game.folders.getName("Adventure").name = "Aventura"
+	  game.folders.getName("Adventure").name = "Aventura"
+	  game.folders.getName("Companion").name = "Compendio"
+	  game.folders.getName("Companion").name = "Compendio"
+	  game.folders.getName("Companion").name = "Compendio"
+	  game.folders.getName("Chapter 1 - Wanted: Bold Adventurers").name = "Capítulo 1 - ¡Se buscan aventureros audaces!"
+	  game.folders.getName("Chapter 2 - Mistaken Identity").name = "Capítulo 2 - Confusión de identidades"
+	  game.folders.getName("Chapter 3 - Heart of the Empire").name = "Capítulo 3 - El corazón del Imperio"
+	  game.folders.getName("Chapter 4 - On To Bögenhafen").name = "Capítulo 4 - Hacia Bögenhafen"
+	  game.folders.getName("Chapter 6 - The Schaffenfest").name = "Capítulo 6 - La Schaffenfest"
+	  game.folders.getName("Chapter 7 - Into The Darkness").name = "Capítulo 7 - Hacia la oscuridad"
+	  game.folders.getName("Chapter 8 - Chasing Shadows").name = "Capítulo 8 - La caza de fantasmas"
+	  game.folders.getName("Chapter 9 - The Darkest Hour").name = "Capítulo 9 - El peor momento"
+	  game.folders.getName("Appendices").name = "Apéndices"
+	  game.folders.getName("Pregens").name = "Pregenerados"
+	  game.folders.getName("Mounts and Vehicles").name = "Monturas y vehículos"
+	  game.folders.getName("Road Wardens").name = "Guardas de caminos"
+	  game.folders.getName("Road Riffraff").name = "Chusma de carretera"
+	  game.folders.getName("Town Troublemakers").name = "Alborotadores de las poblaciones"
+	  game.folders.getName("Daemons").name = "Demonios"
+	  game.folders.getName("On The Road").name = "En la carretera"
+	  game.folders.getName("The Affair of the Hidden Jewel").name = "El caso de la joya oculta"
+	  game.folders.getName("The Pandemonium Carnival").name = "La Feria del Pandemonio"
+	  game.folders.getName("Beast Head").name = "Cabeza de bestia"
+	  game.folders.getName("Daemonic Mien").name = "Aspecto demoníaco"
+	  game.folders.getName("Encounters").name = "Sucesos"
+	  game.folders.get("cmU7EFYGygSPWkaI").name = "El Enemigo en las Sombras"
+	  game.folders.getName("Mishaps").name = "Percances"
+	  game.folders.getName("Physical").name = "Física"
+	  game.folders.getName("Weather").name = "Tiempo"
 	}
 
 	if (game.folders.getName("Toolboxes")) { 
