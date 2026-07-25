@@ -4390,6 +4390,10 @@
 			"name": "Arte ( )",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y caption=false]{Arte}"
 		},
+		"Art (Calligraphy)": {
+			"name": "Arte (Caligrafía)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y caption=false]{Arte}"
+		},
 		"Art (Cartography)": {
 			"name": "Arte (Cartografía)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.tVSESlQWIl8QjK6y caption=false]{Arte}"
@@ -4671,6 +4675,10 @@
 			"name": "Hablar idioma (Khazalid)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
 		},
+		"Language (Kislev)": {
+			"name": "Hablar idioma (Kislev)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
+		},
 		"Language (Magick)": {
 			"name": "Hablar idioma (Lengua de la magia)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
@@ -4712,6 +4720,10 @@
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
 		},
 		"Language (Wastelander)": {
+			"name": "Hablar idioma (Tierras Desoladas)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
+		},
+		"Language (Wasteland)": {
 			"name": "Hablar idioma (Tierras Desoladas)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.xo5U0kL08xCPe6kl caption=false]{Hablar idioma}"
 		},
@@ -5027,6 +5039,10 @@
 			"name": "Tocar ()",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.N63wZOWw6ZLYnePN caption=false]{Tocar}"
 		},
+		"Play (Accordion)": {
+			"name": "Tocar (Acordeón)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.N63wZOWw6ZLYnePN caption=false]{Tocar}"
+		},
 		"Play (Bagpipe)": {
 			"name": "Tocar (Gaita)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.N63wZOWw6ZLYnePN caption=false]{Tocar}"
@@ -5227,6 +5243,10 @@
 			"name": "Lengua secreta (Gremial)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.X2FppoPGuEwJKssM caption=false]{Lengua secreta}"
 		},
+		"Secret Signs (Hunter)": {
+			"name": "Lengua secreta (Cazador)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.X2FppoPGuEwJKssM caption=false]{Lengua secreta}"
+		},
 		"Secret Signs (Ranger)": {
 			"name": "Lengua secreta (Rural)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.X2FppoPGuEwJKssM caption=false]{Lengua secreta}"
@@ -5349,6 +5369,10 @@
 		},
 		"Trade (Engineer)": {
 			"name": "Oficio (Ingeniero)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
+		},
+		"Trade (Engraver)": {
+			"name": "Oficio (Grabador)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.jmFSm7UvmHEq52iu caption=false]{Oficio}"
 		},
 		"Trade (Explosives)": {

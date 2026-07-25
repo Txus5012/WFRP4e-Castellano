@@ -1,0 +1,290 @@
+{
+	"label": "Actores (Pasos Hábiles y Dedos Ligeros)",
+    "folders": {
+        "Contacts": "Contactos",
+		"Hunting animals": "Animales de caza",
+		"Laws, Outlaws, and Bounty Hunters": "Leyes, Forajidos y Cazarrecompensas",
+		"Forger": "Falsificador",
+		"Gambler-Priest": "Sacerdote jugador",
+		"Gamekeeper": "Guardabosques",
+		"Liberator-Priest": "Sacerdote libertador",
+		"Muleskinner": "Arriero",
+		"Pickpocket": "Carterista",
+		"Spells": "Hechizos",
+		"Poacher": "Cazador furtivo",
+		"Ranger-Priest of Taal": "Sacerdote rural de Taal",
+		"Thief-Priest": "Sacerdote ladrón",
+		"Trickster-Priest": "Sacerdote embaucador",
+		"Diseases": "Enfermedades",
+		"Miracles": "Milagros",
+		"Deceiver": "Impostor",
+		"Gamester": "Tahúr",
+		"Night Prowler": "Merodeador Nocturno",
+		"Traits": "Rasgos",
+		"Trappings": "Accesorios"
+    },
+	"entries": {
+		"Arabyan Redhawk": {
+			"name": "Halcón rojo de Arabia",
+			"species": "Halcón rojo de Arabia",
+			"description": "<p>Los halcones rojos de Arabia son apreciados entre la nobleza por sus excelentes habilidades de caza y por el prestigio que aportan. Son orgullosos y feroces pero, una vez entrenados y bien tratados, son extraordinariamente leales. Son tan codiciados en el Viejo Mundo que algunos estados de Arabia han prohibido su exportación. Son principalmente marrones, pero tienen manchas rojas brillantes en las alas. Los ejemplares grandes y bien adiestrados pueden alcanzar precios extraordinariamente altos entre los aficionados adinerados.</p>"
+		},
+		"Dove Hawk": {
+			"name": "Halcón paloma",
+			"species": "Halcón paloma",
+			"description": "<p>Los halcones paloma son los halcones de caza más comunes en el Imperio. No son grandes, pero sí poderosos y pueden derribar fácilmente a un conejo adulto. Tienen plumaje blanco con cresta marrón y se les conoce con el cómico apodo de ‘monjes shallyanos’ por su aspecto.</p>"
+		},
+		"Grootscher Marsh Hound": {
+			"name": "Sabueso de pantano de Grootscher",
+			"species": "Sabueso de pantano de Grootscher",
+			"description": "<p>El sabueso de pantano de Grootscher, o <em>westerlander</em>, es una bestia grande pero peluda, especialmente adecuada para las marismas del norte del Imperio. Su grueso pelaje lo hace resistente al frío y sus grandes patas lo convierten en un excelente nadador. Se utiliza para acechar aves acuáticas e incluso se sabe que bucea para pescar.</p>"
+		},
+		"Hochland Lockhund": {
+			"name": "Perro de caza lockhund",
+			"species": "Perro de caza lockhund",
+			"description": "<p>Los perros de caza <em>lockhund</em> de Hochland son famosos por su tenacidad y pueden usarse para atrapar cualquier animal pequeño.</p>"
+		},
+		"Nordlander Bamse": {
+			"name": "Bamse de Nordland",
+			"species": "Bamse de Nordland",
+			"description": "<p>Un sabueso de tamaño mediano pero afable, el <em>bamse</em> de Nordland es popular mucho más allá de Nordland por su capacidad de cazar durante muchas horas sin desanimarse. El <em>bamse</em> es adecuado para acechar presas rápidas como ciervos y zorros.</p>"
+		},
+		"Bawd": {
+			"name": "Chalán",
+			"species": "Varía",
+			"status": "Bronce 3"
+		},
+		"Charlatan": {
+			"name": "Charlatán",
+			"species": "Varía",
+			"status": "Bronce 5",
+			"items": {
+				"Forged Document": {
+					"name": "Documento falsificado"
+					},
+				"Selection of Coloured Powders and Water": {
+					"name": "Selección de polvos de colores y agua"
+					},
+				"Selection of Trinkets and Charms": {
+					"name": "Selección de baratijas y amuletos"
+					},
+				"Two Sets of Clothing": {
+					"name": "Dos conjuntos de ropa"
+					},
+				"Two Sets of Quality Clothing": {
+					"name": "Dos conjuntos de ropa de calidad"
+					}
+				}
+		},
+		"Fence": {
+			"name": "Perista",
+			"species": "Varía",
+			"status": "Plata 2",
+			"items": {
+				"Eye-glass": {
+					"name": "Lupa"
+					},
+				"Stolen Goods": {
+					"name": "Bienes robados"
+					}
+				}
+		},
+		"Forger": {
+			"name": "Falsificador",
+			"species": "Varía",
+			"status": "Plata 1",
+			"items": {
+				"Coin Mould (any currency)": {
+					"name": "Molde para acuñar monedas (Cualquier moneda)"
+					}
+				}
+		},
+		"Racketeer": {
+			"name": "Pandillero",
+			"species": "Varía",
+			"status": "Bronce 5"
+		},
+		"Safe House Owner (Townsman)": {
+			"name": "Propietario de piso franco (Ciudadano)",
+			"species": "Varía",
+			"status": "Plata 2",
+			"items": {
+				"Sturdy Boots": {
+					"name": "Botas resistentes"
+					},
+				"Modest Townhouse": {
+					"name": "Piso modesto"
+					},
+				"Quill and Ink": {
+					"name": "Pluma y tinta"
+					},
+				"Lunch": {
+					"name": "Almuerzo"
+					}
+				}
+		},
+		"A Typical Bounty Hunter": {
+			"name": "Cazarrecompensas típico",
+			"species": "Varía",
+			"items": {
+				"Net": {
+					"name": "Red"
+					},
+				"Warrant Papers": {
+					"name": "Documentos de orden de arresto"
+					}
+				}
+		},
+		"Outlaw": {
+			"name": "Forajido",
+			"species": "Varía"
+		},
+		"Outlaw Chief": {
+			"name": "Jefe de forajidos",
+			"species": "Varía",
+			"items": {
+				"Band of Outlaws": {
+					"name": "Banda de forajidos"
+					},
+				"Riding Horse with Saddle and Tack": {
+					"name": "Caballo con montura y aperos"
+					}
+				}
+		},
+		"Watch Sergeant": {
+			"name": "Sargento de la Guardia",
+			"species": "Varía",
+			"items": {
+				"Copper Badge": {
+					"name": "Placa de cobre"
+					},
+				"Lantern and Pole": {
+					"name": "Linterna y soporte"
+					},
+				"Symbol of Rank": {
+					"name": "Símbolo de rango"
+					},
+				"Lunch": {
+					"name": "Almuerzo"
+					}
+				}
+		},
+		"Watchman": {
+			"name": "Guardia",
+			"species": "Varía",
+			"items": {
+				"Copper Badge": {
+					"name": "Placa de cobre"
+					},
+				"Lantern and Pole": {
+					"name": "Linterna y soporte"
+					},
+				"Lunch": {
+					"name": "Almuerzo"
+					}
+				}
+		},
+		"Albrecht ‘the Fish’": {
+			"name": "Albrecht ‘el Pez’",
+			"species": "Humano",
+			"status": "Plata 3",
+			"gmnotes": "<p>Con un apodo que proviene de su antigua pertenencia a la banda que gobierna la mitad de los muelles de @UUID[Compendium.wfrp4e-altdorf.journals.JournalEntry.rSRadYoaNXkEq8gs]{Altdorf}, Albrecht es un hombre enjuto, con ojos mezquinos y una mueca perpetua. Nativo de las Tierras Desoladas, se marchó a la capital del Imperio en su adolescencia. Incluso entonces era una estrella en ascenso dentro del ‘Gremio del que nunca hemos oído hablar’ y fue enviado a supervisar sus intereses en Altdorf. No habla de lo que causó su regreso a Marienburgo dos décadas después, pero el tatuaje de una daga ensangrentada inscrita sobre el tatuaje de un pez en el lado izquierdo de su cuello implica una dramática separación. Dicho esto, aún mantiene amplios contactos en Altdorf y más allá, y parece mantener una posición de autoridad sobre la pequeña banda de miembros de los Peces que operan en Marienburgo. Sus conexiones han demostrado ser muy valiosas, ya que es capaz de poner sus manos en muchos productos raros (e ilegales) a través de su red de conocidos, incluyendo el valioso y adictivo @UUID[Compendium.wfrp4e-core.items.Item.qfd01sggD9xbCuJY]{loto negro}.</p><p>Albrecht conoce todos los vicios que acosan a las clases bajas y puede proporcionarlos o ponerse en contacto con alguien que pueda hacerlo. Es violento y no tiene piedad. No consume su propia mercancía, ya que considera a los traficantes y adictos a los que vende como débiles y hace poco para disimular su desprecio. A quienes confían en sus suministros de @UUID[Compendium.wfrp4e-core.items.Item.5fowsr8vslorjeB2]{raíz de mandrágora} o vapor carmesí les corta el suministro sin miramientos si no pueden pagar sus precios. Del mismo modo, los comerciantes que le disputen incluso el trato más pequeño, se enfrentan a un sangriento castigo.</p><p>Albrecht se ha convertido en un aliado de confianza de Adalbert Henschmann, de la Liga de Caballeros Emprendedores. Sin embargo, no se conforma con servir de intermediario por mucho más tiempo. Sus ojos están puestos en un premio mucho mayor. Ha construido una fuerte alianza con el peligroso Grossbart, un influyente miembro del Círculo Interior de la Liga que está ansioso por ejercer un mayor poder en el futuro.</p><p>Mientras que el objetivo final de Albrecht es desbancar a Henschmann, su objetivo actual es el boticario kislevita, Dmitri Hrodovsky. Entre los dos, representan casi tres cuartas partes de las importaciones de raíz extraña, delicia de Ranald y raíz de mandrágora de la ciudad. Es Albrecht, con la repugnante influencia de Grossbart, quien está preparando un movimiento por parte de un chantajista estaliano, Miguelito Núñez, para dominar el comercio y eliminar otras fuentes de loto negro en la ciudad. Si esta operación tiene éxito, Albrecht planea marginar al kislevita, después de lo cual cree que su posición en los bajos fondos se volverá completamente inexpugnable.</p>"
+		},
+		"August Sternwachter": {
+			"species": "Perro",
+			"species": "Humano",
+			"status": "Plata 3",
+			"items": {
+				"Eye-glass": {
+					"name": "Lupa"
+					},
+				"August owns a modest house in Altdorf’s Fishemarkt district in which he keeps a small library of book": {
+					"name": "Una modesta casa en el barrio de Fishemarkt de Altdorf en la que guarda una pequeña biblioteca y un cartera de contactos escritos en su propio código secreto"
+					}
+				},
+			"gmnotes": "<p>August Sternwachter procede de los von Murmelhausen, una familia de la nobleza de Ostland cuyas tierras fueron confiscadas por el Emperador Luitpold en el 2491 CI. Nunca se supo por qué el Emperador actuó así, pero se extendieron rumores de que miembros de la familia von Murmelhausen habían practicado la demonología.</p><p>La familia se desmoronó. August, que entonces tenía diecisiete años, huyó a @UUID[Compendium.wfrp4e-altdorf.journals.JournalEntry.rSRadYoaNXkEq8gs]{Altdorf}. Rápido de reflejos y poseedor de un serio resentimiento hacia las autoridades del Imperio, August se dedicó a la delincuencia. Aunque carecía de derecho a un título o tierra, tenía el porte, la educación y los modales de un noble. Tales personas pueden ser valiosas entre el mundo criminal y la sociedad respetable, por lo que August aprendió las habilidades de un perista y se convirtió en un colaborador útil de la banda de los Peces, ayudándoles a trasladar sus mercancías de contrabando a comerciantes discretos en el barrio de Neuesgeldt de Altdorf. Sus primeros trabajos consistieron en recibir sacos de lana de los pastores de los Hagercrybs y entregarlos a los comerciantes de lana de Jaeger para su venta a través de su filial en Nuln.</p><p>August estuvo dispuesto a hacer una gran cantidad de trabajo de campo durante su ascenso en los bajos fondos En el apogeo de su poder, los Peces establecieron varias pequeñas operaciones en ciudades a lo largo del Reik y Talabec. Tener un negociador culto en su compañía era útil, por lo que llevaban a August a menudo. Los matones de Altdorf suelen estar más que contentos de dejar que alguien se encargue de la parte administrativa de las negociaciones y August sacó ventaja de todo esto. Trabajó duro para encontrar gente entre las clases criminales y comerciantes de la ciudad con la condición de que trabajasen para los Peces, pero también se reservó algunos contactos nuevos.</p><p>Tras los Grandes Disturbios de la Niebla del 2506 CI, los Peces sufrieron un declive del que aún luchan por recuperarse. Están sin un líder claro y sus conexiones con células en otros pueblos y ciudades son cada vez más tenues. August trabaja duro para evitar que las conexiones existentes se desmoronen, pero también protege a sus contactos más reservados de la exposición a los arregladores y chantajistas de los Peces, al menos hasta que elijan a un nuevo líder y muestren una estabilidad duradera.</p><p>August siempre está dispuesto a conocer nuevas oportunidades para hacer contactos con otros peristas en pueblos y ciudades de los ríos Reik, Talabec y Stir.</p>"
+		},
+		"Brunner": {
+			"species": "Humano",
+			"items": {
+				"Fate Points: 2": {
+					"name": "Puntos de Destino: 2"
+					},
+				"‘Drakesmalice’": {
+					"description": "La espada mágica que utiliza Brunner es una reliquia de la familia von Drakenburg, una casa noble caída en desgracia. El propio Brunner es un von Drakenburg, pero no reivindica abiertamente el título. La Drakesmalice estalla en llamas cuando Brunner la empuña (+1 de daño, los objetivos sufren 1 Estado de @Condition[Ardiendo])."
+					},
+				"‘The Headsman’": {
+					"name": "‘El Verdugo’",
+					"description": "Dentada para facilitar las decapitaciones."
+					},
+				"Bandolier of Knives": {
+					"name": "Bandolera de cuchillos"
+					},
+				"Leather Boots (with steel toes)": {
+					"name": "Botas de cuero (con punteras de acero)"
+					},
+				"Hatchet": {
+					"name": "Hacha"
+					},
+				"Light Warhorse (‘Fiend’)": {
+					"name": "Caballo de guerra ligero (‘Diablillo’)",
+					"description": "<p>@UUID[Compendium.wfrp4e-eis.actors.QhEFgUrPzF2NNWoS]{Caballo de guerra ligero} (o 'Corcel')</p><p>Capacidad de carga: 18</p>",
+					"gmdescription": "<p>Este precio puede duplicarse o triplicarse en tiempos de tensión o de guerra, en que nadie quiere desprenderse del material militar.</p>"
+					},
+				"Draught Horse (‘Paychest’)": {
+					"name": "Caballo de tiro (‘Arcas’)",
+					"description": "<p>@UUID[Compendium.wfrp4e-eis.actors.Actor.guaFC5d5WK8ExDhk]{Caballo de tiro}</p><p>Capacidad de carga: 20</p>"
+					},
+				"Warrant Papers": {
+					"name": "Documentos de orden judicial"
+					},
+				"5d10 gc": {
+					"name": "5d10 co"
+					}
+				},
+			"gmnotes": "<p><strong>Ambición a corto plazo</strong>: cumplir con la orden de arresto vigente.<br><strong>Ambición a largo plazo</strong>: mantener la reputación de profesionalidad ejemplar.<br><strong>Motivo</strong>: sobrevivir el tiempo suficiente para ganar una fortuna.</p><P>El cazarrecompensas más famoso del Viejo Mundo es un hombre sombrío conocido simplemente como Brunner. Los forajidos le temen por su determinación inquebrantable, su agudo instinto y su brutalidad. Se dice que ningún bandido ha escapado jamás de Brunner. Las clases cultas de Tilea lo conocen a través de una serie de panfletos inspirados en sus hazañas, escritos por un escritor autoexiliado de Altdorf, Ehrhard Stoecker, la única persona que se cree que ha sido realmente su amigo.</p><p>Brunner es un hombre de pocas palabras y cuando habla suele ser para exigir algo. Tiene un humor seco y solo ocasionalmente esboza una sonrisa, normalmente después de beber una copa de <em>schnapps</em>.</p><p>Sin embargo, y a pesar de su crueldad, Brunner tiene un agudo sentido de la justicia. La mayoría de los forajidos a los que persigue son villanos verdaderamente despreciables que merecen su castigo. Brunner no se deja impresionar por los halagos y nunca concede clemencia, por mucho que el forajido se lo suplique.</p><p>Quienes han visto a Brunner en acción afirman que irradia un aura de invencibilidad. En combate, Brunner prefiere disparar a sus enemigos con una pistola ballesta de repetición montada en la muñeca antes de enfrentarse a ellos en combate cuerpo a cuerpo. Si tiene la oportunidad, ataca por sorpresa con su pistola de pólvora negra. Su percepción del campo de batalla y una cuidadosa planificación le permiten a Brunner utilizar el entorno a su favor. Está dispuesto a retirarse y reagruparse si la lucha se vuelve en su contra, pero siempre vuelve.</p><p>Brunner es una figura alta e imponente, de complexión musculosa. Suele llevar un yelmo de acero que solo deja al descubierto su boca y a veces incluso come y bebe sin quitárselo. Es un arsenal andante de armas, la mayoría de las cuales fueron capturadas a enemigos anteriormente abatidos. Su armadura de acero está ennegrecida para pasar desapercibida y la lleva sobre una cota de malla. Brunner tiene el pelo oscuro y corto, y va bien afeitado o con barba de tres días, dependiendo del tiempo que lleve de caza.</p>"
+		},
+		"Father Pedragar": {
+			"name": "Padre Pedragar",
+			"species": "Humano",
+			"items": {
+				"Amber Periapt": {
+					"name": "Abalorio de ámbar",
+					"description": "Amuleto mágico que otorga @UUID[Compendium.wfrp4e-core.items.Item.Bvd2aZ0gQUXHfCTh]{Custodiado 10+}",
+					"effects": [{
+						"name":"Abalorio de ámbar",
+						"scriptData": [
+							{"label":"Otorga Custodiado 10"}
+							]
+						}]
+					},
+				"Bearskin Headdress and Cloak": {
+					"name": "Tocado y capa de piel de oso"
+					}
+				},
+			"gmnotes": "<p>El padre Pedragar es un célebre sacerdote de Taal del extremo oriental del bosque Drakwald, donde se mueve con las fases de la luna entre tres lugares sagrados. Su deber es dirigir los ritos para los taalitas locales y cuidar de los santuarios sagrados. Mientras, camina por la tierra con los sacerdotes locales, la gente rural y del campo, recopilando noticias y cotilleos por el camino. Pedragar es sorprendentemente hablador y genial, aunque se muestra cauteloso cuando se le presiona sobre asuntos serios o amenazas a los yacimientos de Taal.</p><p>La mayoría de la gente del Drakwald oriental conoce a Pedragar de vista. Lleva una piel de oso pardo como tocado, con la tradicional cornamenta que marca su condición de sacerdote. Empuña un báculo de roble con forma de rayo rematado en forma de cabeza de ciervo que talló como iniciado. Luce una tupida barba gris y espesas cejas erizadas sobre ojos grises como los de los halcones.</p><p>Pegradar nació en el pueblo de Drakenburgo hace más de cuarenta y siete veranos. Era amigo de la infancia de Markus Wulfhart, el cazador que se convirtió en Mariscal cazador de Karl-Franz. Los dos están unidos en el dolor por el destino de su pueblo natal, que fue arrasado por un gigante quebrantahuesos de un solo ojo. Wulfhart cazó a aquel cíclope en el Drakwald, pero tanto él como Pedragar aún mantienen un odio persistente hacia los monstruos antinaturales. El sacerdote de Taal cree que Wulfhart está bendecido por el Señor de la Naturaleza y trata de persuadirlo para que se una al sacerdocio.</p><p>El padre Pedragar sigue fielmente las restricciones de Taal. Vive para proteger los lugares sagrados de los asaltantes y busca comprender los movimientos y motivaciones de los hombres bestia que infestan el Drakwald. Está ansioso por encontrar al Señor de las Bestias Khazrak y aprender más sobre el extraño Garralunar, el Príncipe Lunático.</p>"
+		},
+		"Gunna von Sperren": {
+			"species": "Humano",
+			"status": "Plata 3",
+			"items": {
+				"Impeccable dress in the latest fashion": {
+					"name": "Vestimenta impecable a la última moda"
+					},
+				"Pet Hyenadon": {
+					"name": "Mascota hienadón"
+					},
+				"Purse containing 20 Silver Shillings": {
+					"name": "Monedero con 20 cp"
+					},
+				"Repeater Pistol loaded with Aqshy-Infused Powder (see Up In Arms": {
+					"name": "Pistola de repetición cargada con pólvora infundida con Aqshy (véase ¡A las armas!)"
+					},
+				"page 101-102)": {
+					"name": "pág. 101-102)"
+					}
+				},
+			"gmnotes": "<p>Desde su grandiosa mansión en el barrio de Norsaugen de Hargendorf, la Reina Contrabandista dirige su imperio, dueña de una compleja red de bandas de contrabandistas, traficantes y demoledores. El contrabando rara vez llega a las costas de Nordland sin su bendición... y una cuantiosa ‘donación’ a sus arcas.</p><p>Gunna von Sperren creció limpiando pescado en el mercado de Seegabe de Hargendorf. Siempre fue astuta, ambiciosa y amoral. Antes de cumplir los dieciocho, fue haciendo chantajes para casarse con el anciano Elmer von Sperren, quien dirigía una pequeña empresa comercial de transporte de carga para la Casa Akkerman de Marienburgo. Como respetable esposa de un mercader, Gunna fundó su imperio criminal lentamente antes de que Elmer muriera a causa de la picadura de un gran escorpión marino que, de alguna manera, había ido a parar a su habitación.</p><p>Un comprador puede obtener casi cualquier cosa de la Reina Contrabandista con suficiente oro como para pagarlo. Su empresa consta principalmente de siete anillos de contrabando, cada uno supervisado por uno de sus hijos adultos. Estas bandas aseguran y varían el contrabando, ocultándolo de las autoridades y garantizando un paso seguro a través del Imperio mediante carros y barcazas comunes. Varias bandas importan mercancías sujetas a impuestos o restringidas, como el brandy bretoniano, mientras que otra trafica con hierbas exóticas y objetos robados en el bosque de Laurelorn. Una banda de contrabandistas organizada por su hija mayor Edelyn trabaja con los contactos más oscuros de la Casa Akkerman en Marienburgo, como su proveedora de loto negro, aunque ellos lo denominan como ‘el Lascar’. Este contacto desea forjar una conexión con Gunna para obtener artefactos ilícitos y corruptores. Su pérfido hijo Esben trata personalmente con figuras sombrías en las alcantarillas bajo Erengrad, que desean cautivos vivos para transportarlos a lugares desconocidos. Para más detalles sobre estas operaciones, véase @UUID[Compendium.wfrp4e-salzenmund.journals.JournalEntry.oijzlcgtcrCiH1PM.JournalEntryPage.XAm5SpjUV9Pon4UI]{Redes de contrabando}.</p><p>Nadie olvida hacer una visita a la ‘corte’ de Gunna von Sperren en Hargendorf. Los juglares tocan aires gentiles, mientras sus hijos se mezclan con capitanes navales consumados y varios de los miembros de la acobardada familia von Hargenfels, que nominalmente gobierna la Baronía. La Reina es conocida por sus modales superiores, refiriéndose a sí misma con el clásico y regio ‘nosotros’ y rara vez se digna a hablar con alguien que considere inferior. Viste con caros atuendos más propios de la nobleza de Reikland que de un líder del crimen organizado de Nordland. Siempre va acompañada de su mascota hienadón, hallada en una galera bretoniana naufragada que regresaba de Lustria.</p>"
+		}
+	}
+}

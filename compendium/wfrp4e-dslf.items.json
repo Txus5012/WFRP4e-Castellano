@@ -1,0 +1,799 @@
+{
+	"label": "Objetos (Pasos Hábiles y Dedos Ligeros)",
+    "folders": {
+        "Careers": "Carreras",
+		"Burglar": "Ratero",
+		"Embezzler": "Desfalcador",
+		"Forger": "Falsificador",
+		"Gambler-Priest": "Sacerdote jugador",
+		"Gamekeeper": "Guardabosques",
+		"Liberator-Priest": "Sacerdote libertador",
+		"Muleskinner": "Arriero",
+		"Pickpocket": "Carterista",
+		"Spells": "Hechizos",
+		"Poacher": "Cazador furtivo",
+		"Ranger-Priest of Taal": "Sacerdote rural de Taal",
+		"Thief-Priest": "Sacerdote ladrón",
+		"Trickster-Priest": "Sacerdote embaucador",
+		"Diseases": "Enfermedades",
+		"Miracles": "Milagros",
+		"Deceiver": "Impostor",
+		"Gamester": "Tahúr",
+		"Night Prowler": "Merodeador Nocturno",
+		"Traits": "Rasgos",
+		"Trappings": "Accesorios"
+    },
+	"entries": {
+		"Driver": {
+			"name": "Conductor",
+			"skills": ["Criar animales","Carisma animal","Conducir","Aguante","Cotilleo","Sabiduría académica (Local)","Cuerpo a cuerpo (Básica)","Percepción","A distancia (Enmarañante)","Montar (Caballo)"],
+			"talents": ["Afinidad animal","Mano dura","Orientarse","Tenaz"],
+			"trappings" : ["Guantes","Látigo","Ropa de viaje","Sombrero de cuero"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.xq3g1ukhk4RFHNSF.JournalEntryPage.rsigpSs4mNa9JUhF]{Arriero}</p>"
+		},
+		"Muleskinner": {
+			"name": "Arriero",
+			"skills": ["Criar animales","Carisma animal","Conducir","Aguante","Cotilleo","Sabiduría académica (Local)","Cuerpo a cuerpo (Básica)","Percepción","A distancia (Enmarañante)","Montar (Caballo)","A distancia (Arco)","Adiestrar animales (Cualquiera)","Esquivar","Hablar idioma (Cualquiera)","Orientación","Supervivencia"],
+			"talents": ["Intrépido (Cualquiera)","Sangre fría","Viajero curtido","Zancadas (Cualquiera)"],
+			"trappings" : ["Sombrero de calidad","Tienda"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.xq3g1ukhk4RFHNSF.JournalEntryPage.rsigpSs4mNa9JUhF]{Arriero}</p>"
+		},
+		"Caravan Guide": {
+			"name": "Guía de caravanas",
+			"skills": ["Criar animales","Carisma animal","Conducir","Aguante","Cotilleo","Sabiduría académica (Local)","Cuerpo a cuerpo (Básica)","Percepción","A distancia (Enmarañante)","Montar (Caballo)","A distancia (Arco)","Adiestrar animales (Cualquiera)","Esquivar","Hablar idioma (Cualquiera)","Orientación","Supervivencia","Frialdad","Intuición","Movimiento silencioso (Rural)","Oficio (Carpintero)"],
+			"talents": ["Denodado","Equitación acrobática","Etiqueta (Gremio)","Olfato para los problemas"],
+			"trappings" : ["Animal de carga","Caballo de monta y arreos","Mapa","Ropa de viaje de calidad"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.xq3g1ukhk4RFHNSF.JournalEntryPage.rsigpSs4mNa9JUhF]{Arriero}</p>"
+		},
+		"Caravan Master": {
+			"name": "Maestro caravanero",
+			"skills": ["Criar animales","Carisma animal","Conducir","Aguante","Cotilleo","Sabiduría académica (Local)","Cuerpo a cuerpo (Básica)","Percepción","A distancia (Enmarañante)","Montar (Caballo)","A distancia (Arco)","Adiestrar animales (Cualquiera)","Esquivar","Hablar idioma (Cualquiera)","Orientación","Supervivencia","Frialdad","Intuición","Movimiento silencioso (Rural)","Oficio (Carpintero)","Mando","Regatear"],
+			"talents": ["Inspirador","Leer y escribir","Negociador","Numismático"],
+			"trappings" : ["Caravana","Establo de animales de carga"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.xq3g1ukhk4RFHNSF.JournalEntryPage.rsigpSs4mNa9JUhF]{Arriero}</p>"
+		},
+		"XfqWKmYwafPgef8x": {
+			"name": "Merodeador",
+			"skills": ["Atletismo","Escalar","Frialdad","Esquivar","Aguante","Intuición","Percepción","Actuar (Payasadas)","Prestidigitación", "Movimiento silencioso (Urbano)"],
+			"talents": ["¡A correr!","Delincuente","Gato callejero","Manos rápidas"],
+			"trappings": ["Chaleco de cuero","Palanqueta","Saco"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.Irryfr7EthG42fzj.JournalEntryPage.bYlRP36tZIsbFokB]{Carterista}</p>"
+		},
+		"d16atRZqVeFMh4ou": {
+			"name": "Ladrón",
+			"skills": ["Atletismo","Escalar","Frialdad","Esquivar","Aguante","Intuición","Percepción","Actuar (Payasadas)","Prestidigitación", "Movimiento silencioso (Urbano)","Tasar","Cotilleo","Sabiduría académica (Local)","Forzar Cerraduras","Lengua secreta (Ladrón)","Prestidigitación"],
+			"talents": ["Allanamiento de morada","Etiqueta (Delincuentes)","Manos rápidas","Sombra"],
+			"trappings": ["Herramientas de un Oficio (Ladrón)","Soga, 10 yardas"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.Irryfr7EthG42fzj.JournalEntryPage.bYlRP36tZIsbFokB]{Carterista}</p>"
+		},
+		"Zvna0R6SZ8wjn4xs": {
+			"name": "Maestro ladrón",
+			"skills": ["Atletismo","Escalar","Frialdad","Esquivar","Aguante","Intuición","Percepción","Actuar (Payasadas)","Prestidigitación", "Movimiento silencioso (Urbano)","Tasar","Cotilleo","Sabiduría académica (Local)","Forzar Cerraduras","Lengua secreta (Ladrón)","Prestidigitación","Sobornar","Jugar","Intimidar","A distancia (Ballesta)"],
+			"talents": ["Dedos ágiles","Esquivador","Experto en trampas","Visión nocturna"],
+			"trappings": ["Pistola ballesta","10 virotes"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.Irryfr7EthG42fzj.JournalEntryPage.bYlRP36tZIsbFokB]{Carterista}</p>"
+		},
+		"ptnU0hIz4wo4Z2ja": {
+			"name": "Ratero",
+			"skills": ["Atletismo","Escalar","Frialdad","Esquivar","Aguante","Intuición","Percepción","Actuar (Payasadas)","Prestidigitación", "Movimiento silencioso (Urbano)","Tasar","Cotilleo","Sabiduría académica (Local)","Forzar Cerraduras","Lengua secreta (Ladrón)","Prestidigitación","Sobornar","Jugar","Intimidar","A distancia (Ballesta)","Carisma","Poner trampas"],
+			"talents": ["Caer como los gatos","Escalador","Piernas recias","Rico"],
+			"trappings": ["Garfio de escalada","Máscara o antifaces","Ropas oscuras"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.Irryfr7EthG42fzj.JournalEntryPage.bYlRP36tZIsbFokB]{Carterista}</p>"
+		},
+		"cXhylzobyj69ozGZ": {
+			"name": "Merodeador",
+			"skills": ["Sobornar","Carisma","Frialdad","Esquivar","Aguante","Tasar","Cotilleo","Regatear","Intuición","Percepción"],
+			"talents": ["¡A correr!","Desfalcar","Leer y escribir","Sobornador"],
+			"trappings": ["Chaleco de cuero","Palanqueta","Saco"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.Irryfr7EthG42fzj.JournalEntryPage.8QLgWKFpUXtJTrqb]{Desfalcador}</p>"
+		},
+		"fswEMzE9YAIDZjE7": {
+			"name": "Ladrón",
+			"skills": ["Sobornar","Carisma","Frialdad","Esquivar","Aguante","Tasar","Cotilleo","Regatear","Intuición","Percepción","Tasar","Cotilleo","Sabiduría académica (Local)","Forzar Cerraduras","Lengua secreta (Ladrón)","Prestidigitación"],
+			"talents": ["Etiqueta (Gremio)","Manos rápidas","Numismático","Parloteo"],
+			"trappings": ["Herramientas de un Oficio (Ladrón)","Soga, 10 yardas"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.Irryfr7EthG42fzj.JournalEntryPage.8QLgWKFpUXtJTrqb]{Desfalcador}</p>"
+		},
+		"xLPL3LGABMvcdHnm": {
+			"name": "Maestro ladrón",
+			"skills": ["Sobornar","Carisma","Frialdad","Esquivar","Aguante","Tasar","Cotilleo","Regatear","Intuición","Percepción","Tasar","Cotilleo","Sabiduría académica (Local)","Forzar Cerraduras","Lengua secreta (Ladrón)","Prestidigitación","Sobornar","Jugar","Intimidar","A distancia (Ballesta)"],
+			"talents": ["Dedos ágiles","Espabilado","Genio aritmético","Negociador"],
+			"trappings": ["Pistola ballesta","10 virotes"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.Irryfr7EthG42fzj.JournalEntryPage.8QLgWKFpUXtJTrqb]{Desfalcador}</p>"
+		},
+		"TLZBRVP4QZ7cscyL": {
+			"name": "Ratero",
+			"skills": ["Sobornar","Carisma","Frialdad","Esquivar","Aguante","Tasar","Cotilleo","Regatear","Intuición","Percepción","Tasar","Cotilleo","Sabiduría académica (Local)","Forzar Cerraduras","Lengua secreta (Ladrón)","Prestidigitación","Sobornar","Jugar","Intimidar","A distancia (Ballesta)","Carisma","Poner trampas"],
+			"talents": ["Intrigante","Orador experto","Rico","Suerte"],
+			"trappings": ["Garfio de escalada","Máscara o antifaces","Ropas oscuras"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.Irryfr7EthG42fzj.JournalEntryPage.8QLgWKFpUXtJTrqb]{Desfalcador}</p>"
+		},
+		"M6yH4rd27wkHIiM3": {
+			"name": "Merodeador",
+			"skills": ["Atletismo","Escalar","Frialdad","Esquivar","Aguante","Intuición","Sabiduría académica (Local)","Cuerpo a cuerpo (Pelea)","Percepción","Movimiento silencioso (Urbano)"],
+			"talents": ["¡A correr!","Delincuente","Gato callejero","Golpe conmocionador"],
+			"trappings": ["Chaleco de cuero","Palanqueta","Saco"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.Irryfr7EthG42fzj.JournalEntryPage.4qcXrvu4kH4Aa6nx]{Ratero}</p>"
+		},
+		"Dy610VDYOjqvncVU": {
+			"name": "Ladrón",
+			"skills": ["Atletismo","Escalar","Frialdad","Esquivar","Aguante","Intuición","Sabiduría académica (Local)","Cuerpo a cuerpo (Pelea)","Percepción","Movimiento silencioso (Urbano)","Tasar","Cotilleo","Sabiduría académica (Local)","Forzar Cerraduras","Lengua secreta (Ladrón)","Prestidigitación"],
+			"talents": ["Allanamiento de morada","Etiqueta (Delincuentes)","Manos rápidas","Sombra"],
+			"trappings": ["Herramientas de un Oficio (Ladrón)","Soga, 10 yardas"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.Irryfr7EthG42fzj.JournalEntryPage.4qcXrvu4kH4Aa6nx]{Ratero}</p>"
+		},
+		"jHKSjOIYMw2fuK0j": {
+			"name": "Maestro ladrón",
+			"skills": ["Atletismo","Escalar","Frialdad","Esquivar","Aguante","Intuición","Sabiduría académica (Local)","Cuerpo a cuerpo (Pelea)","Percepción","Movimiento silencioso (Urbano)","Tasar","Cotilleo","Sabiduría académica (Local)","Forzar Cerraduras","Lengua secreta (Ladrón)","Prestidigitación","Sobornar","Jugar","Intimidar","A distancia (Ballesta)"],
+			"talents": ["Dedos ágiles","Esquivador","Identidad secreta","Visión nocturna"],
+			"trappings": ["Pistola ballesta","10 virotes"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.Irryfr7EthG42fzj.JournalEntryPage.4qcXrvu4kH4Aa6nx]{Ratero}</p>"
+		},
+		"rbz9VWEvbgq8DWkZ": {
+			"name": "Ratero",
+			"skills": ["Atletismo","Escalar","Frialdad","Esquivar","Aguante","Intuición","Sabiduría académica (Local)","Cuerpo a cuerpo (Pelea)","Percepción","Movimiento silencioso (Urbano)","Tasar","Cotilleo","Sabiduría académica (Local)","Forzar Cerraduras","Lengua secreta (Ladrón)","Prestidigitación","Sobornar","Jugar","Intimidar","A distancia (Ballesta)","Carisma","Poner trampas"],
+			"talents": ["Caer como los gatos","Escalador","Piernas recias","Rico"],
+			"trappings": ["Garfio de escalada","Máscara o antifaces","Ropas oscuras"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.Irryfr7EthG42fzj.JournalEntryPage.4qcXrvu4kH4Aa6nx]{Ratero}</p>"
+		},
+		"Scrumper": {
+			"name": "Ladrón de animales",
+			"skills": ["Sobornar","Escalar","Esquivar","Regatear","Sabiduría académica (Bestias)","Supervivencia","Percepción","A distancia (Honda)","Poner trampas","Movimiento silencioso (Rural)"],
+			"talents": ["¡A correr!","Experto en trampas","Pescador","Zancadas (Cualquiera)"],
+			"trappings": ["Caña y sedal","Capa","Honda","10 balas de piedra","Selección de trampas para animales"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.JX32uiJp0VxPx5UH.JournalEntryPage.FKz1Y4Kbgn1fCiKT]{Cazador furtivo}</p>"
+		},
+		"Poacher": {
+			"name": "Cazador furtivo",
+			"skills": ["Sobornar","Escalar","Esquivar","Regatear","Sabiduría académica (Bestias)","Supervivencia","Percepción","A distancia (Honda)","Poner trampas","Movimiento silencioso (Rural)","A distancia (Arco)","Aguante","Atletismo","Cuerpo a cuerpo (Básica)","Frialdad","Rastrear"],
+			"talents": ["Errante","Proyectil infalible","Puntería","Vista excelente"],
+			"trappings": ["Arco y flechas","Saco de dormir","Tienda"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.JX32uiJp0VxPx5UH.JournalEntryPage.FKz1Y4Kbgn1fCiKT]{Cazador furtivo}</p>"
+		},
+		"Master Poacher": {
+			"name": "Maestro de cazadores furtivos",
+			"skills": ["Sobornar","Escalar","Esquivar","Regatear","Sabiduría académica (Bestias)","Supervivencia","Percepción","A distancia (Honda)","Poner trampas","Movimiento silencioso (Rural)","A distancia (Arco)","Aguante","Atletismo","Cuerpo a cuerpo (Básica)","Frialdad","Rastrear","Adiestrar animales (Cualquiera)","Criar animales","Montar (Caballo)","Orientación"],
+			"talents": ["Delincuente","Disparo infalible","Disparo rápido","Sentidos desarrollados (Cualquiera)"],
+			"trappings": ["Arma de calidad","Sabueso o halcón de caza"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.JX32uiJp0VxPx5UH.JournalEntryPage.FKz1Y4Kbgn1fCiKT]{Cazador furtivo}</p>"
+		},
+		"Champion Poacher": {
+			"name": "Campeón de caza furtiva",
+			"skills": ["Sobornar","Escalar","Esquivar","Regatear","Sabiduría académica (Bestias)","Supervivencia","Percepción","A distancia (Honda)","Poner trampas","Movimiento silencioso (Rural)","A distancia (Arco)","Aguante","Atletismo","Cuerpo a cuerpo (Básica)","Frialdad","Rastrear","Adiestrar animales (Cualquiera)","Criar animales","Montar (Caballo)","Orientación","Intimidar","Sabiduría académica (Derecho)"],
+			"talents": ["Amenazador","Cerebro","Negociador","Sobornador"],
+			"trappings": ["Caballo de montar con silla y arreos"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.JX32uiJp0VxPx5UH.JournalEntryPage.FKz1Y4Kbgn1fCiKT]{Cazador furtivo}</p>"
+		},
+		"Fraudster": {
+			"name": "Timador",
+			"skills": ["Arte (Cualquiera)","Frialdad","Consumir alcohol","Cotilleo","Regatear","Intuición","Percepción","Prestidigitación","Movimiento silencioso (Urbano)","Oficio (Artista o herrero)"],
+			"talents": ["Artesano (Oficio)","Artista","Delincuente","Numismático"],
+			"trappings": ["Molde para monedas (Cualquier moneda)","Herramientas de un Oficio"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.Irryfr7EthG42fzj.JournalEntryPage.JrslUQCy0p7iuDUW]{Falsificador}</p>"
+		},
+		"Forger": {
+			"name": "Falsificador",
+			"skills": ["Arte (Cualquiera)","Frialdad","Consumir alcohol","Cotilleo","Regatear","Intuición","Percepción","Prestidigitación","Movimiento silencioso (Urbano)","Oficio (Artista o herrero)","Arte (Cualquiera)","Carisma","Jugar","Lengua secreta (Ladrón)","Sobornar","Tasar"],
+			"talents": ["Dedos ágiles","Leer y escribir","Manitas","Sobornador"],
+			"trappings": ["Herramientas de calígrafo"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.Irryfr7EthG42fzj.JournalEntryPage.JrslUQCy0p7iuDUW]{Falsificador}</p>"
+		},
+		"Counterfeiter": {
+			"name": "Plagiador",
+			"skills": ["Arte (Cualquiera)","Frialdad","Consumir alcohol","Cotilleo","Regatear","Intuición","Percepción","Prestidigitación","Movimiento silencioso (Urbano)","Oficio (Artista o herrero)","Arte (Cualquiera)","Carisma","Jugar","Lengua secreta (Ladrón)","Sobornar","Tasar","Investigar","Oficio (Cualquiera)","Sabiduría académica (Arte)","Sabiduría académica (Heráldica)"],
+			"talents": ["Espabilado","Genio aritmético","Negociador","Sentidos desarrollados (Cualquiera)"],
+			"trappings": ["Contacto Charlatán","Herramientas de artista","Taller"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.Irryfr7EthG42fzj.JournalEntryPage.JrslUQCy0p7iuDUW]{Falsificador}</p>"
+		},
+		"Master Counterfeiter": {
+			"name": "Maestro plagiador",
+			"skills": ["Arte (Cualquiera)","Frialdad","Consumir alcohol","Cotilleo","Regatear","Intuición","Percepción","Prestidigitación","Movimiento silencioso (Urbano)","Oficio (Artista o herrero)","Arte (Cualquiera)","Carisma","Jugar","Lengua secreta (Ladrón)","Sobornar","Tasar","Investigar","Oficio (Cualquiera)","Sabiduría académica (Arte)","Sabiduría académica (Heráldica)","Mando","Sabiduría académica (Historia)"],
+			"talents": ["Artesano maestro (Cualquiera)","Cerebro","Intrigante","Obra maestra"],
+			"trappings": ["2 Charlatanes subordinados","Licencia del Gremio de Falsificadores","Ropas de calidad"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.Irryfr7EthG42fzj.JournalEntryPage.JrslUQCy0p7iuDUW]{Falsificador}</p>"
+		},
+		"Underkeeper": {
+			"name": "Ayudante de guardabosques",
+			"skills": ["Criar animales","Escalar","Cotilleo","Sabiduría académica (Bestias)","Cuerpo a cuerpo (Básica)","Supervivencia","Percepción","A distancia (Arco)","Poner trampas","Movimiento silencioso (Rural)"],
+			"talents": ["Errante","Experto en trampas","Puntería","Zancadas (Cualquiera)"],
+			"trappings": ["Arco","Flecha","Arma de mano","Sombrero"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.JX32uiJp0VxPx5UH.JournalEntryPage.FVlwiXza8FiHLPhK]{Guardabosques}</p>"
+		},
+		"Gamekeeper": {
+			"name": "Guardabosques",
+			"skills": ["Criar animales","Escalar","Cotilleo","Sabiduría académica (Bestias)","Cuerpo a cuerpo (Básica)","Supervivencia","Percepción","A distancia (Arco)","Poner trampas","Movimiento silencioso (Rural)","Aguante","Atletismo","Frialdad","Intuición","Rastrear","Sabiduría académica (Local)"],
+			"talents": ["Amenazador","Golpe conmocionador","Proyectil infalible","Vista excelente"],
+			"trappings": ["Atuendo de cazador","Sombrero de calidad"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.JX32uiJp0VxPx5UH.JournalEntryPage.FVlwiXza8FiHLPhK]{Guardabosques}</p>"
+		},
+		"Head Gamekeeper": {
+			"name": "Líder de guardabosques",
+			"skills": ["Criar animales","Escalar","Cotilleo","Sabiduría académica (Bestias)","Cuerpo a cuerpo (Básica)","Supervivencia","Percepción","A distancia (Arco)","Poner trampas","Movimiento silencioso (Rural)","Aguante","Atletismo","Frialdad","Intuición","Rastrear","Sabiduría académica (Local)","A distancia (De Pólvora Negra)","Adiestrar animales (Cualquiera)","Montar (Caballo)","Orientación"],
+			"talents": ["Disparo infalible","Disparo rápido","Orientarse","Sentidos desarrollados (Cualquiera)"],
+			"trappings": ["Arma de pólvora negra","Caballo de monta con silla y arreos"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.JX32uiJp0VxPx5UH.JournalEntryPage.FVlwiXza8FiHLPhK]{Guardabosques}</p>"
+		},
+		"Master Gamekeeper": {
+			"name": "Maestro de guardabosques",
+			"skills": ["Criar animales","Escalar","Cotilleo","Sabiduría académica (Bestias)","Cuerpo a cuerpo (Básica)","Supervivencia","Percepción","A distancia (Arco)","Poner trampas","Movimiento silencioso (Rural)","Aguante","Atletismo","Frialdad","Intuición","Rastrear","Sabiduría académica (Local)","A distancia (De Pólvora Negra)","Adiestrar animales (Cualquiera)","Montar (Caballo)","Orientación","Mando","Sabiduría académica (Leyes)"],
+			"talents": ["Etiqueta (Sirvientes)","Leer y escribir","Negociador","Presencia imponente"],
+			"trappings": ["Cabaña en la finca","Ropa de calidad"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.JX32uiJp0VxPx5UH.JournalEntryPage.FVlwiXza8FiHLPhK]{Guardabosques}</p>"
+		},
+		"mbsKhVGtOhGfYK9O": {
+			"name": "Iniciado",
+			"skills": ["Sobornar","Carisma","Frialdad","Intuición","Animar (Relatar)","Cotilleo","Sabiduría académica (Ranald)","Percepción","Rezar","Prestidigitación"],
+			"talents": ["Bendición (Ranald)","Cortés","Orador experto","Suerte"],
+			"trappings": ["Símbolo discreto de Ranald","Un par de conjuntos de ropa"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.iGJbarHnUGTU2SKc.JournalEntryPage.JoNpPCv7BRFkMnQH]{Sacerdote embaucador}</p>"
+		},
+		"Trickster-Priest": {
+			"name": "Sacerdote embaucador",
+			"skills": ["Sobornar","Carisma","Frialdad","Intuición","Animar (Relatar)","Cotilleo","Sabiduría académica (Ranald)","Percepción","Rezar","Prestidigitación","Animar (Actuar)","Atletismo","Cuerpo a cuerpo (Básica)","Hablar idioma (Cualquiera)","Intimidar","Movimiento silencioso (Urbano)"],
+			"talents": ["Etiqueta (Ranald)","Identidad secreta","Invocar (El Embaucador)","Visiones sagradas"],
+			"trappings": ["Arma de mano","Kit de disfraz","Libro (Ranald)"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.iGJbarHnUGTU2SKc.JournalEntryPage.JoNpPCv7BRFkMnQH]{Sacerdote embaucador}</p>"
+		},
+		"l2kloVHWLLpAp7MS": {
+			"name": "Sumo sacerdote",
+			"skills": ["Sobornar","Carisma","Frialdad","Intuición","Animar (Relatar)","Cotilleo","Sabiduría académica (Ranald)","Percepción","Rezar","Prestidigitación","Animar (Actuar)","Atletismo","Cuerpo a cuerpo (Básica)","Hablar idioma (Cualquiera)","Intimidar","Movimiento silencioso (Urbano)","Arte (Cualquiera)","Esquivar","Actuar (Interpretar)","Lengua secreta (Ladrón)"],
+			"talents": ["Disfraz","Imitador","Manos rápidas","Parloteo"],
+			"trappings": ["Aprendiz de iniciado","Capa o abrigo con bolsillos ocultos"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.iGJbarHnUGTU2SKc.JournalEntryPage.JoNpPCv7BRFkMnQH]{Sacerdote embaucador}</p>"
+		},
+		"Lord of Misrule": {
+			"name": "Señor del desgobierno",
+			"skills": ["Sobornar","Carisma","Frialdad","Intuición","Animar (Relatar)","Cotilleo","Sabiduría académica (Ranald)","Percepción","Rezar","Prestidigitación","Animar (Actuar)","Atletismo","Cuerpo a cuerpo (Básica)","Hablar idioma (Cualquiera)","Intimidar","Movimiento silencioso (Urbano)","Arte (Cualquiera)","Esquivar","Actuar (Interpretar)","Lengua secreta (Ladrón)","Consumir alcohol","Mando"],
+			"talents": ["Alma pura","Espabilado","Olfato para los problemas","Orador"],
+			"trappings": ["Sacerdotes subordinados","Herramientas de trabajo (Cualquiera)"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.iGJbarHnUGTU2SKc.JournalEntryPage.JoNpPCv7BRFkMnQH]{Sacerdote embaucador}</p>"
+		},
+		"lOWdXdB4WKUENcb4": {
+			"name": "Iniciado",
+			"skills": ["Carisma","Consumir alcohol","Frialdad","Jugar","Cotilleo","Intuición","Sabiduría académica (Ranald)","Percepción","Rezar","Prestidigitación"],
+			"talents": ["Bendición (Ranald)","Cortés","Suerte","Visiones sagradas"],
+			"trappings": ["Baraja","Dados","Símbolo discreto de Ranald"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.iGJbarHnUGTU2SKc.JournalEntryPage.aBfOo9ENj9KtvpCV]{Sacerdote jugador}</p>"
+		},
+		"Gambler-Priest": {
+			"name": "Sacerdote jugador",
+			"skills": ["Carisma","Consumir alcohol","Frialdad","Jugar","Cotilleo","Intuición","Sabiduría académica (Ranald)","Percepción","Rezar","Prestidigitación","Animar (Relatar)","Cuerpo a cuerpo (Básica)","Esquivar","Intimidar","Regatear","Tasar"],
+			"talents": ["Experto en dados","Etiqueta (Ranaldanos)","Fullero","Invocar (El Tahúr)"],
+			"trappings": ["Arma de mano","Amuleto de la suerte","Ropas de calidad"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.iGJbarHnUGTU2SKc.JournalEntryPage.aBfOo9ENj9KtvpCV]{Sacerdote jugador}</p>"
+		},
+		"ik5AQVWeshucf9DF": {
+			"name": "Sumo sacerdote",
+			"skills": ["Carisma","Consumir alcohol","Frialdad","Jugar","Cotilleo","Intuición","Sabiduría académica (Ranald)","Percepción","Rezar","Prestidigitación","Animar (Relatar)","Cuerpo a cuerpo (Básica)","Esquivar","Intimidar","Regatear","Tasar","Hablar idioma (Cualquiera)","Investigar","Sabiduría académica (Cualquiera)","Sobornar"],
+			"talents": ["Genio aritmético","Leer y escribir","Manos rápidas","Sentidos desarrollados (Cualquiera)"],
+			"trappings": ["Aprendiz de iniciado","Santuario de Ranald (Fijo o portátil)"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.iGJbarHnUGTU2SKc.JournalEntryPage.aBfOo9ENj9KtvpCV]{Sacerdote jugador}</p>"
+		},
+		"Master of Chance": {
+			"name": "Maestro del azar",
+			"skills": ["Carisma","Consumir alcohol","Frialdad","Jugar","Cotilleo","Intuición","Sabiduría académica (Ranald)","Percepción","Rezar","Prestidigitación","Animar (Relatar)","Cuerpo a cuerpo (Básica)","Esquivar","Intimidar","Regatear","Tasar","Hablar idioma (Cualquiera)","Investigar","Sabiduría académica (Cualquiera)","Sobornar","Actuar (Trucos con cartas)","Mando"],
+			"talents": ["Espabilado","Identidad secreta","Intrigante","Olfato para los problemas"],
+			"trappings": ["Ropas de la mejor calidad","Sacerdotes subordinados"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.iGJbarHnUGTU2SKc.JournalEntryPage.aBfOo9ENj9KtvpCV]{Sacerdote jugador}</p>"
+		},
+		"hIlopDY51rix9JBc": {
+			"name": "Iniciado",
+			"skills": ["Atletismo","Escalar","Esquivar","Intuición","Sabiduría académica (Ranald)","Percepción","Forzar cerraduras","Rezar","Prestidigitación","Movimiento silencioso (Urbano)"],
+			"talents": ["¡A correr!","Bendición (Ranald)","Cortés","Leer y escribir"],
+			"trappings": ["Jubón de cuero","Saco","Símbolo discreto de Ranald"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.iGJbarHnUGTU2SKc.JournalEntryPage.BKz2exdAS4r6xzb6]{Sacerdote ladrón}</p>"
+		},
+		"Thief-Priest": {
+			"name": "Sacerdote ladrón",
+			"skills": ["Atletismo","Escalar","Esquivar","Intuición","Sabiduría académica (Ranald)","Percepción","Forzar cerraduras","Rezar","Prestidigitación","Movimiento silencioso (Urbano)","Aguante","Animar (Relatar)","Carisma","Hablar idioma (Lengua de los ladrones)","Lengua secreta (Ladrón)","Sabiduría académica (Local)"],
+			"talents": ["Etiqueta (Ranaldanos)","Identidad secreta","Invocar (Merodeador Nocturno)","Suerte"],
+			"trappings": ["Cuerda","Herramientas de trabajo (Ladrón)","Libro (Ranald)"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.iGJbarHnUGTU2SKc.JournalEntryPage.BKz2exdAS4r6xzb6]{Sacerdote ladrón}</p>"
+		},
+		"Ty7TDHu7yjwsGIzx": {
+			"name": "Sumo sacerdote",
+			"skills": ["Atletismo","Escalar","Esquivar","Intuición","Sabiduría académica (Ranald)","Percepción","Forzar cerraduras","Rezar","Prestidigitación","Movimiento silencioso (Urbano)","Aguante","Animar (Relatar)","Carisma","Hablar idioma (Lengua de los ladrones)","Lengua secreta (Ladrón)","Sabiduría académica (Local)","Cotillear","Frialdad","Sobornar","Tasar"],
+			"talents": ["Dedos ágiles","Etiqueta (Delincuentes)","Gato callejero","Olfato para los problemas"],
+			"trappings": ["Aprendiz de iniciado/chivato","Santuario del Merodeador Nocturno","Vestimentas oscuras de calidad"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.iGJbarHnUGTU2SKc.JournalEntryPage.BKz2exdAS4r6xzb6]{Sacerdote ladrón}</p>"
+		},
+		"Shadow Prowler": {
+			"name": "Merodeador de las Sombras",
+			"skills": ["Atletismo","Escalar","Esquivar","Intuición","Sabiduría académica (Ranald)","Percepción","Forzar cerraduras","Rezar","Prestidigitación","Movimiento silencioso (Urbano)","Aguante","Animar (Relatar)","Carisma","Hablar idioma (Lengua de los ladrones)","Lengua secreta (Ladrón)","Sabiduría académica (Local)","Cotillear","Frialdad","Sobornar","Tasar","Intimidar","Mando"],
+			"talents": ["Alma pura","Delincuente","Sombra","Visión nocturna"],
+			"trappings": ["Máscara","Sacerdote ladrón subordinado"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.iGJbarHnUGTU2SKc.JournalEntryPage.BKz2exdAS4r6xzb6]{Sacerdote ladrón}</p>"
+		},
+		"KF7NSmYDFcHBGIGv": {
+			"name": "Iniciado",
+			"skills": ["Sobornar","Carisma","Frialdad","Animar (Relatar)","Cotilleo","Regatear","Intuición","Sabiduría académica (Política)","Percepción","Rezar"],
+			"talents": ["Bendición (Ranald)","Discutidor","Suerte","Visiones sagradas"],
+			"trappings": ["Chaqueta de cuero","Símbolo discreto de Ranald"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.iGJbarHnUGTU2SKc.JournalEntryPage.WrT1AObkyHoXhrZR]{Sacerdote liberador}</p>"
+		},
+		"Liberator-Priest": {
+			"name": "Sacerdote liberador",
+			"skills": ["Sobornar","Carisma","Frialdad","Animar (Relatar)","Cotilleo","Regatear","Intuición","Sabiduría académica (Política)","Percepción","Rezar","Atletismo","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (Pelea)","Esquivar","Intimidar","Sabiduría académica (Local)"],
+			"talents": ["Etiqueta (Ranaldanos)","Invocar (El Protector)","Leer y escribir","Orador experto"],
+			"trappings": ["Arma de mano","Libro sagrado (Ranald)"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.iGJbarHnUGTU2SKc.JournalEntryPage.WrT1AObkyHoXhrZR]{Sacerdote liberador}</p>"
+		},
+		"xgqRnP7cJlq0o2MU": {
+			"name": "Sumo sacerdote",
+			"skills": ["Sobornar","Carisma","Frialdad","Animar (Relatar)","Cotilleo","Regatear","Intuición","Sabiduría académica (Política)","Percepción","Rezar","Atletismo","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (Pelea)","Esquivar","Intimidar","Sabiduría académica (Local)","Hablar idioma (Lengua de los ladrones)","Mando","Sanar","Tasar"],
+			"talents": ["Celo ferviente","Identidad secreta","Intrigante","Orador"],
+			"trappings": ["Aprendiz de iniciado","Banda de niños callejeros","Santuario de Ranald"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.iGJbarHnUGTU2SKc.JournalEntryPage.WrT1AObkyHoXhrZR]{Sacerdote liberador}</p>"
+		},
+		"People’s Champion": {
+			"name": "Campeón del pueblo",
+			"skills": ["Sobornar","Carisma","Frialdad","Animar (Relatar)","Cotilleo","Regatear","Intuición","Sabiduría académica (Política)","Percepción","Rezar","Atletismo","Cuerpo a cuerpo (Básica)","Cuerpo a cuerpo (Pelea)","Esquivar","Intimidar","Sabiduría académica (Local)","Hablar idioma (Lengua de los ladrones)","Mando","Sanar","Tasar","Hablar idioma (Cualquiera)","Movimiento silencioso (Urbano)"],
+			"talents": ["Alma pura","Desarmar","Gregario","Orador maestro"],
+			"trappings": ["Plebeyos locales agradecidos","Sacerdotes subordinados"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.iGJbarHnUGTU2SKc.JournalEntryPage.WrT1AObkyHoXhrZR]{Sacerdote liberador}</p>"
+		},
+		"VNj1pYFNnHT8gDrY": {
+			"name": "Iniciado",
+			"skills": ["Atletismo","Carisma animal","Frialdad","Aguante","Intuición","Sabiduría académcia (Teología)","Supervivencia","Percepción","Rezar","A distancia (Arco)"],
+			"talents": ["Bendición (Taal)","Errante","Orientarse","Visiones sagradas"],
+			"trappings": ["Arco","10 flechas","Capa","Botas robustas","Símbolo religioso (Taal)"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.LhwxwMcISSZvoVyW.JournalEntryPage.oX0kC1ZcVXECJkta]{Sacerdote rural de Taal}</p>"
+		},
+		"Ranger-Priest": {
+			"name": "Sacerdote rural",
+			"skills": ["Atletismo","Carisma animal","Frialdad","Aguante","Intuición","Sabiduría académcia (Teología)","Supervivencia","Percepción","Rezar","A distancia (Arco)","Cuerpo a cuerpo (Básica)","Intimidar","Movimiento silencioso (Rural)","Orientación","Rastrear","Sanar"],
+			"talents": ["Etiqueta (Taal)","Invocar (Taal)","Vista excelente","Zancadas (Cualquiera)"],
+			"trappings": ["Arma de mano","Mochila","Saco de dormir"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.LhwxwMcISSZvoVyW.JournalEntryPage.oX0kC1ZcVXECJkta]{Sacerdote rural de Taal}</p>"
+		},
+		"dg2Ip2XeQalYYuq7": {
+			"name": "Sumo sacerdote",
+			"skills": ["Atletismo","Carisma animal","Frialdad","Aguante","Intuición","Sabiduría académcia (Teología)","Supervivencia","Percepción","Rezar","A distancia (Arco)","Cuerpo a cuerpo (Básica)","Intimidar","Movimiento silencioso (Rural)","Orientación","Rastrear","Sanar","Adiestrar animales (Cualquiera)","Hablar idioma (Cualquiera)","Montar (Caballo)","Sabiduría académica (Bestias)"],
+			"talents": ["Alma pura","Disparo seguro","Recio","Resistencia (Cualquiera)"],
+			"trappings": ["Seguidor iniciado","Reliquia religiosa"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.LhwxwMcISSZvoVyW.JournalEntryPage.oX0kC1ZcVXECJkta]{Sacerdote rural de Taal}</p>"
+		},
+		"Vice-hierarch": {
+			"name": "Vicejerarca",
+			"skills": ["Atletismo","Carisma animal","Frialdad","Aguante","Intuición","Sabiduría académcia (Teología)","Supervivencia","Percepción","Rezar","A distancia (Arco)","Cuerpo a cuerpo (Básica)","Intimidar","Movimiento silencioso (Rural)","Orientación","Rastrear","Sanar","Adiestrar animales (Cualquiera)","Hablar idioma (Cualquiera)","Montar (Caballo)","Sabiduría académica (Bestias)","Hablar idioma (Cualquiera)","Movimiento silencioso (Urbano)"],
+			"talents": ["Desarmar","Gregario","Orador maestro","Tenaz"],
+			"trappings": ["Compañero animal","Sacerdotes subordinados"],
+			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.LhwxwMcISSZvoVyW.JournalEntryPage.oX0kC1ZcVXECJkta]{Sacerdote rural de Taal}</p>"
+		},
+		"Arabyan Redhawk": {
+			"name": "Halcón rojo de Arabia",
+			"description": "<p>Los halcones rojos de Arabia son apreciados entre la nobleza por sus excelentes habilidades de caza y por el prestigio que aportan. Son orgullosos y feroces pero, una vez entrenados y bien tratados, son extraordinariamente leales. Son tan codiciados en el Viejo Mundo que algunos estados de Arabia han prohibido su exportación. Son principalmente marrones, pero tienen manchas rojas brillantes en las alas. Los ejemplares grandes y bien adiestrados pueden alcanzar precios extraordinariamente altos entre los aficionados adinerados.</p>"
+		},
+		"Bag of Soot": {
+			"name": "Bolsa de hollín",
+			"description": "<p>Se dice que el hollín más fino procede de las fundiciones de cañones de Nuln. Un PJ puede usar una bolsa de hollín para manchar su ropa, equipo y piel expuesta, haciendo que las superficies se vuelvan oscuras y opacas. Un PJ recubierto de hollín es más difícil de detectar en la oscuridad. Las criaturas sufren -1 NE a los Chequeos de <strong>Percepción</strong> basados en la vista que se hagan para detectar al PJ o discernir algo sobre su aspecto.</p>"
+		},
+		"Bag of Tarrabeth Seed": {
+			"name": "Bolsa de semillas de tarrabeth",
+			"description": "<p>Mientras que la tarrabeth es una hierba curativa, su picante y dulce semilla se utiliza en la cocina. Algunos perros encuentran el olor estimulante y molesto, por lo que los ladrones lo usan ocasionalmente para distraer a los canes guardianes. Si un PJ está siendo rastreado por perros, puede dejar una bolsa de semillas de tarrabeth en su camino. Los perros que se acerquen a menos de 5 yardas de la bolsa deben superar un Chequeo <strong>Normal (+20)</strong> de <strong>Frialdad</strong>. Los que fracasan pasan [[/r 1d10]] Asaltos investigando la bolsa antes de retomar el rastro. Si un perro sufre un Fracaso asombroso (-6 NE o menos), se distrae tanto con el olor que olvida el rastro original que seguía.</p>"
+		},
+		"Caltrops": {
+			"name": "Abrojos",
+			"description": "<p>Estos pinchos de muchos lados a veces se esparcen en campos de batalla para hacer zonas más inseguras para la caballería. Un PJ con abrojos puede usar una Acción para esparcir una docena en el suelo, creando un área peligrosa de 2 yardas de diámetro. Cualquiera que entre en la zona debe superar un Chequeo <strong>Difícil (-20)</strong> de <strong>Atletismo</strong> o ser alcanzado por las trampas. Si una criatura es consciente de su presencia y se mueve andando hacia ellos, el Chequeo se vuelve <strong>Normal (+20)</strong>. Las criaturas que fracasan sufren un Impacto de Daño [[/r 1d10]] en una pierna determinada al azar y 1 Estado de @Condition[Aturdido].</p>"
+		},
+		"Crampons": {
+			"name": "Crampones",
+			"description": "<p>Los crampones son armazones de madera que se colocan en las botas. Clavos de herradura se clavan a través de la estructura para ayudar a escalar superficies escarpadas. Mientras se lleva un par de crampones, los Chequeos realizados tienen los siguientes modificadores:</p><ul><li><p>+2 NE a los Chequeos de Escalar para superficies rocosas o de madera.</p></li><li><p>+1 NE a los Chequeos de Escalar para trepar por una cuerda.</p></li><li><p>-1 NE a los Chequeos de Atletismo fuera del contexto de escalada.</p></li><li><p>-2 NE a Chequeos de Movimiento silencioso fuera del contexto de escalada.</p></li><li><p>-2 NE a cualquier otro Chequeo que implique movimiento fuera del contexto de escalada (es mejor quitarse los crampones antes de dar pasos de baile).</p></li></ul>"
+		},
+		"Dove Hawk": {
+			"name": "Halcón paloma",
+			"description": "<p>Los halcones paloma son los halcones de caza más comunes en el Imperio. No son grandes, pero sí poderosos y pueden derribar fácilmente a un conejo adulto. Tienen plumaje blanco con cresta marrón y se les conoce con el cómico apodo de ‘monjes shallyanos’ por su aspecto."
+		},
+		"Glass Cutter": {
+			"name": "Cortador de vidrio",
+			"description": "<p>Una vara corta de metal con punta de una dura esquirla de diamante o cuerno pétreo. Un PJ equipado con este objeto puede utilizarlo para hacer un agujero en una superficie de vidrio o rayarla para luego ser golpeada con un mazo. Para hacer esto se requiere superar un Chequeo <strong>Normal (+20)</strong> de <strong>Arte (Grabado)</strong>.</p>"
+		},
+		"Grootscher Marsh Hound": {
+			"name": "Sabueso de pantano de Grootscher",
+			"description": "<p>El sabueso de pantano de Grootscher, o <em>westerlander</em>, es una bestia grande pero peluda, especialmente adecuada para las marismas del norte del Imperio. Su grueso pelaje lo hace resistente al frío y sus grandes patas lo convierten en un excelente nadador. Se utiliza para acechar aves acuáticas e incluso se sabe que bucea para pescar.</p>"
+		},
+		"Hochland Lockhund": {
+			"name": "Sabueso lockhund de Hochland",
+			"description": "<p>Los perros de caza <em>lockhund</em> de Hochland son famosos por su tenacidad y pueden usarse para atrapar cualquier animal pequeño.</p>"
+		},
+		"Hunter's Garb": {
+			"name": "Atuendo de cazador",
+			"description": "<p>Esta prenda está diseñada para imitar la flora local, con frondas, hojas e incluso flores colgando. Puede parecer extraña y difícil de manejar fuera de contexto, pero otorga una bonificación de +2 NE a cualquier Chequeo de Movimiento silencioso realizado en el terreno apropiado.</p>",
+			"effects": [{
+				"name":"Atuendo de cazador",
+				"scriptData": [
+					{"label":"Chequeo de Movimiento silencioso realizado en el terreno apropiado"}
+					]
+				}]
+		},
+		"Nordlander Bamse": {
+			"name": "Perro bamse de Nordland",
+			"description": "<p>Un sabueso de tamaño mediano pero afable, el <em>bamse</em> de Nordland es popular mucho más allá de Nordland por su capacidad de cazar durante muchas horas sin desanimarse. El <em>bamse</em> es adecuado para acechar presas rápidas como ciervos y zorros.</p>"
+		},
+		"Periscope": {
+			"name": "Periscopio",
+			"description": "<p>Creado por ingenieros enanos con el fin de proporcionar una mayor visión a las tripulaciones de sus naves sumergibles, un periscopio es un dispositivo que emplea espejos para que los Personajes puedan asomarse por las esquinas o por encima de otros obstáculos sin exponerse. Un periscopio sencillo puede ser poco más que un espejo atado a una varilla corta, pero hay dispositivos construidos a propósito que albergan dos espejos en ángulo dentro de un marco robusto. Un PJ con un periscopio puede usarlo para hacer Chequeos de Percepción basados en la vista mientras mantiene su cuerpo oculto o a cubierto.</p>"
+		},
+		"Smoke Bomb": {
+			"name": "Bomba de humo",
+			"description": "<p>Una bomba de humo típica consiste en un recipiente de metal o cerámica que contiene un cóctel alquímico y se enciende con una mecha. Una bomba de humo puede lanzarse exactamente como una bomba incendiaria, aunque no arde a una temperatura tan alta. En su lugar, produce una espesa nube de humo. El humo es lo suficientemente denso como para llenar una habitación grande o un área de 10 yardas de diámetro al aire libre. La nube persiste durante [[/r 2d10]] Asaltos (el doble si la bomba es empleada en un espacio cerrado).</p><p>Los PJs no pueden ver a través de la nube de humo y solo pueden ver 1 yarda si están dentro. Además, el humo no es respirable y cualquier Personaje atrapado en la nube debe superar un Chequeo para ver si sufre @UUID[Compendium.wfrp4e-core.journals.JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#ahogamiento-y-asfixia]{Asfixia} como se describe en <strong>WJdR</strong>. Las bombas de humo son, por tanto, formas efectivas de despejar una habitación o cubrir una huida.</p>"
+		},
+		"Steel Mummit": {
+			"name": "Mummit de acero",
+			"description": "<p>Llamada así por uno de los legendarios compañeros de Ranald, se trata de una pequeña y fina herramienta de acero que puede deslizarse entre la puerta y el marco de la misma con la esperanza de abrir el cerrojo. Mientras que una palanca se usa para abrir una puerta a pesar de tener cerradura y una ganzúa se usa para abrir una cerradura, un Mummit de acero actúa sobre el cerrojo con la esperanza de aflojarlo sin necesidad de operar ningún mecanismo. Si una puerta está cerrada con cerradura y llave (no con candado), o si está cerrada con cerrojo, se puede utilizar un Mummit de acero para abrirla si un Personaje supera un Chequeo <strong>Difícil (-20)</strong> de <strong>Prestidigitación</strong>.</p>"
+		},
+		"Telescopic Pole": {
+			"name": "Bastón extensible",
+			"description": "<p>Este objeto tiene la apariencia de un bastón con un mango en forma de gancho. De hecho, puede extenderse hasta convertirse en un bastón de doce pies de longitud. Puede utilizarse para manipular objetos a distancia, como abrir las ventanas de un piso superior o alcanzar un juego de llaves a través de las rejas de una prisión. Un PJ puede hacer Chequeos de <strong>Destreza</strong> usando el bastón extensible para manipular objetos hasta 4 yardas de distancia. Es poco manejable, por lo que cualquier Chequeo sufre -2 NE.</p>"
+		},
+		"The Great Horned Helm": {
+			"name": "El Gran Yelmo Astado",
+			"description": "<p>Su portador debe poseer el Talento @UUID[Compendium.wfrp4e-core.items.Item.QyjWtSdnVMT04l5Y]{Bendición (Taal)} para beneficiarse de sus hechizos sagrados:</p><ul><li><p>Otorga 3 PA de protección a la cabeza.</p></li><li><p>Los animales salvajes nunca atacarán al portador, aunque estén controlados mágicamente. Las criaturas del Caos no se ven afectadas.</p></li><li><p>Los hechizos lanzados con los Vientos de <em>@UUID[Compendium.wfrp4e-wom.journals.JournalEntry.DND7iNuVrCXgTXki]{Ghur}</em>, <em>@UUID[Compendium.wfrp4e-wom.journals.JournalEntry.Q9sQhbDN8NUHXYdA]{Ghyran}</em> o <em>@UUID[Compendium.wfrp4e-wom.journals.JournalEntry.j72t0e5BVIgeOMB4]{Azyr}</em> no afectan en modo alguno al portador.</p></li><li><p>El portador obtiene +15 V cuando lleva el yelmo.</p></li><li><p>El portador obtiene +1 NE para invocar @UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.LhwxwMcISSZvoVyW.JournalEntryPage.sPLhbJxVV5qE7SmE]{Milagros de Taal} cuando lleva el yelmo.</p></li></ul>",
+			"effects": [{
+				"name":"El Gran Yelmo Astado (Objeto)",
+				"scriptData": [
+					{"label":"PA en cabeza"}
+					]
+				},
+				{
+				"name":"El Gran Yelmo Astado",
+				"scriptData": [
+					{"label":"Bonificador a V"},
+					{"label":"Invocar Milagros de Taal"}
+					]
+				}]
+		},
+		"Mountain Sickness": {
+			"name": "Mal de altura",
+			"description": "<p>A veces afecta a quienes viajan a gran altitud antes de acostumbrarse a la falta de oxígeno en el aire.</p>",
+			"contraction": "Al fallar un Chequeo de Aguante",
+			"incubation_text": "Inmediata",
+			"duration_text": "Termina tan pronto como finaliza la exposición, o hasta que se supere el Chequeo",
+			"symptoms": "Malestar, Náuseas",
+			"effects": [{
+				"name":"Malestar"
+				},
+				{
+				"name":"Náuseas"
+				}]
+		},
+		"Swamp Fever": {
+			"name": "Fiebre del pantano",
+			"description": "<p>Se transmite por la picadura de criaturas como las sanguijuelas de los pantanos y las babosas marinas. Las picaduras suelen pasar desapercibidas, especialmente cuando la víctima está vadeando las turbias aguas del pantano. La enfermedad se caracteriza por una mancha dolorosa, en carne viva y roja alrededor de la picadura además de episodios repentinos de fiebre.</p>",
+			"contraction": "Chequeo Desafiante (+0) de Aguante",
+			"symptoms": "Malestar, Fiebre, Diarrea (Moderada)",
+			"effects": [{
+				"name":"Malestar",
+				"scriptData": [
+					{"label":"Malestar"}
+					]
+				},
+				{
+				"name":"Fiebre"
+				},
+				{
+				"name":"Diarrea (Moderada)"
+				}]
+		},
+		"Distant Sounds": {
+			"name": "Sonidos lejanos",
+			"description": "<p>Te llevas la mano a la oreja y te persignas con la cruz de Ranald. Puedes oír claramente una conversación u otro ruido desde cualquier lugar dentro del alcance detrás de una pared, en una habitación lejana o en cualquier otro lugar. Debes tener un objetivo específico en mente y saber dónde está, como una persona que sabes que está en una habitación determinada o que puedes ver a través de una ventana. También puedes susurrar palabras al objetivo. A diferencia del Milagro @UUID[Compendium.wfrp4e-core.items.Item.Bo3ukcaipFNb7Ljl]{Ojos de gato}, este funciona con cámaras selladas.</p>",
+			"effects": [{
+				"name":"Sonidos lejanos"
+				}]
+		},
+		"Long Reach": {
+			"name": "Largo alcance",
+			"description": "<p>Tejes un acertijo diciendo que lo que está fuera del alcance está más cerca de lo que sugieren los sentidos. Tu alcance se amplía como brazos invisibles que se extienden hacia lo que está fuera de tu alcance. Puedes agarrar o manipular lo que alcances, agarrarte a una escalera o saliente, levantar un objeto con 2 de Imp. o menos, además de hacer Chequeos de @UUID[Compendium.wfrp4e-core.items.Item.rvd0S8Z0v2m0MHmD]{Prestidigitación}.</p>",
+			"effects": [{
+				"name":"Largo alcance"
+				}]
+		},
+		"Lose the Loot": {
+			"name": "Deshacerse del botín",
+			"description": "<p>Con una mano tocas lo que has ganado ilícitamente mientras levantas las cejas inquisitivamente hacia Ranald. Este Milagro te da una idea de a quién y dónde puedes vender tus bienes de contrabando o robados, por un precio decente. Si estás en un pueblo o ciudad grande, recibirás una intuición de dónde se encuentra el perista más cercano. El DJ decide cómo de bien considerado te tiene este perista, pero siempre que no tengas Puntos de Pecado, como mínimo debería estar dispuesto a hacer negocios contigo.</p>",
+			"effects": [{
+				"name":"Deshacerse del botín"
+				}]
+		},
+		"Poor Man’s Face": {
+			"name": "Parecer pobre",
+			"description": "<p>Susurras un acertijo sobre que la riqueza está en el ojo del observador. Ranald responde ocultando cualquier objeto de valor que lleves encima. Cualquiera que te registre solo encontrará migas de pan o un guijarro donde antes había monedas u otros objetos preciosos. Ranald custodiará tus objetos de valor mientras dure el milagro, pero ten cuidado, ya que por cada hora que un objeto permanezca oculto de esta manera, hay un [[/r 1d100]]{1%} de posibilidades de que se encapriche de él y se lo quede.</p>",
+			"effects": [{
+				"name":"Parecer pobre",
+				"scriptData": [
+					{"label":"Establecer duración"}
+					]
+				}]
+		},
+		"Silence Reigns": {
+			"name": "Reina el silencio",
+			"description": "<p>Le susurras una rima a Ranald y le pides que engañe el oído de los demás. Cualquiera dentro del AdE oye nada más que el ruido de fondo normal sin ser perturbado por pasos, ladridos de perros o cualquier otro sonido brusco.</p>",
+			"effects": [{
+				"name":"Reina el silencio"
+				}]
+		},
+		"Talk Your Way Out": {
+			"name": "Hablar para escapar",
+			"description": "<p>Te tocas los lóbulos de las orejas y cruzas ambos dedos en silencio, esperando que Ranald inspire tu lengua. Este Milagro te concede la habilidad de salirte mediante la labia incluso de la situación más comprometida. Obtienes un bonificador único de +8 NE a un Chequeo de Carisma mientras intentas irte de rositas después de que te pillen con las manos en la masa.</p>",
+			"effects": [{
+				"name":"Hablar para escapar",
+				"scriptData": [
+					{"label":"Carisma al hablar para escapar"}
+					]
+				}]
+		},
+		"The Heat Is Off": {
+			"name": "Totalmente desapercibido",
+			"description": "<p>Planteas una pregunta a la humanidad en general: ¿por qué la gente mete las narices en todo? Después de cometer un delito, durante las siguientes horas, la gente está extrañamente desinteresada en ti. Las autoridades desvían la mirada cuando pasas y otros se esfuerzan por recordar tu llegada. Si utilizas las @UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.Aw8mrNpme6izrwih.JournalEntryPage.6uDAsHEIBpaTdbSE]{reglas para patrullas de vigilancia}, resta 3 a cualquier puntuación para calcular la presencia de la Guardia. Si intentas cometer otro delito, el Milagro deja de funcionar. Todos los Chequeos de Empatía que hagas mientras el milagro está en efecto sufren de -3 NE, ya que la gente no puede centrarse en ti o en lo que estás diciendo.</p>",
+			"effects": [{
+				"name":"Totalmente desapercibido",
+				"scriptData": [
+					{"label":"La gente no puede centrarse en ti o en lo que estás diciendo"}
+					]
+				}]
+		},
+		"Bountiful Fortune": {
+			"name": "Suerte abundante",
+			"description": "<p>Haces un gesto con los dedos cruzados a varios compañeros. Para su siguiente Chequeo, pueden invertir el orden de los dados porcentuales. Por ejemplo, 82 puede convertirse en 28. Si esta bendición no se usa en tantos Asaltos como tu Bonificador por Empatía, se pierde.</p>",
+			"effects": [{
+				"name":"Suerte abundante",
+				"scriptData": [
+					{"label":"Recordatorio de posible inversión"}
+					]
+				}]
+		},
+		"Crisis of Confidence": {
+			"name": "Crisis de confianza",
+			"description": "<p>Silbas una alegre melodía que hace que tu oponente pierda la confianza. Elige un objetivo dentro del alcance que esté a punto de hacer un Chequeo voluntario de Empatía. Inmediatamente sienten ansiedad de correr algún riesgo y se echan atrás, eligiendo no intentar lo que habían planeado. Si deben realizar el Chequeo a su elección, sufren un penalizador de -20.</p>"
+		},
+		"Force the Hand of Chance": {
+			"name": "Forzar la mano del azar",
+			"description": "<p>Le pides a Ranald que ordene al universo reconsiderar las probabilidades de un desafío difícil. Este Milagro mejora tus probabilidades de superar un Chequeo específico en +1 NE, pero puedes aumentar la ventaja en +1 NE adicional si tiras [[/r 1d10]] y sacas 6 o menos. Puedes seguir haciendo esta tirada y aumentar tu puntuación en +1 NE mientras las siguientes sucesivas tengan éxito. Sin embargo, si obtienes un 7 o más, pierdes todos NE acumulados y debes realizar el Chequeo original con un -1 NE.</p>",
+			"effects": [{
+				"name":"Forzar la mano del azar",
+				"scriptData": [
+					{"label":"Pedir tiradas"},
+					{"label":"Forzar la mano del azar"}
+					]
+				}]
+		},
+		"Perfect Empathy": {
+			"name": "Simpatía perfecta",
+			"description": "<p>Como un gato que se escabulle silenciosamente entre las sombras, te metes en la mente de otra persona. Comprendes perfectamente con quien hablas, independientemente del idioma, conoces su significado, sus intenciones y lo que tiene en mente. Tú decides cómo utilizar esta información.</p>",
+			"effects": [{
+				"name":"Simpatía perfecta"
+				}]
+		},
+		"The Gamemaster": {
+			"name": "El Director de Juego",
+			"description": "<p>Invocas a Ranald como señor de todos los juegos y le pides que comparta su sabiduría contigo. Al observar cualquier juego, deporte o actividad de ocio similar, conoces al instante las reglas y las mejores estrategias para ganar. Si el juego implica destreza mental (en lugar de puro azar o destreza física), todos los Chequeos que realices para competir en el juego tienen +4 NE. Cuando los efectos del Milagro desaparecen, olvidas todo menos las reglas.</p>",
+			"effects": [{
+				"name":"El Director de Juego",
+				"scriptData": [
+					{"label":"Chequeos que realices para competir en el juego"}
+					]
+				}]
+		},
+		"Up the Stakes": {
+			"name": "Sube la apuesta",
+			"description": "<p>Rezas en voz baja a Ranald para exagerar los efectos de tu suerte. Este Milagro mejora las consecuencias del éxito o el fracaso.Realiza cualquier Chequeo de forma normal: si tienes éxito, el resultado es automáticamente un éxito asombroso. Si fracasas, es un fracaso impresionante.</p>",
+			"effects": [{
+				"name":"Sube la apuesta",
+				"scriptData": [
+					{"label":"Sube la apuesta"}
+					]
+				}]
+		},
+		"A Suitable Sucker": {
+			"name": "A por el ingenuo",
+			"description": "<p>Cuando encuentras un objetivo, rezas a Ranald para que te guíe hasta el chivo expiatorio perfecto. Mientras dure el efecto, el PJ puede repetir cualquier resultado de la tabla de @Table[contents-of-purse]{Contenidos de un monedero} y en la tabla @Table[victim-quirk]{Rarezas de la víctima}. Si decide repetir la tirada, se mantiene el segundo resultado.</p>",
+			"effects": [{
+				"name":"A por el ingenuo"
+				}]
+		},
+		"Bamboozle": {
+			"name": "Desconcertar",
+			"description": "<p>Planteas un dilema sobre la naturaleza del libre albedrío en un universo gobernado por dioses. Engañas a una criatura detamaño Normal (o más pequeña) para que cumpla tus órdenes a menos que supere un Chequeo <strong>Difícil (-20)</strong> de <strong>Frialdad</strong>. Puedes determinar lo que ocurre en el siguiente Asalto siempre que no se dañe a sí misma directamente; indirectamente es otra cuestión. Las criaturas con los Rasgos @UUID[Compendium.wfrp4e-core.items.Item.v3uzEthcq0JRar0J]{Demoníaco} o @UUID[Compendium.wfrp4e-core.items.Item.PFTD9gDvRWW9uh5g]{Muerto viviente} no pueden ser embaucadas.</p>",
+			"effects": [{
+				"name":"Desconcertar",
+				"avoidTestSkill": "Frialdad"
+				}]
+		},
+		"One Almighty Lie": {
+			"name": "Una mentira todopoderosa",
+			"description": "<p>Respiras hondo, cruzas los dedos y dices la mentira más escandalosa que puedas imaginar. Este Milagro te permite convencer a la gente de una falsedad tan colosal que seguramente nadie se la inventaría. Representa la mentira y luego haz un Chequeo de Rezar para invocar el Milagro. Si lo superas, tira [[/r 1d10]] y suma el NE del Chequeo. Este total es el número de +NE a añadir a tu Chequeo de Carisma. El DJ puede querer recompensarte con NE adicionales si tu mentira es particularmente divertida (¡pero no verosímil!)</p>",
+			"effects": [{
+				"name":"Una mentira todopoderosa",
+				"scriptData": [
+					{"label":"Tirar y establecer bonificador de NE"},
+					{"label":"Una mentira todopoderosa"}
+					]
+				}]
+		},
+		"Ranald’s Mischief": {
+			"name": "Travesura de Ranald",
+			"description": "<p>Te burlas e imitas a un adversario para igualar una contienda desigual. Este Milagro te permite cambiar temporalmente dosCaracterísticas para que sean iguales a las de un oponente a efectos de un Chequeo Enfrentado con dicho oponente. Tira dos veces para ver cuáles se ven afectadas (vuelve a tirar los resultados duplicados):</p><table style=\"text-align: center\"><thead><tr><th><p>[[/r 1d10]]{1d10 tirada}</p></th><th><p>Característica</p></th></tr></thead><tbody><tr><td><p>1 a 2</p></td><td><p>HA</p></td></tr><tr><td><p>3 a 4</p></td><td><p>Ini</p></td></tr><tr><td><p>5 a 6</p></td><td><p>I</p></td></tr><tr><td><p>7 a 8</p></td><td><p>Em</p></td></tr><tr><td><p>9 a 0</p></td><td><p>A elección</p></td></tr></tbody></table>",
+			"effects": [{
+				"name":"Travesura de Ranald",
+				"scriptData": [
+					{"label":"Tirar características"},
+					{"label":"Cambiar características por las del objetivo"}
+					]
+				},
+				{
+				"name":"Travesura de Ranald (Objetivo al que copiar)"
+				}]
+		},
+		"Unremembered Face": {
+			"name": "Cara irrecordable",
+			"description": "<p>Susurras una rápida plegaria a Ranald y le pides que nuble los recuerdos de aquellos con los que te encuentres. Cualquier criatura que conozcas debe superar un Chequeo <strong>Difícil (-20)</strong> de <strong>Frialdad</strong> para recordar más de dos detalles sobre tu aspecto. Tú eliges lo que recuerdan, por lo que muchos sacerdotes de Ranald llevan una ropa distintiva que pueden quitarse u ocultar rápidamente.</p>",
+			"effects": [{
+				"name":"Cara irrecordable"
+				}]
+		},
+		"Back at You": {
+			"name": "A devolver",
+			"description": "<p>Extiendes la palma de la mano con los dedos cruzados. Este Milagro se dirige a cualquier combate dentro del alcance que no sea uno en el que estés participando. Determina el participante más débil comparando HA, F y R. El que sea más alto en dos o más Características es el más fuerte. Mientras dure el efecto, cualquier Herida infligida por el participante más fuerte durante un único ataque pueden añadirse a las Heridas infligidas la próxima vez que el participante más débil cause Daño al participante más fuerte.</p>",
+			"effects": [{
+				"name":"A devolver (Objetivo 2 combatientes)",
+				"preApplyScript": "if (args.targets.length !== 2) {\n  ui.notifications.warn(`${this.effect.name} requiere que hagas objetivo a 2 combatientes.`);\n  return false;\n}\n\nlet score = 0;\n\nfor (const char of [\"ws\", \"s\", \"t\"]) {\n  score += Math.min(1, Math.max(-1, args.targets[0].system.characteristics[char].value - args.targets[1].system.characteristics[char].value));\n}\n\nconst weaker = score < 0 ? args.targets[0] : args.targets[1];\nconst stronger = score < 0 ? args.targets[1] : args.targets[0];\n\nconst effect = this.item.effects.get(\"Wy7ZKcriUh2sTLcA\");\nconst effectData = effect.convertToApplied();\nfoundry.utils.setProperty(effectData.flags, \"wfrp4e.targetUuid\", stronger.uuid);\n\nweaker.applyEffect({effectData});\n\nreturn false;"
+				},
+				{
+				"name":"A devolver",
+				"scriptData": [
+					{"label":"Guardar daño recibido"},
+					{"label":"Devolver daño guardado"}
+					]
+				}]
+		},
+		"Class War": {
+			"name": "Guerra de clases",
+			"description": "<p>Llamas la atención de Ranald sobre la desigualdad de la sociedad y él responde maldiciendo a los privilegiados. Este Milagro requiere un objetivo de nivel Oro. Se ven afectados por una maldición con efectos idénticos a los de @UUID[Compendium.wfrp4e-core.items.Item.sq47SZ1v9Pofa4L1]{Maldición de la mala fortuna}. Dura un día por cada nivel de Estatus de Oro que tenga el objetivo, más un día por +NE del Chequeo de Rezar. Si el objetivo es un seguidor asiduo de Ranald, la maldición no tiene efecto.</p>",
+			"effects": [{
+				"name":"Guerra de clases",
+				"scriptData": [
+					{"label":"Guerra de clases"},
+					{"label":"Sin Puntos de Fortuna"},
+					{"label":"No poder editar Puntos de Fortuna"}
+					]
+				}]
+		},
+		"Free Your Mind": {
+			"name": "Libera tu mente",
+			"description": "<p>Imploras a Ranald la fuerza para resistir las órdenes de la autoridad. Este Milagro te permite a ti, o a un objetivo a tu elección, resistir automáticamente los efectos de cualquier Chequeo de Carisma o Mando realizado por un PJ con un Estatus más alto que el objetivo, sin importar lo convincente que sea.</p>",
+			"effects": [{
+				"name":"Libera tu mente"
+				}]
+		},
+		"Moment of Clarity": {
+			"name": "Momento de claridad",
+			"description": "<p>Entonas un acertijo sobre el propósito de la existencia y Ranald responde con un guiño espiritual. Durante un breve instante ves con total claridad lo absolutamente absurdo de la vida y todo lo que hacen los mortales. Nada importa realmente... y eso es divertidísimo. Mientras dure este Milagro, obtienes el Rasgo @UUID[Compendium.wfrp4e-core.items.Item.IAWyzDfC286a9MPz]{Inmunidad a la Psicología}.</p>",
+			"effects": [{
+				"name":"Momento de claridad",
+				"scriptData": [
+					{"label":"Añadir Inmunidad a la Psicología"}
+					]
+				}]
+		},
+		"Rally Round": {
+			"name": "Unirse al jaleo",
+			"description": "<p>Cantas una fuerte canción de Ranald y la multitud se une a ella. Este Milagro afecta a todos los aliados dentro del Área de Efecto y se vuelve más efectivo con el número. Los aliados obtienen +2 NE a los Chequeos de Aguante y Frialdad, que aumenta en un +NE adicional por cada 10 personas en la multitud. Este milagro no afecta a los personajes de Estatus Plata u Oro.</p>",
+			"effects": [{
+				"name":"Unirse al jaleo",
+				"preApplyScript": "const value = await warhammer.apps.ValueDialog.create({text: \"¿De qué tamaño es la multitud afectada?\"}, 0)\nconst crowd = Number(value);\n\nfoundry.utils.setProperty(args.effectData.flags, \"wfrp4e.crowd\", crowd);\nargs.effectData.name += ` (Tamaño de la multitud: ${crowd})`;\n\nreturn true;",
+				"scriptData": [
+					{"label":"Unirse al jaleo"}
+					]
+				}]
+		},
+		"Under My Protection": {
+			"name": "Bajo mi protección",
+			"description": "<p>Llamas la atención de Ranald sobre la crueldad de los poderosos. Este Milagro requiere un objetivo que haya amenazado o perseguido a una víctima de tu elección, como un noble bravucón, un chantajista, un sacerdote prejuicioso o un ejemplo similar de una figura de autoridad injusta. A partir de su próximo sueño, Ranald les inflige aterradoras pesadillas, en las que las víctimas se vengan, son perseguidas por un gato negro gigante, urracas que les picotean y otras pesadillas similares. Mientras sufre estas pesadillas, el objetivo debe realizar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Frialdad</strong> cada mañana. Si fracasa, sufre 1 Estado de @Condition[Fatigado]. Si trata a sus víctimas con amabilidad o repara el daño que les ha causado, las pesadillas terminan.</p>",
+			"effects": [{
+				"name":"Bajo mi protección",
+				"scriptData": [
+					{"label":"Realizar Chequeos de Frialdad"}
+					]
+				}]
+		},
+		"Auroch’s Heart": {
+			"name": "Corazón de uro",
+			"description": "<p>Rezas a Taal para que infunda a un PJ con la constitución de un buey salvaje. Este obtiene tantos +NE como Bonificador por Empatía a todos los Chequeos de Resistencia hasta el final del Milagro.</p>",
+			"effects": [{
+				"name":"Corazón de uro",
+				"scriptData": [
+					{"label":"Bono de NE en Chequeos de Resistencia"}
+					]
+				}]
+		},
+		"Earthshudder": {
+			"name": "Temblor de tierra",
+			"description": "<p>Gritas el nombre de Taal tres veces y levantas los brazos hacia los cielos en señal de súplica. A cambio, el Señor de lo Salvaje envía truenos y sacude la tierra. Todos los objetivos dentro de tantas yardas como tu Bonificador por Empatía deben superar un Chequeo <strong>Complicado (-10)</strong> de <strong>Atletismo</strong> o quedar @Condition[Tumbado]{Tumbados}. Las estructuras artificiales (es decir, las construcciones) dentro del AdE sufren [[/r 1d10]] + NE de Daño.</p>",
+			"effects": [{
+				"name":"Temblor de tierra",
+				"avoidTestSkill": "Atletismo",
+				"scriptData": [
+					{"label":"Aplicar Tumbado"}
+					]
+				}]
+		},
+		"Nature’s Repast": {
+			"name": "Banquete de la Naturaleza",
+			"description": "<p>Extiendes la mano y entonas una invocación a Taal, agradeciéndole su generosidad con los dones de la tierra. Este Milagro requiere alimentos recolectados o cazados en la Naturaleza. Cuando los tocas se vuelven más nutritivos y duraderos, llenando los estómagos mucho mejor que en su estado original. Cualquiera que los consuma puede pasar cuatro días sin un Chequeo de Aguante por inanición. Este milagro puede afectar hasta seis comidas individuales y no aumenta la cantidad de comida, por lo que no dará de comer a más bocas, sino que la comida en sí se vuelve más sustanciosa.</p>"
+		},
+		"Pax of Taal": {
+			"name": "Paz de Taal",
+			"description": "<p>Susurras una gutural plegaria animal a Taal. Cuando las palabras salen de tu boca, todas las bestias dentro del Área de Efecto te miran fijamente. Todas las criaturas con el Rasgo @UUID[Compendium.wfrp4e-core.items.Item.AGcJl5rHjkyIQBPP]{Bestial} dentro del Área de Efecto se calman. No atacarán a ningún objetivo, ni a sus presas, ni se atacarán entre sí. Este Milagro no tiene efecto en criaturas que han sido retorcidas por el Caos. Si un PJ ataca a los animales, el efecto sobre ellos se rompe.</p>",
+			"effects": [{
+				"name":"Paz de Taal"
+				}]
+		},
+		"Rending Paw": {
+			"name": "Pata rasgadora",
+			"description": "<p>Ruges un desafío con la ferocidad del Señor de lo Salvaje en su máxima furia. Te concede a ti o a un aliado una sorprendente fuerza en los brazos. El objetivo gana +20 a su Característica de Fuerza hasta el final del Milagro.</p>",
+			"effects": [{
+				"name":"Pata rasgadora"
+				}]
+		},
+		"River’s Blessing": {
+			"name": "Bendición del río",
+			"description": "<p>Imploras a Taal como el Señor de los Ríos para que te conceda paso seguro a través de sus dominios. Mientras dure el Milagro obtienes +4 NE a todos los Chequeos de Nadar y tu Velocidad de Movimiento cuando te mueves por el agua es la misma que la de tu Movimiento, en lugar de la mitad. Nota: este Milagro no tiene efecto en agua salada.</p>",
+			"effects": [{
+				"name":"Bendición del río",
+				"scriptData": [
+					{"label":"Todos los Chequeos de Nadar"}
+					]
+				}]
+		},
+		"Wild Wind": {
+			"name": "Viento salvaje",
+			"description": "<p>Llamas al Señor de lo Salvaje y, en respuesta, él azota los vientos en una vorágine furiosa y arremolinada. Aunque a ti no te afecta, todos los objetivos dentro del Área de Efecto son azotados por furiosos vientos. Cualquier Chequeo de HA o Agilidad queda penalizado con -2 NE y, en cada Asalto, se debe superar un Chequeo <strong>Complicado (-10)</strong> de <strong>Resistencia</strong> para evitar sufrir 1 Estado de @Condition[Tumbado]. No se pueden realizar ataques a distancia dentro del Área de Efecto y solo las armas de pólvora o la artillería pueden atacar objetivos dentro de dicha zona.</p>",
+			"effects": [{
+				"name":"Viento salvaje",
+				"scriptData": [
+					{"label":"Cualquier Chequeo de arma o Agilidad"},
+					{"label":"Chequeo de Tumbado"},
+					{"label":"No puedes realizar ataques a distancia"},
+					{"label":"Sólo las armas de pólvora o la artillería pueden atacar objetivos dentro del Viento salvaje"}
+					]
+				}]
+		},
+		"Wilderness Way": {
+			"name": "Camino salvaje",
+			"description": "<p>Cierras los ojos y haces el signo del ciervo de Taal con tu mano izquierda, esperando que el Señor de lo Salvaje guíe tus pasos. Este Milagro puede realizarse antes de que el grupo emprenda un viaje tal y como se describe en el @UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.xq3g1ukhk4RFHNSF]{Capítulo 7 – Cómo encontrar el camino}. Anota el número de NE conseguidos en el Chequeo de Rezar. Estos pueden usarse para repetir los resultados de cualquier Empresa de @UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.xq3g1ukhk4RFHNSF.JournalEntryPage.M0ErxS6tPnwsFsRb#empresa-planificacion]{Planificación}, @UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.xq3g1ukhk4RFHNSF.JournalEntryPage.w5XYNzkXObxeBzFD]{Viaje} o @UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.xq3g1ukhk4RFHNSF.JournalEntryPage.YF6OGH5E8oLTde07]{Campamento} en el siguiente periodo de viaje. Si el viaje se ve interrumpido por un encuentro, se pierden las restantes repeticiones, aunque en tales casos el Milagro puede lanzarse de nuevo antes de la siguiente etapa del viaje.</p>"
+		},
+		"Trained (Circle)": {
+			"name": "Adiestrado (Tantear)",
+			"description": "<p>El animal está adiestrado para detectar presas potenciales e incluso otros objetos, desde su posición privilegiada en el cielo y luego trazar un círculo lento sobre ellas para indicar su posición.</p>"
+		},
+		"Trained (Dig)": {
+			"name": "Adiestrado (Cavar)",
+			"description": "<p>Si el adiestrador supera un Chequeo <strong>Normal (+20)</strong> de <strong>Adiestrar animales</strong>, el animal cavará en un lugar determinado al recibir la orden. Esto puede ayudar a construir trampas o a descubrir objetos enterrados.</p>"
+		},
+		"Trained (Heel)": {
+			"name": "Adiestrado (Talonear)",
+			"description": "<p>Si el adiestrador supera un Chequeo <strong>Normal (+20)</strong> de <strong>Adiestrar animales</strong>, el animal se pica de talones inmediatamente, independientemente de la distracción.</p>"
+		},
+		"Trained (Hunt)": {
+			"name": "Adiestrado (Cazar)",
+			"description": "<p>Si el adiestrador supera un Chequeo <strong>Normal (+20)</strong> de <strong>Adiestrar animales</strong>, el animal perseguirá a una presa, intentará matarla y recuperarla. Puedes intentar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Cuerpo a cuerpo</strong> para determinar si tiene éxito.</p>"
+		},
+		"Trained (Point)": {
+			"name": "Adiestrado (Apuntar)",
+			"description": "<p>El animal señala con precisión el objeto buscado por el adiestrador, siempre que tenga un olor distintivo. Esto se usa para indicar una presa y también es útil para señalar contrabando. Algunos perros son muy ostentosos al señalar, pero otros pueden hacerlo con más sutileza.</p>"
+		},
+		"Trained (Return)": {
+			"name": "Adiestrado (Regresar)",
+			"description": "<p>Los halcones suelen regresar con su dueño, pero pueden ser recalcitrantes. Con este rasgo, el guía puede realizar un Chequeo de <strong>Carisma animal</strong>, enfrentado con la <strong>Voluntad</strong> del halcón, para que regrese de inmediato y sin complicaciones.</p>"
+		},
+		"Trained (Round)": {
+			"name": "Adiestrado (Tantear)",
+			"description": "<p>Si el adiestrador supera un Chequeo <strong>Desafiante (+0)</strong> de <strong>Adiestrar animales</strong>, el animal puede posicionarse para manipular a la presa y que se mueva de cierta manera, sin asustarla. Esto también se puede usar para actividades como el pastoreo.</p>"
+		},
+		"Trained (Track)": {
+			"name": "Adiestrado (Rastrear)",
+			"description": "<p>El animal posee el Rasgo de @UUID[Compendium.wfrp4e-core.items.Item.ClOlztW6hH8rslbp]{Rastreador} y lo usa al recibir órdenes con instrucciones: por ejemplo, buscar y seguir un olor del que se le ha dado una muestra.</p>"
+		}
+	}
+}

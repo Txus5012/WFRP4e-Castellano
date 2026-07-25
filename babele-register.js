@@ -20,6 +20,7 @@ game.babele.registerConverters({
         if ( value == "Self" ) return "Uno mismo";
         if ( value == "Instant" ) return "Instantáneo";
         if ( value == "Instante" ) return "Instantáneo";
+        if ( value == "Permanent" ) return "Permanente";
         if ( value == "Line of Sight" ) return "Línea de Visión";
         if ( value == "See Text" ) return "Ver texto";
         if ( value == "Special" ) return "Especial";
@@ -36,6 +37,7 @@ game.babele.registerConverters({
         if ( value == "Until the next sunrise" ) return "Hasta el siguiente amanecer";
         if ( value == "The spell affects either one of the casters" ) return "El hechizo afecta a cualquiera de los lanzadores";
         if ( value == "One of your Constructs or Familiars" ) return "Uno de tus constructos o familiares";
+        if ( value == "Gold Standing Days +SL (see below)" ) return "Tantos días como el Estatus de Oro +NE (ver descripción)";
         if ( value == "1 object" ) return "1 objeto";
         if ( value == "1 object of 1 Encumbrance" ) return "1 objeto (1 Imp.)";
         if ( value == "1 weapon" ) return "1 arma";
@@ -143,6 +145,8 @@ game.babele.registerConverters({
         if ( unit == "day") unit = "día";
         if ( unit == "days") unit = "días";
         if ( unit == "Days") unit = "Días";
+        if ( unit == "months") unit = "meses";
+        if ( unit == "Months") unit = "Meses";
         if ( unit == "years") unit = "años";
         if ( unit == "yard") unit = "yarda";
         if ( unit == "yards") unit = "yardas";
@@ -202,11 +206,6 @@ Hooks.on("setup", () => {
 	  game.folders.getName("Vortex").name = "Vórtice"
 	}
 
-	if (game.folders.getName("Wandering Creature Encounters")) { 
-	  game.folders.getName("Character Creation").name = "Creación de Personaje"
- 	  game.folders.getName("Wandering Creature Encounters").name = "Encuentros con criaturas ambulantes"
-	}
-
 	if (game.folders.getName("Road Riffraff")) {
 	  game.folders.getName("Enemy in Shadows").name = "El Enemigo en las Sombras"
 	  game.folders.getName("Enemy in Shadows").name = "El Enemigo en las Sombras"
@@ -244,6 +243,24 @@ Hooks.on("setup", () => {
 	  game.folders.getName("Mishaps").name = "Percances"
 	  game.folders.getName("Physical").name = "Física"
 	  game.folders.getName("Weather").name = "Tiempo"
+	}
+
+	if (game.folders.getName("Wandering Creature Encounters")) { 
+	  game.folders.getName("Character Creation").name = "Creación de Personaje"
+ 	  game.folders.getName("Wandering Creature Encounters").name = "Encuentros con criaturas ambulantes"
+	}
+
+	if (game.folders.getName("Burglary, Chicanery, and Fraud")) {
+	  game.folders.getName("Deft Steps & Light Fingers").name = "Pasos Hábiles y Dedos Ligeros"
+	  game.folders.getName("Deft Steps & Light Fingers").name = "Pasos Hábiles y Dedos Ligeros"
+	  game.folders.getName("Deft Steps & Light Fingers").name = "Pasos Hábiles y Dedos Ligeros"
+	  game.folders.getName("Burglary, Chicanery, and Fraud").name = "Robos, argucias y fraude"
+	  game.folders.getName("Criminal Contacts").name = "Contactos delictivos"
+	  game.folders.getName("Endeavour Complications").name = "Complicaciones de Empresas"
+	  game.folders.getName("Events Tables").name = "Tablas de sucesos"
+	  game.folders.getName("Outlaw Traits").name = "Rasgos de forajido"
+	  game.folders.getName("Pathfinding").name = "Cómo encontrar el camino"
+	  game.folders.getName("Watch & Bounty Hunters").name = "La Guardia y cazarrecompensas"
 	}
 
 	if (game.folders.getName("Toolboxes")) { 

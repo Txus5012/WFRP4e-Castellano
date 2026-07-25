@@ -1,0 +1,18 @@
+{
+	"label": "Escenas (Pasos Hábiles y Dedos Ligeros)",
+	"entries": {
+		"Hunting Lodge": {
+			"name": "Pabellón de caza",
+			"image": "modules/wfrp4e-castellano/Images/DSLF/hunting-lodge.webp",
+			"levels": [
+				{"background": "modules/wfrp4e-castellano/Images/DSLF/hunting-lodge.webp"}
+				]
+		},
+		"Reikland": {
+			"image": "modules/wfrp4e-castellano/Images/DSLF/reikland.webp",
+			"levels": [
+				{"background": "modules/wfrp4e-castellano/Images/DSLF/reikland.webp"}
+				]
+		}
+	}
+}

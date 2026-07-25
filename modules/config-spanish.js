@@ -1667,7 +1667,7 @@ game.wfrp4e.config.statusEffects = [
                             formula = scriptArgs.formula;
                             msg = scriptArgs.msg;
                             let roll = await new Roll(formula, this).roll();
-                            let terms = roll.terms.map(i => (i instanceof Die ? (i.formula + " (" + i.total + ")") : (i.total))).join("")
+                            let terms = roll.terms.map(i => (i instanceof foundry.dice.terms.Die ? (i.formula + " (" + i.total + ")") : (i.total))).join("")
                             msg = msg.replace("@FORMULA", terms);
 
                             let damageMsg = ("<br>" + await this.actor.applyBasicDamage(roll.total, {loc: leastProtectedLoc, suppressMsg : true})).split("")
@@ -2750,7 +2750,7 @@ if (game.modules.get("wfrp4e-wom") && game.modules.get("wfrp4e-wom").active) {
     game.wfrp4e.utility.mergeCareerReplacements({
         human : {
             "Boticario" : ["Alquimista mundano"],
-            "Wizard" : ["Hierofante", "Alquimista", "Druida", "Astromante", "Umbramante", "Espiritista", "Piromante", "Chamán", "Magíster vigilante"],
+            "Hechicero" : ["Hierofante", "Alquimista", "Druida", "Astromante", "Umbramante", "Espiritista", "Piromante", "Chamán", "Magíster vigilante"],
             "Místico" : ["Visionario"],
             "Guardia" : ["Bedel"],
         },
@@ -2767,6 +2767,41 @@ if (game.modules.get("wfrp4e-wom") && game.modules.get("wfrp4e-wom").active) {
     game.wfrp4e.config.magicLores["Mòna's Marsh Magic"] = "Magia del pantano de Mòna"
     game.wfrp4e.config.magicWind["Mòna's Marsh Magic"] = "Magia del pantano de Mòna"
   }
+
+if (game.modules.get("wfrp4e-dslf") && game.modules.get("wfrp4e-dslf").active) {
+    game.wfrp4e.utility.mergeCareerReplacements({
+    human: {
+      "Guarda": ["Guardabosques"],
+      "Cazador": ["Cazador furtivo"],
+      "Sacerdote": ["Sacerdote ladrón", "Sacerdote jugador", "Sacerdote embaucador", "Sacerdote liberador", "Sacerdote rural de Taal"],
+      "Ladrón": ["Carterista", "Desfalcador", "Ratero"],
+      "Charlatán": ["Falsificador"],
+      "Mensajero" : ["Arriero"]
+    },
+    dwarf: {
+      "Guarda": ["Guardabosques"],
+      "Cazador": ["Cazador furtivo"],
+      "Charlatán": ["Falsificador"],
+      "Ladrón": ["Carterista", "Desfalcador", "Ratero"],
+      "Mensajero" : ["Arriero"]
+    },
+    helf: {
+      "Charlatán": ["Falsificador"],
+    },
+    welf: {
+      "Guarda": ["Guardabosques"],
+      "Cazador": ["Cazador furtivo"],
+      "Charlatán": ["Falsificador"],
+    },
+    halfling: {
+      "Guarda": ["Guardabosques"],
+      "Cazador": ["Cazador furtivo"],
+      "Charlatán": ["Falsificador"],
+      "Ladrón": ["Carterista", "Desfalcador", "Ratero"],
+      "Mensajero" : ["Arriero"]
+    }
+  })
+ }
 
 if (game.modules.get("wfrp4e-lustria") && game.modules.get("wfrp4e-lustria").active) {
     game.wfrp4e.config.magicLores["WAAAGH!"] = "¡WAAAGH!"
