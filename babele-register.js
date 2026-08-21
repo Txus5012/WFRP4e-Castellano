@@ -19,7 +19,6 @@ game.babele.registerConverters({
         if ( value == "You" ) return "Tú";
         if ( value == "Self" ) return "Uno mismo";
         if ( value == "Instant" ) return "Instantáneo";
-        if ( value == "Instante" ) return "Instantáneo";
         if ( value == "Permanent" ) return "Permanente";
         if ( value == "Line of Sight" ) return "Línea de Visión";
         if ( value == "See Text" ) return "Ver texto";
@@ -28,7 +27,7 @@ game.babele.registerConverters({
         if ( value == "Varies" ) return "Varía";
         if ( value == "AoE (Special)" ) return "AdE (Especial)";
         if ( value == "1 with AoE (Willpower Bonus yards)" ) return "1 con AdE (Bonificador por Voluntad yardas)";
-        if ( value == "4 Willpower Bonus yards (AoE)" ) return "4 * AdE (Bonificador por Voluntad yardas)";
+        if ( value == "4 Willpower Bonus yards (AoE)" ) return "Bonificador por Voluntad yardas";
         if ( value == "See text" ) return "Ver texto";
         if ( value == "Any ally" ) return "Cualquier aliado";
         if ( value == "a single location" ) return "Un solo lugar";
@@ -168,103 +167,101 @@ game.babele.registerConverters({
  })
 
 Hooks.on("setup", () => {
-	if (game.folders.getName("Moo's Homebrew")) {
-	  game.folders.getName("Core Rulebook").name = "Libro Básico"
-	  game.folders.getName("Core Rulebook").name = "Libro Básico"
- 	  game.folders.getName("Core Rulebook").name = "Libro Básico"
- 	  game.folders.getName("Core Rulebook").name = "Libro Básico"
- 	  game.folders.getName("Moo's Homebrew").name = "Reglas caseras de Moo"
- 	  game.folders.getName("Character Creation").name = "Creación de Personaje"
- 	  game.folders.getName("Hit Location").name = "Ubicación de Impacto"
- 	  game.folders.getName("GM Booklet").name = "Libreta del DJ"
- 	  game.folders.getName("Career Tables").name = "Tablas de Carrera"
- 	  game.folders.getName("Critical Hit Tables").name = "Tablas de Impactos Críticos"
- 	  game.folders.getName("Corruption & Mutation Tables").name = "Tablas de Mutación y Corrupción"
+	if (game.modules.get("wfrp4e-core") && game.modules.get("wfrp4e-core").active) {
+	  if (game.folders.get("FrdgIb0QiKl7cPNJ")) { game.folders.get("FrdgIb0QiKl7cPNJ").name = "Libro Básico" }
+	  if (game.folders.get("75mueNHFxgFQDKVr")) { game.folders.get("75mueNHFxgFQDKVr").name = "Libro Básico" }
+ 	  if (game.folders.get("GzEVcnQg3OwynZ9T")) { game.folders.get("GzEVcnQg3OwynZ9T").name = "Libro Básico" }
+ 	  if (game.folders.get("sBNF1v9ovsQ5VdNG")) { game.folders.get("sBNF1v9ovsQ5VdNG").name = "Libro Básico" }
+ 	  if (game.folders.get("8swRurVD2l3fjJF3")) { game.folders.get("8swRurVD2l3fjJF3").name = "Reglas caseras de Moo" }
+ 	  if (game.folders.get("hbRpwkDO06dl6yY5")) { game.folders.get("hbRpwkDO06dl6yY5").name = "Creación de Personaje" }
+ 	  if (game.folders.get("eol6GcmRA7Io2NVG")) { game.folders.get("eol6GcmRA7Io2NVG").name = "Ubicación de Impacto" }
+ 	  if (game.folders.get("RZMc4c3gB7cN5KME")) { game.folders.get("RZMc4c3gB7cN5KME").name = "Libreta del DJ" }
+ 	  if (game.folders.get("b6PFNJT2yqU43jS2")) { game.folders.get("b6PFNJT2yqU43jS2").name = "Tablas de Carrera" }
+ 	  if (game.folders.get("wvlmyiitIjcxqo1J")) { game.folders.get("wvlmyiitIjcxqo1J").name = "Tablas de Impactos Críticos" }
+ 	  if (game.folders.get("IKkKpsHgWQLDRjgY")) { game.folders.get("IKkKpsHgWQLDRjgY").name = "Tablas de Mutación y Corrupción" }
 	}
 
-	if (game.folders.getName("Job")) {
-	  game.folders.getName("Up In Arms").name = "¡A las Armas!"
-	  game.folders.getName("Up In Arms").name = "¡A las Armas!"
-	  game.folders.getName("Up In Arms").name = "¡A las Armas!"
-	  game.folders.getName("Criticals").name = "Críticos"
-	  game.folders.getName("Hireling").name = "Asalariado"
-	  game.folders.getName("Job").name = "Trabajo"
+	if (game.modules.get("wfrp4e-uia") && game.modules.get("wfrp4e-uia").active) {
+	  if (game.folders.get("y5TuKPB73PHk77tf")) { game.folders.get("y5TuKPB73PHk77tf").name = "¡A las Armas!" }
+	  if (game.folders.get("F1AUYScWn7uHEwy3")) { game.folders.get("F1AUYScWn7uHEwy3").name = "¡A las Armas!" }
+	  if (game.folders.get("IQmBeG9CO09ouMen")) { game.folders.get("IQmBeG9CO09ouMen").name = "Críticos" }
+	  if (game.folders.get("lPwrIEntpaTbP448")) { game.folders.get("lPwrIEntpaTbP448").name = "Asalariado" }
+	  if (game.folders.get("vvElJLX5kpGyiNip")) { game.folders.get("vvElJLX5kpGyiNip").name = "Trabajo" }
 	}
 
-	if (game.folders.getName("Potion Spoilage")) {
-	  game.folders.getName("Winds of Magic").name = "Vientos de la Magia"
-	  game.folders.getName("Winds of Magic").name = "Vientos de la Magia"
-	  game.folders.getName("Winds of Magic").name = "Vientos de la Magia"
-	  game.folders.getName("Familiar Personality").name = "Personalidad del Familiar"
-	  game.folders.getName("Grimoire").name = "Grimorio"
-	  game.folders.getName("Marks").name = "Marcas"
-	  game.folders.getName("Miscast").name = "Disfunción"
-	  game.folders.getName("Other").name = "Otras"
-	  game.folders.getName("Potion Spoilage").name = "Deterioro en pociones"
-	  game.folders.getName("Scroll").name = "Pergamino"
-	  game.folders.getName("Symbol").name = "Símbolo"
-	  game.folders.getName("Vortex").name = "Vórtice"
+	if (game.modules.get("wfrp4e-wom") && game.modules.get("wfrp4e-wom").active) {
+	  if (game.folders.get("aHacdjaAbp8SImbu")) { game.folders.get("aHacdjaAbp8SImbu").name = "Vientos de la Magia" }
+	  if (game.folders.get("lQNYcn2MLkhOfWXy")) { game.folders.get("lQNYcn2MLkhOfWXy").name = "Vientos de la Magia" }
+	  if (game.folders.get("CPCVrzbppuFh3C3M")) { game.folders.get("CPCVrzbppuFh3C3M").name = "Personalidad del Familiar" }
+	  if (game.folders.get("s1nE91yUqhqPpmpN")) { game.folders.get("s1nE91yUqhqPpmpN").name = "Grimorio" }
+	  if (game.folders.get("EXCI9FfGD3SqeDQ7")) { game.folders.get("EXCI9FfGD3SqeDQ7").name = "Marcas" }
+	  if (game.folders.get("QJhoMJLhy5eDjsHL")) { game.folders.get("QJhoMJLhy5eDjsHL").name = "Disfunción" }
+	  if (game.folders.get("YLG1wiXC1BSEn8e6")) { game.folders.get("YLG1wiXC1BSEn8e6").name = "Otras" }
+	  if (game.folders.get("IbuJZ3WEVPY1xNKu")) { game.folders.get("IbuJZ3WEVPY1xNKu").name = "Deterioro en pociones" }
+	  if (game.folders.get("I2iilcldXrGJksrs")) { game.folders.get("I2iilcldXrGJksrs").name = "Pergamino" }
+	  if (game.folders.get("neCEaarIdZuLeIoM")) { game.folders.get("neCEaarIdZuLeIoM").name = "Símbolo" }
+	  if (game.folders.get("CBtcsmGBeFuGFjzN")) { game.folders.get("CBtcsmGBeFuGFjzN").name = "Vórtice" }
 	}
 
-	if (game.folders.getName("Road Riffraff")) {
-	  game.folders.getName("Enemy in Shadows").name = "El Enemigo en las Sombras"
-	  game.folders.getName("Enemy in Shadows").name = "El Enemigo en las Sombras"
-	  game.folders.getName("Enemy in Shadows").name = "El Enemigo en las Sombras"
-	  game.folders.getName("Enemy in Shadows").name = "El Enemigo en las Sombras"
-	  game.folders.getName("Enemy in Shadows").name = "El Enemigo en las Sombras"
-	  game.folders.getName("Adventure").name = "Aventura"
-	  game.folders.getName("Adventure").name = "Aventura"
-	  game.folders.getName("Adventure").name = "Aventura"
-	  game.folders.getName("Companion").name = "Compendio"
-	  game.folders.getName("Companion").name = "Compendio"
-	  game.folders.getName("Companion").name = "Compendio"
-	  game.folders.getName("Chapter 1 - Wanted: Bold Adventurers").name = "Capítulo 1 - ¡Se buscan aventureros audaces!"
-	  game.folders.getName("Chapter 2 - Mistaken Identity").name = "Capítulo 2 - Confusión de identidades"
-	  game.folders.getName("Chapter 3 - Heart of the Empire").name = "Capítulo 3 - El corazón del Imperio"
-	  game.folders.getName("Chapter 4 - On To Bögenhafen").name = "Capítulo 4 - Hacia Bögenhafen"
-	  game.folders.getName("Chapter 6 - The Schaffenfest").name = "Capítulo 6 - La Schaffenfest"
-	  game.folders.getName("Chapter 7 - Into The Darkness").name = "Capítulo 7 - Hacia la oscuridad"
-	  game.folders.getName("Chapter 8 - Chasing Shadows").name = "Capítulo 8 - La caza de fantasmas"
-	  game.folders.getName("Chapter 9 - The Darkest Hour").name = "Capítulo 9 - El peor momento"
-	  game.folders.getName("Appendices").name = "Apéndices"
-	  game.folders.getName("Pregens").name = "Pregenerados"
-	  game.folders.getName("Mounts and Vehicles").name = "Monturas y vehículos"
-	  game.folders.getName("Road Wardens").name = "Guardas de caminos"
-	  game.folders.getName("Road Riffraff").name = "Chusma de carretera"
-	  game.folders.getName("Town Troublemakers").name = "Alborotadores de las poblaciones"
-	  game.folders.getName("Daemons").name = "Demonios"
-	  game.folders.getName("On The Road").name = "En la carretera"
-	  game.folders.getName("The Affair of the Hidden Jewel").name = "El caso de la joya oculta"
-	  game.folders.getName("The Pandemonium Carnival").name = "La Feria del Pandemonio"
-	  game.folders.getName("Beast Head").name = "Cabeza de bestia"
-	  game.folders.getName("Daemonic Mien").name = "Aspecto demoníaco"
-	  game.folders.getName("Encounters").name = "Sucesos"
-	  game.folders.get("cmU7EFYGygSPWkaI").name = "El Enemigo en las Sombras"
-	  game.folders.getName("Mishaps").name = "Percances"
-	  game.folders.getName("Physical").name = "Física"
-	  game.folders.getName("Weather").name = "Tiempo"
+	if (game.modules.get("wfrp4e-eis") && game.modules.get("wfrp4e-eis").active) {
+	  if (game.folders.get("Oobgkgtyg5YfHyTS")) { game.folders.get("Oobgkgtyg5YfHyTS").name = "El Enemigo en las Sombras" }
+	  if (game.folders.get("VewvefWTIRlohEb7")) { game.folders.get("VewvefWTIRlohEb7").name = "El Enemigo en las Sombras" }
+	  if (game.folders.get("ktSRAB1Cuyh68udm")) { game.folders.get("ktSRAB1Cuyh68udm").name = "El Enemigo en las Sombras" }
+	  if (game.folders.get("cNomE7hTwiKR7Qkz")) { game.folders.get("cNomE7hTwiKR7Qkz").name = "El Enemigo en las Sombras" }
+	  if (game.folders.get("RQMja5dMDJoONxFv")) { game.folders.get("RQMja5dMDJoONxFv").name = "El Enemigo en las Sombras" }
+	  if (game.folders.get("7xsFaDgshkMm49nU")) { game.folders.get("7xsFaDgshkMm49nU").name = "Aventura" }
+	  if (game.folders.get("FB5bioYo0lwQAca2")) { game.folders.get("FB5bioYo0lwQAca2").name = "Aventura" }
+	  if (game.folders.get("Yeqx5f1MRwsY2Vdy")) { game.folders.get("Yeqx5f1MRwsY2Vdy").name = "Aventura" }
+	  if (game.folders.get("J9sNjxudZtK4iwzL")) { game.folders.get("J9sNjxudZtK4iwzL").name = "Compendio" }
+	  if (game.folders.get("vTNWMOmmVwE4Po94")) { game.folders.get("vTNWMOmmVwE4Po94").name = "Compendio" }
+	  if (game.folders.get("CvRwHJhAiYrfkRYG")) { game.folders.get("CvRwHJhAiYrfkRYG").name = "Compendio" }
+	  if (game.folders.get("w5q0YSuGUlnNIyVE")) { game.folders.get("w5q0YSuGUlnNIyVE").name = "Capítulo 1 - ¡Se buscan aventureros audaces!" }
+	  if (game.folders.get("51B5eaMeekTUU5ia")) { game.folders.get("51B5eaMeekTUU5ia").name = "Capítulo 2 - Confusión de identidades" }
+	  if (game.folders.get("irzpw0wIKCsCt5ki")) { game.folders.get("irzpw0wIKCsCt5ki").name = "Capítulo 3 - El corazón del Imperio" }
+	  if (game.folders.get("o8XB5omFC038Wns5")) { game.folders.get("o8XB5omFC038Wns5").name = "Capítulo 4 - Hacia Bögenhafen" }
+	  if (game.folders.get("25pNM3s6l0aeadIa")) { game.folders.get("25pNM3s6l0aeadIa").name = "Capítulo 6 - La Schaffenfest" }
+	  if (game.folders.get("N5CabmMkcmYUNLj9")) { game.folders.get("N5CabmMkcmYUNLj9").name = "Capítulo 7 - Hacia la oscuridad" }
+	  if (game.folders.get("pDbVvspwJWw3F6Ha")) { game.folders.get("pDbVvspwJWw3F6Ha").name = "Capítulo 8 - La caza de fantasmas" }
+	  if (game.folders.get("2lYoZ0bJ8XieVrkR")) { game.folders.get("2lYoZ0bJ8XieVrkR").name = "Capítulo 9 - El peor momento" }
+	  if (game.folders.get("mJ9p6pJlDCJ0cku4")) { game.folders.get("mJ9p6pJlDCJ0cku4").name = "Apéndices" }
+	  if (game.folders.get("mzrgh64ctXsd8zRa")) { game.folders.get("mzrgh64ctXsd8zRa").name = "Pregenerados" }
+	  if (game.folders.get("bf34fpkHjZXyOVRY")) { game.folders.get("bf34fpkHjZXyOVRY").name = "Monturas y vehículos" }
+	  if (game.folders.get("SCJdGmWePKRbMDiL")) { game.folders.get("SCJdGmWePKRbMDiL").name = "Guardas de caminos" }
+	  if (game.folders.get("3REOhajOw0rRk5Wy")) { game.folders.get("3REOhajOw0rRk5Wy").name = "Chusma de carretera" }
+	  if (game.folders.get("2sRCVcdrwUTrRNmx")) { game.folders.get("2sRCVcdrwUTrRNmx").name = "Alborotadores de las poblaciones" }
+	  if (game.folders.get("WBWWucClAtZvLHZx")) { game.folders.get("WBWWucClAtZvLHZx").name = "Demonios" }
+	  if (game.folders.get("PqsBQxrJqKwDwG1U")) { game.folders.get("PqsBQxrJqKwDwG1U").name = "En la carretera" }
+	  if (game.folders.get("lDxgZDjjQlmXa9gt")) { game.folders.get("lDxgZDjjQlmXa9gt").name = "El caso de la joya oculta" }
+	  if (game.folders.get("khp4NiSSYztpsjSu")) { game.folders.get("khp4NiSSYztpsjSu").name = "La Feria del Pandemonio" }
+	  if (game.folders.get("6wfgpdwb6UcA9HLO")) { game.folders.get("6wfgpdwb6UcA9HLO").name = "Cabeza de bestia" }
+	  if (game.folders.get("6G2ZEsymVYS7W5R7")) { game.folders.get("6G2ZEsymVYS7W5R7").name = "Aspecto demoníaco" }
+	  if (game.folders.get("6cdhF59J0yBGqT46")) { game.folders.get("6cdhF59J0yBGqT46").name = "Sucesos" }
+	  if (game.folders.get("cmU7EFYGygSPWkaI")) { game.folders.get("cmU7EFYGygSPWkaI").name = "El Enemigo en las Sombras" }
+	  if (game.folders.get("O506jKlzOPZZebpC")) { game.folders.get("O506jKlzOPZZebpC").name = "Percances" }
+	  if (game.folders.get("H0sE2BZDukXUam8p")) { game.folders.get("H0sE2BZDukXUam8p").name = "Física" }
+	  if (game.folders.get("5KhfFmseb9BI2Z65")) { game.folders.get("5KhfFmseb9BI2Z65").name = "Tiempo" }
 	}
 
-	if (game.folders.getName("Wandering Creature Encounters")) { 
-	  game.folders.getName("Character Creation").name = "Creación de Personaje"
- 	  game.folders.getName("Wandering Creature Encounters").name = "Encuentros con criaturas ambulantes"
+	if (game.modules.get("wfrp4e-lustria") && game.modules.get("wfrp4e-lustria").active) { 
+	  if (game.folders.get("0zS6lLSl96ht8RFF")) { game.folders.get("0zS6lLSl96ht8RFF").name = "Creación de Personaje" }
+ 	  if (game.folders.get("gmv0hDRZUCQqSeIT")) { game.folders.get("gmv0hDRZUCQqSeIT").name = "Encuentros con criaturas ambulantes" }
 	}
 
-	if (game.folders.getName("Burglary, Chicanery, and Fraud")) {
-	  game.folders.getName("Deft Steps & Light Fingers").name = "Pasos Hábiles y Dedos Ligeros"
-	  game.folders.getName("Deft Steps & Light Fingers").name = "Pasos Hábiles y Dedos Ligeros"
-	  game.folders.getName("Deft Steps & Light Fingers").name = "Pasos Hábiles y Dedos Ligeros"
-	  game.folders.getName("Burglary, Chicanery, and Fraud").name = "Robos, argucias y fraude"
-	  game.folders.getName("Criminal Contacts").name = "Contactos delictivos"
-	  game.folders.getName("Endeavour Complications").name = "Complicaciones de Empresas"
-	  game.folders.getName("Events Tables").name = "Tablas de sucesos"
-	  game.folders.getName("Outlaw Traits").name = "Rasgos de forajido"
-	  game.folders.getName("Pathfinding").name = "Cómo encontrar el camino"
-	  game.folders.getName("Watch & Bounty Hunters").name = "La Guardia y cazarrecompensas"
+	if (game.modules.get("wfrp4e-dslf") && game.modules.get("wfrp4e-dslf").active) {
+	  if (game.folders.get("oB4Sbqi9zcihhi30")) { game.folders.get("oB4Sbqi9zcihhi30").name = "Pasos Hábiles y Dedos Ligeros" }
+	  if (game.folders.get("U3jYz1msfN2O9tf2")) { game.folders.get("U3jYz1msfN2O9tf2").name = "Pasos Hábiles y Dedos Ligeros" }
+	  if (game.folders.get("IonZEkPpzJXFEptp")) { game.folders.get("IonZEkPpzJXFEptp").name = "Pasos Hábiles y Dedos Ligeros" }
+	  if (game.folders.get("U6vaoEkrAja7kFKQ")) { game.folders.get("U6vaoEkrAja7kFKQ").name = "Robos, argucias y fraude" }
+	  if (game.folders.get("BDqLd18iG4VBy3V2")) { game.folders.get("BDqLd18iG4VBy3V2").name = "Contactos delictivos" }
+	  if (game.folders.get("0Y5iVNPI60wY9tOk")) { game.folders.get("0Y5iVNPI60wY9tOk").name = "Complicaciones de Empresas" }
+	  if (game.folders.get("uBSDC33xk6m5UchV")) { game.folders.get("uBSDC33xk6m5UchV").name = "Tablas de sucesos" }
+	  if (game.folders.get("RjZOgiNgPII7iFx9")) { game.folders.get("RjZOgiNgPII7iFx9").name = "Rasgos de forajido" }
+	  if (game.folders.get("nzyeAZbzel7icvW9")) { game.folders.get("nzyeAZbzel7icvW9").name = "Cómo encontrar el camino" }
+	  if (game.folders.get("481aeeiXOLPVdrU1")) { game.folders.get("481aeeiXOLPVdrU1").name = "La Guardia y cazarrecompensas" }
 	}
 
-	if (game.folders.getName("Toolboxes")) { 
-	  game.folders.getName("Toolboxes").name = "Cajas de herramientas"
+	if (game.modules.get("wfrp4e-gm-toolkit") && game.modules.get("wfrp4e-gm-toolkit").active) { 
+	  if (game.folders.get("8bDNzfl3xQr6W9a2")) { game.folders.get("8bDNzfl3xQr6W9a2").name = "Cajas de herramientas" }
 	}
 })
 

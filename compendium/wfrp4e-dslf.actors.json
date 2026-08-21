@@ -27,27 +27,133 @@
 		"Arabyan Redhawk": {
 			"name": "Halcón rojo de Arabia",
 			"species": "Halcón rojo de Arabia",
-			"description": "<p>Los halcones rojos de Arabia son apreciados entre la nobleza por sus excelentes habilidades de caza y por el prestigio que aportan. Son orgullosos y feroces pero, una vez entrenados y bien tratados, son extraordinariamente leales. Son tan codiciados en el Viejo Mundo que algunos estados de Arabia han prohibido su exportación. Son principalmente marrones, pero tienen manchas rojas brillantes en las alas. Los ejemplares grandes y bien adiestrados pueden alcanzar precios extraordinariamente altos entre los aficionados adinerados.</p>"
+			"description": "<p>Los @UUID[Compendium.wfrp4e-dslf.items.Item.LtFNGhWA7J73SW2Z]{halcones rojos de Arabia} son apreciados entre la nobleza por sus excelentes habilidades de caza y por el prestigio que aportan. Son orgullosos y feroces pero, una vez entrenados y bien tratados, son extraordinariamente leales. Son tan codiciados en el Viejo Mundo que algunos estados de Arabia han prohibido su exportación. Son principalmente marrones, pero tienen manchas rojas brillantes en las alas. Los ejemplares grandes y bien adiestrados pueden alcanzar precios extraordinariamente altos entre los aficionados adinerados.</p>",
+			"items": {
+				"TVparWKyoAo3RGhg": {
+					"name": "Adiestrado (Tantear)",
+					"description": "<p>El animal está adiestrado para detectar presas potenciales e incluso otros objetos, desde su posición privilegiada en el cielo y luego trazar un círculo lento sobre ellas para indicar su posición.</p>"
+					},
+				"zW41gMps1gZfOlvs": {
+					"name": "Adiestrado (Cazar)",
+					"description": "<p>Si el adiestrador supera un Chequeo <strong>Normal (+20)</strong> de <strong>Adiestrar animales</strong>, el animal perseguirá a una presa, intentará matarla y recuperarla. Puedes intentar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Cuerpo a cuerpo</strong> para determinar si tiene éxito.</p>"
+					},
+				"1x4D0mkH9AsmpBTN": {
+					"name": "Adiestrado (Regresar)",
+					"description": "<p>Los halcones suelen regresar con su dueño, pero pueden ser recalcitrantes. Con este rasgo, el guía puede realizar un Chequeo de <strong>Carisma animal</strong>, enfrentado con la <strong>Voluntad</strong> del halcón, para que regrese de inmediato y sin complicaciones.</p>"
+					}
+				}
 		},
 		"Dove Hawk": {
 			"name": "Halcón paloma",
 			"species": "Halcón paloma",
-			"description": "<p>Los halcones paloma son los halcones de caza más comunes en el Imperio. No son grandes, pero sí poderosos y pueden derribar fácilmente a un conejo adulto. Tienen plumaje blanco con cresta marrón y se les conoce con el cómico apodo de ‘monjes shallyanos’ por su aspecto.</p>"
+			"description": "<p>Los @UUID[Compendium.wfrp4e-dslf.items.Item.39ekfGlOvgVZs66E]{halcones paloma} son los halcones de caza más comunes en el Imperio. No son grandes, pero sí poderosos y pueden derribar fácilmente a un conejo adulto. Tienen plumaje blanco con cresta marrón y se les conoce con el cómico apodo de ‘monjes shallyanos’ por su aspecto.</p>",
+			"items": {
+				"TVparWKyoAo3RGhg": {
+					"name": "Adiestrado (Tantear)",
+					"description": "<p>El animal está adiestrado para detectar presas potenciales e incluso otros objetos, desde su posición privilegiada en el cielo y luego trazar un círculo lento sobre ellas para indicar su posición.</p>"
+					},
+				"zW41gMps1gZfOlvs": {
+					"name": "Adiestrado (Cazar)",
+					"description": "<p>Si el adiestrador supera un Chequeo <strong>Normal (+20)</strong> de <strong>Adiestrar animales</strong>, el animal perseguirá a una presa, intentará matarla y recuperarla. Puedes intentar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Cuerpo a cuerpo</strong> para determinar si tiene éxito.</p>"
+					},
+				"1x4D0mkH9AsmpBTN": {
+					"name": "Adiestrado (Regresar)",
+					"description": "<p>Los halcones suelen regresar con su dueño, pero pueden ser recalcitrantes. Con este rasgo, el guía puede realizar un Chequeo de <strong>Carisma animal</strong>, enfrentado con la <strong>Voluntad</strong> del halcón, para que regrese de inmediato y sin complicaciones.</p>"
+					}
+				}
 		},
 		"Grootscher Marsh Hound": {
 			"name": "Sabueso de pantano de Grootscher",
 			"species": "Sabueso de pantano de Grootscher",
-			"description": "<p>El sabueso de pantano de Grootscher, o <em>westerlander</em>, es una bestia grande pero peluda, especialmente adecuada para las marismas del norte del Imperio. Su grueso pelaje lo hace resistente al frío y sus grandes patas lo convierten en un excelente nadador. Se utiliza para acechar aves acuáticas e incluso se sabe que bucea para pescar.</p>"
+			"description": "<p>El @UUID[Compendium.wfrp4e-dslf.items.Item.5BWFKAEyB0zoZ4Di]{sabueso de pantano de Grootscher}, o <em>westerlander</em>, es una bestia grande pero peluda, especialmente adecuada para las marismas del norte del Imperio. Su grueso pelaje lo hace resistente al frío y sus grandes patas lo convierten en un excelente nadador. Se utiliza para acechar aves acuáticas e incluso se sabe que bucea para pescar.</p>",
+			"items": {
+				"IeNWDQW2RD4ELACn": {
+					"name": "Adiestrado (Cavar)",
+					"description": "<p>Si el adiestrador supera un Chequeo <strong>Normal (+20)</strong> de <strong>Adiestrar animales</strong>, el animal cavará en un lugar determinado al recibir la orden. Esto puede ayudar a construir trampas o a descubrir objetos enterrados.</p>"
+					},
+				"lxvmeWWiBkPhtu0Z": {
+					"name": "Adiestrado (Talonear)",
+					"description": "<p>Si el adiestrador supera un Chequeo <strong>Normal (+20)</strong> de <strong>Adiestrar animales</strong>, el animal se pica de talones inmediatamente, independientemente de la distracción.</p>"
+					},
+				"Eb8EuuVhje2vTNd3": {
+					"name": "Adiestrado (Cazar)",
+					"description": "<p>Si el adiestrador supera un Chequeo <strong>Normal (+20)</strong> de <strong>Adiestrar animales</strong>, el animal perseguirá a una presa, intentará matarla y recuperarla. Puedes intentar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Cuerpo a cuerpo</strong> para determinar si tiene éxito.</p>"
+					},
+				"FuHo7DezB3E55UjP": {
+					"name": "Adiestrado (Apuntar)",
+					"description": "<p>El animal señala con precisión el objeto buscado por el adiestrador, siempre que tenga un olor distintivo. Esto se usa para indicar una presa y también es útil para señalar contrabando. Algunos perros son muy ostentosos al señalar, pero otros pueden hacerlo con más sutileza.</p>"
+					},
+				"Xu7M4krF7LVZzbw5": {
+					"name": "Adiestrado (Tantear)",
+					"description": "<p>Si el adiestrador supera un Chequeo <strong>Desafiante (+0)</strong> de <strong>Adiestrar animales</strong>, el animal puede posicionarse para manipular a la presa y que se mueva de cierta manera, sin asustarla. Esto también se puede usar para actividades como el pastoreo.</p>"
+					},
+				"0xecGrrOwwksct2A": {
+					"name": "Adiestrado (Rastrear)",
+					"description": "<p>El animal posee el Rasgo de @UUID[Compendium.wfrp4e-core.items.Item.ClOlztW6hH8rslbp]{Rastreador} y lo usa al recibir órdenes con instrucciones: por ejemplo, buscar y seguir un olor del que se le ha dado una muestra.</p>"
+					}
+				}
 		},
 		"Hochland Lockhund": {
 			"name": "Perro de caza lockhund",
 			"species": "Perro de caza lockhund",
-			"description": "<p>Los perros de caza <em>lockhund</em> de Hochland son famosos por su tenacidad y pueden usarse para atrapar cualquier animal pequeño.</p>"
+			"description": "<p>Los @UUID[Compendium.wfrp4e-dslf.items.Item.ri9IGJTgLzneHR1F]{perros de caza lockhund} de Hochland son famosos por su tenacidad y pueden usarse para atrapar cualquier animal pequeño.</p>",
+			"items": {
+				"IeNWDQW2RD4ELACn": {
+					"name": "Adiestrado (Cavar)",
+					"description": "<p>Si el adiestrador supera un Chequeo <strong>Normal (+20)</strong> de <strong>Adiestrar animales</strong>, el animal cavará en un lugar determinado al recibir la orden. Esto puede ayudar a construir trampas o a descubrir objetos enterrados.</p>"
+					},
+				"lxvmeWWiBkPhtu0Z": {
+					"name": "Adiestrado (Talonear)",
+					"description": "<p>Si el adiestrador supera un Chequeo <strong>Normal (+20)</strong> de <strong>Adiestrar animales</strong>, el animal se pica de talones inmediatamente, independientemente de la distracción.</p>"
+					},
+				"Eb8EuuVhje2vTNd3": {
+					"name": "Adiestrado (Cazar)",
+					"description": "<p>Si el adiestrador supera un Chequeo <strong>Normal (+20)</strong> de <strong>Adiestrar animales</strong>, el animal perseguirá a una presa, intentará matarla y recuperarla. Puedes intentar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Cuerpo a cuerpo</strong> para determinar si tiene éxito.</p>"
+					},
+				"FuHo7DezB3E55UjP": {
+					"name": "Adiestrado (Apuntar)",
+					"description": "<p>El animal señala con precisión el objeto buscado por el adiestrador, siempre que tenga un olor distintivo. Esto se usa para indicar una presa y también es útil para señalar contrabando. Algunos perros son muy ostentosos al señalar, pero otros pueden hacerlo con más sutileza.</p>"
+					},
+				"Xu7M4krF7LVZzbw5": {
+					"name": "Adiestrado (Tantear)",
+					"description": "<p>Si el adiestrador supera un Chequeo <strong>Desafiante (+0)</strong> de <strong>Adiestrar animales</strong>, el animal puede posicionarse para manipular a la presa y que se mueva de cierta manera, sin asustarla. Esto también se puede usar para actividades como el pastoreo.</p>"
+					},
+				"0xecGrrOwwksct2A": {
+					"name": "Adiestrado (Rastrear)",
+					"description": "<p>El animal posee el Rasgo de @UUID[Compendium.wfrp4e-core.items.Item.ClOlztW6hH8rslbp]{Rastreador} y lo usa al recibir órdenes con instrucciones: por ejemplo, buscar y seguir un olor del que se le ha dado una muestra.</p>"
+					}
+				}
 		},
 		"Nordlander Bamse": {
 			"name": "Bamse de Nordland",
 			"species": "Bamse de Nordland",
-			"description": "<p>Un sabueso de tamaño mediano pero afable, el <em>bamse</em> de Nordland es popular mucho más allá de Nordland por su capacidad de cazar durante muchas horas sin desanimarse. El <em>bamse</em> es adecuado para acechar presas rápidas como ciervos y zorros.</p>"
+			"description": "<p>Un sabueso de tamaño mediano pero afable, el @UUID[Compendium.wfrp4e-dslf.items.Item.vBoX76TWwA5KW5J1]{bamse de Nordland} es popular mucho más allá de Nordland por su capacidad de cazar durante muchas horas sin desanimarse. El <em>bamse</em> es adecuado para acechar presas rápidas como ciervos y zorros.</p>",
+			"items": {
+				"IeNWDQW2RD4ELACn": {
+					"name": "Adiestrado (Cavar)",
+					"description": "<p>Si el adiestrador supera un Chequeo <strong>Normal (+20)</strong> de <strong>Adiestrar animales</strong>, el animal cavará en un lugar determinado al recibir la orden. Esto puede ayudar a construir trampas o a descubrir objetos enterrados.</p>"
+					},
+				"lxvmeWWiBkPhtu0Z": {
+					"name": "Adiestrado (Talonear)",
+					"description": "<p>Si el adiestrador supera un Chequeo <strong>Normal (+20)</strong> de <strong>Adiestrar animales</strong>, el animal se pica de talones inmediatamente, independientemente de la distracción.</p>"
+					},
+				"Eb8EuuVhje2vTNd3": {
+					"name": "Adiestrado (Cazar)",
+					"description": "<p>Si el adiestrador supera un Chequeo <strong>Normal (+20)</strong> de <strong>Adiestrar animales</strong>, el animal perseguirá a una presa, intentará matarla y recuperarla. Puedes intentar un Chequeo <strong>Desafiante (+0)</strong> de <strong>Cuerpo a cuerpo</strong> para determinar si tiene éxito.</p>"
+					},
+				"FuHo7DezB3E55UjP": {
+					"name": "Adiestrado (Apuntar)",
+					"description": "<p>El animal señala con precisión el objeto buscado por el adiestrador, siempre que tenga un olor distintivo. Esto se usa para indicar una presa y también es útil para señalar contrabando. Algunos perros son muy ostentosos al señalar, pero otros pueden hacerlo con más sutileza.</p>"
+					},
+				"Xu7M4krF7LVZzbw5": {
+					"name": "Adiestrado (Tantear)",
+					"description": "<p>Si el adiestrador supera un Chequeo <strong>Desafiante (+0)</strong> de <strong>Adiestrar animales</strong>, el animal puede posicionarse para manipular a la presa y que se mueva de cierta manera, sin asustarla. Esto también se puede usar para actividades como el pastoreo.</p>"
+					},
+				"0xecGrrOwwksct2A": {
+					"name": "Adiestrado (Rastrear)",
+					"description": "<p>El animal posee el Rasgo de @UUID[Compendium.wfrp4e-core.items.Item.ClOlztW6hH8rslbp]{Rastreador} y lo usa al recibir órdenes con instrucciones: por ejemplo, buscar y seguir un olor del que se le ha dado una muestra.</p>"
+					}
+				}
 		},
 		"Bawd": {
 			"name": "Chalán",
@@ -276,12 +382,6 @@
 					},
 				"Purse containing 20 Silver Shillings": {
 					"name": "Monedero con 20 cp"
-					},
-				"Repeater Pistol loaded with Aqshy-Infused Powder (see Up In Arms": {
-					"name": "Pistola de repetición cargada con pólvora infundida con Aqshy (véase ¡A las armas!)"
-					},
-				"page 101-102)": {
-					"name": "pág. 101-102)"
 					}
 				},
 			"gmnotes": "<p>Desde su grandiosa mansión en el barrio de Norsaugen de Hargendorf, la Reina Contrabandista dirige su imperio, dueña de una compleja red de bandas de contrabandistas, traficantes y demoledores. El contrabando rara vez llega a las costas de Nordland sin su bendición... y una cuantiosa ‘donación’ a sus arcas.</p><p>Gunna von Sperren creció limpiando pescado en el mercado de Seegabe de Hargendorf. Siempre fue astuta, ambiciosa y amoral. Antes de cumplir los dieciocho, fue haciendo chantajes para casarse con el anciano Elmer von Sperren, quien dirigía una pequeña empresa comercial de transporte de carga para la Casa Akkerman de Marienburgo. Como respetable esposa de un mercader, Gunna fundó su imperio criminal lentamente antes de que Elmer muriera a causa de la picadura de un gran escorpión marino que, de alguna manera, había ido a parar a su habitación.</p><p>Un comprador puede obtener casi cualquier cosa de la Reina Contrabandista con suficiente oro como para pagarlo. Su empresa consta principalmente de siete anillos de contrabando, cada uno supervisado por uno de sus hijos adultos. Estas bandas aseguran y varían el contrabando, ocultándolo de las autoridades y garantizando un paso seguro a través del Imperio mediante carros y barcazas comunes. Varias bandas importan mercancías sujetas a impuestos o restringidas, como el brandy bretoniano, mientras que otra trafica con hierbas exóticas y objetos robados en el bosque de Laurelorn. Una banda de contrabandistas organizada por su hija mayor Edelyn trabaja con los contactos más oscuros de la Casa Akkerman en Marienburgo, como su proveedora de loto negro, aunque ellos lo denominan como ‘el Lascar’. Este contacto desea forjar una conexión con Gunna para obtener artefactos ilícitos y corruptores. Su pérfido hijo Esben trata personalmente con figuras sombrías en las alcantarillas bajo Erengrad, que desean cautivos vivos para transportarlos a lugares desconocidos. Para más detalles sobre estas operaciones, véase @UUID[Compendium.wfrp4e-salzenmund.journals.JournalEntry.oijzlcgtcrCiH1PM.JournalEntryPage.XAm5SpjUV9Pon4UI]{Redes de contrabando}.</p><p>Nadie olvida hacer una visita a la ‘corte’ de Gunna von Sperren en Hargendorf. Los juglares tocan aires gentiles, mientras sus hijos se mezclan con capitanes navales consumados y varios de los miembros de la acobardada familia von Hargenfels, que nominalmente gobierna la Baronía. La Reina es conocida por sus modales superiores, refiriéndose a sí misma con el clásico y regio ‘nosotros’ y rara vez se digna a hablar con alguien que considere inferior. Viste con caros atuendos más propios de la nobleza de Reikland que de un líder del crimen organizado de Nordland. Siempre va acompañada de su mascota hienadón, hallada en una galera bretoniana naufragada que regresaba de Lustria.</p>"

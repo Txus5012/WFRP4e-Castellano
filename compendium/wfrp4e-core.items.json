@@ -2782,8 +2782,20 @@
 			"name": "Herramientas de un Oficio (Boticario)",
 			"description": "<p><strong>Boticario</strong>: Las herramientas incluyen un almirez con su mano, cucharillas, frascos, y una balanza con sus pesos. Los talleres también incluyen mecheros de aceite y estantes llenos de ingredientes.</p>\n<p>&nbsp;</p>\n<p><strong>Artesano</strong>: el abanico potencial de herramientas utilizadas por los Artesanos es enorme. Los grupos de ejemplos incluyen:</p>\n<ul type=\"disc\">\n<li><strong>Carpintero</strong>: martillo y clavos, sierra, vara de medir, tiza y plomadas. Los talleres también incluyen tornos, cepillos de carpintero, sargentos y una buena cantidad de madera.</li>\n</ul>\n<ul type=\"disc\">\n<li><strong>Grabador</strong>: gubias, sacabocados, cera, ácido, martillo y cinceles. Los talleres también incluyen troqueles y prensas.</li>\n</ul>\n<ul type=\"disc\">\n<li><strong>Herrero</strong>: martillo, pinzas, perforadoras, estampadoras, brocas y barrenas. Los talleres también incluyen un yunque, una fragua, un bloque de estampación, martillos pilones y lingotes de metal.</li>\n</ul>\n<p>&nbsp;</p>\n<p><strong>Otros tipos de artesanos</strong>: Albañil, Alfarero, Armero, Calígrafo, Calafate, Cantero, Cartógrafo, Cerero, Cervecero, Cocinero, Curtidor, Embalsamador, Fabricante de arcos, Fabricante de armaduras, Fabricante de armas, Guarnicionero, Joyero, Orfebre, Pintor, Sastre, Soplador de vidrio, Tallador, Tallista, Tejedor, Tonelero, Vinatero y Zapatero.</p>\n<p>&nbsp;</p>\n<p><strong>Artista</strong>: pinceles y pintura, martillo y cinceles, limas y escofinas y espátulas. Los talleres también incluyen caballetes o pedestales y materiales en forma de tela, pergamino, vitela, madera, arcilla o piedra sin tallar.</p>\n<p><strong>Ingeniero</strong>: reloj de arena, vara de medir, mecha, escuadra y cartabón. Los talleres también incluyen poleas, sogas y mesas de dibujo.</p>\n<p><strong>Herbolario</strong>: mortero y mano de mortero, cuchillitos, tijeras de podar y guantes. Los talleres también incluyen tendederos para secar, filtros, embudos, cuencos y frascos.</p>\n<p><strong>Navegante</strong>: cuadrante, astrolabio, cartas de navegación y compases, reloj de arena y escandallo.</p>\n<p><strong>Físico</strong>: agujas y sutura, vendas, escalpelo, vinagre, fórceps y un espéculo. Los talleres también incluyen dibujos de anatomía, accesorios surtidos y una mesa de operaciones.</p>"
 		},
+		"Trade Tools (Calligrapher)": {
+			"name": "Herramientas de un Oficio (Calígrafo)",
+			"description": "<p><strong>Boticario</strong>: Las herramientas incluyen un almirez con su mano, cucharillas, frascos, y una balanza con sus pesos. Los talleres también incluyen mecheros de aceite y estantes llenos de ingredientes.</p>\n<p>&nbsp;</p>\n<p><strong>Artesano</strong>: el abanico potencial de herramientas utilizadas por los Artesanos es enorme. Los grupos de ejemplos incluyen:</p>\n<ul type=\"disc\">\n<li><strong>Carpintero</strong>: martillo y clavos, sierra, vara de medir, tiza y plomadas. Los talleres también incluyen tornos, cepillos de carpintero, sargentos y una buena cantidad de madera.</li>\n</ul>\n<ul type=\"disc\">\n<li><strong>Grabador</strong>: gubias, sacabocados, cera, ácido, martillo y cinceles. Los talleres también incluyen troqueles y prensas.</li>\n</ul>\n<ul type=\"disc\">\n<li><strong>Herrero</strong>: martillo, pinzas, perforadoras, estampadoras, brocas y barrenas. Los talleres también incluyen un yunque, una fragua, un bloque de estampación, martillos pilones y lingotes de metal.</li>\n</ul>\n<p>&nbsp;</p>\n<p><strong>Otros tipos de artesanos</strong>: Albañil, Alfarero, Armero, Calígrafo, Calafate, Cantero, Cartógrafo, Cerero, Cervecero, Cocinero, Curtidor, Embalsamador, Fabricante de arcos, Fabricante de armaduras, Fabricante de armas, Guarnicionero, Joyero, Orfebre, Pintor, Sastre, Soplador de vidrio, Tallador, Tallista, Tejedor, Tonelero, Vinatero y Zapatero.</p>\n<p>&nbsp;</p>\n<p><strong>Artista</strong>: pinceles y pintura, martillo y cinceles, limas y escofinas y espátulas. Los talleres también incluyen caballetes o pedestales y materiales en forma de tela, pergamino, vitela, madera, arcilla o piedra sin tallar.</p>\n<p><strong>Ingeniero</strong>: reloj de arena, vara de medir, mecha, escuadra y cartabón. Los talleres también incluyen poleas, sogas y mesas de dibujo.</p>\n<p><strong>Herbolario</strong>: mortero y mano de mortero, cuchillitos, tijeras de podar y guantes. Los talleres también incluyen tendederos para secar, filtros, embudos, cuencos y frascos.</p>\n<p><strong>Navegante</strong>: cuadrante, astrolabio, cartas de navegación y compases, reloj de arena y escandallo.</p>\n<p><strong>Físico</strong>: agujas y sutura, vendas, escalpelo, vinagre, fórceps y un espéculo. Los talleres también incluyen dibujos de anatomía, accesorios surtidos y una mesa de operaciones.</p>"
+		},
 		"Trade Tools (Cook)": {
 			"name": "Herramientas de un Oficio (Cocinero)",
+			"description": "<p><strong>Boticario</strong>: Las herramientas incluyen un almirez con su mano, cucharillas, frascos, y una balanza con sus pesos. Los talleres también incluyen mecheros de aceite y estantes llenos de ingredientes.</p>\n<p>&nbsp;</p>\n<p><strong>Artesano</strong>: el abanico potencial de herramientas utilizadas por los Artesanos es enorme. Los grupos de ejemplos incluyen:</p>\n<ul type=\"disc\">\n<li><strong>Carpintero</strong>: martillo y clavos, sierra, vara de medir, tiza y plomadas. Los talleres también incluyen tornos, cepillos de carpintero, sargentos y una buena cantidad de madera.</li>\n</ul>\n<ul type=\"disc\">\n<li><strong>Grabador</strong>: gubias, sacabocados, cera, ácido, martillo y cinceles. Los talleres también incluyen troqueles y prensas.</li>\n</ul>\n<ul type=\"disc\">\n<li><strong>Herrero</strong>: martillo, pinzas, perforadoras, estampadoras, brocas y barrenas. Los talleres también incluyen un yunque, una fragua, un bloque de estampación, martillos pilones y lingotes de metal.</li>\n</ul>\n<p>&nbsp;</p>\n<p><strong>Otros tipos de artesanos</strong>: Albañil, Alfarero, Armero, Calígrafo, Calafate, Cantero, Cartógrafo, Cerero, Cervecero, Cocinero, Curtidor, Embalsamador, Fabricante de arcos, Fabricante de armaduras, Fabricante de armas, Guarnicionero, Joyero, Orfebre, Pintor, Sastre, Soplador de vidrio, Tallador, Tallista, Tejedor, Tonelero, Vinatero y Zapatero.</p>\n<p>&nbsp;</p>\n<p><strong>Artista</strong>: pinceles y pintura, martillo y cinceles, limas y escofinas y espátulas. Los talleres también incluyen caballetes o pedestales y materiales en forma de tela, pergamino, vitela, madera, arcilla o piedra sin tallar.</p>\n<p><strong>Ingeniero</strong>: reloj de arena, vara de medir, mecha, escuadra y cartabón. Los talleres también incluyen poleas, sogas y mesas de dibujo.</p>\n<p><strong>Herbolario</strong>: mortero y mano de mortero, cuchillitos, tijeras de podar y guantes. Los talleres también incluyen tendederos para secar, filtros, embudos, cuencos y frascos.</p>\n<p><strong>Navegante</strong>: cuadrante, astrolabio, cartas de navegación y compases, reloj de arena y escandallo.</p>\n<p><strong>Físico</strong>: agujas y sutura, vendas, escalpelo, vinagre, fórceps y un espéculo. Los talleres también incluyen dibujos de anatomía, accesorios surtidos y una mesa de operaciones.</p>"
+		},
+		"Trade Tools (Engraver)": {
+			"name": "Herramientas de un Oficio (Grabador)",
+			"description": "<p><strong>Boticario</strong>: Las herramientas incluyen un almirez con su mano, cucharillas, frascos, y una balanza con sus pesos. Los talleres también incluyen mecheros de aceite y estantes llenos de ingredientes.</p>\n<p>&nbsp;</p>\n<p><strong>Artesano</strong>: el abanico potencial de herramientas utilizadas por los Artesanos es enorme. Los grupos de ejemplos incluyen:</p>\n<ul type=\"disc\">\n<li><strong>Carpintero</strong>: martillo y clavos, sierra, vara de medir, tiza y plomadas. Los talleres también incluyen tornos, cepillos de carpintero, sargentos y una buena cantidad de madera.</li>\n</ul>\n<ul type=\"disc\">\n<li><strong>Grabador</strong>: gubias, sacabocados, cera, ácido, martillo y cinceles. Los talleres también incluyen troqueles y prensas.</li>\n</ul>\n<ul type=\"disc\">\n<li><strong>Herrero</strong>: martillo, pinzas, perforadoras, estampadoras, brocas y barrenas. Los talleres también incluyen un yunque, una fragua, un bloque de estampación, martillos pilones y lingotes de metal.</li>\n</ul>\n<p>&nbsp;</p>\n<p><strong>Otros tipos de artesanos</strong>: Albañil, Alfarero, Armero, Calígrafo, Calafate, Cantero, Cartógrafo, Cerero, Cervecero, Cocinero, Curtidor, Embalsamador, Fabricante de arcos, Fabricante de armaduras, Fabricante de armas, Guarnicionero, Joyero, Orfebre, Pintor, Sastre, Soplador de vidrio, Tallador, Tallista, Tejedor, Tonelero, Vinatero y Zapatero.</p>\n<p>&nbsp;</p>\n<p><strong>Artista</strong>: pinceles y pintura, martillo y cinceles, limas y escofinas y espátulas. Los talleres también incluyen caballetes o pedestales y materiales en forma de tela, pergamino, vitela, madera, arcilla o piedra sin tallar.</p>\n<p><strong>Ingeniero</strong>: reloj de arena, vara de medir, mecha, escuadra y cartabón. Los talleres también incluyen poleas, sogas y mesas de dibujo.</p>\n<p><strong>Herbolario</strong>: mortero y mano de mortero, cuchillitos, tijeras de podar y guantes. Los talleres también incluyen tendederos para secar, filtros, embudos, cuencos y frascos.</p>\n<p><strong>Navegante</strong>: cuadrante, astrolabio, cartas de navegación y compases, reloj de arena y escandallo.</p>\n<p><strong>Físico</strong>: agujas y sutura, vendas, escalpelo, vinagre, fórceps y un espéculo. Los talleres también incluyen dibujos de anatomía, accesorios surtidos y una mesa de operaciones.</p>"
+		},
+		"Trade Tools (Painter)": {
+			"name": "Herramientas de un Oficio (Pintor)",
 			"description": "<p><strong>Boticario</strong>: Las herramientas incluyen un almirez con su mano, cucharillas, frascos, y una balanza con sus pesos. Los talleres también incluyen mecheros de aceite y estantes llenos de ingredientes.</p>\n<p>&nbsp;</p>\n<p><strong>Artesano</strong>: el abanico potencial de herramientas utilizadas por los Artesanos es enorme. Los grupos de ejemplos incluyen:</p>\n<ul type=\"disc\">\n<li><strong>Carpintero</strong>: martillo y clavos, sierra, vara de medir, tiza y plomadas. Los talleres también incluyen tornos, cepillos de carpintero, sargentos y una buena cantidad de madera.</li>\n</ul>\n<ul type=\"disc\">\n<li><strong>Grabador</strong>: gubias, sacabocados, cera, ácido, martillo y cinceles. Los talleres también incluyen troqueles y prensas.</li>\n</ul>\n<ul type=\"disc\">\n<li><strong>Herrero</strong>: martillo, pinzas, perforadoras, estampadoras, brocas y barrenas. Los talleres también incluyen un yunque, una fragua, un bloque de estampación, martillos pilones y lingotes de metal.</li>\n</ul>\n<p>&nbsp;</p>\n<p><strong>Otros tipos de artesanos</strong>: Albañil, Alfarero, Armero, Calígrafo, Calafate, Cantero, Cartógrafo, Cerero, Cervecero, Cocinero, Curtidor, Embalsamador, Fabricante de arcos, Fabricante de armaduras, Fabricante de armas, Guarnicionero, Joyero, Orfebre, Pintor, Sastre, Soplador de vidrio, Tallador, Tallista, Tejedor, Tonelero, Vinatero y Zapatero.</p>\n<p>&nbsp;</p>\n<p><strong>Artista</strong>: pinceles y pintura, martillo y cinceles, limas y escofinas y espátulas. Los talleres también incluyen caballetes o pedestales y materiales en forma de tela, pergamino, vitela, madera, arcilla o piedra sin tallar.</p>\n<p><strong>Ingeniero</strong>: reloj de arena, vara de medir, mecha, escuadra y cartabón. Los talleres también incluyen poleas, sogas y mesas de dibujo.</p>\n<p><strong>Herbolario</strong>: mortero y mano de mortero, cuchillitos, tijeras de podar y guantes. Los talleres también incluyen tendederos para secar, filtros, embudos, cuencos y frascos.</p>\n<p><strong>Navegante</strong>: cuadrante, astrolabio, cartas de navegación y compases, reloj de arena y escandallo.</p>\n<p><strong>Físico</strong>: agujas y sutura, vendas, escalpelo, vinagre, fórceps y un espéculo. Los talleres también incluyen dibujos de anatomía, accesorios surtidos y una mesa de operaciones.</p>"
 		},
 		"Trade Tools (Physician)": {
@@ -4735,12 +4747,72 @@
 			"name": "Sabiduría académica ()",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
 		},
+		"Lore (Altdorf)": {
+			"name": "Sabiduría académica (Altdorf)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
 		"Lore (Anatomy)": {
 			"name": "Sabiduría académica (Anatomía)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
 		},
+		"Lore (Animals)": {
+			"name": "Sabiduría académica (Animales)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Araby)": {
+			"name": "Sabiduría académica (Arabia)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Art)": {
+			"name": "Sabiduría académica (Arte)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Astrology)": {
+			"name": "Sabiduría académica (Astrología)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Astronomy)": {
+			"name": "Sabiduría académica (Astronomía)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
 		"Lore (Beasts)": {
 			"name": "Sabiduría académica (Bestias)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Bögenhafen)": {
+			"name": "Sabiduría académica (Bögenhafen)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Border Princes)": {
+			"name": "Sabiduría académica (Reinos Fronterizos)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Chaos)": {
+			"name": "Sabiduría académica (Caos)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Chemistry)": {
+			"name": "Sabiduría académica (Química)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Daemonology)": {
+			"name": "Sabiduría académica (Demonología)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Dark Magic)": {
+			"name": "Sabiduría académica (Magia oscura)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Dragons)": {
+			"name": "Sabiduría académica (Dragones)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Drakwald)": {
+			"name": "Sabiduría académica (Drakwald)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Empire)": {
+			"name": "Sabiduría académica (Imperio)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
 		},
 		"Lore (Engineering)": {
@@ -4771,7 +4843,15 @@
 			"name": "Sabiduría académica (Local)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
 		},
+		"Lore (Lustria)": {
+			"name": "Sabiduría académica (Lustria)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
 		"Lore (Magick)": {
+			"name": "Sabiduría académica (Magia)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Magic)": {
 			"name": "Sabiduría académica (Magia)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
 		},
@@ -4783,32 +4863,8 @@
 			"name": "Sabiduría académica (Metalurgia)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
 		},
-		"Lore (Philosophy)": {
-			"name": "Sabiduría académica (Filosofía)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
-		},
-		"Lore (Runes)": {
-			"name": "Sabiduría académica (Runas)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
-		},
-		"Lore (Science)": {
-			"name": "Sabiduría académica (Ciencias)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
-		},
-		"Lore (Theology)": {
-			"name": "Sabiduría académica (Teología)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
-		},
-		"Lore (Torture)": {
-			"name": "Sabiduría académica (Tortura)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
-		},
-		"Lore (Araby)": {
-			"name": "Sabiduría académica (Arabia)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
-		},
-		"Lore (Magic)": {
-			"name": "Sabiduría académica (Magia)",
+		"Lore (Middenland)": {
+			"name": "Sabiduría académica (Middenland)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
 		},
 		"Lore (Necromancy)": {
@@ -4819,104 +4875,12 @@
 			"name": "Sabiduría académica (Nehekhara)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
 		},
-		"Lore (Chemistry)": {
-			"name": "Sabiduría académica (Química)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
-		},
-		"Lore (Empire)": {
-			"name": "Sabiduría académica (Imperio)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
-		},
-		"Lore (Altdorf)": {
-			"name": "Sabiduría académica (Altdorf)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
-		},
-		"Lore (Bögenhafen)": {
-			"name": "Sabiduría académica (Bögenhafen)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
-		},
-		"Lore (Vorbergland)": {
-			"name": "Sabiduría académica (Vorbergland)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
-		},
-		"Lore (Daemonology)": {
-			"name": "Sabiduría académica (Demonología)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
-		},
-		"Lore (Dark Magic)": {
-			"name": "Sabiduría académica (Magia oscura)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
-		},
-		"Lore (Tzeentch)": {
-			"name": "Sabiduría académica (Tzeentch)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
-		},
-		"Lore (Warfare)": {
-			"name": "Sabiduría académica (Guerra)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
-		},
-		"Lore (Dragons)": {
-			"name": "Sabiduría académica (Dragones)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
-		},
-		"Lore (Reikland)": {
-			"name": "Sabiduría académica (Reikland)",
+		"Lore (Nordland)": {
+			"name": "Sabiduría académica (Nordland)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
 		},
 		"Lore (Nuln)": {
 			"name": "Sabiduría académica (Nuln)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
-		},
-		"Lore (Politics)": {
-			"name": "Sabiduría académica (Política)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
-		},
-		"Lore (Animals)": {
-			"name": "Sabiduría académica (Animales)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
-		},
-		"Lore (Middenland)": {
-			"name": "Sabiduría académica (Middenland)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
-		},
-		"Lore (Astrology)": {
-			"name": "Sabiduría académica (Astrología)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
-		},
-		"Lore (Astronomy)": {
-			"name": "Sabiduría académica (Astronomía)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
-		},
-		"Lore (Prophecy)": {
-			"name": "Sabiduría académica (Profecía)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
-		},
-		"Lore (Plants)": {
-			"name": "Sabiduría académica (Plantas)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
-		},
-		"Lore (Stirland)": {
-			"name": "Sabiduría académica (Stirland)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
-		},
-		"Lore (Sylvania)": {
-			"name": "Sabiduría académica (Sylvania)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
-		},
-		"Lore (Undead)": {
-			"name": "Sabiduría académica (Muertos vivientes)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
-		},
-		"Lore (Chaos)": {
-			"name": "Sabiduría académica (Caos)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
-		},
-		"Lore (Lustria)": {
-			"name": "Sabiduría académica (Lustria)",
-			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
-		},
-		"Lore (Rivers)": {
-			"name": "Sabiduría académica (Ríos)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
 		},
 		"Lore (Oceans)": {
@@ -4927,6 +4891,42 @@
 			"name": "Sabiduría académica (Ancestrales)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
 		},
+		"Lore (Philosophy)": {
+			"name": "Sabiduría académica (Filosofía)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Plants)": {
+			"name": "Sabiduría académica (Plantas)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Politics)": {
+			"name": "Sabiduría académica (Política)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Prophecy)": {
+			"name": "Sabiduría académica (Profecía)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Reikland)": {
+			"name": "Sabiduría académica (Reikland)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Rivers)": {
+			"name": "Sabiduría académica (Ríos)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Riverways)": {
+			"name": "Sabiduría académica (Vías fluviales)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Runes)": {
+			"name": "Sabiduría académica (Runas)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Science)": {
+			"name": "Sabiduría académica (Ciencias)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
 		"Lore (Skeggi)": {
 			"name": "Sabiduría académica (Skeggi)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
@@ -4935,8 +4935,52 @@
 			"name": "Sabiduría académica (Sotek)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
 		},
+		"Lore (Stirland)": {
+			"name": "Sabiduría académica (Stirland)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Sylvania)": {
+			"name": "Sabiduría académica (Sylvania)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Taal)": {
+			"name": "Sabiduría académica (Taal)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Theology)": {
+			"name": "Sabiduría académica (Teología)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Tilea)": {
+			"name": "Sabiduría académica (Tilea)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Torture)": {
+			"name": "Sabiduría académica (Tortura)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Tzeentch)": {
+			"name": "Sabiduría académica (Tzeentch)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Undead)": {
+			"name": "Sabiduría académica (Muertos vivientes)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
 		"Lore (Vampire Coast)": {
 			"name": "Sabiduría académica (Costa del Vampiro)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Vorbergland)": {
+			"name": "Sabiduría académica (Vorbergland)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Warfare)": {
+			"name": "Sabiduría académica (Guerra)",
+			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
+		},
+		"Lore (Wasteland)": {
+			"name": "Sabiduría académica (Tierras Desoladas)",
 			"description": "<p>@Embed[Compendium.wfrp4e-core.journals.6zOdTLv3YeYeJ4hR.JournalEntryPage.F0RPpWALOBy2zdyc caption=false]{Sabiduría académica}"
 		},
 		"Melee": {

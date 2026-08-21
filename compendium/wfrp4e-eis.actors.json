@@ -260,7 +260,7 @@
 		"Max Ernst": {
 			"species": "Humano",
 			"status": "Plata 1",
-			"gmnotes": "<p>@UUID[JournalEntry.IjGUv51IPhj79Wxt.JournalEntryPage.E8nLFVw3Mmc024dc]{La Posada del Barquero}</p><p><span class=\"fontstyle0\">Max Ernst es un sádico de aspecto mezquino y de sangre fría. Es alto y fuerte, lleva el cabello castaño claro recogido y tiene los ojos de un tono azul metálico. Lo rodea un aire de autoridad imponente y nunca se le ve con otra ropa que no sea de cuero negro. Max dice poco, pero cuando habla su voz es grave y ronca, con un acento tosco de Altdorf. Suele mirar a los ojos de quien le habla, de manera muy desconcertante. Max bebe mucho y, cuando está solo ahoga en brandy y lágrimas, los recuerdos de su difícil vida.</p>",
+			"gmnotes": "<p>@UUID[JournalEntry.IjGUv51IPhj79Wxt.JournalEntryPage.E8nLFVw3Mmc024dc#el-hombre-de-negro]{El hombre de negro}</p>",
 			"items": {
 				"Black Leather Jack": {
 					"name": "Chaqueta de cuero negro"
@@ -841,10 +841,7 @@
 					"name": "Tozudo",
 					"description": "<p>Aumenta su puntuación de V en +20 y requiere un Chequeo <strong>Enfrentado</strong> de <strong>Conducir</strong> o de <strong>Voluntad</strong> siempre que el jinete o el conductor necesiten controlar a la criatura. Si el Chequeo falla, el animal se para en seco y se niega a seguir adelante. Se le puede inducir a seguir adelante con un éxito en un Chequeo de <strong>Montar</strong>, <strong>Enfrentado</strong> a la <strong>Voluntad</strong> de la criatura, o un Chequeo <strong>Enfrentado</strong> de <strong>Carisma animal</strong> si alguien lo está guiando por la brida. En cualquier caso, no va más rápido que la mitad de la velocidad de Caminar.</p>",
 					"effects": [{
-						"name":"Tozudo",
-						"scriptData": [
-							{"label":"Tozudo"}
-							]
+						"name":"Tozudo"
 						}]
 					}
 			}
@@ -878,10 +875,7 @@
 					"name": "Tozudo",
 					"description": "<p>Aumenta su puntuación de V en +20 y requiere un Chequeo <strong>Enfrentado</strong> de <strong>Conducir</strong> o de <strong>Voluntad</strong> siempre que el jinete o el conductor necesiten controlar a la criatura. Si el Chequeo falla, el animal se para en seco y se niega a seguir adelante. Se le puede inducir a seguir adelante con un éxito en un Chequeo de <strong>Montar</strong>, <strong>Enfrentado</strong> a la <strong>Voluntad</strong> de la criatura, o un Chequeo <strong>Enfrentado</strong> de <strong>Carisma animal</strong> si alguien lo está guiando por la brida. En cualquier caso, no va más rápido que la mitad de la velocidad de Caminar.</p>",
 					"effects": [{
-						"name":"Tozudo",
-						"scriptData": [
-							{"label":"Tozudo"}
-							]
+						"name":"Tozudo"
 						}]
 					}
 			}
@@ -1316,7 +1310,6 @@
 		"Emmaretta": {
 			"species": "Humano",
 			"status": "Bronce 4",
-			"gmnotes": "<p>@UUID[JournalEntry.UvLra86Mr3grVstE.JournalEntryPage.G9MK38M69rVeXrtu#mendigos]{Mendigos}</p><p>Si no supieras que hay una persona debajo de todos esos pliegues, cinturones, cuerdas y harapos, supondrías que Sonny es un montón de ropa sucia. Una vez que abre la boca y comienza a relatar su triste historia, desearías que fuera sólo un montón de ropa sucia... pero la de Sonny está bien ensayada: es lo bastante lamentable para mantener la atención y que sus socios puedan vaciar algunos bolsillos, pero lo bastante terrible para que la gente quiera seguir adelante con rapidez sin preocuparse de sus bolsillos.</p><h4>Salir de la nada</h4><p>Sonny destaca por su ambición. Aunque la banda de huérfanos que tiene y él están en el puño del notorio señor del crimen Franz Pfeiffer, alias 'un dedo por tus pensamientos', Sonny cree que su banda podría ser grande de verdad... Sólo necesitan a alguien que tenga las pocas luces necesarias para enfrentarse al hombre de arriba. Para ello, los Personajes podrían notar que cosas importantes que les pertenecen desaparecen y aparecen en manos de ladrones, a veces vivos, a veces cortados en tiras, a los que pillan por toda la ciudad. Pfeiffer rastreará los asesinatos hasta los PJs, pero ¿recordarán que todo esto comenzó una noche, después de escuchar a un triste y solitario montón de trapos a la salida de un bar?</p><blockquote class=\"sidebar\"><div class=\"journal-image float-right\"><img src=\"modules/wfrp4e-eis/assets/signs-symbols/purple-hand-stamp.webp\" width=\"63\" height=\"60\"></div><h3 style=\"text-align: center\"><em>La sombra proyectada - El ojo inadvertido</em></h3><p><em>Los mendigos son tan comunes que si no dejas de mencionar que están ahí, pronto incluso los Personajes los ignorarán, lo cual los hará útiles no sólo para las organizaciones delictivas, sino también para las más oscuras. Sonny es un agente excelente, ya que puedes usarlo para cualquier número de sectas distintas, aunque trabaja especialmente bien como vigía de @UUID[JournalEntry.ro7SIltM899Ogrk8.JournalEntryPage.6pjg22hcwtaCERBb]{El Ojo Vigilante}. Haz que Sonny siga el rastro de los PJs mientras viajan por @UUID[JournalEntry.ro7SIltM899Ogrk8]{Bögenhafen}, e informa de sus acciones a cualquier grupo que represente, lo que podrá justificar tanto una ayuda inesperada como extraños obstáculos en momentos inconvenientes, cuando cualquier secta a la que el vagabundo informa ejerza su influencia. Aunque Sonny intenta que no lo detecten, los PJs perspicaces acabarán por darse cuenta de que siguen viendo gente que lleva los colores de cualquier grupo al que pertenezca Sonny, hablando con lo que parecen ser sólo montones de basura.</em></p></blockquote>",
 			"items": {
 				"Throwing Dagger": {
 					"name": "Daga arrojadiza"

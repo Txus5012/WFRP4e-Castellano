@@ -367,6 +367,8 @@
             "Target" : "Objetivo",
             "Zone" : "Zona"
         },
+        "TransferTypeOwnerDisplay" : "Propietario {type}",
+        "TransferTypeSelfDisplay" : "A sí mismo",
         "Trigger" : {
             "ApplyDamage": "Aplicar daño",
             "CreateCondition": "Crear Estado",
@@ -1453,6 +1455,7 @@
     "Status Standing" : "Posición de Estatus",
     "Tier" : "Grado",
     "Standing" : "Posición",
+	"AdvanceScheme" : "Esquema de Avance del {careerGroup}",
     "Class" : "Clase",
     "Group" : "Grupo",
     "Personal Details" : "Detalles Personales",
@@ -1809,6 +1812,7 @@
     "CHARGEN.ERROR.CareerItems" : "No se pudieron encontrar {num} Objetos de carrera (de {careers})",
     "CHARGEN.ERROR.SpeciesTable" : "No se pudo encontrar una Tabla de Especies importada, comprueba los <strong>Ajustes de Tabla</strong> en los ajustes de sistema para asegurarte de que la tabla registrada es la correcta. Si no hay ninguna tabla registrada, crea una manualmente o importa una. Usar <a href='https://moo-man.github.io/WFRP4e-FoundryVTT/pages/premium.html#initializiation'>Inicialización</a> la importará por ti.",
     "CHARGEN.ERROR.TalentsTableNotFound" : "No se pudo encontrar la Tabla de Talentos Aleatorios '{key}' para {species} ({subspecies})",
+	"CHARGEN.NewCharacter": "Personaje nuevo",
     
     "DIALOG.CastOrChannel" : "Lanzar o Canalizar",
     "DIALOG.CastChannel" : "¿Lanzar o Canalizar este hechizo?",
@@ -1853,6 +1857,9 @@
     "Hide" : "Ocultar",
     "ExpChange" : "Cambio de Experiencia",
     "ExpChangeHint": "Escribe la razón para el cambio de PX",
+	"DIALOG.EnterXPTitle": "Experiencia",
+	"DIALOG.EnterXP" : "Valor no numérico ({amount}). Escriba el valor de PX a otorgar.",
+	"DIALOG.XPAlreadyReceived" : "{actor} ya ha recibido esta recompensa.",
     "RevertExperience" : "Reembolsar Experiencia",
     "DIALOG.RevertExperience" : "¿Reembolsar Puntos de Experiencia?",
     "DIALOG.UseIngredient": "Escoge cómo usar el ingrediente (si está disponible)",
@@ -1874,6 +1881,7 @@
     "LOG.CareerChange": "Cambio de carrera: {career}",
     "DIALOG.ChoosePassenger" : "Escoge pasajero",
     "DIALOG.ChooseArmour" : "Escoge Armadura para dañar",
+	"DIALOG.ChooseCharacteristic" : "Escoge Característica",
 
     "CHAT.Quickcasting" : "Lanzamiento Rápido",
     "CHAT.CareerChoose" : "Escoge tu Carrera",

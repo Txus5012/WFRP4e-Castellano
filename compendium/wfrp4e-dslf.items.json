@@ -33,21 +33,21 @@
 		},
 		"Muleskinner": {
 			"name": "Arriero",
-			"skills": ["Criar animales","Carisma animal","Conducir","Aguante","Cotilleo","Sabiduría académica (Local)","Cuerpo a cuerpo (Básica)","Percepción","A distancia (Enmarañante)","Montar (Caballo)","A distancia (Arco)","Adiestrar animales (Cualquiera)","Esquivar","Hablar idioma (Cualquiera)","Orientación","Supervivencia"],
+			"skills": ["Criar animales","Carisma animal","Conducir","Aguante","Cotilleo","Sabiduría académica (Local)","Cuerpo a cuerpo (Básica)","Percepción","A distancia (Enmarañante)","Montar (Caballo)","A distancia (Arco)","Adiestrar animal (Cualquiera)","Esquivar","Hablar idioma (Cualquiera)","Orientación","Supervivencia"],
 			"talents": ["Intrépido (Cualquiera)","Sangre fría","Viajero curtido","Zancadas (Cualquiera)"],
 			"trappings" : ["Sombrero de calidad","Tienda"],
 			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.xq3g1ukhk4RFHNSF.JournalEntryPage.rsigpSs4mNa9JUhF]{Arriero}</p>"
 		},
 		"Caravan Guide": {
 			"name": "Guía de caravanas",
-			"skills": ["Criar animales","Carisma animal","Conducir","Aguante","Cotilleo","Sabiduría académica (Local)","Cuerpo a cuerpo (Básica)","Percepción","A distancia (Enmarañante)","Montar (Caballo)","A distancia (Arco)","Adiestrar animales (Cualquiera)","Esquivar","Hablar idioma (Cualquiera)","Orientación","Supervivencia","Frialdad","Intuición","Movimiento silencioso (Rural)","Oficio (Carpintero)"],
+			"skills": ["Criar animales","Carisma animal","Conducir","Aguante","Cotilleo","Sabiduría académica (Local)","Cuerpo a cuerpo (Básica)","Percepción","A distancia (Enmarañante)","Montar (Caballo)","A distancia (Arco)","Adiestrar animal (Cualquiera)","Esquivar","Hablar idioma (Cualquiera)","Orientación","Supervivencia","Frialdad","Intuición","Movimiento silencioso (Rural)","Oficio (Carpintero)"],
 			"talents": ["Denodado","Equitación acrobática","Etiqueta (Gremio)","Olfato para los problemas"],
 			"trappings" : ["Animal de carga","Caballo de monta y arreos","Mapa","Ropa de viaje de calidad"],
 			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.xq3g1ukhk4RFHNSF.JournalEntryPage.rsigpSs4mNa9JUhF]{Arriero}</p>"
 		},
 		"Caravan Master": {
 			"name": "Maestro caravanero",
-			"skills": ["Criar animales","Carisma animal","Conducir","Aguante","Cotilleo","Sabiduría académica (Local)","Cuerpo a cuerpo (Básica)","Percepción","A distancia (Enmarañante)","Montar (Caballo)","A distancia (Arco)","Adiestrar animales (Cualquiera)","Esquivar","Hablar idioma (Cualquiera)","Orientación","Supervivencia","Frialdad","Intuición","Movimiento silencioso (Rural)","Oficio (Carpintero)","Mando","Regatear"],
+			"skills": ["Criar animales","Carisma animal","Conducir","Aguante","Cotilleo","Sabiduría académica (Local)","Cuerpo a cuerpo (Básica)","Percepción","A distancia (Enmarañante)","Montar (Caballo)","A distancia (Arco)","Adiestrar animal (Cualquiera)","Esquivar","Hablar idioma (Cualquiera)","Orientación","Supervivencia","Frialdad","Intuición","Movimiento silencioso (Rural)","Oficio (Carpintero)","Mando","Regatear"],
 			"talents": ["Inspirador","Leer y escribir","Negociador","Numismático"],
 			"trappings" : ["Caravana","Establo de animales de carga"],
 			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.xq3g1ukhk4RFHNSF.JournalEntryPage.rsigpSs4mNa9JUhF]{Arriero}</p>"
@@ -145,21 +145,21 @@
 		},
 		"Poacher": {
 			"name": "Cazador furtivo",
-			"skills": ["Sobornar","Escalar","Esquivar","Regatear","Sabiduría académica (Bestias)","Supervivencia","Percepción","A distancia (Honda)","Poner trampas","Movimiento silencioso (Rural)","A distancia (Arco)","Aguante","Atletismo","Cuerpo a cuerpo (Básica)","Frialdad","Rastrear"],
+			"skills": ["Sobornar","Escalar","Esquivar","Regatear","Sabiduría académica (Bestias)","Supervivencia","Percepción","A distancia (Honda)","Poner trampas","Movimiento silencioso (Rural)","A distancia (Arco)","Aguante","Atletismo","Cuerpo a cuerpo (Básica)","Frialdad","Seguir rastros"],
 			"talents": ["Errante","Proyectil infalible","Puntería","Vista excelente"],
 			"trappings": ["Arco y flechas","Saco de dormir","Tienda"],
 			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.JX32uiJp0VxPx5UH.JournalEntryPage.FKz1Y4Kbgn1fCiKT]{Cazador furtivo}</p>"
 		},
 		"Master Poacher": {
 			"name": "Maestro de cazadores furtivos",
-			"skills": ["Sobornar","Escalar","Esquivar","Regatear","Sabiduría académica (Bestias)","Supervivencia","Percepción","A distancia (Honda)","Poner trampas","Movimiento silencioso (Rural)","A distancia (Arco)","Aguante","Atletismo","Cuerpo a cuerpo (Básica)","Frialdad","Rastrear","Adiestrar animales (Cualquiera)","Criar animales","Montar (Caballo)","Orientación"],
+			"skills": ["Sobornar","Escalar","Esquivar","Regatear","Sabiduría académica (Bestias)","Supervivencia","Percepción","A distancia (Honda)","Poner trampas","Movimiento silencioso (Rural)","A distancia (Arco)","Aguante","Atletismo","Cuerpo a cuerpo (Básica)","Frialdad","Seguir rastros","Adiestrar animal (Cualquiera)","Criar animales","Montar (Caballo)","Orientación"],
 			"talents": ["Delincuente","Disparo infalible","Disparo rápido","Sentidos desarrollados (Cualquiera)"],
 			"trappings": ["Arma de calidad","Sabueso o halcón de caza"],
 			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.JX32uiJp0VxPx5UH.JournalEntryPage.FKz1Y4Kbgn1fCiKT]{Cazador furtivo}</p>"
 		},
 		"Champion Poacher": {
 			"name": "Campeón de caza furtiva",
-			"skills": ["Sobornar","Escalar","Esquivar","Regatear","Sabiduría académica (Bestias)","Supervivencia","Percepción","A distancia (Honda)","Poner trampas","Movimiento silencioso (Rural)","A distancia (Arco)","Aguante","Atletismo","Cuerpo a cuerpo (Básica)","Frialdad","Rastrear","Adiestrar animales (Cualquiera)","Criar animales","Montar (Caballo)","Orientación","Intimidar","Sabiduría académica (Derecho)"],
+			"skills": ["Sobornar","Escalar","Esquivar","Regatear","Sabiduría académica (Bestias)","Supervivencia","Percepción","A distancia (Honda)","Poner trampas","Movimiento silencioso (Rural)","A distancia (Arco)","Aguante","Atletismo","Cuerpo a cuerpo (Básica)","Frialdad","Seguir rastros","Adiestrar animal (Cualquiera)","Criar animales","Montar (Caballo)","Orientación","Intimidar","Sabiduría académica (Derecho)"],
 			"talents": ["Amenazador","Cerebro","Negociador","Sobornador"],
 			"trappings": ["Caballo de montar con silla y arreos"],
 			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.JX32uiJp0VxPx5UH.JournalEntryPage.FKz1Y4Kbgn1fCiKT]{Cazador furtivo}</p>"
@@ -201,21 +201,21 @@
 		},
 		"Gamekeeper": {
 			"name": "Guardabosques",
-			"skills": ["Criar animales","Escalar","Cotilleo","Sabiduría académica (Bestias)","Cuerpo a cuerpo (Básica)","Supervivencia","Percepción","A distancia (Arco)","Poner trampas","Movimiento silencioso (Rural)","Aguante","Atletismo","Frialdad","Intuición","Rastrear","Sabiduría académica (Local)"],
+			"skills": ["Criar animales","Escalar","Cotilleo","Sabiduría académica (Bestias)","Cuerpo a cuerpo (Básica)","Supervivencia","Percepción","A distancia (Arco)","Poner trampas","Movimiento silencioso (Rural)","Aguante","Atletismo","Frialdad","Intuición","Seguir rastros","Sabiduría académica (Local)"],
 			"talents": ["Amenazador","Golpe conmocionador","Proyectil infalible","Vista excelente"],
 			"trappings": ["Atuendo de cazador","Sombrero de calidad"],
 			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.JX32uiJp0VxPx5UH.JournalEntryPage.FVlwiXza8FiHLPhK]{Guardabosques}</p>"
 		},
 		"Head Gamekeeper": {
 			"name": "Líder de guardabosques",
-			"skills": ["Criar animales","Escalar","Cotilleo","Sabiduría académica (Bestias)","Cuerpo a cuerpo (Básica)","Supervivencia","Percepción","A distancia (Arco)","Poner trampas","Movimiento silencioso (Rural)","Aguante","Atletismo","Frialdad","Intuición","Rastrear","Sabiduría académica (Local)","A distancia (De Pólvora Negra)","Adiestrar animales (Cualquiera)","Montar (Caballo)","Orientación"],
+			"skills": ["Criar animales","Escalar","Cotilleo","Sabiduría académica (Bestias)","Cuerpo a cuerpo (Básica)","Supervivencia","Percepción","A distancia (Arco)","Poner trampas","Movimiento silencioso (Rural)","Aguante","Atletismo","Frialdad","Intuición","Seguir rastros","Sabiduría académica (Local)","A distancia (De Pólvora Negra)","Adiestrar animal (Cualquiera)","Montar (Caballo)","Orientación"],
 			"talents": ["Disparo infalible","Disparo rápido","Orientarse","Sentidos desarrollados (Cualquiera)"],
 			"trappings": ["Arma de pólvora negra","Caballo de monta con silla y arreos"],
 			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.JX32uiJp0VxPx5UH.JournalEntryPage.FVlwiXza8FiHLPhK]{Guardabosques}</p>"
 		},
 		"Master Gamekeeper": {
 			"name": "Maestro de guardabosques",
-			"skills": ["Criar animales","Escalar","Cotilleo","Sabiduría académica (Bestias)","Cuerpo a cuerpo (Básica)","Supervivencia","Percepción","A distancia (Arco)","Poner trampas","Movimiento silencioso (Rural)","Aguante","Atletismo","Frialdad","Intuición","Rastrear","Sabiduría académica (Local)","A distancia (De Pólvora Negra)","Adiestrar animales (Cualquiera)","Montar (Caballo)","Orientación","Mando","Sabiduría académica (Leyes)"],
+			"skills": ["Criar animales","Escalar","Cotilleo","Sabiduría académica (Bestias)","Cuerpo a cuerpo (Básica)","Supervivencia","Percepción","A distancia (Arco)","Poner trampas","Movimiento silencioso (Rural)","Aguante","Atletismo","Frialdad","Intuición","Seguir rastros","Sabiduría académica (Local)","A distancia (De Pólvora Negra)","Adiestrar animal (Cualquiera)","Montar (Caballo)","Orientación","Mando","Sabiduría académica (Leyes)"],
 			"talents": ["Etiqueta (Sirvientes)","Leer y escribir","Negociador","Presencia imponente"],
 			"trappings": ["Cabaña en la finca","Ropa de calidad"],
 			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.JX32uiJp0VxPx5UH.JournalEntryPage.FVlwiXza8FiHLPhK]{Guardabosques}</p>"
@@ -292,14 +292,14 @@
 		},
 		"Ty7TDHu7yjwsGIzx": {
 			"name": "Sumo sacerdote",
-			"skills": ["Atletismo","Escalar","Esquivar","Intuición","Sabiduría académica (Ranald)","Percepción","Forzar cerraduras","Rezar","Prestidigitación","Movimiento silencioso (Urbano)","Aguante","Animar (Relatar)","Carisma","Hablar idioma (Lengua de los ladrones)","Lengua secreta (Ladrón)","Sabiduría académica (Local)","Cotillear","Frialdad","Sobornar","Tasar"],
+			"skills": ["Atletismo","Escalar","Esquivar","Intuición","Sabiduría académica (Ranald)","Percepción","Forzar cerraduras","Rezar","Prestidigitación","Movimiento silencioso (Urbano)","Aguante","Animar (Relatar)","Carisma","Hablar idioma (Lengua de los ladrones)","Lengua secreta (Ladrón)","Sabiduría académica (Local)","Cotilleo","Frialdad","Sobornar","Tasar"],
 			"talents": ["Dedos ágiles","Etiqueta (Delincuentes)","Gato callejero","Olfato para los problemas"],
 			"trappings": ["Aprendiz de iniciado/chivato","Santuario del Merodeador Nocturno","Vestimentas oscuras de calidad"],
 			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.iGJbarHnUGTU2SKc.JournalEntryPage.BKz2exdAS4r6xzb6]{Sacerdote ladrón}</p>"
 		},
 		"Shadow Prowler": {
 			"name": "Merodeador de las Sombras",
-			"skills": ["Atletismo","Escalar","Esquivar","Intuición","Sabiduría académica (Ranald)","Percepción","Forzar cerraduras","Rezar","Prestidigitación","Movimiento silencioso (Urbano)","Aguante","Animar (Relatar)","Carisma","Hablar idioma (Lengua de los ladrones)","Lengua secreta (Ladrón)","Sabiduría académica (Local)","Cotillear","Frialdad","Sobornar","Tasar","Intimidar","Mando"],
+			"skills": ["Atletismo","Escalar","Esquivar","Intuición","Sabiduría académica (Ranald)","Percepción","Forzar cerraduras","Rezar","Prestidigitación","Movimiento silencioso (Urbano)","Aguante","Animar (Relatar)","Carisma","Hablar idioma (Lengua de los ladrones)","Lengua secreta (Ladrón)","Sabiduría académica (Local)","Cotilleo","Frialdad","Sobornar","Tasar","Intimidar","Mando"],
 			"talents": ["Alma pura","Delincuente","Sombra","Visión nocturna"],
 			"trappings": ["Máscara","Sacerdote ladrón subordinado"],
 			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.iGJbarHnUGTU2SKc.JournalEntryPage.BKz2exdAS4r6xzb6]{Sacerdote ladrón}</p>"
@@ -334,35 +334,35 @@
 		},
 		"VNj1pYFNnHT8gDrY": {
 			"name": "Iniciado",
-			"skills": ["Atletismo","Carisma animal","Frialdad","Aguante","Intuición","Sabiduría académcia (Teología)","Supervivencia","Percepción","Rezar","A distancia (Arco)"],
+			"skills": ["Atletismo","Carisma animal","Frialdad","Aguante","Intuición","Sabiduría académica (Teología)","Supervivencia","Percepción","Rezar","A distancia (Arco)"],
 			"talents": ["Bendición (Taal)","Errante","Orientarse","Visiones sagradas"],
 			"trappings": ["Arco","10 flechas","Capa","Botas robustas","Símbolo religioso (Taal)"],
 			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.LhwxwMcISSZvoVyW.JournalEntryPage.oX0kC1ZcVXECJkta]{Sacerdote rural de Taal}</p>"
 		},
 		"Ranger-Priest": {
 			"name": "Sacerdote rural",
-			"skills": ["Atletismo","Carisma animal","Frialdad","Aguante","Intuición","Sabiduría académcia (Teología)","Supervivencia","Percepción","Rezar","A distancia (Arco)","Cuerpo a cuerpo (Básica)","Intimidar","Movimiento silencioso (Rural)","Orientación","Rastrear","Sanar"],
+			"skills": ["Atletismo","Carisma animal","Frialdad","Aguante","Intuición","Sabiduría académica (Teología)","Supervivencia","Percepción","Rezar","A distancia (Arco)","Cuerpo a cuerpo (Básica)","Intimidar","Movimiento silencioso (Rural)","Orientación","Seguir rastros","Sanar"],
 			"talents": ["Etiqueta (Taal)","Invocar (Taal)","Vista excelente","Zancadas (Cualquiera)"],
 			"trappings": ["Arma de mano","Mochila","Saco de dormir"],
 			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.LhwxwMcISSZvoVyW.JournalEntryPage.oX0kC1ZcVXECJkta]{Sacerdote rural de Taal}</p>"
 		},
 		"dg2Ip2XeQalYYuq7": {
 			"name": "Sumo sacerdote",
-			"skills": ["Atletismo","Carisma animal","Frialdad","Aguante","Intuición","Sabiduría académcia (Teología)","Supervivencia","Percepción","Rezar","A distancia (Arco)","Cuerpo a cuerpo (Básica)","Intimidar","Movimiento silencioso (Rural)","Orientación","Rastrear","Sanar","Adiestrar animales (Cualquiera)","Hablar idioma (Cualquiera)","Montar (Caballo)","Sabiduría académica (Bestias)"],
+			"skills": ["Atletismo","Carisma animal","Frialdad","Aguante","Intuición","Sabiduría académica (Teología)","Supervivencia","Percepción","Rezar","A distancia (Arco)","Cuerpo a cuerpo (Básica)","Intimidar","Movimiento silencioso (Rural)","Orientación","Seguir rastros","Sanar","Adiestrar animal (Cualquiera)","Hablar idioma (Cualquiera)","Montar (Caballo)","Sabiduría académica (Bestias)"],
 			"talents": ["Alma pura","Disparo seguro","Recio","Resistencia (Cualquiera)"],
 			"trappings": ["Seguidor iniciado","Reliquia religiosa"],
 			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.LhwxwMcISSZvoVyW.JournalEntryPage.oX0kC1ZcVXECJkta]{Sacerdote rural de Taal}</p>"
 		},
 		"Vice-hierarch": {
 			"name": "Vicejerarca",
-			"skills": ["Atletismo","Carisma animal","Frialdad","Aguante","Intuición","Sabiduría académcia (Teología)","Supervivencia","Percepción","Rezar","A distancia (Arco)","Cuerpo a cuerpo (Básica)","Intimidar","Movimiento silencioso (Rural)","Orientación","Rastrear","Sanar","Adiestrar animales (Cualquiera)","Hablar idioma (Cualquiera)","Montar (Caballo)","Sabiduría académica (Bestias)","Hablar idioma (Cualquiera)","Movimiento silencioso (Urbano)"],
+			"skills": ["Atletismo","Carisma animal","Frialdad","Aguante","Intuición","Sabiduría académica (Teología)","Supervivencia","Percepción","Rezar","A distancia (Arco)","Cuerpo a cuerpo (Básica)","Intimidar","Movimiento silencioso (Rural)","Orientación","Seguir rastros","Sanar","Adiestrar animal (Cualquiera)","Hablar idioma (Cualquiera)","Montar (Caballo)","Sabiduría académica (Bestias)","Hablar idioma (Cualquiera)","Movimiento silencioso (Urbano)"],
 			"talents": ["Desarmar","Gregario","Orador maestro","Tenaz"],
 			"trappings": ["Compañero animal","Sacerdotes subordinados"],
 			"description": "<p>@UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.LhwxwMcISSZvoVyW.JournalEntryPage.oX0kC1ZcVXECJkta]{Sacerdote rural de Taal}</p>"
 		},
 		"Arabyan Redhawk": {
 			"name": "Halcón rojo de Arabia",
-			"description": "<p>Los halcones rojos de Arabia son apreciados entre la nobleza por sus excelentes habilidades de caza y por el prestigio que aportan. Son orgullosos y feroces pero, una vez entrenados y bien tratados, son extraordinariamente leales. Son tan codiciados en el Viejo Mundo que algunos estados de Arabia han prohibido su exportación. Son principalmente marrones, pero tienen manchas rojas brillantes en las alas. Los ejemplares grandes y bien adiestrados pueden alcanzar precios extraordinariamente altos entre los aficionados adinerados.</p>"
+			"description": "@Embed[Compendium.wfrp4e-dslf.actors.Actor.zDg3RqJ6JJ2rMLql image=false description=true]{Halcón rojo de Arabia}"
 		},
 		"Bag of Soot": {
 			"name": "Bolsa de hollín",
@@ -382,7 +382,7 @@
 		},
 		"Dove Hawk": {
 			"name": "Halcón paloma",
-			"description": "<p>Los halcones paloma son los halcones de caza más comunes en el Imperio. No son grandes, pero sí poderosos y pueden derribar fácilmente a un conejo adulto. Tienen plumaje blanco con cresta marrón y se les conoce con el cómico apodo de ‘monjes shallyanos’ por su aspecto."
+			"description": "@Embed[Compendium.wfrp4e-dslf.actors.Actor.PZvWzvMlPHTzCAl7 image=false description=true]{Halcón paloma}"
 		},
 		"Glass Cutter": {
 			"name": "Cortador de vidrio",
@@ -390,11 +390,11 @@
 		},
 		"Grootscher Marsh Hound": {
 			"name": "Sabueso de pantano de Grootscher",
-			"description": "<p>El sabueso de pantano de Grootscher, o <em>westerlander</em>, es una bestia grande pero peluda, especialmente adecuada para las marismas del norte del Imperio. Su grueso pelaje lo hace resistente al frío y sus grandes patas lo convierten en un excelente nadador. Se utiliza para acechar aves acuáticas e incluso se sabe que bucea para pescar.</p>"
+			"description": "@Embed[Compendium.wfrp4e-dslf.actors.Actor.VKYtzkNDRXe8x1x7 description=true image=false]{Sabueso de pantano de Grootscher}"
 		},
 		"Hochland Lockhund": {
 			"name": "Sabueso lockhund de Hochland",
-			"description": "<p>Los perros de caza <em>lockhund</em> de Hochland son famosos por su tenacidad y pueden usarse para atrapar cualquier animal pequeño.</p>"
+			"description": "@Embed[Compendium.wfrp4e-dslf.actors.Actor.jeZ3IQsnCy9qqkFq description=true image=false]{Sabueso lockhund de Hochland}"
 		},
 		"Hunter's Garb": {
 			"name": "Atuendo de cazador",
@@ -408,7 +408,7 @@
 		},
 		"Nordlander Bamse": {
 			"name": "Perro bamse de Nordland",
-			"description": "<p>Un sabueso de tamaño mediano pero afable, el <em>bamse</em> de Nordland es popular mucho más allá de Nordland por su capacidad de cazar durante muchas horas sin desanimarse. El <em>bamse</em> es adecuado para acechar presas rápidas como ciervos y zorros.</p>"
+			"description": "@Embed[Compendium.wfrp4e-dslf.actors.Actor.PMyYjtrh9Iy53xyD image=false description=true]{Perro bamse de Nordland}"
 		},
 		"Periscope": {
 			"name": "Periscopio",
@@ -613,7 +613,7 @@
 		},
 		"Ranald’s Mischief": {
 			"name": "Travesura de Ranald",
-			"description": "<p>Te burlas e imitas a un adversario para igualar una contienda desigual. Este Milagro te permite cambiar temporalmente dosCaracterísticas para que sean iguales a las de un oponente a efectos de un Chequeo Enfrentado con dicho oponente. Tira dos veces para ver cuáles se ven afectadas (vuelve a tirar los resultados duplicados):</p><table style=\"text-align: center\"><thead><tr><th><p>[[/r 1d10]]{1d10 tirada}</p></th><th><p>Característica</p></th></tr></thead><tbody><tr><td><p>1 a 2</p></td><td><p>HA</p></td></tr><tr><td><p>3 a 4</p></td><td><p>Ini</p></td></tr><tr><td><p>5 a 6</p></td><td><p>I</p></td></tr><tr><td><p>7 a 8</p></td><td><p>Em</p></td></tr><tr><td><p>9 a 0</p></td><td><p>A elección</p></td></tr></tbody></table>",
+			"description": "<p>Te burlas e imitas a un adversario para igualar una contienda desigual. Este Milagro te permite cambiar temporalmente dos Características para que sean iguales a las de un oponente a efectos de un Chequeo Enfrentado con dicho oponente. Tira dos veces para ver cuáles se ven afectadas (vuelve a tirar los resultados duplicados):</p><table style=\"text-align: center\"><thead><tr><th><p>[[/r 1d10]]{1d10 tirada}</p></th><th><p>Característica</p></th></tr></thead><tbody><tr><td><p>1 a 2</p></td><td><p>HA</p></td></tr><tr><td><p>3 a 4</p></td><td><p>Ini</p></td></tr><tr><td><p>5 a 6</p></td><td><p>I</p></td></tr><tr><td><p>7 a 8</p></td><td><p>Em</p></td></tr><tr><td><p>9 a 0</p></td><td><p>A elección</p></td></tr></tbody></table>",
 			"effects": [{
 				"name":"Travesura de Ranald",
 				"scriptData": [

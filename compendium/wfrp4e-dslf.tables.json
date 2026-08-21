@@ -13,213 +13,213 @@
 		"Corpse Complications": {
 			"name": "Complicaciones del cadáver",
 			"results": {
-				"2-2": {"description": "<b>Una supuesta inhumación</b>: el cadáver no está muerto. Quienquiera que fuese el que colocaron en la tumba estaba solo aparentemente muerto como resultado de un profundo estupor o un episodio de catalepsia. Puede tener sentimientos encontrados al ser rescatado de su entierro prematuro por un delincuente que vende cadáveres."},
-				"3-3": {"description": "<b>Cadáver agitado</b>: los Ritos de Morr no han sido completamente efectivos cuando se trata de este cadáver. Esto puede significar que el cadáver espontáneamente se manifieste como zombi si se expone a una influencia corruptora, o si se produce una disfunción mágica en sus proximidades."},
-				"4-7": {"description": "<b>Impregnado de <em>Shyish</em></b>: el cadáver está impregnado de <em>Shyish</em>, que quienes tienen Clarividencia pueden percibir reuniéndose alrededor del cuerpo en una sombría nube amatista. Cualquier intento con éxito de lanzar hechizos del Saber de la Muerte en un radio de 8 yardas del cadáver, otiene +1 NE. Este bonificador solo se puede reclamar una vez, sin importar cuántas fuentes cercanas estén impregnadas de <em>Shyish</em>."},
-				"8-14": {"description": "<b>Rostro familiar</b>: el cuerpo está en buen estado, pero puede ser bastante más reconocible de lo que habías anticipado. Cualquiera que conociera a esta persona en vida no tendría ningún problema en reconocer su cadáver."},
-				"15-17": {"description": "<b>Cadáver hinchado</b>: aunque el cadáver es de alguien que murió recientemente, se descompone con una rapidez espantosa, hinchándose y desprendiendo un hedor nauseabundo. Si el cliente espera un cadáver fresco, no quedará contento con este."},
-				"18-19": {"description": "<b>Restos desvalijados</b>: al cadáver se le han extirpado órganos internos antes de que llegaras a él. Si un cliente espera un cadáver con órganos internos, se llevará una decepción."},
-				"20-20": {"description": "<b>Espíritu agitado</b>: los Ritos de Morr no han sido completamente efectivos con este cadáver. Su espíritu puede volver a molestar al ladrón de tumbas como un Fantasma, que puede seguir persiguiéndolo hasta que su cuerpo vuelva a recibir un entierro respetuoso."}
+				"2-2": {"name": "Una supuesta inhumación", "description": "El cadáver no está muerto. Quienquiera que fuese el que colocaron en la tumba estaba solo aparentemente muerto como resultado de un profundo estupor o un episodio de catalepsia. Puede tener sentimientos encontrados al ser rescatado de su entierro prematuro por un delincuente que vende cadáveres."},
+				"3-3": {"name": "Cadáver agitado", "description": "Los Ritos de Morr no han sido completamente efectivos cuando se trata de este cadáver. Esto puede significar que el cadáver espontáneamente se manifieste como zombi si se expone a una influencia corruptora, o si se produce una disfunción mágica en sus proximidades."},
+				"4-7": {"name": "Impregnado de <em>Shyish</em>", "description": "El cadáver está impregnado de <em>Shyish</em>, que quienes tienen Clarividencia pueden percibir reuniéndose alrededor del cuerpo en una sombría nube amatista. Cualquier intento con éxito de lanzar hechizos del Saber de la Muerte en un radio de 8 yardas del cadáver, otiene +1 NE. Este bonificador solo se puede reclamar una vez, sin importar cuántas fuentes cercanas estén impregnadas de <em>Shyish</em>."},
+				"8-14": {"name": "Rostro familiar", "description": "El cuerpo está en buen estado, pero puede ser bastante más reconocible de lo que habías anticipado. Cualquiera que conociera a esta persona en vida no tendría ningún problema en reconocer su cadáver."},
+				"15-17": {"name": "Cadáver hinchado", "description": "Aunque el cadáver es de alguien que murió recientemente, se descompone con una rapidez espantosa, hinchándose y desprendiendo un hedor nauseabundo. Si el cliente espera un cadáver fresco, no quedará contento con este."},
+				"18-19": {"name": "Restos desvalijados", "description": "Al cadáver se le han extirpado órganos internos antes de que llegaras a él. Si un cliente espera un cadáver con órganos internos, se llevará una decepción."},
+				"20-20": {"name": "Espíritu agitado", "description": "Los Ritos de Morr no han sido completamente efectivos con este cadáver. Su espíritu puede volver a molestar al ladrón de tumbas como un Fantasma, que puede seguir persiguiéndolo hasta que su cuerpo vuelva a recibir un entierro respetuoso."}
 			}
 		},
 		"Creepy Customer": {
 			"name": "Clientes espeluznantes",
 			"results": {
-				"2-2": {"description": "<b>Vampiro necrarca</b>: un poderoso vampiro con dominio de los poderes nigrománticos contacta con el ladrón de tumbas a través de un miserable sirviente intermediario."},
-				"3-4": {"description": "<b>Diablo caníbal</b>: este cliente podría estar a medio camino de convertirse en necrófago, pero puede que busque mantener a esas criaturas alimentadas por razones propias."},
-				"5-6": {"description": "<b>Nigromante</b>: buscando mejorar su dominio de la magia nigromántica, estas personas necesitan cadáveres."},
-				"7-9": {"description": "<b>Intrigante</b>: esta persona quiere disponer de un cuerpo para un fin político. Puede querer inculpar de un asesinato a un rival o utilizar la noticia de una muerte al servicio de una causa."},
-				"10-12": {"description": "<b>Físico corrupto</b>: este cirujano desea comprender mejor el funcionamiento del cuerpo humano. Paga solo por cuerpos frescos y sin daños."},
-				"13-15": {"description": "<b>Académico dudoso</b>: un académico polvoriento busca mejorar sus conocimientos de anatomía."},
-				"16-17": {"description": "<b>Fugitivo</b>: esta persona desea utilizar un cadáver para fingir una muerte para que él, un familiar o un cliente pueda empezar una nueva vida en otro lugar."},
-				"18-19": {"description": "<b>Hechicero loco</b>: probablemente se trate de un hechicero amatista buscando cosechar <em>Shyish</em>, pero también puede ser un hechicero dorado en busca de componentes alquímicos o un brujo en busca de ingredientes para sus rituales."},
-				"20-20": {"description": "<b>Demonólogo</b>: aunque los sacrificios vivos otorgan los mejores ingredientes para los pactos con demonios, los adoradores usan partes del cuerpo para favores menores."}
+				"2-2": {"name": "Vampiro necrarca", "description": "Un poderoso vampiro con dominio de los poderes nigrománticos contacta con el ladrón de tumbas a través de un miserable sirviente intermediario."},
+				"3-4": {"name": "Diablo caníbal", "description": "Este cliente podría estar a medio camino de convertirse en necrófago, pero puede que busque mantener a esas criaturas alimentadas por razones propias."},
+				"5-6": {"name": "Nigromante", "description": "Buscando mejorar su dominio de la magia nigromántica, estas personas necesitan cadáveres."},
+				"7-9": {"name": "Intrigante", "description": "Esta persona quiere disponer de un cuerpo para un fin político. Puede querer inculpar de un asesinato a un rival o utilizar la noticia de una muerte al servicio de una causa."},
+				"10-12": {"name": "Físico corrupto", "description": "Este cirujano desea comprender mejor el funcionamiento del cuerpo humano. Paga solo por cuerpos frescos y sin daños."},
+				"13-15": {"name": "Académico dudoso", "description": "Un académico polvoriento busca mejorar sus conocimientos de anatomía."},
+				"16-17": {"name": "Fugitivo", "description": "Esta persona desea utilizar un cadáver para fingir una muerte para que él, un familiar o un cliente pueda empezar una nueva vida en otro lugar."},
+				"18-19": {"name": "Hechicero loco", "description": "Probablemente se trate de un hechicero amatista buscando cosechar <em>Shyish</em>, pero también puede ser un hechicero dorado en busca de componentes alquímicos o un brujo en busca de ingredientes para sus rituales."},
+				"20-20": {"name": "Demonólogo", "description": "Aunque los sacrificios vivos otorgan los mejores ingredientes para los pactos con demonios, los adoradores usan partes del cuerpo para favores menores."}
 				}
 		},
 		"Crypt Complications": {
 			"name": "Complicaciones de la cripta",
 			"results": {
-				"2-2": {"description": "<b>Estaca</b>: el cadáver ha sido empalado con una larga estaca de fresno. Lo que suceda si se quita depende del DJ. Cualquier PJ que supere un Chequeo <b>Muy fácil (+60)</b> de <b>Sabiduría académica (Muertos vivientes)</b> sabe que esto sirve para evitar que un cadáver resucite como Vampiro."},
-				"3-3": {"description": "<b>Papeles</b>: el ataúd está lleno de papeles y no hay ningún cadáver. Los papeles pueden divulgar prácticas comerciales corruptas, experimentos mágicos, intrigas entre casas nobles, u otra actividad que el DJ considere apropiada."},
-				"4-6": {"description": "<b>Fosa común</b>: has descubierto una fosa común, llena de aquellos demasiado pobres como para permitirse una sepultura privada. Debes superar un Chequeo para evitar la exposición a la  @UUID[Compendium.wfrp4e-core.items.Item.aKiuGzlVO51JvsjV]{Peste negra}."},
-				"7-9": {"description": "<b>Ropas de calidad</b>: el cadáver lleva una bonita chaqueta por valor de 9 cp y ropa de calidad por valor de 5 cp."},
-				"10-12": {"description": "<b>Peniques</b>: en el Viejo Mundo existe la tradición de colocar dos peniques en los ojos de un cadáver para que pueda pagar su entrada en el reino de Morr. El robo de estos peniques se considera aborrecible; puede hacer que el espíritu del muerto se inquiete y es una de las principales razones por las que la gente detesta a los ladrones de tumbas."},
-				"13-15": {"description": "<b>Tumba de rico</b>: el cadáver lleva un abrigo por valor de 1 co, ropa de calidad por valor de 10 cp y varios anillos de oro por valor de 4 co."},
-				"16-18": {"description": "<b>Necrófagos</b>: mientras abres la cripta, algo te sisea. Has molestado a un par de necrófagos dándose un festín. No queda nada de valor."},
-				"19-19": {"description": "<b>Gran ajuar funerario</b>: el cadáver lleva una túnica por valor de 4 co, ropa de alta calidad por valor de 2 co e impresionantes joyas por un valor total de 10 co."},
-				"20-20": {"description": "<b>Este muerto me suena</b>: con los objetos de la categoría anterior, pero si superas un Chequeo <b>Difícil (-20)</b> de <b>Sabiduría académica (Heráldica)</b>, reconoces que se trata del cadáver de una persona local famosa que desapareció recientemente."}
+				"2-2": {"name": "Estaca", "description": "El cadáver ha sido empalado con una larga estaca de fresno. Lo que suceda si se quita depende del DJ. Cualquier PJ que supere un Chequeo <b>Muy fácil (+60)</b> de <b>Sabiduría académica (Muertos vivientes)</b> sabe que esto sirve para evitar que un cadáver resucite como Vampiro."},
+				"3-3": {"name": "Papeles", "description": "El ataúd está lleno de papeles y no hay ningún cadáver. Los papeles pueden divulgar prácticas comerciales corruptas, experimentos mágicos, intrigas entre casas nobles, u otra actividad que el DJ considere apropiada."},
+				"4-6": {"name": "Fosa común", "description": "Has descubierto una fosa común, llena de aquellos demasiado pobres como para permitirse una sepultura privada. Debes superar un Chequeo para evitar la exposición a la  @UUID[Compendium.wfrp4e-core.items.Item.aKiuGzlVO51JvsjV]{Peste negra}."},
+				"7-9": {"name": "Ropas de calidad", "description": "El cadáver lleva una bonita chaqueta por valor de 9 cp y ropa de calidad por valor de 5 cp."},
+				"10-12": {"name": "Peniques", "description": "En el Viejo Mundo existe la tradición de colocar dos peniques en los ojos de un cadáver para que pueda pagar su entrada en el reino de Morr. El robo de estos peniques se considera aborrecible; puede hacer que el espíritu del muerto se inquiete y es una de las principales razones por las que la gente detesta a los ladrones de tumbas."},
+				"13-15": {"name": "Tumba de rico", "description": "El cadáver lleva un abrigo por valor de 1 co, ropa de calidad por valor de 10 cp y varios anillos de oro por valor de 4 co."},
+				"16-18": {"name": "Necrófagos", "description": "Mientras abres la cripta, algo te sisea. Has molestado a un par de necrófagos dándose un festín. No queda nada de valor."},
+				"19-19": {"name": "Gran ajuar funerario", "description": "El cadáver lleva una túnica por valor de 4 co, ropa de alta calidad por valor de 2 co e impresionantes joyas por un valor total de 10 co."},
+				"20-20": {"name": "Este muerto me suena", "description": "Con los objetos de la categoría anterior, pero si superas un Chequeo <b>Difícil (-20)</b> de <b>Sabiduría académica (Heráldica)</b>, reconoces que se trata del cadáver de una persona local famosa que desapareció recientemente."}
 				}
 		},
 		"Incriminating Artefact": {
 			"name": "Objeto incriminatorio",
 			"results": {
-				"2-2": {"description": "<b>Pedazo de piedra bruja</b>: guardado en un estuche forrado de plomo, la piedra tiene una Influencia corruptora moderada y vale 3 co."},
-				"3-4": {"description": "<b>Insignia plateada</b>: la insignia muestra el símbolo de una secta profana o de un dios proscrito, como Khaine, Stromfels o uno de los Dioses del Caos. La posesión de este artefacto puede ser un delito per se. Vale 6 cp y 8 p para un comprador adecuado."},
-				"5-5": {"description": "<b>Tratado sedicioso</b>: un panfleto que propugna ideales revolucionarios, como los poemas satíricos de los kloszowskitas de Altdorf o las reformas sociales radicales propuestas por los Seguidores del Nuevo Milenio de Middenheim."},
-				"6-6": {"description": "<b>Documento misterioso</b>: este pequeño pergamino contiene algún tipo de secreto escrito en clave. Podrían ser las notas de una organización de espionaje, como los Caminantes de la Niebla de Marienburgo o el contrato de un asesino."},
-				"7-9": {"description": "<b>Polvo de la risa</b>: [[/r 1d10]] dosis. También llamado la @UUID[Compendium.wfrp4e-core.items.Item.jTFOrokjEHbi12rT]{Delicia de Ranald}. Cada dosis puede venderse por 18 cp."},
-				"10-12": {"description": "<b>Objeto robado</b>: la víctima posee un anillo de zafiro valorado en 5 cp. Sin embargo, adquirió este anillo mediante prácticas fraudulentas, tratos dudosos o robo."},
-				"13-15": {"description": "<b>Insignia de plata</b>: la insignia vale 6 cp y 8 p. Muestra el símbolo de una banda con marcadas tendencias violentas o criminales, como los Garfios o los Peces de Altdorf, y la gente puede odiar o temer a quienes muestren tal signo de afiliación."},
-				"16-17": {"description": "<b>Reliquia ósea</b>: aunque puede no ser más que un trofeo espeluznante, tal vez estaba destinado a un rito nigromántico."},
-				"18-18": {"description": "<b>Frasco misterioso</b>: este pequeño frasco de cristal contiene un extraño líquido. Quizá no sea más que un trago de alguna bebida alcohólica, pero también puede ser una @UUID[Compendium.wfrp4e-wom.journals.JournalEntry.x6OdswRIafU9qGYs.JournalEntryPage.4k3qbP7drfV1mIdr#catalogo-de-pociones]{poción mágica}."},
-				"19-19": {"description": "<b>Fragmento de monolito</b>: estas grandes piedras preciosas contienen la esencia del alma de elfos muertos. Aunque pueden ayudar para orientarse, los elfos no confían en que estén en manos ajenas, pero pueden recompensar a quienes se las devuelvan."},
-				"20-20": {"description": "<b>Frasco de @UUID[Compendium.wfrp4e-core.items.Item.qfd01sggD9xbCuJY]{loto negro}</b>: 2 dosis del veneno (WJdR, página 306) preparado para usarlo como Veneno para cuchillas."}
+				"2-2": {"name": "Pedazo de piedra bruja", "description": "Guardado en un estuche forrado de plomo, la piedra tiene una Influencia corruptora moderada y vale 3 co."},
+				"3-4": {"name": "Insignia plateada", "description": "La insignia muestra el símbolo de una secta profana o de un dios proscrito, como Khaine, Stromfels o uno de los Dioses del Caos. La posesión de este artefacto puede ser un delito per se. Vale 6 cp y 8 p para un comprador adecuado."},
+				"5-5": {"name": "Tratado sedicioso", "description": "Un panfleto que propugna ideales revolucionarios, como los poemas satíricos de los kloszowskitas de Altdorf o las reformas sociales radicales propuestas por los Seguidores del Nuevo Milenio de Middenheim."},
+				"6-6": {"name": "Documento misterioso", "description": "Este pequeño pergamino contiene algún tipo de secreto escrito en clave. Podrían ser las notas de una organización de espionaje, como los Caminantes de la Niebla de Marienburgo o el contrato de un asesino."},
+				"7-9": {"name": "Polvo de la risa", "description": "[[/r 1d10]] dosis. También llamado la @UUID[Compendium.wfrp4e-core.items.Item.jTFOrokjEHbi12rT]{Delicia de Ranald}. Cada dosis puede venderse por 18 cp."},
+				"10-12": {"name": "Objeto robado", "description": "La víctima posee un anillo de zafiro valorado en 5 cp. Sin embargo, adquirió este anillo mediante prácticas fraudulentas, tratos dudosos o robo."},
+				"13-15": {"name": "Insignia de plata", "description": "La insignia vale 6 cp y 8 p. Muestra el símbolo de una banda con marcadas tendencias violentas o criminales, como los Garfios o los Peces de Altdorf, y la gente puede odiar o temer a quienes muestren tal signo de afiliación."},
+				"16-17": {"name": "Reliquia ósea", "description": "Aunque puede no ser más que un trofeo espeluznante, tal vez estaba destinado a un rito nigromántico."},
+				"18-18": {"name": "Frasco misterioso", "description": "Este pequeño frasco de cristal contiene un extraño líquido. Quizá no sea más que un trago de alguna bebida alcohólica, pero también puede ser una @UUID[Compendium.wfrp4e-wom.journals.JournalEntry.x6OdswRIafU9qGYs.JournalEntryPage.4k3qbP7drfV1mIdr#catalogo-de-pociones]{poción mágica}."},
+				"19-19": {"name": "Fragmento de monolito", "description": "Estas grandes piedras preciosas contienen la esencia del alma de elfos muertos. Aunque pueden ayudar para orientarse, los elfos no confían en que estén en manos ajenas, pero pueden recompensar a quienes se las devuelvan."},
+				"20-20": {"name": "Vial de loto negro", "description": "2 dosis del @UUID[Compendium.wfrp4e-core.items.Item.qfd01sggD9xbCuJY]{veneno} preparado para usarlo como Veneno para cuchillas."}
 				}
 		},
 		"The Contents of a Purse": {
 			"name": "Contenidos de un monedero",
 			"results": {
-				"2-2": {"description": "<b>Algo incriminatorio</b>: la víctima lleva un objeto de valor, pero es peligroso o incriminatorio y el carterista puede preferir no tenerlo en su poder. Tira en la @Table[incriminating-artefact]{tabla de Objetos incriminatorios}."},
-				"3-4": {"description": "<b>Polillas</b>: no contiene nada."},
-				"5-6": {"description": "<b>Sin blanca</b>: la víctima posee una única moneda determinada por su Estatus."},
-				"7-7": {"description": "<b>Juego de dados de hueso</b>: este par de dados vale 10 p."},
-				"8-9": {"description": "<b>Pañuelo de tafetán</b>: un pañuelo de calidad que vale 1 cp. Tira [[/r 1d10]], con un 5 o más, el objeto lleva un monograma."},
-				"10-12": {"description": "<b>Día de pago</b>: la víctima lleva el doble de dinero de lo que llevaría normalmente."},
-				"13-13": {"description": "<b>Anillo de plata con decoración de grifo</b>: esta joya vale 3 cp."},
-				"14-14": {"description": "<b>Pañuelo de seda</b>: un pañuelo de seda de buena calidad por valor de 3 cp y 6 p. Tira [[/r 1d10]], con un 5 o más, el pañuelo lleva un monograma."},
-				"15-15": {"description": "<b>Guantes de cuero</b>: un par de guantes bien hechos por valor de 4 cp."},
-				"16-16": {"description": "<b>Anillo de rubí</b>: un anillo de plata engastado con una piedra preciosa roja por valor de 5 cp."},
-				"17-17": {"description": "<b>Insignia de martillo de plata</b>: una pequeña pero intrincada insignia que declara la devoción del portador a Sigmar por valor de 6 cp y 8 p."},
-				"18-18": {"description": "<b>Gran derrochador</b>: además de monedas equivalentes al doble del Estatus del propietario, añade otras [[/r 1d10]] monedas."},
-				"19-19": {"description": "<b>Frasco de perfume</b>: un pequeño frasco de cristal con tapón de plata, que contiene un fluido almizclado valorado en 10 cp."},
-				"20-20": {"description": "<b>Collar de perlas miraglianés</b>: este collar es un lazo de perlas recogidas en el Mar de Tilea valorado en 10 cp."}
+				"2-2": {"name": "Algo incriminatorio", "description": "La víctima lleva un objeto de valor, pero es peligroso o incriminatorio y el carterista puede preferir no tenerlo en su poder. Tira en la @Table[incriminating-artefact]{tabla de Objetos incriminatorios}."},
+				"3-4": {"name": "Polillas", "description": "No contiene nada."},
+				"5-6": {"name": "Sin blanca", "description": "La víctima posee una única moneda determinada por su Estatus."},
+				"7-7": {"name": "Juego de dados de hueso", "description": "Este par de dados vale 10 p."},
+				"8-9": {"name": "Pañuelo de tafetán", "description": "Un pañuelo de calidad que vale 1 cp. Tira [[/r 1d10]], con un 5 o más, el objeto lleva un monograma."},
+				"10-12": {"name": "Día de pago", "description": "La víctima lleva el doble de dinero de lo que llevaría normalmente."},
+				"13-13": {"name": "Anillo de plata con decoración de grifo", "description": "Esta joya vale 3 cp."},
+				"14-14": {"name": "Pañuelo de seda", "description": "Un pañuelo de seda de buena calidad por valor de 3 cp y 6 p. Tira [[/r 1d10]], con un 5 o más, el pañuelo lleva un monograma."},
+				"15-15": {"name": "Guantes de cuero", "description": "Un par de guantes bien hechos por valor de 4 cp."},
+				"16-16": {"name": "Anillo de rubí", "description": "Un anillo de plata engastado con una piedra preciosa roja por valor de 5 cp."},
+				"17-17": {"name": "Insignia de martillo de plata", "description": "Una pequeña pero intrincada insignia que declara la devoción del portador a Sigmar por valor de 6 cp y 8 p."},
+				"18-18": {"name": "Gran derrochador", "description": "Además de monedas equivalentes al doble del Estatus del propietario, añade otras [[/r 1d10]] monedas."},
+				"19-19": {"name": "Frasco de perfume", "description": "Un pequeño frasco de cristal con tapón de plata, que contiene un fluido almizclado valorado en 10 cp."},
+				"20-20": {"name": "Collar de perlas miraglianés", "description": "Este collar es un lazo de perlas recogidas en el Mar de Tilea valorado en 10 cp."}
 				}
 		},
 		"Victim Quirk": {
 			"name": "Rarezas de la víctima",
 			"results": {
-				"2-2": {"description": "<b>Conocido</b>: la víctima está vagamente familiarizada con el PJ, habiéndose encontrado con él antes o habiendo presenciado alguna de sus travesuras anteriores. El grado en que conoce al PJ se deja a elección del DJ, y el PJ puede hacer un Chequeo <b>Difícil (-20)</b> de <b>Percepción</b> para detectar un destello de reconocimiento en su cara."},
-				"3-3": {"description": "<b>Habilidad insólita</b>: la víctima posee una habilidad preternatural que hace que robarle sea complicado. Quizás sea un visionario con la Habilidad Psicometría (Vientos de la Magia, página 47), un vidente o un aprendiz de hechicero o bruja."},
-				"4-4": {"description": "<b>Amigos de los bajos fondos</b>: la víctima tiene amigos en los bajos fondos o paga a una banda por protección. La mafia no se alegrará de saber que su amigo ha sido víctima de un delito (y encima no se benefició de ello)."},
-				"5-5": {"description": "<b>Parte amputada</b>: una enfermedad o lesión ha provocado la pérdida o inutilización de una parte del cuerpo. Tira [[/r 1d10]]. 1 a 3: Pierna, 4 a 6: Brazo, 7 a 8: Ojos, 9: Lengua, 10: Orejas."},
-				"6-6": {"description": "<b>Monedero falso</b>: la víctima se ha encontrado antes con carteristas y lleva un llamativo monedero que contiene dos monedas. Guarda monedas de mayor valor en el calcetín o en la cinta del sombrero. Tira otro [[/r 1d10]]. Con un 1, el objetivo ha sido tan vengativo como para dejar una aguja envenenada en el monedero falso, infligiendo 1 Estado de @Condition[Envenenado] a cualquiera que pille el monedero falso y fracase en un Chequeo <b>Desafiante (+0)</b> de <b>Percepción</b>."},
-				"7-7": {"description": "<b>Desprevenido</b>: te sentirías mal si no te lo pusieran tan fácil. Sus Chequeos de @UUID[Compendium.wfrp4e-core.items.Item.Fs06sr7y9JKpVQmB]{Percepción} sufren un penalizador de -1 NE."},
-				"8-8": {"description": "<b>Intoxicado</b>: la víctima ha bebido demasiada cerveza o ha tomado raíz extraña. Tira en la tabla @Table[stinking-drunk]{Borracho como una cuba} o aplica los efectos de la @UUID[Compendium.wfrp4e-core.items.Item.b6tGqvNe1jYBdeN5]{raíz extraña}."},
-				"9-9": {"description": "<b>Veterano</b>: la víctima fue una vez un soldado del Imperio. Aplica el Rasgo de criatura @UUID[Compendium.wfrp4e-core.items.Item.9NROryHer1uXAKwY]{Élite}."},
-				"10-10": {"description": "<b>Cliente duro</b>: puede que no te guste meterte con este tipo. Aplica el Rasgo de criatura @UUID[Compendium.wfrp4e-core.items.Item.15ENOMf345S5AL68]{Bruto}."},
-				"11-11": {"description": "<b>Cauteloso</b>: la mayoría de la gente del Imperio sabe que los delincuentes se aprovechan de los clientes incautos en las tabernas o roban objetos de los puestos de mercado sin vigilancia. Proporciona a la víctima un Punto de Fortuna que puede gastarse en repetir cualquier Chequeo que pueda evitar que sea víctima de un delito."},
-				"12-12": {"description": "<b>Ingenioso</b>: esta víctima es fría e inteligente. Aplica el Rasgo de criatura @UUID[Compendium.wfrp4e-core.items.Item.Ni4hNAPv3LhTpgMA]{Listo}."},
-				"13-13": {"description": "<b>Sensación de picazón</b>: la víctima está contrayendo @UUID[Compendium.wfrp4e-core.items.Item.UAwTqZ3hqNb7vq9s]{la plaga picante}. Al acercarse al objetivo, el PJ debe superar un Chequeo <b>Normal (+20)</b> de <b>Percepción</b> para darse cuenta de las ampollas reveladoras antes de acercarse demasiado."},
-				"14-14": {"description": "<b>Futuro patrón</b>: la víctima puede ser una persona que esté en posición de ofrecer al Carterista un trabajo en el futuro o que podría proporcionar ayuda o información vital en una próxima aventura."},
-				"15-15": {"description": "<b>En alerta</b>: sacar lo mejor de la víctima resulta complicado. Sus Chequeos de @UUID[Compendium.wfrp4e-core.items.Item.Fs06sr7y9JKpVQmB]{Percepción} se benefician de +1 NE."},
-				"16-16": {"description": "<b>Hurto permitido</b>: la víctima lleva a cabo pequeños hurtos. Puede que el Carterista sea robado a su vez."},
-				"17-17": {"description": "<b>Amigos en las altas esferas</b>: puede que la víctima no sea especialmente rica o poderosa, pero tiene contactos que sí lo son. Tal vez sea un sirviente en una casa noble o algo más exótico como el esclavo de un vampiro, un espía de otro país o miembro de una secta del Caos. Esto puede ser un atractivo añadido para quienes deseen explotarlos, pero también significaría que la víctima podría encontrar ayuda para obtener venganza."},
-				"18-18": {"description": "<b>Vengativo</b>: esta víctima está muy motivada para vengarse de cualquiera que le robe. Cuando se da cuenta de que ha sido víctima de un delito, dedica una sorprendente cantidad de energía y recursos en descubrir quién le ha robado y llevarlo ante la justicia. Las víctimas enanas son el perfecto ejemplo de ello."},
-				"19-19": {"description": "<b>Enfermo</b>: la víctima está en las primeras fases de @UUID[Compendium.wfrp4e-core.items.Item.aKiuGzlVO51JvsjV]{la peste negra} e infestada de pulgas. Al acercarse a la víctima, el PJ debe superar un Chequeo <b>Desafiante (+0)</b> de <b>Percepción</b> para ver los síntomas y no tener que superar un Chequeo para evitar el contagio."},
-				"20-20": {"description": "<b>Mutante</b>: la víctima es un mutante. Su mutación está oculta bajo su ropa, pero puede resultar obvia para un Carterista durante un intento de hurto. Tira [[/r 1d10]]: 1 a 2: @UUID[Compendium.wfrp4e-core.items.Item.op4GKikIQee7JMXw]{Patas de animal}, 3 a 4: @UUID[Compendium.wfrp4e-core.items.Item.iLZcSRUbxKBecACZ]{Corpulento}, 5 a 6: @UUID[Compendium.wfrp4e-core.items.Item.dsYDcdQfJGc7wxSX]{Demacrado}, 7 a 8: @UUID[Compendium.wfrp4e-core.items.Item.u5lMTKaOsZfiE3p0]{Articulaciones adicionales en las piernas}, 9 a 10: @UUID[Compendium.wfrp4e-core.items.Item.ArCg0WaBxLgPQA8F]{Plumaje ralo}."}
+				"2-2": {"name": "Conocido", "description": "La víctima está vagamente familiarizada con el PJ, habiéndose encontrado con él antes o habiendo presenciado alguna de sus travesuras anteriores. El grado en que conoce al PJ se deja a elección del DJ, y el PJ puede hacer un Chequeo <b>Difícil (-20)</b> de <b>Percepción</b> para detectar un destello de reconocimiento en su cara."},
+				"3-3": {"name": "Habilidad insólita", "description": "La víctima posee una habilidad preternatural que hace que robarle sea complicado. Quizás sea un visionario con la Habilidad Psicometría (Vientos de la Magia, página 47), un vidente o un aprendiz de hechicero o bruja."},
+				"4-4": {"name": "Amigos de los bajos fondos", "description": "La víctima tiene amigos en los bajos fondos o paga a una banda por protección. La mafia no se alegrará de saber que su amigo ha sido víctima de un delito (y encima no se benefició de ello)."},
+				"5-5": {"name": "Parte amputada", "description": "Una enfermedad o lesión ha provocado la pérdida o inutilización de una parte del cuerpo. Tira [[/r 1d10]]. 1 a 3: Pierna, 4 a 6: Brazo, 7 a 8: Ojos, 9: Lengua, 10: Orejas."},
+				"6-6": {"name": "Monedero falso", "description": "La víctima se ha encontrado antes con carteristas y lleva un llamativo monedero que contiene dos monedas. Guarda monedas de mayor valor en el calcetín o en la cinta del sombrero. Tira otro [[/r 1d10]]. Con un 1, el objetivo ha sido tan vengativo como para dejar una aguja envenenada en el monedero falso, infligiendo 1 Estado de @Condition[Envenenado] a cualquiera que pille el monedero falso y fracase en un Chequeo <b>Desafiante (+0)</b> de <b>Percepción</b>."},
+				"7-7": {"name": "Desprevenido", "description": "Te sentirías mal si no te lo pusieran tan fácil. Sus Chequeos de @UUID[Compendium.wfrp4e-core.items.Item.Fs06sr7y9JKpVQmB]{Percepción} sufren un penalizador de -1 NE."},
+				"8-8": {"name": "Intoxicado", "description": "La víctima ha bebido demasiada cerveza o ha tomado raíz extraña. Tira en la tabla @Table[stinking-drunk]{Borracho como una cuba} o aplica los efectos de la @UUID[Compendium.wfrp4e-core.items.Item.b6tGqvNe1jYBdeN5]{raíz extraña}."},
+				"9-9": {"name": "Veterano", "description": "La víctima fue una vez un soldado del Imperio. Aplica el Rasgo de criatura @UUID[Compendium.wfrp4e-core.items.Item.9NROryHer1uXAKwY]{Élite}."},
+				"10-10": {"name": "Cliente duro", "description": "Puede que no te guste meterte con este tipo. Aplica el Rasgo de criatura @UUID[Compendium.wfrp4e-core.items.Item.15ENOMf345S5AL68]{Bruto}."},
+				"11-11": {"name": "Cauteloso", "description": "La mayoría de la gente del Imperio sabe que los delincuentes se aprovechan de los clientes incautos en las tabernas o roban objetos de los puestos de mercado sin vigilancia. Proporciona a la víctima un Punto de Fortuna que puede gastarse en repetir cualquier Chequeo que pueda evitar que sea víctima de un delito."},
+				"12-12": {"name": "Ingenioso", "description": "Esta víctima es fría e inteligente. Aplica el Rasgo de criatura @UUID[Compendium.wfrp4e-core.items.Item.Ni4hNAPv3LhTpgMA]{Listo}."},
+				"13-13": {"name": "Sensación de picazón", "description": "La víctima está contrayendo @UUID[Compendium.wfrp4e-core.items.Item.UAwTqZ3hqNb7vq9s]{la plaga picante}. Al acercarse al objetivo, el PJ debe superar un Chequeo <b>Normal (+20)</b> de <b>Percepción</b> para darse cuenta de las ampollas reveladoras antes de acercarse demasiado."},
+				"14-14": {"name": "Futuro patrón", "description": "La víctima puede ser una persona que esté en posición de ofrecer al Carterista un trabajo en el futuro o que podría proporcionar ayuda o información vital en una próxima aventura."},
+				"15-15": {"name": "En alerta", "description": "Sacar lo mejor de la víctima resulta complicado. Sus Chequeos de @UUID[Compendium.wfrp4e-core.items.Item.Fs06sr7y9JKpVQmB]{Percepción} se benefician de +1 NE."},
+				"16-16": {"name": "Hurto permitido", "description": "La víctima lleva a cabo pequeños hurtos. Puede que el Carterista sea robado a su vez."},
+				"17-17": {"name": "Amigos en las altas esferas", "description": "Puede que la víctima no sea especialmente rica o poderosa, pero tiene contactos que sí lo son. Tal vez sea un sirviente en una casa noble o algo más exótico como el esclavo de un vampiro, un espía de otro país o miembro de una secta del Caos. Esto puede ser un atractivo añadido para quienes deseen explotarlos, pero también significaría que la víctima podría encontrar ayuda para obtener venganza."},
+				"18-18": {"name": "Vengativo", "description": "Esta víctima está muy motivada para vengarse de cualquiera que le robe. Cuando se da cuenta de que ha sido víctima de un delito, dedica una sorprendente cantidad de energía y recursos en descubrir quién le ha robado y llevarlo ante la justicia. Las víctimas enanas son el perfecto ejemplo de ello."},
+				"19-19": {"name": "Enfermo", "description": "La víctima está en las primeras fases de @UUID[Compendium.wfrp4e-core.items.Item.aKiuGzlVO51JvsjV]{la peste negra} e infestada de pulgas. Al acercarse a la víctima, el PJ debe superar un Chequeo <b>Desafiante (+0)</b> de <b>Percepción</b> para ver los síntomas y no tener que superar un Chequeo para evitar el contagio."},
+				"20-20": {"name": "Mutante", "description": "La víctima es un mutante. Su mutación está oculta bajo su ropa, pero puede resultar obvia para un Carterista durante un intento de hurto. Tira [[/r 1d10]]: 1 a 2: @UUID[Compendium.wfrp4e-core.items.Item.op4GKikIQee7JMXw]{Patas de animal}, 3 a 4: @UUID[Compendium.wfrp4e-core.items.Item.iLZcSRUbxKBecACZ]{Corpulento}, 5 a 6: @UUID[Compendium.wfrp4e-core.items.Item.dsYDcdQfJGc7wxSX]{Demacrado}, 7 a 8: @UUID[Compendium.wfrp4e-core.items.Item.u5lMTKaOsZfiE3p0]{Articulaciones adicionales en las piernas}, 9 a 10: @UUID[Compendium.wfrp4e-core.items.Item.ArCg0WaBxLgPQA8F]{Plumaje ralo}."}
 				}
 		},
 		"Contact Development": {
 			"name": "Desarrollo del Contacto",
 			"results": {
-				"1-27": {"description": "<b>Todo va bien</b>: no hay cambios significativos en las circunstancias del Contacto."},
-				"28-33": {"description": "<b>Escondido</b>: el Contacto ha abandonado su residencia habitual para escapar del escrutinio de rivales o autoridades. Es probable que siga en la misma ciudad o provincia, pero hay que esforzarse para localizarlo."},
-				"34-39": {"description": "<b>Autosuficiente</b>: el contacto ya no está tan implicado. Reduce su Calidad de Servicio en 1 nivel."},
-				"40-44": {"description": "<b>Bajo presión de las bandas</b>: los criminales organizados presionan al Contacto para que trabaje para ellos. Si ya formaba parte de una banda, se une a una facción disidente o a una banda rival. Dependiendo de la calidad de su relación, puede recomendar a los PJs como posibles asociados a la banda (les guste o no)."},
-				"45-48": {"description": "<b>Cliente sospechoso</b>: el Contacto trabaja para un cliente con el que el PJ no desea asociarse. La identidad de este cliente se deja a criterio del DJ pero puede ser un miembro de una banda rival, una secta revolucionaria, un nigromante, un sectario del Caos o una especie que ve a la humanidad con hostilidad, como los skaven."},
-				"49-54": {"description": "<b>Vacas flacas</b>: el Contacto necesita desesperadamente ingresos y puede buscar al PJ para que le preste fondos."},
-				"55-59": {"description": "<b>Enfermo</b>: el Contacto contrae @UUID[Compendium.wfrp4e-core.items.Item.UAwTqZ3hqNb7vq9s]{la plaga picante} y puede ser una fuente de contagio durante las siguientes [[/r 1d10]] semanas."},
-				"60-64": {"description": "<b>Influencia corruptora</b>: durante sus actividades, el Contacto está expuesto a una @Corruption[moderada]{Fuente Moderada de Corrupción}."},
-				"65-69": {"description": "<b>Bajo vigilancia</b>: los miembros de la Guardia o de una banda rival vigilan cada movimiento del Contacto. Si el PJ se comunica con él, hay un [[/r d100]]{33%} de probabilidades de que le descubran."},
-				"70-73": {"description": "<b>Conversión religiosa</b>: aunque el Contacto sigue siendo un pícaro, su actitud hacia el mundo delictivo ha cambiado notablemente. Si antes no seguía los principios ranaldanos, puede que los adopte, que se dedique a una causa revolucionaria o incluso que empiece a rendir culto a un poder más oscuro."},
-				"74-78": {"description": "<b>Desaparecido</b>: a menos que el PJ se haya comunicado con el Contacto desde la última vez que se consultó esta tabla, el Contacto supone que se han separado y la calidad de su relación se reduce un grado, por lo que un Contacto con una relación Buena pasa a ser Normal."},
-				"79-83": {"description": "<b>Encarcelado</b>: el Contacto es condenado por un delito y pasa los siguientes [[/r 2d10]] meses en la cárcel."},
-				"84-89": {"description": "<b>En una curva de aprendizaje</b>: el Contacto se esfuerza por mejorar. Para representar su crecimiento, aumenta un grado en la columna de Calidad de servicio, por ejemplo, de Calidad Aceptable a Superior."},
-				"90-93": {"description": "<b>Nueva vida</b>: el Contacto ha decidido mudarse a otra ciudad. Puede que haya dejado señales secretas en su antigua localización explicando dónde se ha ido, que haya dejado noticias a conocidos comunes o que simplemente haya desaparecido."},
-				"94-97": {"description": "<b>Sentar la cabeza</b>: el Contacto se cansa de la vida delictiva e intenta encontrar un papel legal en la sociedad. Si la relación entre el Contacto y el PJ es buena, puede verse tentado a realizar servicios para el PJ, pero habrá que convencerle."},
-				"98-100": {"description": "<b>A las malas</b>: el Contacto es asaltado por sus rivales y sufre una Herida Crítica generada aleatoriamente. Esto puede resultar en su muerte."}
+				"1-27": {"name": "Todo va bien", "description": "No hay cambios significativos en las circunstancias del Contacto."},
+				"28-33": {"name": "Escondido", "description": "El Contacto ha abandonado su residencia habitual para escapar del escrutinio de rivales o autoridades. Es probable que siga en la misma ciudad o provincia, pero hay que esforzarse para localizarlo."},
+				"34-39": {"name": "Autosuficiente", "description": "El contacto ya no está tan implicado. Reduce su Calidad de Servicio en 1 nivel."},
+				"40-44": {"name": "Bajo presión de las bandas", "description": "Los criminales organizados presionan al Contacto para que trabaje para ellos. Si ya formaba parte de una banda, se une a una facción disidente o a una banda rival. Dependiendo de la calidad de su relación, puede recomendar a los PJs como posibles asociados a la banda (les guste o no)."},
+				"45-48": {"name": "Cliente sospechoso", "description": "El Contacto trabaja para un cliente con el que el PJ no desea asociarse. La identidad de este cliente se deja a criterio del DJ pero puede ser un miembro de una banda rival, una secta revolucionaria, un nigromante, un sectario del Caos o una especie que ve a la humanidad con hostilidad, como los skaven."},
+				"49-54": {"name": "Vacas flacas", "description": "El Contacto necesita desesperadamente ingresos y puede buscar al PJ para que le preste fondos."},
+				"55-59": {"name": "Enfermo", "description": "El Contacto contrae @UUID[Compendium.wfrp4e-core.items.Item.UAwTqZ3hqNb7vq9s]{la plaga picante} y puede ser una fuente de contagio durante las siguientes [[/r 1d10]] semanas."},
+				"60-64": {"name": "Influencia corruptora", "description": "Durante sus actividades, el Contacto está expuesto a una @Corruption[moderada]{Fuente Moderada de Corrupción}."},
+				"65-69": {"name": "Bajo vigilancia", "description": "Los miembros de la Guardia o de una banda rival vigilan cada movimiento del Contacto. Si el PJ se comunica con él, hay un [[/r d100]]{33%} de probabilidades de que le descubran."},
+				"70-73": {"name": "Conversión religiosa", "description": "Aunque el Contacto sigue siendo un pícaro, su actitud hacia el mundo delictivo ha cambiado notablemente. Si antes no seguía los principios ranaldanos, puede que los adopte, que se dedique a una causa revolucionaria o incluso que empiece a rendir culto a un poder más oscuro."},
+				"74-78": {"name": "Desaparecido", "description": "A menos que el PJ se haya comunicado con el Contacto desde la última vez que se consultó esta tabla, el Contacto supone que se han separado y la calidad de su relación se reduce un grado, por lo que un Contacto con una relación Buena pasa a ser Normal."},
+				"79-83": {"name": "Encarcelado", "description": "El Contacto es condenado por un delito y pasa los siguientes [[/r 2d10]] meses en la cárcel."},
+				"84-89": {"name": "En una curva de aprendizaje", "description": "El Contacto se esfuerza por mejorar. Para representar su crecimiento, aumenta un grado en la columna de Calidad de servicio, por ejemplo, de Calidad Aceptable a Superior."},
+				"90-93": {"name": "Nueva vida", "description": "El Contacto ha decidido mudarse a otra ciudad. Puede que haya dejado señales secretas en su antigua localización explicando dónde se ha ido, que haya dejado noticias a conocidos comunes o que simplemente haya desaparecido."},
+				"94-97": {"name": "Sentar la cabeza", "description": "El Contacto se cansa de la vida delictiva e intenta encontrar un papel legal en la sociedad. Si la relación entre el Contacto y el PJ es buena, puede verse tentado a realizar servicios para el PJ, pero habrá que convencerle."},
+				"98-100": {"name": "A las malas", "description": "El Contacto es asaltado por sus rivales y sufre una Herida Crítica generada aleatoriamente. Esto puede resultar en su muerte."}
 				}
 		},
 		"Quality of Relationship": {
 			"name": "Calidad de la relación",
 			"results": {
-				"1-1": {"description": "<b>Fría</b>: al Contacto no le cae muy bien el PJ. Trabaja para él a regañadientes, pero tiene sentimientos particulares más allá de una fuente de oportunidades. Si se le interroga revelaría el nombre del PJ para salvar su pellejo."},
-				"2-3": {"description": "<b>Dudoso</b>: en general, el PJ puede confiar en la información o los servicios que le brinda, pero de vez en cuando resultan poco fiables. El contacto no siente un gran aprecio por el PJ."},
-				"4-7": {"description": "<b>Normal</b>: los vínculos entre el PJ y el Contacto son fiables. El PJ puede confiar en el Contacto, pero este no arriesgará su pellejo por el PJ."},
-				"8-9": {"description": "<b>Bueno</b>: el Contacto es realmente cercano con el Personaje. Puede incluso ayudar sin que el PJ se lo pida específicamente."},
-				"10-10": {"description": "<b>Fiable</b>: el Contacto es amigo íntimo del PJ. Siempre intentará ayudar al PJ y nunca lo traicionará voluntariamente."}
+				"1-1": {"name": "Fría", "description": "Al Contacto no le cae muy bien el PJ. Trabaja para él a regañadientes, pero tiene sentimientos particulares más allá de una fuente de oportunidades. Si se le interroga revelaría el nombre del PJ para salvar su pellejo."},
+				"2-3": {"name": "Dudoso", "description": "En general, el PJ puede confiar en la información o los servicios que le brinda, pero de vez en cuando resultan poco fiables. El contacto no siente un gran aprecio por el PJ."},
+				"4-7": {"name": "Normal", "description": "Los vínculos entre el PJ y el Contacto son fiables. El PJ puede confiar en el Contacto, pero este no arriesgará su pellejo por el PJ."},
+				"8-9": {"name": "Bueno", "description": "El Contacto es realmente cercano con el Personaje. Puede incluso ayudar sin que el PJ se lo pida específicamente."},
+				"10-10": {"name": "Fiable", "description": "El Contacto es amigo íntimo del PJ. Siempre intentará ayudar al PJ y nunca lo traicionará voluntariamente."}
 				}
 		},
 		"Quality of Service": {
 			"name": "Calidad del servicio",
 			"results": {
-				"1-1": {"description": "<b>Espantosa</b>: los servicios del Contacto son de baja calidad. La información que proporciona puede resultar falsa y sus ganzúas se rompen en los momentos más inoportunos. Si es un perista, tienen problemas para encontrar compradores para los bienes robados. Si son propietarios de un piso franco, ese refugio es incómodo, y si ayudan a almacenar un alijo, esa habitación puede inundarse o sufrir un robo. El Contacto es tan inepto que pronto podría ser detenido por sus propios delitos.</p><p>Para representar su incompetencia general, si el Contacto no tiene estatus, los Chequeos sufren un penalizador de -2 NE. Si lo tiene, realiza los Chequeos con una puntuación de 25."},
-				"2-3": {"description": "<b>Deficiente</b>: los servicios del Contacto son de una calidad mediocre. Son capaces, pero pobres. La información que proporciona es correcta en su mayor parte, pero faltan detalles. El equipo de este tipo de contactos es práctico, pero impreciso. Los documentos y obras de arte falsificados pasan una inspección rápida, pero son descubiertos como falsos por cualquiera que se tome la molestia de mirar con detenimiento. La Guardia ya puede tener sus sospechas sobre este Contacto.</p><p>Para representar su mediocridad, si el Contacto no tiene estatus, los Chequeos que realice sufren un penalizador de -2 NE. Si lo tiene, realiza Chequeos con una puntuación de 35."},
-				"4-7": {"description": "<b>Aceptable</b>: los servicios del Contacto son buenos. Un falsificador de este nivel producirá falsificaciones que pueden pasar una inspección decente, un perista paga un precio decente por bienes robados y cualquier información que proporcione es bastante precisa."},
-				"8-9": {"description": "<b>Superior</b>: los servicios del Contacto son de una calidad superior. Un falsificador de este nivel produce falsificaciones que pasan la inspección de cerca, un perista es capaz de pagar una prima por los productos que se le venden y la información que proporciona es exhaustiva.</p><p>Para representar su competencia general, si el Contacto no tiene estatus, sus Chequeos se benefician de un bonificador de +1 NE. Si lo tiene, realiza los Chequeos con una puntuación de 55."},
-				"10-10": {"description": "<b>Impresionante</b>: los servicios de este Contacto son de primera categoría. Su información es precisa e incluye información relevante que ni siquiera se había pedido. El equipo que vende es de una calidad superior. Sus escondites son seguros y lujosos.</p><p>Para representar sus pródigas habilidades, si el Contacto no tiene estatus, sus Chequeos se benefician de un bonificador de +2 NE. Si lo tiene, realiza los Chequeos con una puntuación de 65."}
+				"1-1": {"name": "Espantosa", "description": "Los servicios del Contacto son de baja calidad. La información que proporciona puede resultar falsa y sus ganzúas se rompen en los momentos más inoportunos. Si es un perista, tienen problemas para encontrar compradores para los bienes robados. Si son propietarios de un piso franco, ese refugio es incómodo, y si ayudan a almacenar un alijo, esa habitación puede inundarse o sufrir un robo. El Contacto es tan inepto que pronto podría ser detenido por sus propios delitos.</p><p>Para representar su incompetencia general, si el Contacto no tiene estatus, los Chequeos sufren un penalizador de -2 NE. Si lo tiene, realiza los Chequeos con una puntuación de 25."},
+				"2-3": {"name": "Deficiente", "description": "Los servicios del Contacto son de una calidad mediocre. Son capaces, pero pobres. La información que proporciona es correcta en su mayor parte, pero faltan detalles. El equipo de este tipo de contactos es práctico, pero impreciso. Los documentos y obras de arte falsificados pasan una inspección rápida, pero son descubiertos como falsos por cualquiera que se tome la molestia de mirar con detenimiento. La Guardia ya puede tener sus sospechas sobre este Contacto.</p><p>Para representar su mediocridad, si el Contacto no tiene estatus, los Chequeos que realice sufren un penalizador de -2 NE. Si lo tiene, realiza Chequeos con una puntuación de 35."},
+				"4-7": {"name": "Aceptable", "description": "Los servicios del Contacto son buenos. Un falsificador de este nivel producirá falsificaciones que pueden pasar una inspección decente, un perista paga un precio decente por bienes robados y cualquier información que proporcione es bastante precisa."},
+				"8-9": {"name": "Superior", "description": "Los servicios del Contacto son de una calidad superior. Un falsificador de este nivel produce falsificaciones que pasan la inspección de cerca, un perista es capaz de pagar una prima por los productos que se le venden y la información que proporciona es exhaustiva.</p><p>Para representar su competencia general, si el Contacto no tiene estatus, sus Chequeos se benefician de un bonificador de +1 NE. Si lo tiene, realiza los Chequeos con una puntuación de 55."},
+				"10-10": {"name": "Impresionante", "description": "Los servicios de este Contacto son de primera categoría. Su información es precisa e incluye información relevante que ni siquiera se había pedido. El equipo que vende es de una calidad superior. Sus escondites son seguros y lujosos.</p><p>Para representar sus pródigas habilidades, si el Contacto no tiene estatus, sus Chequeos se benefician de un bonificador de +2 NE. Si lo tiene, realiza los Chequeos con una puntuación de 65."}
 				}
 		},
 		"Bawd Income Endeavour Complications": {
 			"name": "Complicaciones de la empresa Salario del Chalán",
 			"results": {
-				"1-1": {"description": "<b>Me debes una grande</b>: has fallado gravemente al intentar pasar desapercibido. Tal vez un cliente rico quedó expuesto mientras estaba a tu cuidado o hablaste demasiado sobre un <em>capo</em> local. Ahora le debes a esta persona un gran favor."},
-				"2-2": {"description": "<b>Chantaje</b>: has recibido una carta amenazándote con revelar información comprometedora sobre tus clientes a menos que pagues 2 co antes del próximo periodo de inactividad. Detalles de cómo pagar, si el autor tiene información y cómo puede ser rastreado depende del DJ."},
-				"3-4": {"description": "<b>Amigo en los bajos fondos</b>: te aborda un Perista que trabaja para una organización criminal. Necesitan un comprador para un contrabando. Si puedes ayudarles en el próximo periodo de inactividad, pueden darte una parte de los beneficios."},
-				"5-6": {"description": "<b>Rumor</b>: te enteras de un rumor sobre una oportunidad o una estafa que funcionó en una ciudad extranjera y que aún no se ha probado a nivel local. Los detalles quedan a elección del DJ, pero aquí hay @UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.Irryfr7EthG42fzj.JournalEntryPage.XpxqHzvxCAr35b9R#rumores-de-los-bajos-fondos]{algunas ideas}."},
-				"7-8": {"description": "<b>Me debes una</b>: te has ganado la ira de un cliente. Con el tiempo, puede pedirte un favor moderado como precio por tu descuido."},
-				"9-9": {"description": "<b>Contacto</b>: tus trapicheos entre los bajos fondos te ponen en contacto con alguien que podría ser un contacto importante. Si llevas a cabo la Empresa Contacto durante este periodo de inactividad, cualquier Chequeo en el transcurso de dicha Empresa se beneficia de +1 NE."},
-				"10-10": {"description": "<b>Amigo en las altas esferas</b>: recibes a un personaje importante, ya sea una condesa o un lector del culto de Sigmar, que desea dar una vuelta por las barriadas. Puede que deseen entregarse a un vicio que podría comprometerlos a los ojos de sus pares. Desempeñas bien tu papel y, como resultado, estableces una relación amistosa con esta persona."}
+				"1-1": {"name": "Me debes una grande", "description": "Has fallado gravemente al intentar pasar desapercibido. Tal vez un cliente rico quedó expuesto mientras estaba a tu cuidado o hablaste demasiado sobre un <em>capo</em> local. Ahora le debes a esta persona un gran favor."},
+				"2-2": {"name": "Chantaje", "description": "Has recibido una carta amenazándote con revelar información comprometedora sobre tus clientes a menos que pagues 2 co antes del próximo periodo de inactividad. Detalles de cómo pagar, si el autor tiene información y cómo puede ser rastreado depende del DJ."},
+				"3-4": {"name": "Amigo en los bajos fondos", "description": "Te aborda un Perista que trabaja para una organización criminal. Necesitan un comprador para un contrabando. Si puedes ayudarles en el próximo periodo de inactividad, pueden darte una parte de los beneficios."},
+				"5-6": {"name": "Rumor", "description": "Te enteras de un rumor sobre una oportunidad o una estafa que funcionó en una ciudad extranjera y que aún no se ha probado a nivel local. Los detalles quedan a elección del DJ, pero aquí hay @UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.Irryfr7EthG42fzj.JournalEntryPage.XpxqHzvxCAr35b9R#rumores-de-los-bajos-fondos]{algunas ideas}."},
+				"7-8": {"name": "Me debes una", "description": "Te has ganado la ira de un cliente. Con el tiempo, puede pedirte un favor moderado como precio por tu descuido."},
+				"9-9": {"name": "Contacto", "description": "Tus trapicheos entre los bajos fondos te ponen en contacto con alguien que podría ser un contacto importante. Si llevas a cabo la Empresa Contacto durante este periodo de inactividad, cualquier Chequeo en el transcurso de dicha Empresa se beneficia de +1 NE."},
+				"10-10": {"name": "Amigo en las altas esferas", "description": "Recibes a un personaje importante, ya sea una condesa o un lector del culto de Sigmar, que desea dar una vuelta por las barriadas. Puede que deseen entregarse a un vicio que podría comprometerlos a los ojos de sus pares. Desempeñas bien tu papel y, como resultado, estableces una relación amistosa con esta persona."}
 				}
 		},
 		"Burglar, Pickpocket, Thief Income Endeavour Complications": {
 			"name": "Complicaciones de la empresa Salario del Ladrón, el Carterista y el Ratero",
 			"results": {
-				"1-1": {"description": "<b>Los ranaldanos toman nota</b>. Un grupo local que adora a Ranald el Merodeador Nocturno se enteran de tus actividades. Podrían ser buenos aliados si te atienes al código ranaldano, pero pueden despistarte con mentiras y bromas si los ofendes."},
-				"2-2": {"description": "<b>Atrayendo las miradas</b>. Has atraído mucho la atención. Mientras que la Guardia estámás preocupada por mantener la paz que investigar delitos, el Culto de Verena patrocina investigadores dedicados. Por lo demás, la próxima vez que llegues a un periodo de inactividad, se te aplicará el Suceso <em>Bajo sospecha</em> antes de que se determine nada más."},
-				"3-4": {"description": "<b>Prohibido</b>. Aunque nadie puede acusarte de un robo, adquieres reputación de ladrón. Los comerciantes y propietarios deciden que no eres bienvenido en sus establecimientos. El DJ debe decidir exactamente cuántos lugares te prohíben la entrada, pero al menos un local te lo prohíbe. En muchas tabernas, como la Calle de las Cien Tabernas de Altdorf, pueden prohibirte la entrada simultáneamente."},
-				"5-6": {"description": "<b>Hallazgo afortunado</b>. Además de asegurar tus ingresos habituales, consigues un hallazgo extra. Tira una vez en la tabla @Table[contents-of-purse]{Contenidos de un monedero}."},
-				"7-8": {"description": "<b>Me debes una</b>. Crees que te has salido con la tuya cuando te contacta una persona que da a entender que sabe lo que has hecho. Puede que más adelante te pida un Favor menor a cambio de mantener sus labios sellados."},
-				"9-9": {"description": "<b>El <em>capo</em> te llama</b>. La noticia de tus actividades llega a oídos de un <em>capo</em> del crimen local. Esta gente suele hacer una oferta sencilla: trabaja para ellos o sufre las consecuencias. Véase @UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.Gu0AnsYIpyHxK27i.JournalEntryPage.CezQBybX47Mx7Fdt]{Crimen organizado} para algunas ideas sobre los <em>capos</em>."},
-				"10-10": {"description": "<b>Riqueza</b>. Además de tus ingresos habituales, consigues un par de objetos más interesantes. Tira dos veces en la tabla @Table[contents-of-purse]{Contenido de un monedero}."}
+				"1-1": {"name": "Los ranaldanos toman nota", "description": "Un grupo local que adora a Ranald el Merodeador Nocturno se enteran de tus actividades. Podrían ser buenos aliados si te atienes al código ranaldano, pero pueden despistarte con mentiras y bromas si los ofendes."},
+				"2-2": {"name": "Atrayendo las miradas", "description": "Has atraído mucho la atención. Mientras que la Guardia estámás preocupada por mantener la paz que investigar delitos, el Culto de Verena patrocina investigadores dedicados. Por lo demás, la próxima vez que llegues a un periodo de inactividad, se te aplicará el Suceso <em>Bajo sospecha</em> antes de que se determine nada más."},
+				"3-4": {"name": "Prohibido", "description": "Aunque nadie puede acusarte de un robo, adquieres reputación de ladrón. Los comerciantes y propietarios deciden que no eres bienvenido en sus establecimientos. El DJ debe decidir exactamente cuántos lugares te prohíben la entrada, pero al menos un local te lo prohíbe. En muchas tabernas, como la Calle de las Cien Tabernas de Altdorf, pueden prohibirte la entrada simultáneamente."},
+				"5-6": {"name": "Hallazgo afortunado", "description": "Además de asegurar tus ingresos habituales, consigues un hallazgo extra. Tira una vez en la tabla @Table[contents-of-purse]{Contenidos de un monedero}."},
+				"7-8": {"name": "Me debes una", "description": "Crees que te has salido con la tuya cuando te contacta una persona que da a entender que sabe lo que has hecho. Puede que más adelante te pida un Favor menor a cambio de mantener sus labios sellados."},
+				"9-9": {"name": "El <em>capo</em> te llama", "description": "La noticia de tus actividades llega a oídos de un <em>capo</em> del crimen local. Esta gente suele hacer una oferta sencilla: trabaja para ellos o sufre las consecuencias. Véase @UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.Gu0AnsYIpyHxK27i.JournalEntryPage.CezQBybX47Mx7Fdt]{Crimen organizado} para algunas ideas sobre los <em>capos</em>."},
+				"10-10": {"name": "Riqueza", "description": "Además de tus ingresos habituales, consigues un par de objetos más interesantes. Tira dos veces en la tabla @Table[contents-of-purse]{Contenido de un monedero}."}
 				}
 		},
 		"Charlatan Income Endeavour Complications": {
 			"name": "Complicaciones de la empresa Salario del Charlatán",
 			"results": {
-				"1-1": {"description": "<b>Los ranaldanos toman nota</b>: un grupo local dedicado a Ranald el Impostor se entera de tus estafas. Podrían ser buenos aliados si acatas el código ranaldano pero, si no lo haces, pueden apuntarte en su propia lista de robos y bromas."},
-				"2-2": {"description": "<b>Cliente trágico</b>: uno de tus clientes deposita demasiada fe en tus falsas promesas y entonces se produce la tragedia. Puede que confíe más en sus matasanos por encima de otra asistencia médica o crea que una reliquia falsa le protege de todo mal. La naturaleza de esta tragedia y sus ramificaciones depende del DJ, pero al menos hay amigos del cliente que se pondrán furiosos si descubren quién es el culpable."},
-				"3-4": {"description": "<b>Cliente fanático</b>: uno de tus clientes está convencido de que obras milagros. Tal vez se recuperó completamente de la viruela después de beber tu curalotodo o experimentó un sueño profético al comprar tu colgante de estaño con forma de cometa bendito. Ahora, es devoto de ti en extremo, siguiéndote y proclamando tu genialidad. Cómo se desarrolle esto depende del DJ. Puede ayudarte a encontrar más clientes, pero también puede atraer una atención no deseada."},
-				"5-6": {"description": "<b>Rumor</b>: has oído un rumor sobre una oportunidad o una estafa que aún no se ha probado localmente. Los detalles dependen del DJ, pero aquí hay @UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.Irryfr7EthG42fzj.JournalEntryPage.XpxqHzvxCAr35b9R#rumores-de-los-bajos-fondos]{algunas ideas}."},
-				"7-8": {"description": "<b>Estafa a largo plazo</b>: tus estafas despiertan interés, pero los clientes son cautelosos. Si tienes cuidado y paciencia, esto podría dar sus frutos. No obtienes dinero de la Empresa Salario esta vez. Sin embargo, si llevas a cabo dicha Empresa durante el siguiente período de inactividad y tienes éxito, obtienes [[/r 1d10]] veces la cantidad normal de dinero."},
-				"9-9": {"description": "<b>Potencial aliado</b>: se te acerca un ladronzuelo que insinúa que sabe a lo que te dedicas y a quien le gustaría ayudarte proporcionándote algunas distracciones. Si lo contratas, deberás pagar un chelín de anticipo al comienzo de los siguientes períodos de inactividad. En el futuro, cuando lleves a cabo la Empresa Salario tira [[/r 1d10]]. Con un resultado de 1 a 9, obtienes un 20% adicional como resultado de la ayuda de tu aliado. Con un 10, se fuga con todo el dinero obtenido."},
-				"10-10": {"description": "<b>El <em>capo</em> te ve</b>: tus crímenes han llegado a oídos de uno de los <em>capos</em> de los bajos fondos. Si no cooperas, podrían hacerte la vida imposible. En @UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.Gu0AnsYIpyHxK27i.JournalEntryPage.CezQBybX47Mx7Fdt]{Crimen organizado} encontrarás algunas ideas sobre los <em>capos</em>."}
+				"1-1": {"name": "Los ranaldanos toman nota", "description": "Un grupo local dedicado a Ranald el Impostor se entera de tus estafas. Podrían ser buenos aliados si acatas el código ranaldano pero, si no lo haces, pueden apuntarte en su propia lista de robos y bromas."},
+				"2-2": {"name": "Cliente trágico", "description": "Uno de tus clientes deposita demasiada fe en tus falsas promesas y entonces se produce la tragedia. Puede que confíe más en sus matasanos por encima de otra asistencia médica o crea que una reliquia falsa le protege de todo mal. La naturaleza de esta tragedia y sus ramificaciones depende del DJ, pero al menos hay amigos del cliente que se pondrán furiosos si descubren quién es el culpable."},
+				"3-4": {"name": "Cliente fanático", "description": "Uno de tus clientes está convencido de que obras milagros. Tal vez se recuperó completamente de la viruela después de beber tu curalotodo o experimentó un sueño profético al comprar tu colgante de estaño con forma de cometa bendito. Ahora, es devoto de ti en extremo, siguiéndote y proclamando tu genialidad. Cómo se desarrolle esto depende del DJ. Puede ayudarte a encontrar más clientes, pero también puede atraer una atención no deseada."},
+				"5-6": {"name": "Rumor", "description": "Has oído un rumor sobre una oportunidad o una estafa que aún no se ha probado localmente. Los detalles dependen del DJ, pero aquí hay @UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.Irryfr7EthG42fzj.JournalEntryPage.XpxqHzvxCAr35b9R#rumores-de-los-bajos-fondos]{algunas ideas}."},
+				"7-8": {"name": "Estafa a largo plazo", "description": "Tus estafas despiertan interés, pero los clientes son cautelosos. Si tienes cuidado y paciencia, esto podría dar sus frutos. No obtienes dinero de la Empresa Salario esta vez. Sin embargo, si llevas a cabo dicha Empresa durante el siguiente período de inactividad y tienes éxito, obtienes [[/r 1d10]] veces la cantidad normal de dinero."},
+				"9-9": {"name": "Potencial aliado", "description": "Se te acerca un ladronzuelo que insinúa que sabe a lo que te dedicas y a quien le gustaría ayudarte proporcionándote algunas distracciones. Si lo contratas, deberás pagar un chelín de anticipo al comienzo de los siguientes períodos de inactividad. En el futuro, cuando lleves a cabo la Empresa Salario tira [[/r 1d10]]. Con un resultado de 1 a 9, obtienes un 20% adicional como resultado de la ayuda de tu aliado. Con un 10, se fuga con todo el dinero obtenido."},
+				"10-10": {"name": "El <em>capo</em> te ve", "description": "Tus crímenes han llegado a oídos de uno de los <em>capos</em> de los bajos fondos. Si no cooperas, podrían hacerte la vida imposible. En @UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.Gu0AnsYIpyHxK27i.JournalEntryPage.CezQBybX47Mx7Fdt]{Crimen organizado} encontrarás algunas ideas sobre los <em>capos</em>."}
 				}
 		},
 		"Fence Income Endeavour Complications": {
 			"name": "Complicaciones de la empresa Salario del Perista",
 			"results": {
-				"1-1": {"description": "<b>Se buscan reembolsos</b>: justo cuando crees que te has salido con la tuya, un comprador vuelve insatisfecho. Supera un Chequeo <b>Complicado (-10)</b> de <b>Regatear</b> o pierde la mitad de tus ganancias."},
-				"2-2": {"description": "<b>Casa insegura</b>: si posees o utilizas un establecimiento para almacenar o vender bienes robados, la Guardia local se entera y empieza a plantearse hacer una redada en el local. Si esto no se soluciona la próxima vez que llegue a un periodo de inactividad, se aplica el Suceso <em>Bajo sospecha</em>."},
-				"3-4": {"description": "<b>Artículo caliente</b>: entre los objetos con los que has comerciado, hay uno que buscan desesperadamente aquellos a los que se lo robaron. El DJ puede decidir si se están acercando a ti hasta tal punto que se convierta en una característica de tus aventuras en el futuro."},
-				"5-6": {"description": "<b>Rumor</b>: oyes un rumor sobre una oportunidad o un nuevo tipo de estafa. Los detalles quedan en manos del DJ, pero se dan algunas ideas en la tabla de @UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.Irryfr7EthG42fzj.JournalEntryPage.XpxqHzvxCAr35b9R#rumores-de-los-bajos-fondos]{Rumores de los bajos fondos}."},
-				"7-8": {"description": "<b>Contrabando</b>: uno de tus proveedores necesita deshacerse de algo de contrabando rápidamente y sin hacer preguntas. Si estás de acuerdo, puedes comprar cualquier artículo de la tabla @UUID[Compendium.wfrp4e-core.journals.JournalEntry.sLomXnc8R8518cWN.JournalEntryPage.4CBQ1HlTC7lj9bFy]{Drogas y venenos} por una cuarta parte de su valor habitual (por lo que una dosis de @UUID[Compendium.wfrp4e-core.items.Item.W4X1Jx8AN84yRPDx]{Saliva} que normalmente vale 1 co con 5 cp, costaría ahora 6 cp con 3 p)."},
-				"9-9": {"description": "<b>Hallazgos ocultos</b>: un objeto contiene una bolsa o compartimento que contiene un tesoro oculto. Además de como cualquier ingreso que hagas, puedes tirar dos veces en la tabla @Table[contents-of-purse]{Contenido de un monedero}."},
-				"10-10": {"description": "<b>Objeto maldito</b>: entre el contrabando que has recopilado, hay un artefacto que preferirías no haber encontrado. Podría estar relacionado con algún tipo de energía mágica maligna y cuenta como una exposición a una @Corruption[moderada]{Influencia corruptora moderada}."}
+				"1-1": {"name": "Se buscan reembolsos", "description": "Justo cuando crees que te has salido con la tuya, un comprador vuelve insatisfecho. Supera un Chequeo <b>Complicado (-10)</b> de <b>Regatear</b> o pierde la mitad de tus ganancias."},
+				"2-2": {"name": "Casa insegura", "description": "Si posees o utilizas un establecimiento para almacenar o vender bienes robados, la Guardia local se entera y empieza a plantearse hacer una redada en el local. Si esto no se soluciona la próxima vez que llegue a un periodo de inactividad, se aplica el Suceso <em>Bajo sospecha</em>."},
+				"3-4": {"name": "Artículo caliente", "description": "Entre los objetos con los que has comerciado, hay uno que buscan desesperadamente aquellos a los que se lo robaron. El DJ puede decidir si se están acercando a ti hasta tal punto que se convierta en una característica de tus aventuras en el futuro."},
+				"5-6": {"name": "Rumor", "description": "Oyes un rumor sobre una oportunidad o un nuevo tipo de estafa. Los detalles quedan en manos del DJ, pero se dan algunas ideas en la tabla de @UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.Irryfr7EthG42fzj.JournalEntryPage.XpxqHzvxCAr35b9R#rumores-de-los-bajos-fondos]{Rumores de los bajos fondos}."},
+				"7-8": {"name": "Contrabando", "description": "Uno de tus proveedores necesita deshacerse de algo de contrabando rápidamente y sin hacer preguntas. Si estás de acuerdo, puedes comprar cualquier artículo de la tabla @UUID[Compendium.wfrp4e-core.journals.JournalEntry.sLomXnc8R8518cWN.JournalEntryPage.4CBQ1HlTC7lj9bFy]{Drogas y venenos} por una cuarta parte de su valor habitual (por lo que una dosis de @UUID[Compendium.wfrp4e-core.items.Item.W4X1Jx8AN84yRPDx]{Saliva} que normalmente vale 1 co con 5 cp, costaría ahora 6 cp con 3 p)."},
+				"9-9": {"name": "Hallazgos ocultos", "description": "Un objeto contiene una bolsa o compartimento que contiene un tesoro oculto. Además de como cualquier ingreso que hagas, puedes tirar dos veces en la tabla @Table[contents-of-purse]{Contenido de un monedero}."},
+				"10-10": {"name": "Objeto maldito", "description": "Entre el contrabando que has recopilado, hay un artefacto que preferirías no haber encontrado. Podría estar relacionado con algún tipo de energía mágica maligna y cuenta como una exposición a una @Corruption[moderada]{Influencia corruptora moderada}."}
 				}
 		},
 		"Grave Robber Income Endeavour Complications": {
 			"name": "Complicaciones de la empresa Salario del Ladrón de tumbas",
 			"results": {
-				"1-1": {"description": "<b>Embrujado</b>: espíritus inquietos se indignan por tus atrocidades. Todos los muertos vivientes con el Rasgo de criatura Etéreo que encuentres hasta el siguiente tiempo de inactividad también obtienen el Rasgo de criatura @UUID[Compendium.wfrp4e-core.items.Item.aE3pyW20Orvdjzj0]{Odio (hacia tu PJ)}."},
-				"2-2": {"description": "<b><em>Shyish</em></b>: aunque probablemente no seas consciente de ello, el Viento Amatista se concentra a tu alrededor. No lo hace en tal cantidad como para afectar el lanzamiento de hechizos, pero cualquiera con el Talento @UUID[Compendium.wfrp4e-core.items.Item.OEjUvJKi0xmBwbS2]{Clarividencia} puede percibirlo. Este efecto se disipa en el siguiente periodo de inactividad."},
-				"3-4": {"description": "<b>Cliente espeluznante</b>: se te acerca una persona reservada y siniestra que puede tener trabajo para ti en el futuro. El DJ puede tirar en la tabla @Table[creepy-customer]{Cliente espeluznante} en secreto para obtener ideas. Debería tener en cuenta que cualquier cliente potencial de un ladrón de tumbas exige extrema discreción, ya sea un físico curioso o un malvado nigromante."},
-				"5-6": {"description": "<b>Hallazgo afortunado</b>: además de tus ingresos habituales te aseguras una propina. Tira una vez en la tabla @Table[crypt-complications]{Complicaciones de la cripta}, ignorando los detalles aparte del botín que consigas."},
-				"7-8": {"description": "<b>Me debes una</b>: crees que te has salido con la tuya hasta que te contacta una persona que insinúa que sabe lo que has hecho. Puede pedir un gran favor a tiempo, como precio por mantener la boca cerrada."},
-				"9-9": {"description": "<b>Malos sueños</b>: tus noches están plagadas de pesadillas, tal vez enviadas por el propio Morr. Entre ahora y el próximo periodo de inactividad, el DJ puede pedirte que hagas un Chequeo <b>Desafiante (+0)</b> de <b>Frialdad</b> una vez cada dos semanas. Si fracasas, sufres 1 Estado de @Condition[Fatigado]."},
-				"10-10": {"description": "<b>Premio gordo</b>: además de tus ingresos habituales, consigues un par de objetos interesantes. Tira dos veces en la tabla de @Table[crypt-complications]{Complicaciones de la cripta}, ignorando los detalles que no sean el botín que consigas."}
+				"1-1": {"name": "Embrujado", "description": "Espíritus inquietos se indignan por tus atrocidades. Todos los muertos vivientes con el Rasgo de criatura Etéreo que encuentres hasta el siguiente tiempo de inactividad también obtienen el Rasgo de criatura @UUID[Compendium.wfrp4e-core.items.Item.aE3pyW20Orvdjzj0]{Odio (hacia tu PJ)}."},
+				"2-2": {"name": "Shyish", "description": "<b><em></em></b>: Aunque probablemente no seas consciente de ello, el Viento Amatista se concentra a tu alrededor. No lo hace en tal cantidad como para afectar el lanzamiento de hechizos, pero cualquiera con el Talento @UUID[Compendium.wfrp4e-core.items.Item.OEjUvJKi0xmBwbS2]{Clarividencia} puede percibirlo. Este efecto se disipa en el siguiente periodo de inactividad."},
+				"3-4": {"name": "Cliente espeluznante", "description": "Se te acerca una persona reservada y siniestra que puede tener trabajo para ti en el futuro. El DJ puede tirar en la tabla @Table[creepy-customer]{Cliente espeluznante} en secreto para obtener ideas. Debería tener en cuenta que cualquier cliente potencial de un ladrón de tumbas exige extrema discreción, ya sea un físico curioso o un malvado nigromante."},
+				"5-6": {"name": "Hallazgo afortunado", "description": "Además de tus ingresos habituales te aseguras una propina. Tira una vez en la tabla @Table[crypt-complications]{Complicaciones de la cripta}, ignorando los detalles aparte del botín que consigas."},
+				"7-8": {"name": "Me debes una", "description": "Crees que te has salido con la tuya hasta que te contacta una persona que insinúa que sabe lo que has hecho. Puede pedir un gran favor a tiempo, como precio por mantener la boca cerrada."},
+				"9-9": {"name": "Malos sueños", "description": "Tus noches están plagadas de pesadillas, tal vez enviadas por el propio Morr. Entre ahora y el próximo periodo de inactividad, el DJ puede pedirte que hagas un Chequeo <b>Desafiante (+0)</b> de <b>Frialdad</b> una vez cada dos semanas. Si fracasas, sufres 1 Estado de @Condition[Fatigado]."},
+				"10-10": {"name": "Premio gordo", "description": "Además de tus ingresos habituales, consigues un par de objetos interesantes. Tira dos veces en la tabla de @Table[crypt-complications]{Complicaciones de la cripta}, ignorando los detalles que no sean el botín que consigas."}
 				}
 		},
 		"Outlaw Income Endeavour Complications": {
 			"name": "Complicaciones de la empresa Salario del Forajido",
 			"results": {
-				"1-1": {"description": "<b>Tenemos una baja</b>: uno de tus compañeros Forajidos muere o queda gravemente herido en el proceso. Si eres un simple Bandolero o Forajido esto no tiene efecto, pero si eres un Jefe de forajidos o un Rey de los bandidos, significa que un secuaz ha sido herido, capturado o ha muerto."},
-				"2-2": {"description": "<b>Vecinos peligrosos</b>: durante tus actividades oyes hablar de un grupo que patrulla cerca de tu campamento. Podrían ser orcos errantes, una banda de elfos que buscan proteger el bosque o una decidida patrulla de guardas de caminos. Si no te enfrentas a este grupo debes moverte y establecerte en un nuevo lugar antes de poder emprender más Empresas <em>Salario</em>."},
-				"3-4": {"description": "<b>Fugitivo en el bosque</b>: realizas la Empresa Salario, pero para escapar con tus ganancias debes esconderte en los bosques del Viejo Mundo hasta que se calmen las cosas. No puedes participar en ninguna otra Empresa durante este período de inactividad."},
-				"5-6": {"description": "<b>Hallazgo afortunado</b>: además de asegurar tus ingresos habituales, consigues un hallazgo extra. Tira una vez en la tabla @Table[contents-of-purse]{Contenido de un monedero}."},
-				"7-8": {"description": "<b>El Rey de los Bandidos se da por enterado</b>: la noticia de tus actividades llega a oídos de un Rey de los bandidos local. Este individuo desea favores o contribuciones financieras. Si no se le paga puede dirigir sus fuerzas contra cualquier banda de bandidos que opere en su área."},
-				"9-9": {"description": "<b>Cazarrecompensas</b>: un cazarrecompensas ha recibido un encargo para llevarte ante la justicia, vivo o muerto. Este cazarrecompensas debe ser enfrentado antes del próximo periodo de inactividad. El DJ podría introducirlo en la aventura en algún momento, haciéndolo una parte integral de la trama. Si lo desea, el cazarrecompensas podría ser enfrentado por el Personaje Forajido antes de resolver los acontecimientos en el siguiente periodo de inactividad."},
-				"10-10": {"description": "<b>Levántate y cumple</b>: además de conseguir tus ingresos habituales, te llevas un par de objetos interesantes. Tira dos veces en la tabla @Table[contents-of-purse]{Contenido de un monedero}."}
+				"1-1": {"name": "Tenemos una baja", "description": "Uno de tus compañeros Forajidos muere o queda gravemente herido en el proceso. Si eres un simple Bandolero o Forajido esto no tiene efecto, pero si eres un Jefe de forajidos o un Rey de los bandidos, significa que un secuaz ha sido herido, capturado o ha muerto."},
+				"2-2": {"name": "Vecinos peligrosos", "description": "Durante tus actividades oyes hablar de un grupo que patrulla cerca de tu campamento. Podrían ser orcos errantes, una banda de elfos que buscan proteger el bosque o una decidida patrulla de guardas de caminos. Si no te enfrentas a este grupo debes moverte y establecerte en un nuevo lugar antes de poder emprender más Empresas <em>Salario</em>."},
+				"3-4": {"name": "Fugitivo en el bosque", "description": "Realizas la Empresa Salario, pero para escapar con tus ganancias debes esconderte en los bosques del Viejo Mundo hasta que se calmen las cosas. No puedes participar en ninguna otra Empresa durante este período de inactividad."},
+				"5-6": {"name": "Hallazgo afortunado", "description": "Además de asegurar tus ingresos habituales, consigues un hallazgo extra. Tira una vez en la tabla @Table[contents-of-purse]{Contenido de un monedero}."},
+				"7-8": {"name": "El Rey de los Bandidos se da por enterado", "description": "La noticia de tus actividades llega a oídos de un Rey de los bandidos local. Este individuo desea favores o contribuciones financieras. Si no se le paga puede dirigir sus fuerzas contra cualquier banda de bandidos que opere en su área."},
+				"9-9": {"name": "Cazarrecompensas", "description": "Un cazarrecompensas ha recibido un encargo para llevarte ante la justicia, vivo o muerto. Este cazarrecompensas debe ser enfrentado antes del próximo periodo de inactividad. El DJ podría introducirlo en la aventura en algún momento, haciéndolo una parte integral de la trama. Si lo desea, el cazarrecompensas podría ser enfrentado por el Personaje Forajido antes de resolver los acontecimientos en el siguiente periodo de inactividad."},
+				"10-10": {"name": "Levántate y cumple", "description": "Además de conseguir tus ingresos habituales, te llevas un par de objetos interesantes. Tira dos veces en la tabla @Table[contents-of-purse]{Contenido de un monedero}."}
 				}
 		},
 		"Criminal Events": {
@@ -254,166 +254,166 @@
 		"Wilderness Travel Events – Deep Forest": {
 			"name": "Sucesos en los viajes por la Naturaleza - Bosques profundos",
 			"results": {
-				"1-5": {"description": "<b>Suceso en la Naturaleza</b>: tira en la @Table[wilderness-travel-events]{Tabla de Sucesos en los viajes por la Naturaleza: bosques despejados, colinas y llanuras templadas}."},
-				"6-6": {"description": "<b>Arboleda de la Espadaña sangrienta</b>: los PJs se adentran en una zona en la que crecen arbustos de espadaña sangrienta. Estas plantas depredadoras atrapan y estrangulan a sus presas con sus ramas espinosas. Un PJ puede identificarla (y evitarla) superando un Chequeo <b>Fácil (+40)</b> de <b>Sabiduría académica (Hierbas)</b> o uno <b>Desafiante (+0)</b> de <b>Supervivencia</b>}. Si el DJ tiene acceso a Lustria, las reglas de la enredadera trepadora podrían usarse en lugar de la espadaña sangrienta. De lo contrario, los PJs deben atravesar un área de [[/r 3d10]] yardas, realizando un Chequeo <b>Difícil (-20)</b> de <b>Esquivar</b> en cada Asalto que pasen en el área. Cada vez que un PJ falle el Chequeo, sufre un golpe de daño 5 en una ubicación determinada al azar."},
-				"7-7": {"description": "<b>Hierbas</b>: los PJs cruzan un claro en el que crecen hierbas valiosas. Estas plantas pueden identificarse superando un Chequeo <b>Fácil (+40)</b> de <b>Sabiduría académica (Hierbas)</b>. Las hierbas pueden ser @UUID[Compendium.wfrp4e-core.items.Item.b6tGqvNe1jYBdeN5]{raíz extraña}, @UUID[Compendium.wfrp4e-core.items.Item.wgFj3lFhCuO8OeDb]{flor de luna} o cualquiera de las @UUID[Compendium.wfrp4e-dotr.journals.JournalEntry.JhZ4qkEf569rEcsY]{hierbas} descritas en el <b>Compendio de Muerte en el Reik</b>."},
-				"8-8": {"description": "<b>Duendecillos</b>: esta zona del bosque está plagada de @UUID[Compendium.wfrp4e-salzenmund.actors.Actor.WCg8r2VwNIRehLZJ]{duendecillos}. Si el DJ tiene acceso a <b>Salzenmund: la ciudad de la Sal y la Plata</b>, podría usar las reglas que allí se presentan para representar a los @UUID[Compendium.wfrp4e-salzenmund.journals.JournalEntry.jSPXWkAU3a9CI1FB]{duendecillos}. Si no es así, cada PJ es incapaz de dormir profundamente mientras se encuentra en esa la zona y debe sufrir 1 Estado de @Condition[Fatigado] que dura hasta que lleve a cabo con éxito una @UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.xq3g1ukhk4RFHNSF.JournalEntryPage.YF6OGH5E8oLTde07#empresa-de-recuperacion]{Empresa de Recuperación}."},
-				"9-9": {"description": "<b>Arañas</b>: los PJs se topan con la guarida de entre 4 y 6 arañas gigantes. La mayoría de estas criaturas serán de @UUID[Compendium.wfrp4e-core.items.Item.8slW8CJ2oVTxeQ6q]{tamaño Pequeño}, pero una será de tamaño Grande. Las arañas intentarán atacar y enmarañar a los PJs, luchando hasta la muerte."},
-				"10-10": {"description": "<b>Encontronazo con enemigos</b>: un pequeño grupo de enemigos se cruza en el camino de los personajes. En los bosques de Reikland, los enemigos adecuados pueden ser tribus de goblins silvanos, una manada de hombres bestia compuesta por ungors y gors, o una banda de forajidos."}
+				"1-5": {"name": "Suceso en la Naturaleza", "description": "Tira en la @Table[wilderness-travel-events]{Tabla de Sucesos en los viajes por la Naturaleza: bosques despejados, colinas y llanuras templadas}."},
+				"6-6": {"name": "Arboleda de la Espadaña sangrienta", "description": "Los PJs se adentran en una zona en la que crecen arbustos de espadaña sangrienta. Estas plantas depredadoras atrapan y estrangulan a sus presas con sus ramas espinosas. Un PJ puede identificarla (y evitarla) superando un Chequeo <b>Fácil (+40)</b> de <b>Sabiduría académica (Hierbas)</b> o uno <b>Desafiante (+0)</b> de <b>Supervivencia</b>}. Si el DJ tiene acceso a Lustria, las reglas de la enredadera trepadora podrían usarse en lugar de la espadaña sangrienta. De lo contrario, los PJs deben atravesar un área de [[/r 3d10]] yardas, realizando un Chequeo <b>Difícil (-20)</b> de <b>Esquivar</b> en cada Asalto que pasen en el área. Cada vez que un PJ falle el Chequeo, sufre un golpe de daño 5 en una ubicación determinada al azar."},
+				"7-7": {"name": "Hierbas", "description": "Los PJs cruzan un claro en el que crecen hierbas valiosas. Estas plantas pueden identificarse superando un Chequeo <b>Fácil (+40)</b> de <b>Sabiduría académica (Hierbas)</b>. Las hierbas pueden ser @UUID[Compendium.wfrp4e-core.items.Item.b6tGqvNe1jYBdeN5]{raíz extraña}, @UUID[Compendium.wfrp4e-core.items.Item.wgFj3lFhCuO8OeDb]{flor de luna} o cualquiera de las @UUID[Compendium.wfrp4e-dotr.journals.JournalEntry.JhZ4qkEf569rEcsY]{hierbas} descritas en el <b>Compendio de Muerte en el Reik</b>."},
+				"8-8": {"name": "Duendecillos", "description": "Esta zona del bosque está plagada de @UUID[Compendium.wfrp4e-salzenmund.actors.Actor.WCg8r2VwNIRehLZJ]{duendecillos}. Si el DJ tiene acceso a <b>Salzenmund: la ciudad de la Sal y la Plata</b>, podría usar las reglas que allí se presentan para representar a los @UUID[Compendium.wfrp4e-salzenmund.journals.JournalEntry.jSPXWkAU3a9CI1FB]{duendecillos}. Si no es así, cada PJ es incapaz de dormir profundamente mientras se encuentra en esa la zona y debe sufrir 1 Estado de @Condition[Fatigado] que dura hasta que lleve a cabo con éxito una @UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.xq3g1ukhk4RFHNSF.JournalEntryPage.YF6OGH5E8oLTde07#empresa-de-recuperacion]{Empresa de Recuperación}."},
+				"9-9": {"name": "Arañas", "description": "Los PJs se topan con la guarida de entre 4 y 6 arañas gigantes. La mayoría de estas criaturas serán de @UUID[Compendium.wfrp4e-core.items.Item.8slW8CJ2oVTxeQ6q]{tamaño Pequeño}, pero una será de tamaño Grande. Las arañas intentarán atacar y enmarañar a los PJs, luchando hasta la muerte."},
+				"10-10": {"name": "Encontronazo con enemigos", "description": "Un pequeño grupo de enemigos se cruza en el camino de los personajes. En los bosques de Reikland, los enemigos adecuados pueden ser tribus de goblins silvanos, una manada de hombres bestia compuesta por ungors y gors, o una banda de forajidos."}
 				}
 		},
 		"Wilderness Travel Events – Light Woodland, Hills and Temperate Plains": {
 			"name": "Sucesos en los viajes por la Naturaleza - Bosques despejados, colinas y llanuras templadas",
 			"results": {
-				"1-1": {"description": "<b>Camino bloqueado</b>: un lago, un río o un desfiladero bloquea el camino. Es imposible sortearlo por medios convencionales por lo que, a menos que los PJs dispongan de algún medio para sobrevolarlo o construir un puente, deberán encontrar otra ruta, lo que añadirá dos etapas más a su viaje."},
-				"2-2": {"description": "<b>Túmulo</b>: los PJs pasan junto a una serie de inquietantes menhires que rodean una pequeña colina. Cualquier PJ que supere un Chequeo <b>Fácil (+40)</b> de <b>Sabiduría académica (Historia)</b> o <b>(Local)</b> reconocerá que se trata de un túmulo. Consulta la tabla de Tumbas antiguas (página 123) para obtener más información."},
-				"3-3": {"description": "<b>Monolito</b>: los PJs observan una gran piedra erguida o un antiguo círculo de menhires. Consulta la tabla de @UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.xq3g1ukhk4RFHNSF.JournalEntryPage.2leXDE9eGgGpVVlC#monolitos]{Monolitos} para obtener más información."},
-				"4-4": {"description": "<b>Ruinas</b>: los PJs observan los restos de antiguos edificios al pasar. Consulta la tabla @UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.xq3g1ukhk4RFHNSF.JournalEntryPage.2leXDE9eGgGpVVlC#ruinas-perdidas]{Ruinas} para obtener más información."},
-				"5-5": {"description": "<b>Animal enfermo</b>: selecciona al azar uno de los animales que acompañan al grupo. Ese animal está enfermo. Si un miembro del grupo supera un Chequeo <b>Difícil (-20)</b> de <b>Criar animales</b>, no hay ningún efecto. Si no, impón los penalizadores por una @UUID[Compendium.wfrp4e-core.items.Item.kKccDTGzWzSXCBOb]{Herida infectada} al animal. Si este resultado se genera por segunda vez para el mismo animal, muere."},
-				"6-6": {"description": "<b>Objeto desgastado</b>: una pieza del equipo sufre desgaste. Determina aleatoriamente un PJ y uno de sus accesorios. Si un miembro del grupo supera un Chequeo <b>Difícil (-20)</b> de <b>Oficio (Carpintero, curtidor, sastre o herrero)</b>, no hay ningún efecto. Si no, un objeto de metal adquiere el defecto De mala calidad o un objeto de cuero, lona o madera se rompe."},
-				"7-7": {"description": "<b>Compañeros de viaje</b>: los PJs ven a un grupo de compañeros de viaje delante de ellos. Puede evitarse o acercarse a estos viajeros. Los viajeros son un grupo de 4 a 6 vendedores ambulantes o aldeanos. Usa la tabla de @Table[victim-quirk]{Rarezas de la víctima} para determinar cómo podrían comportarse. Para los perfiles de los viajeros, utiliza el perfil de @UUID[Compendium.wfrp4e-dslf.actors.Actor.xOMceDSC4pxIjQcR]{Forajido}."},
-				"8-8": {"description": "<b>Manantial</b>: agua clara y fresca brota del suelo. El grupo puede reponer sus reservas de agua como si hubieran superado la Empresa @UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.xq3g1ukhk4RFHNSF.JournalEntryPage.w5XYNzkXObxeBzFD#empresa-agua]{Búsqueda de agua} sin necesidad de realizarla."},
-				"9-9": {"description": "<b>Encontronazo con animales</b>: una manada de 6 lobos o una pareja de osos buscan comida no muy lejos del grupo. Es poco probable que realicen movimientos agresivos contra un grupo, pero pueden seguirlo y atacar a un rezagado o a un animal de carga perdido."},
-				"10-10": {"description": "<b>Encontronazo con enemigos</b>: un pequeño grupo de 4 a 6 enemigos se cruza en el camino de los PJs. En las laderas, los bosques despejados y llanuras templadas de Reikland, los enemigos adecuados pueden ser tribus de goblins, manadas de ungors o una banda de @UUID[Compendium.wfrp4e-dslf.actors.Actor.xOMceDSC4pxIjQcR]{forajidos}."}
+				"1-1": {"name": "Camino bloqueado", "description": "Un lago, un río o un desfiladero bloquea el camino. Es imposible sortearlo por medios convencionales por lo que, a menos que los PJs dispongan de algún medio para sobrevolarlo o construir un puente, deberán encontrar otra ruta, lo que añadirá dos etapas más a su viaje."},
+				"2-2": {"name": "Túmulo", "description": "Los PJs pasan junto a una serie de inquietantes menhires que rodean una pequeña colina. Cualquier PJ que supere un Chequeo <b>Fácil (+40)</b> de <b>Sabiduría académica (Historia)</b> o <b>(Local)</b> reconocerá que se trata de un túmulo. Consulta la tabla de Tumbas antiguas (página 123) para obtener más información."},
+				"3-3": {"name": "Monolito", "description": "Los PJs observan una gran piedra erguida o un antiguo círculo de menhires. Consulta la tabla de @UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.xq3g1ukhk4RFHNSF.JournalEntryPage.2leXDE9eGgGpVVlC#monolitos]{Monolitos} para obtener más información."},
+				"4-4": {"name": "Ruinas", "description": "Los PJs observan los restos de antiguos edificios al pasar. Consulta la tabla @UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.xq3g1ukhk4RFHNSF.JournalEntryPage.2leXDE9eGgGpVVlC#ruinas-perdidas]{Ruinas} para obtener más información."},
+				"5-5": {"name": "Animal enfermo", "description": "Selecciona al azar uno de los animales que acompañan al grupo. Ese animal está enfermo. Si un miembro del grupo supera un Chequeo <b>Difícil (-20)</b> de <b>Criar animales</b>, no hay ningún efecto. Si no, impón los penalizadores por una @UUID[Compendium.wfrp4e-core.items.Item.kKccDTGzWzSXCBOb]{Herida infectada} al animal. Si este resultado se genera por segunda vez para el mismo animal, muere."},
+				"6-6": {"name": "Objeto desgastado", "description": "Una pieza del equipo sufre desgaste. Determina aleatoriamente un PJ y uno de sus accesorios. Si un miembro del grupo supera un Chequeo <b>Difícil (-20)</b> de <b>Oficio (Carpintero, curtidor, sastre o herrero)</b>, no hay ningún efecto. Si no, un objeto de metal adquiere el defecto De mala calidad o un objeto de cuero, lona o madera se rompe."},
+				"7-7": {"name": "Compañeros de viaje", "description": "Los PJs ven a un grupo de compañeros de viaje delante de ellos. Puede evitarse o acercarse a estos viajeros. Los viajeros son un grupo de 4 a 6 vendedores ambulantes o aldeanos. Usa la tabla de @Table[victim-quirk]{Rarezas de la víctima} para determinar cómo podrían comportarse. Para los perfiles de los viajeros, utiliza el perfil de @UUID[Compendium.wfrp4e-dslf.actors.Actor.xOMceDSC4pxIjQcR]{Forajido}."},
+				"8-8": {"name": "Manantial", "description": "Agua clara y fresca brota del suelo. El grupo puede reponer sus reservas de agua como si hubieran superado la Empresa @UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.xq3g1ukhk4RFHNSF.JournalEntryPage.w5XYNzkXObxeBzFD#empresa-agua]{Búsqueda de agua} sin necesidad de realizarla."},
+				"9-9": {"name": "Encontronazo con animales", "description": "Una manada de 6 lobos o una pareja de osos buscan comida no muy lejos del grupo. Es poco probable que realicen movimientos agresivos contra un grupo, pero pueden seguirlo y atacar a un rezagado o a un animal de carga perdido."},
+				"10-10": {"name": "Encontronazo con enemigos", "description": "Un pequeño grupo de 4 a 6 enemigos se cruza en el camino de los PJs. En las laderas, los bosques despejados y llanuras templadas de Reikland, los enemigos adecuados pueden ser tribus de goblins, manadas de ungors o una banda de @UUID[Compendium.wfrp4e-dslf.actors.Actor.xOMceDSC4pxIjQcR]{forajidos}."}
 				}
 		},
 		"Wilderness Travel Events – Mountains": {
 			"name": "Sucesos en los viajes por la Naturaleza - Montañas",
 			"results": {
-				"1-5": {"description": "<b>Suceso en la Naturaleza</b>: tira en la @Table[wilderness-travel-events]{Tabla de Sucesos en los viajes por la Naturaleza: bosques despejados, colinas y llanuras templadas}."},
-				"6-6": {"description": "<b>Mal de altura</b>: a veces afecta a quienes viajan a gran altitud antes de acostumbrarse a la falta de oxígeno en el aire. Los PJs deben superar un Chequeo <b>Desafiante (+0)</b> de <b>Aguante</b> o sufrirán el @UUID[Compendium.wfrp4e-dslf.items.Item.b9CyizYEyH9wjY9p]{mal de altura}. Los ogros, enanos y animales acostumbrados a vivir a gran altitud no necesitan realizar el Chequeo contra el mal de altura."},
-				"7-7": {"description": "<b>Laderas pedregosas</b>: el camino está bloqueado por una empinada pendiente de pequeñas piedras sueltas. Pueden cruzarlo o añadir dos etapas al viaje. Si lo cruzan, cada miembro debe superar un Chequeo <b>Desafiante (+0)</b> de <b>Atletismo</b>. Los que fallen sufrirán una caída de [[/r 1d10]] yardas. Los cuadrúpedos, como las monturas y los animales de carga, se benefician de +2 NE al llevar a cabo dicho Chequeo."},
-				"8-8": {"description": "<b>Ventisca</b>: el tiempo empeora drásticamente. Consulta las @UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.xq3g1ukhk4RFHNSF.JournalEntryPage.yLVf0rmOShW3kqFI]{reglas meteorológicas} y aplica los siguientes factores: <b>Temperatura</b>: Gélido; <b>Precipitación</b>: Muy intensa; <b>Visibilidad</b>: Niebla densa; <b>Viento</b>: muy fuerte. Una vez termina la etapa, vuelve a tirar para ver las condiciones meteorológicas, ya que la ventisca amaina."},
-				"9-9": {"description": "<b>Guarida de bestias</b>: los PJs se topan con la guarida de una bestia monstruosa. En las montañas de Reikland, es probable que se trate de un grifo, pero también podría ser un mantícora, un pegaso o una serpiente alada. Tira 1d10.</p><ul><li><p>1 a 3: la bestia está en casa y posee el Rasgo Territorial, atacará a los intrusos siempre que estén a menos de 50 yardas de la guarida</p></li><li><p>4–5: la bestia está hambrienta, reduce la Fuerza y la Resistencia en 20, el resto de Características en 10 y las Heridas en [[/r 3d10]].</p></li><li><p>6–7: la bestia está en casa y luchará a muerte contra los PJs.</p></li><li><p>8–9: la bestia está ausente, pero en cada Asalto hay un [[/r 1d100]]{3%} de posibilidades de que regrese.</p></li><li><p>10: la bestia está ausente.</p></li></ul><p>Para determinar si hay algo de valor en la guarida, tira dos veces en la columna de botín de la Tabla de Tumbas antiguas}."},
-				"10-10": {"description": "<b>Encontronazo con enemigos</b>: un pequeño grupo de enemigos se cruza en el camino de los PJs. En las montañas de Reikland, los enemigos adecuados pueden ser tribus de orcos y goblins, una banda de forajidos o un par de troles de piedra."}
+				"1-5": {"name": "Suceso en la Naturaleza", "description": "Tira en la @Table[wilderness-travel-events]{Tabla de Sucesos en los viajes por la Naturaleza: bosques despejados, colinas y llanuras templadas}."},
+				"6-6": {"name": "Mal de altura", "description": "A veces afecta a quienes viajan a gran altitud antes de acostumbrarse a la falta de oxígeno en el aire. Los PJs deben superar un Chequeo <b>Desafiante (+0)</b> de <b>Aguante</b> o sufrirán el @UUID[Compendium.wfrp4e-dslf.items.Item.b9CyizYEyH9wjY9p]{mal de altura}. Los ogros, enanos y animales acostumbrados a vivir a gran altitud no necesitan realizar el Chequeo contra el mal de altura."},
+				"7-7": {"name": "Laderas pedregosas", "description": "El camino está bloqueado por una empinada pendiente de pequeñas piedras sueltas. Pueden cruzarlo o añadir dos etapas al viaje. Si lo cruzan, cada miembro debe superar un Chequeo <b>Desafiante (+0)</b> de <b>Atletismo</b>. Los que fallen sufrirán una caída de [[/r 1d10]] yardas. Los cuadrúpedos, como las monturas y los animales de carga, se benefician de +2 NE al llevar a cabo dicho Chequeo."},
+				"8-8": {"name": "Ventisca", "description": "El tiempo empeora drásticamente. Consulta las @UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.xq3g1ukhk4RFHNSF.JournalEntryPage.yLVf0rmOShW3kqFI]{reglas meteorológicas} y aplica los siguientes factores: <b>Temperatura</b>: Gélido; <b>Precipitación</b>: Muy intensa; <b>Visibilidad</b>: Niebla densa; <b>Viento</b>: muy fuerte. Una vez termina la etapa, vuelve a tirar para ver las condiciones meteorológicas, ya que la ventisca amaina."},
+				"9-9": {"name": "Guarida de bestias", "description": "Los PJs se topan con la guarida de una bestia monstruosa. En las montañas de Reikland, es probable que se trate de un grifo, pero también podría ser un mantícora, un pegaso o una serpiente alada. Tira 1d10.</p><ul><li><p>1 a 3: la bestia está en casa y posee el Rasgo Territorial, atacará a los intrusos siempre que estén a menos de 50 yardas de la guarida</p></li><li><p>4–5: la bestia está hambrienta, reduce la Fuerza y la Resistencia en 20, el resto de Características en 10 y las Heridas en [[/r 3d10]].</p></li><li><p>6–7: la bestia está en casa y luchará a muerte contra los PJs.</p></li><li><p>8–9: la bestia está ausente, pero en cada Asalto hay un [[/r 1d100]]{3%} de posibilidades de que regrese.</p></li><li><p>10: la bestia está ausente.</p></li></ul><p>Para determinar si hay algo de valor en la guarida, tira dos veces en la columna de botín de la Tabla de Tumbas antiguas}."},
+				"10-10": {"name": "Encontronazo con enemigos", "description": "Un pequeño grupo de enemigos se cruza en el camino de los PJs. En las montañas de Reikland, los enemigos adecuados pueden ser tribus de orcos y goblins, una banda de forajidos o un par de troles de piedra."}
 				}
 		},
 		"Wilderness Travel Events – Wetlands": {
 			"name": "Sucesos en los viajes por la Naturaleza - Humedales",
 			"results": {
-				"1-5": {"description": "<b>Suceso en la Naturaleza</b>: tira en la @Table[wilderness-travel-events]{Tabla de Sucesos en los viajes por la Naturaleza: bosques despejados, colinas y llanuras templadas}."},
-				"6-6": {"description": "<b>@UUID[Compendium.wfrp4e-dslf.items.Item.mr0lSbpT4bHhXycF]{Fiebre del pantano}</b>: se transmite por la picadura de criaturas como las sanguijuelas de los pantanos y las babosas marinas. Las picaduras suelen pasar desapercibidas, especialmente cuando la víctima está vadeando las turbias aguas del pantano. La enfermedad se caracteriza por una mancha dolorosa, en carne viva y roja alrededor de la picadura además de episodios repentinos de fiebre."},
-				"7-7": {"description": "<b>Barro blando</b>: la zona del pantano es especialmente traicionera, con marismas de barro blando que amenazan con engullir a cualquier viajero que se adentre en ellas. Los PJs pueden rodear las marismas añadiendo dos etapas a su viaje o arriesgarse a cruzarlas. Para cruzar las marismas, cada PJ y los animales que lo acompañan deben realizar un Chequeo Prolongado <b>Desafiante (+0)</b> de <b>Fuerza</b> con un total de 15 NE. Si se produce algún fracaso en el Chequeo, el PJ en cuestión debe realizar un Chequeo de @UUID[Compendium.wfrp4e-core.journals.JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#ahogamiento-y-asfixia]{Asfixia} y comenzar el proceso desde el principio para escapar de las marismas. Los PJs solo pueden ayudar a sus compañeros en estos Chequeos si ya han escapado del peligro."},
-				"8-8": {"description": "<b>Aire enfermizo</b>: los PJs se adentran en una zona con gas asfixiante. La bolsa de gas mide 2d10 yardas de largo y cualquiera que la atraviese debe llevar a cabo un Chequeo <b>Normal (+20)</b> de <b>Aguante</b> cada turno o sufrir los efectos. Es como emborracharse, así que consulta las reglas para @UUID[Compendium.wfrp4e-core.items.Item.R2ytluHiEFF2KQ5e]{Consumir alcohol} (aunque se trata de un Chequeo de Aguante, en lugar de uno de Consumir alcohol, que debe superarse para evitar el deterioro). Si un PJ se desmaya dentro de la bolsa de gas, debe ser rescatado o sucumbirá al gas y morirá en tantos Asaltos como su BR. Se puede gastar un Punto de Resiliencia para escapar de la bolsa de gas. Una vez libre de la zona, se puede realizar un Chequeo <b>Normal (+20)</b> de <b>Aguante</b> cada 5 minutos: los efectos desaparecen una vez superado el Chequeo. No hay resaca."},
-				"9-9": {"description": "<b>Guarida de bestias</b>: los PJs se topan con la guarida de una bestia monstruosa."},
-				"10-10": {"description": "<b>Encontronazo con enemigos</b>: un pequeño grupo de enemigos se cruza en el camino de los PJs. En los pantanos de Reikland, los enemigos adecuados pueden ser una banda de seis goblins, un par de troles de río o una banda de tres fimir."}
+				"1-5": {"name": "Suceso en la Naturaleza", "description": "Tira en la @Table[wilderness-travel-events]{Tabla de Sucesos en los viajes por la Naturaleza: bosques despejados, colinas y llanuras templadas}."},
+				"6-6": {"name": "Fiebre del pantano", "description": "Se transmite por la picadura de criaturas como las sanguijuelas de los pantanos y las babosas marinas. Las picaduras suelen pasar desapercibidas, especialmente cuando la víctima está vadeando las turbias aguas del pantano. @UUID[Compendium.wfrp4e-dslf.items.Item.mr0lSbpT4bHhXycF]{La enfermedad} se caracteriza por una mancha dolorosa, en carne viva y roja alrededor de la picadura además de episodios repentinos de fiebre."},
+				"7-7": {"name": "Barro blando", "description": "La zona del pantano es especialmente traicionera, con marismas de barro blando que amenazan con engullir a cualquier viajero que se adentre en ellas. Los PJs pueden rodear las marismas añadiendo dos etapas a su viaje o arriesgarse a cruzarlas. Para cruzar las marismas, cada PJ y los animales que lo acompañan deben realizar un Chequeo Prolongado <b>Desafiante (+0)</b> de <b>Fuerza</b> con un total de 15 NE. Si se produce algún fracaso en el Chequeo, el PJ en cuestión debe realizar un Chequeo de @UUID[Compendium.wfrp4e-core.journals.JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#ahogamiento-y-asfixia]{Asfixia} y comenzar el proceso desde el principio para escapar de las marismas. Los PJs solo pueden ayudar a sus compañeros en estos Chequeos si ya han escapado del peligro."},
+				"8-8": {"name": "Aire enfermizo", "description": "Los PJs se adentran en una zona con gas asfixiante. La bolsa de gas mide 2d10 yardas de largo y cualquiera que la atraviese debe llevar a cabo un Chequeo <b>Normal (+20)</b> de <b>Aguante</b> cada turno o sufrir los efectos. Es como emborracharse, así que consulta las reglas para @UUID[Compendium.wfrp4e-core.items.Item.R2ytluHiEFF2KQ5e]{Consumir alcohol} (aunque se trata de un Chequeo de Aguante, en lugar de uno de Consumir alcohol, que debe superarse para evitar el deterioro). Si un PJ se desmaya dentro de la bolsa de gas, debe ser rescatado o sucumbirá al gas y morirá en tantos Asaltos como su BR. Se puede gastar un Punto de Resiliencia para escapar de la bolsa de gas. Una vez libre de la zona, se puede realizar un Chequeo <b>Normal (+20)</b> de <b>Aguante</b> cada 5 minutos: los efectos desaparecen una vez superado el Chequeo. No hay resaca."},
+				"9-9": {"name": "Guarida de bestias", "description": "Los PJs se topan con la guarida de una bestia monstruosa."},
+				"10-10": {"name": "Encontronazo con enemigos", "description": "Un pequeño grupo de enemigos se cruza en el camino de los PJs. En los pantanos de Reikland, los enemigos adecuados pueden ser una banda de seis goblins, un par de troles de río o una banda de tres fimir."}
 				}
 		},
-		"Outlaw Chief Traits — Goal": {
+		"Outlaw Chief Traits - Goal": {
 			"name": "Rasgos del jefe de forajidos - Meta",
 			"results": {
-				"1-1": {"description": "<b>Jubilación</b>: acumula suficiente dinero para dejar la vida criminal."},
-				"2-2": {"description": "<b>Evita la captura</b>: evade a las autoridades. Prefiere morir a rendirse."},
-				"3-3": {"description": "<b>Gran hurto</b>: realiza solo los mayores atracos. Nada de robos menores."},
-				"4-4": {"description": "<b>Crimen organizado</b>: persigue empresas de contrabando, chantaje o fraude."},
-				"5-5": {"description": "<b>Resistencia política</b>: lucha contra los nobles gobernantes, provocar una revuelta campesina."},
-				"6-6": {"description": "<b>Construye campamentos</b>: fortifica y amplía su campamento a una colonia, establece un refugio forestal."},
-				"7-7": {"description": "<b>Estatus legendario</b>: construye un legado que dura generaciones."},
-				"8-8": {"description": "<b>Domina el feudo</b>: se convierte en rey de los bandidos usurpando a otro rey o reclamando un nuevo territorio."},
-				"9-9": {"description": "<b>Propaga el caos</b>: altera la paz. Disfruta del miedo y la desesperación de sus víctimas."},
-				"10-10": {"description": "<b>Propósito oscuro</b>: obtener el favor de un dios del Caos o la inmortalidad mediante la nigromancia."}
+				"1-1": {"name": "Jubilación", "description": "Acumula suficiente dinero para dejar la vida criminal."},
+				"2-2": {"name": "Evita la captura", "description": "Evade a las autoridades. Prefiere morir a rendirse."},
+				"3-3": {"name": "Gran hurto", "description": "Realiza solo los mayores atracos. Nada de robos menores."},
+				"4-4": {"name": "Crimen organizado", "description": "Persigue empresas de contrabando, chantaje o fraude."},
+				"5-5": {"name": "Resistencia política", "description": "Lucha contra los nobles gobernantes, provocar una revuelta campesina."},
+				"6-6": {"name": "Construye campamentos", "description": "Fortifica y amplía su campamento a una colonia, establece un refugio forestal."},
+				"7-7": {"name": "Estatus legendario", "description": "Construye un legado que dura generaciones."},
+				"8-8": {"name": "Domina el feudo", "description": "Se convierte en rey de los bandidos usurpando a otro rey o reclamando un nuevo territorio."},
+				"9-9": {"name": "Propaga el caos", "description": "Altera la paz. Disfruta del miedo y la desesperación de sus víctimas."},
+				"10-10": {"name": "Propósito oscuro", "description": "Obtener el favor de un dios del Caos o la inmortalidad mediante la nigromancia."}
 				}
 		},
-		"Outlaw Chief Traits — Outlaw Band": {
+		"Outlaw Chief Traits - Outlaw Band": {
 			"name": "Rasgos del jefe de forajidos - Banda de forajidos",
 			"results": {
-				"1-1": {"description": "<b>Pequeños gamberros</b>: jóvenes e inexpertos. Fáciles de derrotar."},
-				"2-2": {"description": "<b>Ladrones pendencieros</b>: Sin cohesión. Discuten más que roban."},
-				"3-3": {"description": "<b>Brigadas astutas</b>: tácticas de emboscada. Utilizan señales secretas y señuelos."},
-				"4-4": {"description": "<b>Compañeros alegres</b>: bromas y alegría, los miembros de la banda son amigos."},
-				"5-5": {"description": "<b>Asaltantes temibles</b>: saquean e incendian granjas y toman rehenes."},
-				"6-6": {"description": "<b>Ladrones con principios</b>: no son violentos salteadores de caminos. Solo roban a viajeros ricos."},
-				"7-7": {"description": "<b>Matones sombríos</b>: merodean por las posadas y tabernas en busca de víctimas."},
-				"8-8": {"description": "<b>Estafadores astutos</b>: utilizan identidades falsas para ganarse la confianza de sus víctimas."},
-				"9-9": {"description": "<b>Merodeadores itinerantes</b>: viajan por tierras salvajes robando a cualquiera que encuentren."},
-				"10-10": {"description": "<b>Degolladores endurecidos</b>: matan a los inocentes para no dejar testigos."}
+				"1-1": {"name": "Pequeños gamberros", "description": "Jóvenes e inexpertos. Fáciles de derrotar."},
+				"2-2": {"name": "Ladrones pendencieros", "description": "Sin cohesión. Discuten más que roban."},
+				"3-3": {"name": "Brigadas astutas", "description": "Tácticas de emboscada. Utilizan señales secretas y señuelos."},
+				"4-4": {"name": "Compañeros alegres", "description": "Bromas y alegría, los miembros de la banda son amigos."},
+				"5-5": {"name": "Asaltantes temibles", "description": "Saquean e incendian granjas y toman rehenes."},
+				"6-6": {"name": "Ladrones con principios", "description": "No son violentos salteadores de caminos. Solo roban a viajeros ricos."},
+				"7-7": {"name": "Matones sombríos", "description": "Merodean por las posadas y tabernas en busca de víctimas."},
+				"8-8": {"name": "Estafadores astutos", "description": "Utilizan identidades falsas para ganarse la confianza de sus víctimas."},
+				"9-9": {"name": "Merodeadores itinerantes", "description": "Viajan por tierras salvajes robando a cualquiera que encuentren."},
+				"10-10": {"name": "Degolladores endurecidos", "description": "Matan a los inocentes para no dejar testigos."}
 				}
 		},
-		"Outlaw Chief Traits — Reputation": {
+		"Outlaw Chief Traits - Reputation": {
 			"name": "Rasgos del jefe de forajidos - Reputación",
 			"results": {
-				"1-1": {"description": "<b>Cauteloso</b>: evita objetivos fuertemente armados, planea cualquier contingencia."},
-				"2-2": {"description": "<b>Atrevido</b>: se pone en riesgo, con robos a plena luz del día en objetivos difíciles."},
-				"3-3": {"description": "<b>Escurridizo</b>: escapa de la ley con facilidad. Campamento bien escondido y móvil."},
-				"4-4": {"description": "<b>Conectado</b>: inmunidad legal a través de un trato con un noble."},
-				"5-5": {"description": "<b>Popular</b>: bien visto por los forajidos, el campesinado local o incluso las fuerzas del orden."},
-				"6-6": {"description": "<b>Extravagante</b>: organiza fastuosos banquetes y fiestas, gasta el botín en lujos."},
-				"7-7": {"description": "<b>Imprudente</b>: deja huellas o pruebas, los forajidos son arrestados con frecuencia."},
-				"8-8": {"description": "<b>Disciplinado</b>: impone normas estrictas. Supervisa de cerca el botín y dirige el campamento."},
-				"9-9": {"description": "<b>Despiadado</b>: a menudo recurre al asesinato. Mata a sus seguidores para dar ejemplo."},
-				"10-10": {"description": "<b>Trato oscuro</b>: trata con brujería o los Poderes Ruinosos. La banda es una secta."}
+				"1-1": {"name": "Cauteloso", "description": "Evita objetivos fuertemente armados, planea cualquier contingencia."},
+				"2-2": {"name": "Atrevido", "description": "Se pone en riesgo, con robos a plena luz del día en objetivos difíciles."},
+				"3-3": {"name": "Escurridizo", "description": "Escapa de la ley con facilidad. Campamento bien escondido y móvil."},
+				"4-4": {"name": "Conectado", "description": "Inmunidad legal a través de un trato con un noble."},
+				"5-5": {"name": "Popular", "description": "Bien visto por los forajidos, el campesinado local o incluso las fuerzas del orden."},
+				"6-6": {"name": "Extravagante", "description": "Organiza fastuosos banquetes y fiestas, gasta el botín en lujos."},
+				"7-7": {"name": "Imprudente", "description": "Deja huellas o pruebas, los forajidos son arrestados con frecuencia."},
+				"8-8": {"name": "Disciplinado", "description": "Impone normas estrictas. Supervisa de cerca el botín y dirige el campamento."},
+				"9-9": {"name": "Despiadado", "description": "A menudo recurre al asesinato. Mata a sus seguidores para dar ejemplo."},
+				"10-10": {"name": "Trato oscuro", "description": "Trata con brujería o los Poderes Ruinosos. La banda es una secta."}
 				}
 		},
-		"Outlaw Traits — Crime": {
+		"Outlaw Traits - Crime": {
 			"name": "Rasgos de forajido - Crimen",
 			"results": {
-				"1-1": {"description": "<b>Desacato al tribunal</b>: no comparecer para el juicio, tira de nuevo para el delito original."},
-				"2-2": {"description": "<b>Evasión fiscal</b>: no pagar impuestos a la nobleza local o al ayuntamiento."},
-				"3-3": {"description": "<b>Evasión de deudas</b>: incumplimiento del pago de una deuda a un banco, empresa o prestamista."},
-				"4-4": {"description": "<b>Robo</b>: robo importante (más de 50 co) o una serie de pequeños robos."},
-				"5-5": {"description": "<b>Asesinato</b>: homicidio a sangre fría. Si se tira de nuevo, fueron varios asesinatos."},
-				"6-6": {"description": "<b>Incendio provocado</b>: quemar edificios. Si se tira de nuevo, fueron varios incendios provocados."},
-				"7-7": {"description": "<b>Blasfemia mayor</b>: discurso o acción que atrae la ira de los dioses."},
-				"8-8": {"description": "<b>Herejía</b>: hablar pestes sobre los dioses o el clero en público y en beneficio propio."},
-				"9-9": {"description": "<b>Perversión</b>: acción que oculta la corrupción, como robo de cuerpos, secuestro, canibalismo."},
-				"10-10": {"description": "<b>Marca del Caos</b>: mutación física o evidencia de brujería."}
+				"1-1": {"name": "Desacato al tribunal", "description": "No comparecer para el juicio, tira de nuevo para el delito original."},
+				"2-2": {"name": "Evasión fiscal", "description": "No pagar impuestos a la nobleza local o al ayuntamiento."},
+				"3-3": {"name": "Evasión de deudas", "description": "Incumplimiento del pago de una deuda a un banco, empresa o prestamista."},
+				"4-4": {"name": "Robo", "description": "Robo importante (más de 50 co) o una serie de pequeños robos."},
+				"5-5": {"name": "Asesinato", "description": "Homicidio a sangre fría. Si se tira de nuevo, fueron varios asesinatos."},
+				"6-6": {"name": "Incendio provocado", "description": "Quemar edificios. Si se tira de nuevo, fueron varios incendios provocados."},
+				"7-7": {"name": "Blasfemia mayor", "description": "Discurso o acción que atrae la ira de los dioses."},
+				"8-8": {"name": "Herejía", "description": "Hablar pestes sobre los dioses o el clero en público y en beneficio propio."},
+				"9-9": {"name": "Perversión", "description": "Acción que oculta la corrupción, como robo de cuerpos, secuestro, canibalismo."},
+				"10-10": {"name": "Marca del Caos", "description": "Mutación física o evidencia de brujería."}
 				}
 		},
-		"Outlaw Traits — Motive": {
+		"Outlaw Traits - Motive": {
 			"name": "Rasgos de forajido - Motivo",
 			"results": {
-				"1-1": {"description": "<b>Supervivencia básica</b>: comida, refugio y amparo ante la ley."},
-				"2-2": {"description": "<b>Riqueza</b>: monedas de oro y plata, joyas, cualquier cosa que pueda venderse por su valor."},
-				"3-3": {"description": "<b>Emoción</b>: peligro y emoción de la persecución, escapadas por los pelos de la ley."},
-				"4-4": {"description": "<b>Libertad</b>: vagabundeo y falta de responsabilidades. Dormir bajo las estrellas."},
-				"5-5": {"description": "<b>Camaradería</b>: chistes e historias para escapar de la soledad."},
-				"6-6": {"description": "<b>Despilfarro</b>: alcohol, drogas, vandalismo o vicios carnales."},
-				"7-7": {"description": "<b>Notoriedad</b>: infamia local o regional, a menudo aparece en los carteles de ‘Se busca’."},
-				"8-8": {"description": "<b>Reivindicación</b>: indulto por los tribunales o venganza contra juez, noble o acusador."},
-				"9-9": {"description": "<b>Aspirante a jefe</b>: quiere usurpar al jefe o convertirse en jefe de una nueva banda de forajidos."},
-				"10-10": {"description": "<b>Secreto oscuro</b>: mutante encubierto, brujo, hereje, nigromante o hechicero."}
+				"1-1": {"name": "Supervivencia básica", "description": "Comida, refugio y amparo ante la ley."},
+				"2-2": {"name": "Riqueza", "description": "Monedas de oro y plata, joyas, cualquier cosa que pueda venderse por su valor."},
+				"3-3": {"name": "Emoción", "description": "Peligro y emoción de la persecución, escapadas por los pelos de la ley."},
+				"4-4": {"name": "Libertad", "description": "Vagabundeo y falta de responsabilidades. Dormir bajo las estrellas."},
+				"5-5": {"name": "Camaradería", "description": "Chistes e historias para escapar de la soledad."},
+				"6-6": {"name": "Despilfarro", "description": "Alcohol, drogas, vandalismo o vicios carnales."},
+				"7-7": {"name": "Notoriedad", "description": "Infamia local o regional, a menudo aparece en los carteles de ‘Se busca’."},
+				"8-8": {"name": "Reivindicación", "description": "Indulto por los tribunales o venganza contra juez, noble o acusador."},
+				"9-9": {"name": "Aspirante a jefe", "description": "Quiere usurpar al jefe o convertirse en jefe de una nueva banda de forajidos."},
+				"10-10": {"name": "Secreto oscuro", "description": "Mutante encubierto, brujo, hereje, nigromante o hechicero."}
 				}
 		},
-		"Outlaw Traits — Personality": {
+		"Outlaw Traits - Personality": {
 			"name": "Rasgos de forajido - Personalidad",
 			"results": {
-				"1-1": {"description": "<b>Furtivo</b>: callado y solitario, manteniendo sus cartas bajo la manga."},
-				"2-2": {"description": "<b>Idealista</b>: terco y honesto, pero sus ideas rara vez son realistas."},
-				"3-3": {"description": "<b>Encantador</b>: simpático y sociable, normalmente para conseguir algo que desea."},
-				"4-4": {"description": "<b>Estafador</b>: siempre tiene un nuevo plan y a menudo engaña a otros forajidos de la banda."},
-				"5-5": {"description": "<b>Ingenioso</b>: tiene una solución para cada problema. Contactos útiles fuera de la banda."},
-				"6-6": {"description": "<b>Leal</b>: reporta todas las violaciones de las reglas al jefe, buen candidato a segundo al mando."},
-				"7-7": {"description": "<b>Paranoico</b>: no confía en nadie. Duerme con un ojo abierto y una daga en la mano."},
-				"8-8": {"description": "<b>Egoísta</b>: desobediente o poco fiable en trabajos. Discute por el reparto del botín."},
-				"9-9": {"description": "<b>Descortés</b>: sucio, vulgar o sin modales. Causa problemas con civiles."},
-				"10-10": {"description": "<b>Violento</b>: tiene problemas de ira o traumas. Enloquece con facilidad y emplea una fuerza excesiva."}
+				"1-1": {"name": "Furtivo", "description": "Callado y solitario, manteniendo sus cartas bajo la manga."},
+				"2-2": {"name": "Idealista", "description": "Terco y honesto, pero sus ideas rara vez son realistas."},
+				"3-3": {"name": "Encantador", "description": "Simpático y sociable, normalmente para conseguir algo que desea."},
+				"4-4": {"name": "Estafador", "description": "Siempre tiene un nuevo plan y a menudo engaña a otros forajidos de la banda."},
+				"5-5": {"name": "Ingenioso", "description": "Tiene una solución para cada problema. Contactos útiles fuera de la banda."},
+				"6-6": {"name": "Leal", "description": "Reporta todas las violaciones de las reglas al jefe, buen candidato a segundo al mando."},
+				"7-7": {"name": "Paranoico", "description": "No confía en nadie. Duerme con un ojo abierto y una daga en la mano."},
+				"8-8": {"name": "Egoísta", "description": "Desobediente o poco fiable en trabajos. Discute por el reparto del botín."},
+				"9-9": {"name": "Descortés", "description": "Sucio, vulgar o sin modales. Causa problemas con civiles."},
+				"10-10": {"name": "Violento", "description": "Tiene problemas de ira o traumas. Enloquece con facilidad y emplea una fuerza excesiva."}
 				}
 		},
 		"Ancient Tomb – Entrance": {
 			"name": "Tumbas antiguas - Entrada",
 			"results": {
-				"1-2": {"description": "<b>Puerta abierta</b>."},
-				"3-3": {"description": "<b>Puerta enterrada</b>.<br>Requiere un Chequeo <b>Difícil (-20)</b> de <b>Percepción</b> para localizarla."},
-				"4-4": {"description": "<b>Puerta de roble reforzada</b>.<br><b>Forzar cerraduras</b>: 4 NE<br><b>Resistencia</b>: 50<br><b>Heridas</b>: 20"},
-				"5-5": {"description": "<b>Puerta de roble reforzada</b>.<br><b>Forzar cerraduras</b>: 4 NE<br><b>Resistencia</b>: 50<br><b>Heridas</b>: 20"},
-				"6-6": {"description": "<b>Puerta de hierro forjado</b>.<br><b>Forzar cerraduras</b>: 4 NE<br><b>Resistencia</b>: 60<br><b>Heridas</b>: 25"},
-				"7-7": {"description": "<b>Puerta de hierro forjado</b>.<br><b>Forzar cerraduras</b>: 5 NE<br><b>Resistencia</b>: 60<br><b>Heridas</b>: 25"},
-				"8-9": {"description": "<b>Cubierta por una piedra</b>.<br>Requiere un Chequeo Prolongado <b>Difícil (-20)</b> de <b>Fuerza</b> con un total de 10 NE para moverla. Los fallos durante el Chequeo dan como resultado 1 Estado de @Condition[Fatigado]."},
-				"10-10": {"description": "<b>Cubierta por una piedra pesada</b>.<br>Requiere un Chequeo Prolongado <b>Muy difícil (-30)</b> de <b>Fuerza</b> con un total de 15 NE para moverla. Los fallos durante el Chequeo dan como resultado 1 Estado de @Condition[Fatigado]."}
+				"1-2": {"name": "Puerta abierta"},
+				"3-3": {"name": "Puerta enterrada", "description": "Requiere un Chequeo <b>Difícil (-20)</b> de <b>Percepción</b> para localizarla."},
+				"4-4": {"name": "Puerta de roble reforzada", "description": "<b>Forzar cerraduras</b>: 4 NE<br><b>Resistencia</b>: 50<br><b>Heridas</b>: 20"},
+				"5-5": {"name": "Puerta de roble reforzada", "description": "<b>Forzar cerraduras</b>: 4 NE<br><b>Resistencia</b>: 50<br><b>Heridas</b>: 20"},
+				"6-6": {"name": "Puerta de hierro forjado", "description": "<b>Forzar cerraduras</b>: 4 NE<br><b>Resistencia</b>: 60<br><b>Heridas</b>: 25"},
+				"7-7": {"name": "Puerta de hierro forjado", "description": "<b>Forzar cerraduras</b>: 5 NE<br><b>Resistencia</b>: 60<br><b>Heridas</b>: 25"},
+				"8-9": {"name": "Cubierta por una piedra", "description": "Requiere un Chequeo Prolongado <b>Difícil (-20)</b> de <b>Fuerza</b> con un total de 10 NE para moverla. Los fallos durante el Chequeo dan como resultado 1 Estado de @Condition[Fatigado]."},
+				"10-10": {"name": "Cubierta por una piedra pesada", "description": "Requiere un Chequeo Prolongado <b>Muy difícil (-30)</b> de <b>Fuerza</b> con un total de 15 NE para moverla. Los fallos durante el Chequeo dan como resultado 1 Estado de @Condition[Fatigado]."}
 				}
 		},
 		"Ancient Tomb – Features": {
 			"name": "Tumbas antiguas - Características",
 			"results": {
-				"1-2": {"description": "Ninguno"},
-				"3-3": {"description": "<b>Abandonados por Morr</b>.<br>Cualquier @UUID[Compendium.wfrp4e-core.items.Item.PFTD9gDvRWW9uh5g]{muerto viviente} que se encuentre en la tumba resiste la muerte definitiva y posee el Rasgo @UUID[Compendium.wfrp4e-core.items.Item.SfUUdOGjdYpr3KSR]{Regeneración}."},
-				"4-4": {"description": "<b>Sarcófago</b>.<br>Todo lo que tiene valor en la tumba se encuentra dentro de un sarcófago."},
-				"5-5": {"description": "<b>Cámara sumergida</b>.<br>Para adquirir cualquier botín disponible, un PJ debe superar un Chequeo <b>Difícil (-20)</b> de <b>Nadar</b> con un total de 15 NE."},
-				"6-6": {"description": "<b>Ratas gigantes</b>.<br>Una familia de seis @UUID[Compendium.wfrp4e-core.actors.Actor.oenbbB0PitRWUBfZ]{ratas gigantes} vive en la tumba y atacará a cualquier intruso."},
-				"7-7": {"description": "<b>Aire helado</b>.<br>La temperatura en la tumba es anormalmente fría. Los PJs que entren en la tumba deben realizar inmediatamente un Chequeo contra @UUID[Compendium.wfrp4e-core.journals.JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#exposicion-a-la-intemperie]{exposición al frío}."},
-				"8-8": {"description": "<b>Trampa de caída de rocas</b>.<br>Se ha colocado una trampa por la que caerán rocas sobre cualquier PJ que pise una losa suelta. Cada miembro del grupo debe realizar un Chequeo <b>Desafiante (+0)</b> de <b>Percepción</b>. El primer PJ que falle recibe un golpe y sufre [[/r 1d10]] de Daño en la cabeza, modificado por los puntos de armadura y la Resistencia."},
-				"9-9": {"description": "<b>Moho amarillo</b>.<br>Se detecta una mancha de moho amarillo en un Chequeo <b>Fácil (+20)</b> de <b>Sabiduría académica (Plantas)</b> o <b>Desafiante (+0)</b> de <b>Sabiduría académica (Hierbas)</b>. Los PJs pueden evitar activar el moho con un Chequeo <b>Normal (+20)</b> de <b>Movimiento silencioso</b>. Si se activa, libera una nube de esporas de 5 yardas de ancho que dura [[/r 1d10]] Asaltos. Los PJs que se encuentren en la zona deben superar un Chequeo <b>Normal (+20)</b> de <b>Aguante</b> o sufrir 1 Estado de @Condition[Cegado], más 1 Estado de Cegado adicional por cada -NE. Los PJs sufren 1 Herida por cada Asalto que pasen en la nube."},
-				"10-10": {"description": "<b>Pasadizos laberínticos</b>.<br>Para llegar a la cámara funeraria principal, los PJs deben recorrer una red de pasadizos. Encontrar el camino requiere un Chequeo Prolongado <b>Desafiante (+0)</b> de <b>Orientación</b> hasta un total de 20 NE. Cualquier error hace que los PJs regresen a la entrada y tengan que empezar de nuevo."}
+				"1-2": {"name": "Ninguno"},
+				"3-3": {"name": "Abandonados por Morr", "description": "Cualquier @UUID[Compendium.wfrp4e-core.items.Item.PFTD9gDvRWW9uh5g]{muerto viviente} que se encuentre en la tumba resiste la muerte definitiva y posee el Rasgo @UUID[Compendium.wfrp4e-core.items.Item.SfUUdOGjdYpr3KSR]{Regeneración}."},
+				"4-4": {"name": "Sarcófago", "description": "Todo lo que tiene valor en la tumba se encuentra dentro de un sarcófago."},
+				"5-5": {"name": "Cámara sumergida", "description": "Para adquirir cualquier botín disponible, un PJ debe superar un Chequeo <b>Difícil (-20)</b> de <b>Nadar</b> con un total de 15 NE."},
+				"6-6": {"name": "Ratas gigantes", "description": "Una familia de seis @UUID[Compendium.wfrp4e-core.actors.Actor.oenbbB0PitRWUBfZ]{ratas gigantes} vive en la tumba y atacará a cualquier intruso."},
+				"7-7": {"name": "Aire helado", "description": "La temperatura en la tumba es anormalmente fría. Los PJs que entren en la tumba deben realizar inmediatamente un Chequeo contra @UUID[Compendium.wfrp4e-core.journals.JournalEntry.NS3YGlJQxwTggjRX.JournalEntryPage.WCivInLZrqEtZzF4#exposicion-a-la-intemperie]{exposición al frío}."},
+				"8-8": {"name": "Trampa de caída de rocas", "description": "Se ha colocado una trampa por la que caerán rocas sobre cualquier PJ que pise una losa suelta. Cada miembro del grupo debe realizar un Chequeo <b>Desafiante (+0)</b> de <b>Percepción</b>. El primer PJ que falle recibe un golpe y sufre [[/r 1d10]] de Daño en la cabeza, modificado por los puntos de armadura y la Resistencia."},
+				"9-9": {"name": "Moho amarillo", "description": "Se detecta una mancha de moho amarillo en un Chequeo <b>Fácil (+20)</b> de <b>Sabiduría académica (Plantas)</b> o <b>Desafiante (+0)</b> de <b>Sabiduría académica (Hierbas)</b>. Los PJs pueden evitar activar el moho con un Chequeo <b>Normal (+20)</b> de <b>Movimiento silencioso</b>. Si se activa, libera una nube de esporas de 5 yardas de ancho que dura [[/r 1d10]] Asaltos. Los PJs que se encuentren en la zona deben superar un Chequeo <b>Normal (+20)</b> de <b>Aguante</b> o sufrir 1 Estado de @Condition[Cegado], más 1 Estado de Cegado adicional por cada -NE. Los PJs sufren 1 Herida por cada Asalto que pasen en la nube."},
+				"10-10": {"name": "Pasadizos laberínticos", "description": "Para llegar a la cámara funeraria principal, los PJs deben recorrer una red de pasadizos. Encontrar el camino requiere un Chequeo Prolongado <b>Desafiante (+0)</b> de <b>Orientación</b> hasta un total de 20 NE. Cualquier error hace que los PJs regresen a la entrada y tengan que empezar de nuevo."}
 				}
 		},
 		"Ancient Tomb – Inhabitants": {
@@ -446,144 +446,144 @@
 		"Cooking Critical Failure Table": {
 			"name": "Tabla de fracasos críticos en la cocina",
 			"results": {
-				"1-3": {"description": "<b>Asquerosa</b>: la comida es apenas comestible.Quien quiera comer deberá superar un Chequeo Normal (+20) de Aguante o no podrá digerirla."},
-				"4-5": {"description": "<b>Echada a perder</b>: la comida está completamente echada a perder y, si el grupo quiere comer, es necesario encontrar y preparar más."},
-				"6-7": {"description": "<b>Quemada</b>: toda la comida está completamente echada a perder y, si hay enemigos en los alrededores, deberían tener una buena vista de una nube de humo negro."},
-				"8-8": {"description": "<b>Intoxicación alimentaria</b>: todos los que consuman la comida sufren un número de Estados de @Condition[Envenenado] igual al nivel de fracaso en el Chequeo."},
-				"9-9": {"description": "<b>La disentería</b>: realiza un Chequeo <b>Fácil (+40)</b> de <b>Aguante</b> o contraes @UUID[Compendium.wfrp4e-core.items.Item.herUmN51D9TiL2Vn]{dicha enfermedad}"},
-				"10-10": {"description": "<b>Diarrea galopante</b>: realiza un Chequeo <b>Normal (+20)</b> de <b>Aguante</b> o contraes @UUID[Compendium.wfrp4e-core.items.Item.txeLd7R13qxSvmsr]{dicha enfermedad}"}
+				"1-3": {"name": "Asquerosa", "description": "La comida es apenas comestible.Quien quiera comer deberá superar un Chequeo Normal (+20) de Aguante o no podrá digerirla."},
+				"4-5": {"name": "Echada a perder", "description": "La comida está completamente echada a perder y, si el grupo quiere comer, es necesario encontrar y preparar más."},
+				"6-7": {"name": "Quemada", "description": "Toda la comida está completamente echada a perder y, si hay enemigos en los alrededores, deberían tener una buena vista de una nube de humo negro."},
+				"8-8": {"name": "Intoxicación alimentaria", "description": "Todos los que consuman la comida sufren un número de Estados de @Condition[Envenenado] igual al nivel de fracaso en el Chequeo."},
+				"9-9": {"name": "La disentería", "description": "Realiza un Chequeo <b>Fácil (+40)</b> de <b>Aguante</b> o contraes @UUID[Compendium.wfrp4e-core.items.Item.herUmN51D9TiL2Vn]{dicha enfermedad}"},
+				"10-10": {"name": "Diarrea galopante", "description": "Realiza un Chequeo <b>Normal (+20)</b> de <b>Aguante</b> o contraes @UUID[Compendium.wfrp4e-core.items.Item.txeLd7R13qxSvmsr]{dicha enfermedad}"}
 				}
 		},
 		"Monolith Table": {
 			"name": "Tabla de monolitos",
 			"results": {
-				"1-3": {"description": "<b>Marcador simple</b>: aunque la piedra es impresionante, no es más que un antiguo marcador de límites o un lugar ritual. No hay nada peculiar en la piedra."},
-				"4-5": {"description": "<b>Pilar del rebaño de los hombres bestia</b>: el monolito es un artefacto profano erigido por los hombres bestia. En un radio de 20 yardas del mismo, los lanzadores de hechizos que utilicen el Saber de la Magia Oscura o cualquier Saber del Caos se benefician de +1 NE en los Chequeos de Lanzamiento de hechizos y +1 NE en los Chequeos de Canalización. Durante la noche, hay un 10 % de probabilidad de que el pilar atraiga visitantes hombres bestia (un chamán con [[/r 1d10]] gors y ungors como seguidores) que aúllan y rebuznan durante toda la noche y realizan ofrendas profanas sobre él. No verán con buenos ojos que los PJs interfieran en su lugar sagrado. El Pilar del rebaño es una fuente de exposición menor a la corrupción. Se puede encontrar más información sobre los pilares de rebaño en <b>Vientos de la Magia</b>."},
-				"6-6": {"description": "<b>Círculo <em>ogham</em></b>: el monolito forma parte de un antiguo círculo creado por los seguidores de la Vieja Fe mucho antes de la llegada de Sigmar. A menos de 20 yardas del círculo, los lanzadores de hechizos que utilicen el Saber de la Vida o de la Brujería se benefician de +1 NE en los Chequeos de Lanzamiento de hechizos y +1 NE en los Chequeos de Canalización. Se puede encontrar más información sobre los círculos <em>ogham</em> en <b>Vientos de la Magia</b>."},
-				"7-8": {"description": "<b>Monolito élfico</b>: el monolito forma parte de la red de piedras creada por los elfos hace miles de años para ayudar a canalizar el exceso de energía mágica hacia el centro de Ulthuan. Tira [[/r 1d10]] para determinar qué tipo de energía mágica canaliza la piedra.</p><ul><li><p>1: Saber de la Luz,</p></li><li><p>2: Saber del Metal,</p></li><li><p>3: Saber de la Vida,</p></li><li><p>4: Saber de los Cielos,</p></li><li><p>5: Saber de las Sombras,</p></li><li><p>6: Saber de la Muerte,</p></li><li><p>7: Saber del Fuego,</p></li><li><p>8: Saber de las Bestias,</p></li><li><p>9: vuelve a tirar para generar dos Saberes,</p></li><li><p>10: vuelve a tirar para generar tres Saberes.</p></li></ul><p>A menos de 20 yardas del monolito élfico, los lanzadores de hechizos que utilicen el Saber pertinente se benefician de +1 NE en los Chequeos de Lanzamiento de hechizos y +1 NE en los Chequeos de Canalización. Se puede encontrar más información sobre los monolitos élficos en <b>Vientos de la Magia</b>."},
-				"9-9": {"description": "<b>Lápida</b>: la piedra marca la tumba de un personaje importante de la antigüedad. Una entrada cercana conduce a una tumba antigua. Consulta la @UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.xq3g1ukhk4RFHNSF.JournalEntryPage.2leXDE9eGgGpVVlC#tumbas-antiguas]{Tabla de Tumbas antiguas} para obtener más información."},
-				"10-10": {"description": "<b>Tótem orco</b>: el monolito ha sido profanado por orcos o goblins, decorado con tallas toscas y manchado con excrementos. Durante la noche, hay un [[/r 1d100]]{10%} de posibilidades de que el tótem atraiga a un grupo de [[/r 1d10]] orcos y goblins que vienen a celebrar sus victorias y alabar a sus dioses. Si el DJ tiene acceso a <b>Tribus y tribulaciones</b>, estarán liderados por un chamán. Atacarán a cualquier PJ que se encuentre en el lugar."}
+				"1-3": {"name": "Marcador simple", "description": "Aunque la piedra es impresionante, no es más que un antiguo marcador de límites o un lugar ritual. No hay nada peculiar en la piedra."},
+				"4-5": {"name": "Pilar del rebaño de los hombres bestia", "description": "El monolito es un artefacto profano erigido por los hombres bestia. En un radio de 20 yardas del mismo, los lanzadores de hechizos que utilicen el Saber de la Magia Oscura o cualquier Saber del Caos se benefician de +1 NE en los Chequeos de Lanzamiento de hechizos y +1 NE en los Chequeos de Canalización. Durante la noche, hay un 10 % de probabilidad de que el pilar atraiga visitantes hombres bestia (un chamán con [[/r 1d10]] gors y ungors como seguidores) que aúllan y rebuznan durante toda la noche y realizan ofrendas profanas sobre él. No verán con buenos ojos que los PJs interfieran en su lugar sagrado. El Pilar del rebaño es una fuente de exposición menor a la corrupción. Se puede encontrar más información sobre los pilares de rebaño en <b>Vientos de la Magia</b>."},
+				"6-6": {"name": "Círculo <em>ogham</em>", "description": "El monolito forma parte de un antiguo círculo creado por los seguidores de la Vieja Fe mucho antes de la llegada de Sigmar. A menos de 20 yardas del círculo, los lanzadores de hechizos que utilicen el Saber de la Vida o de la Brujería se benefician de +1 NE en los Chequeos de Lanzamiento de hechizos y +1 NE en los Chequeos de Canalización. Se puede encontrar más información sobre los círculos <em>ogham</em> en <b>Vientos de la Magia</b>."},
+				"7-8": {"name": "Monolito élfico", "description": "El monolito forma parte de la red de piedras creada por los elfos hace miles de años para ayudar a canalizar el exceso de energía mágica hacia el centro de Ulthuan. Tira [[/r 1d10]] para determinar qué tipo de energía mágica canaliza la piedra.</p><ul><li><p>1: Saber de la Luz,</p></li><li><p>2: Saber del Metal,</p></li><li><p>3: Saber de la Vida,</p></li><li><p>4: Saber de los Cielos,</p></li><li><p>5: Saber de las Sombras,</p></li><li><p>6: Saber de la Muerte,</p></li><li><p>7: Saber del Fuego,</p></li><li><p>8: Saber de las Bestias,</p></li><li><p>9: vuelve a tirar para generar dos Saberes,</p></li><li><p>10: vuelve a tirar para generar tres Saberes.</p></li></ul><p>A menos de 20 yardas del monolito élfico, los lanzadores de hechizos que utilicen el Saber pertinente se benefician de +1 NE en los Chequeos de Lanzamiento de hechizos y +1 NE en los Chequeos de Canalización. Se puede encontrar más información sobre los monolitos élficos en <b>Vientos de la Magia</b>."},
+				"9-9": {"name": "Lápida", "description": "La piedra marca la tumba de un personaje importante de la antigüedad. Una entrada cercana conduce a una tumba antigua. Consulta la @UUID[Compendium.wfrp4e-dslf.journals.JournalEntry.xq3g1ukhk4RFHNSF.JournalEntryPage.2leXDE9eGgGpVVlC#tumbas-antiguas]{Tabla de Tumbas antiguas} para obtener más información."},
+				"10-10": {"name": "Tótem orco", "description": "El monolito ha sido profanado por orcos o goblins, decorado con tallas toscas y manchado con excrementos. Durante la noche, hay un [[/r 1d100]]{10%} de posibilidades de que el tótem atraiga a un grupo de [[/r 1d10]] orcos y goblins que vienen a celebrar sus victorias y alabar a sus dioses. Si el DJ tiene acceso a <b>Tribus y tribulaciones</b>, estarán liderados por un chamán. Atacarán a cualquier PJ que se encuentre en el lugar."}
 				}
 		},
 		"Ruin Table": {
 			"name": "Tabla de ruinas",
 			"results": {
-				"2-2": {"description": "<b>Guarida de bruja</b>: una bruja utiliza las ruinas como escondite. Sus habilidades quedan a criterio del DJ pero, como mínimo, debería tener las habilidades Canalizar y Hablar idioma (magia) a [[/r 35+4d10]], 4 hechizos de Magia menor y 4 hechizos de Saber de Brujería. La bruja no es necesariamente hostil hacia los PJs, pero se mostrará cautelosa con ellos y rápida en defenderse si no la tratan con diplomacia."},
-				"3-3": {"description": "<b>Puesto comercial en ruinas</b>: las ruinas fueron en su día un puesto comercial, pero llevan muchos siglos sin utilizarse. Si se exploran, un PJ que supere un Chequeo <b>Desafiante (+0)</b> de <b>Percepción</b> con un total de 15 NE puede encontrar monedas y baratijas por un valor total de [[/r 1d10]] co."},
-				"4-5": {"description": "<b>Puesto fronterizo</b>: las ruinas han sido colonizadas recientemente por un grupo de personas que buscan una nueva vida o explotar los recursos locales. Pueden ser pequeños agricultores o pastores, leñadores, una caravana estrigana o simplemente personas que subsisten a base de pescado y pulpos de los lodazales. Es probable que estas personas sean insulares y representen una comunidad con creencias religiosas o ideas políticas radicales. Es más probable que traten a los viajeros con fría formalidad que con hostilidad manifiesta."},
-				"6-7": {"description": "<b>Snotlings</b>: las ruinas están infestadas por una banda de [[/r 2d10]] snotlings y el hedor de sus excrementos impregna la zona. Durante el día, les aterrorizan los PJs y se esconden de ellos en lugar de luchar. Por la noche, se vuelven más atrevidos y tratan de colarse en cualquier campamento cercano para robar comida y objetos brillantes. Si se les descubre, no se puede razonar con ellos y luchan a muerte. Si se descubre su guarida, esta contiene una selección de monedas y baratijas por valor de [[/r 5d10]] cp."},
-				"8-14": {"description": "<b>Escombros</b>: no hay nada destacable aquí, salvo unos cuantos montones de piedras esparcidas."},
-				"15-16": {"description": "<b>Estructura sólida</b>: entre las ruinas hay un edificio sólido que ofrece a los PJs una oportunidad para descansar durante la noche. Si se quedan aquí, cualquier Empresa Montar campamento se beneficia de un +5 NE."},
-				"17-18": {"description": "<b>Campamento de bandidos</b>: las ruinas albergan a una banda de 6 a 8 forajidos. Para determinar cuánto botín tienen en su poder, tira dos veces en la columna de botín de la @Table[ancient-tomb]{Tabla de Tumbas antiguas}."},
-				"19-19": {"description": "<b>Troles</b>: las ruinas están habitadas por tres troles. Han manchado las piedras de las ruinas con sangre y suciedad, habiendo montones de huesos y trozos de equipo destrozado por todas partes. Tira [[/r 1d10]]. <b>1 a 3</b>: los troles están en casa y lucharán contra los PJs a menos que se les proporcione una criatura de tamaño Medio o mayor para comer. <b>4 a 5</b>: los troles están hambrientos, reduce la Fuerza y la Resistencia en 20, el resto de Características en 10 y las Heridas en [[/r 3d10]]. <b>6 a 7</b>: los troles están en casa y lucharán a muerte contra los PJs. <b>8 a 9</b>: los troles están ausentes, pero en cada Asalto hay un [[/r 1d100]]{3%} de posibilidades de que regresen. <b>10</b>: los troles están ausentes. Para determinar si hay algo de valor en las ruinas, tira dos veces en la columna de botín de la @Table[ancient-tomb]{Tabla Tumbas antiguas}."},
-				"20-20": {"description": "<b>Torre del hechicero</b>: estas famosas construcciones no tienen por qué ser necesariamente torres, ya que las diferentes escuelas de magia se sienten atraídas por diferentes tipos de terreno y construyen sus moradas de diferentes maneras. Es probable que un hechicero Celestial viva en una alta torre en las montañas, mientras que uno de Jade prefiera un claro verde en lo más profundo del bosque.<br>Muchos hechiceros prefieren lugares apartados, lejos de la gente mundana y de las trivialidades de su vida cotidiana. Aquí pueden dedicarse a la investigación mágica sin obstáculos por parte de los poderes fácticos e incluso de las autoridades de su propia universidad. Aunque se trata de una aspiración razonable, puede que haya una razón más nefasta detrás de su aislamiento. Algunos hechiceros eligen el aislamiento para seguir en silencio a los dioses oscuros o investigar métodos para ejercer poderes prohibidos. A menudo se hacen pasar por escuelas más legítimas para evitar las sospechas de quienes se topan con su morada. Si los PJs sospechan que un hechicero está cometiendo malas prácticas, es mejor que se lo guarden para sí mismos.<br>El Colegio y las habilidades del hechicero quedan a criterio del DJ, pero como mínimo debe tener las habilidades Canalización y Hablar idioma (magia) a [[/r 35+4d10]], 4 hechizos de Magia menor y 4 hechizos de su Saber determinado.<br>El hechicero podría ver la llegada de los PJs como una buena oportunidad. Es probable que necesite algo de la civilización y le sería de gran ayuda que los PJs accedieran a conseguirlo."}
+				"2-2": {"name": "Guarida de bruja", "description": "Una bruja utiliza las ruinas como escondite. Sus habilidades quedan a criterio del DJ pero, como mínimo, debería tener las habilidades Canalizar y Hablar idioma (magia) a [[/r 35+4d10]], 4 hechizos de Magia menor y 4 hechizos de Saber de Brujería. La bruja no es necesariamente hostil hacia los PJs, pero se mostrará cautelosa con ellos y rápida en defenderse si no la tratan con diplomacia."},
+				"3-3": {"name": "Puesto comercial en ruinas", "description": "Las ruinas fueron en su día un puesto comercial, pero llevan muchos siglos sin utilizarse. Si se exploran, un PJ que supere un Chequeo <b>Desafiante (+0)</b> de <b>Percepción</b> con un total de 15 NE puede encontrar monedas y baratijas por un valor total de [[/r 1d10]] co."},
+				"4-5": {"name": "Puesto fronterizo", "description": "Las ruinas han sido colonizadas recientemente por un grupo de personas que buscan una nueva vida o explotar los recursos locales. Pueden ser pequeños agricultores o pastores, leñadores, una caravana estrigana o simplemente personas que subsisten a base de pescado y pulpos de los lodazales. Es probable que estas personas sean insulares y representen una comunidad con creencias religiosas o ideas políticas radicales. Es más probable que traten a los viajeros con fría formalidad que con hostilidad manifiesta."},
+				"6-7": {"name": "Snotlings", "description": "Las ruinas están infestadas por una banda de [[/r 2d10]] snotlings y el hedor de sus excrementos impregna la zona. Durante el día, les aterrorizan los PJs y se esconden de ellos en lugar de luchar. Por la noche, se vuelven más atrevidos y tratan de colarse en cualquier campamento cercano para robar comida y objetos brillantes. Si se les descubre, no se puede razonar con ellos y luchan a muerte. Si se descubre su guarida, esta contiene una selección de monedas y baratijas por valor de [[/r 5d10]] cp."},
+				"8-14": {"name": "Escombros", "description": "No hay nada destacable aquí, salvo unos cuantos montones de piedras esparcidas."},
+				"15-16": {"name": "Estructura sólida", "description": "Entre las ruinas hay un edificio sólido que ofrece a los PJs una oportunidad para descansar durante la noche. Si se quedan aquí, cualquier Empresa Montar campamento se beneficia de un +5 NE."},
+				"17-18": {"name": "Campamento de bandidos", "description": "Las ruinas albergan a una banda de 6 a 8 forajidos. Para determinar cuánto botín tienen en su poder, tira dos veces en la columna de botín de la @Table[ancient-tomb]{Tabla de Tumbas antiguas}."},
+				"19-19": {"name": "Troles", "description": "Las ruinas están habitadas por tres troles. Han manchado las piedras de las ruinas con sangre y suciedad, habiendo montones de huesos y trozos de equipo destrozado por todas partes. Tira [[/r 1d10]]. <b>1 a 3</b>: los troles están en casa y lucharán contra los PJs a menos que se les proporcione una criatura de tamaño Medio o mayor para comer. <b>4 a 5</b>: los troles están hambrientos, reduce la Fuerza y la Resistencia en 20, el resto de Características en 10 y las Heridas en [[/r 3d10]]. <b>6 a 7</b>: los troles están en casa y lucharán a muerte contra los PJs. <b>8 a 9</b>: los troles están ausentes, pero en cada Asalto hay un [[/r 1d100]]{3%} de posibilidades de que regresen. <b>10</b>: los troles están ausentes. Para determinar si hay algo de valor en las ruinas, tira dos veces en la columna de botín de la @Table[ancient-tomb]{Tabla Tumbas antiguas}."},
+				"20-20": {"name": "Torre del hechicero", "description": "Estas famosas construcciones no tienen por qué ser necesariamente torres, ya que las diferentes escuelas de magia se sienten atraídas por diferentes tipos de terreno y construyen sus moradas de diferentes maneras. Es probable que un hechicero Celestial viva en una alta torre en las montañas, mientras que uno de Jade prefiera un claro verde en lo más profundo del bosque.<br>Muchos hechiceros prefieren lugares apartados, lejos de la gente mundana y de las trivialidades de su vida cotidiana. Aquí pueden dedicarse a la investigación mágica sin obstáculos por parte de los poderes fácticos e incluso de las autoridades de su propia universidad. Aunque se trata de una aspiración razonable, puede que haya una razón más nefasta detrás de su aislamiento. Algunos hechiceros eligen el aislamiento para seguir en silencio a los dioses oscuros o investigar métodos para ejercer poderes prohibidos. A menudo se hacen pasar por escuelas más legítimas para evitar las sospechas de quienes se topan con su morada. Si los PJs sospechan que un hechicero está cometiendo malas prácticas, es mejor que se lo guarden para sí mismos.<br>El Colegio y las habilidades del hechicero quedan a criterio del DJ, pero como mínimo debe tener las habilidades Canalización y Hablar idioma (magia) a [[/r 35+4d10]], 4 hechizos de Magia menor y 4 hechizos de su Saber determinado.<br>El hechicero podría ver la llegada de los PJs como una buena oportunidad. Es probable que necesite algo de la civilización y le sería de gran ayuda que los PJs accedieran a conseguirlo."}
 				}
 		},
 		"Weather – Precipitation": {
 			"name": "Clima - Precipitación",
 			"results": {
-				"1-5": {"description": "Ninguna"},
-				"6-8": {"description": "Ligera"},
-				"9-10": {"description": "Fuerte"},
-				"11-12": {"description": "Muy fuerte"},
-				"13-13": {"description": "Fuerte"},
-				"14-14": {"description": "Ninguna"}
+				"1-5": {"name": "Ninguna"},
+				"6-8": {"name": "Ligera"},
+				"9-10": {"name": "Fuerte"},
+				"11-12": {"name": "Muy fuerte"},
+				"13-13": {"name": "Fuerte"},
+				"14-14": {"name": "Ninguna"}
 				}
 		},
 		"Weather – Temperature": {
 			"name": "Clima - Temperatura",
 			"results": {
-				"1-1": {"description": "Calor sofocante"},
-				"2-2": {"description": "Calor"},
-				"3-8": {"description": "Agradable"},
-				"9-12": {"description": "Frío"},
-				"13-14": {"description": "Gélido"}
+				"1-1": {"name": "Calor sofocante"},
+				"2-2": {"name": "Calor"},
+				"3-8": {"name": "Agradable"},
+				"9-12": {"name": "Frío"},
+				"13-14": {"name": "Gélido"}
 				}
 		},
 		"Weather – Visibility": {
 			"name": "Clima - Visibilidad",
 			"results": {
-				"1-5": {"description": "Despejado"},
-				"6-8": {"description": "Neblina"},
-				"9-10": {"description": "Niebla espesa"},
-				"11-13": {"description": "Neblina"},
-				"14-14": {"description": "Despejado"}
+				"1-5": {"name": "Despejado"},
+				"6-8": {"name": "Neblina"},
+				"9-10": {"name": "Niebla espesa"},
+				"11-13": {"name": "Neblina"},
+				"14-14": {"name": "Despejado"}
 				}
 		},
 		"Weather – Wind": {
 			"name": "Clima - Viento",
 			"results": {
-				"1-1": {"description": "En calma"},
-				"2-2": {"description": "Ligero"},
-				"3-5": {"description": "Medio"},
-				"6-8": {"description": "Fuerte"},
-				"9-10": {"description": "Muy fuerte"},
-				"11-12": {"description": "Medio"},
-				"13-13": {"description": "Ligero"},
-				"14-14": {"description": "En calma"}
+				"1-1": {"name": "En calma"},
+				"2-2": {"name": "Ligero"},
+				"3-5": {"name": "Medio"},
+				"6-8": {"name": "Fuerte"},
+				"9-10": {"name": "Muy fuerte"},
+				"11-12": {"name": "Medio"},
+				"13-13": {"name": "Ligero"},
+				"14-14": {"name": "En calma"}
 				}
 		},
-		"Bounty Hunter Warrants — Outlaw Crimes": {
+		"Bounty Hunter Warrants - Outlaw Crimes": {
 			"name": "Órdenes de arresto para cazarrecompensas - Delitos de los forajidos",
 			"results": {
-				"1-1": {"description": "<b>Estafador</b>: probablemente no sea peligroso, pero puede ser difícil de identificar."},
-				"2-2": {"description": "<b>Asesino</b>: muy peligroso y difícil de capturar con vida."},
-				"3-3": {"description": "<b>Ladrón</b>: fácil de identificar, pero difícil de localizar. Suele tener cómplices."},
-				"4-4": {"description": "<b>Estafador</b>: probablemente no es peligroso, pero puede tener múltiples disfraces."},
-				"5-5": {"description": "<b>Ladrón</b>: difícil de localizar y capturar. Hábil para escapar de la custodia."},
-				"6-6": {"description": "<b>Pirómano</b>: a menudo deja pistas. Posiblemente desquiciado o con motivaciones políticas."},
-				"7-7": {"description": "<b>Cazador furtivo</b>: posible justiciero contra noble. Hábil en el arte de la evasión en la Naturaleza."},
-				"8-8": {"description": "<b>Hereje</b>: podría ser un antiguo iniciado o clérigo. A menudo tiene seguidores con ideas afines."},
-				"9-9": {"description": "<b>Mutante</b>: fácil de identificar; podría haber huido a una colonia mutante oculta."},
-				"10-10": {"description": "<b>Sectario</b>: posible brujo o hechicero; difícil de rastrear y probablemente tenga cómplices."}
+				"1-1": {"name": "Estafador", "description": "Probablemente no sea peligroso, pero puede ser difícil de identificar."},
+				"2-2": {"name": "Asesino", "description": "Muy peligroso y difícil de capturar con vida."},
+				"3-3": {"name": "Ladrón", "description": "Fácil de identificar, pero difícil de localizar. Suele tener cómplices."},
+				"4-4": {"name": "Estafador", "description": "Probablemente no es peligroso, pero puede tener múltiples disfraces."},
+				"5-5": {"name": "Ladrón", "description": "Difícil de localizar y capturar. Hábil para escapar de la custodia."},
+				"6-6": {"name": "Pirómano", "description": "A menudo deja pistas. Posiblemente desquiciado o con motivaciones políticas."},
+				"7-7": {"name": "Cazador furtivo", "description": "Posible justiciero contra noble. Hábil en el arte de la evasión en la Naturaleza."},
+				"8-8": {"name": "Hereje", "description": "Podría ser un antiguo iniciado o clérigo. A menudo tiene seguidores con ideas afines."},
+				"9-9": {"name": "Mutante", "description": "Fácil de identificar; podría haber huido a una colonia mutante oculta."},
+				"10-10": {"name": "Sectario", "description": "Posible brujo o hechicero; difícil de rastrear y probablemente tenga cómplices."}
 				}
 		},
-		"Bounty Hunter Warrants — Reward Conditions": {
+		"Bounty Hunter Warrants - Reward Conditions": {
 			"name": "Órdenes de arresto para cazarrecompensas - Condiciones de recompensa",
 			"results": {
-				"1-1": {"description": "<b>Forajido buscado para ser interrogado</b>: debe estar vivo. 5 co."},
-				"2-2": {"description": "<b>Forajido buscado para dar ejemplo a otros</b>: Vivo o muerto. 5 co."},
-				"3-3": {"description": "<b>Fugitivo de la justicia</b>: para ser juzgado por delitos moderados. Debe estar vivo. 5 co."},
-				"4-4": {"description": "<b>Fugitivo de la justicia</b>: para ser juzgado por delitos graves. Debe estar vivo. 8 co."},
-				"5-5": {"description": "<b>Fugitivo de la justicia</b>: para ser juzgado por delitos atroces. Debe estar vivo. 10 co."},
-				"6-6": {"description": "<b>Fugitivo de prisión</b>: escapó del castigo por delitos moderados. Vivo o muerto. 8 co."},
-				"7-7": {"description": "<b>Fugitivo de prisión</b>: escapó del castigo por delitos graves. Vivo o muerto. 10 co."},
-				"8-8": {"description": "<b>Fugitivo de prisión</b>: escapó del castigo por delitos atroces. Vivo o muerto. 15 co."},
-				"9-9": {"description": "<b>Jefe forajido infame</b>: se busca vivo o muerto. 40 co."},
-				"10-10": {"description": "<b>Rey de los bandidos infame</b>: se busca vivo o muerto. 80 co."}
+				"1-1": {"name": "Forajido buscado para ser interrogado", "description": "debe estar vivo. 5 co."},
+				"2-2": {"name": "Forajido buscado para dar ejemplo a otros", "description": "Vivo o muerto. 5 co."},
+				"3-3": {"name": "Fugitivo de la justicia", "description": "para ser juzgado por delitos moderados. Debe estar vivo. 5 co."},
+				"4-4": {"name": "Fugitivo de la justicia", "description": "para ser juzgado por delitos graves. Debe estar vivo. 8 co."},
+				"5-5": {"name": "Fugitivo de la justicia", "description": "para ser juzgado por delitos atroces. Debe estar vivo. 10 co."},
+				"6-6": {"name": "Fugitivo de prisión", "description": "escapó del castigo por delitos moderados. Vivo o muerto. 8 co."},
+				"7-7": {"name": "Fugitivo de prisión", "description": "escapó del castigo por delitos graves. Vivo o muerto. 10 co."},
+				"8-8": {"name": "Fugitivo de prisión", "description": "escapó del castigo por delitos atroces. Vivo o muerto. 15 co."},
+				"9-9": {"name": "Jefe forajido infame", "description": "se busca vivo o muerto. 40 co."},
+				"10-10": {"name": "Rey de los bandidos infame", "description": "se busca vivo o muerto. 80 co."}
 				}
 		},
-		"Bounty Hunter Warrants — Warrant Agent": {
+		"Bounty Hunter Warrants - Warrant Agent": {
 			"name": "Órdenes de arresto para cazarrecompensas - Agente que da la orden",
 			"results": {
-				"1-1": {"description": "<b>Alguacil del pueblo</b>: supervisa la vigilancia del pueblo y depende directamente de los nobles."},
-				"2-2": {"description": "<b>Juez de Verena</b>: emite la orden personalmente y solo contrata a cazarrecompensas con buena reputación."},
-				"3-3": {"description": "<b>Magistrado municipal</b>: emite la orden personalmente. Forma parte del consejo municipal."},
-				"4-4": {"description": "<b>Noble local</b>: emite la orden de búsqueda por un delito cometido en las cercanías."},
-				"5-5": {"description": "<b>Noble visitante</b>: emite la orden de búsqueda por un delito cometido en el extranjero."},
-				"6-6": {"description": "<b>Capitán de guardas de caminos</b>: puede publicar carteles de ‘Se busca’. Informa al juez o noble que emitió la orden."},
-				"7-7": {"description": "<b>Capitán de guardianes del río</b>: puede publicar carteles de ‘Se busca’. Informa al juez o noble que emitió la orden."},
-				"8-8": {"description": "<b>Capitán de la Guardia</b>: puede publicar carteles de ‘Se busca’. Depende del alguacil o del ayuntamiento."},
-				"9-9": {"description": "<b>Cazarrecompensas general</b>: un subcontratista a través del gremio o general independiente."},
-				"10-10": {"description": "<b>Sumo sacerdote</b>: juez del tribunal del templo; emite la orden personalmente."}
+				"1-1": {"name": "Alguacil del pueblo", "description": "Supervisa la vigilancia del pueblo y depende directamente de los nobles."},
+				"2-2": {"name": "Juez de Verena", "description": "Emite la orden personalmente y solo contrata a cazarrecompensas con buena reputación."},
+				"3-3": {"name": "Magistrado municipal", "description": "Emite la orden personalmente. Forma parte del consejo municipal."},
+				"4-4": {"name": "Noble local", "description": "Emite la orden de búsqueda por un delito cometido en las cercanías."},
+				"5-5": {"name": "Noble visitante", "description": "Emite la orden de búsqueda por un delito cometido en el extranjero."},
+				"6-6": {"name": "Capitán de guardas de caminos", "description": "Puede publicar carteles de ‘Se busca’. Informa al juez o noble que emitió la orden."},
+				"7-7": {"name": "Capitán de guardianes del río", "description": "Puede publicar carteles de ‘Se busca’. Informa al juez o noble que emitió la orden."},
+				"8-8": {"name": "Capitán de la Guardia", "description": "Puede publicar carteles de ‘Se busca’. Depende del alguacil o del ayuntamiento."},
+				"9-9": {"name": "Cazarrecompensas general", "description": "Un subcontratista a través del gremio o general independiente."},
+				"10-10": {"name": "Sumo sacerdote", "description": "Juez del tribunal del templo; emite la orden personalmente."}
 				}
 		},
 		"Watch Presence": {
 			"name": "Presencia de la Guardia",
 			"results": {
-				"1-2": {"description": "<b>No hay nadie</b>: no hay miembros de la Guardia en las proximidades. Si se da un grito de alarma tardarán 20 minutos o más en llegar."},
-				"3-5": {"description": "<b>A la vuelta de la esquina</b>: la patrulla más cercana está a unas pocas calles de distancia. Si se produce un alboroto tardará 20 Asaltos o más en llegar."},
-				"6-8": {"description": "<b>Patrulla en las inmediaciones</b>: hay una patrulla en un radio de 100 yardas. Si se comete un delito en una zona pública, un guardia puede detectarlo si tiene éxito en un Chequeo Enfrentado <b>Muy difícil (-30)</b> de <b>Percepción/Movimiento silencioso</b>. Si se produce un alboroto, una patrulla tardará 10 Asaltos en llegar."},
-				"9-9": {"description": "<b>Patrulla cercana</b>: hay una patrulla a 50 yardas del lugar. Si se comete un delito en una zona pública, un guardia puede detectarlo si tiene éxito en un Chequeo <b>Enfrentado Complicado (-10)</b> de <b>Percepción/Movimiento silencioso</b>. Si se produce un alboroto, una patrulla tardará 5 Asaltos en llegar."},
-				"10-10": {"description": "<b>Patrulla presente</b>: es evidente que hay una patrulla en la misma calle o justo frente al lugar donde tiene lugar el delito en cuestión. Si se comete un delito dentro de su línea de visión, un guardia puede descubrirlo si tiene éxito en un Chequeo <b>Enfrentado Normal (+20)</b> de <b>Percepción/Movimiento silencioso</b>. La patrulla responde de inmediato."}
+				"1-2": {"name": "No hay nadie", "description": "No hay miembros de la Guardia en las proximidades. Si se da un grito de alarma tardarán 20 minutos o más en llegar."},
+				"3-5": {"name": "A la vuelta de la esquina", "description": "La patrulla más cercana está a unas pocas calles de distancia. Si se produce un alboroto tardará 20 Asaltos o más en llegar."},
+				"6-8": {"name": "Patrulla en las inmediaciones", "description": "Hay una patrulla en un radio de 100 yardas. Si se comete un delito en una zona pública, un guardia puede detectarlo si tiene éxito en un Chequeo Enfrentado <b>Muy difícil (-30)</b> de <b>Percepción/Movimiento silencioso</b>. Si se produce un alboroto, una patrulla tardará 10 Asaltos en llegar."},
+				"9-9": {"name": "Patrulla cercana", "description": "Hay una patrulla a 50 yardas del lugar. Si se comete un delito en una zona pública, un guardia puede detectarlo si tiene éxito en un Chequeo <b>Enfrentado Complicado (-10)</b> de <b>Percepción/Movimiento silencioso</b>. Si se produce un alboroto, una patrulla tardará 5 Asaltos en llegar."},
+				"10-10": {"name": "Patrulla presente", "description": "Es evidente que hay una patrulla en la misma calle o justo frente al lugar donde tiene lugar el delito en cuestión. Si se comete un delito dentro de su línea de visión, un guardia puede descubrirlo si tiene éxito en un Chequeo <b>Enfrentado Normal (+20)</b> de <b>Percepción/Movimiento silencioso</b>. La patrulla responde de inmediato."}
 				}
 		},
 		"Willingness to Take a Bribe — Integrity": {
 			"name": "Disposición a aceptar un soborno - Integridad",
 			"results": {
-				"1-2": {"description": "Incorruptible"},
-				"3-8": {"description": "Flexible"},
-				"9-10": {"description": "Sobornable"}
+				"1-2": {"name": "Incorruptible"},
+				"3-8": {"name": "Flexible"},
+				"9-10": {"name": "Sobornable"}
 				}
 		},
 		"Willingness to Take a Bribe — Price": {
