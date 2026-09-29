@@ -423,6 +423,11 @@
                             "hint" : "Define una tabla de ubicación de impactos personalizada para cuando este Actor es atacado."
                         }
                     },
+                    "status": {
+                        "momentum": {
+                            "label": "Momentum"
+                        }
+                    },
                     "settings": {
                         "equipPoints" : {
                             "label" : "Puntos de equipo",
@@ -1240,7 +1245,10 @@
 
         "HouseRules" : "Reglas caseras",
         "HouseRulesLabel" : "Configura Reglas caseras",
-        "HouseRulesHint" : "Ajustes para reglas caseras comunes"
+        "HouseRulesHint" : "Ajustes para reglas caseras comunes",
+
+        "EditionManagerLabel" : "Administrador de edición",
+        "EditionManagerHint" : "Configura las Reglas del Juego."
     },
     
     "MOO.Prone": "<br><br><b>Regla de la Casa de Moo</b>: Se te considera una banda de alcance más lejano al determinar los ataques a distancia.",
@@ -1481,7 +1489,7 @@
     "Modifier" : "Modificador",
     "Modifiers" : "Modificadores",
     "Range" : "Alcance",
-    "Target" : "Objetivos",
+    "Target" : "Objetivo",
     "Damage" : "Daño",
     "Ammunition" : "Munición",
     "Magic Missile" : "Misil Mágico",
@@ -1665,9 +1673,11 @@
     "From Effect" : "Del Efecto",
 	
     "BREAKDOWN.Base" : "Base",
+    "BREAKDOWN.Attack": "Ataque",
     "BREAKDOWN.AttackerBase": "Base del Atacante",
     "BREAKDOWN.Dice" : "Dados",
     "BREAKDOWN.OpposedSL" : "NE Enfrentado",
+    "BREAKDOWN.DefenderSL" : "NE del defensor",
     "BREAKDOWN.Multiplier" : "Multiplicador",
     "BREAKDOWN.Ignored" : "Ignorado",
     "BREAKDOWN.Minimum1" : "Mínimo 1 Herida",
@@ -1832,6 +1842,7 @@
     "DIALOG.SuccessBonusTT" : "NE que sólo se aplican en éxitos (p.ej. Talentos)",
     "DIALOG.BonusTT" : "Lista de bonos potenciales",
     "DIALOG.RollMode" : "Modo de Tirada",
+    "DIALOG.Damage" : "Daño",
     "DIALOG.Extensions" : "Extensiones",
     "DIALOG.CastSkill" : "Habilidad de Lanzamiento",
     "DIALOG.HitLocation" : "Incluir una tirada en la tabla de ubicación de impacto",
@@ -1882,7 +1893,16 @@
     "DIALOG.ChoosePassenger" : "Escoge pasajero",
     "DIALOG.ChooseArmour" : "Escoge Armadura para dañar",
 	"DIALOG.ChooseCharacteristic" : "Escoge Característica",
+    "DIALOG.Advantage" : "Ventaja",
+    "DIALOG.Disadvantage" : "Desventaja",
+    "DIALOG.Normal" : "Normal",
+    "DIALOG.SurplusAdvantageTT" : "Ventaja excedente",
+    "DIALOG.SurplusDisadvantageTT" : "Desventaja excedente",
+    "DIALOG.SL" : "NE",
+    "DIALOG.MultipleActiveTokens" : "Este Actor tiene mútiples fichas en la Escena actual. Puede que el cálculo del alcance no esté usando la ficha que quieres.",
 
+    "CHAT.Advantage" : "Ventaja",
+    "CHAT.Disadvantage" : "Desventaja",
     "CHAT.Quickcasting" : "Lanzamiento Rápido",
     "CHAT.CareerChoose" : "Escoge tu Carrera",
     "CHAT.DamageError" : "Error al calcular el daño:",
@@ -1939,6 +1959,10 @@
     "CHAT.ChannelledSL" : "NE canalizados",
     "CHAT.VortexMove": "Movimiento aleatorio de Vórtice",
     "CHAT.CausesFear" : "<b>{actor}</b> causa {fear} a {target}<br>",
+    "CHAT.CriticalDamageLabel" : "Daño crítico",
+    "CHAT.TotalPowerLabel" : "Poder total",
+    "CHAT.UnstoppableForceLabel" : "Fuerza irresistible",
+    "CHAT.CriticalCasting" : "Lanzamiento crítico",
     "CHAT.Fear" : "Miedo",
     "CHAT.FearReminder" : "Estos actores están actualmente sujetos a <b>Miedo</b> y deben realizar un Chequeo para superarlo.",
     "CHAT.InjuryFinish" : "Completada la duración de {injury}.",
@@ -2204,6 +2228,7 @@
     "WFRP4E.EncumbrancePenalties.MaxEnc" : "No puedes moverte.",
 
     "WFRP4E.ConditionName.Ablaze" : "Ardiendo",
+    "WFRP4E.ConditionName.Besmirched" : "Ensuciado",
     "WFRP4E.ConditionName.Bleeding" : "Sangrando",
     "WFRP4E.ConditionName.Blinded" : "Cegado",
     "WFRP4E.ConditionName.Broken" : "Quebrantado",
@@ -2518,6 +2543,7 @@
 	"NAME.Lingering" : "Persistente",
     "NAME.Amphibious" : "Anfibio",
     "NAME.Flight" : "Vuelo",
+    "NAME.Momentum" : "Momentum",
     
     "SPEC.Any": "Cualquiera",
     "SPEC.Basic" : "Básica",
@@ -2653,11 +2679,13 @@
     "PROPERTY.Impact": "Impactante",
     "PROPERTY.Impale": "Empalante",
     "PROPERTY.Penetrating": "Perforante",
+    "PROPERTY.Parry": "Parada",
     "PROPERTY.Pistol": "Pistola",
     "PROPERTY.Precise": "Certera",
     "PROPERTY.Pummel": "Contundente",
     "PROPERTY.Repeater": "Repetidora",
     "PROPERTY.Shield": "Escudo",
+    "PROPERTY.Inflict": "Inflige",
     "PROPERTY.TrapBlade": "Atrapaespadas",
     "PROPERTY.Unbreakable": "Irrompible",
     "PROPERTY.Wrap": "Envolvente",
@@ -2740,6 +2768,8 @@
     "CHATOPT.Reroll": "Repetir Tirada",
     "CHATOPT.TotalPower": "Poder Total",
     "CHATOPT.EditTest": "Editar Chequeo",
+    "CHATOPT.Unreverse": "Desinvertir",
+    "CHATOPT.Reverse": "Invertir",
     
     "TRAVEL.TravelMessageBase": "De <b>{from}</b> hasta <b>{to}</b> : ",
     "TRAVEL.TravelMessageRoad": "<br><b>Carretera</b> : {road_distance} millas<br>&nbsp;&nbsp;En Coche : {road_days} días, el peligro es {road_danger_string}<br>&nbsp;&nbsp;En Caballo Pesado : {road_horse_heavy_days} días, el peligro es {road_danger_string}<br>&nbsp;&nbsp;En Caballo Rápido : {road_horse_fast_days} días, el peligro es {road_danger_string}<br>&nbsp;&nbsp;A Pie : {road_feet_days} días, el peligro es {road_danger_feet_string}",
@@ -3118,7 +3148,7 @@
     "DIFFICULTY.Difficult": "Complicado (-10)",
     "DIFFICULTY.Hard": "Difícil (-20)",
     "DIFFICULTY.VHard": "Muy Difícil (-30)",
-    "DIFFICULTY.Futile": "Inútil (-40)",
+    "DIFFICULTY.Futile": "Fútil (-40)",
     "DIFFICULTY.Impossible": "Imposible (-50)",
 
     "DIFFICULTYNAME.VEasy": "Muy Fácil",
@@ -3128,7 +3158,7 @@
     "DIFFICULTYNAME.Difficult": "Complicado",
     "DIFFICULTYNAME.Hard": "Difícil",
     "DIFFICULTYNAME.VHard": "Muy Difícil",
-    "DIFFICULTYNAME.Futile": "Inútil",
+    "DIFFICULTYNAME.Futile": "Fútil",
     "DIFFICULTYNAME.Impossible": "Imposible",
 
     "DIFFICULTY.MooVEasy": "Muy Fácil (+40)",
@@ -3136,7 +3166,7 @@
     "DIFFICULTY.MooDifficult": "Complicado (-20)",
     "DIFFICULTY.MooHard": "Difícil (-30)",
     "DIFFICULTY.MooVHard": "Muy Difícil (-40)",
-    "DIFFICULTY.MooFutile": "Inútil (-50)",
+    "DIFFICULTY.MooFutile": "Fútil (-50)",
     "DIFFICULTY.MooImpossible": "Imposible (-60)",
 
     "Point Blank": "Quemarropa",
@@ -3216,6 +3246,66 @@
 
     "SOCKET.SendingSocketRequest" : "Enviando solicitud de socket",
 
+    "WFRP4e Content Setup": "Ajustes de contenido de WFRP4e",
+    "Setup": "Ajustes",
+    "WFRP4e Content Initialization": "Inicialización de contenido de WFRP4e",
+    "Initialization": "Inicialización",
+    "Import or update the content from the WFRP4e Core Module": "Importa o actualiza el contenido del Módulo Básico de WFRP4e",
+
+
+    "5e": {
+        "DIFFICULTY.VEasy": "Muy fácil (+6 NE)",
+        "DIFFICULTY.Easy": "Fácil (+4 NE)",
+        "DIFFICULTY.Average": "Normal (+2 NE)",
+        "DIFFICULTY.Challenging": "Desafiante (+0 NE)",
+        "DIFFICULTY.Difficult": "Complicado (-1 NE)",
+        "DIFFICULTY.Hard": "Difícil (-2 NE)",
+        "DIFFICULTY.VHard": "Muy difícil (-3 NE)",
+        "DIFFICULTY.Futile": "Fútil (-4 NE)",
+        "DIFFICULTY.Impossible": "Imposible (-5 NE)",
+
+        "MagicWind" : {
+            "Aqshy" : "Aqshy",
+            "Azyr" : "Azyr",
+            "Chamon" : "Chamon",
+            "Dhar" : "Dhar",
+            "Ghur" : "Ghur",
+            "Ghyran" : "Ghyran",
+            "Hysh" : "Hysh",
+            "Magick" : "Magia",
+            "Qhaysh" : "Qhaysh",
+            "Shyish" : "Shyish",
+            "Skaven" : "Skaven",
+            "Ulgu" : "Ulgu",
+            "Waaagh!" : "¡Waaagh!"
+        },
+
+        "Dialog" : {
+            "Modifier" : {
+                "CalledShot" : "Disparo apuntado",
+                "UsingOffhand" : "Usando mano torpe",
+                "Charging" : "Cargando",
+                "Moved" : "Movido antes de disparar",
+                "Extreme" : "Alcance extremo",
+                "Long" : "Alcance largo",
+                "Short" : "Alcance corto",
+                "PointBlank" : "Alcance a quemarropa",
+                "Shorter" : "Defendiendo contra un arma más larga",
+                "TargetTiny" : "Objetivo es Diminuto",
+                "TargetMonstrous" : "Objetivo es Monstruoso",
+                "TargetSmaller" : "Objetivo es más pequeño",
+                "TargetLarger" : "Objetivo es más grande"
+            }
+        },
+
+        "OvercastValue" : "Valor de prolongación",
+        "InitialValue" : "Valor inicial",
+        "OvercastProperty" : "Propiedad",
+
+
+        "SETTINGS.Use5e" : "Usar reglas de la 5ª edición"
+
+    },
 
     "WFRP4E.Properties.Slash" : "Las armas <em>Cortantes</em> concentran su poder de tal manera que provocan heridas abiertas. Si causas Daño crítico con el arma, el objetivo sufre 1 Estado @Condition[Sangrando] además de cualquier otro efecto del golpe crítico. Puedes gastar X Ventaja para que tu oponente sufra 1 Estado <em>Sangrando</em> adicional.",
     "WFRP4E.Properties.Spread" : "<p>Las armas con la cualidad <em>Expansiva</em> disparan una nube creciente de proyectiles que pueden golpear a varios objetivos. Dependiendo de la distancia al objetivo, las armas con esta Cualidad se comportan de forma algo diferente.</p>    <div style='margin-left: 30px'><p><strong>A quemarropa</strong>: el disparo apunta a un solo individuo. Añade (Valor) al Daño del arma.</p>        <p><strong>De corto a largo alcance</strong>: El disparo se dirige a un individuo y a las criaturas visibles más cercanas (Valor). No puede haber dos objetivos de más de (Valor) yardas de distancia.</p>        <p><strong>Alcance extremo</strong>: igual que para corto a largo alcance, pero reduce también el daño del arma en (Valor).</p>    </div>",    
